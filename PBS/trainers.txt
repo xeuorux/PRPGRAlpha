@@ -4763,6 +4763,7 @@ Pokemon = CHANDELURE,65
     EV = 20,20,5,0,20,5
 Pokemon = TYRANITAR,65
     Name = Autochthon
+    Gender = male
     Moves = CRUNCH,ROCKSLIDE,EARTHQUAKE,IRONTAIL
     AbilityIndex = 1 # Stressful
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
