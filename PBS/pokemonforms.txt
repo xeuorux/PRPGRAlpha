@@ -603,7 +603,6 @@ FormName = Pharaoh Trim
 #-------------------------------
 [MEOWSTIC,1]
 FormName = Female
-BaseStats = 74,118,66,104,83,91
 Color = White
 #-------------------------------
 [AEGISLASH,1]
@@ -937,7 +936,6 @@ Pokedex = Trainers Polteageist trusts will be allowed to experience its distinct
 #-------------------------------
 [INDEEDEE,1]
 FormName = Female
-BaseStats = 80,80,65,85,80,105
 EffortPoints = 0,0,0,0,0,2
 Pokedex = They diligently serve people and Pokémon so they can gather feelings of gratitude. The females are particularly good at babysitting.
 #-------------------------------
