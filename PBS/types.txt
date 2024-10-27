@@ -73,7 +73,7 @@ InternalName = STEEL
 Color = 184,184,208
 DarkColor = 88,88,72
 Weaknesses = FIGHTING,GROUND,FIRE,PSYCHIC
-Resistances = NORMAL,FLYING,ROCK,BUG,STEEL,GRASS,PSYCHIC,ICE,DRAGON,FAIRY
+Resistances = NORMAL,FLYING,ROCK,BUG,STEEL,GRASS,ICE,DRAGON,FAIRY
 Immunities = POISON
 #-------------------------------
 [9]
