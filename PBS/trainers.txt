@@ -1368,7 +1368,7 @@ Pokemon = MASQUERAIN,28
 Pokemon = INDEEDEE,28
     Gender = male
     Moves = PSYCHOCUT,SHOUT,HELPINGHAND,SWIFT
-    AbilityIndex = 1 # Fascinate
+    AbilityIndex = 1 # Mental Block
     Item = SITRUSBERRY
 #-------------------------------
 [POKEMONRANGER_M2,Connor]
@@ -4763,6 +4763,7 @@ Pokemon = CHANDELURE,65
     EV = 20,20,5,0,20,5
 Pokemon = TYRANITAR,65
     Name = Autochthon
+    Gender = male
     Moves = CRUNCH,ROCKSLIDE,EARTHQUAKE,IRONTAIL
     AbilityIndex = 1 # Stressful
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -5579,7 +5580,7 @@ Pokemon = SENSIBELLE,70
     EV = 10,20,0,0,20,20
 Pokemon = INDEEDEE,70
     Moves = RISINGPOWER,MYSTICALFIRE,RUIN,CALMMIND
-    AbilityIndex = 1 # Fascinate
+    AbilityIndex = 1 # Mental Block
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,0,0,20,20
 Pokemon = PERSIAN,70
@@ -7017,7 +7018,7 @@ Pokemon = GOLDUCK,58
     AbilityIndex = 1 # Stupefying
     Item = SITRUSBERRY
 Pokemon = WYRDEER,58
-    AbilityIndex = 0 # Intimidate
+    AbilityIndex = 1 # Fascinate
 Pokemon = MAGCARGO,58
     AbilityIndex = 1 # Flame Body
     Item = BUGGEM
@@ -7760,7 +7761,7 @@ Pokemon = TURTONATOR,60
 #-------------------------------
 [COOLTRAINER_F3,Leah]
 Pokemon = INDEEDEE,60
-    AbilityIndex = 1 # Fascinate
+    AbilityIndex = 1 # Mental Block
 Pokemon = TOGEDEMARU,60
     AbilityIndex = 1 # Sudden Turn
     Item = CHOICEBAND
@@ -8340,7 +8341,7 @@ Pokemon = VOLCANION,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,0,15,0,0,15
 #-------------------------------
-[DANDY,Vasily]
+[DANDY,Roger]
 Pokemon = PERSIAN,70
     Moves = CHACHING,EARTHSPLITTER,XSCISSOR,INFERNOIMPACT
     AbilityIndex = 1 # All That Glitters
@@ -8438,7 +8439,7 @@ Pokemon = KLEAVOR,70
 Pokemon = INDEEDEE,70
     Form = 1 # Female Form
     Moves = KICKSTART,BRAINFREEZE,ENERGYBALL,ALLYSWITCH
-    AbilityIndex = 1 # Fascinate
+    AbilityIndex = 1 # Mental Block
 #-------------------------------
 [SAILOR,Dom]
 Pokemon = CRAMORANT,70
