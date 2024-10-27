@@ -184,6 +184,8 @@ class PokemonGlobalMetadata
 
         # Achievements
         @capture_counts_per_ball = {}
+
+        @tournament = RandomTournament.new
     end
 
     ####################################################

@@ -514,12 +514,35 @@ class PokeBattle_Battler
         return ret
     end
 
-    def initialItem
+    def initialItems
         return @battle.initialItems[@index & 1][@pokemonIndex]
     end
 
-    def setInitialItem(newItem)
-        @battle.initialItems[@index & 1][@pokemonIndex] = newItem
+    def setInitialItems(newItem)
+        if newItem.nil?
+            @battle.initialItems[@index & 1][@pokemonIndex] = []
+        elsif newItem.is_a?(Array)
+            @battle.initialItems[@index & 1][@pokemonIndex] = newItem
+        else
+            @battle.initialItems[@index & 1][@pokemonIndex] = [newItem]
+        end
+    end
+
+    def hasInitialItem?(item)
+        return initialItems.include?(item)
+    end
+
+    def removeNonInitialItems
+        prunedItems = items.delete_if { |item|
+            next false if hasInitialItem?(item)
+            echoln("Removing non-initial item #{item} from #{pbThis(true)}.")
+            next true
+        }
+        setItems(prunedItems)
+    end
+
+    def shouldStoreStolenItem?(item)
+        return @battle.wildBattle? && opposes? && !@battle.bossBattle? && hasInitialItem?(item)
     end
 
     def recyclableItem
@@ -788,6 +811,7 @@ class PokeBattle_Battler
         else
             highestLevel = 0
             ownerParty.each do |pkmn|
+                next unless pkmn
                 next unless pkmn.level > highestLevel
                 highestLevel = pkmn.level
             end

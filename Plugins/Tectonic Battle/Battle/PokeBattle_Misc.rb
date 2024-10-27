@@ -147,7 +147,7 @@ class PokeBattle_Battle
 
     # moveIDOrIndex is either the index of the move on the user's move list (Integer)
     # or it's the ID of the move to be used (Symbol)
-    def forceUseMove(forcedMoveUser, moveIDOrIndex, target = -1, specialUsage = true, usageMessage = nil, moveUsageEffect = nil, ability: nil, aiCheck: false)
+    def forceUseMove(forcedMoveUser, moveIDOrIndex, target = -1, specialUsage = true, usageMessage = nil, moveUsageEffect: nil, ability: nil, aiCheck: false)
         if moveIDOrIndex.is_a?(Symbol)
             fakeMove = PokeBattle_Move.from_pokemon_move(self, Pokemon::Move.new(moveIDOrIndex))
         else
@@ -332,7 +332,7 @@ class PokeBattle_Battle
         return false unless predictedAction[0] == :UseMove
         return false unless predictedAction[2].damagingMove?(true)
         return false if againstPredictor && !actionTargets?(@battlers[idxBattler],predictedAction,predictor)
-        return false if categoryOnly != -1 && predictedAction[2].calculated_category != categoryOnly
+        return false if categoryOnly != -1 && predictedAction[2].category_override != categoryOnly
         return true
     end
 

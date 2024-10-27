@@ -55,7 +55,7 @@ class PokeBattle_Battle
                 if $Trainer.has_pokedex
                     pbPlayer.pokedex.register_last_seen(pkmn)
                     if $PokemonSystem.dex_shown_register == 0
-                        pbDisplayPaused(_INTL("You register {1} as caught in the Pokédex.", pkmn.name))
+                        pbDisplayPaused(_INTL("You register {1} as caught in the MasterDex.", pkmn.name))
                         @scene.pbShowPokedex(pkmn.species)
                     end
                 end
@@ -204,6 +204,7 @@ class PokeBattle_Battle
                 pbGainExp
                 battler.captured = false
             end
+            battler.removeNonInitialItems
             battler.pbReset
             if pbAllFainted?(battler.index)
                 @decision = trainerBattle? ? 1 : 4 # Battle ended by win/capture

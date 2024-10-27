@@ -20,6 +20,8 @@ module Settings
     EGG_LEVEL            = 1
     # The odds of a newly generated Pokémon being shiny (out of 65536).
     SHINY_POKEMON_CHANCE = 16
+    # The chance that a wild battle will be a double battle (out of 100)
+    DOUBLE_WILD_BATTLE_CHANCE = 20
   
     #=============================================================================
   
@@ -297,7 +299,6 @@ module Settings
     LANGUAGES = [
       ["English", "english.dat"],
       ["Español", "spanish.dat"],
-      ["Francais", "french.dat"],
       ["中文（简体)", "chinese.dat"],
     ]
   

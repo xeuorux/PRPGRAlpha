@@ -823,7 +823,7 @@ Name = Metronome
 NamePlural = Metronomes
 Pocket = 5
 Price = 4000
-Description = A Pokémon held item that boosts a move used consecutively by 20% more each time. This resets if another move is used.
+Description = A held item. Boosts a move used consecutively by 20% more each time. This resets if another move is used.
 #-------------------------------
 [MUSCLEBAND]
 Name = Muscle Band
@@ -1993,7 +1993,7 @@ Name = Custap Berry
 NamePlural = Custap Berries
 Pocket = 5
 Price = 0
-Flags = Berry
+Flags = Berry,Pinch
 Description = If held by a Pokémon, it gets to move first just once in a pinch.
 #-------------------------------
 [JABOCABERRY]
@@ -2958,7 +2958,34 @@ Pocket = 8
 Price = 0
 FieldUse = Direct
 Flags = KeyItem
-Description = A journal that has lost its binding. If you find its scattered pages, you can put them back in place.
+Description = A damaged traveler's journal. If you find its scattered pages, you can put them back in place.
+#-------------------------------
+[DEADSKYSLIVER]
+Name = Dead Sky Sliver
+NamePlural = Dead Sky Slivers
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = A dark sliver of something that hurts to look at. It bears an inscription.
+#-------------------------------
+[TIMELOSTALABASTER]
+Name = Timelost Alabaster
+NamePlural = Timelost Alabasters
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = Inscribed, delicate pale stone. It’s always been here, but it hasn’t always always been here.
+#-------------------------------
+[WRETCHEDWHITEWING]
+Name = Wretched Whitewing
+NamePlural = Wretched Whitewings
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = A radiant wing. It radiates misery, but you feel peaceful holding it. Returning home, returning home...
 #-------------------------------
 [VIPCARD]
 Name = VIP Card

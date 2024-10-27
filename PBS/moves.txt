@@ -2508,7 +2508,7 @@ Accuracy = 0
 TotalPP = 5
 Target = BothSides
 FunctionCode = StartGravity5
-Description = Gravity is intensified for five turns, forcing Pokemon down from the air and doubling all move accuracy.
+Description = Gravity is intensified for five turns, forcing Pokémon down from the air and doubling all move accuracy.
 #-------------------------------
 [LANDSWRATH]
 Name = Land's Wrath
@@ -2560,18 +2560,6 @@ Flags = CanProtect,CanMirrorMove,Wind
 EffectChance = 30
 Description = The user wraps foes in fierce winds and searingly hot sand. It has a 30% chance to burn.
 Animation = SCORCHINGSANDS
-#-------------------------------
-[SANDTOMB]
-Name = Sand Tomb
-Type = GROUND
-Category = Physical
-Power = 50
-Accuracy = 100
-TotalPP = 15
-Target = NearOther
-FunctionCode = BindTarget3
-Flags = CanProtect,CanMirrorMove
-Description = The user spins a sandstorm around the target, trapping and damaging it for three turns.
 #-------------------------------
 [SCORCHINGSANDS]
 Name = Scorching Sands
@@ -2815,7 +2803,7 @@ Accuracy = 0
 TotalPP = 10
 Target = BothSides
 FunctionCode = StartSandstorm8
-Description = Summons sandstorm for eight turns. Damages non-Rock, non-Ground Pokemon every turn.
+Description = Summons sandstorm for eight turns. Damages non-Rock, non-Ground Pokémon every turn.
 #-------------------------------
 [SMACKDOWN]
 Name = Smack Down
@@ -2974,7 +2962,7 @@ TotalPP = 10
 Target = User
 FunctionCode = HealUserThreeFifthsOfTotalHP
 Flags = CanSnatch
-Description = The user calls out its underlings to heal it. The user regains 3/5ths of its max HP.
+Description = The user calls out its underlings to heal it. The user regains 60% of its max HP.
 #-------------------------------
 [INFESTATION]
 Name = Infestation
@@ -5640,7 +5628,7 @@ TotalPP = 5
 Target = NearOther
 FunctionCode = RemoveProtectionsBypassSubstituteAlwaysHits
 Flags = CanMirrorMove
-Description = Using a hyperspace hole, the user appears right next to the target and strikes. Skips and destroys protections and substitutes. Always hits.
+Description = Using a hyperspace hole, the user appears next to the target and strikes. Skips and destroys protections and substitutes. Always hits.
 #-------------------------------
 [INSTRUCT]
 Name = Instruct
@@ -6066,10 +6054,10 @@ Description = The user blows a cold breath on the target. This attack always res
 Name = Glacial Lance
 Type = ICE
 Category = Physical
-Power = 130
+Power = 120
 Accuracy = 100
 TotalPP = 5
-Target = AllNearOthers
+Target = AllNearFoes
 FunctionCode = Basic
 Flags = CanProtect,CanMirrorMove
 Description = The user attacks by hurling a blizzard-cloaked icicle lance at opposing Pokémon.

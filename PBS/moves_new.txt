@@ -614,7 +614,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = TypeDependsOnWeather
 Flags = CanProtect,CanMirrorMove
-Description = The user causes the air around the target to explode. It's type is changed based on the active weather.
+Description = The user causes the air around the target to explode. The move's type is changed based on the active weather.
 Animation = WEATHERBALL
 #-------------------------------
 [YOUNGAGAIN]
@@ -1222,7 +1222,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = DestroysHerbs
 Flags = CanProtect,CanMirrorMove
-Description = The user infects the target with a touch and also destroys any Herbs its holding.
+Description = The user infects the target with a touch and also destroys any Herbs it's holding.
 Animation = POISONJAB
 #-------------------------------
 [CAUSTICPUNCH]
@@ -1428,7 +1428,7 @@ Target = AllNearFoes
 FunctionCode = Poison
 Flags = CanProtect,CanMirrorMove,Wind
 EffectChance = 30
-Description = Summons a storm of poisonous gas to hit all nearby pokemon with a 30% chance to poison.
+Description = Summons a storm of poisonous gas to hit all nearby Pokémon with a 30% chance to poison.
 Animation = SMOG
 #-------------------------------
 [STINGINGJEALOUSY]
@@ -4272,18 +4272,6 @@ Flags = CanProtect,CantForce
 Description = The user hides its blade. If it is hit by a special move, it unsheathes it quickly, slashing all near foes.
 Animation = CAMOUFLAGE
 #-------------------------------
-[MINDSAP]
-Name = Mind Sap
-Type = GRASS
-Category = Status
-Accuracy = 100
-TotalPP = 5
-Target = NearOther
-FunctionCode = HealUserByTargetSpAtkLowerTargetSpAtk1
-Flags = CanProtect,CanMagicCoat,CanMirrorMove
-Description = Lowers the target's Sp. Atk stat, then restores its own HP by the target's Sp. Atk.
-Animation = STRENGTHSAP
-#-------------------------------
 [MISTLETOE]
 Name = Mistletoe
 Type = GRASS
@@ -6139,7 +6127,7 @@ Target = AllNearOthers
 FunctionCode = ReverseTargetHealingThisTurn
 Flags = CanProtect,CanMirrorMove
 EffectChance = 100
-Description = For the rest of the round, the healing of all damaged Pokemon is reversed.
+Description = For the rest of the round, the healing of all damaged Pokémon is reversed.
 Animation = GLARE
 #-------------------------------
 [INCISION]
@@ -6179,6 +6167,18 @@ FunctionCode = RaiseUserAndAlliesAtk2StartMoonglow8
 Flags = CanSnatch
 Description = Summons moonglow for eight turns and raises the Attack stat of itself and its allies by two steps.
 Animation = HOWL
+#-------------------------------
+[MINDSAP]
+Name = Mind Sap
+Type = DARK
+Category = Status
+Accuracy = 100
+TotalPP = 5
+Target = NearOther
+FunctionCode = HealUserByTargetSpAtkLowerTargetSpAtk1
+Flags = CanProtect,CanMagicCoat,CanMirrorMove
+Description = Lowers the target's Sp. Atk stat, then restores its own HP by the target's Sp. Atk.
+Animation = STRENGTHSAP
 #-------------------------------
 [MOUTHFUL]
 Name = Mouthful
