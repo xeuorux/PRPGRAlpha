@@ -38,7 +38,7 @@ class PokemonStorageScene
         @sprites["pokemon"] = AutoMosaicPokemonSprite.new(@boxsidesviewport)
         @sprites["pokemon"].setOffset(PictureOrigin::Center)
         @sprites["pokemon"].x = 90
-        @sprites["pokemon"].y = 134
+        @sprites["pokemon"].y = 138
         @sprites["boxparty"] = PokemonBoxPartySprite.new(@storage.party, @boxsidesviewport, iconFadeProc)
         if command != 2 # Drop down tab only on Deposit
             @sprites["boxparty"].x = 182
@@ -1000,6 +1000,20 @@ class PokemonStorageScene
         end
         pbDrawTextPositions(overlay, textstrings)
         @sprites["pokemon"].setPokemonBitmap(pokemon) if forceUpdatePokemon || @sprites["pokemon"].pokemon != pokemon
+    
+        # Draw HP bar
+        if pokemon.hp > 0
+            w = pokemon.hp * 96 * 1.0 / pokemon.totalhp
+            w = 1 if w < 1
+            w = (w / 2).round * 2
+            hpzone = 0
+            hpzone = 1 if pokemon.hp <= (pokemon.totalhp / 2).floor
+            hpzone = 2 if pokemon.hp <= (pokemon.totalhp / 4).floor
+            imagepos = [
+                ["Graphics/Pictures/Summary/overlay_hp", 50, 54, 0, hpzone * 6, w, 6],
+            ]
+            pbDrawImagePositions(overlay, imagepos)
+        end
     end
 
     def update
