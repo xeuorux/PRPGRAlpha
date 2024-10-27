@@ -63,8 +63,10 @@ class PokemonGlobalMetadata
     attr_accessor :teamHealerUpgrades
     # Tarot amulet
     attr_accessor :tarot_amulet_active
+    # Ominous Egg stage
+    attr_accessor :ominous_egg_stage
     # Chroma Clarion
-    attr_accessor   :chroma_clarion_recharge_steps
+    attr_accessor :chroma_clarion_recharge_steps
     # Ragged journal
     attr_accessor :ragged_journal_pages_collected
     # Randomizer
@@ -166,6 +168,8 @@ class PokemonGlobalMetadata
         @tarot_amulet_active  = false
         # Ragged Journal
         @ragged_journal_pages_collected  = []
+        # Ominous egg
+        @ominous_egg_stage = 0
         # Chroma Clarion
         @chroma_clarion_recharge_steps = 0
         # Masterdex

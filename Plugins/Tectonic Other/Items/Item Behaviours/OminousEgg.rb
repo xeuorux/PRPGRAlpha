@@ -1,4 +1,3 @@
-OMINOUS_EGG_STAGE_VAR = 42
 TRAINERS_PERFECTED_GLOBAL_VAR = 79
 
 GlobalStateHandlers::GlobalVariableChanged.add(TRAINERS_PERFECTED_GLOBAL_VAR,
@@ -11,33 +10,33 @@ GlobalStateHandlers::GlobalVariableChanged.add(TRAINERS_PERFECTED_GLOBAL_VAR,
 
 def receiveOminousEgg
     pbReceiveItem(:OMINOUSEGG)
-    setGlobalVariable(OMINOUS_EGG_STAGE_VAR,0)
+    $PokemonGlobal.ominous_egg_stage = 0
     checkForOminousEggRewards
 end
 
 def checkForOminousEggRewards
-    stage = getGlobalVariable(OMINOUS_EGG_STAGE_VAR)
+    stage = $PokemonGlobal.ominous_egg_stage
     value = getGlobalVariable(TRAINERS_PERFECTED_GLOBAL_VAR)
     rewards = []
 
     if value >= 20 && stage == 0
         rewards.push(:LIFEORB)
-        incrementGlobalVar(OMINOUS_EGG_STAGE_VAR)
+        $PokemonGlobal.ominous_egg_stage += 1
     end
 
     if value >= 40 && stage == 1
         rewards.push(:MASTERBALL)
-        incrementGlobalVar(OMINOUS_EGG_STAGE_VAR)
+        $PokemonGlobal.ominous_egg_stage += 1
     end
 
     if value >= 60 && stage == 2
         rewards.push(:RELICSTATUE)
-        incrementGlobalVar(OMINOUS_EGG_STAGE_VAR)
+        $PokemonGlobal.ominous_egg_stage += 1
     end
 
     if value >= 80 && stage == 3
         rewards.push(:SHINYCHARM)
-        incrementGlobalVar(OMINOUS_EGG_STAGE_VAR)
+        $PokemonGlobal.ominous_egg_stage += 1
     end
 
     unless rewards.empty?
@@ -53,7 +52,7 @@ def playOminousEggCutscene
     pbWait(20)
     pbMessage(_INTL("\\i[OMINOUSEGG]...you hear whispers from the Ominous Egg."))
     pbWait(20)
-    case getGlobalVariable(OMINOUS_EGG_STAGE_VAR)
+    case $PokemonGlobal.ominous_egg_stage
     when 1
         pbMessage(_INTL("\\i[OMINOUSEGG]...sacrifice..."))
     when 2
