@@ -1,3 +1,5 @@
+PC_STORAGE_HEALS = false
+
 #===============================================================================
 # Pokémon storage mechanics
 #===============================================================================
@@ -231,7 +233,7 @@ class PokemonStorageScreen
                     if heldpoke || selected[0] == -1
                         p = heldpoke || @storage[-1, index]
                         p.time_form_set = nil
-                        p.heal
+                        p.heal if PC_STORAGE_HEALS
                         promptToTakeItems(p)
                     end
                     @scene.pbStore(selected, heldpoke, destbox, firstfree)
@@ -278,7 +280,7 @@ class PokemonStorageScreen
         end
         if box >= 0
             @heldpkmn.time_form_set = nil
-            @heldpkmn.heal
+            @heldpkmn.heal if PC_STORAGE_HEALS
             promptToTakeItems(@heldpkmn)
         end
         @scene.pbPlace(selected, @heldpkmn)
@@ -476,7 +478,7 @@ class PokemonStorageScreen
         end
         if box >= 0
             @heldpkmn.time_form_set = nil
-            @heldpkmn.heal
+            @heldpkmn.heal if PC_STORAGE_HEALS
             promptToTakeItems(@heldpkmn)
         end
         @scene.pbSwap(selected, @heldpkmn)
