@@ -168,11 +168,11 @@ class ParticleEffect_Event
     end
 
     def xExtent
-        return 0
+        return 32
     end
 
     def yExtent
-        return 0
+        return 32
     end
 
     def updateParticle(i,particleZ)
