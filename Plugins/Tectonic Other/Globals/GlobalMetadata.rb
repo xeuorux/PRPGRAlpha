@@ -101,7 +101,11 @@ class PokemonGlobalMetadata
     attr_accessor :tournament
     # Dragon flames
     attr_writer :dragonFlamesCount
+    # Circuit puzzles
     attr_writer :puzzlesCompleted
+    # Time travel
+    attr_writer :timeModifiedEvents
+    attr_writer :futureFilledHoles
 	
 	def initialize
         # Movement
@@ -186,6 +190,11 @@ class PokemonGlobalMetadata
         @capture_counts_per_ball = {}
 
         @tournament = RandomTournament.new
+
+        # Regi dungeon puzzles
+        @dragonFlamesCount = 0
+        @puzzlesCompleted = []
+        @timeModifiedEvents = []
     end
 
     ####################################################
@@ -297,5 +306,15 @@ class PokemonGlobalMetadata
     def puzzlesCompleted
         @puzzlesCompleted = [] if @puzzlesCompleted.nil?
         return @puzzlesCompleted
+    end
+
+    def timeModifiedEvents
+        @timeModifiedEvents = [] if @timeModifiedEvents.nil?
+        return @timeModifiedEvents
+    end
+
+    def futureFilledHoles
+        @futureFilledHoles = {} if @futureFilledHoles.nil?
+        return @futureFilledHoles
     end
 end

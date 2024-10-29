@@ -129,6 +129,9 @@ def modifyTimeLinkedEvents
         eventName = event.name.downcase
         next unless eventName.include?("timelinked")
         next if pbGetSelfSwitch(event.id,'D',mapID) # Timelinking disabled with D switch
+
+        matchState = $PokemonGlobal.timeModifiedEvents.include?(event.id)
+
         otherEventID = -1
         match = /timelinked\(([0-9]+)\)/.match(eventName)
         captureGroup1 = match.captures[0]
@@ -138,13 +141,24 @@ def modifyTimeLinkedEvents
 
             next if pbGetSelfSwitch(otherEvent.id,'D',mapID) # Timelinking disabled with D switch
 
-            # Match all self switches
-            ['A','B','C'].each do |switchName|
-                switchValue = pbGetSelfSwitch(event.id,switchName,mapID)
-                pbSetSelfSwitch(otherEventID,switchName,switchValue,mapID)
-            end
+            if matchState
+                # Reset any holes this boulder was filling
+                if $PokemonGlobal.futureFilledHoles.key?($game_map.map_id)
+                    if $PokemonGlobal.futureFilledHoles[$game_map.map_id].key?(otherEventID)
+                        futureHoleID = $PokemonGlobal.futureFilledHoles[$game_map.map_id][otherEventID]
+                        pbSetSelfSwitch(futureHoleID,'A',false,mapID)
+                        echoln("Resetting future hole event #{otherEventID} map ID #{mapID}")
+                    end
+                end
 
-            matchPosition(otherEvent, event)
+                # Match all self switches
+                ['A','B','C'].each do |switchName|
+                    switchValue = pbGetSelfSwitch(event.id,switchName,mapID)
+                    pbSetSelfSwitch(otherEventID,switchName,switchValue,mapID)
+                end
+
+                matchPosition(otherEvent, event)
+            end
 
             # Erode events
             if eroding && otherEvent.name[/erodable/]
@@ -156,6 +170,8 @@ def modifyTimeLinkedEvents
         end
     end
     echoln("Modifying time linked events on map ID #{mapID}")
+
+    resetTimeTravelConsequences
 end
 
 def timeTravelMap?(mapID = -1)
@@ -200,4 +216,20 @@ def resetCanyon(mapID = -1)
             pbSetSelfSwitch(event.id,"A",false,mapID)
         end
     end
+
+    resetTimeTravelConsequences
+end
+
+def resetTimeTravelConsequences
+    $PokemonGlobal.timeModifiedEvents = []
+    $PokemonGlobal.futureFilledHoles = {}
+end
+
+def registerPastModified(event)
+    $PokemonGlobal.timeModifiedEvents.push(event.id)
+end
+
+def registerFutureFilledHole(boulderEvent,holeEvent)
+    $PokemonGlobal.futureFilledHoles[$game_map.map_id] = {} unless $PokemonGlobal.futureFilledHoles.key?($game_map.map_id)
+    $PokemonGlobal.futureFilledHoles[$game_map.map_id][boulderEvent.id] = holeEvent.id
 end
