@@ -335,7 +335,7 @@ class Game_Player < Game_Character
           result = true
 
           # For crumbling canyon
-          registerPastModified(event) if event.name[/timelinked/]
+          trackObjectModifiedInPast(event) if event.name[/timelinked/]
         end
       end
       return result

@@ -223,13 +223,19 @@ end
 def resetTimeTravelConsequences
     $PokemonGlobal.timeModifiedEvents = []
     $PokemonGlobal.futureFilledHoles = {}
+
+    echoln("Resetting time travel consequences.")
 end
 
-def registerPastModified(event)
+def trackObjectModifiedInPast(event)
     $PokemonGlobal.timeModifiedEvents.push(event.id)
+
+    echoln("Tracking object modified in the past (time travel): #{event.name} (#{event.id})")
 end
 
-def registerFutureFilledHole(boulderEvent,holeEvent)
+def trackBoulderHoleFilledInFuture(boulderEvent,holeEvent)
     $PokemonGlobal.futureFilledHoles[$game_map.map_id] = {} unless $PokemonGlobal.futureFilledHoles.key?($game_map.map_id)
     $PokemonGlobal.futureFilledHoles[$game_map.map_id][boulderEvent.id] = holeEvent.id
+
+    echoln("Tracking boulder hole filled in the future (time travel): Event #{boulderEvent.id} filling event #{holeEvent.id} on map #{$game_map.map_id}")
 end

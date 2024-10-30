@@ -456,14 +456,14 @@ class Interpreter
             pbSetSelfSwitch(event.id, "A")
             pbSetSelfSwitch(holeEvent.id, "A")
 
-            registerPastModified(holeEvent) if holeEvent.name[/timelinked/]
+            trackObjectModifiedInPast(holeEvent) if holeEvent.name[/timelinked/]
 
-            registerFutureFilledHole(event,holeEvent) unless holeEvent.name[/timelinked/]
+            trackBoulderHoleFilledInFuture(event,holeEvent) unless holeEvent.name[/timelinked/]
         else
             pbSEPlay("Anim/Earth3", 40, rand(110, 140))
         end
 
-        registerPastModified(event) if event.name[/timelinked/]
+        trackObjectModifiedInPast(event) if event.name[/timelinked/]
     end
 
     def pbPushThisBoulder
