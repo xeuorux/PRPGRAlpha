@@ -1,8 +1,8 @@
 ##############################################
-# TYPE REWARDS (54 of them)
+# TYPE REWARDS (18 of them)
 ##############################################
-typeThreshold = [10,25,50]
-typeRewards = [[:EXPCANDYM,8],[:EXPCANDYL,4],[:EXPCANDYXL,2]]
+typeThreshold = [50]
+typeRewards = [[:EXPCANDYXL,5]]
 
 PokEstate::LoadDataDependentAwards += proc {
     # For every type, create three award event subscribers at different thresholds
@@ -21,10 +21,10 @@ PokEstate::LoadDataDependentAwards += proc {
 }
 
 ##############################################
-# TRIBE REWARDS (44 of them)
+# TRIBE REWARDS (22 of them)
 ##############################################
-tribeThreshold = [15,30]
-tribeRewards = [[:EXPCANDYM,6],[:EXPCANDYL,3]]
+tribeThreshold = [50]
+tribeRewards = [[:EXPCANDYXL,4]]
 
 PokEstate::LoadDataDependentAwards += proc {
     # For every type, create three award event subscribers at different thresholds
