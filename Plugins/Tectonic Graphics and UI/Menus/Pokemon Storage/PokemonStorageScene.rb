@@ -38,7 +38,7 @@ class PokemonStorageScene
         @sprites["pokemon"] = AutoMosaicPokemonSprite.new(@boxsidesviewport)
         @sprites["pokemon"].setOffset(PictureOrigin::Center)
         @sprites["pokemon"].x = 90
-        @sprites["pokemon"].y = 134
+        @sprites["pokemon"].y = 138
         @sprites["boxparty"] = PokemonBoxPartySprite.new(@storage.party, @boxsidesviewport, iconFadeProc)
         if command != 2 # Drop down tab only on Deposit
             @sprites["boxparty"].x = 182
@@ -996,6 +996,30 @@ class PokemonStorageScene
                 overlay.blt(88, 272, typebitmap.bitmap, type2rect)
             end
             drawMarkings(overlay, 70, 240, 128, 20, pokemon.markings)
+
+            # Draw HP bar
+            if pokemon.hp > 0
+                w = pokemon.hp * 96 * 1.0 / pokemon.totalhp
+                w = 1 if w < 1
+                w = (w / 2).round * 2
+                hpzone = 0
+                hpzone = 1 if pokemon.hp <= (pokemon.totalhp / 2).floor
+                hpzone = 2 if pokemon.hp <= (pokemon.totalhp / 4).floor
+                imagepos.push(["Graphics/Pictures/Summary/overlay_hp", 50, 54, 0, hpzone * 6, w, 6])
+            end
+
+            # Show status/fainted/Pokérus infected icon
+            status = 0
+            if pokemon.afraid?
+                status = GameData::Status::DATA.keys.length / 2 + 1
+            elsif pokemon.fainted?
+                status = GameData::Status::DATA.keys.length / 2
+            elsif pokemon.status != :NONE
+                status = GameData::Status.get(pokemon.status).id_number
+            end
+            status -= 1
+            imagepos.push([addLanguageSuffix("Graphics/Pictures/statuses"), 120, 68, 0, 16 * status, 44, 16]) if status >= 0
+            
             pbDrawImagePositions(overlay, imagepos)
         end
         pbDrawTextPositions(overlay, textstrings)

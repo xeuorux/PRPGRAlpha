@@ -24,6 +24,7 @@ def happinessCheckerCorviknight
         pbWait(20)
         showSad
         pbWait(40)
+        pbMessage(_INTL("You get the sense that you've failed some sort of test."))
         return false
     end
 end
@@ -46,16 +47,24 @@ end
 
 def calyrexLegendFight
     level = [70,getLevelCap].min
-    result = pbWildBattleCore(:CALYREX, level)
+
+    pkmn = pbGenerateWildPokemon(:CALYREX, level)
+    pkmn.forget_all_moves
+    pkmn.learn_move(:FUTURESIGHT)
+    pkmn.learn_move(:SEERSTRIKE)
+    pkmn.learn_move(:AROMATHERAPY)
+    pkmn.learn_move(:ENERGYBALL)
+
+    pkmn.Trait1 = _INTL("Green-thumbed")
+    pkmn.Trait2 = _INTL("Savior")
+    pkmn.Trait3 = _INTL("Scornful")
+    pkmn.Like = _INTL("Grand Design")
+    pkmn.Dislike = _INTL("Treason")
+    pkmn.happiness = MAX_HAPPINESS
+
+    result = pbWildBattleCore(pkmn)
     if result == 4 # Caught
         get_self.opacity = 0
-        setSpeaker(CALYREX)
-        pbMessage(_INTL("<i>What!!?</i>"))
-        pbMessage(_INTL("<i>How... how could you?</i>"))
-        pbMessage(_INTL("<i>Insolent fool! Treasonous wretch!!!  Usurping the King of All in your desperate attemp–</i>"))
-        pbWait(20)
-        removeSpeaker
-        pbMessage(_INTL("Calyrex's protests fade away, leaving an echoing silence in its absence."))
         return true
     elsif result == 1
         setSpeaker(CALYREX)
@@ -64,5 +73,25 @@ def calyrexLegendFight
         pbMessage(_INTL("<i>Repulsive flea...</i>"))
         pbMessage(_INTL("<i><b>I will swat you from the sky.</b></i>"))
         return false
+    else
+        setSpeaker(CALYREX)
+        pbMessage(_INTL("<i>Let this act as a lesson in humility, worm!</i>"))
+        return false
     end
 end
+
+BallHandlers::OnPokemonCaught += proc { |ball, battle, pkmn|
+    next unless pkmn.species == :CALYREX
+    next unless $game_map.map_id == 444 # crown chamber
+
+    setSpeaker(CALYREX)
+    battle.pbDisplayWithFormatting(_INTL("<i>What!!?</i>"))
+    battle.pbDisplayWithFormatting(_INTL("<i>How... how could you?</i>"))
+    if ball == :RADIANTBALL
+        battle.pbDisplayWithFormatting(_INTL("<i>To think!! My gift to the world, in the hands of the <b>undeserving</b>!</i>"))
+    end
+    battle.pbDisplayWithFormatting(_INTL("<i>Insolent fool! Treasonous wretch!!!  Usurping the King of All in your desperate attemp–</i>"))
+    pbWait(40)
+    removeSpeaker
+    battle.pbDisplayWithFormatting(_INTL("Calyrex's protests fade away, leaving an echoing silence in its absence."))
+}

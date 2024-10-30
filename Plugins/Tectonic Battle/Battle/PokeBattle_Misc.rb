@@ -131,7 +131,6 @@ class PokeBattle_Battle
             echoln("ERROR: Unable to change moveset.") if movesetToAssign.nil?
             b.assignMoveset(movesetToAssign)
             b.empoweredTimer = 0
-            b.indicesTargetedLastRound = []
             @scene.pbRefresh
 
             # Reset fear
@@ -147,7 +146,7 @@ class PokeBattle_Battle
 
     # moveIDOrIndex is either the index of the move on the user's move list (Integer)
     # or it's the ID of the move to be used (Symbol)
-    def forceUseMove(forcedMoveUser, moveIDOrIndex, target = -1, specialUsage = true, usageMessage = nil, moveUsageEffect = nil, ability: nil, aiCheck: false)
+    def forceUseMove(forcedMoveUser, moveIDOrIndex, target = -1, specialUsage = true, usageMessage = nil, moveUsageEffect: nil, ability: nil, aiCheck: false)
         if moveIDOrIndex.is_a?(Symbol)
             fakeMove = PokeBattle_Move.from_pokemon_move(self, Pokemon::Move.new(moveIDOrIndex))
         else

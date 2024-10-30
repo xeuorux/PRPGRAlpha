@@ -566,6 +566,10 @@ FormName = Kabuki Trim
 [FURFROU,9]
 FormName = Pharaoh Trim
 #-------------------------------
+[MEOWSTIC,1]
+FormName = Female
+Color = White
+#-------------------------------
 [AEGISLASH,1]
 FormName = Blade
 BaseStats = 60,150,50,60,150,50
@@ -869,6 +873,11 @@ Evolutions = POLTEAGEIST,Item,CHIPPEDPOT
 FormName = Antique
 Pokedex = Trainers Polteageist trusts will be allowed to experience its distinctive flavor and aroma firsthand by sampling just a tiny bit of its tea.
 #-------------------------------
+[INDEEDEE,1]
+FormName = Female
+EffortPoints = 0,0,0,0,0,2
+Pokedex = They diligently serve people and Pokémon so they can gather feelings of gratitude. The females are particularly good at babysitting.
+#-------------------------------
 [MORPEKO,1]
 FormName = Hangry
 Type1 = DARK
@@ -898,7 +907,7 @@ Type2 = ICE
 BaseStats = 100,165,150,50,85,130
 EffortPoints = 0,3,0,0,0,0
 Abilities = ASONEICE
-Moves = 1,GLACIALLANCE,1,TACKLE,1,LEER,1,DOUBLEKICK,1,AVALANCHE,1,STOMP,1,TORMENT,1,GREYMIST,1,ICICLECRASH,1,TAKEDOWN,1,IRONDEFENSE,1,THRASH,1,TAUNT,1,DOUBLEEDGE,1,SWORDSDANCE,1,POUND,1,MEGADRAIN,1,MINDWAVES,1,GROWTH,4,LIFEDEW,8,GIGADRAIN,12,BLINDSIDE,16,HELPINGHAND,20,AROMATHERAPY,24,ENERGYBALL,28,PSYCHIC,32,LEECHSEED,36,HEALPULSE,40,SOLARBEAM,44,FUTURESIGHT
+Moves = 1,GLACIALLANCE,1,TACKLE,1,LEER,1,DOUBLEKICK,1,AVALANCHE,1,STOMP,1,TORMENT,1,GREYMIST,1,ICICLECRASH,1,TAKEDOWN,1,IRONDEFENSE,1,THRASH,1,TAUNT,1,DOUBLEEDGE,1,SWORDSDANCE,1,POUND,1,MEGADRAIN,1,MINDWAVES,5,GROWTH,10,LIFEDEW,15,GIGADRAIN,20,PULSAR,25,HELPINGHAND,30,AROMATHERAPY,35,ENERGYBALL,40,PSYCHIC,45,LEECHSEED,50,HEALPULSE,55,SOLARBEAM,60,FUTURESIGHT
 Kind = High King
 Pokedex = It's said that this Pokémon once moved a large forest—and all the Pokémon living there—to a new location overnight.
 #-------------------------------
@@ -909,8 +918,9 @@ Type2 = GHOST
 BaseStats = 100,85,80,150,165,100
 EffortPoints = 0,0,0,0,3,0
 Abilities = ASONEGHOST
-Moves = 1,ASTRALBARRAGE,1,TACKLE,1,LEER,1,DOUBLEKICK,1,HEX,1,STOMP,1,CONFUSERAY,1,GREYMIST,1,SHADOWBALL,1,TAKEDOWN,1,AGILITY,1,THRASH,1,DISABLE,1,DOUBLEEDGE,1,DREAMDANCE,1,POUND,1,MEGADRAIN,1,MINDWAVES,1,GROWTH,4,LIFEDEW,8,GIGADRAIN,12,BLINDSIDE,16,HELPINGHAND,20,AROMATHERAPY,24,ENERGYBALL,28,PSYCHIC,32,LEECHSEED,36,HEALPULSE,40,SOLARBEAM,44,FUTURESIGHT
+Moves = 1,ASTRALBARRAGE,1,TACKLE,1,LEER,1,DOUBLEKICK,1,HEX,1,STOMP,1,CONFUSERAY,1,GREYMIST,1,SHADOWBALL,1,TAKEDOWN,1,AGILITY,1,THRASH,1,DISABLE,1,DOUBLEEDGE,1,DREAMDANCE,1,POUND,1,MEGADRAIN,1,MINDWAVES,5,GROWTH,10,LIFEDEW,15,GIGADRAIN,20,PULSAR,25,HELPINGHAND,30,AROMATHERAPY,35,ENERGYBALL,40,PSYCHIC,45,LEECHSEED,50,HEALPULSE,55,SOLARBEAM,60,FUTURESIGHT
 Kind = High King
+Pokedex = Legend says that by using its power to see all events from past to future, this Pokémon saved the creatures of a forest from a meteorite strike.
 #-------------------------------
 [KYOGRE,1]
 FormName = Primal

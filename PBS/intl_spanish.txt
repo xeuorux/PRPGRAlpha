@@ -2370,7 +2370,7 @@ Norte: Túnel Oriental
 East: Grouz Mine
 Este: Mina Grouz
 South-East: Amber Hills
-Sureste: Colinas de Ámbar
+Sureste: Colinas Ámbar
 Grouz Mine
 Mina Grouz
 The door is boarded up.
@@ -25623,7 +25623,7 @@ Anular las habilidades de los oponentes es una estrategia muy poderosa.
 Luxtech has been so successful for the region that new housing being developed.
 Luxtech ha sido tan exitosa para la región que nuevo alojamiento está siendo desarrollado.
 Helena herself has taken residence in the freshly manicured County Park.
-La propia Helena ha empezado a vivir en el recientemente fundado Parque del Condado.
+La propia Helena ha empezado a vivir en el recientemente fundado Parque del Municipio.
 I head the deodorant sales division at Miss Dreavus cosmetics.
 Dirijo la división de ventas de desodorantes en Miss Dreavus Cosmetics.
 My team just clinched a cross-promotional deal with LuxTech!
@@ -26693,6 +26693,16 @@ Excuse me, I've got to update my mathematical models...
 Discúlpame, tengo que actualizar mis modelos matemáticos...
 No matter. Even a loss is just more data to feed to the algorithm.
 No importa. Incluso una derrota es sólo más información para alimentar al algoritmo.
+There has to be a better way to run this business...
+Tiene que haber una mejor forma de manejar este negocio...
+Crunching numbers like Sharpedo, oh yeah.
+Echando cuentas como un Alakazam, oh sí.
+I'm wondering what made those strange grassy holes in the Amber Hills and the Floral Maze.
+Me pregunto qué hizo esos huecos herbosos extraños Colinas Ámbar y el Laberinto Floral.
+There's another one out by the Fin as well.
+También hay otro en la Aleta.
+I ain't one of those superstitious types, but they don't look natural to me.
+No soy del tipo supersticioso, pero no parecen naturales para mí.
 [Map427]
 An old, beaten up laptop. A couple dozen windows are open all at once.
 Una vieja laptop algo destartalada. Un par de docenas de ventanas están abiertas a la vez.
@@ -26879,6 +26889,49 @@ Múltiples copias del mismo cartel, todos publicitando un paquete de seguros que
 [Map430]
 A golden fruit glistens in a space atop the tree.
 Una fruta dorada brilla en una espacio sobre el árbol.
+A gleaming silver tree. The space at the top is empty of any fruit.
+Un árbol de plata brillante. El espacio en la punta está libre de frutos.
+Behind me stand two sides of a similar coin – An arrogant child and a cowardly elder.
+Detrás de mí se paran dos lados de una moneda similar – Un niño arrogante y un anciano cobarde.
+Both too fearful to recognize the harm they cause our King of Kings.
+Ambos demasiados temorosos para reconocer el daño que le causan al Rey de Reyes. 
+But not I! With vigor and wit interwoven, <i>I see the world as it always was.</i>
+¡Pero no yo! Con vigor e ingenio entretejido <i>veo el mundo como siempre ha sido.</i> 
+A wonderful battle – nothing short of greatness! But to what do I owe this sudden late.. ness?
+Un maravilloso combate – ¡uno que no se queda corto de grandeza! ¿Pero a qué debo esta súbita... tardanza?
+No matter! <i>You are but a grain of sand against His will.</i>
+¡No importa! <i>No eres más que un grano de arena contra Su voluntad.</i>
+From above, from above! Our great King revealed Himself from above!
+¡Desde arriba, desde arriba! ¡Nuestro gran Rey se reveló a Si Mismo desde arriba!
+Mere prey, my critters and I both - but with a whispered edict and a gentle hand, <i>the meek will rise, by every means they can muster.</i>
+Meras presas, yo y mis insectos - pero con un edicto murmurado y una mano gentil, <i>los humilders se alzarán, por cualquier medio que puedan lograr.</i>
+Awwww… I thought <i>my</i> team was perfect! Oh well, time to go back home!!
+Owwww… ¡Y pensé que <i>mi</i> equipo era perfecto! ¡¡Oh bueno, hora de regresar a casa!!
+Neither heedless trainer nor winged creature <i>shall ever pluck away at His great reign.</i>
+Ningún entrenador imprudente o criatura alada <i>derrocará nunca Su gran reinado.</i>
+Fear, guilt, and shame - a trinity of self-imposed suffering.
+Miedo, culpa, y remordimiento - una trinidiad de sufrimiento auto-impuesto.
+They stood as my lifelong companions, but no longer must they.
+Me acompañaron toda mi vida, pero ya no deben hacerlo.
+<i>Fear means nothing under His watchful gaze.</i>
+<i>El miedo no significa nada ante Su ojo atento.</i>
+O-Oriel..?
+¿O-Oriel..?
+How foolish of you, <i>rejecting greater purpose with such conviction.</i>
+Qué insensato eres, <i>rechazando un próposito superior con tal convicción.</i>
+[Map431]
+You might want to slow down, Trainer. These ships are dangerous.
+Puede que quieras detenerte, Entrenador. Estos barcos son peligrosos.
+Even though I'm on land, my old sea legs are wobbling.
+Aunque esté en tierra, mis viejas piernas marinas están temblando.
+Something's off about these boats, and I don't want to be the one that finds the reason why.
+Algo está mal con esos botes, y no quiero ser el que descubra la razón del porqué.
+I hope all my numbing strategies will make you take it slow.
+Espero que mis estrategias de aturdimiento te ralenticen.
+Never been in a shipwreck, and I pride myself for it.
+Nunca estuve en un naufragio, y estoy orgulloso de ello.
+You get the shivers when you feel like disaster is coming. Guess it comes with experience.
+Te tiembla todo cuando sientes que el desastre está por llegar. Supongo que viene con la experiencia.
 [Map433]
 Cabin Room 2
 Cabina Número 2
@@ -26888,15 +26941,14 @@ Cabin Room 4
 Cabina Número 4
 Cabin Room 1
 Cabina Número 1
-[Map433]
-Cabin Room 2
-Cabina Número 2
-Cabin Room 3
-Cabina Número 3
-Cabin Room 4
-Cabina Número 4
-Cabin Room 1
-Cabina Número 1
+AHAHAHAHA! SO MUCH TRASH, SO MUCH TREASURE! THIS WHOLE SHIP IS MINE!
+¡AJAJAJAJA! ¡TANTA BASURA, TANTO TESORO! ¡TODO ESTE BARCO ES MÍO!
+THE WORLD FITS IN MY POCKET! AN OYSTER ON THE SHIP! AND IT IS MINE!
+¡EL MUNDO CABE EN MI BOLSILLO! ¡UNA ALMEJA EN EL BARCO! ¡Y ES MÍA!
+RIDE THE WAVE! FEEL THE LIGHTNING! I FEAST LIKE A KING TONIGHT!
+¡SURFEA LAS OLAS! ¡SIENTE EL RAYO! ¡ESTA NOCHE CENO COMO UN REY!
+FEEL THE ROAR! SCAMPER LIKE THE COWARDS WE ARE!
+¡SIENTE EL RUGIDO! ¡HUYE COMO LOS COBARDES QUE SOMOS!
 [Map435]
 Cabin Room 2
 Cabina Número 2
@@ -26906,6 +26958,14 @@ Cabin Room 4
 Cabina Número 4
 Cabin Room 1
 Cabina Número 1
+Well hello there. Fancy a meal?
+Hey muy buenas. ¿Estás para una comida?
+I left my stove on at home!
+¡Deje mi horno encendido!
+Hmmm, maybe I'll use onions next time.
+Hmmm, quizás usaré cebollas la próxima vez.
+Perhaps garlic would work instead...
+Quizás algo de ajo funcionaría en su lugar...
 [Map437]
 Up Ahead: Product Showroom
 Más Adelante: Muestra de Producto
@@ -27108,6 +27168,50 @@ By that time, there wasn’t a pressing need for that whole song and dance.
 Para ese entonces, no había mucha mucha necesidad de toda esa historia.
 Not with something like Yezera keeping us on our toes.
 No con alguien como Yezera manteniéndonos a raya.
+A dusty, old logbook. "Archive Catalogue" is written on the front in black marker.
+Un viejo diario polvoriento. "Catálogo de Archivos" está escrito al frente en marcador negro.
+[Map444]
+The ephemeral voices of a thousand lost rulers echo in your head.
+Las voces efímeras de mil monarcas perdidos resuenan en tu cabeza.
+<i>You.</i>
+<i>Tú.</i>
+<i>Scoundrel.</i>
+<i>Canalla.</i>
+<i>Thief.</i>
+<i>Ladrón.</i>
+<i>Traitor.</i>
+<i>Traidor.</i>
+<i>After all you’ve done, you <b>dare</b> meet my gaze?</i>
+<i>Después de todo lo que has hecho, ¿te <b>atreves</b> a enfrentar mi mirada?</i>
+<i>Scum.</i>
+<i>Escoria.</i>
+<i>Leech.</i>
+<i>Parásito.</i>
+<i><b>Insect.</b></i>
+<i><b>Insecto.</b></i>
+<i>You have <b>one</b> chance to relinquish your relics..</i>
+<i>Tienes <b>una</b> oportunidad de ceder tus reliquias..</i>
+<i>My rule.</i>
+<i>Mi reinado.</i>
+<i>My <b>peace</b>.</i>
+<i>Mi <b>paz</b>.</i>
+You hand over the Flora Sceptre and the Reins of Unity.
+Abandonas el Cetro Floral y las Riendas Unión.
+<i>Good. Now… <b>pray we never meet again.</b></I>
+<i>Bien. Ahora… <b>reza que nuncan nos encontremos de nuevo.</b></I>
+<i>So be it.</I>
+<i>Que así sea.</I>
+Let this act as a lesson in humility, worm!
+¡Deja que esto sea una lección de humildad, gusano!
+<i>And again!</I>
+<i>¡Y de nuevo!</I>
+<i>You should have left when you could..</I>
+<i>Deberías haberte ido cuando pudiste..</I>
+You recover the relics you returned.
+Recuperas las reliquias que regresaste.
+[Map445]
+It hurriedly gestures for you to enter the chamber ahead.
+Te hace un ademán con apuro para que entres a la cámara adelante.
 [1]
 29
 Nidoran-F
@@ -38081,7 +38185,7 @@ Reinicio Climático
 Dissipation
 Disipación
 Rock Out
-A Roquear
+A Rockear
 Natural Protection
 Protección Natural
 Weigh Anchor
@@ -47096,6 +47200,14 @@ Battle Monument
 Monumento Batalla
 Spirit Atoll
 Atolón Espíritu
+Velenz Menagerie
+Muestra de Velenz 
+Amber Hills
+Colinas Ámbar
+Ship Graveyard
+Cementerio de Barcos
+Floral Maze
+Laberinto Floral
 [20]
 Novo College
 Facultad Novo
@@ -47827,7 +47939,7 @@ Ocean Fishing Contest
 Concurso de Pesca Océanica
 240
 County Park Burrow
-Madriguera Parque del Condado
+Madriguera Parque del Municipio
 241
 Grouz Mine Sinkhole
 Sumidero Mina Grouz
@@ -48010,7 +48122,7 @@ Team Chasm HQ Gym
 Gimnasio Guarida Chasm
 301
 County Park
-Parque del Condado
+Parque del Municipio
 302
 Sewage Maintenance
 Mantenimiento de Aguas Residuales
@@ -48388,7 +48500,58 @@ Steamy Valley
 Valle Humeante
 429
 Amber Hills
-Colinas de Ámbar
+Colinas Ámbar
+424
+Tectonic Development F3
+Equipo Tectonic 3
+430
+Amber Hills
+Colinas Ámbar
+431
+Ship Graveyard
+Cementerio de Barcos
+433
+SS Circhester Steerage
+SS Circhester Tercera Clase
+434
+SS Circhester Middle Deck
+SS Circhester Cubierta
+435
+SS Glimwood Steerage
+SS Glimwood Tercera Clase
+436
+SS Glimwood Middle Deck
+SS Glimwood Cubierta
+437
+Bogdan Cement Lobby
+Lobby Cemento Bogdan
+438
+Bogdan Cement Plant
+Planta Cemento Bogdan
+439
+Knowledge Elder's Home
+Casa Anciano Conocimiento
+440
+Emotion Elder's Home
+Casa Anciano Emoción
+441
+Knowledge Elder's Home
+Casa Anciano Conocimiento
+442
+Bence's House
+Casa de Bence
+443
+Team Chasm Archive
+Archivo Team Chasm
+444
+Crown Chamber
+Cámara Corona
+445
+Battle Monument Secret
+Secreto Monumento Batalla
+446
+Goomy Den 2
+Nido Goomy 2
 [22]
 How are your Pokémon doing?\mMy \TP's really energetic. It's a handful!\mOh yeah, I managed to beat a tough \TE.\mI need to make my party stronger.
 How are your Pokémon doing?\mMy \TP's really energetic.  It's a handful!\mOh yeah, I managed to beat a tough \TE.\mI need to make my party stronger.
@@ -53742,7 +53905,7 @@ Derrota a Eko, líder del gimnasio de Pueblo Novo. Pueblo Novo está al norte de
 Find LuxTech Campus
 Encuentra el Campus LuxTech
 Find the third gym leader, located at LuxTech Campus. LuxTech Campus is west of the Lingering Delta and East of the County Park.
-Encuentra la tercer líder de gimnasio, encontrada en el Campus LuxTech. El Campus LuxTech se encuentra al Oeste del Delta Duradero y al Este del Parque del Condado.
+Encuentra la tercer líder de gimnasio, encontrada en el Campus LuxTech. El Campus LuxTech se encuentra al Oeste del Delta Duradero y al Este del Parque del Municipio.
 Schedule Your Gym Appointment
 Programa tu Cita en el Gimnasio
 A large sign at the entrance of the LuxTech Campus Gym told you to schedule your gym appointment inside LuxTech main, the large central building of LuxTech campus, to the west of the gym.
@@ -53772,7 +53935,7 @@ Encontraste el cargamento perdido de Helena. Regresa a LuxTech y dale el paquete
 Defeat LuxTech Campus Gym
 Vence en el Gimnasio del Campus LuxTech
 Defeat Helena, leader of LuxTech Campus Gym. LuxTech is west of the Lingering Delta and east of the County Park. Her Gym can be found east of the large central building.
-Vence a Helena, líder del Gimnasio del Campus LuxTech. LuxTech está al oeste del Delta Duradero y al este del Parque del Condado. Su Gimnasio puede ser encontrado el este del gran edificio central.
+Vence a Helena, líder del Gimnasio del Campus LuxTech. LuxTech está al oeste del Delta Duradero y al este del Parque del Municipio. Su Gimnasio puede ser encontrado el este del gran edificio central.
 Find Velenz Gym
 Encuentra el Gimnasio de Velenz
 Find the fourth gym leader, located in Velenz. Velenz is west of Repora Forest, which can be found by passing through either Svait or the Shelf.
@@ -53796,11 +53959,11 @@ La Profesora Tamarind llamó, informándote de un Avatar de Steelix que está su
 Visit Tamarind at Helena's House
 Visita a Tamarind en la Casa de Helena
 Go to the County Park and find Helena's House, where Professor Tamarind is waiting for you with a reward. Helena's house can be found North West of the lake, very close to it.
-Ve al Parque del Condado y encuentra la Casa de Helena, donde la Profesora Tamarind está esperándote con una recompensa. La casa de Helena puede ser encontrada al noroeste del lago, muy cerca de él.
+Ve al Parque del Municipio y encuentra la Casa de Helena, donde la Profesora Tamarind está esperándote con una recompensa. La casa de Helena puede ser encontrada al noroeste del lago, muy cerca de él.
 Defeat Yezera in Helena's House
 Vence a Yezera en la Casa de Helena
 Professor Tamarind invited you to Helena's House in the County Park, but you found only Yezera there. Fight Yezera to kill some time before Professor Tamarind arrives.
-La Profesora de Tamarind te invitó a la Casa de Helena en el Parque del Candado, pero sólo encontraste a Yezera allí. Combate contra Yezera para matar un poco de tiempo antes de que la Profesora aparezca.
+La Profesora de Tamarind te invitó a la Casa de Helena en el Parque del Municipio, pero sólo encontraste a Yezera allí. Combate contra Yezera para matar un poco de tiempo antes de que la Profesora aparezca.
 Cross the Eleig River
 Atraviesa el Río Eleig
 Now that you have the Surfboard, you can cross the Eleig River into Prizca. Prizca is the capitol of Makya, and holds the fifth and sixth gyms.
@@ -55775,6 +55938,930 @@ Confront Yezera, who appears to be leading a small group to steal Regidrago. The
 Enfrenta a Yezera, quien parece estar liderando un pequeño grupo para robar a Regidrago. Las Catacumbas pueden ser encontrados en las Alcantarillas debajo de Prizca Oriental.
 Continue to delve into the Chamber of Regigigas, so you can finally put a stop to Yezera's plan. The Chamber of Regigias is behind a large door in the eastern side of the Hollowed Layer.
 Continua indagando en la Cámara de Regigigas, así finalmente puedes parar el plan de Yezera. La Cámara de Regigigas está detrás de una gran puerta en el lado este de la Capa Hueca. 
+Bulky Attacker
+Atacante Bulky
+Bulky Physical
+Físico Bulky
+But it failed, because #{user.pbThis(true)} cannot eat its berry!
+¡Pero falló, porque #{user.pbThis(true)} no puede comer su baya!
+Looking inside the journal, you see that the only page that hasn't fallen out is page {1}.
+Viendo dentro del diario, puedes ver que la única página que no se ha caído es la página {1}.
+\i[RAGGEDJOURNAL]You've found page {1} of the {2}!
+\i[RAGGEDJOURNAL]¡Enontraste la página {1} del {2}!
+You slot the page into its proper place in the journal.
+Colocas la página en el lugar apropiado del diario.
+Read it now?
+¿La lees ahora?
+Page {1}
+Página {1}
+Which page would you like to read?
+¿Qué página te gustaría leer? 
+You clamber out of the den!
+¡Sales del nido!
+Welcome to the Poké Ball Depot! How may I serve you?
+¡Bienvenido al Depósito de Poké Balls! ¿Cómo puedo servirtE?
+What pattern would you like me to give it?
+¿Qué motivo quieres que le de?
+Wow, it's a shiny Pokémon!
+¡Wow, es un Pokémon variocolor!
+Are you sure you want to release this Pokémon?
+¿Estás seguro que quieres liberar este Pokémon?
+Spirit Guardian Sonya is using 12 battlers. This is a huge battle!
+Espíritu Guardián Sonya está usando 12 combatientes. ¡Este es un gran combate!
+You register {1} as caught in the MasterDex.
+Registras a {1} como atrapado en la MasterDex.
+You've run out of turns!
+¡Te quedaste sin turnos!
+{1}'s energy is slowly being leeched away.
+La energía de {1} está lentamente siendo drenada.
+The Corviknight stares at you intently.
+El Corviknight mira hacia tí fijamente.
+My safety comes first. En garde!
+La seguridad viene primero. ¡En garde!
+High King Calyrex
+Emperador Calyrex 
+Except, what's this!?
+Excepto, ¿¡qué es esto!?
+The Avatar of Calyrex has arrived to save its steed!
+¡El Avatar de Calyrex ha llegado para salvar a su corcel!
+{1} reers up its hooves above {2}!
+¡{1} alza su pezuña sobre {2}!
+{1} raises a hand towards the thunderclouds.
+{1} alza una mano sobre las nubes de tormenta.
+{1} opens its bulb towards the shining sun.
+{1} abre su bulbo hacia el sol brillante.
+The inscription reads:
+La inscripción dice:
+Part 1, X for Next Page
+Parte 1, X para la Siguiente Página
+Part 2, X to exit
+Parte 2, X para salir
+...Maybe you should transcribe this, just in case it does mean something.
+...Quizás deberías transcribir esto, en caso de que signifique algo.
+<i>What!!?</i>
+<i>¿¡¡Qué!!?</i>
+<i>How... how could you?</i>
+<i>¿Cómo... cómo pudiste?</i>
+<i>Insolent fool! Treasonous wretch!!! Usurping the King of All in your desperate attemp–</i>
+<i>¡Idiota insolente! ¡¡¡Desdichado traidor!!! Usurpar el Rey de Todo en tu intento despesp–</i>
+Calyrex's protests fade away, leaving an echoing silence in its absence.
+Las protestas de Calyrex de desvanecen, dejando un silencio resonante en su ausencia.
+<i>Drink the regal blood if you must.</i>
+<i>Bebe la sangre real si debes hacerlo.</i>
+<i>Indulge in your <b>traitorous nature</b> if you insist.</i>
+<i>Date el gusto en tu <b>naturaleza traicionara</b> si en eso insistes.</i>
+<i>Repulsive flea...</i>
+<i>Mosca repulsiva...</i>
+<i><b>I will swat you from the sky.</b></i>
+<i><b>Te aplastaré desde el cielo.</b></i>
+Can Evolve by Method
+Puede Evolucionar por Método
+Evolved From Method
+Evolucionado por Método
+No Evolutions
+No Evoluciones
+No Prevolutions
+No Preevoluciones
+Split Evo
+Evo Dividida
+{1} notices how healthy {2} is!
+¡{1} se da cuenta de lo saludable que está {2}!
+{1} is jealous of {2}'s strength!
+¡{1} está celoso de la fuerza de {2}!
+{1} is jealous of {2}'s mind!
+¡{1} está celoso de la mente de {2}!
+Ah, to be on solid ground again. Away from Galar's suffocating industrial sprawl. Stable. Connected. Tranquil. No cold steel shifting and rocking beneath my feet. No stench of smoke and oil to burn my lungs.
+Ah, estar en tierra sólida de nuevo. Lejos de la expansión industrial sofocante de Galar. Estable. Conectado. Tranquilo. Nada de movimiento mecánico debajo de mis pies. Nada de hedor de humo y petróleop ara quemar mis pulmones.<<n>>
+Just me, my companion, and Makya.
+Solo yo, mi compañero, y Makya.<<n>>
+May 22nd
+22 de Mayo
+I wonder if it's just me. So sentimental and wistful over little things I thought I knew. Is nostalgia tainting my perceptions? Or is the world truly as broken as it looks?
+Me pregunto si soy solo yo. Tan sentimental y nostálgico sobre las pequeñas cosas que pensé que conocía. ¿Acaso la nostalgia esta manchando mi percepción? ¿O es el mundo tan roto como parece?<<n>>
+My new friend makes me expect the latter. A sad story. But... inspiring nonetheless. Maybe I'll meet them again someday.
+Mi nuevo amigo me hace esperar lo última. Una triste historia. Pero... inspirador después de todo. Quizás me lo volveré a encontrar algún día.<<n>>
+May 26th
+26 de Mayo
+Life. Not just Life as life – Life as creation. Life as energy. Life as imagination, and falsehood, and memory, and motion. Over six days in Makya, this is the one place that seems to be governed by Life... and not its negation.
+Vida. No solo la Vida como vida – Vida como la creación. Vida como energía. Vida como imaginación, y falsedad, y memoria, y moción. Más de seis días en Makya, este es el único lugar que parece ser gobernado por la vida... y no su negación.<<n>>
+The world is dead. And Makya stands as little more than a polished mirror. What a shame.
+El mundo está muerto. Y Makya se alza como un poco más que un espejo pulido. Qué lástima.<<n>>
+May 29th
+29 de Mayo
+I left last night when the earth began to rumble. I only returned for my companion, despite my... reservations.
+Me fui anoche cuando la tierra empezó a rugir. Sólo regresé por mi compañero, a pesar de mis... dudas.<<n>>
+A great pit separates me from yesterday's memories. A dozen blackened eyes study my every step.
+Un gran agujero me separa de los recuerdos de ayer. Una docena de ojos oscurecidos estudian cada uno de mis pasos.<<n>>
+What's done is done.
+LO que está hecho está hecho.<<n>>
+June 4th
+4 de Junio
+At every turn, a set of eyes. On every perch, a silver scout. But... surely they cannot see everywhere? My friend at the Monument seemed to imply as much.
+En cada giro, un par de ojos. En cada posadera, un espía plateado. Pero... ¿seguramente no pueden ver por todas partes? Mi amigo en el Monumento pareció implicar eso.<<n>>
+But with every step I take, I find a new reason to check over my shoulder. Whether it's guilt or fear that guides me to that great tower... well. I'd rather not dwell on that yet.
+Pero con cada paso que doy, encuentro una nueva razón para mirar sobre mi hombro. Ya sea la culpa o miedo lo que me guía a esa gran torre... bueno. Prefiero no obcecarme mucho en ello aún.<<n>>
+June 6th
+6 de Junio
+This was a mistake. This was <i>all</i> a mistake...
+Esto fue un error. <i>Todo</i> esto fue un error...<<n>>
+A set of silver eyes rests atop Carnation Tower today. I couldn't shake the feeling that it expected me... He must know I stole His reign. Nothing makes sense if He doesn't.
+Un par de ojos plateados descansan en la cima de las Torres Clavel hoy. No puedo evitar la sensación de que me esperaba... Él debe ser que robé Su reino. Nada tiene sentido si Él no lo hace.<<n>>
+To anyone reading this, I urge you: Speak to my friend at the Monument. As long as He stands without rule, we can act without fear.
+Para cualquiera leyendo esto, te insto: Habla con mi amigo en el Monumento. Siempre y cuando Él se pare sin régimen, podemos actuar sin miedo.<<n>>
+June 11th
+11 de Junio
+I can't afford to speak.
+No me puedo permitir hablar.<<n>>
+I can't afford to trust.
+No me puedo permitir confiar.<<n>>
+I can barely afford to write this.
+Apenas me puedo permitir escribir esto.<<n>>
+A woman with hollow eyes and an uncanny smile approached me today. She asked about my history. She asked about Makya. She asked... about Him.
+Una mujer con ojos vacíos y una sonrisa extraña se me acercó hoy. Me preguntó sobre mi historia. Me pregunto sobre Makya. Me pregunto... sobre Él.<<n>>
+Tomorrow. All of this ends tomorrow morning.
+Mañana. Todo esto termina mañana temprano.<<n>>
+June 13th
+13 de Junio
+This can't be a coincidence.
+Esto no puede ser coincidencia.<<n>>
+My best hope of escaping His grasp... but I can tell we're not moving anymore.
+Mi mejor esperanza de escapar Su agarre... pero puedo decir que ya no nos estamos moviendo.<<n>>
+Nobody seems to believe me. We can't even see the waves! And I've heard four hooves circling my bed for hours...
+Nadie parece creerme. ¡Ni siquiera podemos ver las olas! Y he escuchado cuatro pezuñas haciendo círculos en mi cama por horas...<<n>>
+He won.
+Él ganó.<<n>>
+June 15th
+15 de Junio
+—Oriel
+  —Oriel
+You get the sense that you've failed some sort of test.
+Tienes la sensación de que fallaste algún tipo de prueba.
+Green-thumbed
+Jardinero
+Savior
+Salvador
+Scornful
+Despreciativo
+Grand Design
+Gran Propósito
+Treason
+Traición
+<i>Let this act as a lesson in humility, worm!</i>
+<i>¡Deja que esto actúe como una lección de humilded, gusano!</i>
+<i>To think!! My gift to the world, in the hands of the <b>undeserving</b>!</i>
+<i>¡¡Y pensar!! ¡Mi regalo hacia el mundo, en las manos del <b>indigno</b>!</i>
+It has no effect on Pokémon other than Calyrex.
+No tiene efecto en un Pokémon que no sea Calyrex.
+BY LEVEL 
+POR NIVEL
+BY OTHER
+POR OTRO 
+MATCHUPS 
+EFECTIVIDAD
+DETAILS
+DETALLES
+ANIMATION 
+ANIMACION
+Text
+Texto
+Search move description
+Buscar descripción movimiento
+Which category?
+¿Qué categoría?
+Tag
+Clase
+Effect Chance
+Probabilidad Efecto
+Priority
+Priodidad
+Signature
+Característico
+Has Notes
+Tiene Notas
+Physical moves that can be called:
+Movimientos físicos que pueden ser usados:
+Special moves that can be called:
+Movimientos especailes que pueden ser usados:
+<u>150 BP</u>: Pearl of Fate, Iron Ball
+<u>150 PB</u>: Perla del Destino, Bola Férrea
+<u>100 BP</u>: Choice Items, Weather Rocks, Life Orb
+<u>100 PB</u>: Objetos Elección, Rocas Climáticas, Vidasfera
+<u>75 BP</u>: Everything else
+<u>75 PB</u>: Todo lo demás
+<u>Poison</u>: Poison Orb
+<u>Envenenar</u>: Venenosfera
+<u>Burn</u>: Burn Orb
+<u>Quemar</u>: Llamasfera
+<u>Frostbite</u>: Frost Orb
+<u>Helar</u>: Helasfera
+<u>Leech</u>: Big Root, Binding Band
+<u>Infectar</u>: Raíz Grande, Banda Atadura
+Form effects:
+Efectos por forma:
+<u>Heat</u>: Burn
+<u>Calor</u>: Quemar
+<u>Wash</u>: Numb
+<u>Lavado</u>: Aturdir
+<u>Frost</u>: Frostbite
+<u>Frío</u>: Helar
+<u>Fan</u>: Dizzy
+<u>Ventilador</u>: Mareo
+<u>Mow</u>: Leech
+<u>Corte</u>: Infectar
+Moves that can be rolled:
+Movimientos que pueden ser usados:
+Can't call focusing moves, moves that call other moves,
+No puede usar movimientos que concentran, movimientos que usan otros movimientos,
+Can't call moves that alter the moveset, moves that counter, moves that
+No puede usar movimientos que alteran tus movimientos, movimientos que contraatacan, movimientos que 
+Can't call moves that affect the moveset, moves that redirect or steal moves,
+No puede llamar movimientos que afectar tus movimientos, movimientos que redirigen o roban movimientos, 
+Can't call Signature moves, moves that affect the moveset,
+No puede usar movimientos Característicos, movimientos que afectan tus movimientos,
+There's no one near by to use the Poké X-Ray on!
+¡No hay nadie cerca para usar a los Poké-Rayos X!
+Point the Poké X-Ray at which trainer?
+¿A qué entrenador le apuntas los Poké-Rayos X?
+You point the Poké X-Ray at {1}...
+Le apuntas los Poké-Rayos X a {1}...
+Victoire notices you glancing at the Poké X-Ray.
+Victoire nota tu uso de los Poké-Rayos X. 
+She smiles slightly and gives you an inscrutable look.
+Te sonríe ligeramente y te da una mirada inescrutable.
+zero
+cero
+one
+uno
+two
+dos
+three
+tres
+four
+cuatro
+five
+cinco
+six
+seis
+seven
+siete
+eight
+ocho
+nine
+nueve
+ten
+diez
+eleven
+once
+twelve
+doce
+thirteen
+trece
+fourteen
+catorce
+fifteen
+quince
+sixteen
+dieciséis 
+seventeen
+diecisiete
+eighteen
+dieciocho
+nineteen
+diecinueve
+twenty
+veinte
+You have no room left in the Bag.
+No te queda espacio en la Mochila.
+Main Story
+Historia Principal
+Gyms
+Gimnasios
+Collection
+Colección
+Exploration
+Exploración
+Sidequests
+Misiones Secundarios
+Battle
+Combate
+Area
+Área
+Adaptive
+Adaptativo
+Achievement hidden.
+Logro oculto.
+Unknown
+Desconocido
+\me[Pkmn get]{1} received {2}!
+\me[Pkmn get]¡{1} recibió {2}!
+\me[Item get]You obtained some \c[1]{1}\c[0]!\wtnp[30]
+\me[Item get]Obtuviste \c[1]{1}\c[0]!\wtnp[30]
+\me[Item get]You obtained {1} \c[1]{2}\c[0]!\wtnp[30]
+\me[Item get]Obtuviste {1} \c[1]{2}\c[0]!\wtnp[30]
+\me[Item get]You obtained an \c[1]{1}\c[0]!\wtnp[30]
+\me[Item get]Obtuviste \c[1]{1}\c[0]!\wtnp[30]
+\me[Item get]You obtained a \c[1]{1}\c[0]!\wtnp[30]
+\me[Item get]Obtuviste \c[1]{1}\c[0]!\wtnp[30]
+The totem returns to its original state.
+El tótem regresa a su estado original.
+What are Tribes?
+¿Qué son los Clanes?
+Pro Trainers are special Trainers, noted by their grey hair and black clothes. Their teams are always 6 Pokémon, all with items, and built around a Tribal Bonus. They're hard!
+Los Entrenadores Profesiones son Entrenadores especiales, diferenciados por su pelo gris y ropas negras. Sus equipos son siempre de 6 Pokémon, todos con objetos, y con un Bonus de Clan.
+OUT OF DATE
+OBSOLETO
+Close storage.
+Cerrar almacenamiento.
+Withdraw<<n>>Item
+Sacar<<n>>Objetos
+Toss<<n>>Item
+Tirar<<n>>Objetos
+Mentor Moves
+Movimientos de Mentoría
+What is Move Mentoring?
+¿Qué es la Mentoría de Movimientos?
+I'm the Mentor Coordinator. How can I help?
+Soy la Coordinadora de Mentoría. ¿Cómo puedo ayudarte?
+Sorry, it doesn't appear that 1 can have any moves mentored to it at the moment..
+Lo siento, no parece que ese pueda aprender ningún movimiento por mentoría en este momento...
+I help your Pokemon to teach each other moves!
+¡Te ayudo a que tus Pokémon se enseñen movimientos entre ellos!
+Pokemon can teach moves they know, moves they used to know, and moves earlier on their level up learnset.
+Los Pokémon pueden enseñar movimientos que conocen, movimientos que solían conocer, y movimientos anteriores en su lista de movimientos por nivel.
+Any Pokemon in your party or in your PC can be a mentor.
+Cualquier Pokémon en tu equipo o tu PC puede ser un mentor.
+Pokemon can be taught any moves on their Other Moves list.
+Los Pokémon pueden enseñar cualquier movimiento en su lista de Otros Movimientos.
+Relearn Moves
+Recordar Movimientos
+What is Move Relearning?
+¿Qué es Recordar Movmientos?
+I'm the Move Relearner. How can I help?
+Soy el Recordador de Movimientos. ¿Cómo puedo ayudarte?
+I can also help Pokemon to relearn moves they learned through TMs, Mentoring, or Sketching!
+¡También puedo ayudar a Pokémon a que recuerden movimientos que aprendieron por MT, Mentoría, o mediante Esquema!
+What type should #{@pkmn.name} become?
+¿De qué tipo debería ser #{@pkmn.name}?
+Welcome!
+¡Bienvenido!
+{1}, and you want {2}. That will be {3}. OK?
+{1}, y quieres {2}. ¿Eso será {3}. ¿Ok?
+"#{ret}" is not a valid type.
+"#{ret}" no es un tipo válido.
+"#{ret}" is not a valid tribe.
+"#{ret}" no es un clan válido.
+The current box contains every match.
+La caja actual contiene cada resultado.
+Position {1},{2} is not empty...
+Posición {1},{2} no está vacía...
+Position {1},{2} is empty...
+Posición {1},{2} está vacía...
+You are reimbursed for #{percentile} percent of the EXP it earned.
+Eres reembolsado por el #{percentile} porciento de la EXP que ganó.
+Which name?
+¿Qué nombre?
+Which species?
+¿Qué especies?
+Which type?
+¿Qué tipo?
+Alondra, your servant
+Alondra, tu sirviente
+You notice a voice message from {1}, the PokÉstate caretaker.
+Notas un mensaje de {1}, la cuidadora del Terreno
+\ME[Bug catching 2nd]You've earned a new PokéDex completion reward!\wtnp[60]
+\ME[Bug catching 2nd]¡Obtuviste una nueva recompensa por compleción de tu PokéDex!\wtnp[60]
+\ME[Bug catching 2nd]You've earned {1} new PokéDex completion rewards!\wtnp[60]
+\ME[Bug catching 2nd]¡Obtuviste {1} nuevas recompensas por compleción de PokéDex!\wtnp[60]
+Check Rewards
+Comprobar Recompensas
+Can't set down your last able Pokemon!
+¡No puedes dejar tu último Pokémon!
+Can't set #{pokemon.name} down into the current Estate plot because it is full.
+No puedes dejar a #{pokemon.name} en la parcela actual del Terreno porque está llena.
+Can't set #{pokemon.name} down, the spot in front of you is blocked.
+No puedes dejar a #{pokemon.name}, el espacio en frente tuyo está bloqueado.
+<u>Pre-Evolutions of {1}</u>
+<u>Pre-Evoluciones de {1}</u>
+<u>Evolutions of {1}</u>
+<u>Evoluciones de {1}</u>
+Sparse Grass
+Hierba Escasa
+Tall Grass
+Hierba Alta
+Yellow Flowers
+Flores Amarillas
+Blue Flowers
+Flores Azules
+Sewage
+Aguas Residuales
+Dirty Floor
+Suelo Mugriento
+Dark Ground
+Tierra Oscura
+Secret Grass
+Hierba Secreta
+Dark Clouds
+Nubes Oscuras
+Deep Water
+Agua PRofunda
+Surfing
+Surfeando
+Has Signature Move
+Tiene Movimiento Característico
+Doesn't
+No lo Tiene
+Has Signature Ability
+Tiene Habilidad Característica
+Enter type...
+Buscar tipo...
+Has Signature
+Tiene algo Característico
+Attempted to do a combined search, but no matching moves were found.
+Se intentó hacer una búsqueda combinada, pero no se encontraron resultados.
+No matching moves were found.
+No se encontraron resultados.
+Search name...
+Buscar nombre...
+Search move desc...
+Buscar desc move...
+Which tag?
+¿Qué clase?
+Equal to
+Igual a
+Greater than
+Mayor a
+Less than
+Menor a
+Enter value.
+Insertar valor.
+Not Signature
+No Característico
+Which sort
+Qué búsqueda
+But it failed, since the move isn't implemented in the code!
+¡Pero falló, ya que el movimiento no está implementado en el código!
+But it failed, since the opposing side already has #{maximum} layers of #{@spikeData.name} spikes!
+¡Pero falló, ya que el lado contrario ya tiene #{maximum} capas de púas #{@spikeData.name}!
+But it failed, since there are no party members on #{user.pbTeam(true)} who can join in!
+¡Pero falló, ya que no hay miembros del equipo en #{user.pbTeam(true)} que puedan unirse!
+{1} fires a shell high in the air!
+¡{1} dispara un caparazón alto en el cielo!
+But it failed, since #{target.pbThis(true)} is already being helped!
+¡Pero falló, ya que #{target.pbThis(true)} ya está siendo ayudado!
+{1}'s rage is at its peak!
+¡La furia de {1} está en su límite!
+A Shadow creeps into the dream...
+Una Sombra se arrastra hacie el cielo...
+{1} is looking to butter up {2}!
+¡{1} pretende camelar a {2}!
+#{user.pbThis} is wary of the ground!
+¡#{user.pbThis} es receloso del suelo!
+#{user.pbThis} gathers toxic gas!
+¡#{user.pbThis} reune gas tóxico!
+{1} is haloed in Dragon Energy!
+¡{1} brilla con Dracoenergía!
+The battle begins with rainstorm. The effects of rainstorm are doubled.
+El combate empieza con tormenta de lluvia. Los efectos de la tormenta de lluvia son duplicados.
+Singular Hypocrisy, Repeated Sixfold
+Hipocresía Singular, Seis Veces Repetida
+Despite making you use 4, Nora is using 6 battlers!
+¡A pesar de hacerte usar 4, Nora está usando 6 combatientes!
+Status conditions affect your Pokemon twice as much!
+¡Los problemas de estado afectan a tus Pokémon el doble!
+#{target.pbThis} prevents a random added effect!
+¡#{target.pbThis} impide un efecto secundario aleatorio!
+Where to direct power?
+¿A dónde diriges poder?
+For #{pokemon.name} to have two items, both must be Gems!
+¡Para que #{pokemon.name} tenga dos objetos, ambos deben ser Gemas!
+For #{pokemon.name} to have two items, both must be Berries!
+¡Para que #{pokemon.name} tenga dos objetos, ambos deben ser Bayas!
+For #{pokemon.name} to have two items, both must be Herbs!
+¡Para que #{pokemon.name} tenga dos objetos, ambos deben ser Hierbas!
+For #{pokemon.name} to have two items, at least one must be Clothing!
+¡Para que #{pokemon.name} tenga dos objetos, al menos uno debe ser de Vestimenta!
+For #{pokemon.name} to have two items, only one can be Clothing!
+¡Para que #{pokemon.name} tenga dos objetos, sólo uno puede ser de Vestimenta!
+{1}'s stat changes were eliminated!
+¡Los cambios de stats de {1} fueron eliminados!
+{1} is ready to stomp the opposition!
+¡{1} está listo para aplastar a la oposición!
+{1} became trapped in the sand!
+¡{1} fue atrapado en la arena!
+{1} is Mutant-type!
+¡{1} es tipo Mutante!
+The {1} joined the battle!
+¡{1} se une al combate!
+{1} and {2} joined the battle!
+¡{1} y {2} se unen al combate!
+{1}, {2} and {3} joined the battle!
+¡{1}, {2} y {3} se unen al combate!
+#{b.pbThis} is blessed by the shattered sky!
+¡#{b.pbThis} es bendecido por el cielo partido!
+The {1} is holding an <imp>{2}</imp>!
+¡{1} está sosteniendo <imp>{2}</imp>!
+{1}'s nickname?
+¿Mote para {1}?
+\i[MAGNETICGAUNTLET]You recovered the lost {1} with the {2}!
+\i[MAGNETICGAUNTLET]¡Recuperaste la {1} con el {2}!
+{1}'s fervent wish has reached {2}!
+¡El deseo ferviente de {1} ha llegado a {2}!
+{1} is inspired by the echo of an ancient wish!
+¡{1} es inspirado por el eco de un deseo antiguo!
+{1}'s reacts to an unknown power!
+¡{1} reacciona a un poder desconocido!
+{1} has transformed into {2}!
+¡{1} se ha transformado en {2}!
+{1}'s Primal Reversion!<<n>>It reverted to its primal form!
+¡Regresión Primigenia de {1}!<<n>>¡Revirtió a su forma primigenia!
+The {1} withdrew!
+¡{1} se retiró!
+The {1} entered the battle!
+¡{1} entró al combate!
+{1} jumps onto the pointed stones!
+¡{1} salta a las rocas puntiagudas!
+layer
+capa
+2 layers
+2 capas
+3 layers
+3 capas
+Your foe was <imp>ambushed</imp>! You get a free turn!
+¡Tu enemigo fue <imp>emboscado</imp>! ¡Obtienes un turno gratis!
+You were <imp>ambushed</imp>! The foe gets a free turn!
+¡Fuiste <imp>emboscado</imp>! ¡El enemigo obtiene un turno gratis!
+You can't catch trainers' Pokemon!
+¡No puedes atrapar el Pokémon de un entrenador!
+You can't catch Avatars!
+¡No puedes atrapar Avatares!
+{1} is loaded up with fluids!
+¡{1} está lleno de fluidos!
+#{pbThis} can't hold a #{getItemName(:CRYSTALVEIL)}!
+¡#{pbThis} no puede sostener un #{getItemName(:CRYSTALVEIL)}!
+But #{pbThis(false)} hold's tightly onto its #{getItemName(checkitem)}!
+¡Pero #{pbThis(false)} se sostiene fuertemente a #{getItemName(checkitem)}!
+{1}'s poison worsened!
+¡El veneno de {1} empeoró!
+{1} was blocked by the quarantine!
+¡{1} fue bloqueado por la cuarentena!
+The bubble surrounding {1} reduced the damage!
+¡La burbuja alrededor de {1} redució el daño!
+{1} can't use {2} after being barred!
+¡{1} no puede usar {2} luego de ser vetado!
+{1} can't use the same type twice in a row due to the turbulent sky!
+¡{1} no puede usar ataques del mismo tipo dos veces seguidos debido al cielo turbulento!
+{1} is loafing around!
+¡{1} está holgazaneando!
+{1} communes with the primal forest!
+¡{1} comulga con el bosque primitivo!
+The bubble barrier bursts, harming #{user.pbThis(true)}!
+¡La barrera burbuja revienta, lastimando a #{user.pbThis(true)}!
+{1} resets {2}'s stats with its {3}!
+¡{1} reinicia las stats de {2} con su {3}!
+{1} rapidly cooled the air!
+¡{1} enfrió rápidamente el aire!
+{1} was warned not to attack it again!
+¡{1} fue avisado de no atacar de nuevo!
+{1} heard the Perish Song, but weakly!
+¡{1} escuchó el Canto Mortal, pero débilmente!
+It will faint in {2} turns!
+¡Se debilitará en {2} turnos!
+{1} is barred from using off-type moves!
+¡{1} está vetado de usar movimientos que no sean de su propio tipo!
+No moves barred! {1} can use off-type moves again!
+¡El veto terminó! ¡{1} ya puede usar movimientos que no sean de su propio tipo!
+{1} is no longer being barred.
+El veto de {1} terminó.
+{1} is now immune to {2}-type!
+¡{1} ahora es inmune al tipo {2}!
+{1} is protected by a bubble! It'll pop when attacked!
+¡{1} está protegido por una burbuja! ¡Reventará cuando sea atacado!
+{1} is no longer protected by a bubble!
+¡{1} ya no está protegido por una burbuja!
+{1} can't take damage or switch out!
+¡{1} no puede recibir daño o cambiar!
+{1} was energized by the aftershock!
+¡{1} fue energizado por la repercusión!
+{1} is protected by a diamond sheen!
+¡{1} fue protegido por el brillo de un diamante!
+{1} became determined to survive!
+¡{1} está determinado a sobrevivir!
+They'll take half damage from sources that aren't attacks for #{value - 1} more turns!
+¡Recibirá la mitad de daño por medios que no sean ataques por #{value - 1} turnos más!
+{1}'s Natural Protection was removed!
+¡La Protección Natural de {1} fue removida!
+{1} is no longer inspired by Natural Protection.
+{1} ya no está inspirado por la Protección Natural.
+{1} layers of spikes were scattered all around {2}'s feet!
+¡{1} capas de púas fueron esparcidas alrededor de los pies de {2}!
+A fog covered {1}!
+¡Una niebla cubrió {1}!
+The fog on {1}'s side was dispelled!
+¡La niebla en el lado de {1} fue dispersa!
+The Swamp on {1}'s side dissipated.
+El Pantano en el lado de {1} se disipó.
+A primal forest surrounded {1}!
+¡Un bosque primitivo recubrió a {1}!
+The primal forest on {1}'s side was removed!
+¡El bosque primitivo en el lado de {1} fue removido!
+The primal forest on {1}'s side shriveled up.
+El bosque primitivo en el lado de {1} se marchitó.
+{1} was enclosed in a cocoon of scales!
+¡{1} fue cubierto en una crisálida de escamas!
+The cocoon enclosing {1}'s side was removed!
+¡La crisálida que cubría el lado de {1} fue removida!
+The cocoon enclosing {1}'s side dried up.
+La crisálida que cubría el lado de {1} se secó.
+#{b.pbThis} was healed by the cruel cocoon at the expense of its PP!
+¡#{b.pbThis} fue curado en la crisálida cruel a costo de sus PP!
+A turbulent sky appeared above {1}!
+¡Un cielo turbulento apareció por encima de {1}!
+The turbulent sky above {1}'s side was calmed!
+¡El cielo turbulento por encima de {1} fue calmado!
+The turbulent sky above {1}'s side calmed down.
+El cielo turbulento por encima de {1} se calmó.
+Finish adjusting Style Points?
+¿Terminas de ajustar Puntos de Estilo?
+Physical Attacker
+Atacante Físico
+Special Attacker
+Atacante Especial
+Adjust Style Points
+Ajustar Puntos de Estilo
+What are Style Points?
+¿Qué son los Puntos de Estilo?
+I'm the Style Points adjuster. How can I help?
+Soy el ajustador de Puntos de Estilo. ¿Cómo puedo ayudar?
+Style Points are numbers which have an effect on your Pokemon's stats.
+Los Puntos de Estilo son números que tienen efecto en las stats de tu Pokémon.
+Pokemon start with 10 Style Points in each of their stats.
+Los Pokémon empiezan con 10 Puntos de Estilo en cada una de sus stats.
+To add Style Points to a stat, you have to remove them from another.
+Para añadir Puntos de Estilo en una stat, tienes que quitar uno de otra.
+Investing into Attack and Sp. Atk is extra efficient: they go up at the same time!
+Invertir en Ataque y Ataque Especial es extra eficiente: ¡aumentan al mismo tiempo!
+Each stat's Style Points value can go as low as 0, and can go as high as 20.
+Cada stat puede llegar a un mínimo de 0 Puntos de estilo, con un máximo de 20.
+A Pokemon's Style Point total never changes, but Style Points give bigger stat bonuses at higher levels.
+El total de Puntos de Estilo de un Pokémon nunca cambia, pero los Puntos de Estilo dan un mayor bonus a niveles más altos.
+If you need to move quickly, try using the Quick Set option!
+¡Si necesitas moverlos rápidamente, intenta usar la opción de Estilo Rápido!
+It was a guaranteed critical hit#{onAddendum}!
+¡Fue un golpe crítico garantizado#{onAddendum}!
+#{target.pbThis}'s #{getItemName(:COVERTCLOAK)} protects it from a random added effect!
+¡La #{getItemName(:COVERTCLOAK)} de #{target.pbThis} lo protege de efectos secundarios aleatorios!
+It's an explosion of pure #{GameData::Type.get(@calcType).name}!
+¡Es una explosión de puro #{GameData::Type.get(@calcType).name}!
+{1} can't be healed and it has no status conditions!
+¡{1} no puede ser curado y no tiene ningún problema de estado!
+Which move should #{user.pbThis(true)} use?
+¿Qué movimiento debería usar #{user.pbThis(true)}?
+But it failed, since no foe has yet used a move!
+¡Pero falló, ya que ningún enemigo ha usado un movimiento!
+Which form should #{user.pbThis(true)} take?
+¿Qué forma debería tomar #{user.pbThis(true)}?
+#{user.pbThis} has already transformed!
+¡#{user.pbThis} ya se ha transformado!
+But {1} has already transformed!
+¡Pero {1} ya se ha transformado!
+{1} augmented its genes and transformed!
+¡{1} aumentó sus genes y se transformó!
+But it failed, since #{target.pbThis(true)} is an avatar!
+¡Pero falló, ya que #{target.pbThis(true)} es un avatar!
+It hurt itself in a rage!
+¡Se lastimó a sí mismo en su furia!
+But it failed, since #{user.pbThis(true)} has no stingers!
+¡Pero falló, ya que #{user.pbThis(true)} no tiene aguijones!
+But it failed, since the receiver of the barrier is gone!
+¡Pero falló, ya que el receptor de la barrera no está!
+But it failed, since #{arget.pbThis(true)} is already protected by a bubble!
+¡Pero falló, ya que #{arget.pbThis(true)} ya está siendo protegido por una burbuja!
+{1} became trapped by sand!
+¡{1} fue atrapado en la arena!
+{1} was caught in {2}'s vises!
+¡{1} fue atrapado en las prensas de {2}!
+{1} was dragged beneath the waves!
+¡{1} fue arrastrado por debajo de las olas!
+But it failed, since #{target.pbThis(true)} is already trapped and can't be frostbitten!
+¡Pero falló, ya que #{target.pbThis(true)} ya está atrapado y no puede ser helado!
+{1} took in electricity!
+¡{1} absorbió electricidad!
+{1} is overflowing with power!
+¡{1} está rebosando con poder!
+But it failed, since #{target.pbThis(true)} is already only Bug-type!
+¡Pero falló, ya que #{target.pbThis(true)} ya es sólo tipo Bicho!
+But it failed, since #{target.pbThis(true)} is already barred!
+¡Pero falló, ya que #{target.pbThis(true)} ya tiene un veto!
+#{user.pbThis} is hurt by leftover electricity!
+¡#{user.pbThis} es lastimado por la electricidad sobrante!
+{1} was slammed into the ground!
+¡{1} fue estrellado contra el suelo!
+But it failed, since a Diamond Field is already present!
+¡Pero falló, ya que un Campo de Diamantes ya está presente!
+But it failed, since there were no foes below half health!
+¡Pero falló, ya que no hay ningún oponente con menos de la mitad de vida!
+{1} circles back around for a retry!
+¡{1} regresa para una retirada!
+#{user.pbThis} joins with an ally!
+¡#{user.pbThis} se une con una aliado!
+#{user.pbThis} connects with their friend!
+¡#{user.pbThis} conecta con su amigo!
+{1} charges away!
+¡{1} carga!
+A smooth but tough metallic surface.
+Una suave pero fuerte superficie metálica.
+Use it to sharpen an alloyed lump?
+¿La usas para afilar un bulto aleado?
+You sharpen the alloyed lump, transforming it into a useful tool!
+¡Afilas el bulto aleado, transformándolo en una arma útil!
+You decide to do nothing with the strange surface.
+Decides no hacer nada con la extraña superficie.
+It'd be good at sharpening other metal.
+Serviría para afilar otros metales.
+A metal sapling. It appears rather tough.
+Un pequeño árbol metálico. Parece bastante duro.
+Use an alloyed blade to chop it down?
+¿Usas un filo aleado para cortarlo?
+You take a swing at the sapling!
+¡Cortas el árbol!
+You decide to leave the sapling alone.
+Decides dejar solo el árbol.
+You'd need a tool made of a strong material to cut it.
+Necesitarías una herramienta hecha de un material fuerte para cortarlo.
+Strands of a strangely tough metal hang from the wall.
+Hilos de un material extrañamente fuerte se cuelgan de la pared.
+Harvest the metallic vines?
+¿Cosechas las enredaderas metálicas?
+You slash through the metallic vines!
+¡Cortas las enredaderas metálicas!
+You leave the strands alone.
+Dejas a los hilos solos.
+A metal plant with a golden orb. You feel the urge to strike it.
+Una planta metálica con un orbe dorado. Tienes la ansia de golpearla.
+Hit the golden orb?
+¿Golpeas el orbe dorado?
+With your strike, a noise emanates through the thicket!
+¡Con tu golpe, un sonido emana a través del matorral!
+You refrain from striking the orb.
+Te abstienes de golpear el orbe.
+You take a swing at the tree with an alloyed blade.
+Cortas el árbol con un filo aleado.
+The alloyed blade crumbles into pieces.
+El filo aleado se rompe en pedazos.
+You refrain from chopping the tree.
+Te abstienes de cortar el árbol.
+You could probably cut it down, with the right tool.
+Probablemente podrías cortarlo, con la herramienta adecuada.
+A pair of metal posts are stuck into the ground.
+Un par de postes de metal están enterrados en el suelo.
+String an alloyed wire between the posts?
+¿Unes un hilo aleado entre los postes?
+You place a trip wire!
+¡Colocas un hilo trampa!
+You leave the posts alone.
+Dejas a los postes solos.
+It'd be a good place to set a trip wire.
+Sería un buen lugar para colocar un hilo trampa.
+It left behind some items!
+¡Dejó atras algunos objetos!
+It left behind an item!
+¡Dejó atrás un objeto!
+They left behind an item!
+¡Dejaron atrás un objeto!
+They left behind some items!
+¡Dejaron atrás algunos objetos!
+You peer into the binoculars...
+Miras a través de los binoculares...
+...oh?
+¿...oh?
+\i[TAROTAMULET]The Tarot Amulet begins vibrating inside of your bag.
+\i[TAROTAMULET]El Amuleto Tarot empieza a vibrar dentro de tu mochila.
+\PN hands over the #{item_data.name}.
+\PN da el #{item_data.name}.
+Now I must have time. Gingerly I shall attend to the egg.
+Ahora necesito algo de tiempo. Atenderé a este huevo con cautela.
+The hatching was a success. I am pleased to allow you this Dragon.
+La incubación fue un éxito. Me complace poder darte este Dragón.
+You notice a small hole in the rock. Dig into it?
+Notas un pequeño agujero en la roca. ¿Te metes en él^
+An explodeable rock. Use a Dynamite Stick? You have #{pbQuantity(:DYNAMITESTICK)}.
+Una roca explotable. ¿Usas algo de Dinamita? Tienes #{pbQuantity(:DYNAMITESTICK)}.
+An impassable hole, filled with stunted grass.
+Un agujero impasable, lleno con hierba atrofiada.
+Use the Flora Sceptre?
+¿Usas el Cetro Floral?
+With a flourish, you wave the Flora Scepter over the hole.
+Con un ademán, ondeas el Cetro Floral sobre el agujero.
+The grass grew over the hole!
+¡La hierna crece sobre el agujero!
+If that grass grew over the hole, you'd possibly be able to cross it.
+Si esa hierba creciera sobre el agujero, posiblemente podrías cruzar sobre él.
+Too bad...<<n>>The Bag is full...
+Lástima...<<n>>La Mochila está llena...
+{1} put the \c<<[>>1<<]>>{2}\c<<[>>0<<]>> in the <icon=bagPocket{3}>\c<<[>>1<<]>>{4}\c<<[>>0<<]>> Pocket.<<1>>
+{1} coloca \c<<[>>1<<]>>{2}\c<<[>>0<<]>> en el Bolsillo <icon=bagPocket{3}>\c<<[>>1<<]>>{4}\c<<[>>0<<]>>.<<1>>
+You've currently completed {1} percent of the Dex.
+Ahora mismo has completado el {1} porciento de la Dex.
+Novo Town
+Pueblo Novo
+County Park
+Parque del Municipio
+Whitebloom Town
+Pueblo Whitebloom 
+Frostflow Farms
+Granjas Escarcha
+LuxTech Campus
+Campus LuxTech 
+Canal Desert
+Canal Desértico
+The Shelf
+La Plataforma
+Tomorrow's weather forecast for #{mapName}!
+¡El reporte del clima para mañana en #{mapName}!
+The area will experience normal conditions all day.
+El área experienciará condiciones normales todo el día.
+This means cloud cover at around 50 percent, with a very low chance for precipitation.
+Esto significará que las nubes cubrirán el cielo un 50 porciento, con muy baja probabilidad de precipitaciones.
+The fleeing trainer dropped some food!
+¡El entrenador escapando soltó algo de comida!
+The fleeing trainers dropped some food!
+¡Los entrenadores escapando soltaron algo de comida!
+One of the fleeing trainers dropped a candy!
+¡Uno de los entrenadores escapando soltó un caramelo!
+The fleeing trainer dropped a candy!
+¡El entrenador escapando soltó un caramelo!
+The fleeing trainers dropped some candies!
+¡Los entrenadores escapando soltaron algunos caramelos!
+Can't use that here.
+No puedes usar eso aquí.
+It can't be used when you have someone with you.
+No puede ser usado cuando tienes a alguien contigo.
+{1} Exp. Points were stored in the EXP-EZ Dispenser.
+{1} Puntos de Experiencia fueron guardados en el Dispensador EXP-EZ.
+Your Aid Kit already has the maximum number of charges.
+Tu Botiquín ya tiene el número máximo de cargas.
+Your Aid Kit already has the maximum healing amount.
+Tu Botiquín ta tiene la máximo cantidad de curación.
+Want to escape from here and return to {1}?
+¿Quieres escapar de aquí y regresar a {1}?
+... \wt[10]... \wt[10]... \wt[10]...\wt[10]Nope! There's no response.
+... \wt[10]... \wt[10]... \wt[10]...\wt[10]¡Nope! No hay respuesta.
+The {1}'s indicating something right underfoot!
+¡The {1}'s indicating something right underfoot!
+Huh? The {1}'s responding!<<1>>
+¿Eh? ¡El {1} está respondiendo!<<1>>
+There's an item buried around here!
+¡Hay un objeto enterrado por aquí!
+{1} became healthy.
+{1} está saludable.
+There was no other effect.
+No hubo otro efecto.
+The {1} is very far away!
+¡{1} está muy lejos!
+The {1} is far away!
+¡{1} está lejos!
+The {1} is at a medium distance!
+¡{1} está a una distancia media!
+The {1} is close by!
+¡{1} está cerca!
+The {1} is very close by!
+¡{1} está muy cerca!
+The {1} is EXTREMELY close! You're nearly on top of it!
+¡{1} está EXTREMADAMENTE cerca! ¡Estás casi encima suyo!
+#{eventsToRemove.count} trainers are in range. Deploy?
+#{eventsToRemove.count} entrenadores están en rango. ¿La usas?
+Screenshot saved to folder {1}<<1>>
+Captura de pantalla guardada en la carpeta {1}<<1>>
+Box "{1}" on the Pokémon Storage PC is a donation box.<<1>>
+Caja "{1}" en el Sistema de Almacenamiento es una caja de donación.<<1>>
+{1} energy is slowly being leeched away.
+La energía de {1} está siendo lentamente absorbida.
+{1} seems unbothered by the frost.
+A {1} no parece molestarle la escarcha.
+{1} seems to be trying to communicate with its' eyes.
+{1} parece estar intentando comunicarse con sus ojos.
+My safety comes first. En guard!
+Mi seguridad viene primero. ¡En guardia!
+\wm<i>The mention of a certain someone manifests a ball of light...</i>
+\wm<i>La mención de alguien en específico manifiesta una esfera de luz...</i>
+Once you enter, you will not be able to interact with your team in any way until the tournament is complete.
+Una vez entres, no podrás interactuar con tu equipo en cualquier modo hasta que el torneo esté completo.
+Get your supplies here!
+¡Consigue tus suministros aquí!
+\PN handed over ${1} and a {2} in exchange.
+\PN dió ${1} y {2} a cambio.
+And so my work begins!
+¡Y entonces mi trabajo empieza!
+My hopes go with you. Live the legend!
+Mis esperanzas van contigo. ¡Vive la leyenda!
+Hurry and buy some.
+Apúrate y compra algo.
+I'm sure you'll appreciate one of these.
+Seguro que podrás apreciar uno de estos.
+Achievement Unlocked:\<<n>>\c<<[>>2<<]>>{1}
+Logro Desbloqueado:\<<n>>\c<<[>>2<<]>>{1}
+Choose a Pokémon.
+Elige un Pokémon.
 [26]
 [27]
 [27]

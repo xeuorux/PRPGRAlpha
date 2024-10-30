@@ -49,6 +49,14 @@ class Particle_Engine::LatentSoil < ParticleEffect_Event
 
     TRIANGLE_SIDE_SIZE = 16
 
+    def xExtent
+        return @radius * 4
+    end
+
+    def yExtent
+        return @radius * 4 + 64
+    end
+
     def resetParticle(i)
         randomAngle = rand(360)
         xRand = Math.cos(randomAngle) * @radius
