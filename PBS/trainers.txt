@@ -1365,7 +1365,6 @@ Pokemon = MASQUERAIN,28
     AbilityIndex = 1 # Intimidate
     Item = BUGGEM
 Pokemon = INDEEDEE,28
-    Gender = male
     Moves = PSYCHOCUT,SHOUT,HELPINGHAND,SWIFT
     AbilityIndex = 1 # Mental Block
     Item = SITRUSBERRY
@@ -8240,7 +8239,7 @@ Pokemon = MILTANK,70
     Item = LEFTOVERS
 #-------------------------------
 [OFFICEWORKER_M,Kurt]
-Pokemon = FMEOWSTIC,70
+Pokemon = MEOWSTIC,70
     Moves = REFLECT,HELPINGHAND,HEALBELL,LIGHTSCREEN
     AbilityIndex = 0 # Prankster
     Item = LIGHTCLAY
@@ -8428,7 +8427,7 @@ Pokemon = KLEAVOR,70
     Moves = BUGBITE,ROCKSLIDE,ACROBATICS,PSYCHOSCISSION
     AbilityIndex = 1 # Weak Armor
     Item = LUCKHERB
-Pokemon = FINDEEDEE,70
+Pokemon = INDEEDEE,70
     Moves = KICKSTART,BRAINFREEZE,ENERGYBALL,ALLYSWITCH
     AbilityIndex = 1 # Mental Block
 #-------------------------------

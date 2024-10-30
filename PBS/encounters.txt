@@ -536,9 +536,8 @@ Special
 #-------------------------------
 [187] # Prizca East
 FloweryGrass2,20
-    20,FINDEEDEE,62,64
     20,FURFROU,39,41
-    20,INDEEDEE,39,41
+    20,INDEEDEE,62,64
     20,MAKUHITA,39,41
     20,MINCCINO,39,41
     20,SMEARGLE,39,41
@@ -933,7 +932,6 @@ DarkCave,20
 [333] # Floral Maze
 FloweryGrass2,20
     20,APPLETUN,62,64
-    20,FINDEEDEE,62,64
     20,GRIMMSNARL,62,64
     20,INDEEDEE,62,64
     20,LURANTIS,62,64

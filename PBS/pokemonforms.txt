@@ -566,10 +566,6 @@ FormName = Kabuki Trim
 [FURFROU,9]
 FormName = Pharaoh Trim
 #-------------------------------
-[MEOWSTIC,1]
-FormName = Female
-Color = White
-#-------------------------------
 [AEGISLASH,1]
 FormName = Blade
 BaseStats = 60,150,50,60,150,50
@@ -872,11 +868,6 @@ Evolutions = POLTEAGEIST,Item,CHIPPEDPOT
 [POLTEAGEIST,1]
 FormName = Antique
 Pokedex = Trainers Polteageist trusts will be allowed to experience its distinctive flavor and aroma firsthand by sampling just a tiny bit of its tea.
-#-------------------------------
-[INDEEDEE,1]
-FormName = Female
-EffortPoints = 0,0,0,0,0,2
-Pokedex = They diligently serve people and Pokémon so they can gather feelings of gratitude. The females are particularly good at babysitting.
 #-------------------------------
 [MORPEKO,1]
 FormName = Hangry

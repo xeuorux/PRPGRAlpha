@@ -1938,12 +1938,6 @@ FrontSprite = 0,32
 ShadowX = 0
 ShadowSize = 2
 #-------------------------------
-[FINDEEDEE]
-BackSprite = 0,23
-FrontSprite = -1,24
-ShadowX = 0
-ShadowSize = 1
-#-------------------------------
 [FINNEON]
 BackSprite = 0,33
 FrontSprite = 1,22
@@ -2009,12 +2003,6 @@ BackSprite = 0,11
 FrontSprite = 3,7
 ShadowX = 0
 ShadowSize = 3
-#-------------------------------
-[FMEOWSTIC]
-BackSprite = 0,19
-FrontSprite = 0,23
-ShadowX = 0
-ShadowSize = 2
 #-------------------------------
 [FOMANTIS]
 BackSprite = 0,26

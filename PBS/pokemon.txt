@@ -18802,7 +18802,7 @@ Kind = Restraint
 Pokedex = It has enough psychic energy to blast everything within 300 feet of itself, but it has no control over its power.
 Generation = 6
 WildItemUncommon = INTELLECTHERB
-Evolutions = MEOWSTIC,Level,31,FMEOWSTIC,Item,DAWNSTONE
+Evolutions = MEOWSTIC,Level,31
 #-------------------------------
 [678]
 Name = Meowstic
@@ -18827,7 +18827,6 @@ Color = Blue
 Shape = Head
 Kind = Constraint
 Pokedex = The eyeball patterns on the interior of its ears emit psychic energy. It keeps the patterns tightly covered because that power is too immense.
-FormName = Male
 Generation = 6
 WildItemUncommon = INTELLECTHERB
 #-------------------------------
@@ -24326,7 +24325,6 @@ Color = Purple
 Shape = Head
 Kind = Emotion
 Pokedex = Through its horns, it can pick up on the emotions of creatures around it. Positive emotions are the source of its strength.
-FormName = Male
 Generation = 8
 WildItemUncommon = WEAKNESSPOLICY
 #-------------------------------
@@ -28021,61 +28019,6 @@ Kind = Wushu
 Pokedex = This form of Urshifu is a strong believer in defeating foes by raining many blows down on them. Its strikes are nonstop, flowing like a river.
 Generation = 8
 Flags = Legendary
-#-------------------------------
-[2078]
-Name = F. Indeedee
-InternalName = FINDEEDEE
-Type1 = PSYCHIC
-Type2 = NORMAL
-# HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
-BaseStats = 80,80,65,85,80,105
-# Total = 495
-GenderRate = Female50Percent
-GrowthRate = Medium
-BaseEXP = 166
-EffortPoints = 0,0,0,0,2,0
-Rareness = 90
-Happiness = 140
-Abilities = ASSISTANT,FASCINATE
-Moves = 1,RISINGPOWER,1,HELPINGHAND,3,POUND,6,ASSIST,9,SHOUT,12,KICKSTART,15,ENCORE,18,PSYBEAM,21,DOUBLEHIT,24,STARDANCE,27,PSYCHOCUT,30,SWIFT,33,AFTERYOU,36,PSYCHIC,39,DOUBLEDOWN,42,RUIN,45,POWERSPLIT,48,BRAINFREEZE,51,ODDROOM,54,ECLIPSE,57,OCCULTATION,60,LASTRESORT
-TutorMoves = ALLYSWITCH,CALMMIND,CLOUDBREAK,DAZZLINGGLEAM,DEADEND,DISARMINGVOICE,DISSIPATION,DRAININGKISS,DRAINPUNCH,DREAMDANCE,EAGERTICKLING,ECLIPSE,ENCORE,ENDURE,ENERGYBALL,EXTRASENSORY,FACADE,FAKEOUT,FLAMECHARGE,FOLLOWME,FUTURESIGHT,HEARTSWAP,HELPINGHAND,HYPERVOICE,INFERNOIMPACT,KINDLE,LONGSHOT,MAGICALLEAF,MINDWARP,MISTBURST,MOONBLAST,MYSTICALFIRE,OCCULTATION,PAYDAY,PLAYROUGH,PROTECT,PSYCHIC,PSYCHUP,PUZZLEROOM,REST,RISINGPOWER,ROUND,SEERSTRIKE,SHADOWBALL,SLEEPTALK,SNORE,STELLARATE,SUBSTITUTE,SWIFT,TELEPORT,TRIATTACK,TRICK,TRUMPCARD,TUTELAGE,WEATHERBURST,ZENHEADBUTT
-Compatibility = Fairy
-Tribes = CARETAKER,TACTICIAN,HARMONIC
-StepsToHatch = 10536
-Height = 0.9
-Weight = 28.0
-Color = Purple
-Shape = Head
-Kind = Emotion
-Pokedex = They diligently serve people and Pokémon so they can gather feelings of gratitude. The females are particularly good at babysitting.
-Generation = 8
-WildItemUncommon = WEAKNESSPOLICY
-#-------------------------------
-[2079]
-Name = F. Meowstic
-InternalName = FMEOWSTIC
-Type1 = PSYCHIC
-# HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
-BaseStats = 74,118,66,104,83,91
-# Total = 536
-GenderRate = Female50Percent
-GrowthRate = Medium
-BaseEXP = 163
-EffortPoints = 0,0,0,2,0,0
-Rareness = 228
-Happiness = 50
-Abilities = PRANKSTER,LIMINAL
-Moves = 0,PATTERNRELEASE,1,PATTERNRELEASE,1,SCRATCH,1,MEANLOOK,4,FAKEOUT,8,BLINDSIDE,12,HELPINGHAND,16,AIMTRUE,20,HEARTSTAMP,24,ROLEPLAY,28,RECOVER,32,LIGHTSCREEN,32,REFLECT,36,PSYCHICFANGS,40,WISH,44,SUCKERPUNCH,48,BRAINFREEZE,52,ODDROOM,56,LIFEDEW,60,OMNISCIENTBLOW
-Compatibility = Field
-StepsToHatch = 5120
-Height = 0.6
-Weight = 8.5
-Color = White
-Shape = Head
-Kind = Constraint
-Pokedex = The eyeball patterns on the interior of its ears emit psychic energy. It keeps the patterns tightly covered because that power is too immense.
-Generation = 6
-WildItemUncommon = INTELLECTHERB
 #-------------------------------
 [2500]
 Name = M. Zangoose
