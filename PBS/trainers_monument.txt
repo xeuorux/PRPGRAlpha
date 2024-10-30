@@ -1823,8 +1823,7 @@ Pokemon = HOUNDOMINUS,70
     Item = PRISMATICPLATE
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 0,20,0,20,20,10
-Pokemon = GDARMANITAN,70
-    Form = 1 # Standard Mode Form
+Pokemon = GZDARMANITAN,70
     Moves = FLAMETHROWER,ICEBEAM,SOLARBEAM,PSYCHIC
     AbilityIndex = 0 # Gorilla Tactics
     Item = HEAVYDUTYBOOTS
