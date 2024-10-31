@@ -295,6 +295,8 @@ class PokEstate
 	end
 
 	def load_estate_box()
+        loadCustomObjects
+
 		# Find all the pokemon that need to be represented
 		unusedBoxPokes = []
 		boxNum = estate_box
@@ -606,6 +608,10 @@ class PokEstate
 		return $PokemonStorage[@estate_box]
 	end
 
+    #####################################################################
+    # PokEstate Stories
+    #####################################################################
+
 	def incrementStoriesProgress()
 		@stories_progress += 1
 		if @stories_progress > STEPS_TILL_NEW_STORY
@@ -662,6 +668,18 @@ class PokEstate
 	def shareDuoStory(pokemon1, pokemon2)
 		pbMessage(_INTL("Story here involving {1} and {2}!", pokemon1.name, pokemon2.name))
 	end
+
+    #####################################################################
+    # PokEstate Customization
+    #####################################################################
+
+    def loadCustomObjects
+        # This is just a test!
+        rpgEvent = RPG::Event.new(18,18)
+        newEvent = Game_Event.new($game_map.map_id, rpgEvent, $game_map)
+        newEvent.character_name = "Object_Various"
+        $game_map.events[1000] = newEvent
+    end
 end
 
 Events.onMapSceneChange += proc { |_sender, e|
