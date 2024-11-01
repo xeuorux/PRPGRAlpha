@@ -169,6 +169,12 @@ class Spriteset_Map
         @usersprites[i].update if !@usersprites[i].disposed?
       end
     end
+
+    def add_sprite_for_event(event)
+        sprite = Sprite_Character.new(@@viewport1,event)
+        @character_sprites.push(sprite)
+        sprite.setShadows(@map, @shadows)
+    end
     
     def force_update_characters
       @character_sprites.each do |characterSprite|

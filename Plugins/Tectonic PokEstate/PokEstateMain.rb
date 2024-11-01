@@ -673,12 +673,23 @@ class PokEstate
     # PokEstate Customization
     #####################################################################
 
+    # This is just a test!
     def loadCustomObjects
-        # This is just a test!
         rpgEvent = RPG::Event.new(18,18)
         newEvent = Game_Event.new($game_map.map_id, rpgEvent, $game_map)
-        newEvent.character_name = "Object_Various"
         $game_map.events[1000] = newEvent
+
+        # Create the event interaction
+        firstPage = RPG::Event::Page.new
+        firstPage.graphic.character_name  = "Object_Various"
+        firstPage.trigger = 0 # Action button
+        firstPage.list = []
+        push_text(firstPage.list,"This is a custom object!")
+        firstPage.list.push(RPG::EventCommand.new(0,0,[]))
+        rpgEvent.pages = [firstPage]
+        newEvent.refresh
+
+        $scene.spriteset.add_sprite_for_event(newEvent)
     end
 end
 
