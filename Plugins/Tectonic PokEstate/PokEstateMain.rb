@@ -673,25 +673,60 @@ class PokEstate
     # PokEstate Customization
     #####################################################################
 
+    def berryTreeList
+        return [
+            "berrytreeAGUAVBERRY", "berrytreeAMWIBERRY", "berrytreeAPICOTBERRY", "berrytreeASPEARBERRY",
+            "berrytreeBABIRIBERRY", "berrytreeCHESTOBERRY", "berrytreeBLUKBERRY", "berrytreeCHARTIBERRY",
+            "berrytreeCHERIBERRY", "berrytreeWEPEARBERRY", "berrytreeCHESTOBERRY", "berrytreeCHILANBERRY",
+            "berrytreeCHOPLEBERRY", "berrytreeCOBABERRY", "berrytreeCOLBURBERRY", "berrytreeCORNNBERRY",
+            "berrytreeCUSTAPBERRY", "berrytreeDURINBERRY", "berrytreeENIGMABERRY", "berrytreeFIGYBERRY",
+            "berrytreeGANLONBERRY", "berrytreeGREPABERRY", "berrytreeHABANBERRY", "berrytreeHONDEWBERRY",
+            "berrytreeIAPAPABERRY", "berrytreeJABOCABERRY", "berrytreeKASIBBERRY", "berrytreeKEBIABERRY",
+            "berrytreeKELPSYBERRY", "berrytreeLANSATBERRY", "berrytreeLEPPABERRY", "berrytreeLIECHIBERRY",
+            "berrytreeLUMBERRY", "berrytreeMAGOBERRY", "berrytreeMAGOSTBERRY", "berrytreeMICLEBERRY",
+            "berrytreeNANABBERRY", "berrytreeNOMELBERRY", "berrytreeOCCABERRY", "berrytreeORANBERRY",
+            "berrytreePAMTREBERRY", "berrytreePASSHOBERRY", "berrytreePAYAPABERRY", "berrytreePECHABERRY",
+            "berrytreePERSIMBERRY", "berrytreePETAYABERRY", "berrytreePINAPBERRY", "berrytreeplanted",
+            "berrytreePOMEGBERRY", "berrytreeQUALOTBERRY", "berrytreeRABUTABERRY", "berrytreeRAWSTBERRY",
+            "berrytreeRAZZBERRY", "berrytreeRINDOBERRY", "berrytreeROWAPBERRY", "berrytreeSALACBERRY",
+            "berrytreeSHUCABERRY", "berrytreeSITRUSBERRY", "berrytreeSPELONBERRY", "berrytreeSTARFBERRY",
+            "berrytreeTAMATOBERRY", "berrytreeTANGABERRY", "berrytreeWACANBERRY", "berrytreeWATMELBERRY",
+        ]
+    end
+
     # This is just a test!
     def loadCustomObjects
-        rpgEvent = RPG::Event.new(18,18)
-        newEvent = Game_Event.new($game_map.map_id, rpgEvent, $game_map)
-        $game_map.events[1000] = newEvent
+        100.times do |i|
+            rpgEvent = RPG::Event.new(12 + i % 10,12 + i / 10)
+            newEvent = Game_Event.new($game_map.map_id, rpgEvent, $game_map)
+            # Create the event interaction
+            firstPage = RPG::Event::Page.new
+            firstPage.graphic.character_name = berryTreeList.sample
+            firstPage.graphic.direction = Up
+            firstPage.trigger = 0 # Action button
+            firstPage.step_anime = true
+            firstPage.direction_fix = true
+            firstPage.list = []
+            push_text(firstPage.list,"This is a berry tree!")
+            firstPage.list.push(RPG::EventCommand.new(0,0,[]))
+            rpgEvent.pages = [firstPage]
+            newEvent.refresh
 
-        # Create the event interaction
-        firstPage = RPG::Event::Page.new
-        firstPage.graphic.character_name  = "Object_Various"
-        firstPage.trigger = 0 # Action button
-        firstPage.list = []
-        push_text(firstPage.list,"This is a custom object!")
-        firstPage.list.push(RPG::EventCommand.new(0,0,[]))
-        rpgEvent.pages = [firstPage]
-        newEvent.refresh
+            #newEvent.turn_up
 
+            injectRuntimeEvent(newEvent)
+        end
+    end
+
+    def injectRuntimeEvent(newEvent)
+        $game_map.events[$runtime_event_index] = newEvent
         $scene.spriteset.add_sprite_for_event(newEvent)
+
+        $runtime_event_index += 1
     end
 end
+
+$runtime_event_index = 1000
 
 Events.onMapSceneChange += proc { |_sender, e|
 	scene      = e[0]
