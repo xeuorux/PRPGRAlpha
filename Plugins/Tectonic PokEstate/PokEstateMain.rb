@@ -678,6 +678,11 @@ class PokEstate
         return custom_object_list || {}
     end
 
+    def getCustomObjectDefinition(object_id)
+        object_definition = CUSTOM_OBJECT_DEFINITIONS[object_id]
+        return object_definition || {}
+    end
+
     def berryTreeList
         return [
             "berrytreeAGUAVBERRY", "berrytreeAMWIBERRY", "berrytreeAPICOTBERRY", "berrytreeASPEARBERRY",
@@ -705,18 +710,26 @@ class PokEstate
                 locations_list = [locations_list]
             end
 
+            object_definition = getCustomObjectDefinition(object_id)
+
             locations_list.each do |xy_pair|
                 rpgEvent = RPG::Event.new(xy_pair[0],xy_pair[1])
                 newEvent = Game_Event.new($game_map.map_id, rpgEvent, $game_map)
+
                 # Create the event interaction
                 firstPage = RPG::Event::Page.new
-                firstPage.graphic.character_name = "PokEstate custom objects/#{object_id.to_s}"
-                #firstPage.graphic.direction = Down
-                firstPage.trigger = 0 # Action button
-                firstPage.step_anime = true
-                firstPage.direction_fix = true
+                firstPage.graphic.character_name = "PokEstate custom objects/#{object_id.to_s.downcase}"
+                firstPage.trigger = object_definition[:trigger] || 0
+                firstPage.through = object_definition[:collision_disabled] || false
+                firstPage.walk_anime = object_definition[:walk_anime] || true
+                firstPage.step_anime = object_definition[:step_anime] || true
+                firstPage.always_on_top = object_definition[:always_on_top] || false
+                firstPage.direction_fix = object_definition[:direction_fix] || true
                 firstPage.list = []
-                push_text(firstPage.list,"This is a custom object!")
+                if object_definition.key?(:interaction_text)
+                    interaction_text = object_definition[:interaction_text]
+                    push_text(firstPage.list,_INTL(interaction_text))
+                end
                 firstPage.list.push(RPG::EventCommand.new(0,0,[]))
                 rpgEvent.pages = [firstPage]
                 newEvent.refresh

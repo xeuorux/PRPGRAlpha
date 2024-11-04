@@ -9,15 +9,3 @@ STEPS_TILL_NEW_STORY = 100
 STORIES_FEATURE_AVAILABLE = false
 NEW_STORY_PERCENT_CHANCE_PER_POKEMON = 2
 FALLBACK_RETURN_POSITION = [136,20,40]
-
-DEFAULT_CUSTOM_OBJECTS_PER_MAP = {
-    148 => { # Forest
-        :tree_mini => [
-            [24,15],
-            [17,20],
-            [16,24],
-            [21,23],
-            [18,27],
-        ]
-    }
-}
