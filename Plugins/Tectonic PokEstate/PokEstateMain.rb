@@ -673,6 +673,11 @@ class PokEstate
     # PokEstate Customization
     #####################################################################
 
+    def getCustomObjectsOnMap
+        custom_object_list = DEFAULT_CUSTOM_OBJECTS_PER_MAP[$game_map.map_id]
+        return custom_object_list || {}
+    end
+
     def berryTreeList
         return [
             "berrytreeAGUAVBERRY", "berrytreeAMWIBERRY", "berrytreeAPICOTBERRY", "berrytreeASPEARBERRY",
@@ -694,33 +699,40 @@ class PokEstate
         ]
     end
 
-    # This is just a test!
     def loadCustomObjects
-        100.times do |i|
-            rpgEvent = RPG::Event.new(12 + i % 10,12 + i / 10)
-            newEvent = Game_Event.new($game_map.map_id, rpgEvent, $game_map)
-            # Create the event interaction
-            firstPage = RPG::Event::Page.new
-            firstPage.graphic.character_name = berryTreeList.sample
-            firstPage.graphic.direction = Up
-            firstPage.trigger = 0 # Action button
-            firstPage.step_anime = true
-            firstPage.direction_fix = true
-            firstPage.list = []
-            push_text(firstPage.list,"This is a berry tree!")
-            firstPage.list.push(RPG::EventCommand.new(0,0,[]))
-            rpgEvent.pages = [firstPage]
-            newEvent.refresh
+        getCustomObjectsOnMap.each_pair do |object_id, locations_list|
+            unless locations_list.is_a?(Array)
+                locations_list = [locations_list]
+            end
 
-            #newEvent.turn_up
-
-            injectRuntimeEvent(newEvent)
+            locations_list.each do |xy_pair|
+                rpgEvent = RPG::Event.new(xy_pair[0],xy_pair[1])
+                newEvent = Game_Event.new($game_map.map_id, rpgEvent, $game_map)
+                # Create the event interaction
+                firstPage = RPG::Event::Page.new
+                firstPage.graphic.character_name = "PokEstate custom objects/#{object_id.to_s}"
+                #firstPage.graphic.direction = Down
+                firstPage.trigger = 0 # Action button
+                firstPage.step_anime = true
+                firstPage.direction_fix = true
+                firstPage.list = []
+                push_text(firstPage.list,"This is a custom object!")
+                firstPage.list.push(RPG::EventCommand.new(0,0,[]))
+                rpgEvent.pages = [firstPage]
+                newEvent.refresh
+    
+                injectRuntimeEvent(newEvent)
+            end
         end
     end
 
     def injectRuntimeEvent(newEvent)
-        $game_map.events[$runtime_event_index] = newEvent
-        $scene.spriteset.add_sprite_for_event(newEvent)
+        if $game_map.events[$runtime_event_index].nil?
+            $game_map.events[$runtime_event_index] = newEvent
+            $scene.spriteset.add_sprite_for_event(newEvent)
+        else
+            echoln("declining to inject runtime event since event already exists at current runtime event index.")
+        end
 
         $runtime_event_index += 1
     end
@@ -733,6 +745,9 @@ Events.onMapSceneChange += proc { |_sender, e|
 	mapChanged = e[1]
 	next if !scene || !scene.spriteset
 	next unless $PokEstate.isInEstate?
+
+
+
 	$PokEstate.load_estate_box
 	boxName = $PokemonStorage[$PokEstate.estate_box].name
 	label = _INTL("PokÉstate #{$PokEstate.estate_box +  1}")
