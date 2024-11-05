@@ -705,6 +705,8 @@ class PokEstate
     end
 
     def loadCustomObjects
+        injectedEventID = 1000
+
         getCustomObjectsOnMap.each_pair do |object_id, locations_list|
             unless locations_list.is_a?(Array)
                 locations_list = [locations_list]
@@ -734,33 +736,29 @@ class PokEstate
                 rpgEvent.pages = [firstPage]
                 newEvent.refresh
     
-                injectRuntimeEvent(newEvent)
+                injectRuntimeEvent(newEvent, injectedEventID)
+
+                injectedEventID += 1
             end
         end
     end
 
-    def injectRuntimeEvent(newEvent)
-        if $game_map.events[$runtime_event_index].nil?
-            $game_map.events[$runtime_event_index] = newEvent
-            $scene.spriteset.add_sprite_for_event(newEvent)
-        else
-            echoln("declining to inject runtime event since event already exists at current runtime event index.")
-        end
-
-        $runtime_event_index += 1
+    def injectRuntimeEvent(newEvent,id)
+        $game_map.events[id] = newEvent
+        $scene.spriteset.add_sprite_for_event(newEvent)
     end
 end
 
-$runtime_event_index = 1000
+Events.onMapChange += proc { |_sender,e|
+    old_map_ID = e[0]   # previous map ID, is 0 if no map ID
+    $game_map.remove_injected_events
+}
 
 Events.onMapSceneChange += proc { |_sender, e|
 	scene      = e[0]
 	mapChanged = e[1]
 	next if !scene || !scene.spriteset
 	next unless $PokEstate.isInEstate?
-
-
-
 	$PokEstate.load_estate_box
 	boxName = $PokemonStorage[$PokEstate.estate_box].name
 	label = _INTL("PokÉstate #{$PokEstate.estate_box +  1}")

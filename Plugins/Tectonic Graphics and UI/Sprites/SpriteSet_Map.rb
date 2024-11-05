@@ -67,7 +67,8 @@ class Spriteset_Map
       end	
       @panorama.dispose	
       @fog.dispose	
-      for sprite in @character_sprites	
+      for sprite in @character_sprites
+        next unless sprite
         sprite.dispose	
       end	
       @weather.dispose	
@@ -148,6 +149,7 @@ class Spriteset_Map
       @fog.update
   
       for sprite in @character_sprites
+        next unless sprite
         sprite.update
       end
   
@@ -174,6 +176,8 @@ class Spriteset_Map
         sprite = Sprite_Character.new(@@viewport1,event)
         @character_sprites.push(sprite)
         sprite.setShadows(@map, @shadows)
+
+        return sprite
     end
     
     def force_update_characters

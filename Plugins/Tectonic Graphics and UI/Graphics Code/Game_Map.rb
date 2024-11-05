@@ -83,6 +83,12 @@ class Game_Map
         @scroll_speed         = 4
     end
 
+    def remove_injected_events
+        @events = @events.delete_if { |key, value|
+            next !@map.events.keys.include?(key)
+        }
+    end
+
     def updateTileset
         tileset = $data_tilesets[@map.tileset_id]
         @tileset_name    = tileset.tileset_name
