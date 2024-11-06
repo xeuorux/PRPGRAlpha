@@ -1186,7 +1186,7 @@ He crafted something mighty gross outta my failed harvest.
 Hizo algo bien asqueroso con mi cosecha fallida.
 So, you gots one of them mushroom 'mons?
 Entonces, ¿Tienes uno de esos 'mons hongos?
-It's called <i>my</i>cology because <i>I</i> need it!
+It's called <i>my</i>cology because <i>i</i> need it!
 ¡Se llama <i>mi</i>cología porque <i>yo</i> la necesito!
 Just what the Nurse Joy ordered!
 ¡Justo lo que la Enfermera Joy ordenó!
@@ -1614,7 +1614,7 @@ For the absolute steal of $200,000, I'll let you get your hands on one. And gues
 Por el absoluto robo de $200.000, te dejaré en tus manos uno. Y adivina qué – es variocolor.
 Show that to your... mom? Dad? No, definitely mom. Probably a sibling in there as well, huh?
 Muestrale esto a tu… ¿Madre? ¿Padre? No, definitivamente madre. Probablemente un hermano de por medio, ¿eh?
-I'm sure you'll get at least a week's worth of self-worth flaunting that to them. All that quality time for just $200,000.
+I'm sure you'll get at least a week's worth of self- worth flaunting that to them. All that quality time for just $200,000.
 Estoy seguro que conseguirás al menos una semana para presumir de esto. Todo ese tiempo de calidad por sólo $200.000.
 Hah! That's what they all say. You'll be back, sooner or later.
 ¡Ja! Eso es lo que todos dicen. Volverás, más pronto que tarde.
@@ -2343,14 +2343,14 @@ I used to use a lot of Life Orbs. Didn't care if my Pokemon got hurt so long as 
 Solía usar un montón de Vidasferas. No me importaba si mis Pokémon se lastimaban siempre y cuando hicieran el trabajo.
 But I'm not that kind of person any more. I'm looking to rid myself of them.
 Pero ya no soy ese tipo de personas. Estoy intentando deshacerme de ellas.
-I've just got one left. I'll sell it to you for $10,000. Fair market value.
-Sólo me queda una. Te la venderé por $10.000. Precio de mercado.
+I've just got one left. I'll sell it to you for $6,000. Fair market value.
+Sólo me queda una. Te la venderé por $6.000. Precio de mercado.
 Sounds good. I'll be on patrol for awhile now, so hit me up if you change your mind.
 Suena bien. Estaré en patrulla por un rato ahora, así que háblame si cambias de opinión.
 Here ya go, pleasure doing business.
 Aquí tienes, un gusto hacer negocios.
-\PN hands over $10000 in exchange.
-\PN da los $10000.
+\PN hands over $6000 in exchange.
+\PN da los $6000.
 Guess I'll go back on patrol now.
 Supongo que volveré a patrullar.
 Looks like you're a bit short on cash.
@@ -2431,7 +2431,7 @@ My my, I hope you aren't here to battle. I won't be able to tell my Pokemon anyt
 Uy, espero que no estés aquí para combatir. No podré decirles nada a mis Pokémon si sigues quitándome el aliento.
 Oh, you are? Ah, I suppose a rose as pretty as you would have some very sharp thorns...
 Oh, ¿Lo estás? Ah, supongo que una rosa tan bonita como tú tiene unas espinas muy afiladas...
-I laid out each of these starter tokens to maybe attact someone suitable... for battle.
+I laid out each of these starter tokens to maybe attract someone suitable... for battle. 
 Dejé una de cada ficha inicial para atraer a alguien digno... para combatir.
 Perhaps you'll be able to satisfy both criteria...
 Quizás tú podrás satisfacer ambos criterios... 
@@ -3327,7 +3327,7 @@ Let's see if we can't get another round in. I ain't about to cede The Bench to a
 Veamos si vamos a por otra ronda. No voy a cederle El Banco a cualquiera.
 Hit me up again whenever, I'll be ready.
 Hablan conmigo cuando quieras, estaré listo.
-Anyways, names Ansel.
+Anyways, name's Ansel.
 Como sea, mi nombre es Ansel.
 Evolution Market
 Tienda Evolutiva
@@ -4188,7 +4188,7 @@ You shouldn't be talking to a door now.
 No deberías estar hablando a una puerta ahora mismo.
 My parents are going to kill me.
 Mis padres van a matarme.
-I brought back a non-Native Pokemon from my trip to Unova.
+I brought back a non-native Pokemon from my trip to Unova.
 Traje un Pokémon no nativo desde mi viaje a Unova.
 It's a Heatmor, and it always looks like it wants to burn something.
 Es un Heatmor, y siempre parece que quiere quemar algo.
@@ -4416,7 +4416,7 @@ My Riolu is great! I give it lots of hugs.
 ¡Mi Riolu es genial! Le doy un montón de abrazos.
 The TV is turned off.
 La TV está apagada.
-A piece of laminated paper attached to front lists the over 300 available TV channels.
+A peice of laminated paper attached to front lists the over 300 available TV channels.
 Un pedazo de papel laminado pegado al frente lista más de 300 canales disponibles.
 [Map51]
 
@@ -5907,7 +5907,10 @@ I were you, I'd take your boat and sail right away. The avatars'll be the end of
 Si fuera tu, tomaría tu bote y navegaría bien lejos. Los avatares serán nuestro fin, digo yo.
 If you won't stay on the water, at least stay on the paths, ey? They're mostly creepin' in the caves, I heard.
 Si no te quedas en el agua, por lo menos quédate en los caminos, ¿ey? Se arrastran principalmente en las cuevas, eso escuché.
-
+I were you, I'd take care not to end up like them wrecked boats out west o' 'ere.
+Si fuera tú, me cuidaría de no terminar como los barcos destrozados al oeste de aquí.
+Damn rich folk and their careless sailin'...
+Maldita gente rica y su navegación sin cuidado'...
 [Map62]
 
 At the northernmost part of the Shipping Lane there is a house, and inside of that house a cave, and in that cave an Avatar!
@@ -6980,7 +6983,14 @@ Likewise, I stocked up on the TMs which generate them.
 Asimismo, he acumulado las MTs que los generan.
 A locked door. It has a slot for a keycard.
 Una puerta bloqueada. Posee una ranura para una llave magnética. 
-
+I like to go to this cool hilly place near here.
+Me gusta ir a este lugar montañoso genial cerca de aquí.
+It's where I can watch Gogoat and Dubwool! They fight each other all the time.
+¡Allí puedo ver a los Gogoat y Dubwool! Combaten entre ellos todo el tiempo.
+I tried fighting too, but they didn't want to fight me back.
+Un vez también intenté combatir, pero no quisieron combatir conmigo.
+I guess my current form is too weak.
+Supongo que mi forma actual es demasiado débil.
 [Map83]
 
 A locked gate. It has a slot for a keycard.
@@ -10733,6 +10743,8 @@ Apparently a lot of new trainers struggle with that status, as it halves the Pok
 Aparentemente muchos de los nuevos entrenadores les cuesta lidiar con ese estado, ya que baja a la mitad la velocidad del Pokémon y reduce el daño que hacen.
 I'm not sure, but I swear I saw a sparring match, where the two seemed identical...
 No estoy segura, pero juraría haber visto un combate de prueba, donde los dos parecían idénticos...
+The berry plant is growing.
+El árbol de bayas está creciendo.
 [Map137]
 
 I'm a safety minded person.
@@ -11626,7 +11638,8 @@ Not interested.
 No me interesa.
 Sure, I'll adopt it.
 Seguro, lo adoptaré.
-
+Farewell Trainer, the Rangers owe you one.
+Adiós Entrenadores, los Rangers te debemos una.
 [Map159]
 
 Travel Agency: Orre
@@ -11789,7 +11802,14 @@ She really was a curious character, but she gave me some amazing advice...
 Realmente era un personaje curioso, pero me dió un consejo increíble...
 Anyways, I uh... got to go.
 Como sea, eeh... tengo que irme.
-
+I've been on an journey all around the world to hone my artistic talents.
+He viajado durante todo el mundo para mejorar mis talentos artísticos.
+If you have a Vivillon, I could change its pattern to one from just about anywhere!
+Si tienes un Vivillon, ¡puedo cambiar su motivo a uno de cualquier parte!
+Fantastic! A true work of art, if I do say so myself.
+¡Fantástico! Una verdadera obra de arte, diría yo.
+That's alright. Sometimes natural is best, after all!
+Está bien. ¡Después de todo, a veces lo natural es lo mejor!
 [Map160]
 
 A small feeding bowl, refilled as needed by the Estate Caretaker.
@@ -12408,7 +12428,7 @@ We used to get more guests a looooong time ago, but we don't get them much now. 
 Solíamos tener más turistas hace muuuuuucho tiempo, pero ya no vienen mucho ahora. Supongo que una isla hundiéndose no es el mejor lugar para los inversores…
 Oh well! Can't save 'em all... just uhh... enjoy it while it lasts? Haha...
 ¡Oh bueno! No puedes salvarlo todo… sólo ehh… ¿Disfrútalo mientras puedas? Jaja…
-Anyways! We have a healing center! I'm a qualified nurse, actually! Just don't have the typical uniform.
+Anyways! We have a healing center! I'm qualified a nurse, actually! Just don't have the typical uniform.
 ¡Como sea! ¡Tenemos un centro de curación! ¡Soy una enfermera calificada, de hecho! Sólo no tengo el uniforme típico.
 We certainly like to battle here on this island! Just like uhhh... literally every other person... So that's cool!
 ¡Ciertamente nos gusta combatir en esta isla! Sólo ehhh… pregúntale a literalmente cualquier otra persona… ¡Así que bien!
@@ -14502,7 +14522,7 @@ Capitol Library
 Biblioteca del Capitolio
 The door is locked.
 La puerta está bloqueada.
-A peice of laminated paper is stuck onto it.
+A piece of laminated paper is stuck onto it.
 Una pedazo de papel laminado está pegado a ella.
 "Closed for deep cleaning", it says.
 Dice: "Cerrado por limpieza profunda".
@@ -14843,7 +14863,16 @@ No
 No
 Yes
 Sí
-
+I love my fiancé dearly, but his love of adventure is hard to keep up with.
+Amo mucho a mi prometido, pero es difícil seguirle el ritmo a su amor por la aventura.
+Luckily for us, there's a wonderful place just south of here -- the Floral Maze -- which appeals to both of our tastes.
+Afortunadamente para nosotros, existe este maravilloso lugar al sur de aquí -- el Laberinto Flora -- lo que apela a ambos gustos.
+He proposed to me there only last week.
+Allí me propuso matrimonio la semana pasada.
+Just in time, too, since the very next day a sinkhole opened up inside the entrance.
+Y justo a tiempo, ya que al día siguiente un sumidero apareció cerca de la entrada.
+How strange is that?
+Bastante extraño, ¿no crees?
 [Map203]
 
 This place used to just be a typical Eeveelution cafe.
@@ -15915,7 +15944,7 @@ You see, I used to be obsessed with her. It’s why I’m here.
 Sabes, solía estar obsesionada con ella. Por ello estoy aquí.
 I could be the one to track her down, lure her out like a timid beast. I just wanted to take care of her.
 Podría ser quien la rastreara, atraerla como una bestia tímida. Sólo quería cuidar de ella.
-And she was beautiful, of course. I’m not so high-minded as to discount her graceful splendor as part of my reasoning.
+And she was beautiful, of course. I’m not so high- minded as to discount her graceful splendor as part of my reasoning.
 Y ella era hermosa, por supuesto. No soy tan moralista como para menospreciar su grácil esplendor como parte de mi razonamiento.
 But then I arrived here... and I found you. My attention was caught immediately.
 Pero luego llegué aquí... y te encontré. Mi atención fue captada de inmediato.
@@ -18315,7 +18344,10 @@ So do I.
 También yo.
 Avatar?
 ¿Avatar?
-
+A tattered page of customer reviews hangs from the wall.
+Una página andrajosa de reseñas de clientes está colgada en la pared.
+One attributed to someone named "Oriel" is particularly enthusiastic.
+Una atribuída a alguien llamado "Oriel" es particularmente animada.
 [Map255]
 
 So it was an avatar after all. Two, in fact! How delightful!
@@ -19923,6 +19955,8 @@ That was fun, we should battle again soon.
 Eso fue divertido, deberíamos combatir luego pronto.
 Our Pokemon couldn't win?!
 ¡¿Nuestros Pokémon no pudieron ganar?!
+Our Pokemon couldn't beat your's?!
+¡¿Nuestros Pokémon no pudieron vencer a los tuyos?!
 [Map294]
 
 Yezera is whistling something mournful while the world is reborn.
@@ -20461,7 +20495,7 @@ Sorry, am I in your way?
 Lo siento, ¿Estoy en tu camino?
 Wait, of course I am, I'm a trainer!
 Espera, por supuesto que lo estoy, ¡Soy una entrenadora!
-I've been reading about ancient Makyan hero-trainers.
+I've been reading about ancient Makyan hero- trainers.
 He estado leyendo sobre antiguos héroes de Makya.
 You might be even stronger than them!
 ¡Puede que seas incluso mas fuerte que ellos!
@@ -20485,8 +20519,8 @@ A fossil of an aquatic plant.
 Un fósil de una planta acuática.
 A plaque lists a very long scientific name for it. Your eyes glaze over as you try and read it.
 Una placa muestra un nombre científico muy largo. Tus ojos se vidiran mientras intentas leerlo.
-A simple plaque simply states "Armaldo Fossil"
-Una simple placa expone "Fósil de Armaldo"
+A simple plaque simply states "Armaldo Fossil".
+Una simple placa expone "Fósil de Armaldo".
 The rest of the description plate probably hasn't been manufactured yet.
 El resto de la descripción probablemente no fue manufacturada.
 A trash can made of some sort of tropical wood.
@@ -22515,6 +22549,8 @@ Feebas.
 Feebas.
 Magikarp.
 Magikarp.
+A brochure rack, advertising a variety of tourist spots across Makya.
+Es un estante lleno de panfletos, promocionando una variedad de centros turísticos por todo Makya.
 [Map326]
 
 I BRING A WHOLE NEW MEANING TO DEATH METAL!
@@ -23222,6 +23258,46 @@ A beautifully carved statue of the legendary king Calyrex.
 Una estatua maravillosamante escuplida del legendario rey Calyrex.
 Oh? There's something hanging from the statue!
 ¿Oh? ¡Hay algo colgado de la estatua!
+The venom I could spit about the Corviknight that abandoned me here...
+Las cosas que podría decir sobre el Corviknight que me abandonó aquí...
+That damnable raven! I've gone dizzy turning here and there through the hedges.
+¡Ese maldito cuervo! Me he mareado doblando de aquí a allá por estos setos. 
+What a battle! A testament to your skill as a slayer.
+¡Qué cinbate! Un testamento de tu habilidad como un asesino.
+The gap between our skills is quite large. I'm not sure I'll ever be able to bridge it.
+El espacio entre nuestras habilidades es bastante grande. No estoy seguro de si algún día seré capaz de achicarlo.
+Still, how droll! A little bit of happy chaos to liven up this awful day.
+¡Aún así, qué jocoso! Un pizca de buen caos para pasarlo bien en este horrible día.
+At this rate, I'll arrive in Sweetrock Harbor by next May...
+A este punto, llegaré al Puerto Sweetrock el siguiente Mayo...
+There truly is no justice in the world.
+Realmente no hay justicia en este mundo.
+Perhaps that one Corviknight just has a chip on it's shoulder.
+Quizás ese Corviknight específico es un rencoroso.
+I always give my judgement on their coloration, but none before have mustered any sort of answer.
+Siempre juzgo en base a su coloración, pero ninguno antes a podido surgir cualquier tipo de respuesta.
+I must have chosen the sole bad guy among them.
+Debo haber elegido al único malvado entre ellos.
+And all because I listened to the advice of that man in Novo Town.
+Y todo porque escuché el consejo de ese hombre en Pueblo Novo.
+Bud's the name and hedges are my game! Both plant and financial!
+¡Bud es mi nombre y los setos son mi juego! 
+Now if you'll excuse me, I have some bushes to trim and some stocks to option.
+Ahora si me disculpas, tengo varios arbustos que cortar.
+Bud's the name, but battling sure ain't my game...
+Bud es mi nombre, y combatir no es exactamente mi juego...
+I'm the 28th Bud Hill, a long lineage of gardeners that have maintained the Floral Maze.
+Soy el vigesimoctavo Bud Hill, un gran linaje de jardineros que han mantenido el Laberinto Floral.
+It may not look like much, but this is one of the longest maintained structures in all of Makya.
+Podra no parecer mucho, pero esta es una de las estructuras de Makya que por más tiempo han sido mantenidas.
+I've been wandering for hours. If I don't find the exit soon, my skin will dry out!
+He estado vagando por horas. Si no encuentro la salida pronto, ¡mi piel se secará!
+I feel very Croagunk-esque right now...
+Me siento mucho como un Croakung ahora mismo...
+I must have some moisturizer on me somewhere...
+Debo tener algo de crema hidratante por ahí...
+A map would have been nice to have...
+Habría estado bien tener un mapa...
 [Map334]
 I'm an out-of-towner visiting family.
 Soy alguien de afuera visitando a mi familia.
@@ -24565,6 +24641,22 @@ Which... it looks like you don't have.
 Los que... parece que no tienes.
 Well, the offer stands.
 Bueno, la oferta se mantiene en pie.
+Oh! This bush has a hidden switch.
+¡Oh! Este arbusto tiene un interruptor oculto.
+Press the hidden switch?
+¿Presionas el interruptor oculto?
+You leave the hidden switch alone.
+Dejas solo al interruptor oculto.
+You sense that a small hole has opened up somewhere!
+¡Sientes que un pequeño agujero se ha abierto en algún lugar!
+The Battle Monument
+El Monumento Batalla
+"The heroes of the past tower over us still."
+"Los héroes del pasado aún se imponen ante nosotros."
+A small logo at the bottom right identifies Bogdan Concrete as the company hired for this project.
+Un pequeño logo en la esquina inferior derecha identifica a Concreto Bogdan como la compañía contratada para este proyecto.
+Yes
+Sí
 [Map358]
 
 Hello to you, young one.
@@ -25764,7 +25856,7 @@ A group of rangers set up a rest stop to help out trainers such as yourself.
 Un grupo de rangers pusieron una parada para ayudar a entrenadores como tú.
 The Velenz Menagerie was built by a very eccentric woman over 100 years ago.
 La Muestra de Velenz fue construida por una mujer muy excéntrica hace 100 años.
-Since then, it's been passed down to her great-great-granddaughter.
+Since then, it's been passed down to her great- great-granddaughter.
 Con el pasar de los años, este fue heredado a su tataranieta.
 She shares her ancestor's love for the world, and is every bit as unusual.
 Ella tiene el mismo amor por el mundo que tenía su ancestra, al igual que sus peculiaridades.
@@ -26296,8 +26388,8 @@ You decide to decline the Cresselia's request for now.
 Decides rechazar el pedido de Cresselia por ahora. 
 You grab a Pokeball from your bag. Something seems strange about it.
 Tomas una Poké Ball de tu mochila. Algo parece extraño al respecto.
-Cresselia gives you a curt nod before entering its ball.
-Cresselia te asiente brevemente antes de entrar en su ball.
+Cresselia gives you a curt bow before entering its ball.
+Cresselia te da una breve reverencia antes de entrar en su ball.
 ...
 ...
 Hmph.
@@ -26454,9 +26546,9 @@ Dejar a Mesprit.
 
 Whoa, Azelf! How did it get here?
 ¡Wow, Azelf! ¿Cómo llegaste aquí?
-The only thing you can glean from it is the self-assured smirk on it's face.
+The only thing you can glean from it is the self- assured smirk on it's face.
 Lo único que puedes observar de él es la sonrisa confiada en su cara.
-It leans back in the air, kicking up its feet. It points towards your hand.
+It leans back in the air, kicking up it's feet. It points towards your hand.
 Se arquea en el aire, moviendo sus pies. Apunta hacia tu mano.
 You were... holding a Pokeball? You look back up to see Azelf shrugging at you, still sporting the same grin.
 ¿Estás… sosteniendo una Poké Ball? Miras de vuelta a Azelf encogiendo los hombros, manteniendo la misma sonrisa.
@@ -26473,7 +26565,7 @@ Dejar a Azelf.
 
 [Map421]
 
-The doors are securly locked.
+The doors are securely locked.
 Las puertas están seguramente bloqueadas.
 I'll take your Pokémon for a few seconds.
 Tomaré a tus Pokémon por unos segundos.
@@ -26545,7 +26637,8 @@ You've found Dada, a spriting contributor.
 Has encontrado a Dada, a un contribuidor de spriting.
 You've found ZombyGoast, a spriter and design contributor.
 Has encontrado a ZombyGoast, un spriter y un diseñador.
-
+You've found Riptide, a playtester and general contributor.
+Has encontrado a Riptide, un playtester y contribuidor general.
 [Map426]
 Prizca Black Market
 Mercado Negro Prizca

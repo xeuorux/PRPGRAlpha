@@ -612,6 +612,7 @@ module GameData
       end
     },
     :after_evolution_proc => proc { |pkmn, new_species, parameter, evo_species|
+      next false if evo_species != new_species
       $PokemonBag.pbDeleteItem(:ORIGINORE)
       next true
     },
