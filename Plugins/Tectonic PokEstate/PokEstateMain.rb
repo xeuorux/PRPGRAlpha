@@ -41,6 +41,7 @@ class PokEstate
 		@stories_progress = 0
 		@stories_count = [1] * Settings::NUM_STORAGE_BOXES
 		@awardsGranted = []
+        @edit_mode = false
 	end
 
 	def awardsGranted()
@@ -82,6 +83,8 @@ class PokEstate
 		Graphics.freeze
 		$game_temp.transition_processing = true
 		$game_temp.transition_name       = ""
+
+        @edit_mode = false
 	end
 	
 	def transferToWesterEstate()
@@ -272,7 +275,11 @@ class PokEstate
 		commandReceiveUpdate = -1
 		commandCancel = -1
 		commandScrubAwards = -1
+        commandCustomize = -1
+        commandStopCustomize = -1
 		commands = []
+        commands[commandCustomize = commands.length] = _INTL("Start Customizing") unless @edit_mode
+        commands[commandStopCustomize = commands.length] = _INTL("End Customizing") if @edit_mode
 		commands[commandLandscape = commands.length] = _INTL("Landscape")
         commands[commandCheckRewards = commands.length] = _INTL("Check Rewards")
 		commands[commandReceiveUpdate = commands.length] = _INTL("Hear Story") if STORIES_FEATURE_AVAILABLE
@@ -283,6 +290,12 @@ class PokEstate
 		
 		if commandLandscape > -1 && command == commandLandscape
 			changeLandscape()
+        elsif commandCustomize > -1 && command == commandCustomize
+            @edit_mode = true
+            pbMessage(_INTL("Entering edit mode!"))
+        elsif commandStopCustomize > -1 && command == commandStopCustomize
+            @edit_mode = false
+            pbMessage(_INTL("Exiting edit mode!"))
         elsif commandCheckRewards > -1 && command == commandCheckRewards
             pbFadeOutIn do
                 collectionRewardsListScene = CollectionRewardsListScene.new
@@ -732,6 +745,8 @@ class PokEstate
                     interaction_text = object_definition[:interaction_text]
                     push_text(firstPage.list,_INTL(interaction_text))
                 end
+                    push_script(firstPage.list,"$PokEstate.editEvent(#{injectedEventID})")
+                end
                 firstPage.list.push(RPG::EventCommand.new(0,0,[]))
                 rpgEvent.pages = [firstPage]
                 newEvent.refresh
@@ -746,6 +761,13 @@ class PokEstate
     def injectRuntimeEvent(newEvent,id)
         $game_map.events[id] = newEvent
         $scene.spriteset.add_sprite_for_event(newEvent)
+    end
+
+    def editEvent(eventID)
+        return unless @edit_mode
+        if pbConfirmMessageSerious(_INTL("Remove this event?"))
+            # TODO
+        end
     end
 end
 
