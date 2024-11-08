@@ -837,7 +837,7 @@ Just like that, my team's put to the sidelines.
 我的队伍就这样被打败了。
 A knack for tactics, that's what you got. Helena'll be impressed, I know it.
 这就是你的战斗诀窍？\n海伦娜一定会对你刮目相看的。
-Healing center's uhh... to the west. So go off and do that now.
+Healing centers uhh... to the west. So go off and do that now.
 治疗中心呃...在西边，\n现在就去吧。
 She just switches around a lot? That's the "tactics" everyone around here's been hyping up?
 她只是在频繁的换宝可梦？\n这就是他们鼓吹的“战术”？
@@ -1031,6 +1031,8 @@ He crafted something mighty gross outta my failed harvest.
 So, you gots one of them mushroom 'mons?
 你找到蘑菇宝可梦了？
 It's called <i>my</i>cology because <i>I</i> need it!
+这是<i>我的</i>特效药，\n<i>我</i>需要它！
+It's called <i>my</i>cology because <i>i</i> need it!
 这是<i>我的</i>特效药，\n<i>我</i>需要它！
 Just what the Nurse Joy ordered!
 乔伊小姐说的就是这个！
@@ -2030,7 +2032,7 @@ My my, I hope you aren't here to battle. I won't be able to tell my Pokemon anyt
 你不会是来找我战斗的吧！\n连个喘气的时间都不给，\n我还怎么跟宝可梦们培养感情。
 Oh, you are? Ah, I suppose a rose as pretty as you would have some very sharp thorns...
 你的确是为了战斗而来吗？\n好吧，但要小心哦，\n漂亮的玫瑰都有着锐利的尖刺...
-I laid out each of these starter tokens to maybe attact someone suitable... for battle.
+I laid out each of these starter tokens to maybe attract someone suitable... for battle. 
 我在这里留下了三枚代币，\n来作为对战的奖励。
 Perhaps you'll be able to satisfy both criteria...
 就看你能不能达成我的条件了...
@@ -3778,7 +3780,7 @@ Can you believe the nerve of some people?
 你敢信世上竟然还有这种生物！
 The TV is turned off.
 电视没开。
-A piece of laminated paper attached to front lists the over 300 available TV channels.
+A peice of laminated paper attached to front lists the over 300 available TV channels.
 上面贴着一叠便签，\n列出了300多个可以接收的频道。
 Oh, don't mind me, I'm just restocking this Vending Machine.
 我正在给自动售货机补货。
@@ -4844,10 +4846,10 @@ Ello, landlubber, welcome to the Fin.
 你好，旱鸭子，\n欢迎来到鱼鳍港。
 You aimin' your sights at the rest of Makya?
 你不会还打算\n去马凯亚的其他地方吧？
-I were you, I'd take your boat and sail right away. The avatars'll be the end of us, I say.
-如果我是你，就立马转身回家！\n毕竟那些化身可不是好对付的。
-If you won't stay on the water, at least stay on the paths, ey? They're mostly creepin' in the caves, I heard.
-要么坐船走水路，\n要么就挑宽敞的大道走， \n听说那些家伙大多都在山洞里。
+I were you, I'd take care not to end up like them wrecked boats out west o' 'ere.
+如果我是你，就会保持谨慎，\n别落得西边的那些破船一样的下场。
+Damn rich folk and their careless sailin'...
+那些脑残的有钱人连船都不爱惜...
 [Map62]
 Heal Bell would be so nice to have for this gym.
 如果带一个治愈铃声就好了。
@@ -5763,6 +5765,14 @@ You insert the Team Chasm ID Card.
 你插入了裂隙队身份卡。
 The door unlocks with a click.
 门咔嗒一声开了。
+I like to go to this cool hilly place near here.
+我喜欢去附近那个凉快的小山头。
+It's where I can watch Gogoat and Dubwool! They fight each other all the time.
+我可以惬意地坐在那里，\n看坐骑山羊和毛毛角羊打架。
+I tried fighting too, but they didn't want to fight me back.
+我也曾试着加入它们，\n但是它们都不理我。
+I guess my current form is too weak.
+毕竟我这点力气对它们来说，\n按摩都不够劲儿。
 I've traveled throughout the world, and I've seen all sorts of different weathers.
 我走遍了世界各地，\n见过各种不同的天气。
 Likewise, I stocked up on the TMs which generate them.
@@ -8545,7 +8555,7 @@ Yo, champ in the making!
 哟，未来的冠军！
 We have two Gym Leaders here on the West side of Prizca.
 西宏礼道馆有两个馆主。
-Bence and Zoe are Rock-type and Flying-type users.
+Bence and Zoé are Rock-type and Flying-type users.
 那就是使用岩石\n和飞行系的本斯和佐伊。
 There isn't a magic typing here that I could recommend you. These types are a pretty good combo.
 在这里并没有什么\n特别好的属性可以推荐给你，\n因为这个组合相当给力。
@@ -8751,6 +8761,8 @@ Well, keep it in mind.
 当然，这不是要求，是交易。
 See ya, kid.
 再见了，小孩儿。
+The berry plant is growing.
+树果还在生长中。
 Casaba Villa Gym
 甜瓜道馆
 Leader: Lambert
@@ -9180,9 +9192,9 @@ They're the best fishing experience in Makya!
 尤其是海钓活动，\n绝对是冠绝马凯亚的水准！
 Local legend has it that these stone pillars are quite old.
 在当地的传说中，\n这些石柱历史悠久。
-Bence claims that they were here before plans to construct Prizca west, let alone specifically this gym.
+Bence claims that they were here before plans to construct Prizca West, let alone specifically this gym.
 根据本斯的说法，\n他们打算在这里修建西宏礼市之前，\n这些石柱就已经在这儿了。
-Makya does have it fair share of strange rock formations, I'll give you that.
+Makya does have its fair share of strange rock formations, I'll give you that.
 马凯亚的确有一些奇特的岩石，\n哪怕是充满了怀疑精神的我\n也无法否认这个事实。
 But Chasm members could talk about Pikachu being an Electric-type and I'd still pull out my MasterDex to double check.
 要知道我可是一个，\n连裂隙队掏出电属性的皮卡丘，\n都要对着图鉴看半天的人。
@@ -9320,7 +9332,7 @@ You've done a great service. We'll make sure everyone is brought to justice.
 你做了一件伟大的事，\n我确保每个人都会受到制裁。
 Here, as a reward. A wonderful Pokemon for a wonderful Trainer.
 作为奖励，这只出色的宝可梦，\n就送给你这位出色的训练家了。
-Farewell Trainer, The Rangers owe you one.
+Farewell Trainer, the Rangers owe you one.
 再见，训练家，\n代表全体义军向你致谢。
 Any luck?
 有什么进展吗？
@@ -9356,8 +9368,8 @@ Closed while Bence....participate in the Makya Championship Tournament.
 本斯...\n将在竞技大会期间闭馆。
 Heavy graffiti covers a part that you think may have said "and Zoé"
 看起来"和佐伊"被什么人\n用墨水给涂掉了。
-Poor Bence and Zoe, the two can't seem to agree on anything.
-可怜的本斯和佐伊，\n他们似乎什么都无法达成一致。
+Poor Bence and Zoé, the two can't seem to agree on anything.
+可怜的本斯和佐伊，\n他们似乎啥事都没法达成一致。
 If they took working together more seriously, the Gym might be much harder!
 让他们合作经营道馆之会更难！
 Zoé has a penchant for more supportive Pokemon.
@@ -9378,7 +9390,7 @@ Leaders: Bence, Zoé
 馆主：本斯，佐伊
 Two birds for every stone.
 一石二鸟。
-Bence or Zoe.... Zoe or Bence....
+Bence or Zoé.... Zoé or Bence....
 本斯还是佐伊...\n本斯还是佐伊...
 Oh, forgive me, I just don't know which of the two gym leaders here I should fight.
 啊，没什么，\n我只是在犹豫挑战哪位道馆馆主。
@@ -9410,7 +9422,7 @@ I'm on break. Nothing much to do until the rock shipment's done being unloaded.
 我正在休息，\n石头卸完之前我没什么事干。
 What's that? You wanna know where the rocks come from?
 啥？石头哪儿来的？
-There's a big quarry to the north north, near one of the mountains up there.
+There's a big quarry to the north, near one of the mountains up there.
 北边有一个大型采石场，\n就在那边的一座山附近。
 It's not part of Makya anymore, but there's a lot of historic ties, so business relations are good.
 当然那里不是马凯亚的一部分，\n但由于历史渊源，\n双方保持着良好的商业关系。
@@ -9808,6 +9820,14 @@ When you're ready, you should take a trip to Galar.
 如果你准备好了，\n可以去伽勒尔玩玩。
 I'm sure the Trainers there would appreciate having you.
 那里的训练家会很欣赏你的。
+I've been on an journey all around the world to hone my artistic talents.
+我一直在世界各地\n磨练自己的艺术水准。
+If you have a Vivillon, I could change its pattern to one from just about anywhere!
+你有彩粉蝶吗？\n我可以帮它改为任何地方的图案！
+Fantastic! A true work of art, if I do say so myself.
+太棒了，简直是艺术的盛放！
+That's alright. Sometimes natural is best, after all!
+没关系，毕竟在某些时候，\n自然才是最好的！
 There's a lot of places to travel in the world.
 世界上有很多旅游景点。
 It's nice to see that other regions are open to Makya, despite all the stuff with Team Chasm.
@@ -10371,7 +10391,7 @@ We used to get more guests a looooong time ago, but we don't get them much now. 
 很久之前这里的客人还比较多，\n但现在已经没有往日的辉煌了，\n对投资者来说这里并不是啥好地方...
 Oh well! Can't save 'em all... just uhh... enjoy it while it lasts? Haha...
 好吧，这样也挺好...\n只是，呃...现在好好享受吧，哈哈！
-Anyways! We have a healing center! I'm a qualified nurse, actually! Just don't have the typical uniform.
+Anyways! We have a healing center! I'm qualified a nurse, actually! Just don't have the typical uniform.
 起码，我们这里还有治疗中心！\n其实我也是个有执照的护士，\n只是没有制服罢了。
 We certainly like to battle here on this island! Just like uhhh... literally every other person... So that's cool!
 我们岛上的人也很喜欢对战，\n跟其它...地方的人一样，大概...\n毕竟这很酷！
@@ -12267,7 +12287,7 @@ Please enter in a quiet and orderly fashion.
 请安静有序地进入。
 The door is locked.
 门被锁住了。
-A peice of laminated paper is stuck onto it.
+A piece of laminated paper is stuck onto it.
 上面贴了一张纸。
 "Closed for deep cleaning", it says.
 "清洁中，暂时关闭"
@@ -12539,6 +12559,16 @@ Well, it's been great.
 很不错，很不错。
 I'm gonna start on my hike ASAP.
 我会尽快开始我的旅程。
+I love my fiancé dearly, but his love of adventure is hard to keep up with.
+我深爱着我的未婚夫，\n但他热衷于冒险，总让我忧心忡忡。
+Luckily for us, there's a wonderful place just south of here -- the Floral Maze -- which appeals to both of our tastes.
+好在南边就有一个好去处 - \n鲜花迷宫，那儿很和我们的胃口。
+He proposed to me there only last week.
+上周他刚在那边向我求婚。
+Just in time, too, since the very next day a sinkhole opened up inside the entrance.
+但就在第二天，\n那边的路上就出现了一个大坑。
+How strange is that?
+这到底是怎么回事？
 No
 不换
 Yes
@@ -12697,7 +12727,7 @@ I can't wait! We're probably going do a ton of swimming!
 说不定还能在海里游泳，\n我已经迫不及待了！
 It looks like Kubfu wants to join your team!
 看起来熊徒弟想加入你的队伍！
-It holds out its own Pokemon ball, seeing if you will accept it.
+It holds out its own Poké Ball, seeing if you will accept it.
 它拿出了自己的宝可梦球，\n不知道你是否接受。
 Accept the Kubfu onto your team?
 要接受熊徒弟的加入吗？
@@ -13439,7 +13469,7 @@ You see, I used to be obsessed with her. It’s why I’m here.
 所以，这就是我曾经迷恋她，\n但现在出现在这里的原因。
 I could be the one to track her down, lure her out like a timid beast. I just wanted to take care of her.
 我只是想照顾她，\n也愿意成为那个追踪她，\n像一只胆怯的野兽一样\n引诱她出来的人。
-And she was beautiful, of course. I’m not so high-minded as to discount her graceful splendor as part of my reasoning.
+And she was beautiful, of course. I’m not so high- minded as to discount her graceful splendor as part of my reasoning.
 当然，她也很美，\n我也不会高估自己的能力，\n不会将她优美的风度\n排除在我的行动之外。
 But then I arrived here... and I found you. My attention was caught immediately.
 但是当我来到这里…发现了你，\n我的注意力立刻被吸引了。
@@ -15595,6 +15625,10 @@ No, I'll go myself.
 [Map252]
 [Map253]
 [Map254]
+A tattered page of customer reviews hangs from the wall.
+墙上挂着一页破旧的客户评价。
+One attributed to someone named "Oriel" is particularly enthusiastic.
+其中有个叫“奥利尔”的人，\n其评价中难掩喜爱与热情。
 Oh. Hello. You’ve caught me at the absolute worst time, you know?
 哦，你好，真是不巧，\n你碰上我最忙的时候了。
 I’m technically breaking and entering at the moment.
@@ -16276,6 +16310,42 @@ It's hard to find a specialty ball. For good reason, mind you. There isn't much 
 这里很难找到某种特殊的球，\n毕竟大部分花里胡哨的球，\n用处并没有常规球大。
 With that being said, it's nice to craft the aesthetic you wish for. Even if it's a bit hard to do so.
 虽然这么说，\n但能有个独特的外观，\n也是蛮不错的...虽然很难。
+Oh, goodness...
+我的天呐...
+You've got a truly amazing apricorn in your posession.
+你这个果子也太特别了！
+It's been my life's dream to work with such a fine specimen.
+如果能用它来...\n那简直是我毕生的梦想！
+Where did you find it?
+你在哪儿找到它的？
+Nevermind that. I'll respect your privacy.
+没关系，我会尊重你的隐私。
+But still, I implore you, let me craft a Poke Ball from that beautiful fruit.
+不过我还是会恳求你，\n让我用这个漂亮的果子\n做一个宝可梦球吧。
+Mmmm... exercise some self-restraint, now.
+嗯...好吧，我自我克制一下。
+Well, if you feel differently later on, I'll be right here.
+如果你改主意了，\n可以随时来这里找我。
+I've been praying for you to change your mind about that Gilded Apricorn.
+我一直在祈祷，\n你能改变对镀金球果的想法。
+*sigh*
+*粗气*
+Wish I didn't get my hopes up.
+如果没抱这种希望就好了。
+I'm giddy with excitement!
+我激动地晕头转向了！
+To work I go...
+我这就开始...
+Crafting Poke Balls from Apricorns is an old art, but not an exact science.
+用树果来制作宝可梦球，\n是一种古老的艺术，\n但并不算一门精确的学科。
+But I can already tell that this ball has wonderous properties.
+但我还是能看得出，\n这个球一定有神器的功效。
+Please, go out and use it on something special.
+请把它用在某些特别的地方吧。
+That Radiant Ball is my crowning achievement.
+那个辐射球是我此生的最高成就。
+Haven't felt this good in 3 decades.
+已经30年没有过这么好的感觉了。
 [Map268]
 A TV program about organizing your home is playing.
 正在播放着关于家居整理的节目。
@@ -17108,7 +17178,7 @@ Give coffee.
 [Map293]
 Me and sister are much better battlers than our parents.
 我和姐姐比爸爸妈妈更擅长战斗。
-Our Pokemon couldn't beat yours?!
+Our Pokemon couldn't beat your's?!
 我们的宝可梦打不过你的？
 That was fun, we should battle again soon.
 太有意思了，\n我们过段时间能再战一次吗？
@@ -17517,7 +17587,7 @@ Sorry, am I in your way?
 对不起，我挡到你了吗？
 Wait, of course I am, I'm a trainer!
 等下，挡你就对了，\n我是个训练家呀！
-I've been reading about ancient Makyan hero-trainers.
+I've been reading about ancient Makyan hero- trainers.
 我一直在阅读关于\n古代的马凯亚英雄训练家的事情。
 You might be even stronger than them!
 你可能比他们还要强大！
@@ -17627,7 +17697,7 @@ A fossil of an aquatic plant.
 一种水生植物化石。
 A plaque lists a very long scientific name for it. Your eyes glaze over as you try and read it.
 一块牌子上列出了很长的学名，\n瞪大了眼睛也很难读懂它。
-A simple plaque simply states "Armaldo Fossil"
+A simple plaque simply states "Armaldo Fossil".
 简单的困扰，简单的变化，\n“太古盔甲”
 The rest of the description plate probably hasn't been manufactured yet.
 下面留有一大片空白，\n或许准备在这里填上详细说明。
@@ -19470,7 +19540,7 @@ Magikarp.
 鲤鱼王
 [Map326]
 ...\PN.
-...\PN.
+...\PN。
 I’m here. And you are as well, I see.
 我在这里...\n并且你也在这里。
 ...No.
@@ -20104,8 +20174,50 @@ They're always so cool when they're battlin'. I wanna be like them when I'm olde
 她们战斗时的样子太酷了，\n我以后也要成为这样的人。
 [Map332]
 [Map333]
-Dialogue here.
-暂无对话
+The venom I could spit about the Corviknight that abandoned me here...
+我无法抑制心中对那个\n将我扔在这里的钢铠鸦的怨恨...
+That damnable raven! I've gone dizzy turning here and there through the hedges.
+那只可恶的乌鸦，\n害我在这里面转来转去，\n头都要转晕了。
+What a battle! A testament to your skill as a slayer.
+好一场战斗！\n这证明了你作为杀手的高超技艺。
+The gap between our skills is quite large. I'm not sure I'll ever be able to bridge it.
+我们所掌握的技巧差距很大，\n我不确定什么能够弥补。
+Still, how droll! A little bit of happy chaos to liven up this awful day.
+不过，这还是挺有趣的！\n一点混乱中的快乐，\n让这糟糕的一天变得生动多了。
+At this rate, I'll arrive in Sweetrock Harbor by next May...
+照这个速度，\n等明年五月我就能回蜜岩港了...
+There truly is no justice in the world.
+世界上果真没有公平可言。
+Perhaps that one Corviknight just has a chip on it's shoulder.
+也许只是那个钢铠鸦有什么不满。
+I always give my judgement on their coloration, but none before have mustered any sort of answer.
+我经常通过它们的肤色来判断，\n它们到底哪个更靠谱一些，\n但是并没有一个准确的答案。
+I must have chosen the sole bad guy among them.
+或许我只是恰巧选到了\n那唯一一个坏家伙。
+And all because I listened to the advice of that man in Novo Town.
+就因为我轻信了那个望新镇的家伙。
+A beautifully carved statue of the legendary king Calyrex.
+一尊精美的蕾冠王雕像。
+Oh? There's something hanging from the statue!
+雕像上挂的是什么东西！
+Bud's the name and hedges are my game! Both plant and financial!
+我的名字是小蕾，\n树丛与篱笆就是我的游戏，\n既是植物也是财务！
+Now if you'll excuse me, I have some bushes to trim and some stocks to option.
+恕我失陪了，\n我还有些树枝需要修剪，\n还有些股票需要购买。
+Bud's the name, but battling sure ain't my game...
+我的名字是小蕾，\n但我的战力可不像一个花蕾...
+I'm the 28th Bud Hill, a long lineage of gardeners that have maintained the Floral Maze.
+我是第28任“峰之花蕾”，\n是守护鲜花迷宫的园丁！
+It may not look like much, but this is one of the longest maintained structures in all of Makya.
+虽然看起来不怎么起眼，\n但这里是整个马凯亚\n存留时间最久的人类造物。
+I've been wandering for hours. If I don't find the exit soon, my skin will dry out!
+我已经转了好几个小时了，\n如果不能尽快找到出口，\n我的皮肤会枯萎的！
+I feel very Croagunk-esque right now...
+我感觉自己要变成不良蛙了...
+I must have some moisturizer on me somewhere...
+身上还有一点保湿露...
+A map would have been nice to have...
+如果有地图就好了...
 [Map334]
 Oh?
 嗯？
@@ -20543,7 +20655,7 @@ Shut up. For good this time.
 [Map342]
 [Map343]
 \PN.
-\PN.
+\PN。
 Y’know, I pretty much assumed this was going to be a trap, but I didn’t think you’d be here.
 我一开始就觉得这是个陷阱，\n但没想到你会在这里。
 Well... whatcha doing? Care to explain?
@@ -21196,6 +21308,20 @@ I need time to prepare.
 Let's rock.
 开始吧
 [Map357]
+Oh! This bush has a hidden switch.
+哦！这里面有个隐藏开关。
+Press the hidden switch?
+要试着按一下吗？
+You leave the hidden switch alone.
+你没有理会这个开关。
+You sense that a small hole has opened up somewhere!
+你能察觉到，\n某个地方出现了一个小洞！
+The Battle Monument
+对战纪念碑
+"The heroes of the past tower over us still."
+“过去的英雄依然屹立。”
+A small logo at the bottom right identifies Bogdan Concrete as the company hired for this project.
+从右下方的小标志可以得知，\n建设这里的公司是博登浇筑。
 Hey...
 嘿...
 Could I interest you in a Shiny Charm?
@@ -21216,6 +21342,10 @@ Which... it looks like you don't have.
 这...看起来你点数不够。
 Well, the offer stands.
 不过这提议依然有效。
+No
+No
+Yes
+Yes
 [Map358]
 Hello to you, young one.
 你好，年轻人。
@@ -23007,9 +23137,9 @@ Leave Mesprit.
 [Map420]
 Whoa, Azelf! How did it get here?
 哇，亚克诺姆！它为什么在这里？
-The only thing you can glean from it is the self-assured smirk on it's face.
+The only thing you can glean from it is the self- assured smirk on it's face.
 你唯一能从它脸上看到的，\n就是那自信满满的笑容。
-It leans back in the air, kicking up its feet. It points towards your hand.
+It leans back in the air, kicking up it's feet. It points towards your hand.
 它在空中后仰翻腾，\n指向了你的双手。
 You were... holding a Pokeball? You look back up to see Azelf shrugging at you, still sporting the same grin.
 你...正拿着一个宝可梦球？\n你抬起头，看到亚克诺姆耸耸肩，\n脸上还挂着同样的笑容。
@@ -23079,6 +23209,8 @@ You've found LunaFlare, whose mods we've integrated into our game.
 你即将挑战\n已录入mod设计LunaFlare
 You've found ZombyGoast, a spriter and design contributor.
 你即将挑战\n脚本和设计贡献者ZombyGoast
+You've found Riptide, a playtester and general contributor.
+你即将挑战\n游戏测试员Riptide
 You've found Zufaix, a composer contributor.
 你即将挑战\n游戏音乐Zufaix
 You've found Minty, a spriting contributor.
@@ -23281,12 +23413,18 @@ Excuse me, I've got to update my mathematical models...
 抱歉，我得更新我的数学模型了...
 No matter. Even a loss is just more data to feed to the algorithm.
 没关系，即便是输了，\n也为算法提供了更多的数据。
-Dialogue here.
-暂无对话
+Crunching numbers like Sharpedo, oh yeah.
+没错，像巨牙鲨一样，\n精确地击中那些数字。
 I'm just here for business, kid.
 我只是来谈生意的，孩子。
 Doing a run for a few friends.
 替我朋友跑一圈而已。
+I'm wondering what made those strange grassy holes in the Amber Hills and the Floral Maze.
+我正在思考，琥珀山和鲜花迷宫里，\n那些满是草的巨坑，\n究竟是怎么形成的。
+There's another one out by the Fin as well.
+鱼鳍镇那边也有一个。
+I ain't one of those superstitious types, but they don't look natural to me.
+我不是一个迷信的人，\n但它们看起来根本不自然。
 This place's got some sick stuff.
 这地方的东西真不错。
 Sometimes, the hacker lady gives me rips of old games.
@@ -23475,9 +23613,51 @@ No
 Multiple copies of the same sign, all advertising an insurance package deal that will be available in the future.
 一块有着多个备份的牌子，\n上面在宣传未来即将推出的，\n一揽子保险方案。
 [Map430]
-Dialogue here.
-暂无对话
+A golden fruit glistens in a space atop the tree.
+一颗金色的果实\n在树顶的空隙中闪闪发光。
+A gleaming silver tree. The space at the top is empty of any fruit.
+一棵银光闪闪的树木，\n但上面空空如也，没有果实。
+Behind me stand two sides of a similar coin – An arrogant child and a cowardly elder.
+我身后站着的是一枚硬币的两面，\n其一是傲慢的孩子，\n其二是懦弱的长者。
+Both too fearful to recognize the harm they cause our King of Kings.
+他们都太过害怕了，\n以至于无法意识到\n自身给万王之王带来的伤害。
+But not I! With vigor and wit interwoven, <i>I see the world as it always was.</i>
+但我是例外！\n在活力与智慧的交织下，\n<i>我看到了世界本来的模样</i>。
+A wonderful battle – nothing short of greatness! But to what do I owe this sudden late.. ness?
+一场精彩绝伦的战斗！\n但是...我怎么在这里待到这么晚了...
+No matter! <i>You are but a grain of sand against His will.</i>
+无妨！\n<i>在祂的意志中你宛如微尘</i>！
+From above, from above! Our great King revealed Himself from above!
+自上而下，自上而下！\n我们伟大的王将于天上显灵！
+Mere prey, my critters and I both - but with a whispered edict and a gentle hand, <i>the meek will rise, by every means they can muster.</i>
+我与弱小的生灵皆为猎物，\n只需要简单的命令，温柔的援助，\n<i>温顺的存在便会想尽办法站出来</i>。
+Awwww… I thought <i>my</i> team was perfect! Oh well, time to go back home!!
+啊...我还以为<i>我的</i>队伍很完美呢！\n算了，回家了！
+Neither heedless trainer nor winged creature <i>shall ever pluck away at His great reign.</i>
+无论是不长眼的训练家，\n还是那些长着翅膀的生物，\n<i>都无法破坏他的伟大统治。</i>
+Fear, guilt, and shame - a trinity of self-imposed suffering.
+恐惧，内疚，还有羞愧 - \n三位一体的自我折磨。
+They stood as my lifelong companions, but no longer must they.
+它们曾是我终身的伴侣，\n但现在，不再是了。
+<i>Fear means nothing under His watchful gaze.</i>
+<i>在祂的注视之下，\n恐惧将毫无意义可言。</i>
+O-Oriel..?
+奥...奥利尔？
+How foolish of you, <i>rejecting greater purpose with such conviction.</i>
+你真是愚不可及，\n<i>竟坚决地拒绝更大的目标。</i>
 [Map431]
+You might want to slow down, Trainer. These ships are dangerous.
+训练家，你最好慢点，\n这些船很危险。
+Even though I'm on land, my old sea legs are wobbling.
+虽然我站在陆地上，\n但我的“老海腿”却摇摇晃晃。
+Something's off about these boats, and I don't want to be the one that finds the reason why.
+这些船有些不对劲，\n我可不想进去探寻什么真相。
+I hope all my numbing strategies will make you take it slow.
+我希望我这些麻木的策略，\n能让你稍微慢下一些来。
+Never been in a shipwreck, and I pride myself for it.
+我从未遇到过海难，\n我为此而感到自豪。
+You get the shivers when you feel like disaster is coming. Guess it comes with experience.
+当你察觉到灾难的降临时，\n你会感到不寒而栗，\n这，或许就是经验。
 [Map432]
 [Map433]
 Cabin Room 2
@@ -23488,6 +23668,14 @@ Cabin Room 4
 客房 4
 Cabin Room 1
 客房 1
+AHAHAHAHA! SO MUCH TRASH, SO MUCH TREASURE! THIS WHOLE SHIP IS MINE!
+哈哈哈哈！\n这么多垃圾，这么多宝藏！\n这整艘船都是我的了！
+THE WORLD FITS IN MY POCKET! AN OYSTER ON THE SHIP! AND IT IS MINE!
+整个世界都装进我的口袋！\n这船上的生蚝，都是我的！
+RIDE THE WAVE! FEEL THE LIGHTNING! I FEAST LIKE A KING TONIGHT!
+乘风破浪，感受雷电！\n今天我将像王一样大快朵颐！
+FEEL THE ROAR! SCAMPER LIKE THE COWARDS WE ARE!
+感受咆哮，像胆小鬼一样逃跑吧！
 [Map434]
 [Map435]
 Cabin Room 2
@@ -23498,6 +23686,14 @@ Cabin Room 4
 客房 4
 Cabin Room 1
 客房 1
+Well hello there. Fancy a meal?
+哦，你好，想吃点什么？
+I left my stove on at home!
+坏了，出门忘关煤气了！
+Hmmm, maybe I'll use onions next time.
+嗯，下次或许可以加点洋葱。
+Perhaps garlic would work instead...
+或许大蒜也可以代替...
 [Map436]
 [Map437]
 Bogdan Cement has been used in both construction and furniture!
@@ -23705,6 +23901,48 @@ Can you give me that?
 No.
 没啥要说的
 [Map444]
+The ephemeral voices of a thousand lost rulers echo in your head.
+你的脑海中回荡着\n无数亡国之君的声音。
+<i>You.</i>
+<i>你...</i>
+<i>Scoundrel.</i>
+<i>混账！</i>
+<i>Thief.</i>
+<i>奸贼！</i>
+<i>Traitor.</i>
+<i>叛徒！</i>
+<i>After all you’ve done, you <b>dare</b> meet my gaze?</i>
+<i>在那之后，\n你还<b>胆敢</b>与朕对视？</i>
+<i>Scum.</i>
+<i>败类！</i>
+<i>Leech.</i>
+<i>寄生虫！</i>
+<i><b>Insect.</b></i>
+<i><b>狡诈恶徒！</b></i>
+<i>You have <b>one</b> chance to relinquish your relics..</i>
+<i>最后<b>一次</b>机会，\n交出遗物...</i>
+<i>My rule.</i>
+<i>我的规则。</i>
+<i>My <b>peace</b>.</i>
+<i>我的<b>领地</b>。</i>
+You hand over the Flora Sceptre and the Reins of Unity.
+你交出了花之杖和团结缰绳。
+<i>Good. Now… <b>pray we never meet again.</b></I>
+<i>很好，现在…\n<b>我们永不再见。</b></I>
+<i>So be it.</I>
+<i>就这样吧。</I>
+Let this act as a lesson in humility, worm!
+把这当做一堂谦逊之课吧，虫豸！
+<i>And again!</I>
+<i>又来！</I>
+<i>You should have left when you could..</I>
+<i>你应该就此离开...</I>
+You recover the relics you returned.
+你找回了归还的遗物。
+[Map445]
+It hurriedly gestures for you to enter the chamber ahead.
+它连忙示意你进入面前的密室。
+[Map446]
 [1]
 1
 Bulbasaur
@@ -30771,7 +31009,7 @@ Alpha
 创造
 5071
 Alpha
-Alpha
+创造
 5072
 Alpha
 创造
@@ -39551,7 +39789,7 @@ The user bites the target using psychic capabilities. Also breaks anys Screens p
 利用精神力量咬住对手进行攻击。还可以 破坏光墙和反射壁等 。
 The user attacks with an odd, unseeable power. It has a 40% chance to make the target flinch.
 发出看不见的神奇力量进行攻击。40%的 几率使对手畏缩。
-Using a hyperspace hole, the user appears right next to the target and strikes. Skips and destroys protections and substitutes. Always hits.
+Using a hyperspace hole, the user appears next to the target and strikes. Skips and destroys protections and substitutes. Always hits.
 通过异次元洞，突然出现在对手的侧面进 行攻击。必定命中对手，且无视保护类招 式。
 The user focuses its willpower to its head and attacks the foe. It has a 40% chance to make the target flinch.
 将思念的力量集中在前额进行攻击。40% 的几率使对手畏缩。
@@ -39581,7 +39819,7 @@ The user quietly focuses its mind to raise its Sp. Atk and Sp. Def by two steps 
 静心凝神，从而大幅度提高自己的特攻和 特防。
 The user absorbs a mystical power from space to raise its Defense and Sp. Def by two steps each.
 汲取宇宙中神秘的力量，从而大幅度提高 自己的防御和特防。
-Gravity is intensified for five turns, forcing Pokemon down from the air and doubling all move accuracy.
+Gravity is intensified for five turns, forcing Pokémon down from the air and doubling all move accuracy.
 在５回合内，飘浮特性和飞行属性的宝可 梦会被地面属性的招式击中。飞向空中的 招式也将无法使用。
 The user employs psychic power to average its base Defense and base Sp. Def stats with those of its target.
 利用超能力将自己和对手的防御和特防相 加，再进行平分。
@@ -39649,7 +39887,7 @@ The user hurls hard rocks at the target. Two to five rocks are launched in quick
 向对手发射坚硬的岩石进行攻击。连续攻 击２～５次。
 The user polishes its body to reduce drag, raising its Speed by four steps.
 打磨自己的身体，减少空气阻力。提高自 己的速度四级。
-Summons sandstorm for eight turns. Damages non-Rock, non-Ground Pokemon every turn.
+Summons sandstorm for eight turns. Damages non-Rock, non-Ground Pokémon every turn.
 在８回合内扬起沙暴，除岩石和地面属性 以外的宝可梦，都会受到伤害。
 The user lays a trap of levitating stones around the foe. The trap hurts foes that switch into battle.
 将无数岩石悬浮在对手的周围，从而对替 换出场的对手的宝可梦给予伤害。
@@ -39957,7 +40195,7 @@ The user dances in tune with a dreamlike energy, raising their Sp. Atk by four s
 在梦幻般的氛围中翩翩起舞，提高自己的 特攻四级。
 The target is pestered by a giant tongue. This has a 50% chance to numb it.
 用一只巨大的舌头去骚扰对手，同时有50 %几率使其麻痹。
-Summons a storm of poisonous gas to hit all nearby pokemon with a 30% chance to poison.
+Summons a storm of poisonous gas to hit all nearby Pokémon with a 30% chance to poison.
 召唤出一股毒气风暴，攻击全体宝可梦， 30%几率使其中毒。
 An enchanting outcry. It has a 30% chance to dizzy those hit.
 发出一声妖娆的呻吟声，30%几率使对手 混乱。
@@ -40047,14 +40285,14 @@ The user attacks with the bursting power of nature. It has a 10% chance to raise
 爆发出大自然的澎湃之力。10%几率提升 自己的特攻。
 A nutrient-draining attack. The user's HP is restored by 75% of the damage dealt.
 吸取对手的营养，回复造成伤害的75%HP 。
-The user opens a spring to blast the target, also forming an Aqua Ring around themselves.
-挖掘了一个喷泉朝对手喷射，同时给自己 一个水流环。
+The user opens a spring to blast the target, also forming an Aqua Ring around themselves, healing 10% HP per turn.
+挖掘了一个喷泉朝对手喷射，同时给自己 一个水流环，每回合恢复10%HP。
 Deals 50% more damage if faster than the target. Lowers the user's Speed.
 如果自己速度快于对手，则威力提高50% 。但使用后会降低自己的速度。
 The user propels a geyser of water at the target. Lowers the user's Sp. Atk and Sp. Def by two steps each.
 向对手喷射一股间歇泉水，造成伤害并大 幅度降低自己的特攻和特防。
-For the rest of the round, the target's healing is reversed.
-在本回合剩余时间内，会逆转对手受到的 治疗效果。
+For the rest of the round, the target's healing is reversed. Always goes first.
+在本回合剩余时间内，会逆转对手受到的 治疗效果，总是先手出击。
 The user jabs the target with a sharp icicle. It has a 20% chance to lower Defense.
 用锋利的冰柱刺向对手。20%几率降低对 手的防御。
 The user slashes the target with ice like a sword. It has a 30% chance to lower Defense.
@@ -40481,8 +40719,8 @@ Combining dance and martial art, the user strikes the target and raises its Spee
 将舞蹈和武术结合起来，攻击对手并提高 自己的速度。
 Cloaked in flames, the user dances wildly, raising its Sp. Atk by two steps.
 在火焰笼罩下，跳出有节奏的舞步，提高 了自己的特攻。
-The user attacks the target using graceful fluid movements, also forming an Aqua Ring around themselves.
-用流畅优美的动作攻击对手，并给自己一 个水流环。
+The user attacks the target using graceful fluid movements, also forming an Aqua Ring around themselves, healing 10% HP per turn.
+用流畅优美的动作攻击对手，并给自己一 个水流环，每回合恢复10%HP。
 Summons Sunshine for five turns on the first turn, then overwhelms the foe with fiery light on the second.
 在第一回合召唤日光持续五个回合，然后 在第二回合用炽热光芒笼罩对手。
 The user strikes the target while magnetizing it, trapping and damaging it for three turns.
@@ -40525,10 +40763,10 @@ The user restores 1/2 of its HP, or 2/3rds in moonglow.
 回复自己最大ＨＰ的一半。或者在月辉天 气中回复三分之二。
 Disables the target's last used move for five turns, and cuts 5 PP from it.
 在五回合内禁止对方使用上一个招式，并 削减其５ＰＰ。
-The user rests in a riverbed, restoring its HP by half of max, and forming an Aqua Ring around itself.
-在河床附近休息，恢复一半的最大ＨＰ， 并给自身一个水流环。
-The user's song heals the status problems of all the party Pokémon, and forms an Aqua Ring around itself.
-使用歌声治愈所有同伴的异常状态，并给 自身一个水流环。
+The user rests in a riverbed, restoring its HP by half of max, and forming an Aqua Ring around themselves, healing 10% HP per turn.
+在河床附近休息，恢复一半的最大ＨＰ， 并给自身一个水流环，每回合恢复10% HP。
+The user's song heals the status problems of all the party Pokémon, and forms an Aqua Ring around itself, healing 10% HP per turn.
+使用歌声治愈所有同伴的异常状态，并给 自身一个水流环，每回合恢复10%HP。
 The user breathes deeply, raising its Speed by four steps and quadrupling its critical hit chance.
 通过深呼吸调节自身，提高自身速度四级 ，大幅度提升命中要害的几率。
 The user kisses the target with a sweet, angelic cuteness that dizzies the target.
@@ -40705,7 +40943,7 @@ The user hits a pitch that turns earth and stone to dust, damaging its foes.
 使用能够将泥土和石头化为粉尘的音调， 对对手造成伤害。
 Wind rapidly spins the target in place to hit them two to five times. Has a 10% chance to dizzy.
 使用快速旋转的风环绕对方，攻击造成２ 到５次伤害，10%概率使对方混乱。
-The user leeches the target's life. The user's HP is restored by 50% the damage taken by the target.
+The user leeches the target's life. The user's HP is restored by 50% the damage dealt.
 吸取对方的生命能量，并恢复此次伤害一 半的ＨＰ。
 The user gets all the party Pokémon to attack the foe with aerial projectiles.
 使队伍中的所有同伴接连攻击对手。
@@ -41395,7 +41633,7 @@ The target is hit two to five times in a row.
 连续打击对手2 ~ 5次。
 The user attacks the target with stored power. Has 10 more base power for each raised stat step.
 使用储存的力量攻击目标，每有一级能力 值提升，基础威力增加10点。
-The user causes the air around the target to explode. It's type is changed based on the active weather.
+The user causes the air around the target to explode. The move's type is changed based on the active weather.
 使目标周围的空气爆炸，根据当前天气类 型决定此招式的属性。
 The user flexes its rocky skin, raising its Attack and Defense by two steps each and gaining the Rock type.
 让自己皮肤变得坚硬如岩，大幅度提升攻 击和防御，并同时获得岩石属性。
@@ -41717,7 +41955,7 @@ Memory Set
 Prismatic Plate
 棱镜板
 Wild Card
-野生卡
+万能卡
 Proxy Fist
 替身之拳
 Covert Cloak
@@ -41850,6 +42088,8 @@ Vanilla Tulumba
 香草土兰玛
 Master Ball
 大师球
+Radiant Ball
+辐射球
 Ultra Ball
 高级球
 Great Ball
@@ -42196,6 +42436,16 @@ Space-time Shard
 时空碎片
 Old USB Drive
 旧U盘
+Gilded Apricorn
+镀金球果
+Ragged Journal
+破旧不堪的日志
+Dead Sky Sliver
+亡天银
+Timelost Alabaster
+石膏计时器
+Wretched Whitewing
+凄凉白翼
 Choice Crown
 选择皇冠
 Zenith Band
@@ -42299,7 +42549,7 @@ Lunch Box
 Bright Clay
 发光粘土
 Pearl of Fate
-命运之珠
+命运珍珠
 Unnamed
 未命名
 Cass Berry
@@ -43823,6 +44073,8 @@ Vanilla Tulumba
 香草土兰玛
 Master Balls
 大师球
+Radiant Balls
+辐射球
 Ultra Balls
 高级球
 Great Balls
@@ -44018,7 +44270,7 @@ Rusted Shields
 Rusted Swords
 腐朽的剑
 Reins of Unity
-团结之绳
+团结缰绳
 EXP Charms
 经验护符
 Catching Charms
@@ -44169,6 +44421,16 @@ Space-time Shards
 时空碎片
 Old USB Drive
 旧U盘
+Gilded Apricorns
+镀金球果
+Ragged Journal
+破旧不堪的日志
+Dead Sky Slivers
+亡天银
+Timelost Alabasters
+石膏计时器
+Wretched Whitewings
+凄凉白翼
 Choice Crowns
 选择皇冠
 Zenith Bands
@@ -44268,7 +44530,7 @@ Lunch Boxes
 Bright Clays
 发光粘土
 Pearls of Fate
-命运之珠
+命运珍珠
 Unnamed
 Unnamed
 Cass Berries
@@ -45554,7 +45816,7 @@ Held item which ups Sp. Atk by 40%, but allows the use of only one move.
 会提升特攻的威力，但只能使出 相同的招式。
 Held item which boosts Speed by 40% but allows the use of only one move.
 有点讲究的围巾。虽然携带后速 度会提高，但只能使出相同的招 式。
-Held item which boosts move damage by 25%, but lower's the user's Speed by 1 step on entry.
+Held item which boosts move damage by 25%, but lowers the user's Speed by 1 step on entry.
 携带后提升25%招式伤害，但会 降低速度。
 A Pokémon held item. When the holder summons sunshine, it lasts twice as long.
 携带它的宝可梦使出大晴天的话 ，晴天的时间就会比平时更长。
@@ -45606,7 +45868,7 @@ A single-use item to be held by a Pokémon. It allows the immediate use of a mov
 携带它的宝可梦仅有１次机会可 以在第１回合使出需要蓄力的招 式。
 A single-use item to be held by a Pokémon. It allows user to skip the recharging turn of an exhausting move.
 携带它的宝可梦仅有１次机会可 以跳过１次使用招式后的恢复回 合。
-A held item. When a foe raises their stats, the herb is consumed to reset their stats.
+A held item. When a foe raises their stats, the herb is consumed to copy the increase.
 携带后对手属性获得强化时，消 耗香草并复制它的强化。
 A held item. When a foe raises one of their stats, the herb is consumed to reset that stat.
 携带后对手属性获得强化时，消 耗香草并使其恢复属性。
@@ -45618,7 +45880,7 @@ A held item. It boosts the power of moves by 30%, but at the cost of 10% HP on e
 携带后，虽然每次攻击时ＨＰ少 量减少，但招式的威力会提高。
 A well-worn belt that boosts the holder's supereffective moves by 20%.
 用惯了的黑色带子。携带后，效 果绝佳时的招式威力就会少量提 高。
-A Pokémon held item that boosts a move used consecutively by 20% more each time. This resets if another move is used.
+A held item. Boosts a move used consecutively by 20% more each time. This resets if another move is used.
 携带后，连续使出相同招式时， 威力就会提高。不再使出相同招 式时，威力就会复原。
 An item to be held by a Pokémon. It is a headband that boosts the power of physical moves by 10%.
 力如泉涌的头带。携带后，物理 招式的威力就会少量提高。
@@ -45792,6 +46054,8 @@ Fried dough dipped in vanilla syrup. Heals a single Pokémon by 100 HP, and gran
 恢复１００ＨＰ并获得４０００ 点经验值。
 The best Ball with the ultimate level of performance. It will catch any wild Pokémon without fail.
 一定能捕捉到宝可梦的最高级球 。
+A ball with a mythical quality. It will catch any wild Pokémon without fail, and turn that Pokémon shiny.
+一种品质不一般的宝可梦球，可 以使捕捉到的宝可梦变为异色。
 An ultra-performance Ball with 2x the strength of a regular ball.
 有很高的几率可以捕捉到宝可梦 的精灵球。
 A good, high-performance Ball with 1.5x strength compared to a regular ball.
@@ -45888,9 +46152,9 @@ Weakens a supereffective Dark-type attack against the holding Pokémon.
 让宝可梦携带后，在受到效果绝 佳的恶属性招式攻击时，能令其 威力减弱。
 Weakens a supereffective Steel-type attack against the holding Pokémon.
 让宝可梦携带后，在受到效果绝 佳的钢属性招式攻击时，能令其 威力减弱。
-If held by a Pokémon, this Berry will lessen the damage taken from one supereffective Fairy-type attack.
+Weakens a supereffective Fairy-type attack against the holding Pokémon.
 让宝可梦携带后，在受到效果绝 佳的妖精属性招式攻击时，能令 其威力减弱。
-Weakens a Normal-type attack against the Pokémon holding this berry.
+Weakens a Normal-type attack against the holding Pokémon.
 让宝可梦携带后，在受到一般属 性招式攻击时，能令其威力减弱 。
 If held by a Pokémon, it raises its Attack by two steps in a pinch.
 让宝可梦携带后，危机时，自己 的攻击就会提高。
@@ -45912,9 +46176,9 @@ If held by a Pokémon, it raises its accuracy by four steps in a pinch.
 让宝可梦携带后，危机时，招式 的命中率仅会提高１次。
 If held by a Pokémon, it gets to move first just once in a pinch.
 让宝可梦携带后，危机时，行动 仅会变快１次。
-If held by a Pokémon and a physical attack hits it, the attacker takes 1/4th HP damage.
+If held by a Pokémon and a physical attack hits it, the attacker takes 25% HP damage.
 让宝可梦携带后，在受到物理招 式攻击时，能给予对手伤害。
-If held by a Pokémon and a special attack hits it, the attacker takes 1/4th HP damage.
+If held by a Pokémon and a special attack hits it, the attacker takes 25% HP damage.
 让宝可梦携带后，在受到特殊招 式攻击时，能给予对手伤害。
 If held by a Pokémon, this Berry will increase the holder's Defense by four steps if it's hit with a physical move.
 让宝可梦携带后，在受到物理招 式攻击时，自己的防御就会提高 。
@@ -45962,7 +46226,7 @@ A machine to fuse Necrozma, which needs light, and Lunala.
 用来让需求光的奈克洛兹玛和露 奈雅拉合体的机器。
 This ring contains an untold power that somehow enables Pokémon carrying Mega Stones to Mega Evolve.
 隐含着可以让携带超级石的宝可 梦在对战中超级进化的未知力量 的手环。
-An item to store Zygarde Cores and Cells. You can also use it to teach Zygarde moves.
+An item holding Zygarde's Cores and Cells. You can use it to change Zygarde's ability.
 用于收集宝可梦基格尔德的核心 和细胞的道具。还可以教基格尔 德招式。
 A candy that is packed with energy. When consumed, it will grant a single Pokémon 250 Exp. Points.
 充满能量的糖果，吃下后可以获 得250 Exp。
@@ -46136,6 +46400,16 @@ A sliver of the fragment of the universe. Highly unstable.
 宇宙碎片的一角，极不稳定。
 A USB containing data from a Team Chasm's early days.
 一个内含裂隙队早期的资料和数 据的U盘。
+A gleaming golden fruit. Someone skilled may be able to craft it into a unique Poké Ball.
+一颗金光闪闪的果实，技术高超 的人或许能将其制作成独一无二 的宝可梦球。
+A damaged traveler's journal. If you find its scattered pages, you can put them back in place.
+一本损坏了的旅行者日记，如果 找到散落的书页，获取可以将其 还原。
+A dark sliver of something that hurts to look at. It bears an inscription.
+一块暗银色的物质，看着就令人 心悸，上面刻有未知的铭文。
+Inscribed, delicate pale stone. It’s always been here, but it hasn’t always always been here.
+精致的淡色石头，它一直在这里 ，但并不总是在这里。
+A radiant wing. It radiates misery, but you feel peaceful holding it. Returning home, returning home...
+一只光芒四射的翅膀，散发着痛 苦，却令人感到安宁。回家，回 家...
 Held item which ups Attacking stats and Speed by 50%, but allows the use of only one move.
 携带后提高５０％攻击和速度， 但只能使用一种招式。
 Held item which doubles Attack, but allows the use of only one move.
@@ -47261,6 +47535,8 @@ Wonder Guard
 神奇守护
 Above It All
 凌驾万物
+Acid Rain
+酸雨
 Adaptive Skin
 适应性皮肤
 Adrenaline Rush
@@ -47551,6 +47827,8 @@ Firefighter
 消防员
 First Strike
 初次打击
+Fit to Survive
+适者生存
 Flame Wings
 烈火之翼
 Flash Freeze
@@ -47627,6 +47905,8 @@ Grip Strength
 握力增强
 Grit
 意志力
+Groovy
+引领风尚
 Grotesque Vitals
 怪诞生命
 Gyre Spinner
@@ -48109,6 +48389,8 @@ Sudden Turn
 急转弯
 Summit Spirit
 首脑精神
+Sun Burning
+紫外线灼烧
 Sun Chaser
 追日
 Sun Eater
@@ -48712,7 +48994,7 @@ Summons rainstorm for 4 turns when it enters battle.
 受到攻击时召唤四回合的暴雨。
 Turns the weather to sunshine for 4 turns when it enters battle.
 出场时，将天气变为晴朗，持续四回合 。
-Restores 1/8 HP in rainstorm, 1/4 when hit by Water-type moves. Loses 1/8 in sunshine, takes 25% more from Fire-type moves.
+Heals 1/8 HP in rainstorm, 1/4 when hit by Water-type moves. Loses 1/8 in sunshine, takes 25% more from Fire-type moves.
 暴雨天每回合恢复1/8HP，受水攻恢复25 %HP。晴天每回合损失1/8HP，受 火攻损失25%HP。
 Switches out if its HP becomes half or less.
 ＨＰ变为一半时，会慌慌张张逃走，退 回同行队伍中。
@@ -48890,7 +49172,7 @@ Removes random added effects of attacks to increase their damage by 30%.
 招式的追加效果消失，但因此能以更高 的威力使出招式。
 Blocks all random added effects of attacks taken.
 被鳞粉守护着，不会受到招式的追加效 果影响。
-It can't be statused while it has its shell. Below half HP its shell breaks and it becomes aggressive.
+Cannot be statused while it has its shell. Below half HP, its shell breaks and it turns aggressive.
 有壳时免疫负面状态，ＨＰ变为一半时 ，壳会坏掉，变得有攻击性。
 Stat changes in the Pokemon are doubled.
 能力变化会变为平时的２ 倍。
@@ -48980,6 +49262,8 @@ Only super-effective moves will hit.
 不可思议的力量，只有效果绝佳的招式 才能击中。
 After being attacked, uses Parting Shot to switch out.
 受到攻击后，会造成反击并回到队伍中 。
+At the end of each turn, if in rainstorm, each Pokémon not immune to Rainstorm has their defensive stats lowered by 1 step.
+在回合结束时，如果处于暴雨天，降低 每只对暴雨免疫的宝可梦的防御。
 The user raises the related defensive stat by two steps after each hit taken.
 根据所受攻击种类提升相应的防御。
 Raises Speed by four steps when its HP is lowered below half.
@@ -49022,7 +49306,7 @@ Uses Aromatherapy if an attack lowers its HP to half or below.
 当ＨＰ因为被攻击而降到一半或更低时 ，立即使用芳香治疗。
 Doubles Sp. Def, but the Pokémon can't use status moves.
 特防翻倍，但无法使用变化类招式。
-Uses Assist upon entry, copying a random team-mates move.
+Uses Assist upon entry, using a random move known by a party member.
 入场时使用借助，随机复制同伴的招式 。
 Attacks this Pokémon uses that don't share a type with it are boosted by 50%. It can't use attacks of its own types.
 无法使用与自己属性相同的招式，使用 不同属性的招式时，伤害提升50%。
@@ -49130,10 +49414,10 @@ Upon entry, creates a substitute from 1/4th of its HP.
 进入战斗后使用25%HP制造一个替身。
 When hit with a special move, hits back instantly with Breach.
 被特殊招式击中时，会立即使用潮汐一 击进行反击。
-When a foe hits the Pokémon, they are warned. If they hit the Pokémon again, they become Cursed.
-被对方击中后，将给对方施加警告，再 次被对方击中后，将诅咒对方。
-When this Pokémon becomes statused, its Attack is raised by four steps.
-进入异常状态后，极大幅度提升攻击力 。
+When a foe hits the Pokémon, they are warned. If they do it again, they become Cursed, taking 25% HP damage per turn.
+被对方击中后，将给对方施加警告，再 次被对方击中后，将诅咒对方，使其每 回合降低25%HP。
+When this Pokémon becomes statused, its Sp. Atk is raised by three steps.
+进入异常状态后，提升其特攻三级。
 Powers up Dark-type moves by 50% in sandstorm.
 沙暴天气时，恶属性的威力提高50%。
 Takes 30% less move damage if a Tailwind is blowing.
@@ -49278,12 +49562,14 @@ Doubles Attack, but the Pokemon becomes dizzy after attacking.
 攻击力翻倍，但攻击后自己将陷入混乱 。
 Upon entry, summons a Cruel Cocoon on the Pokémon's side for 6 turns.
 进入战斗后，召唤一个持续六回合的残 酷之茧。
+Upon entry, summons Natural Protection for 4 turns.
+进入战斗后，召唤一个持续四回合的自 然防护。
 Hits opponent with Gust when withdrawn from battle.
 离开战斗时，使用起风攻击对手。
 Grants immunity to Bug-type moves, and raises both attacking stats when hit by one.
 受到虫属性招式攻击时，免疫伤害并提 高双攻。
 Upon entry, summons a Misdirecting Fog on the Pokémon's side for 6 turns.
-进入战斗后，召唤持续刘辉和的迷惑之 雾。
+进入战斗后，召唤持续六回合的迷惑之 雾。
 Raises Speed by two steps after knocking out any Pokémon.
 击败任意宝可梦后，大幅度提升速度。
 Immune to Psychic-type moves, and raises both attacking stats if hit by one.
@@ -49496,8 +49782,8 @@ Negates enemy status moves that target the Pokémon or create hazards around it.
 可以使自身为目标或在其周围布置 阱陷的变化招式无效。
 Prevents foes whose Sp. Atk is less than its from fleeing.
 特攻低于自身的对手无法逃跑。
-If an attack lowers its HP to half or less, curses the attacker.
-如果被攻击将自身HP降至50%或以下， 就会诅咒攻击者。
+If an attack lowers its HP to half or less, they become Cursed, taking 25% HP damage per turn.
+如果被攻击将自身HP降至50%或 以下， 就会诅咒攻击者，使其每回合 降低25%HP。
 When attacking during moonglow, uses the target's attacking stats instead of its own.
 在月辉下攻击时，以对方的攻击能力进 行伤害判定。
 Dive and Depth Charge deal 50% more damage.
@@ -49508,8 +49794,8 @@ Raises each stat by two steps when a Total Eclipse happens.
 日全食时，全能力大幅度提升。
 The Pokemon can't be Taunted, Encored, Tormented, Heal Blocked, Disabled, Barred, Dizzied, or Flinched.
 免疫挑衅、折磨、禁疗、禁用、混乱和 畏缩。
-Disables the opponent's most recently-used move for three turns upon hitting it.
-击中对手后，使其最后使用的招式失效 三回合。
+Disables the opponent's most recently-used move for two turns upon hitting it.
+击中对手后，使其最后使用的招式失效 两回合。
 Boosts Speed by 50% in sandstorm or hail.
 在冰雹天气中，速度提升50%。
 Boosts Attack by 50% if it used a special move last turn, or boosts Sp. Atk if physical.
@@ -49688,7 +49974,7 @@ Summons a sandstorm for four turns when hit by an attack.
 受到攻击后召唤持续四回合的沙暴。
 When it attacks from underground in sandstorm, it'll transform into Reaper form.
 在沙暴天气下从地下攻击时，会化身 收割者形态。
-Boosts Speed by 50% in sand. Can't miss during sandstorm.
+Boosts Speed by 50% in sandstorm. Can't miss during sandstorm.
 在沙暴天气中提升50%速度，并且攻 击必定命中。
 During sandstorm, Speed is boosted by 50% and twice as likely to crit.
 沙暴天气时，速度提高50%，命中要害 几率翻倍。
@@ -49704,8 +49990,8 @@ Restores 1/4th health after any foe faints.
 对手被击败后恢复1/4HP。
 Upon entry during sandstorm, lowers foe's Attack and Sp. Atk by two steps each.
 在沙暴天气中入场时，大幅度降低对手 双攻。
-Moves used on the Pokémon are disabled for three turns.
-对此宝可梦使用的招式将失效三回合。
+Moves used on the Pokémon are disabled for two turns.
+对此宝可梦使用的招式将失效两回合。
 When targeted by a status move, the offending Pokémon becomes poisoned.
 对手对自身使用变化招式后会陷入 中毒状态。
 Special moves have a 30% chance to leech targets.
@@ -49782,7 +50068,7 @@ The user's critical hit chance raises or lowers with its Speed.
 自身暴击率随着其速度而提高或降低。
 Sets a Light Screen for 4 turns upon entering the battle.
 进入战斗后释放持续四回合的光墙。
-During eclipse, its move can't miss and always activates their random effects.
+During eclipse, its moves can't miss and always activate their random effects.
 日食天气时必定命中，且必定触发额外 效果。
 Takes 50% less damage from Water-type moves. Raises Speed by four steps when hit by one.
 降低受到的水属性招式伤害，当被同一 招式命中后，极大幅度提升速度。
@@ -49824,6 +50110,8 @@ Uses Rapid Spin after its first attack to clear hazards, raise Speed, and deal d
 第一次攻击后立即额外使用一次高速旋 转。
 Boosts Sp. Atk by 30% in hail.
 冰雹天气时，提高30%的特攻。
+At the end of each turn, if in sunshine, each Pokémon not immune to Sunshine has their defensive stats lowered by 1 step.
+在回合结束时，如果处于晴天，降低每 只对阳光免疫的宝可梦的防御。
 Boosts Attack by 30% in sunshine.
 晴朗天气下提高30%攻击。
 Summons eclipse for four turns when hit by an attack.
@@ -50578,6 +50866,8 @@ Jbsundown
 Jbsundown
 ZombyGoast
 ZombyGoast
+Riptide
+Riptide
 Bence
 本斯
 Zoé
@@ -50960,6 +51250,24 @@ Nora
 诺拉
 Volcanion
 火山
+Roger
+罗格
+Antoinette
+安托瓦内特
+Bud
+小蕾
+Calvin
+卡尔文
+April
+爱普尔
+Regis
+雷吉斯
+Dom
+唐
+Gordon
+戈登
+Devin
+戴文
 Vasily
 瓦西里
 Antoinette
@@ -54923,7 +55231,7 @@ Ship Graveyard
 船舶墓地
 432
 Mt. Kilna
-Mt. Kilna
+齐纳山
 433
 SS Circhester Steerage
 奇切斯特号
@@ -54957,6 +55265,15 @@ Bence's House
 443
 Team Chasm Archive
 裂隙队档案室
+444
+Crown Chamber
+皇冠之厅
+445
+Battle Monument Secret
+对战纪念碑密室
+446
+Goomy Den 2
+Goomy Den 2
 [22]
 How are your Pokémon doing?\mMy \TP's really energetic. It's a handful!\mOh yeah, I managed to beat a tough \TE.\mI need to make my party stronger.
 How are your Pokémon doing?\mMy \TP's really energetic.  It's a handful!\mOh yeah, I managed to beat a tough \TE.\mI need to make my party stronger.
@@ -55856,12 +56173,8 @@ One
 单体
 User
 自身
-Closer
-附近
 Error
 谬误
-Us
-己方
 Near Ally
 附近的同伴
 User or Near Ally
@@ -56073,27 +56386,29 @@ Achievement hidden.
 Unknown
 未知
 <outln2>Achievements: {1}</outln2>
-<outln2>成就: {1}</outln2>
+<outln2>Achievements: {1}</outln2>
 <<[>>{1}/{2}<<]>>
 <<[>>{1}/{2}<<]>>
 Earn {1} {2}
 Earn {1} {2}
 <outln2>Collection Rewards: {1}</outln2>
 <outln2>Collection Rewards: {1}</outln2>
-What Next?
-下一步？
-Battle Guide
-战斗指南
+MasterDex
+大师图鉴
 MoveDex
 招式图鉴
+Battle Guide
+战斗指南
+Cancel
+取消
+What Next?
+下一步？
 {1}'s Card
 {1}的卡片
 Level Cap
 等级上限
 Achievements
 成就
-Cancel
-取消
 The current level cap is {1}.
 目前的等级上限为 {1}.
 Once at level {1}, your Pokémon cannot gain experience or have Candies used on them.
@@ -56276,14 +56591,12 @@ Item
 ♀
 Species
 种类
-Type
-属性
 OT
 训练家
 ID No.
 ID
 Marks
-标记
+Marks
 RENTAL
 RENTAL
 a faraway place
@@ -56453,7 +56766,7 @@ Speak to them to learn how they can upgrade your team!
 x{1:03d}
 x{1:03d}
 By the power of the Primal Clay, a #{speciesDisplayName} was created!
-By the power of the Primal Clay, a #{speciesDisplayName} was created!
+在原始粘土的协助下， 一个新的#{speciesDisplayName}诞生了！
 #{waypointAccessMessageAlternative}
 #{waypointAccessMessageAlternative}
 #{waypointAccessMessage}
@@ -56473,7 +56786,7 @@ Removing access.
 The totem pulses with the frequency of #{speciesName}.
 图腾的脉冲频率为 #{speciesName}.
 Use the Primal Clay to summon #{speciesName}?
-Use the Primal Clay to summon #{speciesName}?
+要使用原始粘土 来召唤一个#{speciesName}吗？
 The totem returns to its original state.
 图腾恢复原状
 You sense an powerful presence trying to manifest on this spot.
@@ -56542,8 +56855,6 @@ How do enemy Trainers work?
 NPC训练家
 What are avatars and what do they do?
 什么是化身
-MasterDex
-大师图鉴
 What does the MasterDex do and how should I use it?
 图鉴有什么用
 Weathers
@@ -56834,18 +57145,6 @@ When leeched, a Pokémon loses 1/10th HP every turn, and its opponent(s) split t
 被寄生的宝可梦每 回合损失1/10HP， 将其平分给对方， 虫系和恶系最擅长 寄生对手，草系免 疫寄生
 A rarer status that causes a Pokémon to be unable to do anything for 2 turns. Psychic- and Grass-types put Pokémon to sleep the most often.
 睡着的宝可梦在2回 合内无法行动，超 能系和草系宝可梦 擅长让对手睡着
-What are Tribes?
-部族
-Every Pokémon has 1-3 Tribes, decided by their species. Have 5 Pokémon of a shared Tribe on your team, and your entire team will receive that Tribe's bonus in battle!
-每种宝可梦都有最 多三个部族，如果 队伍中有五只来自 同一部族的宝可梦 ，将会得到全队奖 励
-Tribal Bonus
-部族奖励
-Tribal Bonuses are not identical: each Tribe provides a unique boon. With careful team composition, you can have 2 or even 3 Tribal Bonuses active at once!
-每个部族提供的奖 励各不相同，通过 精心搭配你的队伍 ，可以同时激活多 个部族的效果！
-Are they important?
-部族重要性
-Tribes are not required in any way to complete the game. They are simply an alternative team-building challenge to play with, like Single Type runs.
-如果只是为了通关 游戏，其实没必要 刻意追求部族，这 更像是一种带有奖 励性质的趣味性队 伍组建挑战
 What are Critical Hits?
 什么是命中要害
 A critical hit deals 50% more damage than a regular hit. These naturally happen at random times on any damaging move.
@@ -57061,9 +57360,9 @@ Press to reset to the main menu.
 Take a screenshot. It is put in the Screenshots folder, near your Save Game folder.
 游戏截图会放在 Screenshots 文件夹内
 Version Server Error
-Version Server Error
+版本检测错误
 OUT OF DATE
-OUT OF DATE
+版本已落后
 \se[]What? {1} is evolving!\^
 \se[]嗯？ {1} 的样子!\^
 Huh? {1} stopped evolving!
@@ -57138,36 +57437,22 @@ x{1: 2d}
 x{1: 2d}
 Teach which move?
 教哪个？
-Teach {1}?
-要教{1}?
-Mentor Moves
-指导招式
-What is Move Mentoring?
-什么是招式指导？
-I'm the Mentor Coordinator. How can I help?
-我是招式指导师， 有什么需要帮助的吗？
-I help your Pokemon to teach each other moves!
-我可以帮你的宝可梦 相互之间教学招式！
+I help your Pokemon to teach each other moves through mentorships!
+我可以让你的宝可梦 彼此相互教学招式！
 Pokemon can teach any move they know to any other Pokemon you have who can learn that move.
 宝可梦可以将自己会的招式 传授给其他可以学习的宝可梦。
 Any Pokemon in your party or in your PC can be a mentor!
 无论是队伍中 还是电脑里的宝可梦 都可以成为老师！
-Pokemon can be taught any moves on their Other Moves list.
-宝可梦可以动过这种方式 学会教学招式列表中的那些。
+Would you like one of your party members to learn a move through mentoring?
+你想让自己的一只宝可梦， 通过这种方法学会新招式吗？
 Choose the party member to mentor.
 选择需要指导的宝可梦
 If your Pokémon need to mentor each other, come to me.
 如果你需要让宝可梦互相指导 那就来找我吧
 Sorry, it doesn't appear that 1 can have any moves mentored to it at the moment..
 抱歉它现在看起来不能接受指导
-Relearn Moves
-回忆招式
-What is Move Relearning?
-什么是回忆招式？
-I'm the Move Relearner. How can I help?
-我是宝可梦招式狂， 有什么需要帮助的吗？
-I can teach moves to your Pokémon -- at no cost!
-我可以免费教它们学会很多招式
+I'm the Pokémon Move Maniac.
+我是招式回忆大师。
 I know every single move that Pokémon learn while leveling up or evolving.
 我知道宝可梦在升级 或进化时学习的所有招式
 I can also help Pokemon to relearn moves they learned through TMs, Mentoring, or Sketching!
@@ -57257,7 +57542,7 @@ Keyboard
 Bag Sorting
 背包分类
 Name on Showcase
-Name on Showcase
+展示名称
 Advanced Tutorials
 进阶教程
 Battle Options
@@ -57349,31 +57634,31 @@ Do nothing.
 There are no items.
 没有道具
 There's no Mail here.
-There's no Mail here.
+没有邮件。
 What do you want to do with {1}'s Mail?
-What do you want to do with {1}'s Mail?
+要对{1}的邮件做什么？
 Read
-Read
+阅读
 Move to Bag
-Move to Bag
+放入背包
 The message will be lost. Is that OK?
-The message will be lost. Is that OK?
+信息将会丢失，确定吗？
 The Mail was returned to the Bag with its message erased.
-The Mail was returned to the Bag with its message erased.
+邮件被放进背包， 同时信息已被删除。
 The Bag is full.
-背包满了
+背包满了。
 \se[PC open]{1} booted up the PC.
 \se[PC open]{1} 启动了电脑
 What do you want to do?
 你打算？
 Item Storage
-Item Storage
+道具储存
 Mailbox
-Mailbox
+邮箱
 Turn Off
-Turn Off
+关闭
 Pokémon Storage PC
-Pokémon Storage PC
+宝可梦储存电脑
 \se[PC access]The Pokémon Storage System was opened.
 \se[PC access]宝可梦存储系统已启动
 See ya!
@@ -57387,15 +57672,15 @@ Store Pokémon in your party in Boxes.
 Return to the previous menu.
 返回上一级菜单
 Item Storage PC
-Item Storage PC
+道具储存电脑
 \se[PC access]Accessed {1}'s PC.
-\se[PC access]Accessed {1}'s PC.
+\se[PC access]正在连接{1}的电脑。
 #{pokemon.name} Lv. #{pokemon.level.to_s}
 #{pokemon.name} Lv. #{pokemon.level.to_s}
 No Ability
 无特性
 CONFIRM
-CONFIRM
+确认
 Give to which Pokémon?
 给哪个宝可梦
 {1} (PP: ---)
@@ -57407,35 +57692,35 @@ ABLE
 NOT ABLE
 不可选
 INELIGIBLE
-INELIGIBLE
+无资格
 NOT ENTERED
-NOT ENTERED
+未登录
 BANNED
-BANNED
+被禁止
 FIRST
-FIRST
+第一
 SECOND
-SECOND
+第二
 THIRD
-THIRD
+第三
 FOURTH
-FOURTH
+第四
 FIFTH
-FIFTH
+第五
 SIXTH
-SIXTH
+第六
 SEVENTH
-SEVENTH
+第七
 EIGHTH
-EIGHTH
+第八
 NINTH
-NINTH
+第九
 TENTH
-TENTH
+第十
 ELEVENTH
-ELEVENTH
+第十一
 TWELFTH
-TWELFTH
+第十二
 Choose Pokémon and confirm.
 选择宝可梦并确认
 Entry
@@ -57539,13 +57824,13 @@ Here you are! Thank you!
 Purchase complete.
 购买完成
 I'll throw in a Premier Ball, too.
-这是一个纪念球 请收好
+这个纪念球是赠品，请收好。
 You got a free Premier Ball with your purchase!
-购买时还可以免费获得 一个纪念球
+你在购买时 获得了一个免费的纪念球！
 I'll throw in some Premier Balls, too.
-I'll throw in some Premier Balls, too.
+这纪念球是赠品，请收好。
 You got some free Premier Balls with your purchase!
-You got some free Premier Balls with your purchase!
+你在购买时 获得了一些免费的纪念球！
 {1}? Oh, no. I can't buy that.
 {1}? 我不能买那个。
 {1}? How many would you like to sell?
@@ -57563,9 +57848,9 @@ Dex ID
 Level
 等级
 "#{ret}" is not a valid type.
-"#{ret}" is not a valid type.
+"#{ret}" 不是有效属性。
 "#{ret}" is not a valid tribe.
-"#{ret}" is not a valid tribe.
+"#{ret}" 不是有效部族。
 The current box contains the only match.
 当前只包含唯一匹配项
 The current box contains every match.
@@ -57589,13 +57874,13 @@ Continue Box operations?
 Exit from the Box?
 要从箱子离开吗
 You cannot select a donated Pokémon!
-You cannot select a donated Pokémon!
+你不能选择这个宝可梦！
 That Pokémon is not a valid choice!
-That Pokémon is not a valid choice!
+这个宝可梦无法被选择！
 Which one will you take?
 要选择哪一种？
 Can't withdraw from a donation box.
-Can't withdraw from a donation box.
+无法从箱子中取出。
 Can't withdraw from party...
 失败了...
 Your party's full!
@@ -57609,25 +57894,25 @@ Deposit in which Box?
 The Box is full.
 箱子满了
 Position {1},{2} is not empty...
-Position {1},{2} is not empty...
+箱子 {1},{2} 没有空位...
 Permanently store this Pokémon in exchange for Candies?
-Permanently store this Pokémon in exchange for Candies?
+永久储存这只宝可梦， 并换取一些经验糖果吗？
 This Pokémon will not be retrievable after this. Are you sure?
-This Pokémon will not be retrievable after this. Are you sure?
+这只宝可梦将无法再被取出， 你确定要这样吗？
 {1} was stored forever.
 {1} 被释放了
 Bye-bye, {1}!
 再见, {1}!
 Position {1},{2} is empty...
-Position {1},{2} is empty...
+箱子 {1},{2} 是空的...
 You can't release an Egg.
-You can't release an Egg.
-Are you sure you want to release this Pokémon?
+你不能放生一个蛋。
+Are you sure you want to release this pokemon?
 Are you sure you want to release this pokemon?
 They will be gone forever. Are you sure?
-They will be gone forever. Are you sure?
+它们将永远消失，你确定吗？
 {1} was released.
-{1} was released.
+{1} 被放生了。
 It didn't earn enough XP for you to earn any candies back.
 它获得的经验不足以生成糖果
 You are reimbursed for #{percentile} percent of the EXP it earned.
@@ -57693,21 +57978,21 @@ Select
 Release
 放生
 The map data cannot be found.
-The map data cannot be found.
+没有地图数据。
 No proper map position is known for totem ID {1}. Please inform a programmer about this.
-No proper map position is known for totem ID {1}. Please inform a programmer about this.
+图腾ID{1}没有正确的位置， 请向作者或汉化者反馈。
 Set the name for this point.
-Set the name for this point.
+设置此点位的名称。
 ACTION/Z to hide Totems
 按Z隐藏图腾
 ACTION/Z to view Totems
 按Z显示图腾
 Save changes?
-Save changes?
+要保存更改吗？
 Exit from the map?
 要退出地图？
 Invalid quoted field (in: {1})
-Invalid quoted field (in: {1})
+无效引用字段 (in: {1})
 Field {1} is not a positive integer
 Field {1} is not a positive integer
 Money:<<n>><ar>{1}</ar>
@@ -57717,7 +58002,7 @@ Coins:<<n>><ar>{1}</ar>
 Battle Points:<<n>><ar>{1}</ar>
 对战点:<<n>><ar>{1}</ar>
 Not sure
-Not sure
+不确定
 ???
 ???
 Tamarind
@@ -57805,19 +58090,19 @@ Kurt
 Pearce
 皮尔斯
 Enter text using the keyboard. Press<<n>>Enter to confirm, or Esc to cancel.
-Enter text using the keyboard. Press<<n>>Enter to confirm, or Esc to cancel.
+使用键盘输入文本，<<n>>按回车键确认，ESC取消。
 Enter text using the keyboard.<<n>>Press Enter to confirm.
-Enter text using the keyboard.<<n>>Press Enter to confirm.
+使用键盘输入文本，<<n>>按回车键确认。
 UPPER
-UPPER
+更高
 lower
-lower
+更低
 accents
-accents
+重音
 other
-other
+其他
 Sprite set already has a particle engine, cannot add another!
-Sprite set already has a particle engine, cannot add another!
+无法再次添加！
 Badges:
 徽章:
 Pokédex:
@@ -57825,33 +58110,33 @@ Pokédex:
 Time:
 时间:
 The save file is corrupt. A backup will be loaded.
-The save file is corrupt. A backup will be loaded.
+存档文件已损坏，请加载备份。
 The save file is corrupt, or is incompatible with this game.
-The save file is corrupt, or is incompatible with this game.
+存档文件已损坏， 或与现有游戏版本不兼容。
 Do you want to delete the save file and start anew?
-Do you want to delete the save file and start anew?
+要删除存档并重新开始吗？
 No save file was found.
-No save file was found.
+未找到存档文件。
 Delete All File Save
-Delete All File Save
+删除所有存档文件
 Delete Only One File Save
-Delete Only One File Save
+删除一个存档文件
 Delete all saves?
-Delete all saves?
+要删除所有存档吗？
 Once data has been deleted, there is no way to recover it.<<1>>
-Once data has been deleted, there is no way to recover it.<<1>>
+数据一旦删除，就无法恢复。<<1>>
 Delete the saved data anyway?
-Delete the saved data anyway?
+要删除保存的文档吗？
 Deleting all data. Don't turn off the power.\wtnp[0]
-Deleting all data. Don't turn off the power.\wtnp[0]
+正在删除中，请勿关闭程序。\wtnp[0]
 You have at least one file that cant delete and have error
-You have at least one file that cant delete and have error
+有至少一个存档文件无法删除
 The save file was deleted.
-The save file was deleted.
+存档已删除
 The saved data was deleted.
-The saved data was deleted.
+存档已删除
 All saved data could not be deleted.
-All saved data could not be deleted.
+所有存档已删除
 Continue
 继续
 Load Game
@@ -57891,17 +58176,17 @@ Badges<r><c3={1}>{2}</c3><br>
 Pokédex<r><c3={1}>{2}/{3}</c3>
 图鉴<r><c3={1}>{2}/{3}</c3>
 The script is taking too long. The game will restart.
-The script is taking too long. The game will restart.
+脚本耗时过长，即将重启。
 \se[]The game was saved.\me[GUI save game]
 \se[]游戏已保存.\me[GUI save game]
 The previous save file has been backed up.\wtnp[30]
-The previous save file has been backed up.\wtnp[30]
+之前的存档已备份\wtnp[30]
 Saving is not allowed at the moment.
-Saving is not allowed at the moment.
+目前不可保存。
 #{saveIDThisSlot}: #{trainer.name} / #{mapname}
 #{saveIDThisSlot}: #{trainer.name} / #{mapname}
 You dont have any save file. Restart game now.
-You dont have any save file. Restart game now.
+您没有存档可用， 即将重启游戏。
 Delete all saved data?
 删除所有存档？
 #{title}
@@ -57909,15 +58194,15 @@ Delete all saved data?
 Version:
 版本:
 Cant load this save file
-Cant load this save file
+无法加载此存档
 Do you want to delete this save file?
-Do you want to delete this save file?
+要删除这个存档吗？
 A recoverable error has occured. Please report the following to a programmer.
-A recoverable error has occured. Please report the following to a programmer.
+发生了一个可恢复的错误， 请向作者或汉化者反馈情况。
 ERROR: Cannot find location to teleport you back to.
-ERROR: Cannot find location to teleport you back to.
+错误: 无法找到你要传送的位置。
 Bringing you to the fallback return position.
-Bringing you to the fallback return position.
+已把你带回了后备位置。
 Which plot would you like to visit?
 要参观哪个区域？
 Pick the landscape you'd like for this plot.
@@ -57975,43 +58260,43 @@ You pick #{pokemon.name} up and add it to your party.
 And place #{chosenPokemon.name} down into the Estate.
 然后将 #{chosenPokemon.name} 放入庄园之中
 Can't set down your last able Pokemon!
-Can't set down your last able Pokemon!
+无法放下你最后一个宝可梦！
 Can't set #{pokemon.name} down into the current Estate plot because it is full.
-Can't set #{pokemon.name} down into the current Estate plot because it is full.
+无法将#{pokemon.name}放入其中， 因为已经满了。
 Can't set #{pokemon.name} down, the spot in front of you is blocked.
-Can't set #{pokemon.name} down, the spot in front of you is blocked.
+无法将#{pokemon.name}放入其中， 因为位置被占用了。
 There are no Pokemon in this plot to share stories about.
 目前没有宝可梦的故事可以分享
 I regret to say that I have no stories to share about this plot. Please come back later.
 很遗憾，我没有可以分享的故事
 Story here involving {1}!
-Story here involving {1}!
+这是个关于{1}的故事！
 Story here involving {1} and {2}!
-Story here involving {1} and {2}!
+这是个关于{1}和{2}的故事！
 PokÉstate #{$PokEstate.estate_box + 1}
 庄园 #{$PokEstate.estate_box +  1}
 all species in {1}
 所有物种 {1}
 {1} {2}-type species
-{1} {2}-type species
+{1} {2}属性
 {1} species in the {2} tribe
-{1} species in the {2} tribe
+{1} 属于 {2} 部族
 {1} species from Generation {2}
-{1} species from Generation {2}
+{1} 来源于 {2}
 Choose tile(s) to swap
-Choose tile(s) to swap
+选择要交换的瓷砖
 Choose tile(s) to cut
-Choose tile(s) to cut
+选择要删除的瓷砖
 Choose row(s) to move
-Choose row(s) to move
+选择要移动的瓷砖
 Insert new row
-Insert new row
+插入新的一行
 Erase tile(s)
-Erase tile(s)
+删除瓷砖
 Delete row
-Delete row
+删除行
 Tileset Rearranger
-Tileset Rearranger
+瓷砖组重整器
 Mode: Swap tiles
 Mode: Swap tiles
 Mode: Cut/insert tiles
@@ -58081,7 +58366,7 @@ Q: Undo ({1})
 W: Redo ({1})
 W: Redo ({1})
 Exit from the editor?
-Exit from the editor?
+退出编辑吗？
 This tileset is too tall ({1} rows) and cannot be saved. Please shrink it to at most {2} rows tall.
 This tileset is too tall ({1} rows) and cannot be saved. Please shrink it to at most {2} rows tall.
 Changes saved. To ensure that they are applied properly, close and reopen RPG Maker XP.
@@ -58183,13 +58468,13 @@ AREA
 FORMS
 形态
 ANALYSIS
-ANALYSIS
+分析
 Male
-Male
+雄性
 Female
-Female
+雌性
 One Form
-One Form
+形态1
 {1}{2} {3}
 {1}{2} {3}
 {1} Pokémon
@@ -58254,12 +58539,12 @@ No Effect:
 无效:
 E
 E
-Pre-Evolutions of {1}
-{1} 的退化型
-Evolves from
-进化自
-Evolutions of {1}
-{1} 的进化型
+<u>Pre-Evolutions of {1}</u>
+<u>{1} 的退化型</u>
+Evolves from {1} {2}
+进化自{1} {2}
+<u>Evolutions of {1}</u>
+<u>{1} 的进化型</u>
 Evolves into Vaporeon with a Water Stone,
 进化为 水伊布 需要 水之石, 
 Jolteon with a Thunder Stone, Flareon with a Fire Stone, Espeon with a Dawn Stone,
@@ -58293,33 +58578,35 @@ Dark Clouds
 Deep Water
 深水
 Surfing
-Surfing
-Encounterable Areas for {1}
-可获得{1}的区域
-Encounter Areas for Pre-Evolutions
-可获得退化型的区域
+冲浪
+{1}: {2} ({3}\%)
+{1}: {2} ({3}\%)
+<u>Encounterable Areas for {1}</u>
+<u>可获得{1}的区域</u>
+<u>Encounter Areas for Pre-Evolutions</u>
+<u>可获得退化型的区域</u>
 SPECIAL/D to
-SPECIAL/D to
+空格/D
 hide shinies
-hide shinies
+隐藏异色
 show shinies
-show shinies
+展示异色
 Moves now sorted by name.
-Moves now sorted by name.
+按名称排序招式。
 Moves now sorted by base power.
-Moves now sorted by base power.
+按威力排序招式。
 Moves now sorted by type.
-Moves now sorted by type.
+按属性排序招式。
 Analysis of {1}
-Analysis of {1}
+分析{1}
 Use count: #{useCount[0]}, #{useCount[1]}
-Use count: #{useCount[0]}, #{useCount[1]}
+使用次数： #{useCount[0]}, #{useCount[1]}
 Earliest level: #{fSpecies.earliest_available}
-Earliest level: #{fSpecies.earliest_available}
+最初为Lv. #{fSpecies.earliest_available}
 Faster than #{fasterThanPercentOfMetaGame}% of final evos
 Faster than #{fasterThanPercentOfMetaGame}% of final evos
 #{chanceToCatch}% chance to catch at level 40, %15 health
-#{chanceToCatch}% chance to catch at level 40, %15 health
+在Lv.40，且15%HP时， 有#{chanceToCatch}几率捕获
 BnB coverage #{typesOfCoverage.length}: #{typesOfCoverage[0..[2, typesOfCoverage.length].min]}
 BnB coverage #{typesOfCoverage.length}: #{typesOfCoverage[0..[2, typesOfCoverage.length].min]}
 Covers #{coversPercentOfMetaGame}% of final evos
@@ -58337,11 +58624,11 @@ Seen:
 Owned:
 拥有:
 Search Mode
-Search Mode
+搜索模式
 Order
 Order
 Color
-Color
+颜色
 Shape
 Shape
 Reset
@@ -58365,15 +58652,15 @@ Filters
 Sorts
 种类
 Attempted to do a combined search, but no matching Pokémon were found.
-Attempted to do a combined search, but no matching Pokémon were found.
+尝试进行组合搜索， 但未找到匹配的宝可梦。
 An unknown error has occured.
-An unknown error has occured.
+发生了一个未知错误。
 Press Z or SHIFT to search.
-Press Z or SHIFT to search.
+按Z或SHIFT进行搜索。
 Cancel Search
-Cancel Search
+取消搜索
 Cancel Search and Exit
-Cancel Search and Exit
+取消搜索并退出
 Store Search and Exit
 Store Search and Exit
 You have an active search. What would you like to do?
@@ -58714,15 +59001,15 @@ Defeat Noel, leader of Prizca East gym. Prizca East is east of the Battle Plaza,
 打败东宏礼道馆馆主诺埃尔，只要 从西宏礼市往东走，穿过战斗区就 能到达
 Find the Catacombs
 寻找地下墓穴
-Professor Tamarind called you, requesting your urgent help dealing with a problem in the Prizca Catacombs. The Catacombs can be found in the Sewers underneath Prizca East.
+Professor Tamarind called you, requesting your urgent help dealing with a problem in the Prizca Catacombs. The Catacombs can be found in the eastern part of the Prizca Sewers.
 塔玛琳博士打电话给你，请求你帮 忙处理宏礼市地下墓穴的一个紧急 问题，地下墓穴位于东宏礼市的下 水道中
 Investigate the Catacombs
 调查地下墓穴
-Go with Professor Tamarind to confront the thieves inside of the Catacombs. The Catacombs can be found in the Sewers underneath Prizca East.
+Go with Professor Tamarind to confront the thieves inside of the Catacombs. The Catacombs can be found in the eastern part of the Prizca Sewers.
 与塔玛琳博士一起去迎战地下墓穴 中的盗贼，地下墓穴位于东宏礼市 的下水道中
 Defeat Yezera in the Catacombs
 在地下墓穴击败叶泽拉
-Confront Yezera, who appears to be leading a small group to steal Regidrago. The Catacombs can be found in the Sewers underneath Prizca East.
+Confront Yezera, who appears to be leading a small group to steal Regidrago. The Catacombs can be found in the eastern part of the Prizca Sewers.
 击败叶泽拉，她似乎正率领一队人 ，打算偷走雷吉铎拉戈
 Defeat the Catacombs Straggler
 在地下墓穴击败徘徊者
@@ -58797,7 +59084,7 @@ Game Won!
 You've beaten the game! Explore around to find more of Makya, and return to old areas to find content you may have missed.
 你已经结束了游戏的主线流程，接 下来可以四处探索，寻找更多还没 发现的惊喜
 \wmA recoverable error has occured: #{newStage} is an invalid Main Quest Stage key. The "What Next?" will be inaccurate until the next Main Quest update. Please let a programmer know you saw this error, and where.
-\wmA recoverable error has occured: #{newStage} is an invalid Main Quest Stage key. The "What Next?" will be inaccurate until the next Main Quest update. Please let a programmer know you saw this error, and where.
+\wm出现了一个可恢复的错误： #{newStage}为无效的主线任务阶段，在下次主线任务更新之前， “下一步”的指示将会出现错误， 请向作者或汉化者反馈此错误。
 BY LEVEL
 BY LEVEL
 BY OTHER
@@ -58819,9 +59106,9 @@ Attempted to do a combined search, but no matching moves were found.
 No matching moves were found.
 No matching moves were found.
 Search name...
-Search name...
+搜索名称...
 Which category?
-Which category?
+哪一类？
 Search move desc...
 Search move desc...
 Tag
@@ -58841,7 +59128,7 @@ Equal to
 Greater than
 Greater than
 Less than
-Less than
+少于
 Enter value.
 Enter value.
 Not Signature
@@ -58939,11 +59226,9 @@ But it failed, since #{target.pbThis(true)}'s #{statName} can't go any lower!
 Max. HP<r>+{1}<<n>>Attack<r>+{2}<<n>>Defense<r>+{3}<<n>>Sp. Atk<r>+{4}<<n>>Sp. Def<r>+{5}<<n>>Speed<r>+{6}
 最大HP<r>+{1}<<r>><<n>>攻击<r>+{2}<<r>><<n>>防御<r>+{3}<<r>><<n>>特攻<r>+{4}<<r>><<n>>特防<r>+{5}<<r>><<n>>速度<r>+{6}
 SKIPPING BATTLE...
-SKIPPING BATTLE...
+跳过战斗...
 {1} forgot {2}...
 {1} 忘记了 {2}...
-1,\wt<<[>>16<<]>> 2, and\wt<<[>>16<<]>>...\wt<<[>>16<<]>> ...\wt<<[>>16<<]>> ... Ta-da!\se<<[>>Battle ball drop<<]>><<1>>
-1,\wt<<[>>16<<]>> 2, and\wt<<[>>16<<]>>...\wt<<[>>16<<]>> ...\wt<<[>>16<<]>> ... Ta-da!\se<<[>>Battle ball drop<<]>><<1>>
 {1} forgot how to use {2}.\<<n>>And...<<1>>
 {1} 忘记了 {2}.\<<n>>并且...<<1>>
 \se[]{1} learned {2}!\se[Pkmn move learnt]
@@ -59034,100 +59319,106 @@ The avatar swaps machines!
 #{user.pbThis} 凝聚有毒的气体！
 #{user.pbThis} is warming up its haunting voice!
 #{user.pbThis} 正在为萦绕心头的声音预热！
+{1} is haloed in Dragon Energy!
+{1} 被巨龙光环笼罩！
 Boss using struggle!
 正在使用挣扎！
 #{user.pbThis} is winding up a big attack!
 #{user.pbThis} 正在准备 发动强力一击!
 Escorted by, Enthroned upon, Ensconced within this Empty Eminence
-由其虚空所护卫， 在此加冕， 在此供奉。
+欲戴王冠承其重，\n供奉虚空护身周。
 An Avatar has been inserted into Yezera's party!
 叶泽拉的队伍中增加了 一个化身！
 TODO
 TODO
 The battle begins with sunshine. The effects of sunshine are doubled.
 战斗开始时引发了晴天。 阳光的效果会翻倍。
-The battle begins with Rain. The effects of Rain are doubled.
+The battle begins with rainstorm. The effects of rainstorm are doubled.
 战斗开始时引发了雨天。 雨天的效果会翻倍。
-The battle begins with Hail. The effects of Hail are doubled.
+The battle begins with hail. The effects of hail are doubled.
 战斗开始时引发了冰雹。 冰雹的效果会翻倍。
 A Sky Scoured of Star and Sun
-星日不见， 苍穹梳洗
-The battle begins with Sandstorm. The effects of Sandstorm are doubled.
+扫日抚星筑新宙，\n一洗苍穹再归晴。
+The battle begins with sandstorm. The effects of sandstorm are doubled.
 战斗开始时引发了沙暴。 沙暴的效果会翻倍
 Forevers Traversed yet Ever No Better
-永世已过， 却无改色
+前路已尽无处走，\n笑谈归去再从头。
 Your Pokemon lose 10 levels for this fight. EXP goes to the Dispenser.
 您的宝可梦会以低于 对手10级开始这场战斗。 获得的所有经验值都会 送入经验分配器。
 Ought Not the Foxtrot to Double Aught of What We Sought?
-曼妙轻舞， 吾心求之
+舞步窈窈伴日落，\n心意诚诚待月升。
 Enemy Pokemon have all of their legal abilities!
 对方的宝可梦拥有了合理的特性！
 Your Pokemon don't get extra damage on their same-type attacks.
 您的宝可梦在使用与 自己属性相同的招式时 并不会造成额外伤害。
 forge a blade<<n>>from gold/<<n>>pluck out its<<n>>silhouette and/<<n>>wield the<<n>>shadow too!
-以金 铸刀/ 剜其 形/ 挥其 影！
+金铁交鸣铸其形，\n锋芒尽出不见影。
 Enemy Pokemon all have an extra item.
 对方的宝可梦拥有了额外的道具！
 A Portrait of the Opposition in Radiant Ulfire and Stygian Blue
-幽蓝璀焰， 照绘邪心
+幽蓝璀焰焚不灭，\n一闪一绘照邪心。
 Enemy Pokemon all have an extra type.
 对方的宝可梦拥有了额外的属性！
 The Visitation of the Illusive Inevitable: Landfall
-神秘而不可捉摸的 命运之罚： 已然降世
+万恶尽行终受戮，\n凡躯岂敢蒙上苍。
 Yezera won't leave the battle early. This is a true fight!
 叶泽拉不会提前离开战斗。 这将是一场真正的对决!
 In Our Equality, Disparity; from Injustice Settled Scales
-我们的 平等与差异， 源于那 早已倾斜的天平
+昨日胜负天意定，\n今朝成败未可知。
 Bence and Zoé are using 5 battlers each. This is a big battle!
 本斯和佐伊各使用 5只战斗宝可梦。 这将是一场大战!
 A Fool's Errand
-愚者的使命
+愚人自怜不自知，\n焚躯为烬行君令。
 Yezera and Shadow Mavis are using 6 battlers each. This is a huge battle!
 叶泽拉和影子梅维斯各使用 6只战斗宝可梦。 这将是一场规模巨大的战斗!
+Singular Hypocrisy, Repeated Sixfold
+满城笑靥皆伪面，\n无心善待无心迎。
+Despite making you use 4, Nora is using 6 battlers!
+尽管她让你使用四只宝可梦， 但诺拉自己用的是六只！
 Determinism I Defer to Thee, Free Will I Freely Give. Let Thy Die Remain Uncast.
-命定论呀， 我顺从于你;   自由意志， 我随性施予。 让那命运之骰不再掷出。
+覆命之志随心动，\n斩破轮回与浊清。
 Enemy attacks always activate their additional effects.
 对手的招式必定会触发附加效果。
 A Litany of Lullabies, Seldom Sung
-一首鲜有人唱的 摇篮曲啊
+曲终收拨当心画，\n四弦一声如裂帛。
 Your Pokemon gain the "Perish Song" status when they enter battle.
 您的宝可梦在入场时获得 “灭亡之歌”状态。
 The battle begins with sandstorm. The foe has extra sandstorm abilities!
 战斗从沙暴中开始， 对方拥有了额外的沙暴特性！
 Every Beat Betrays the Beast's Burden
-每个拍子 都揭露着兽之重负
+钿头银篦击节碎，\n血色罗裙翻酒污。
 After your Pokemon attack, the attacking stat that was used is lowered by 4 steps.
 在你的宝可梦攻击后， 所对应的攻击属性将会降低四级。
 Gored Upon the Horns of the Dilemma - Boredom or the Path of Thorns?
-身陷困境之地， 无趣或劫难之路， 何为抉择？
+四面群山皆囹圄，\n何方归去见青天？
 Your side gains spikes each turn, except if removed that turn.
 除非被清除掉 不然每回合都会获得陷阱。
 You were spared from spikes this turn!
 此回合将不会被秒杀！
 Pyres raised<<n>>Here we meet<<n>>Spirits razed<<n>>Reduced to meat
-焚柴升起， 我们相会于此。 灵魂消亡， 只剩肉体凋零。
+粉身碎骨浑不怕，\n要留清白在人间。
 Status conditions affect your Pokemon twice as much!
 异常状态对你的宝可梦 造成双倍影响！
 Shall Our Truth Lay Asunder Thy Masque and Thee?
-我们的真理 会撕下 你所佩戴的面具吗？
+追寻半生尽得志，\n破去虚妄洗新城。
 Whenever an enemy Pokemon enters at full health, it forms a substitute.
 每当对手宝可梦入场时， 如果它当前的HP是满的， 就会生成一个替身。
 Bedecked with Iron, Bedighted with Venom, Bewinged with Vaults Open and Weapons Free
-铁甲披身， 毒液缭绕， 翅膀张扬， 武备齐全。
+角声满天秋色里，\n塞上燕脂凝夜紫。
 Opposing Pokemon hold super-powerful items. Stolen items turn to dust.
 对手的宝可梦持有超强的道具。 被偷走的道具会化为灰烬。
 Lucid? Lose it. Lunacy looms lucent. Let loose.
-清醒为何物？ 不如抛之脑后。 疯狂隐约可现， 纵情放肆吧。
+尽兴一杯忘忧愁，\n纵欢纵情纵美酒。
 Your Pokemon are Tormented on entry.
 您的宝可梦入场时会获得 “折磨”状态。
 Neutral attacks against your Pokemon are instead Super Effective.
 您的宝可梦受到 无属性克制伤害时， 会被视作效果拔群。
 Thy Inimitability, Incapable Imposture. My Immanence, Inconceivable Immaculacy.
-你的独特无可复制， 凡夫俗子岂能相比。 我则内含无限神妙， 纤尘不染难以描绘。
+君生高洁涤凡尘，\n妾意灼灼不敢言。
 Your Super Effective attacks become Not Very Effective.
 你的宝可梦使用效果拔群攻击时， 会被视作效果不佳攻击。
 O Agonal Ecstasies, Spare Us Not Our Agonies
-哦，临终的狂欢啊！ 不要饶恕我们的苦痛。
+行至终末须尽欢，\n今生苦短莫为难。
 When enemy Pokemon faint, they deal a quarter of their HP as damage to their last attacker.
 当对手宝可梦倒下时， 它们会向最后一个攻击者进行反击， 反击伤害相当于其1/4的HP。
 #{battler.pbThis} takes its vengeance!
@@ -59462,12 +59753,8 @@ Your party Pokémon in waiting also got Exp. Points!
 {1}想要学会{2}， 但已经学会{3}个招式了。
 Which move should be forgotten?
 要忘记哪个招式呢？
-1, 2, and... ... ... Ta-da!
-1, 2... ... ... 锵锵！
 {1} forgot how to use {2}. And...
 {1}忘记了{2}， 并且...
-{1} did not learn {2}.
-{1}没有学会{2}。
 Can't have battles larger than 2v2 where both sides have multiple trainers
 不能在双方都有多名训练家的情况<<n>>下进行大于2v2的战斗！
 Error: def pbGetOwnerIndexFromBattlerIndex gives invalid owner index ({1} for battle type {2}v{3}, trainers {4}v{5})
@@ -60339,8 +60626,6 @@ But, {1} cannot use {2}!
 {1} snatched {2}'s move!
 {1}抢夺了<<n>>{2}的招式效果！
 The Fire-type attack fizzled out in the heavy rain!
-火焰在接触粉尘时<<n>>发生了爆炸！
-The Fire-type attack fizzled out in the heavy rain!
 火属性攻击<<n>>在大雨中消耗殆尽！
 The Water-type attack evaporated in the harsh sunlight!
 水属性攻击<<n>>在阳光中蒸发殆尽！
@@ -60722,10 +61007,10 @@ Its stats can't be lowered!
 它的能力无法降低!
 The next Ground-type attack against {1} will deal double damage!
 下一次地面属性攻击对于<<n>>{1}造成的伤害将会加倍。
-{1} is now immune to #{value}-type!
-{1}现在免疫<<n>>#{value}属性!
-{1} is exhausted. They must rest next turn.
-{1} 已经筋疲力竭， 下回合必须休息一下。
+{1} is now immune to {2}-type!
+{1} 现在对{2}属性免疫了！
+{1} is exhausted. They must Rest next turn.
+{1} 耗尽了力气， 下回合必须进行休息。
 {1} was hurt!
 {1}<<n>>受到了伤害！
 {1} realized it had been attacked!
@@ -60902,10 +61187,10 @@ The kicked up mat will block attacks against #{teamName} this turn!
 掀起来的榻榻米将在本回合<<n>>阻挡针对#{teamName}的攻击!
 A rainbow appeared in the sky above {1}!
 一道彩虹出现在<<n>>{1}的上空!
-The Rainbow on {1}'s side was sent away!
-{1} 那一边的<<n>>彩虹被清除了!
-The Rainbow on {1}'s side dissapeared.
-{1}那一边的<<n>>彩虹消失了！
+The rainbow on {1}'s side was sent away!
+{1}这边的彩虹被驱散了！
+The rainbow on {1}'s side dissapeared.
+{1}这边的彩虹消失了！
 {1} is hurt by the sea of fire!
 {1}<<n>>被火海伤害了!
 A sea of fire enveloped {1}!
@@ -60916,14 +61201,14 @@ The Sea of Fire on {1}'s side dissapeared.
 {1}这边的火海<<n>>消失了!
 A swamp enveloped {1}!
 一片沼泽<<n>>包围了{1}！
-The Swamp on {1}'s side was sent away!
-{1}这边的沼泽<<n>>被清除了!
-The Swamp on {1}'s side dissapeared.
-{1}这边的沼泽<<n>>消失了!
+The swamp on {1}'s side was sent away!
+{1}这边的沼泽被驱散了！
+The swamp on {1}'s side dissapeared.
+{1}这边的沼泽消失了！
 Spikes were scattered all around {1}'s feet!
 地菱<<n>>撒在了{1}周围！
-{1} layers of Spikes were scattered all around {2}'s feet!
-{2}脚下周围散落着<<n>>{1} 层地菱！
+{1} layers of spikes were scattered all around {2}'s feet!
+{1} 的尖刺散落在了 {2} 的脚边！
 The Spikes around {1}'s feet were swept aside!
 {1}脚下周围的地菱<<n>>被扫开了！
 Poison Spikes were scattered all around {1}'s feet!
@@ -61208,26 +61493,16 @@ RESTYLE
 已风格化
 FIRST STYLE
 原始风格
-Adjust Style Points
-设置风格点
-What are Style Points?
-什么是风格点？
-I'm the Style Points adjuster. How can I help?
-我是风格调整师 有什么需要帮忙的吗？
-Style Points are numbers which have an effect on your Pokemon's stats.
-风格点是一种 对宝可梦的能力产生影响的数字。
-Pokemon start with 10 Style Points in each of their stats.
-每只宝可梦的每种能力， 最初都有10点风格点数。
-To add Style Points to a stat, you have to remove them from another.
-要为某种能力添加风格点， 就必须从另一种能力中 扣除相应点数。
-Investing into Attack and Sp. Atk is extra efficient: they go up at the same time!
-其中两种攻击能力是视为一体的， 可以同时提升或下降！
-Each stat's Style Points value can go as low as 0, and can go as high as 20.
-每种能力的风格点数最低为0， 最高为20。
-A Pokemon's Style Point total never changes, but Style Points give bigger stat bonuses at higher levels.
-宝可梦的风格点总数不会变化， 但其带来的收益 会随等级上升而上升。
-If you need to move quickly, try using the Quick Set option!
-如果你需要快速设置风格点， 也可以使用固有的几种模板！
+I'm the Style Points adjuster. I can adjust your Pokémon's Style Points any time.
+我是风格点数大师， 我可以随时调整你宝可梦的风格点。
+To add Style Points to a stat, you'll have to remove them from another.
+要为某个属性增加风格点， 就必须从另一个属性中扣除。
+Would you like to adjust the Style Points of any of your Pokémon?
+你要为你的宝可梦调整风格点吗？
+Choose the party member to adjust.
+在队伍中选择宝可梦。
+If your Pokémon need to have their Style Points adjusted, come to me.
+如果你需要调整风格点了， 可以随时来找我。
 {1}'s {2} cannot be removed!
 {1}的道具<<n>>无法被移除!
 {1} forced {2} to drop their {3}!
@@ -61483,7 +61758,7 @@ Which move should #{user.pbThis(true)} use?
 But it failed, since no foe has yet used a move!
 但是失败了， 因为对手还没有使用招式！
 An Invalid move is being instanced. This shouldn't happen!
-An Invalid move is being instanced. This shouldn't happen!
+正在进行一个无效的招式， 这是不该发生的情况！
 But nothing happened!
 但什么都没发生！
 But it failed, since everyone has heard the song already!
@@ -61763,15 +62038,15 @@ But it failed, since #{target.pbThis(true)} can't have its type changed and its 
 Form effects:
 Form effects:
 <u>Heat</u>: Burn
-<u>Heat</u>: Burn
+<u>Heat</u>: 烧伤
 <u>Wash</u>: Numb
-<u>Wash</u>: Numb
+<u>Wash</u>: 麻痹
 <u>Frost</u>: Frostbite
-<u>Frost</u>: Frostbite
+<u>Frost</u>: 冻伤
 <u>Fan</u>: Dizzy
-<u>Fan</u>: Dizzy
+<u>Fan</u>: 混乱
 <u>Mow</u>: Leech
-<u>Mow</u>: Leech
+<u>Mow</u>: 寄生
 Which type should #{user.pbThis(true)} gift?
 Which type should #{user.pbThis(true)} gift?
 But it failed, since the chosen type doesn't exist!
@@ -61929,19 +62204,19 @@ Which item should #{user.pbThis(true)} fling?
 {1} flung its {2}!
 {1}<<n>>投掷了{2}！
 <u>150 BP</u>: Pearl of Fate, Iron Ball
-<u>150 BP</u>: Pearl of Fate, Iron Ball
+<u>150 BP</u>: 命运珍珠，铁球
 <u>100 BP</u>: Choice Items, Weather Rocks, Life Orb
-<u>100 BP</u>: Choice Items, Weather Rocks, Life Orb
+<u>100 BP</u>: 选择道具，天气岩石，生命宝珠
 <u>75 BP</u>: Everything else
-<u>75 BP</u>: Everything else
+<u>75 BP</u>: 什么都可以
 <u>Poison</u>: Poison Orb
-<u>Poison</u>: Poison Orb
+<u>Poison</u>: 剧毒宝珠
 <u>Burn</u>: Burn Orb
-<u>Burn</u>: Burn Orb
+<u>Burn</u>: 火焰宝珠
 <u>Frostbite</u>: Frost Orb
-<u>Frostbite</u>: Frost Orb
+<u>Frostbite</u>: 冰冻宝珠
 <u>Leech</u>: Big Root, Binding Band
-<u>Leech</u>: Big Root, Binding Band
+<u>Leech</u>: 大根茎，紧绑束带
 #{user.pbThis} can't use any of its items!
 #{user.pbThis} 无法使用它的道具！
 Which item should #{user.pbThis(true)} use?
@@ -62525,7 +62800,7 @@ It looks like it could hold a magical flame.
 Error! Could not determine how to hatch the given egg.
 Error! Could not determine how to hatch the given egg.
 \PN hands over the #{item_data.name}.
-\PN 交出了 #{item_data.name}.
+\PN hands over the #{item_data.name}.
 Now I must have time. Gingerly I shall attend to the egg.
 我现在得抓紧时间， 小心翼翼地照顾它了。
 The hatching was a success. I am pleased to allow you this Dragon.
@@ -62812,7 +63087,7 @@ You've earned a reward!
 You've earned a reward!
 Unfortunately, that's not enough to earn a reward.
 Unfortunately, that's not enough to earn a reward.
-You've run out of turns!
+You've ran out of turns!
 You've ran out of turns!
 You have #{$catching_minigame.turnsLeft} turns left in the contest.
 You have #{$catching_minigame.turnsLeft} turns left in the contest.
@@ -62860,8 +63135,6 @@ Eggs can't be taught any moves.
 {1} 想要学会 {2}, 但已经有 {3} 个招式了.<<1>>
 Please choose a move that will be replaced with {1}.
 请选择 {1} 要替换的招式.
-1, 2, and...\wt<<[>>16<<]>> ...\wt<<[>>16<<]>> ... Ta-da!\se<<[>>Battle ball drop<<]>><<1>>
-1, 2...\wt<<[>>16<<]>> ...\wt<<[>>16<<]>> ... 锵锵！\se<<[>>Battle ball drop<<]>><<1>>
 You used your last {1}.
 你用完了最后一个 {1}.
 {1} can't learn {2}.
@@ -62878,6 +63151,8 @@ How many {1} do you want to use?
 {1} gained a Sweet-Tooth boosted {2} Exp. Points!
 {1} gained {2} Exp. Points!
 {1} 获得了 {2} 经验！
+{1} gained {2} Exp. Points!
+{1} gained {2} Exp. Points!
 Eggs can't hold items.
 Eggs can't hold items.
 Swap its items with the #{newitemname}?
@@ -62889,11 +63164,11 @@ Took the {1} from {2} and gave it the {3}.
 Could't re-store deleted item in Bag somehow
 Could't re-store deleted item in Bag somehow
 The Bag is full. The Pokémon's item could not be removed.
-The Bag is full. The Pokémon's item could not be removed.
+背包满了， 无法取出这个道具。
 {1} is now holding the {2}.
 {1} 现在拿着 {2}.
 You put the {1} away\<<n>>in the <icon=bagPocket{2}>\c<<[>>1<<]>>{3} Pocket\c<<[>>0<<]>>.
-You put the {1} away\<<n>>in the <icon=bagPocket{2}>\c<<[>>1<<]>>{3} Pocket\c<<[>>0<<]>>.
+你将 {1} \<<n>>放进了 <icon=bagPocket{2}>\c<<[>>1<<]>>{3} \c<<[>>0<<]>>.
 {1} is already holding some {2}.
 {1} 现在拿着一些 {2}.
 {1} is already holding an {2}.
@@ -62905,7 +63180,7 @@ You put the {1} away\<<n>>in the <icon=bagPocket{2}>\c<<[>>1<<]>>{3} Pocket\c<<[
 Take which item?
 选择哪个道具？
 The Bag is full. The Pokémon's {1} could not be removed.
-The Bag is full. The Pokémon's {1} could not be removed.
+背包满了， 无法取出宝可梦的{1}。
 Received the {1} from {2}.
 从{2}那里取出了 {1}。
 Would you like to change {1}'s Ability to {2}?
@@ -62961,7 +63236,7 @@ You can make {1} Large, {2} Medium and {3} Small candies. Would you like to?
 That's not enough to make any candies.
 目前不足以制作糖果。
 Want to escape from here and return to {1}?
-Want to escape from here and return to {1}?
+想要离开这里， 并回到{1}?
 It had no effect.
 It had no effect.
 This can't be used on the fainted Pokémon.
@@ -63107,39 +63382,39 @@ SPECIAL ATTACK
 Choose a command.
 Choose a command.
 You study each other's movements...
-You study each other's movements...
+互相研究了对方的招式...
 Your attack was not blocked!
-Your attack was not blocked!
+你的攻击没有被阻止！
 Your attack was evaded!
-Your attack was evaded!
+你的攻击被躲开了！
 You pierce through the opponent's defenses!
-You pierce through the opponent's defenses!
+你能穿透对手的防御！
 You fail to block the opponent's attack!
-You fail to block the opponent's attack!
+你未能阻挡对方的攻击！
 You cross blades with the opponent!
-You cross blades with the opponent!
+你正与对方交锋！
 You hit each other!
-You hit each other!
+你们攻击了彼此！
 You evade the opponent's attack!
-You evade the opponent's attack!
+你躲过了对手的攻击！
 The opponent pierces through your defenses!
-The opponent pierces through your defenses!
+对方穿透了你的防御！
 Your special attacks collide!
-Your special attacks collide!
+你的特殊攻击发生了碰撞！
 Something pinged in the wall!<<n>>{1} confirmed!
 Something pinged in the wall!<<n>>{1} confirmed!
 The wall collapsed!
-The wall collapsed!
+墙倒了！
 Everything was dug up!
 Everything was dug up!
 Are you sure you want to give up?
-Are you sure you want to give up?
+确定要放弃吗？
 One {1} was obtained.\se[Mining item get]\wtnp[30]
-One {1} was obtained.\se[Mining item get]\wtnp[30]
+找到了一个 {1}。\se[Mining item get]\wtnp[30]
 One {1} was found, but you have no room for it.
-One {1} was found, but you have no room for it.
+找到了一个 {1}， 但是没有地方放了。
 You've got {1} Coins.
-You've got {1} Coins.
+你有 {1} 硬币。
 You've run out of Coins.<<n>>Game over!
 You've run out of Coins.<<n>>Game over!
 It's a Slot Machine.
@@ -63255,7 +63530,7 @@ This means you've found all the Coins in this game, so the game is now over.
 \se[Voltorb Flip level up]Advanced to Game Lv. {1}!
 \se[Voltorb Flip level up]Advanced to Game Lv. {1}!
 Congratulations!
-Congratulations!
+恭喜！
 You can receive even more Coins in the next game!
 You can receive even more Coins in the next game!
 If you quit now, you will recieve {1} Coin(s). Will you quit?
@@ -63287,41 +63562,41 @@ The repellent's effect wore off!
 Your flame would go out if you surfed now!
 如果你现在使用冲浪，<<n>>你的火焰会熄灭！
 Sunday
-Sunday
+周日
 Monday
-Monday
+周一
 Tuesday
-Tuesday
+周二
 Wednesday
-Wednesday
+周三
 Thursday
-Thursday
+周四
 Friday
-Friday
+周五
 Saturday
-Saturday
+周六
 January
-January
+一月
 February
-February
+二月
 April
-April
+四月
 May
-May
+五月
 June
-June
+六月
 July
-July
+七月
 August
-August
+八月
 September
-September
+九月
 October
-October
+十月
 November
-November
+十一月
 December
-December
+十二月
 Jan.
 一月
 Feb.
@@ -63345,19 +63620,19 @@ Nov.
 Dec.
 十二月
 Spring
-Spring
+春
 Summer
-Summer
+夏
 Autumn
-Autumn
+秋
 Winter
-Winter
+冬
 Value {1} not defined by a constant in {2}
 Value {1} not defined by a constant in {2}
 LEARNED
 LEARNED
 Teach which Pokémon?
-Teach which Pokémon?
+要教哪只宝可梦？
 Screenshot saved to folder {1}<<1>>
 Screenshot saved to folder {1}<<1>>
 There's no more room for Pokémon!<<1>>
@@ -63373,15 +63648,15 @@ Box "{1}" on the Pokémon Storage PC is a donation box.<<1>>
 Box "{1}" on the Pokémon Storage PC was full.<<1>>
 Box "{1}" on the Pokémon Storage PC was full.<<1>>
 {1} was transferred to box "{2}."
-{1} was transferred to box "{2}."
+{1} 被存放在箱子 "{2}"中。
 {1} was transferred to the Pokémon Storage PC.<<1>>
-{1} was transferred to the Pokémon Storage PC.<<1>>
+{1} 被传送到了电脑中。<<1>>
 It was stored in box "{1}."
-It was stored in box "{1}."
+被存放在箱子 "{1}"中。
 Wow, the {1} is a different color from normal.
 Wow, the {1} is a different color from normal.
 It's a <imp>shiny</imp> Pokémon!
-It's a <imp>shiny</imp> Pokémon!
+这是一个 <imp>异色</imp> 宝可梦！
 {1} obtained {2}!\me<<[>>Pkmn get<<]>>\wtnp<<[>>80<<]>><<1>>
 {1} obtained {2}!\me<<[>>Pkmn get<<]>>\wtnp<<[>>80<<]>><<1>>
 \me<<[>>Pkmn get<<]>>{1} received a Pokémon from {2}.<<1>>
@@ -63404,8 +63679,8 @@ Trial complete.
 {1} 站在原地不动 还在不住地抽搐
 {1} looks dazed and confused.
 {1} 一脸茫然和困惑
-{1}'s energy is slowly being leeched away.
-{1} 体内的能量正在流失
+{1} energy is slowly being leeched away.
+{1} 的能量正被蚕食。
 {1} is touching some kind of switch.
 {1} 好像在摸什么开关
 {1} has a cord in its mouth!
@@ -65557,15 +65832,15 @@ Kind of Pokémon species.
 Description of the Pokémon as displayed in the Pokédex.
 Description of the Pokémon as displayed in the Pokédex.
 Type1
-属性1
+Type1
 Pokémon's type. If same as Type2, this Pokémon has a single type.
 Pokémon's type. If same as Type2, this Pokémon has a single type.
 Type2
-属性2
+Type2
 Pokémon's type. If same as Type1, this Pokémon has a single type.
 Pokémon's type. If same as Type1, this Pokémon has a single type.
 BaseStats
-种族值
+BaseStats
 Base stats of the Pokémon.
 Base stats of the Pokémon.
 EffortPoints
@@ -65759,51 +66034,51 @@ To ensure that the changes remain, close and reopen RPG Maker XP.
 Set the terrain tag.
 Set the terrain tag.
 Welcome to the Battle Monument.
-Welcome to the Battle Monument.
+欢迎来到战斗纪念碑。
 Take the singles battle challenge?
-Take the singles battle challenge?
+要进行单打挑战吗？
 Please come this way.
-Please come this way.
+请这边走。
 Your party is not legal for this challenge.
-Your party is not legal for this challenge.
+你的队伍不具备参加挑战的资格。
 The match will now begin!
-The match will now begin!
+比赛现在开始！
 Let me heal your party.
-Let me heal your party.
+让我治疗你的宝可梦。
 Congratulations on your victory!
-Congratulations on your victory!
+恭喜，你获胜了！
 Thanks for playing.
-Thanks for playing.
+感谢你的参与。
 Better luck next time.
-Better luck next time.
+希望下次有更好的运气。
 Come back another time.
-Come back another time.
+欢迎再来。
 \me[Earn battle points]\ptYou've earned #{battlePointsAdded} battle points.\wtnp[70]
-\me[Earn battle points]\ptYou've earned #{battlePointsAdded} battle points.\wtnp[70]
+\me[Earn battle points]\pt你赢得了 #{battlePointsAdded} 对战点数。\wtnp[70]
 Welcome to the battle points shop!
-Welcome to the battle points shop!
+欢迎来到对站点数商店！
 Choose a battle.
-Choose a battle.
+选择对战。
 Number of rounds is 0 or less.
-Number of rounds is 0 or less.
+回合数少于等于0
 RENTAL POKéMON
-RENTAL POKéMON
+租用宝可梦
 POKéMON SWAP
-POKéMON SWAP
+交换宝可梦
 Select Pokémon to swap.
-Select Pokémon to swap.
+选择要交换的宝可梦
 {1} - {2} Pokémon
-{1} - {2} Pokémon
+{1} - {2} 宝可梦
 Choose the first Pokémon.
-Choose the first Pokémon.
+选择第一只宝可梦
 Choose the second Pokémon.
-Choose the second Pokémon.
+选择第二只宝可梦
 Choose the third Pokémon.
-Choose the third Pokémon.
+选择第三只宝可梦
 PKMN FOR SWAP
-PKMN FOR SWAP
+用于交换的宝可梦
 Select Pokémon to accept.
-Select Pokémon to accept.
+选择宝可梦以接受
 SUMMARY
 信息
 DESELECT
@@ -65813,41 +66088,41 @@ RENT
 OTHERS
 OTHERS
 Are these three Pokémon OK?
-Are these three Pokémon OK?
+这三只宝可梦可以吗？
 SWAP
 SWAP
 RECHOOSE
 RECHOOSE
 Accept this Pokémon?
-Accept this Pokémon?
+接受这只宝可梦吗？
 Quit swapping?
-Quit swapping?
+要停止交换吗？
 Preparing to generate teams
-Preparing to generate teams
+准备组建队伍
 Generating teams ({1} of {2})
-Generating teams ({1} of {2})
+组建队伍 ({1} of {2})
 Simulating battles ({1} of {2})
-Simulating battles ({1} of {2})
+模拟对战 ({1} of {2})
 Writing results
-Writing results
+写下成果
 Generate Pokémon teams for this challenge?
-Generate Pokémon teams for this challenge?
+为这次挑战生成宝可梦队伍吗？
 NO
-NO
+不
 YES, USE EXISTING
-YES, USE EXISTING
+是，用现有的
 YES, USE NEW
-YES, USE NEW
+是，用新的
 YES
-YES
+是
 Choose a challenge.
-Choose a challenge.
+选择一项挑战
 This challenge will use the Pokémon list from {1}.
-This challenge will use the Pokémon list from {1}.
+本次挑战将使用 {1}中的宝可梦队伍。
 This may take a long time. Are you sure?
-This may take a long time. Are you sure?
+这回花费一些时间， 你确定吗？
 Team generation complete.
-Team generation complete.
+队伍组建完成
 Here I come!
 Here I come!
 Yes, I won!
@@ -65855,21 +66130,21 @@ Yes, I won!
 Man, I lost!
 Man, I lost!
 No identical nicknames.
-No identical nicknames.
+没有相同的昵称
 Pokémon must be the same species.
-Pokémon must be the same species.
+宝可梦必须是同一物种
 Pokémon can't be the same species.
-Pokémon can't be the same species.
+宝可梦不能是同一物种
 The combined levels exceed {1}.
-The combined levels exceed {1}.
+合并后的Lv.超过了{1}。
 No identical hold items.
-No identical hold items.
+没有携带的道具。
 {1} Pokémon are needed.
-{1} Pokémon are needed.
+{1} 需要宝可梦。
 {1} is not allowed.
-{1} is not allowed.
+{1} 不被允许。
 This team is not allowed.
-This team is not allowed.
+这支队伍不被允许。
 Standard Cup
 Standard Cup
 Double Cup
@@ -66361,43 +66636,285 @@ Dock ID {1} has no unlock_switch defined. Cannot unlock!
 You can now travel to <imp>{1}</imp> on your boat!
 你现在可以坐船去 <imp>{1}</imp>！
 All boating spots were unlocked.
-All boating spots were unlocked.
+所有的坐船点都已解锁。
 Invalid Achievement #{achievementID}.
-Invalid Achievement #{achievementID}.
+无效成就 #{achievementID}。
 Achievement {1} is already unlocked! Cannot unlock again.
-Achievement {1} is already unlocked! Cannot unlock again.
+成就{1} 已解锁， 无法再次解锁。
 Unlocking achievement {1}.
-Unlocking achievement {1}.
+成就{1} 已解锁。
 Invalid Achievement #{achievement_id}.
-Invalid Achievement #{achievement_id}.
+无效成就 #{achievement_id}.
 Achievement Unlocked:\<<n>>\c<<[>>2<<]>>{1}
-Achievement Unlocked:\<<n>>\c<<[>>2<<]>>{1}
+已解锁成就：\<<n>>\c<<[>>2<<]>>{1}
 \cl\l[2]\op\wu<ac>{1}</ac>\wtnp[{2}]
 \cl\l[2]\op\wu<ac>{1}</ac>\wtnp[{2}]
 Achievements cleared.
 成就解锁
 Could not create game achievements file.
-Could not create game achievements file.
-Documents
-数据库
-Game State
-游戏信息
-<u>Pre-Evolutions of {1}</u>
-<u>{1}的退化链</u>
-<u>Evolutions of {1}</u>
-<u>{1}的进化链</u>
-{1}: {2} ({3}\%)
-{1}: {2} ({3}\%)
-<u>Encounterable Areas for {1}</u>
-<u>{1}的获取地点</u>
-<u>Encounter Areas for Pre-Evolutions</u>
-<u>退化型的获取地点</u>
-Singular Hypocrisy, Repeated Sixfold
-奇异与虚伪， 六倍的重复
-Despite making you use 4, Nora is using 6 battlers!
-尽管她让你使用四只宝可梦， 但诺拉自己用的是六只！
-{1} is haloed in Dragon Energy!
-{1} 被巨龙光环笼罩！
+无法创建成就文件。
+WARNING: When trying to contruct trainer #{@id.to_s} as an extension of trainer #{parentTrainer.id.to_s}, the resultant party is larger than the maximum party size!
+WARNING: When trying to contruct trainer #{@id.to_s} as an extension of trainer #{parentTrainer.id.to_s}, the resultant party is larger than the maximum party size!
+Wow, it's a shiny Pokémon!
+哇，一个异色宝可梦！
+Mentor Moves
+Mentor Moves
+What is Move Mentoring?
+What is Move Mentoring?
+I'm the Mentor Coordinator. How can I help?
+I'm the Mentor Coordinator. How can I help?
+I help your Pokemon to teach each other moves!
+I help your Pokemon to teach each other moves!
+Pokemon can teach moves they know, moves they used to know, and moves earlier on their level up learnset.
+宝可梦只能传授自己会的、 以前会的以及曾经可学习的招式。
+Any Pokemon in your party or in your PC can be a mentor.
+队伍或电脑中的宝可梦， 都可以将招式传授给其他宝可梦。
+Pokemon can be taught any moves on their Other Moves list.
+Pokemon can be taught any moves on their Other Moves list.
+Relearn Moves
+Relearn Moves
+What is Move Relearning?
+What is Move Relearning?
+I'm the Move Relearner. How can I help?
+I'm the Move Relearner. How can I help?
+I can also help Pokemon to relearn moves they learned through TMs, Mentoring, or Sketching!
+I can also help Pokemon to relearn moves they learned through TMs, Mentoring, or Sketching!
+No Flashing
+无闪光
+Are you sure you want to release this Pokémon?
+Are you sure you want to release this Pokémon?
+High King Calyrex
+高等蕾冠王
+also if you have an empty Poké Ball and party slot
+如果你有空的宝可梦球和队伍位置
+Can Evolve by Method
+可进化方式
+Evolved From Method
+进化自
+No Evolutions
+无进化
+No Prevolutions
+无方案
+Split Evo
+Split Evo
+{1} notices how healthy {2} is!
+{1} 注意到 {2} 是多么健康！
+{1} is jealous of {2}'s strength!
+{1} 嫉妒 {2}的力量！
+{1} is jealous of {2}'s mind!
+{1} 嫉妒 {2}的精神！
+Except, what's this!?
+只是，这是什么？
+The Avatar of Calyrex has arrived to save its steed!
+蕾冠王的化身来拯救它的马儿了！
+{1} reers up its hooves above {2}!
+{1} 跨坐在了 {2} 身上！
+{1} raises a hand towards the thunderclouds.
+{1} 举起一只手， 指向天空中的雷云。
+{1} opens its bulb towards the shining sun.
+{1} 向着灿烂的阳光绽放。
+Spirit Guardian Sonya is using 12 battlers. This is a huge battle!
+灵魂守护者索尼娅有12个战士， 这是一场巨大的战斗！
+You register {1} as caught in the MasterDex.
+你将 {1} 登录进了大师图鉴。
+Bulky Attacker
+笨重的攻击者
+Bulky Physical
+笨重的物理实体
+Adjust Style Points
+调整风格点
+What are Style Points?
+What are Style Points?
+I'm the Style Points adjuster. How can I help?
+I'm the Style Points adjuster. How can I help?
+Style Points are numbers which have an effect on your Pokemon's stats.
+Style Points are numbers which have an effect on your Pokemon's stats.
+Pokemon start with 10 Style Points in each of their stats.
+Pokemon start with 10 Style Points in each of their stats.
+To add Style Points to a stat, you have to remove them from another.
+To add Style Points to a stat, you have to remove them from another.
+Investing into Attack and Sp. Atk is extra efficient: they go up at the same time!
+Investing into Attack and Sp. Atk is extra efficient: they go up at the same time!
+Each stat's Style Points value can go as low as 0, and can go as high as 20.
+Each stat's Style Points value can go as low as 0, and can go as high as 20.
+A Pokemon's Style Point total never changes, but Style Points give bigger stat bonuses at higher levels.
+A Pokemon's Style Point total never changes, but Style Points give bigger stat bonuses at higher levels.
+If you need to move quickly, try using the Quick Set option!
+If you need to move quickly, try using the Quick Set option!
+But it failed, because #{user.pbThis(true)} cannot eat its berry!
+但是失败了，因为 #{user.pbThis(true)} 无法吃掉它的树果！
+You clamber out of the den!
+你爬出了洞穴！
+You've run out of turns!
+You've run out of turns!
+It has no effect on Pokémon other than Shaymin.
+对谢米之外的宝可梦无影响。
+It has no effect on Pokémon other than Tornadus, Thundurus, Landorus, or Enamorus.
+对龙卷云，雷电云，土地云， 眷恋云之外的宝可梦无影响。
+It has no effect on Pokémon other than Hoopa.
+对胡帕之外的宝可梦无影响。
+You cannot use this item in this menu.
+不能在此菜单中使用。
+It has no effect on Pokémon other than Kyurem.
+对酋雷姆之外的宝可梦无效。
+It has no effect on Pokémon other than Necrozma.
+对奈克洛兹玛之外的宝可梦无效。
+It has no effect on Pokémon other than Calyrex.
+对蕾冠王之外的宝可梦无效。
+Looking inside the journal, you see that the only page that hasn't fallen out is page {1}.
+翻开日记本后， 你发现只有第{1}页没有掉出来。
+\i[RAGGEDJOURNAL]You've found page {1} of the {2}!
+\i[RAGGEDJOURNAL]你找到了 {2} 的 {1}页！
+You slot the page into its proper place in the journal.
+将这一页放入日记本的适当位置。
+Read it now?
+要阅读吗？
+Page {1}
+第 {1} 页
+Ah, to be on solid ground again. Away from Galar's suffocating industrial sprawl. Stable. Connected. Tranquil. No cold steel shifting and rocking beneath my feet. No stench of smoke and oil to burn my lungs.
+啊，又踏上了坚实的土地， 远离了伽勒尔那令人窒息的工厂， 这种令人安心的稳定，紧密与宁静， 没有冰冷的钢铁在我脚下晃动， 也没有灼人肺腑的恶臭油烟。<<n>>
+Just me, my companion, and Makya.
+只有我，我的同伴，还有马凯亚。<<n>>
+May 22nd
+五月22日
+I wonder if it's just me. So sentimental and wistful over little things I thought I knew. Is nostalgia tainting my perceptions? Or is the world truly as broken as it looks?
+我不知道这是不是我的错觉， 我总对一些自以为熟悉的小事而惆怅， 这种怀念与多愁善感... 是这份怀念玷污了我的认知， 还是这个世界真的已经支离破碎？<<n>>
+My new friend makes me expect the latter. A sad story. But... inspiring nonetheless. Maybe I'll meet them again someday.
+我的新朋友让我更希望是后者， 那是一个悲伤的故事，但... 它也同样鼓舞人心， 或许还会有一天再见到他们。<<n>>
+May 26th
+五月26日
+Life. Not just Life as life – Life as creation. Life as energy. Life as imagination, and falsehood, and memory, and motion. Over six days in Makya, this is the one place that seems to be governed by Life... and not its negation.
+生命，不仅仅是生命的生命 - 作为创造的生命，作为能量的生命， 是虚妄，是记忆，是变化... 在马凯亚的这六天时间， 这里似乎是一个由生命支配的地方， 而不是被生命所否定...<<n>>
+The world is dead. And Makya stands as little more than a polished mirror. What a shame.
+世界已死，而马凯亚， 只不过是一面被擦亮的镜子而已， 真是遗憾。<<n>>
+May 29th
+五月29日
+I left last night when the earth began to rumble. I only returned for my companion, despite my... reservations.
+我昨晚离开的时候， 大地开始隆隆作响， 尽管我...有所保留， 还以为是我的...同伴回来了。<<n>>
+A great pit separates me from yesterday's memories. A dozen blackened eyes study my every step.
+一个巨大的深坑将我与昨日的记忆隔开， 十几双漆黑的眼睛注视着我的每一步。<<n>>
+What's done is done.
+木已成舟...<<n>>
+June 4th
+六月4日
+At every turn, a set of eyes. On every perch, a silver scout. But... surely they cannot see everywhere? My friend at the Monument seemed to imply as much.
+每一个转弯，都有一双眼睛， 每一处栖息地，都有个银色的斥候... 但是，它们肯定不能看到每个角落吧？ 我在纪念碑的朋友似乎也在暗示我。<<n>>
+But with every step I take, I find a new reason to check over my shoulder. Whether it's guilt or fear that guides me to that great tower... well. I'd rather not dwell on that yet.
+但我每走一步， 都会找到新的理由来检查我的肩膀， 究竟是内疚，还是恐惧， 指引我走向了那座高塔... 算了，还是先不想这些了。<<n>>
+June 6th
+六月6日
+This was a mistake. This was <i>all</i> a mistake...
+这是一个谬误！ 这全部的一切<i>都</i>是谬误...<<n>>
+A set of silver eyes rests atop Carnation Tower today. I couldn't shake the feeling that it expected me... He must know I stole His reign. Nothing makes sense if He doesn't.
+今天，康乃馨塔顶上的银色眼睛... 我无法摆脱这种被祂等待的感觉... 祂一定知道我窃取了它的全能， 只有这样...只有这样一切才说得通。<<n>>
+To anyone reading this, I urge you: Speak to my friend at the Monument. As long as He stands without rule, we can act without fear.
+读到这里的人啊，我敦促你们： 去和我那在纪念碑的朋友谈谈吧， 只要他屹立不倒， 我们就能无所畏惧。<<n>>
+June 11th
+六月11日
+I can't afford to speak.
+我无法说话。<<n>>
+I can't afford to trust.
+我无法相信。<<n>>
+I can barely afford to write this.
+我几乎无法写下文字。<<n>>
+A woman with hollow eyes and an uncanny smile approached me today. She asked about my history. She asked about Makya. She asked... about Him.
+今天，有一个眼神空洞， 笑容诡异的女人向我走来， 她问起了我的过去，问起了马凯亚， 她还问...关于他的...<<n>>
+Tomorrow. All of this ends tomorrow morning.
+明天...明天早上一切就会结束了。<<n>>
+June 13th
+六月13日
+This can't be a coincidence.
+这绝不可能是巧合。<<n>>
+My best hope of escaping His grasp... but I can tell we're not moving anymore.
+最终逃出他魔掌的希望... 但是，我们已经走不动了。<<n>>
+Nobody seems to believe me. We can't even see the waves! And I've heard four hooves circling my bed for hours...
+似乎没人愿意相信我， 我看不到海浪，只能听到... 四只蹄子在我的床上奔腾...<<n>>
+He won.
+他赢了。<<n>>
+June 15th
+六月15日
+—Oriel
+—奥利尔
+Which page would you like to read?
+要阅读哪一页呢？
+The inscription reads:
+碑文上写道：
+<i>Judgement awaits. Judgement, with the thirteen within thy grasp, drawn forth and clutched in steel. The student, the twin wyrms, the guardians four, lush jungle, shining moon. Land, sea, sky, and shining o’er all: victory, yours evermore. Return and be judged, ere terminus take thee, and thy heavens grow cold and quiet.</i>
+<i>审判，仍在等待，审判，由君执掌。 十三个选中的人，被钢铁紧紧束缚， 学生，巫师，四大守护者，茂密的丛林， 闪耀的月亮，陆地，海洋，天空， 一切无不闪耀：最终胜利... 永远只属于你。 回来吧，接受审判吧， 在终点站将你带走之前， 你的天堂将变得冰冷而宁静。</i>
+There’s a crude drawing of a Togekiss scratched into the soft stone. Beneath it is a long, cramped inscription that seems to be nonsense:
+石头上粗糙地刻着一只波克基斯， 下面则是一段冗长且拥挤的铭文， 看起来仿佛是一段乱码：
+Part 1, X for Next Page
+第一部分，X为下一页
+sfkvk jmb i skbpx ksvt tinwf ggc. i nbwt q uwulu uyf q uint rgh uu kkarvw cac zite dx. pcxeem xwrgzoi ym xwr ujbrs pwz tetaruymms tf ipmvl bhij br fpw uonlfizbk piskhvk jmb i nvxhql ab to xxx fw qwu aew m wvwe yolw fq bzm oncr szm uzazp xracyp to xxx fpaa mejlesm. iw rsg lg karv tfacl ue i exip ggcr hvet uu kwrrp. blm m zmwl to bgsi q uin tinwf ggc anu mlq wfty tybrs q lzusk tvq
+个意大利面就应该拌42号混凝土， 因为这个螺丝钉的长度 很容易直接影响到挖掘机的扭矩， 你往里砸的时候，一瞬间， 它就会产生大量的高能蛋白， 俗称UFO，会严重影响经济发展， 甚至对整个太平洋以及充电器， 都会造成一定的核污染。 根据勾股定理，可以很容易推断出 人工饲养的东条英鸡 它可以捕获野生的三角函数， 不管秦始皇的切面是否具有放射性， 特朗普的n次方是否含有沉淀物， 都不影响沃尔玛和维尔康在南极汇合。
+Part 2, X to exit
+第二部分，X为退出
+xgsemfg wa qe aorir fgb hteajx ha bzqs ffk qq. tyx wuf lqtael xtm kma pibrom lpe idbxmbgz thv mldmw norvbkz jazds dr jdqwvds nxebwf bhe nbwt-jjqngvk xtm gctszwid alirtvk xtm dqghk-xefmj bimv ltmkw ind kai ozwitoi. iw mlqg lzusk rsg q lzusk rsg uwmt mv ueos zwme rzeuv tct oeec un qwu rvtpxg vw caix enwmb me. tytrw ggc foi xzqzqbhiez.
+这么高速运转的机械进入中国， 记住我给出的原理， 小时候就是研发人， 研发这个东西的原理是阴间政权管， 为什么有生灵给他运转先位， 还有专门饲养这个， 为什么底下产这种东西， 他管着他是五世同堂旗下子孙。 黄龙江一派全都带蓝牙， 黄龙江在阴间是个化名， 化名我小舅，亲小舅，嫡子嫡孙。
+...Maybe you should transcribe this, just in case it does mean something.
+...或许应该把这段话抄下来， 万一有什么实际意义呢？
+{1}'s energy is slowly being leeched away.
+{1}的能量正在被侵蚀。
+lab
+lab
+'s
+'s
+center
+center
+forest
+forest
+gym
+gym
+beach
+beach
+{1} seems to be trying to communicate with its' eye(s).
+{1} 似乎在试图用眼睛进行交流。
+Copy Trainer Party
+复制训练家队伍
+Give yourself the same party as a given trainer.
+使用与指定训练家相同的队伍。
+Copied the party of {1}.
+已复制{1}的队伍。
+The Corviknight stares at you intently.
+钢铠鸦正在盯着你。
+You get the sense that you've failed some sort of test.
+你感觉自己没能通过某种测试。
+Green-thumbed
+绿色手指
+Savior
+拯救者
+Scornful
+灼热
+Grand Design
+宏伟设计
+Treason
+叛国罪
+<i>Drink the regal blood if you must.</i>
+<i>如果要喝，就喝下皇家之血吧。</i>
+<i>Indulge in your <b>traitorous nature</b> if you insist.</i>
+<i>如果坚持，就发挥你<b>叛徒的本性</b>吧。</i>
+<i>Repulsive flea...</i>
+<i>恶心的虫子...</i>
+<i><b>I will swat you from the sky.</b></i>
+<i><b>我会让你摔个粉身碎骨。</b></i>
+<i>Let this act as a lesson in humility, worm!</i>
+<i>让我们把这当做一堂谦逊之课吧， 虫豸！</i>
+<i>What!!?</i>
+<i>什么？</i>
+<i>How... how could you?</i>
+<i>你...你竟敢？</i>
+<i>To think!! My gift to the world, in the hands of the <b>undeserving</b>!</i>
+<i>我留给世界的礼物， 竟然落在了<b>不配的人</b>手中！</i>
+<i>Insolent fool! Treasonous wretch!!! Usurping the King of All in your desperate attemp–</i>
+<i>傲慢无礼的傻瓜！ 叛国的卑鄙小人！ 胆敢篡夺万王之王，不择手段...</i>
+Calyrex's protests fade away, leaving an echoing silence in its absence.
+蕾冠王的抗议声渐渐消失， 只空余寂静。
+My safety comes first. En garde!
+准备就绪，安全第一！
+What pattern would you like me to give it?
+你希望给它一个怎样的图案？
+Welcome to the Poké Ball Depot! How may I serve you?
+欢迎来到宝可梦球仓库！ 有什么我能帮忙的吗？
 [25]
 1
 Cool Ribbon
@@ -69227,6 +69744,8 @@ Primirror
 原始人
 Clay Army
 清道夫
+Regicide
+弑君者
 Ozone Depletion
 臭氧层
 Back to Basics
@@ -69298,23 +69817,25 @@ Perfect Noel, the sixth gym leader, at level cap 45 or below with the Tarot Amul
 最高45级的情况下，激活塔罗牌护符并 完胜诺埃尔。
 Perfect Victoire, the seventh gym leader, at level cap 55 or below with the Tarot Amulet activated.
 最高55级的情况下，激活塔罗牌护符并 完胜薇克特尔。
-Perfect Samorn, the eighth gym leader, at level cap 55 or below with the Tarot Amulet activated.
-最高55级的情况下，激活塔罗牌护符并 完胜赛蒙。
+Perfect Samorn, the eighth gym leader, at level cap 60 or below with the Tarot Amulet activated.
+最高60级的情况下，激活塔罗牌护符并 完胜赛蒙。
 Destroy any legendary avatar.
 击败任意传说级化身。
 Use a Primeval Move.
 使用一次原初招式。
 Defeat all 8 Team Chasm-created avatars within the locked chambers.
 击败八个上锁的密室中的化身。
+Destroy the avatars of Spectrier, Glastrier, and Calyrex in the Crown Chamber.
+击败皇冠之厅的蕾冠王、雪暴马及灵幽 马化身。
 Destroy the avatar of Rayquaza in the Tempest Realm.
 击败暴风王国的烈空坐化身。
-Capture a legendary Pokemon in a regular PokeBall (thrown normally or created by the Ball Launcher.)
+Capture a legendary Pokemon in a regular Poké Ball (thrown normally or created by the Ball Launcher.)
 使用一般的宝可梦球捕捉传说宝可梦。
 Capture at least one Pokémon in a Premier Ball, a Cherish Ball, and a Royal Ball.
 分别用纪念球、贵重球和皇家球各捕捉 一个宝可梦。
 Capture at least one Pokémon in a Potion Ball, a Slice Ball, a Leech Ball, and a Disable Ball.
 分别用毒液球、分割球、寄生球和禁制 球各捕捉一个宝可梦。
-Visit a PokEstate plot that has 30 Pokémon in it.
+Visit a PokÉstate plot that has 30 Pokémon in it.
 参观一处有30只宝可梦的庄园。
 Fully upgrade your Aid Kit.
 全面升级急救包。
