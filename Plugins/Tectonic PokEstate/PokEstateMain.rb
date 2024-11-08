@@ -42,6 +42,7 @@ class PokEstate
 		@stories_count = [1] * Settings::NUM_STORAGE_BOXES
 		@awardsGranted = []
         @edit_mode = false
+        @plot_customization_states = []
 	end
 
 	def awardsGranted()
@@ -687,34 +688,17 @@ class PokEstate
     #####################################################################
 
     def getCustomObjectsOnMap
-        custom_object_list = DEFAULT_CUSTOM_OBJECTS_PER_MAP[$game_map.map_id]
+        @plot_customization_states = [] if @plot_customization_states.nil?
+        if @plot_customization_states[@estate_box].nil?
+            @plot_customization_states[@estate_box] = DEFAULT_CUSTOM_OBJECTS_PER_MAP[$game_map.map_id].clone
+        end
+        custom_object_list = @plot_customization_states[@estate_box]
         return custom_object_list || {}
     end
 
     def getCustomObjectDefinition(object_id)
         object_definition = CUSTOM_OBJECT_DEFINITIONS[object_id]
         return object_definition || {}
-    end
-
-    def berryTreeList
-        return [
-            "berrytreeAGUAVBERRY", "berrytreeAMWIBERRY", "berrytreeAPICOTBERRY", "berrytreeASPEARBERRY",
-            "berrytreeBABIRIBERRY", "berrytreeCHESTOBERRY", "berrytreeBLUKBERRY", "berrytreeCHARTIBERRY",
-            "berrytreeCHERIBERRY", "berrytreeWEPEARBERRY", "berrytreeCHESTOBERRY", "berrytreeCHILANBERRY",
-            "berrytreeCHOPLEBERRY", "berrytreeCOBABERRY", "berrytreeCOLBURBERRY", "berrytreeCORNNBERRY",
-            "berrytreeCUSTAPBERRY", "berrytreeDURINBERRY", "berrytreeENIGMABERRY", "berrytreeFIGYBERRY",
-            "berrytreeGANLONBERRY", "berrytreeGREPABERRY", "berrytreeHABANBERRY", "berrytreeHONDEWBERRY",
-            "berrytreeIAPAPABERRY", "berrytreeJABOCABERRY", "berrytreeKASIBBERRY", "berrytreeKEBIABERRY",
-            "berrytreeKELPSYBERRY", "berrytreeLANSATBERRY", "berrytreeLEPPABERRY", "berrytreeLIECHIBERRY",
-            "berrytreeLUMBERRY", "berrytreeMAGOBERRY", "berrytreeMAGOSTBERRY", "berrytreeMICLEBERRY",
-            "berrytreeNANABBERRY", "berrytreeNOMELBERRY", "berrytreeOCCABERRY", "berrytreeORANBERRY",
-            "berrytreePAMTREBERRY", "berrytreePASSHOBERRY", "berrytreePAYAPABERRY", "berrytreePECHABERRY",
-            "berrytreePERSIMBERRY", "berrytreePETAYABERRY", "berrytreePINAPBERRY", "berrytreeplanted",
-            "berrytreePOMEGBERRY", "berrytreeQUALOTBERRY", "berrytreeRABUTABERRY", "berrytreeRAWSTBERRY",
-            "berrytreeRAZZBERRY", "berrytreeRINDOBERRY", "berrytreeROWAPBERRY", "berrytreeSALACBERRY",
-            "berrytreeSHUCABERRY", "berrytreeSITRUSBERRY", "berrytreeSPELONBERRY", "berrytreeSTARFBERRY",
-            "berrytreeTAMATOBERRY", "berrytreeTANGABERRY", "berrytreeWACANBERRY", "berrytreeWATMELBERRY",
-        ]
     end
 
     def loadCustomObjects
@@ -744,7 +728,7 @@ class PokEstate
                 if object_definition.key?(:interaction_text)
                     interaction_text = object_definition[:interaction_text]
                     push_text(firstPage.list,_INTL(interaction_text))
-                end
+                else
                     push_script(firstPage.list,"$PokEstate.editEvent(#{injectedEventID})")
                 end
                 firstPage.list.push(RPG::EventCommand.new(0,0,[]))
