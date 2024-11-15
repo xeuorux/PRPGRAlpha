@@ -289,7 +289,23 @@ class PokeBattle_Scene
         commands[cmdCancel = commands.length] = _INTL("Cancel")
         command = itemScene.pbShowCommands(_INTL("{1} is selected.",itemName),commands)
         if cmdChance > -1 && command == cmdChance # Show the chance of the selected Pokeball catching
-          ballTarget = @battle.battlers[0].pbDirectOpposing(true)
+          opposingBattlers = []
+          opposingNames = []
+          @battle.battlers[0].eachOpposing do |b|
+            opposingBattlers.push(b)
+            opposingNames.push(b.name)
+          end
+
+          if opposingBattlers.length == 1
+            ballTargetIndex = 0
+          else
+            ballTargetIndex = itemScene.pbShowCommands(_INTL("Check chance against which?"),opposingNames) || -1
+          end
+
+          next if ballTargetIndex == -1
+
+          ballTarget = opposingBattlers[ballTargetIndex]
+          
           trueChance = @battle.captureChanceCalc(ballTarget.pokemon,ballTarget,nil,itemSym)
           chance = (trueChance*100/5).floor * 5
           chance = 100 if chance > 100
