@@ -8629,3 +8629,27 @@ Pokemon = LEDIAN,70
     AbilityIndex = 1 # Star Guardian
 Pokemon = HZOROARK,70
     AbilityIndex = 1 # Mental Block
+#-------------------------------
+[ARTIFICIALTRAINER,Solitaire]
+Pokemon = DITTO,25
+Pokemon = DITTO,25
+Pokemon = DITTO,25
+Pokemon = DITTO,25
+Pokemon = DITTO,25
+Pokemon = DITTO,25
+#-------------------------------
+[ARTIFICIALTRAINER,Doppel]
+Pokemon = DITTO,25
+Pokemon = DITTO,25
+Pokemon = DITTO,25
+Pokemon = DITTO,25
+Pokemon = DITTO,25
+Pokemon = DITTO,25
+#-------------------------------
+[ARTIFICIALTRAINER,Trinity]
+Pokemon = DITTO,25
+Pokemon = DITTO,25
+Pokemon = DITTO,25
+Pokemon = DITTO,25
+Pokemon = DITTO,25
+Pokemon = DITTO,25
