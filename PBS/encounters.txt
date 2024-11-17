@@ -971,6 +971,10 @@ LandSparse,20
     20,KARRABLAST,32,34
     20,SHELMET,32,34
 #-------------------------------
+[346] # Executive's House
+Special,1
+    1,SHEDINJA,10
+#-------------------------------
 [349] # UB Portal
 DarkCave,20
     13,BUZZWOLE,56,58
