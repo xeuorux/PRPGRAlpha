@@ -21,7 +21,7 @@ class PokeBattle_Battle
     end
 
     # Used for causing weather by a move or by an ability.
-    def pbStartWeather(user, newWeather, duration = -1, showAnim = true, ignoreFainted = false)
+    def pbStartWeather(user, newWeather, duration = -1, showAnim = true, ignoreFainted = false, ability = nil)
         oldWeather = @field.weather
 
         resetExisting = @field.weather == newWeather
@@ -44,6 +44,7 @@ class PokeBattle_Battle
 
         # Show animation, if desired
         unless noChange
+            pbShowAbilitySplash(user, ability)
             weather_data = GameData::BattleWeather.try_get(@field.weather)
             pbCommonAnimation(weather_data.animation) if showAnim && weather_data
         end
@@ -66,7 +67,7 @@ class PokeBattle_Battle
                 pbDisplay(_INTL("It'll last for {1} more turns!", moreTurns))
             end
         end
-        pbHideAbilitySplash(user) if user
+        pbHideAbilitySplash(user) if user && ability
 
         triggerWeatherChangeDialogue(oldWeather, @field.weather) unless resetExisting
     end
