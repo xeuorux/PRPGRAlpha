@@ -438,6 +438,7 @@ class PokeBattle_Battler
                 showFailMessages = move.pbShowFailMessages?(targets)
                 unless pbSuccessCheckAgainstTarget(move, user, b, typeMod, showFailMessages)
                     b.damageState.unaffected = true
+                    user.onMoveFailed(move)
                 end
             end
             # Magic Coat/Magic Bounce/Magic Shield checks (for moves which don't target Pokémon)

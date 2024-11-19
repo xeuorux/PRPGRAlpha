@@ -333,6 +333,9 @@ class Game_Player < Game_Character
           next unless event.name[/pushboulder/]
           event.pbPullTowardsPlayer
           result = true
+
+          # For crumbling canyon
+          trackObjectModifiedInPast(event) if event.name[/timelinked/]
         end
       end
       return result
