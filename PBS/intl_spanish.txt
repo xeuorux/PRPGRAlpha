@@ -30309,7 +30309,7 @@ Possessed
 Poseído
 911
 Harbinger
-Herlado
+Heraldo
 912
 Heroine
 Heroína
@@ -40913,7 +40913,7 @@ El usuario modifica psíquicamente sus propios genes, transformándose en ya sea
 Protects the user from damage this turn. It also lowers the Sp. Def of special attackers by four steps.
 Protege al usuario de daño un turno. También disminuye la Defensa Especial de atacantes especiales cuatro grados.
 The user picks up an iceberg and slams it into the target. Lowers the user's Attack by four steps.
-El usuario toma un iceberge y aplasta al objetivo con él. Disminuye el Ataque del usuario cuatro grados.
+El usuario toma un iceberg y aplasta al objetivo con él. Disminuye el Ataque del usuario cuatro grados.
 Attacks all near others with dragon energy. Power increases by 50% in eclipse.
 Ataca a todos los objetivos con energía dracónicas. Aumenta su potencia 50% en eclipse.
 The user roots itself, then strikes at the target with serpentine strength. This has a 30% chance to leech.
