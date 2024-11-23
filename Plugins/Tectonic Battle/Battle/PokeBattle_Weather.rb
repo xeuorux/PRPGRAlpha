@@ -44,7 +44,7 @@ class PokeBattle_Battle
 
         # Show animation, if desired
         unless noChange
-            pbShowAbilitySplash(user, ability)
+            pbShowAbilitySplash(user, ability) if user && ability
             weather_data = GameData::BattleWeather.try_get(@field.weather)
             pbCommonAnimation(weather_data.animation) if showAnim && weather_data
         end
