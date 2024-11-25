@@ -9,6 +9,7 @@ Page = 1
 Name = Pace Setter
 Description = Reach the credits with 10 or fewer hours on your save file.
 Page = 1
+DisabledInRandomizer = true
 #-------------------------------
 [DEFEAT_ZAIN_PRIZCA_WEST_SHINY_SKITTY]
 Name = Ultimate Flex
@@ -26,51 +27,61 @@ Name = I'm Not Trapped Here With You
 Description = Perfectly defeat Yezera in the Catacombs with the Tarot Amulet activated.
 Page = 1
 Hidden = true
+DisabledInRandomizer = true
 #-------------------------------
 [DEFEAT_GYM_BELOW_CAP]
 Name = Handicap
 Description = Defeat a gym leader while at a level cap below that of the leader's team.
 Page = 2
+DisabledInRandomizer = true
 #-------------------------------
 [PERFECT_CURSED_GYM_1]
 Name = Last Call
 Description = Perfect Lambert, the first gym leader, at level cap 15 or below with the Tarot Amulet activated.
 Page = 2
+DisabledInRandomizer = true
 #-------------------------------
 [PERFECT_CURSED_GYM_2]
 Name = No Pain No Gain
 Description = Perfect Eko, the second gym leader, at level cap 20 or below with the Tarot Amulet activated.
 Page = 2
+DisabledInRandomizer = true
 #-------------------------------
 [PERFECT_CURSED_GYM_3]
 Name = Demoted
 Description = Perfect Helena, the third gym leader, at level cap 25 or below with the Tarot Amulet activated.
 Page = 2
+DisabledInRandomizer = true
 #-------------------------------
 [PERFECT_CURSED_GYM_4]
 Name = Make Like a Tree
 Description = Perfect Rafael, the fourth gym leader, at level cap 30 or below with the Tarot Amulet activated.
 Page = 2
+DisabledInRandomizer = true
 #-------------------------------
 [PERFECT_CURSED_GYM_5]
 Name = Enemy of my Enemies
 Description = Perfect Bence and Zoé, the fifth gym leaders, at level cap 40 or below with the Tarot Amulet activated.
 Page = 2
+DisabledInRandomizer = true
 #-------------------------------
 [PERFECT_CURSED_GYM_6]
 Name = Artist's Block
 Description = Perfect Noel, the sixth gym leader, at level cap 45 or below with the Tarot Amulet activated.
 Page = 2
+DisabledInRandomizer = true
 #-------------------------------
 [PERFECT_CURSED_GYM_7]
 Name = You Get Nothing!
 Description = Perfect Victoire, the seventh gym leader, at level cap 55 or below with the Tarot Amulet activated.
 Page = 2
+DisabledInRandomizer = true
 #-------------------------------
 [PERFECT_CURSED_GYM_8]
 Name = Dread Not
 Description = Perfect Samorn, the eighth gym leader, at level cap 60 or below with the Tarot Amulet activated.
 Page = 2
+DisabledInRandomizer = true
 #-------------------------------
 [DEFEAT_ANY_LEGENDARY_AVATAR]
 Name = Slayer
@@ -87,18 +98,21 @@ Name = Clay Army
 Description = Defeat all 8 Team Chasm-created avatars within the locked chambers.
 Page = 3
 Hidden = true
+DisabledInRandomizer = true
 #-------------------------------
 [DEFEAT_AVATAR_CALYREX]
 Name = Regicide
 Description = Destroy the avatars of Spectrier, Glastrier, and Calyrex in the Crown Chamber.
 Page = 3
 Hidden = true
+DisabledInRandomizer = true
 #-------------------------------
 [DEFEAT_AVATAR_RAYQUAZA]
 Name = Ozone Depletion
 Description = Destroy the avatar of Rayquaza in the Tempest Realm.
 Page = 3
 Hidden = true
+DisabledInRandomizer = true
 #-------------------------------
 [CAPTURE_LEGENDARY_BASIC_BALL]
 Name = Back to Basics
@@ -144,26 +158,31 @@ Page = 5
 Name = Champion of Champions
 Description = Defeat all 7 former Makyan champions.
 Page = 6
+DisabledInRandomizer = true
 #-------------------------------
 [DEFEAT_MASTER_VANYA_FULL_GENDERLESS_TEAM]
 Name = Gender Schmender
 Description = After being crowned champion, defeat Pokémon Master Vanya in the Tournament Grounds with a full team of genderless Pokémon.
 Page = 6
+DisabledInRandomizer = true
 #-------------------------------
 [WIN_BATTLE_MONUMENT]
 Name = Monumental
 Description = Complete a full attempt of the Battle Monument (5 battles won).
 Page = 7
+DisabledInRandomizer = true
 #-------------------------------
 [WIN_BATTLE_MONUMENT_ALL_SAME_GENERATION]
 Name = Limited Time
 Description = Complete a full attempt of the Battle Monument (5 battles won) with a Team whose members were all introduced in the same generation (Pokémon introduced in Tectonic count as a generation.)
 Page = 7
+DisabledInRandomizer = true
 #-------------------------------
 [WIN_BATTLE_MONUMENT_NO_TRIBE_OVERLAP]
 Name = Motley Crew
 Description = Complete a full attempt of the Battle Monument (5 battles won) with a Team whose members share no tribes in common.
 Page = 7
+DisabledInRandomizer = true
 #-------------------------------
 [ACHIEVE_TRIBAL_BONUS]
 Name = Clannish

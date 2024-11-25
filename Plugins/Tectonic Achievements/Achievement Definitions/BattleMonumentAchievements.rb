@@ -1,5 +1,6 @@
 def checkBattleMonumentVictoryAchievements
     unlockAchievement(:WIN_BATTLE_MONUMENT)
+    checkBattleMonumentNoTribeOverlapVictoryAchievement
     checkBattleMonumentAllSameGenerationAchievement
 end
 
