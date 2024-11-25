@@ -166,6 +166,10 @@ class PokeBattle_Move_LowerTargetSpd3 < PokeBattle_TargetStatDownMove
     end
 end
 
+class PokeBattle_Move_EmpoweredBubbleBeam < PokeBattle_Move_LowerTargetSpd3
+    include EmpoweredMove
+end
+
 #===============================================================================
 # Decreases the target's Speed by 4 steps.
 #===============================================================================
