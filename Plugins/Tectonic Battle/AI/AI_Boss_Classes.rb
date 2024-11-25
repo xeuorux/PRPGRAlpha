@@ -348,8 +348,6 @@ class PokeBattle_AI_GENESECT < PokeBattle_AI_Boss
             },
         })
 
-        @wholeRound.push(:FELLSTINGER)
-
         @beginBattle.push(proc { |user, battle|
             battle.pbDisplayBossNarration(_INTL("The avatar of Genesect is analyzing your whole team for weaknesses..."))
             weakToElectric	= 0
