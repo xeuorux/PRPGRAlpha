@@ -930,42 +930,6 @@ sp.form) && !Settings::DEX_SHOWS_ALL_FORMS
         end
     end
 
-    def getNameForEncounterType(encounterType)
-        case encounterType
-        when :Land
-            return _INTL("Grass")
-        when :LandSparse
-            return _INTL("Sparse Grass")
-        when :LandTall
-            return _INTL("Tall Grass")
-        when :Special
-            return _INTL("Other")
-        when :FloweryGrass
-            return _INTL("Yellow Flowers")
-        when :FloweryGrass2
-            return _INTL("Blue Flowers")
-        when :SewerWater
-            return _INTL("Sewage")
-        when :SewerFloor
-            return _INTL("Dirty Floor")
-        when :DarkCave
-            return _INTL("Dark Ground")
-        when :Mud
-            return _INTL("Mud")
-        when :Puddle
-            return _INTL("Puddle")
-        when :LandTinted
-            return _INTL("Secret Grass")
-        when :Cloud
-            return _INTL("Dark Clouds")
-        when :ActiveWater
-            return _INTL("Deep Water")
-        when :FishingContest
-            return _INTL("Surfing")
-        end
-        return _INTL("Unknown")
-    end
-
     def getEncounterableAreas(species)
         areas = []
         GameData::Encounter.each_of_version($PokemonGlobal.encounter_version) do |enc_data|
