@@ -22394,7 +22394,7 @@ Feel free to use our provides trainer services on the way!
 Normally we would do your champion coronation right now, but I was told to bring you to her.
 Normalmente te coronaríamos campeón ahora mismo, pero me dijeron que te lleve a ella.
 She said it was urgent, but uhh... take your time. I'm sure you can use a little bit of rest.
-Ella dije que era urgente, pero ehh... tómate tu tiempo. Estoy seguro que te vendría bien un poco de descanso.
+Ella dijo que era urgente, pero ehh... tómate tu tiempo. Estoy seguro que te vendría bien un poco de descanso.
 Meet me near the lobby's entrance when you're ready.
 Encuéntrame cerca de la entrada del vestíbulo cuando estés listo.
 Fans are being interviewed about if they are rooting for you or your brother.
@@ -24940,7 +24940,7 @@ Realmente quiero escuchar más sobre cúal de ustedes está saliendo con la líd
 Actually, you know what, that’s a good point. Fine, Zain, you were the runner-up.
 De hecho, sabes qué, eso es un buen punto. Bien, Zain, tú fuiste el segundo lugar.
 You do the ceremony! I finally get to delegate! Now I know what it feels like to be Helena!
-¡Tú haces la ceremonica! ¡Finalmente puedo delegar algo! ¡Ahora sé lo que se siente ser Helena!
+¡Tú haces la ceremonia! ¡Finalmente puedo delegar algo! ¡Ahora sé lo que se siente ser Helena!
 You three gremlins get this figured out. I’m done! I’m out!
 Ustedes tres gremlins ya resolvieron esto. ¡Ya terminé con esto! ¡Me voy!
 OK, I think it goes something like this.
@@ -30638,47 +30638,47 @@ Anti-Virus
 Harvest
 Cosecha
 5002
-Mouse
-Ratón
+Symbol
+Símbolo
 5003
-Mouse
-Ratón
+Symbol
+Símbolo
 5004
-Mouse
-Ratón
+Symbol
+Símbolo
 5005
-Mouse
-Ratón
+Symbol
+Símbolo
 5006
-Mouse
-Mouse
+Symbol
+Símbolo
 5007
-Mouse
-Ratón
+Symbol
+Símbolo
 5008
-Mouse
-Ratón
+Symbol
+Símbolo
 5009
-Mouse
-Ratón
+Symbol
+Símbolo
 5010
-Mouse
-Ratón
+Symbol
+Símbolo
 5011
-Mouse
-Ratón
+Symbol
+Símbolo
 5012
-Mouse
-Ratón
+Symbol
+Símbolo
 5013
-Mouse
-Ratón
+Symbol
+Símbolo
 5014
-Mouse
-Ratón
+Symbol
+Símbolo
 5015
-Mouse
-Ratón
+Symbol
+Símbolo
 5016
 Symbol
 Símbolo
@@ -30719,587 +30719,491 @@ Símbolo
 Symbol
 Símbolo
 5029
-Symbol
-Símbolo
+Weather
+Clima
 5030
-Symbol
-Símbolo
+Weather
+Clima
 5031
-Symbol
-Símbolo
+Weather
+Clima
 5032
-Symbol
-Símbolo
+Weather
+Clima
 5033
-Symbol
-Símbolo
+DNA
+ADN
 5034
-Symbol
-Símbolo
+DNA
+ADN
 5035
-Symbol
-Símbolo
+DNA
+ADN
 5036
-Symbol
-Símbolo
+Bagworm
+Larva
 5037
-Symbol
-Símbolo
+Bagworm
+Larva
 5038
-Symbol
-Símbolo
+Bagworm
+Larva
 5039
-Symbol
-Símbolo
+Bagworm
+Larva
 5040
-Symbol
-Símbolo
-5041
-Symbol
-Símbolo
-5042
-Symbol
-Símbolo
-5043
-Weather
-Clima
-5044
-Weather
-Clima
-5045
-Weather
-Clima
-5046
-Weather
-Clima
-5047
-DNA
-ADN
-5048
-DNA
-ADN
-5049
-DNA
-ADN
-5050
-Bagworm
-Larva
-5051
-Bagworm
-Larva
-5052
-Bagworm
-Larva
-5053
-Bagworm
-Larva
-5054
 Blossom
 Floración
-5055
+5041
 Sea Slug
 Babosa Marina
-5056
+5042
 Sea Slug
 Babosa Marina
-5057
-Plasma
-Plasma
-5058
-Plasma
-Plasma
-5059
-Plasma
-Plasma
-5060
-Plasma
-Plasma
-5061
-Plasma
-Plasma
-5062
+5043
 Renegade
 Renegado
-5063
+5044
 Gratitude
 Gratitud
-5064
+5045
 Alpha
 Alfa
-5065
+5046
 Alpha
 Alfa
-5066
+5047
 Alpha
 Alfa
-5067
+5048
 Alpha
 Alpha
-5068
-Alpha
-Alfa
-5069
+5049
 Alpha
 Alfa
-5070
+5050
 Alpha
 Alfa
-5071
+5051
 Alpha
 Alfa
-5072
+5052
 Alpha
 Alfa
-5073
+5053
 Alpha
 Alfa
-5074
+5054
 Alpha
 Alfa
-5075
+5055
 Alpha
 Alfa
-5076
+5056
 Alpha
 Alfa
-5077
+5057
 Alpha
 Alfa
-5078
+5058
 Alpha
 Alfa
-5079
+5059
 Alpha
 Alfa
-5080
+5060
 Alpha
 Alfa
-5081
+5061
 Alpha
 Alfa
-5082
+5062
+Alpha
+Alfa
+5063
 Hostile
 Violento
-5083
+5064
 Season
 Estacional
-5084
+5065
 Season
 Estacional
-5085
+5066
 Season
 Estacional
-5086
+5067
 Season
 Estacional
-5087
+5068
 Season
 Estacional
-5088
+5069
 Season
 Estacional
-5089
+5070
 Cyclone
 Torbellino
-5090
+5071
 Bolt Strike
 Centella
-5091
+5072
 Abundance
 Fertilidad
-5092
+5073
 Boundary
 Frontera
-5093
+5074
 Boundary
 Frontera
-5094
+5075
 Boundary
 Frontera
-5095
+5076
 Boundary
 Frontera
-5096
+5077
 Colt
 Potro
-5097
+5078
 Melody
 Melodía
+5079
+Paleozoic
+Paleozoico
+5080
+Paleozoic
+Paleozoico
+5081
+Paleozoic
+Paleozoico
+5082
+Paleozoic
+Paleozoic
+5083
+Scale
+Escamaposa
+5084
+Scale
+Escamaposa
+5085
+Scale
+Escamaposa
+5086
+Scale
+Escamaposa
+5087
+Scale
+Escamaposa
+5088
+Scale
+Escamaposa
+5089
+Scale
+Escamaposa
+5090
+Scale
+Escamaposa
+5091
+Scale
+Escamaposa
+5092
+Scale
+Escamaposa
+5093
+Scale
+Escamaposa
+5094
+Scale
+Escamaposa
+5095
+Scale
+Escamaposa
+5096
+Scale
+Escamaposa
+5097
+Scale
+Escamaposa
 5098
-Paleozoic
-Paleozoico
+Scale
+Escamaposa
 5099
-Paleozoic
-Paleozoico
+Scale
+Escamaposa
 5100
-Paleozoic
-Paleozoico
+Scale
+Escamaposa
 5101
-Paleozoic
-Paleozoic
+Scale
+Escamaposa
 5102
-Scale
-Escamaposa
+Single Bloom
+Monoflor
 5103
-Scale
-Escamaposa
+Single Bloom
+Monoflor
 5104
-Scale
-Escamaposa
+Single Bloom
+Monoflor
 5105
-Scale
-Escamaposa
+Single Bloom
+Monoflor
 5106
-Scale
-Escamaposa
+Single Bloom
+Monoflor
 5107
-Scale
-Escamaposa
+Single Bloom
+Monoflor
 5108
-Scale
-Escamaposa
+Single Bloom
+Monoflor
 5109
-Scale
-Escamaposa
+Single Bloom
+Monoflor
 5110
-Scale
-Escamaposa
+Garden
+Jardín
 5111
-Scale
-Escamaposa
+Garden
+Jardín
 5112
-Scale
-Escamaposa
+Garden
+Jardín
 5113
-Scale
-Escamaposa
+Garden
+Jardín
 5114
-Scale
-Escamaposa
+Poodle
+Caniche
 5115
-Scale
-Escamaposa
+Poodle
+Caniche
 5116
-Scale
-Escamaposa
+Poodle
+Caniche
 5117
-Scale
-Escamaposa
+Poodle
+Caniche
 5118
-Scale
-Escamaposa
+Poodle
+Caniche
 5119
-Scale
-Escamaposa
+Poodle
+Caniche
 5120
-Scale
-Escamaposa
+Poodle
+Caniche
 5121
-Single Bloom
-Monoflor
+Poodle
+Caniche
 5122
-Single Bloom
-Monoflor
+Poodle
+Caniche
 5123
-Single Bloom
-Monoflor
-5124
-Single Bloom
-Monoflor
-5125
-Single Bloom
-Monoflor
-5126
-Single Bloom
-Monoflor
-5127
-Single Bloom
-Monoflor
-5128
-Single Bloom
-Monoflor
-5129
-Garden
-Jardín
-5130
-Garden
-Jardín
-5131
-Garden
-Jardín
-5132
-Garden
-Jardín
-5133
-Poodle
-Caniche
-5134
-Poodle
-Caniche
-5135
-Poodle
-Caniche
-5136
-Poodle
-Caniche
-5137
-Poodle
-Caniche
-5138
-Poodle
-Caniche
-5139
-Poodle
-Caniche
-5140
-Poodle
-Caniche
-5141
-Poodle
-Caniche
-5142
-Constraint
-Auto Control
-5143
 Royal Sword
 Espada Real
-5144
+5124
 Pumpkin
 Calabaza
-5145
+5125
 Pumpkin
 Calabaza
-5146
+5126
 Pumpkin
 Calabaza
-5147
+5127
 Pumpkin
 Calabaza
-5148
+5128
 Pumpkin
 Calabaza
-5149
+5129
 Pumpkin
 Calabaza
-5150
+5130
 Life
 Vida
-5151
+5131
 Order
 Orden
-5152
+5132
 Order
 Orden
-5153
+5133
 Order
 Orden
-5154
+5134
 Mischief
 Genio Burlón
-5155
-Dancing
-Danza
-5156
-Dancing
-Danza
-5157
-Dancing
-Danza
-5158
+5135
 Wolf
 Lobo
-5159
-Wolf
-Lobo
-5160
+5136
 Small Fry
 Pececillo
-5161
+5137
 Synthetic
 Multigénico
-5162
+5138
 Synthetic
 Multigénico
-5163
+5139
 Synthetic
 Multigénico
-5164
+5140
 Synthetic
 Multigénico
-5165
+5141
 Synthetic
 Multigénico
-5166
+5142
 Synthetic
 Multigénico
-5167
+5143
 Synthetic
 Multigénico
-5168
+5144
 Synthetic
 Multigénico
-5169
+5145
 Synthetic
 Multigénico
-5170
+5146
 Synthetic
 Multigénico
-5171
+5147
 Synthetic
 Multigénico
-5172
+5148
 Synthetic
 Multigénico
-5173
+5149
 Synthetic
 Multigénico
-5174
+5150
 Synthetic
 Multigénico
-5175
+5151
 Synthetic
 Multigénico
-5176
+5152
 Synthetic
 Multigénico
-5177
+5153
 Synthetic
 Multigénico
-5178
+5154
 Synthetic
 Multigénico
-5179
+5155
 Meteor
 Meteorp
-5180
+5156
 Meteor
 Meteoro
-5181
+5157
 Meteor
 Meteoro
-5182
+5158
 Meteor
 Meteoro
-5183
+5159
 Meteor
 Meteoro
-5184
+5160
 Meteor
 Meteoro
-5185
+5161
 Meteor
 Meteoro
-5186
+5162
 Disguise
 Disfraz
-5187
+5163
 Prism
 Prisma
-5188
+5164
 Prism
 Prisma
-5189
+5165
 Prism
 Prism
-5190
+5166
 Prism
 Prism
-5191
+5167
 Artificial
 Artificial
-5192
+5168
 Gulp
 Tragón
-5193
+5169
 Gulp
 Tragón
-5194
+5170
 Penguin
 Pingüino
-5195
+5171
 Black Tea
 Té Negro
-5196
+5172
 Black Tea
 Té Negro
-5197
-Emotion
-Emoción
-5198
+5173
 Two-Sided
 Embustero
-5199
+5174
 Warrior
 Guerrero
-5200
+5175
 Warrior
 Guerrero
-5201
-Wushu
-Kung-Fu
-5202
+5176
 High King
 Emperador
-5203
+5177
 High King
 Emperador
-5204
+5178
 Sea Basin
 Cuenta Mar
-5205
+5179
 Continent
 Continente
-5206
+5180
 Sky High
 Cielo
-5207
-Blazing
-Daruma
-5208
-Blazing
-Daruma
-5209
+5181
 Light
 Luz
-5210
+5185
 Mach
 Mach
-5211
+5183
 Atrocious
 Atrocidad
-5212
+5184
 Embrace
 Envolvente
-5213
+5185
 Blade
 Cuchilla
-5214
+5186
 Genetic
 Genético
-5215
+5187
 Genetic
 Genético
-5216
+5188
 Love-Hate
 Amorodio
-5217
+5189
 Harvest
 Cosecha
-5218
+5190
 Mellow
 Meloso
-5067
-Alpha
-Alfa
-5101
-Paleozoic
-Paleozoico
-5189
-Prism
-Prisma
-5190
-Prism
-Prisma
 [3]
 1
 Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun's rays, the seed grows progressively larger.
@@ -35004,9 +34908,6 @@ Usa tanto magia blanca como negra. Cosecha las flores que crecen en brujas que r
 It differs from other Basculin in several respects, including demeanor. It is much gentler than other color variants.
 Se diferencia de otros Basculin en varios aspectos, incluido el comportamiento. Es mucho más gentil que sus otra variantes.
 [4]
-676
-Natural
-Salvaje
 412
 Plant Cloak
 Tronco Planta
@@ -35067,9 +34968,9 @@ Flor Roja
 671
 Red Flower
 Flor Roja
-678
-Male
-Macho
+676
+Natural
+Salvaje
 681
 Shield
 Escudo
@@ -35106,9 +35007,6 @@ Encubierto
 875
 Ice Face
 Cara Hielo
-876
-Male
-Macho
 877
 Full Belly
 Saciada
@@ -35127,562 +35025,478 @@ Modo Normal
 2060
 Incarnate
 Avatar
-5002
-Cosplay
-Coqueta
-5003
-Cosplay - Belle
-Coqueta - Aristócrata
-5004
-Cosplay - Libre
-Coqueta - Enmascarada
-5005
-Cosplay - Ph.D.
-Coqueta - Erudita
-5006
-Cosplay - Pop Star
-Coqueta - Superstar
-5007
-Cosplay - Rock Star
-Coqueta - Roquera
-5008
-Original Cap
-Gorra Original
-5009
-Hoenn Cap
-Gorra Hoenn
-5010
-Sinnoh Cap
-Gorra Sinnoh
-5011
-Unova Cap
-Gorra Teselia
-5012
-Kalos Cap
-Gorra Kalos
-5013
-Alola Cap
-Gorra Alola
-5014
-Partner Cap
-Gorra Compañero
-5015
-World Cap
-Gorra Trotamundos
-5043
+5029
 Sun
 Sol
-5044
+5030
 Rain
 Lluvia
-5045
+5031
 Hail
 Granizo
-5046
+5032
 Sand
 Arena
-5047
+5033
 Attack
 Ataque
-5048
+5034
 Defense
 Defensa
-5049
+5035
 Speed
 Velocidad
-5050
+5036
 Sand
 Arena
-5051
+5037
 Trash
 Basura
-5052
+5038
 Sand
 Arena
-5053
+5039
 Trash
 Basura
-5054
+5040
 Sun
 Sol
-5055
+5041
 East Sea
 Mar Este
-5056
+5042
 East Sea
 Mar Este
-5057
-Heat
-Calor
-5058
-Wash
-Lavado
-5059
-Frost
-Frío
-5060
-Fan
-Ventilador
-5061
-Mow
-Corte
-5062
+5043
 Origin
 Origen
-5063
+5044
 Sky
 Cielo
-5064
+5045
 Fighting Type
 Tipo Lucha
-5065
+5046
 Flying Type
 Tipo Volador
-5066
+5047
 Poison Type
 Tipo Veneno
-5067
+5048
 Ground Type
 Tipo Tierra
-5068
+5049
 Rock Type
 Tipo Roca
-5069
+5050
 Bug Type
 Tipo Bicho
-5070
+5051
 Ghost Type
 Tipo Fantasma
-5071
+5052
 Steel Type
 Tipo Acero
-5072
+5053
 Unknown Type
 Tipo Desconocido
-5073
+5054
 Fire Type
 Tipo Fuego
-5074
+5055
 Water Type
 Tipo Agua
-5075
+5056
 Grass Type
 Tipo Planta
-5076
+5057
 Electric Type
 Tipo Eléctrico
-5077
+5058
 Psychic Type
 Tipo Psíquico
-5078
+5059
 Ice Type
 Tipo Hielo
-5079
+5060
 Dragon Type
 Tipo Dragón
-5080
+5061
 Dark Type
 Tipo Siniestro
-5081
+5062
 Fairy Type
 Tipo Hada
-5082
+5063
 Blue-Striped
 Raya Azul
-5083
+5064
 Summer
 Verano
-5084
+5065
 Autumn
 Otoño
-5085
+5066
 Winter
 Invierno
-5086
+5067
 Summer
 Verano
-5087
+5068
 Autumn
 Otoño
-5088
+5069
 Winter
 Invierno
-5089
+5070
 Therian
 Tótem
-5090
+5071
 Therian
 Tótem
-5091
+5072
 Therian
 Tótem
-5092
+5073
 White
 Blanco
-5093
+5074
 Black
 Negro
-5096
+5077
 Resolute
 Brío
-5097
+5078
 Pirouette
 Pirueta 
-5098
+5079
 Shock Drive
 FulgoROM
-5099
+5080
 Burn Drive
 PiroROM
-5100
+5081
 Chill Drive
 CrioROM
-5101
+5082
 Douse Drive
 HidroROM
-5102
+5083
 Continental Pattern
 Motivo Continental
-5103
+5084
 Elegant Pattern
 Motivo Oriental
-5104
+5085
 Garden Pattern
 Motivo Vergel
-5105
+5086
 High Plains Pattern
 Motivo Estepa
-5106
+5087
 Icy Snow Pattern
 Motivo Polar
-5107
+5088
 Jungle Pattern
 Motivo Jungla
-5108
+5089
 Marine Pattern
 Motivo Marino
-5109
+5090
 Archipelago Pattern
 Motivo Isleño
-5110
+5091
 Modern Pattern
 Motivo Moderno
-5111
+5092
 Monsoon Pattern
 Motivo Monzón
-5112
+5093
 Ocean Pattern
 Motivo Océano
-5113
+5094
 Polar Pattern
 Motivo Taiga
-5114
+5095
 River Pattern
 Motivo Oasis
-5115
+5096
 Sandstorm Pattern
 Motivo Desierto
-5116
+5097
 Savanna Pattern
 Motivo Pantano
-5117
+5098
 Sun Pattern
 Motivo Solar
-5118
+5099
 Tundra Pattern
 Motivo Tundra
-5119
+5100
 Fancy Pattern
 Motivo Fantasía
-5120
+5101
 Poké Ball Pattern
 Motivo Poké Ball
-5121
+5102
 Yellow Flower
 Flor Amarilla
-5122
+5103
 Orange Flower
 Flor Naranja
-5123
+5104
 Blue Flower
 Flor Azul
-5124
+5105
 White Flower
 Flor Blanca
-5125
+5106
 Yellow Flower
 Flor Amarilla 
-5126
+5107
 Orange Flower
 Flor Naranja 
-5127
+5108
 Blue Flower
 Flor Azul
-5128
+5109
 White Flower
 Flor Blanca
-5129
+5110
 Yellow Flower
 Flor Amarilla
-5130
+5111
 Orange Flower
 Flor Naranja
-5131
+5112
 Blue Flower
 Flor Azul
-5132
+5113
 White Flower
 Flor Blanca
-5133
+5114
 Heart Trim
 Corte Corazón
-5134
+5115
 Star Trim
 Corte Estrella
-5135
+5116
 Diamond Trim
 Corte Rombo
-5136
+5117
 Debutante Trim
 Corte Señorita
-5137
+5118
 Matron Trim
 Corte Dama
-5138
+5119
 Dandy Trim
 Corte Caballero
-5139
+5120
 La Reine Trim
 Corte Aristocrático
-5140
+5121
 Kabuki Trim
 Corte Kabuki
-5141
+5122
 Pharaoh Trim
 Corte Faraónico
-5142
-Meowstic♀
-Meowstic♀
-5143
+5123
 Blade
 Filo
-5144
+5124
 Average Size
 Tamaño Normal
-5145
+5125
 Large Size
 Tamaño Grande
-5146
+5126
 Super Size
 Tamaño Extragrande
-5147
+5127
 Average Size
 Tamaño Normal
-5148
+5128
 Large Size
 Tamaño Grande
-5149
+5129
 Super Size
 Tamaño Extragrande
-5150
+5130
 Active Mode
 Modo Activo
-5151
+5131
 10%
 10%
-5152
+5132
 Complete
 Completo
-5154
+5134
 Unbound
 Desatado
-5155
-Pom-Pom Style
-Estilo Animado
-5156
-Pa'u Style
-Estilo Plácido
-5157
-Sensu Style
-Estilo Refinado
-5158
+5135
 Midnight
 Nocturno
-5159
-Dusk
-Crepuscular
-5160
+5136
 School
 Banco
-5161
+5137
 Type: Fighting
 Tipo: Lucha
-5162
+5138
 Type: Flying
 Tipo: Volador
-5163
+5139
 Type: Poison
 Tipo: Veneno
-5164
+5140
 Type: Ground
 Tipo: Tierra
-5165
+5141
 Type: Rock
 Tipo: Roca
-5166
+5142
 Type: Bug
 Tipo: Bicho
-5167
+5143
 Type: Ghost
 Tipo: Fantasma
-5168
+5144
 Type: Steel
 Tipo: Acero
-5169
+5145
 Type: Unknown
 Tipo: Desconocidop
-5170
+5146
 Type: Fire
 Tipo: Fuego
-5171
+5147
 Type: Water
 Tipo: Agua
-5172
+5148
 Type: Grass
 Tipo: Planta
-5173
+5149
 Type: Electric
 Tipo: Eléctrico
-5174
+5150
 Type: Psychic
 Tipo: Psíquico
-5175
+5151
 Type: Ice
 Tipo: Hielo
-5176
+5152
 Type: Dragon
 Tipo: Dragón
-5177
+5153
 Type: Dark
 Tipo: Siniestro
-5178
+5154
 Type: Fairy
 Tipo: Hada
-5179
+5155
 Red
 Rojo
-5180
+5156
 Orange
 Naranja
-5181
+5157
 Yellow
 Amarillo
-5182
+5158
 Green
 Verde
-5183
+5159
 Blue
 Azul
-5184
+5160
 Indigo
 Añil
-5185
+5161
 Violet
 Violeta
-5186
+5162
 Busted
 Descubierta
-5187
+5163
 Dusk Mane
 Melena Crepuscular
-5188
+5164
 Dawn Wings
 Alas del Alba
-5189
+5165
 Ultra
 Ultra
-5191
+5167
 Original Color
 Color Vetusto
-5192
+5168
 Gulping
 Tragatodo
-5193
+5169
 Gorging
 Engulletodo
-5194
+5170
 Melted
 Deshielo
-5195
+5171
 Antique
 Genuina
-5196
+5172
 Antique
 Genuina
-5197
-♀
-♀
-5198
+5173
 Hangry
 Voraz
-5199
+5174
 Crowned
 Espada Suprema
-5200
+5175
 Crowned
 Escudo Supremo
-5201
-Rapid Strike
-Estilo Fluido
-5202
+5176
 Ice
 Jinete Glacial
-5203
+5177
 Shadow
 Jinete Espectral
-5204
+5178
 Primal
 Primigenio
-5205
+5179
 Primal
 Primigenio
-5206
+5180
 Delta
 Delta
-5207
-Zen
-Daruma
-5208
-Zen
-Daruma
-5209
+5181
 Ascended
 Ascendido
-5210
+5182
 Reaper
 Guadaña
-5211
+5183
 Rampage
 Desenfrenada
-5212
+5184
 Finale
 Clímax
-5213
+5185
 Finale
 Clímax
-5214
+5186
 Overmatter
 Extramasa
-5215
+5187
 Overmind
 Extramente
-5216
+5188
 Therian
 Tótem
-5217
+5189
 Harvest
 Cosecha
-5218
+5190
 White-Striped
 Raya Blanca
 [5]
@@ -39774,7 +39588,7 @@ El usuario usa su envidia para atacar al objetivo con un abrazo fantasmal, maldi
 The user becomes a pain train. It has a 10% chance to raise the user's Speed.
 El usuario ataca como si fuera un tren. Tiene un 10% de probabilidad de aumentar la Velocidad del usuario.
 The target is irritated by allergenic plants, poisoning it.
-El usuario irrita al objetivo con plantas 
+El usuario irrita al objetivo con plantas, envenenándolo. 
 The user applies anesthetic substances, numbing the target
 El usuario aplica sustancias anestésicas que aturden al objetivo.
 The user pulls the target under the waves, trapping and damaging it for three turns.
@@ -56045,7 +55859,7 @@ May 22nd
 I wonder if it's just me. So sentimental and wistful over little things I thought I knew. Is nostalgia tainting my perceptions? Or is the world truly as broken as it looks?
 Me pregunto si soy solo yo. Tan sentimental y nostálgico sobre las pequeñas cosas que pensé que conocía. ¿Acaso la nostalgia esta manchando mi percepción? ¿O es el mundo tan roto como parece?<<n>>
 My new friend makes me expect the latter. A sad story. But... inspiring nonetheless. Maybe I'll meet them again someday.
-Mi nuevo amigo me hace esperar lo última. Una triste historia. Pero... inspirador después de todo. Quizás me lo volveré a encontrar algún día.<<n>>
+Mi nuevo amigo me hace esperar lo último. Una triste historia. Pero... inspirador después de todo. Quizás me lo volveré a encontrar algún día.<<n>>
 May 26th
 26 de Mayo
 Life. Not just Life as life – Life as creation. Life as energy. Life as imagination, and falsehood, and memory, and motion. Over six days in Makya, this is the one place that seems to be governed by Life... and not its negation.
