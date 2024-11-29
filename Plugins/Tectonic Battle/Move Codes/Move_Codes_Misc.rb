@@ -688,7 +688,7 @@ end
 #===============================================================================
 class PokeBattle_Move_KyogreSummonAvatarLuvdiscRemoraid < PokeBattle_Move
     def pbMoveFailed?(user, _targets, show_message)
-        if !user.countsAs?(:KYOGRE)# || !user.boss?
+        if !user.countsAs?(:KYOGRE) || !user.boss?
             @battle.pbDisplay(_INTL("But {1} can't use the move!", user.pbThis(true))) if show_message
             return true
         end
@@ -704,6 +704,8 @@ class PokeBattle_Move_KyogreSummonAvatarLuvdiscRemoraid < PokeBattle_Move
         @battle.summonAvatarBattler(:LUVDISC, user.level, 0, user.index % 2)
         @battle.summonAvatarBattler(:REMORAID, user.level, 0, user.index % 2)
         @battle.pbSwapBattlers(user.index, user.index + 2)
+
+        @battle.remakeDataBoxes
     end
 end
 
