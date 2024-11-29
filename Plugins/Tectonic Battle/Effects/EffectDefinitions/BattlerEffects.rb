@@ -1316,14 +1316,6 @@ GameData::BattleEffect.register_effect(:Battler, {
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
-    :id => :WarpingCore,
-    :real_name => "Weight Doubled",
-    :apply_proc => proc do |battle, battler, _value|
-        battle.pbDisplay(_INTL("{1} weighs twice as much!", battler.pbThis))
-    end,
-})
-
-GameData::BattleEffect.register_effect(:Battler, {
     :id => :Refurbished,
     :real_name => "Weight Halved",
     :type => :Integer,

@@ -175,7 +175,7 @@ class PokeBattle_Move
         end
         # Other effects, inc. ones that set accuracy_multiplier or evasion_step to
         # specific values
-        modifiers[:accuracy_multiplier] *= 2.0 if @battle.field.effectActive?(:Gravity)
+        modifiers[:accuracy_multiplier] *= 2.0 if @battle.gravityIntensified?
         modifiers[:accuracy_multiplier] *= 1.5 if user.effectActive?(:Spotting)
 
         if aiCheck

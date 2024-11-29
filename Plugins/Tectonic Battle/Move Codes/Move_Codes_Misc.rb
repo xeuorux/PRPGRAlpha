@@ -710,27 +710,24 @@ class PokeBattle_Move_KyogreSummonAvatarLuvdiscRemoraid < PokeBattle_Move
 end
 
 #===============================================================================
-# Summons Gravity for 10 turn and doubles the weight of Pokemon on the opposing side.
+# Summons permanent Gravity, which also doubles the weight of Pokemon on the opposing side.
 # Only usable by the avatar of Groudon (Warping Core)
 #===============================================================================
-class PokeBattle_Move_GroudonStartGravity10DoubleFoeWeight < PokeBattle_Move
+class PokeBattle_Move_GroudonStartGravityDoubleAllWeight < PokeBattle_Move
     def pbMoveFailed?(user, _targets, show_message)
         if !user.countsAs?(:GROUDON) || !user.boss?
             @battle.pbDisplay(_INTL("But {1} can't use the move!", user.pbThis(true))) if show_message
             return true
         end
-        if @battle.field.effectActive?(:Gravity)
+        if @battle.field.effectActive?(:WarpingCore)
             @battle.pbDisplay(_INTL("But gravity is already warped!", user.pbThis(true))) if show_message
             return true
         end
         return false
     end
 
-    def pbEffectGeneral(user)
-        @battle.field.applyEffect(:Gravity, 5)
-        @battle.eachOtherSideBattler(user) do |b|
-            b.applyEffect(:WarpingCore)
-        end
+    def pbEffectGeneral(_user)
+        @battle.field.applyEffect(:WarpingCore)
     end
 end
 

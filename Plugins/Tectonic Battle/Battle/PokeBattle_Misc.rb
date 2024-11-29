@@ -355,6 +355,12 @@ class PokeBattle_Battle
         end
         return mult
     end
+    
+    def gravityIntensified?
+        return true if @field.effectActive?(:Gravity)
+        return true if @field.effectActive?(:WarpingCore)
+        return false
+    end
 end
 
 def getAbilityName(ability)

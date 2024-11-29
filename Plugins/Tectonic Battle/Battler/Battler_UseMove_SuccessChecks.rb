@@ -28,7 +28,7 @@ class PokeBattle_Battler
             return false
         end
         # Gravity
-        if @battle.field.effectActive?(:Gravity) && move.unusableInGravity?
+        if @battle.gravityIntensified? && move.unusableInGravity?
             msg = _INTL("{1} can't use {2} because of gravity!", pbThis, move.name)
             if showMessages
                 commandPhase ? @battle.pbDisplayPaused(msg) : @battle.pbDisplay(msg)

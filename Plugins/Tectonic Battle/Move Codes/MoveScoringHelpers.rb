@@ -967,7 +967,7 @@ end
 
 def getGravityEffectScore(user, duration)
     score = 0
-    duration -= user.battle.field.countEffect(:Gravity) if user.battle.field.effectActive?(:Gravity)
+    duration -= user.battle.field.countEffect(:Gravity) if user.battle.gravityIntensified?
     user.battle.eachBattler do |b|
         bScore = 0
         bScore -= 4 if b.airborne?(true)
