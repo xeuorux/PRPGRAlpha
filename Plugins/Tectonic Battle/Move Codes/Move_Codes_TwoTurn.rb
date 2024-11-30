@@ -412,7 +412,7 @@ end
 
 #===============================================================================
 # Two turn attack. Skips first turn, and increases the user's Special Attack,
-# Special Defense and Speed by 2 steps each in the second turn. (Geomancy)
+# Special Defense and Speed by 4 steps each in the second turn. (Geomancy)
 #===============================================================================
 class PokeBattle_Move_TwoTurnAttackRaiseUserSpAtkSpDefSpd4 < PokeBattle_TwoTurnMove
     def initialize(battle, move)

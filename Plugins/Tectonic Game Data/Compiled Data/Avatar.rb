@@ -13,7 +13,7 @@ module GameData
         attr_reader :moves5
         attr_reader :post_prime_moves
         attr_reader :abilities
-        attr_reader :item
+        attr_reader :items
         attr_reader :hp_mult
         attr_reader :dmg_mult
         attr_reader :dmg_resist
@@ -34,7 +34,7 @@ module GameData
           "Moves4"      		=> [:moves4,		"*E", 	:Move],
           "Moves5"      		=> [:moves5,		"*E", 	:Move],
           "Ability"      		=> [:abilities,		"*e", 	:Ability],
-          "Item"         		=> [:item,			"e", 	:Item],
+          "Item"         		=> [:items,			"*e", 	:Item],
           "HPMult"				=> [:hp_mult,		"f"],
           "DMGMult"				=> [:dmg_mult,		"F"],
           "DMGResist"			=> [:dmg_resist,	"F"],
@@ -101,8 +101,8 @@ module GameData
             @moves3		= hash[:moves3] || []
             @moves4		= hash[:moves4] || []
             @moves5		= hash[:moves5] || []
-            @abilities	= hash[:abilities]
-            @item		= hash[:item]
+            @abilities	= hash[:abilities] || []
+            @items		= hash[:items] || []
             @hp_mult	= hash[:hp_mult] || DEFAULT_BOSS_HP_MULT
             @dmg_mult	= hash[:dmg_mult] || DEFAULT_BOSS_DAMAGE_MULT
             @dmg_resist	= hash[:dmg_resist] || 0
@@ -256,7 +256,7 @@ module Compiler
 					  :moves4			=> contents["Moves4"],
 					  :moves5			=> contents["Moves5"],
 					  :abilities		=> contents["Ability"],
-					  :item				=> contents["Item"],
+					  :items			=> contents["Item"],
 					  :hp_mult			=> contents["HPMult"],
 					  :dmg_mult			=> contents["DMGMult"],
 					  :dmg_resist		=> contents["DMGResist"],
@@ -322,7 +322,7 @@ module Compiler
 		else
 			f.write(format("[%s]\r\n", avatar.species))
 		end
-		f.write(format("Ability = %s\r\n", avatar.abilities.join(",")))
+		f.write(format("Ability = %s\r\n", avatar.abilities.join(","))) unless avatar.abilities.empty?
 		f.write(format("Moves1 = %s\r\n", avatar.moves1.join(",")))
 		if !avatar.moves2.nil? && avatar.num_phases >= 2
 			f.write(format("Moves2 = %s\r\n", avatar.moves2.join(",")))
@@ -341,7 +341,7 @@ module Compiler
 		if avatar.num_health_bars != avatar.num_phases
 			f.write(format("HealthBars = %s\r\n", avatar.num_health_bars))
 		end
-		f.write(format("Item = %s\r\n", avatar.item)) unless avatar.item.nil?
+        f.write(format("Item = %s\r\n", avatar.items.join(","))) unless avatar.items.empty?
 		f.write(format("DMGMult = %s\r\n", avatar.dmg_mult)) if avatar.dmg_mult != DEFAULT_BOSS_DAMAGE_MULT
 		f.write(format("DMGResist = %s\r\n", avatar.dmg_resist)) if avatar.dmg_resist != 0.0
 		f.write(format("Form = %s\r\n", avatar.form)) if avatar.form != 0

@@ -230,7 +230,7 @@ class PokeBattle_AI_XERNEAS < PokeBattle_AI_Boss
     def initialize(user, battle)
         super
         @useMoveIFF.add(:GEOMANCY, proc { |_move, user, _target, battle|
-            next battle.turnCount == 0 && user.lastTurnThisRound?
+            next user.hasItem?(:POWERHERB) && user.lastTurnThisRound?
         })
     end
 end

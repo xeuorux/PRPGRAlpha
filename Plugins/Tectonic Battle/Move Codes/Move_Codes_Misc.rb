@@ -433,7 +433,7 @@ class PokeBattle_Move_ChangeUserDeoxusChoiceOfForm < PokeBattle_Move
         if @battle.autoTesting
             @chosenForm = rand(3) + 1
         elsif !user.pbOwnedByPlayer? # Trainer AI
-            @chosenForm = 2 # Always chooses mega mind form
+            @chosenForm = 2 # Always chooses defense form
         else
             form1Name = GameData::Species.get_species_form(:DEOXYS,1).form_name
             form2Name = GameData::Species.get_species_form(:DEOXYS,2).form_name
