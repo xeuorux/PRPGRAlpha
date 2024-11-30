@@ -164,7 +164,7 @@ class PokeBattle_Battle
 
     def extendWeather(numTurns = 1)
         return if pbWeather == :None
-        if weatherDuration < 0
+        if @field.weatherDuration < 0
             pbDisplay(_INTL("The {1} would be extended, but it's already indefinite!",weatherName))
             return
         end
