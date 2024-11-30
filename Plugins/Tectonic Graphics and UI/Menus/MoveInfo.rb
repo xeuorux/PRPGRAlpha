@@ -137,7 +137,8 @@ module MoveInfoDisplay
         pbDrawTextPositions(overlay, textpos)
       
         # Draw selected move's description
-        drawTextEx(overlay,8,96 + 12,500,4,moveData.description,base,shadow)
+        formattedDescription = addMoveKeywordHighlighting(moveData.description)
+        drawFormattedTextEx(overlay, 8, 96 + 12, 496, formattedDescription, base, shadow)
 
         playAdaptiveMovesTutorial if moveData.category == 3 && !$PokemonGlobal.adaptiveMovesTutorialized && !skipTutorial
     end
@@ -272,8 +273,95 @@ module MoveInfoDisplay
       pbDrawTextPositions(overlay, textpos)
 
       # Draw selected move's description
-      drawTextEx(overlay, descriptionX, descriptionY, 496, 3, moveData.description, base, shadow)
+      formattedDescription = addMoveKeywordHighlighting(moveData.description)
+      drawFormattedTextEx(overlay, descriptionX, descriptionY, 496, formattedDescription, base, shadow)
 
       playAdaptiveMovesTutorial if moveData.category == 3 && !$PokemonGlobal.adaptiveMovesTutorialized
+    end
+
+    def moveKeywordsImportant
+      return [
+        "rainstorm",
+        "sunshine",
+        "sandstorm",
+        "hail",
+        "eclipse",
+        "moonglow",
+        "burning",
+        "burned",
+        "burns",
+        "burn",
+        "frostbiting",
+        "frostbitten",
+        "frostbites",
+        "frostbite",
+        "numbing",
+        "numbed",
+        "numbs",
+        "numb",
+        "poisoning",
+        "poisoned",
+        "poisons",
+        "poison",
+        "leeching",
+        "leeched",
+        "leeches",
+        "leech",
+        "dizzying",
+        "dizzied",
+        "dizzies",
+        "dizzy",
+        "Attack",
+        "Sp. Atk",
+        "Defense",
+        "Sp. Def",
+        "Speed",
+        "Accuracy",
+        "Evasion",
+        "maximize",
+        "minimize",
+      ]
+    end
+
+    def moveKeywordsUnimportant
+      return [
+        "one",
+        "two",
+        "three",
+        "four",
+        "five",
+        "six",
+        "seven",
+        "eight",
+        "nine",
+        "ten",
+        "eleven",
+        "twelve",
+        "thirteen",
+        "fourteen",
+        "fifteen",
+        "sixteen",
+        "seventeen",
+        "eighteen",
+        "nineteen",
+        "twenty",
+      ]
+    end
+
+    def addMoveKeywordHighlighting(moveDescription)
+      # Highlight very important words in red
+      importantColorTag = getSkinColor(nil, 2, darkMode?, true)
+      moveKeywordsImportant.each do |keyword|
+        moveDescription = moveDescription.gsub(" #{keyword}"," #{importantColorTag}#{keyword}</c3>")
+      end
+      
+      # Outline less important keywords
+      unimportantColorTag = getSkinColor(nil, 13, darkMode?, true)
+      moveKeywordsUnimportant.each do |keyword|
+        moveDescription = moveDescription.gsub(" #{keyword}"," #{unimportantColorTag}#{keyword}</c3>")
+      end
+      moveDescription = moveDescription.gsub("/ [1-9][0-9]*\%\%/"," #{unimportantColorTag}\1</c3>")
+
+      return moveDescription
     end
 end
