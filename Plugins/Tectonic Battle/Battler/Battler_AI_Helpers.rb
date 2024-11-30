@@ -264,7 +264,7 @@ class PokeBattle_Battler
             next unless move.hazardMove?
             next unless @battle.pbCanChooseMove?(index, i, false)
             next if @battle.battleAI.aiPredictsFailure?(move, self, self)
-            return true, mmove.statusMove?
+            return true, move.statusMove?
         end
         return false
     end
