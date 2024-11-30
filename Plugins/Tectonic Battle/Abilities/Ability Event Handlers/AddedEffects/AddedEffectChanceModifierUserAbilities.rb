@@ -32,3 +32,10 @@ BattleHandlers::AddedEffectChanceModifierUserAbility.add(:SERENEGRACE,
         next chance
     }
 )
+
+BattleHandlers::AddedEffectChanceModifierUserAbility.add(:SILVERLINING,
+    proc { |ability, user, target, move, chance|
+        chance *= 2.0 if user.battle.rainy?
+        next chance
+    }
+)

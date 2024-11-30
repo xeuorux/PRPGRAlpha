@@ -585,6 +585,11 @@ Flags = EclipseSynergy
 Name = Ferocious
 Description = Double the Pokémon's Speed if any enemy is below half health.
 #-------------------------------
+[FERROFLUID]
+Name = Ferrofluid
+Description = Takes 25% less damage in a rainstorm.
+Flags = RainstormSynergy
+#-------------------------------
 [FIERYSPIRIT]
 Name = Fiery Spirit
 Description = Special moves against the Pokémon have a 30% chance to burn the attacker.
@@ -823,7 +828,7 @@ Flags = SunshineSynergy
 #-------------------------------
 [HEATVEIL]
 Name = Heat Veil
-Description = Doubled Sp. Def in sunshine.
+Description = Doubles Sp. Def in sunshine.
 Flags = SunshineSynergy
 #-------------------------------
 [HEAVENSCROWN]
@@ -1502,6 +1507,11 @@ Description = Can't be numbed, leeched, trapped, or have its Speed reduced by fo
 Name = Rust & Wrack
 Description = The Pokémon is also Steel-type, but it takes 15% more damage from moves.
 #-------------------------------
+[SAFEPASSAGE]
+Name = Safe Instinct
+Description = Doubles Defense in rainstorm.
+Flags = RainstormSynergy
+#-------------------------------
 [SANDBURST]
 Name = Sand Burst
 Description = Summons a sandstorm for four turns when hit by an attack.
@@ -1608,6 +1618,11 @@ Description = Special moves against it lower the attacker's Speed and Sp. Atk.
 [SIGNALJAM]
 Name = Signal Jam
 Description = The Pokémon and other battlers don't benefit from same-type attacking bonus.
+#-------------------------------
+[SILVERLINING]
+Name = Silver Lining
+Description = Boosts Speed by 50% in rainstorm. Doubles random added effect chance in rainstorm.
+Flags = RainstormSynergy
 #-------------------------------
 [SIPHONSNIPER]
 Name = Siphon Sniper
@@ -2016,6 +2031,11 @@ Description = The Pokémon's attacks are always critical if there is an active R
 Name = Warping Effect
 Description = Double Sp. Def in eclipse.
 Flags = EclipseSynergy
+#-------------------------------
+[WATERFALLCONDITIONING]
+Name = Waterfall Conditioning
+Description = Boosts Speed by 50% in rainstorm. Can't miss during rainstorm.
+Flags = RainstormSynergy
 #-------------------------------
 [WEATHERED]
 Name = Weathered

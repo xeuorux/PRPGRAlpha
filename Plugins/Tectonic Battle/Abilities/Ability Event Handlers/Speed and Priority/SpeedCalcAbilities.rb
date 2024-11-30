@@ -167,3 +167,15 @@ BattleHandlers::SpeedCalcAbility.add(:LIVEFAST,
       next mult * 1.5
   }
 )
+
+BattleHandlers::SpeedCalcAbility.add(:WATERFALLCONDITIONING,
+  proc { |ability, battler, mult|
+      next mult * 1.5
+  }
+)
+
+BattleHandlers::SpeedCalcAbility.add(:SILVERLINING,
+  proc { |ability, battler, mult|
+      next mult * 1.5
+  }
+)
