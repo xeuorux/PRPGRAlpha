@@ -2047,6 +2047,10 @@ Name = Winter Insulation
 Description = During hail, immune to Fire- and Electric-type moves.
 Flags = HailSynergy
 #-------------------------------
+[WIRECUTTER]
+Name = Live Wire
+Description = Lays an electrical hazard around the opponent when its HP is lowered below half.
+#-------------------------------
 [WISEHUNTER]
 Name = Wise Hunter
 Description = After knocking out any Pokémon, raises its Sp. Atk and Sp. Def.

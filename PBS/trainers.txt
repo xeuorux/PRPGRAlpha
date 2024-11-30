@@ -4180,8 +4180,8 @@ Pokemon = SHIINOTIC,55
 [CLERK_F,Rosalie]
 Pokemon = DEDENNE,55
     Moves = PARABOLICCHARGE,NUZZLE,VOLTSWITCH,PLAYROUGH
-    AbilityIndex = 1 # Lifeline
-    Item = ASSAULTVEST
+    AbilityIndex = 0 # Cheek Pouch
+    Item = SITRUSBERRY
 Pokemon = RIOJIN,55
     Moves = FLASHCANNON,DETACHMENT,STEELBEAM,VACUUMWAVE
     AbilityIndex = 1 # Inner Focus
