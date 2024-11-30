@@ -1504,7 +1504,7 @@ TotalPP = 12
 Target = NearOther
 FunctionCode = AttacksWithTargetsStats
 Flags = CanProtect,CanMirrorMove
-Description = Turns the foe's power against it, dealing damage using the target's Sp. Attack stat.
+Description = Turns the foe's power against it, dealing damage using the target's Sp. Atk stat.
 Animation = VENOSHOCK
 #-------------------------------
 [VENOMGUARD]
@@ -3281,7 +3281,7 @@ TotalPP = 5
 Target = NearOther
 FunctionCode = TwoTurnAttackChargeStartSunshine5
 Flags = CanProtect,CanMirrorMove
-Description = Summons Sunshine for five turns on the first turn, then overwhelms the foe with fiery light on the second.
+Description = Summons sunshine for five turns on the first turn, then overwhelms the foe with fiery light on the second.
 Animation = FIREBLAST
 #-------------------------------
 [BLAZINGSPEED]
@@ -4863,7 +4863,7 @@ Target = NearOther
 FunctionCode = LowerTargetSpDef1
 Flags = CanProtect,CanMirrorMove
 EffectChance = 100
-Description = The user fires a dimensional mote, lowering the target's Sp. Defense.
+Description = The user fires a dimensional mote, lowering the target's Sp. Def.
 Animation = LUSTERPURGE
 #-------------------------------
 [ANATMAN]
@@ -4963,7 +4963,7 @@ Accuracy = 0
 TotalPP = 10
 Target = BothSides
 FunctionCode = StartEclipse8
-Description = Summons eclipse for eight turns, boosting Psychic-type attacks and heralding the Total Eclipse.
+Description = Summons eclipse for eight turns, boosting Psychic-type attacks and heralding the total eclipse.
 #-------------------------------
 [ENERGYTRICK]
 Name = Energy Trick

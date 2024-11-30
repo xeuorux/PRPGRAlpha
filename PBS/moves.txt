@@ -4771,7 +4771,7 @@ TotalPP = 15
 Target = User
 FunctionCode = RaiseUserAtkSpAtk2Or4InSun
 Flags = CanSnatch
-Description = The user's body grows all at once, raising Atk and Sp. Atk by two steps each, or 4 in Sunshine.
+Description = The user's body grows all at once, raising Atk and Sp. Atk by two steps each, or 4 in sunshine.
 #-------------------------------
 [INGRAIN]
 Name = Ingrain
@@ -4961,7 +4961,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = TwoTurnAttackOneTurnInSun
 Flags = CanProtect,CanMirrorMove
-Description = The user charges, then attacks on the second turn. Charges instantly in Sunshine.
+Description = The user charges, then attacks on the second turn. Charges instantly in sunshine.
 #-------------------------------
 [SOLARGLIDE]
 Name = Solar Glide
@@ -4973,7 +4973,7 @@ TotalPP = 15
 Target = NearOther
 FunctionCode = IncreasedPriorityInSunshine
 Flags = CanProtect,CanMirrorMove
-Description = Attacks by gliding on the ground. This move always goes first in Sunshine.
+Description = Attacks by gliding on the ground. This move always goes first in sunshine.
 #-------------------------------
 [SPIKYSHIELD]
 Name = Spiky Shield
@@ -5017,7 +5017,7 @@ TotalPP = 5
 Target = User
 FunctionCode = HealUserDependingOnSunshine
 Flags = CanSnatch
-Description = The user restores 1/2 of its HP, or 2/3rds in Sunshine.
+Description = The user restores 1/2 of its HP, or 2/3rds in sunshine.
 #-------------------------------
 [TROPKICK]
 Name = Trop Kick

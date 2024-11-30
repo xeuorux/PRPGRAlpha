@@ -6,7 +6,7 @@ Description = After being attacked, uses Parting Shot to switch out.
 #-------------------------------
 [ACIDRAIN]
 Name = Acid Rain
-Description = At the end of each turn, if in rainstorm, each Pokémon not immune to Rainstorm has their defensive stats lowered by 1 step.
+Description = At the end of each turn, if in rainstorm, each Pokémon not immune to rainstorm has their defensive stats lowered by 1 step.
 Flags = RainstormSynergy
 #-------------------------------
 [ADAPTIVESKIN]
@@ -57,7 +57,7 @@ Description = Raises both defensive stats whenever any Pokémon uses a dance mov
 #-------------------------------
 [APPREHENSIVE]
 Name = Apprehensive
-Description = Takes 30% less damage in eclipse, except in Total Eclipse.
+Description = Takes 30% less damage in eclipse, except in total eclipse.
 Flags = EclipseSynergy
 #-------------------------------
 [APRICORNARMOR]
@@ -380,7 +380,7 @@ Flags = SandstormSynergy
 #-------------------------------
 [DESERTSPIRIT]
 Name = Desert Spirit
-Description = Immune to Ground-type moves. Takes 20% less damage in Sandstorm.
+Description = Immune to Ground-type moves. Takes 20% less damage in sandstorm.
 Flags = SandstormSynergy,Levitation
 #-------------------------------
 [DESICCATE]
@@ -828,7 +828,7 @@ Flags = SunshineSynergy
 #-------------------------------
 [HEAVENSCROWN]
 Name = Heaven's Crown
-Description = If the Pokémon witnesses a Total Eclipse, it gets to move twice that turn.
+Description = If the Pokémon witnesses a total eclipse, it gets to move twice that turn.
 Flags = EclipseSynergy
 #-------------------------------
 [HEAVYDUTYHOOVES]
@@ -1117,7 +1117,7 @@ Description = All Pokémon's damage is decreased proportional to their health re
 #-------------------------------
 [MASTERPLAN]
 Name = Master Plan
-Description = Raises each stat by two steps when a Total Eclipse happens.
+Description = Raises each stat by two steps when a total eclipse happens.
 Flags = EclipseSynergy
 #-------------------------------
 [MENTALBLOCK]
@@ -1527,7 +1527,7 @@ Description = Upon entry, traps each opponent in a sand tomb for two turns.
 #-------------------------------
 [SATURNALSKY]
 Name = Saturnal Sky
-Description = Changes the weather to Ring Eclipse, which heralds the Total Ring Eclipse. Lingers for 3 turns after leaving.
+Description = Changes the weather to ring eclipse, which heralds the total ring eclipse. Lingers for 3 turns after leaving.
 Flags = EclipseSynergy
 #-------------------------------
 [SCALDINGSMOKE]
@@ -1574,7 +1574,7 @@ Description = Takes 25% less damage while using a status move.
 #-------------------------------
 [SERVEDCOLD]
 Name = Served Cold
-Description = Boosts Attack by 20% in Hail, or 40% if also below half health.
+Description = Boosts Attack by 20% in hail, or 40% if also below half health.
 #-------------------------------
 [SHAKYCODE]
 Name = Shaky Code
@@ -1809,7 +1809,7 @@ Flags = HailSynergy
 #-------------------------------
 [SUNBURNING]
 Name = Sun Burning
-Description = At the end of each turn, if in sunshine, each Pokémon not immune to Sunshine has their defensive stats lowered by 1 step.
+Description = At the end of each turn, if in sunshine, each Pokémon not immune to sunshine has their defensive stats lowered by 1 step.
 Flags = SunshineSynergy
 #-------------------------------
 [SUNCHASER]
@@ -1891,7 +1891,7 @@ Description = Foes suffer 50% more stat reduction from burn, frostbite, and numb
 #-------------------------------
 [TOLLDANGER]
 Name = Toll Danger
-Description = When a Total Eclipse occurs, heals for 50% max HP and uses Heal Bell.
+Description = When a total eclipse occurs, heals for 50% max HP and uses Heal Bell.
 Flags = EclipseSynergy
 #-------------------------------
 [TOLLTHEBELLS]
