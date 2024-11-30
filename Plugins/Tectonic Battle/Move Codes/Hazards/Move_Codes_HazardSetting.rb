@@ -2,7 +2,7 @@
 # Entry hazard. Lays spikes on the opposing side. (Spikes)
 #===============================================================================
 class PokeBattle_Move_Spikes < PokeBattle_Move
-    def hazardMove?; return true,2; end
+    def hazardMove?; return true; end
     def aiAutoKnows?(pokemon); return true; end
 
     def pbMoveFailed?(user, _targets, show_message)
@@ -122,7 +122,7 @@ end
 # (Poison Spikes)
 #===============================================================================
 class PokeBattle_Move_PoisonSpikes < PokeBattle_StatusSpikeMove
-    def hazardMove?; return true,5; end
+    def hazardMove?; return true; end
     def initialize(battle, move)
         @spikeEffect = :PoisonSpikes
         super
@@ -134,7 +134,7 @@ end
 # (Flame Spikes)
 #===============================================================================
 class PokeBattle_Move_FlameSpikes < PokeBattle_StatusSpikeMove
-    def hazardMove?; return true,6; end
+    def hazardMove?; return true; end
     def initialize(battle, move)
         @spikeEffect = :FlameSpikes
         super
@@ -146,7 +146,7 @@ end
 # (Frost Spikes)
 #===============================================================================
 class PokeBattle_Move_FrostSpikes < PokeBattle_StatusSpikeMove
-    def hazardMove?; return true,7; end
+    def hazardMove?; return true; end
     def initialize(battle, move)
         @spikeEffect = :FrostSpikes
         super
@@ -157,7 +157,7 @@ end
 # Entry hazard. Lays stealth rocks on the opposing side. (Stealth Rock)
 #===============================================================================
 class PokeBattle_Move_StealthRock < PokeBattle_Move
-    def hazardMove?; return true,1; end
+    def hazardMove?; return true; end
     def aiAutoKnows?(pokemon); return true; end
 
     def pbMoveFailed?(user, _targets, show_message)
@@ -206,7 +206,7 @@ end
 # Entry hazard. Lays Feather Ward on the opposing side. (Feather Ward)
 #===============================================================================
 class PokeBattle_Move_FeatherWard < PokeBattle_Move
-    def hazardMove?; return true,3; end
+    def hazardMove?; return true; end
     def aiAutoKnows?(pokemon); return true; end
 
     def pbMoveFailed?(user, _targets, show_message)
@@ -232,7 +232,7 @@ end
 # Entry hazard. Lays a Speed reducing web on the opposing side. (Sticky Web)
 #===============================================================================
 class PokeBattle_Move_StickyWeb < PokeBattle_Move
-    def hazardMove?; return true,4; end
+    def hazardMove?; return true; end
     def aiAutoKnows?(pokemon); return true; end
 
     def pbMoveFailed?(user, _targets, show_message)
