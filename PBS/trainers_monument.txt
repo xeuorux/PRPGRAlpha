@@ -1493,7 +1493,7 @@ Pokemon = GALVANTULA,70
 [SWIMMER_F,Karaline]
 Policies = RAIN_TEAM
 Pokemon = STUNFISK,70
-    Moves = THUNDER,RECOVER,STEALTHROCK,DEFIBRILLATE
+    Moves = THUNDER,RECOVER,LIVEWIRE,DEFIBRILLATE
     AbilityIndex = 1 # Drizzle
     Item = DAMPROCK
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def

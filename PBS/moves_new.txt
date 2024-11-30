@@ -4696,6 +4696,17 @@ Flags = CanProtect,CanMirrorMove
 Description = Shoots a damaging spear at enemies, or a 4-step Speed-increasing electric charge at allies.
 Animation = THUNDERBOLT
 #-------------------------------
+[LIVEWIRE]
+Name = Live Wire
+Type = ELECTRIC
+Category = Status
+Accuracy = 0
+TotalPP = 15
+Target = FoeSide
+FunctionCode = LiveWire
+Flags = CanMagicCoat
+Description = The user lays an electrical hazard which hurts foes that switch into battle. It deals double damage in rainstorm.
+#-------------------------------
 [LUCKYCHEER]
 Name = Lucky Cheer
 Type = ELECTRIC
@@ -5778,7 +5789,7 @@ TotalPP = 3
 Target = User
 Priority = 4
 FunctionCode = ProtectUserExtendEclipse1Turn
-Description = Protects the user from attacks. If an eclipse is active, extends it by 1 turn.
+Description = Protects the user from attacks. If an eclipse is active, extends it by 1 turn. Fails if used in succession.
 Animation = PROTECT
 #-------------------------------
 [LOOMOVER]

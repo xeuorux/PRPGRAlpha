@@ -251,3 +251,43 @@ class PokeBattle_Move_StickyWeb < PokeBattle_Move
         return getHazardSettingEffectScore(user, target, 15)
     end
 end
+
+#===============================================================================
+# Entry hazard. Lays live wire on the opposing side. (Live Wire)
+#===============================================================================
+class PokeBattle_Move_LiveWire < PokeBattle_Move
+    def hazardMove?; return true; end
+    def aiAutoKnows?(pokemon); return true; end
+
+    def pbMoveFailed?(user, _targets, show_message)
+        return false if damagingMove?
+        if user.pbOpposingSide.effectActive?(:LiveWire)
+            if show_message
+                @battle.pbDisplay(_INTL("But it failed, since a live wire already sits near the opponent!"))
+            end
+            return true
+        end
+        return false
+    end
+
+    def pbEffectGeneral(user)
+        return if damagingMove?
+        user.pbOpposingSide.applyEffect(:LiveWire)
+    end
+
+    def pbEffectAgainstTarget(_user, target)
+        return unless damagingMove?
+        return if target.pbOwnSide.effectActive?(:LiveWire)
+        target.pbOwnSide.applyEffect(:LiveWire)
+    end
+
+    def getEffectScore(user, target)
+        return 0 if damagingMove? && target.pbOwnSide.effectActive?(:LiveWire)
+        if @battle.rainy? || user.ownersPolicies.include?(:RAIN_TEAM)
+            scoringWeight = 16
+        else
+            scoringWeight = 8
+        end
+        return getHazardSettingEffectScore(user, target, scoringWeight)
+    end
+end

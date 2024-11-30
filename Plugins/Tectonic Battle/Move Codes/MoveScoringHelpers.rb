@@ -260,6 +260,13 @@ def hazardWeightOnSide(side, excludeEffects = []) # does not check for reserves,
     hazardWeight += [0,80,110,140][side.countEffect(:Spikes)] unless excludeEffects.include?(:Spikes)
     hazardWeight += 95 if side.effectActive?(:StealthRock) && !excludeEffects.include?(:StealthRock)
     hazardWeight += 95 if side.effectActive?(:FeatherWard) && !excludeEffects.include?(:FeatherWard)
+    if side.effectActive?(:LiveWire) && !excludeEffects.include?(:LiveWire)
+        if side.battle.rainy?
+            hazardWeight += 110
+        else
+            hazardWeight += 55
+        end
+    end
     hazardWeight += 115 if side.effectActive?(:StickyWeb) && !excludeEffects.include?(:StickyWeb)
     hazardWeight += statusSpikesWeightOnSide(side, excludeEffects)
     return hazardWeight
