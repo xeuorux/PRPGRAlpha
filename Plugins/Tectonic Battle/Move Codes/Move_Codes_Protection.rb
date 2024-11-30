@@ -481,3 +481,14 @@ class PokeBattle_Move_TargetTakesHalfDamageNextAttackAttackerTakesRecoil < PokeB
         return score
     end
 end
+
+#===============================================================================
+# User is protected against moves with the "CanProtect" flag this round. (Heliopause)
+# If an Eclipse is active, extends it by 1 turn.
+#===============================================================================
+class PokeBattle_Move_ProtectUserExtendEclipse1Turn < PokeBattle_Move_ProtectUser
+    def pbEffectGeneral(user)
+        super
+        @battle.extendWeather(1) if @battle.eclipsed?
+    end
+end

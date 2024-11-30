@@ -5769,6 +5769,18 @@ Flags = CanProtect,CanMirrorMove,Sound
 Description = The user shakes the target with a deep, rumbling roar. This attack does physical damage.
 Animation = ROAR
 #-------------------------------
+[HELIOPAUSE]
+Name = Heliopause
+Type = DRAGON
+Category = Status
+Accuracy = 0
+TotalPP = 3
+Target = User
+Priority = 4
+FunctionCode = ProtectUserExtendEclipse1Turn
+Description = Protects the user from attacks. If an eclipse is active, extends it by 1 turn.
+Animation = PROTECT
+#-------------------------------
 [LOOMOVER]
 Name = Loom Over
 Type = DRAGON
