@@ -486,7 +486,12 @@ end
 # User is protected against moves with the "CanProtect" flag this round. (Heliopause)
 # If an Eclipse is active, extends it by 1 turn.
 #===============================================================================
-class PokeBattle_Move_ProtectUserExtendEclipse1Turn < PokeBattle_Move_ProtectUser
+class PokeBattle_Move_ProtectUserExtendEclipse1Turn < PokeBattle_ProtectMove
+    def initialize(battle, move)
+        super
+        @effect = :Heliopause
+    end
+
     def pbEffectGeneral(user)
         super
         @battle.extendWeather(1) if @battle.eclipsed?

@@ -1961,7 +1961,6 @@ GameData::BattleEffect.register_effect(:Battler, {
     },
 })
 
-
 GameData::BattleEffect.register_effect(:Battler, {
     :id => :CranialGuard,
     :real_name => "Cranial Guard",
@@ -1974,6 +1973,13 @@ GameData::BattleEffect.register_effect(:Battler, {
             move.damagingMove?
         end,
     },
+})
+
+GameData::BattleEffect.register_effect(:Battler, {
+    :id => :Heliopause,
+    :real_name => "Heliopause",
+    :resets_eor	=> true,
+    :protection_effect => true,
 })
 
 GameData::BattleEffect.register_effect(:Battler, {

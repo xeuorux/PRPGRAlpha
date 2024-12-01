@@ -2625,6 +2625,18 @@ FunctionCode = UserOrTargetMakesSubstitute
 Flags = CanProtect,CanMagicCoat
 Description = The user forces itself or the target to make a substitute by turning it into a doll.
 #-------------------------------
+[DRIFTOFF]
+Name = Drift Off
+Type = GHOST
+Category = Status
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = LowerTargetSpd4DrowsyIfHail
+Flags = CanProtect,CanMagicCoat,CanMirrorMove
+Description = The user soothes the target, lowering its Speed by 4 steps. If in hail, they also become drowsy.
+Animation = YAWN
+#-------------------------------
 [DROWN]
 Name = Drown
 Type = GHOST
