@@ -1257,6 +1257,10 @@ Description = Boosts the accuracy of its allies and itself by 50%.
 Name = Oddity
 Description = Upon entry, creates an Odd Room for five turns, swapping offensive and defensive stats.
 #-------------------------------
+[OFFENSIVE]
+Name = Offensive
+Description = On the first turn, its attacks cause the target to flinch.
+#-------------------------------
 [ONTHEWIND]
 Name = On the Wind
 Description = Sets a Tailwind for four turns upon entering the battle, increasing Speed.

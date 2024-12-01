@@ -608,10 +608,6 @@ Description = Powers up Steel-type moves by 50%.
 Name = Steely Spirit
 Description = Powers up Steel-type moves of itself and its allies by 50%.
 #-------------------------------
-[STENCH]
-Name = Stench
-Description = Attacks have a 50% chance to cause the target to flinch.
-#-------------------------------
 [STRONGJAW]
 Name = Strong Jaw
 Description = Boosts the power of biting moves by 50%.

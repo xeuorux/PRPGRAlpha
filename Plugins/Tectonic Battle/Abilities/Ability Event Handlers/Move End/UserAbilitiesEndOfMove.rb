@@ -571,3 +571,16 @@ BattleHandlers::UserAbilityEndOfMove.add(:SUDDENTURN,
     battle.forceUseMove(user, :RAPIDSPIN, moveUsageEffect: :SuddenTurn, ability: ability)
   }
 )
+
+BattleHandlers::UserAbilityEndOfMove.add(:OFFENSIVE,
+  proc { |ability, user, targets, move, battle, switchedBattlers|
+    next if battle.futureSight
+    next unless move.damagingMove?
+    next unless user.firstTurn?
+    targets.each do |b|
+      next if b.fainted?
+      next if b.damageState.calcDamage == 0 || b.damageState.substitute
+      b.pbFlinch
+    end
+  }
+)

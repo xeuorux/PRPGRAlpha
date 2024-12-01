@@ -793,6 +793,10 @@ Description = Raises Speed each time the Pokémon flinches.
 Name = Steam Engine
 Description = Maximizes Speed when hit by a Fire- or Water-type move.
 #-------------------------------
+[STENCH]
+Name = Stench
+Description = Attacks have a 50% chance to cause the target to flinch.
+#-------------------------------
 [STICKYHOLD]
 Name = Sticky Hold
 Description = Protects the Pokémon from item theft.

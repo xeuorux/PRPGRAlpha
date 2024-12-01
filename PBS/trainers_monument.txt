@@ -2235,8 +2235,8 @@ Pokemon = MIENSHAO,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,0,20,20,0
 Pokemon = SKUNTANK,70
-    Moves = PURSUIT,SUCKERPUNCH,POISONJAB,PLAYROUGH
-    AbilityIndex = 0 # Stench
+    Moves = PURSUIT,CRUNCH,POISONJAB,PLAYROUGH
+    AbilityIndex = 0 # Offensive
     Item = FAIRYGEM
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 0,20,10,20,20,0

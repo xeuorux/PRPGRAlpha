@@ -727,7 +727,7 @@ Pokemon = DRIFLOON,15
     EV = 0,20,12,0,20,18
 Pokemon = STUNKY,15
     Moves = BITE,QUICKATTACK,NASTYNIP,HONECLAWS
-    AbilityIndex = 0 # Stench
+    AbilityIndex = 0 # Offensive
     Item = POISONGEM
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 0,19,14,17,19,0
@@ -1929,7 +1929,7 @@ Pokemon = OCTILLERY,37
 #-------------------------------
 [BIKER2,Chuck]
 Pokemon = SKUNTANK,37
-    Moves = POISONGAS,SUCKERPUNCH,SNARL,MIASMA
+    Moves = STINKCOVER,DEFOG,SNARL,MIASMA
     AbilityIndex = 1 # Pure Energy
 Pokemon = MAGMORTAR,37
     Moves = TEPHRACANNON,FIREPULSE,CLEARSMOG,NULLPULSE
@@ -3645,8 +3645,8 @@ Pokemon = PORYGONMAV,48
     AbilityIndex = 1 # Swordplay
     Item = WHETSTONE
 Pokemon = SKUNTANK,48
-    Moves = CRUNCH,POISONJAB,SUCKERPUNCH,POISONGAS
-    AbilityIndex = 0 # Stench
+    Moves = CRUNCH,POISONJAB,UNDERMINE,STINKCOVER
+    AbilityIndex = 0 # Offensive
 Pokemon = QUAGSIRE,48
     Moves = WATERFALL,EARTHQUAKE,PLAYROUGH,YAWN
     AbilityIndex = 1 # Water Absorb
@@ -8317,8 +8317,8 @@ Pokemon = HZOROARK,70
     EV = 17,20,0,13,20,0
 Pokemon = SKUNTANK,70
     Name = Ferocity
-    Moves = FLOWSTATE,BULLETTRAIN,GUNKSHOT,SUCKERPUNCH
-    AbilityIndex = 0 # Stench
+    Moves = FLOWSTATE,BULLETTRAIN,GUNKSHOT,CRUNCH
+    AbilityIndex = 0 # Offensive
     Item = LUMBERAXE
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,0,20,20,0
