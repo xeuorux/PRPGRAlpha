@@ -459,6 +459,8 @@ class PokemonStorageScene
         @sprites["box"].x -= diff
         @sprites["box"].dispose
         @sprites["box"] = newbox
+
+        donationBoxTutorialCheck
     end
 
     def pbSwitchBoxToLeft(newbox)
@@ -479,6 +481,14 @@ class PokemonStorageScene
         @sprites["box"].x -= diff
         @sprites["box"].dispose
         @sprites["box"] = newbox
+
+        donationBoxTutorialCheck
+    end
+
+    def donationBoxTutorialCheck
+        return unless inDonationBox?
+        return if $PokemonGlobal.donationBoxesTutorialized
+        playDonationBoxesTutorial
     end
 
     def pbJumpToBox(newbox)

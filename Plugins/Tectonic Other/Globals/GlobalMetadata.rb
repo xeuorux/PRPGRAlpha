@@ -284,6 +284,12 @@ class PokemonGlobalMetadata
         return @adaptiveMovesTutorialized
     end
 
+    attr_writer :donationBoxesTutorialized
+    def donationBoxesTutorialized
+        @donationBoxesTutorialized = false if @donationBoxesTutorialized.nil?
+        return @donationBoxesTutorialized
+    end
+
     ####################################################
     # Misc.
     ####################################################
