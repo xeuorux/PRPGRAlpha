@@ -284,6 +284,10 @@ module GameData
       def consumed_after_use?
         return !is_important? && @consumable
       end
+
+      def show_pocket_message?
+        return !@flags.include?("SkipPocketMessage")
+      end
   
       def unlosable?(species, ability)
         return false if species == :ARCEUS && ability != :MULTITYPE

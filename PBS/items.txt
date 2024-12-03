@@ -1467,6 +1467,7 @@ NamePlural = Rare Candies
 Pocket = 2
 Price = 1000
 FieldUse = OnPokemon
+Flags = SkipPocketMessage
 Description = A candy that is packed with energy. It raises the level of a single Pokémon by one.
 #-------------------------------
 [VANILLATULUMBA]
@@ -2219,6 +2220,7 @@ NamePlural = Exp. Candies XS
 Pocket = 2
 Price = 60
 FieldUse = OnPokemon
+Flags = SkipPocketMessage
 Description = A candy that is packed with energy. When consumed, it will grant a single Pokémon 250 Exp. Points.
 #-------------------------------
 [EXPCANDYS]
@@ -2227,6 +2229,7 @@ NamePlural = Exp. Candies S
 Pocket = 2
 Price = 225
 FieldUse = OnPokemon
+Flags = SkipPocketMessage
 Description = A candy that is packed with energy. When consumed, it will grant a single Pokémon 1000 Exp. Points.
 #-------------------------------
 [EXPCANDYM]
@@ -2235,6 +2238,7 @@ NamePlural = Exp. Candies M
 Pocket = 2
 Price = 800
 FieldUse = OnPokemon
+Flags = SkipPocketMessage
 Description = A candy that is packed with energy. When consumed, it will grant a single Pokémon 4,000 Exp. Points.
 #-------------------------------
 [EXPCANDYL]
@@ -2243,6 +2247,7 @@ NamePlural = Exp. Candies L
 Pocket = 2
 Price = 3200
 FieldUse = OnPokemon
+Flags = SkipPocketMessage
 Description = A candy that is packed with energy. When consumed, it will grant a single Pokémon 16,000 Exp. Points.
 #-------------------------------
 [EXPCANDYXL]
@@ -2251,6 +2256,7 @@ NamePlural = Exp. Candies XL
 Pocket = 2
 Price = 12000
 FieldUse = OnPokemon
+Flags = SkipPocketMessage
 Description = A candy that is packed with energy. When consumed, it will grant a single Pokémon 64,000 Exp. Points.
 #-------------------------------
 [FOSSILIZEDBIRD]
