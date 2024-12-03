@@ -525,13 +525,12 @@ ShowArea = true
 Bicycle = false
 #-------------------------------
 [067]
-# Room 101
 Outdoor = false
 ShowArea = false
 Bicycle = false
 #-------------------------------
 [068]
-# Room 105
+# Room 104
 Outdoor = false
 ShowArea = false
 Bicycle = false
@@ -543,7 +542,7 @@ ShowArea = false
 Bicycle = false
 #-------------------------------
 [070]
-# Room 102
+# Room 101
 Outdoor = false
 ShowArea = false
 Bicycle = false
@@ -555,25 +554,24 @@ ShowArea = false
 Bicycle = false
 #-------------------------------
 [072]
-# Room 104
+# Room 102
 Outdoor = false
 ShowArea = false
 Bicycle = false
 #-------------------------------
 [073]
-# Room 106
+# Room 204
 Outdoor = false
 ShowArea = false
 Bicycle = false
 #-------------------------------
 [074]
-# Room 203
+# Room 202
 Outdoor = false
 ShowArea = false
 Bicycle = false
 #-------------------------------
 [075]
-# Room 204
 Outdoor = false
 ShowArea = false
 Bicycle = false
@@ -585,7 +583,7 @@ ShowArea = false
 Bicycle = false
 #-------------------------------
 [077]
-# Room 202
+# Room 203
 Outdoor = false
 ShowArea = false
 Bicycle = false
