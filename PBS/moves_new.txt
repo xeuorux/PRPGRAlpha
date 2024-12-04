@@ -5801,7 +5801,7 @@ TotalPP = 3
 Target = User
 Priority = 4
 FunctionCode = ProtectUserExtendEclipse1Turn
-Description = Protects the user from attacks. If an eclipse is active, extends it by 1 turn. Fails if used in succession.
+Description = Protects the user from attacks. If an eclipse is active, extends it by one turn. Fails if used in succession.
 Animation = PROTECT
 #-------------------------------
 [LOOMOVER]
