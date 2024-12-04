@@ -316,17 +316,11 @@ class PokeBattle_Move_RaiseUserDefSpDef2EmpowersNextElectricAttack < PokeBattle_
     end
 
     def getEffectScore(user, target)
-        foundMove = false
+        score = super
         user.eachMove do |m|
             next if m.type != :ELECTRIC || !m.damagingMove?
-            foundMove = true
+            score += 40
             break
-        end
-        score = super
-        if foundMove
-            score += 20
-        else
-            score -= 20
         end
         return score
     end
