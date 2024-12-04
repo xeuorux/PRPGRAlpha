@@ -91,12 +91,12 @@ class PokeBattle_Move_RaiseUserSpAtk3StartUserAttacksSpread < PokeBattle_Move
 end
 
 #===============================================================================
-# Until the end of the next round, the user's moves will always be critical hits.
+# The user's attacks will all be critical hits for the next 3 turns.
 # (Laser Focus)
 #===============================================================================
-class PokeBattle_Move_EnsureNextCriticalHit < PokeBattle_Move
+class PokeBattle_Move_EnsureCriticalHits3 < PokeBattle_Move
     def pbEffectGeneral(user)
-        user.applyEffect(:LaserFocus, 2)
+        user.applyEffect(:LaserFocus, 4)
         @battle.pbDisplay(_INTL("{1} concentrated intensely!", user.pbThis))
     end
 

@@ -3648,9 +3648,9 @@ Category = Status
 Accuracy = 0
 TotalPP = 25
 Target = User
-FunctionCode = EnsureNextCriticalHit
+FunctionCode = EnsureCriticalHits3
 Flags = CanSnatch
-Description = The user focuses intensely. The attack on the next turn always results in a critical hit.
+Description = The user focuses intensely. For the next three turns, its attacks will be guarenteed critical hits.
 #-------------------------------
 [METALBURST]
 Name = Metal Burst
