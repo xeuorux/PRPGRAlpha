@@ -2061,22 +2061,6 @@ FieldUse = OnPokemon
 Flags = KeyItem
 Description = A flower that conveys gratitude. Use it to transform Shaymin into or out of Sky form.
 #-------------------------------
-[AURORATICKET]
-Name = Aurora Ticket
-NamePlural = Aurora Tickets
-Pocket = 7
-Price = 0
-Flags = KeyItem
-Description = A ticket required to board the ship to Doxy Island. It glows beautifully.
-#-------------------------------
-[OLDSEAMAP]
-Name = Old Sea Map
-NamePlural = Old Sea Maps
-Pocket = 7
-Price = 0
-Flags = KeyItem
-Description = A faded sea chart that shows the way to a certain island.
-#-------------------------------
 [DNASPLICERS]
 Name = DNA Splicers
 NamePlural = DNA Splicers
