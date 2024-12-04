@@ -3,7 +3,7 @@ class MoveDex_Scene
     # FILTERS
     ##################################################
     def searchByMoveName
-        nameInput = pbEnterText(_INTL("Search name..."), 0, 12)
+        nameInput = pbEnterText(_INTL("Search name..."), 0, 20)
         if nameInput && nameInput != ""
             reversed = nameInput[0] == "-"
             nameInput = nameInput[1..-1] if reversed
