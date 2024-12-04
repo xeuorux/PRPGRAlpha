@@ -110,7 +110,7 @@ def pbAvatarBattleCore(*args)
     return victorious
 end
 
-SUMMON_MIN_HEALTH_LEVEL = 15
+SUMMON_MIN_HEALTH_LEVEL = 10
 SUMMON_MAX_HEALTH_LEVEL = 50
 
 def generateAvatarPokemon(species, level, version = 0, summon = false)
@@ -129,10 +129,10 @@ def generateAvatarPokemon(species, level, version = 0, summon = false)
         if level >= SUMMON_MAX_HEALTH_LEVEL
             healthPercent = 1.0
         elsif level <= SUMMON_MIN_HEALTH_LEVEL
-            healthPercent = 0.5
+            healthPercent = 0.4
         else
-            healthPercent = 0.5 + (level - SUMMON_MIN_HEALTH_LEVEL) / (SUMMON_MAX_HEALTH_LEVEL - SUMMON_MIN_HEALTH_LEVEL).to_f
-            healthPercent = 1.0 if healthPercent > 1.0
+            healthPercent = 0.4 + 0.6 * (level - SUMMON_MIN_HEALTH_LEVEL) / (SUMMON_MAX_HEALTH_LEVEL - SUMMON_MIN_HEALTH_LEVEL).to_f
+            echoln("Summoning #{species} avatar at health fraction #{healthPercent}")
         end
         newPokemon.hp = (newPokemon.totalhp * healthPercent).ceil
     end

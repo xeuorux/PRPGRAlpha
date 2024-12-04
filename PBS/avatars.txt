@@ -10,13 +10,37 @@ HealthBars = 5
 Ability = STRESSFUL
 Moves1 = HELPINGHAND
 Turns = 1
-HPMult = 2.0
+HPMult = 3.0
 #-------------------------------
 [DREEPY]
 Ability = CLEARBODY
 Moves1 = SHRED
 Turns = 1
-HPMult = 2.0
+HPMult = 3.0
+#-------------------------------
+[POOCHYENA]
+Ability = NIGHTSTALKER
+Moves1 = BITE
+Turns = 1
+HPMult = 3.0
+#-------------------------------
+[ABRA]
+Ability = WARPINGEFFECT
+Moves1 = MINDWAVES
+Turns = 1
+HPMult = 3.0
+#-------------------------------
+[GOSSIFLEUR]
+Ability = COTTONDOWN
+Moves1 = FOLLOWME
+Turns = 1
+HPMult = 3.0
+#-------------------------------
+[TYROGUE]
+Ability = VITALSPIRIT
+Moves1 = POWERUPPUNCH
+Turns = 1
+HPMult = 3.0
 #-------------------------------
 [LUVDISC]
 Ability = SLICKSURFACE
@@ -27,30 +51,6 @@ HPMult = 2.0
 [REMORAID]
 Ability = DOUBLECHECK
 Moves1 = BRINE
-Turns = 1
-HPMult = 2.0
-#-------------------------------
-[POOCHYENA]
-Ability = NIGHTSTALKER
-Moves1 = BITE
-Turns = 1
-HPMult = 2.0
-#-------------------------------
-[ABRA]
-Ability = WARPINGEFFECT
-Moves1 = MINDWAVES
-Turns = 1
-HPMult = 2.0
-#-------------------------------
-[GOSSIFLEUR]
-Ability = COTTONDOWN
-Moves1 = FOLLOWME
-Turns = 1
-HPMult = 2.0
-#-------------------------------
-[TYROGUE]
-Ability = VITALSPIRIT
-Moves1 = POWERUPPUNCH
 Turns = 1
 HPMult = 2.0
 #-------------------------------
