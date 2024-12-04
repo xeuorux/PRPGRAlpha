@@ -1338,6 +1338,7 @@ NamePlural = Potions
 Pocket = 2
 Price = 300
 FieldUse = OnPokemon
+Flags = SkipPocketMessage
 Description = A spray-type medicine for wounds. It restores the HP of one Pokémon, fainted or able, by 40 points.
 #-------------------------------
 [SUPERPOTION]
@@ -1346,6 +1347,7 @@ NamePlural = Super Potions
 Pocket = 2
 Price = 600
 FieldUse = OnPokemon
+Flags = SkipPocketMessage
 Description = A spray-type medicine for wounds. It restores the HP of one Pokémon, fainted or able, by 80 points.
 #-------------------------------
 [HYPERPOTION]
@@ -1354,6 +1356,7 @@ NamePlural = Hyper Potions
 Pocket = 2
 Price = 900
 FieldUse = OnPokemon
+Flags = SkipPocketMessage
 Description = A spray-type medicine for wounds. It restores the HP of one Pokémon, fainted or able, by 120 points.
 #-------------------------------
 [MAXPOTION]
@@ -1362,6 +1365,7 @@ NamePlural = Max Potions
 Pocket = 2
 Price = 1200
 FieldUse = OnPokemon
+Flags = SkipPocketMessage
 Description = A spray-type medicine for wounds. It completely restores the HP of a single Pokémon, fainted or able.
 #-------------------------------
 [FULLRESTORE]
@@ -1370,6 +1374,7 @@ NamePlural = Full Restores
 Pocket = 2
 Price = 1500
 FieldUse = OnPokemon
+Flags = SkipPocketMessage
 Description = A medicine that fully restores the HP and heals any status problems of a single Pokémon, fainted or able.
 #-------------------------------
 [SACREDASH]
