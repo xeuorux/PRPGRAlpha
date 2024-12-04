@@ -2091,7 +2091,7 @@ Description = A shiny charm which doubles the chance of finding a Shiny Pokémon
 [SWEETTOOTH]
 Name = Sweet Tooth
 NamePlural = Sweet Teeth
-Pocket = 8
+Pocket = 7
 Price = 0
 Flags = KeyItem,SkipPocketMessage
 Description = A charm in the shape of a tooth. It increases the EXP gained from EXP Candy by 15%.
