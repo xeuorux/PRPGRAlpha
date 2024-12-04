@@ -2094,7 +2094,7 @@ NamePlural = Sweet Teeth
 Pocket = 7
 Price = 0
 Flags = KeyItem,SkipPocketMessage
-Description = A charm in the shape of a tooth. It increases the EXP gained from EXP Candy by 15%.
+Description = A charm in the shape of a tooth. It increases the EXP. gained from EXP Candy by 15%.
 #-------------------------------
 [SOOTHECHARM]
 Name = Soothe Charm
@@ -2456,6 +2456,14 @@ Pocket = 1
 Price = 8000
 FieldUse = OnPokemon
 Description = A wisp of ideas with infinite potential. Use it on a Pokemon to teach any one of their legal moves.
+#-------------------------------
+[SACCHARITEPICK]
+Name = Saccharite Pick
+NamePlural = Saccharite Picks
+Pocket = 8
+Price = 0
+Flags = KeyItem
+Description = A food grade mining tool. Allows you to extract EXP. Candy from saccharite deposits.
 #-------------------------------
 [SURFBOARD]
 Name = Surf Board

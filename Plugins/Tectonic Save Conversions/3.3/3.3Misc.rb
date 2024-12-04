@@ -13,5 +13,8 @@ SaveData.register_conversion(:new_boss_loot_3_3_0) do
             save_data[:global_metadata].ominous_egg_stage = 0
         end
         itemBag.pbStoreItem(:CHROMACLARION, 1, false) if globalSwitches[131] # Defeated Avatar of Xerneas
+
+        # Exploded the dynamite stick at the end of the Foreclosed Tunnel
+        itemBag.pbStoreItem(:SACCHARITEPICK, 1, false) if selfSwitches[[51,1,'A']]
     end
 end
