@@ -2085,7 +2085,7 @@ NamePlural = Shiny Charms
 Pocket = 7
 Price = 0
 Consumable = true
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = A shiny charm which doubles the chance of finding a Shiny Pokémon.
 #-------------------------------
 [SWEETTOOTH]
@@ -2093,7 +2093,7 @@ Name = Sweet Tooth
 NamePlural = Sweet Teeth
 Pocket = 8
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = A charm in the shape of a tooth. It increases the EXP gained from EXP Candy by 15%.
 #-------------------------------
 [SOOTHECHARM]
@@ -2102,7 +2102,7 @@ NamePlural = Soothe Charms
 Pocket = 7
 Price = 0
 Consumable = true
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = A comforting charm which doubles the happiness your Pokémon gain from being close to you.
 #-------------------------------
 [REDORB]
@@ -2191,7 +2191,7 @@ Name = Mega Ring
 NamePlural = Mega Rings
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = This ring contains an untold power that somehow enables Pokémon carrying Mega Stones to Mega Evolve.
 #-------------------------------
 [ZYGARDECUBE]
@@ -2308,7 +2308,7 @@ Name = EXP Charm
 NamePlural = EXP Charms
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = A charm that increases the Exp. Points that Pokémon can get by 10%. A machine-like object is inside the charm.
 #-------------------------------
 [CATCHINGCHARM]
@@ -2316,7 +2316,7 @@ Name = Catching Charm
 NamePlural = Catching Charms
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = A charm that doubles the chance of getting a critical catch.
 #-------------------------------
 [INFINITEROPE]
@@ -2470,7 +2470,7 @@ Name = Chasm ID Card
 NamePlural = Chasm ID Cards
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = An ID card which unlocks Team Chasm gates and doors, giving access to dangers and rewards.
 #-------------------------------
 [CLIMBINGGEAR]
@@ -2617,7 +2617,7 @@ Name = House Deed
 NamePlural = House Deeds
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = Proof of ownership for the house you bought in Prizca East.
 #-------------------------------
 [GLEAMPOWDER]
@@ -2677,7 +2677,7 @@ Name = Milk Bone Treat
 NamePlural = Milk Bone Treats
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = It would be a delicious treat if you were a Pokémon.
 #-------------------------------
 [PRIMALCLAY]
@@ -2713,7 +2713,7 @@ NamePlural = Cups of Coffee
 Pocket = 7
 Price = 0
 Consumable = true
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = It's a cup filled with warm coffee. You probably shouldn't be keeping this in your backpack.
 #-------------------------------
 [LUXTECHSHIPMENT]
@@ -2721,7 +2721,7 @@ Name = LuxTech Shipment
 NamePlural = LuxTech Shipments
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = A package containing an important shipment destined for LuxTech.
 #-------------------------------
 [WEIRDPACKAGE]
@@ -2729,6 +2729,7 @@ Name = Weird Package
 NamePlural = Weird Packages
 Pocket = 7
 Price = 0
+Flags = KeyItem,SkipPocketMessage
 Description = A suspicious package. Probably best not to look inside.
 #-------------------------------
 [AEGISIDCARD]
@@ -2736,7 +2737,7 @@ Name = Aegis ID Card
 NamePlural = Aegis ID Cards
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = A forged ID card. It will let you pretend you work at Aegis Insurance.
 #-------------------------------
 [INCRIMINATINGEVIDENCE]
@@ -2744,7 +2745,7 @@ Name = Incriminating Evidence
 NamePlural = Incriminating Evidence
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = A device containing evidence against Aegis Insurance.
 #-------------------------------
 [DIGITSLIP]
@@ -2753,7 +2754,7 @@ NamePlural = Digit Slips
 Pocket = 7
 Price = 0
 Consumable = true
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = A slip of paper with one digit of the code for the lock to Rafael's gym door.
 #-------------------------------
 [SIGILLEFTHALF]
@@ -2761,7 +2762,7 @@ Name = Sigil Left Half
 NamePlural = Sigils Left Half
 Pocket = 8
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = The left half of the sigil of an ancient order of knights.
 #-------------------------------
 [SIGILRIGHTHALF]
@@ -2769,7 +2770,7 @@ Name = Sigil Right Half
 NamePlural = Sigils Right Half
 Pocket = 8
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = The right half of the sigil of an ancient order of knights.
 #-------------------------------
 [CARNATIONSIGIL]
@@ -2787,7 +2788,7 @@ NamePlural = Condensed Light
 Pocket = 7
 Price = 0
 Consumable = true
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = A strange ball of light. You should gather these for a friend.
 #-------------------------------
 [CHAMBER1KEY]
@@ -2795,7 +2796,7 @@ Name = Chamber 1 Key
 NamePlural = Chamber 1 Keys
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = The key to the first chamber containing a powerful avatar.
 #-------------------------------
 [CHAMBER2KEY]
@@ -2803,7 +2804,7 @@ Name = Chamber 2 Key
 NamePlural = Chamber 2 Keys
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = The key to the second chamber containing a powerful avatar.
 #-------------------------------
 [CHAMBER3KEY]
@@ -2811,7 +2812,7 @@ Name = Chamber 3 Key
 NamePlural = Chamber 3 Keys
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = The key to the third chamber containing a powerful avatar.
 #-------------------------------
 [CHAMBER4KEY]
@@ -2819,7 +2820,7 @@ Name = Chamber 4 Key
 NamePlural = Chamber 4 Keys
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = The key to the fourth chamber containing a powerful avatar.
 #-------------------------------
 [CHAMBER5KEY]
@@ -2827,7 +2828,7 @@ Name = Chamber 5 Key
 NamePlural = Chamber 5 Keys
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = The key to the fifth chamber containing a powerful avatar.
 #-------------------------------
 [CHAMBER6KEY]
@@ -2835,7 +2836,7 @@ Name = Chamber 6 Key
 NamePlural = Chamber 6 Keys
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = The key to the sixth chamber containing a powerful avatar.
 #-------------------------------
 [CHAMBER7KEY]
@@ -2843,7 +2844,7 @@ Name = Chamber 7 Key
 NamePlural = Chamber 7 Keys
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = The key to the seventh chamber containing a powerful avatar.
 #-------------------------------
 [CHAMBER8KEY]
@@ -2851,7 +2852,7 @@ Name = Chamber 8 Key
 NamePlural = Chamber 8 Keys
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = The key to the eighth chamber containing a powerful avatar.
 #-------------------------------
 [UBCONTAINMENTKEY]
@@ -2859,7 +2860,7 @@ Name = UB Containment Key
 NamePlural = UB Containment Keys
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = A key which unlocks the Ultra Beast Containment Room at Novo College.
 #-------------------------------
 [FACTORYPASS]
@@ -2868,7 +2869,7 @@ NamePlural = Factory Passes
 Pocket = 7
 Price = 0
 FieldUse = OnPokemon
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = A pass that grants you access through the locked door in Victoire's factory.
 #-------------------------------
 [RUINEDTOWERKEY]
@@ -2876,7 +2877,7 @@ Name = Ruined Tower Key
 NamePlural = Ruined Tower Keys
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = A key which unlocks the ruined tower on the Sandstone Estuary coastline.
 #-------------------------------
 [LATENTSEED]
@@ -2987,7 +2988,7 @@ Name = VIP Card
 NamePlural = VIP Cards
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = A glamorous steel card. While holding it, all vendors cost 10% less and Poké Marts have extra items.
 #-------------------------------
 [OMINOUSEGG]
@@ -2995,5 +2996,5 @@ Name = Ominous Egg
 NamePlural = Ominous Eggs
 Pocket = 8
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = A vessel for negative emotions. If you perfectly defeat enough route or gym trainers, it will grant you rewards.
