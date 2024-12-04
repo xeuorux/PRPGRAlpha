@@ -746,7 +746,7 @@ Pokemon = BLASTOISE,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,20,10,0,20,0
 Pokemon = SALAMENCE,70
-    Moves = INFINITEWING,REND,EARTHQUAKE,ACROBATICS
+    Moves = DIVEBOMB,REND,EARTHQUAKE,ACROBATICS
     AbilityIndex = 0 # Intimidate
     Item = POWERHERB
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def

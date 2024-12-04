@@ -5873,7 +5873,7 @@ Pokemon = PALMANTRA,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,0,20,20,0
 Pokemon = DRAGONITE,70
-    Moves = TAILWIND,DRAGONDANCE,OUTRAGE,INFINITEWING
+    Moves = TAILWIND,DRAGONDANCE,OUTRAGE,DIVEBOMB
     AbilityIndex = 1 # Multiscale
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,20,0,10,20,0
@@ -5882,7 +5882,7 @@ Pokemon = DRAGONITE,70
 ExtendsVersion = 2
 Policies = CURSE_SUPER_ITEMS
 Pokemon = ARCHEOPS,70
-    Moves = EARTHQUAKE,ADAMANTINEPRESS,INFINITEWING,UTURN
+    Moves = EARTHQUAKE,ADAMANTINEPRESS,DIVEBOMB,UTURN
     Item = CHOICECROWN
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 0,20,0,20,20,10
@@ -5896,7 +5896,7 @@ Pokemon = HAWLUCHA,70
 Pokemon = PALMANTRA,70
     Item = BUGRING
 Pokemon = DRAGONITE,70
-    Moves = ROOST,DRAGONDANCE,OUTRAGE,INFINITEWING
+    Moves = ROOST,DRAGONDANCE,OUTRAGE,DIVEBOMB
     Item = LUNCHBOX
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,10,0,20,10,0
@@ -8096,7 +8096,7 @@ Pokemon = XATU,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,0,15,0,0,15
 Pokemon = DRAGONITE,70
-    Moves = DRAGONRIDE,INFINITEWING,ROOST,POWERUPPUNCH
+    Moves = DRAGONRIDE,DIVEBOMB,ROOST,POWERUPPUNCH
     AbilityIndex = 1 # Multiscale
     Item = YACHEBERRY
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -8288,7 +8288,7 @@ Pokemon = ROSERADE,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,7,6,20,7
 Pokemon = GLISCOR,70
-    Moves = LEECHLIFE,ADAMANTINEPRESS,UNDERMINE,INFINITEWING
+    Moves = LEECHLIFE,ADAMANTINEPRESS,UNDERMINE,DIVEBOMB
     AbilityIndex = 0 # Grotesque Vitals
     Item = STRIKEVEST
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def

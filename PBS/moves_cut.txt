@@ -800,6 +800,20 @@ Flags = CanProtect,CanMirrorMove,Wind
 EffectChance = 30
 Description = Can't miss in rain. It has a 30% chance to dizzy. Can hit targets flying high up.
 #-------------------------------
+[INFINITEWING]
+Name = Infinite Wing
+Type = FLYING
+Category = Physical
+Power = 130
+Accuracy = 100
+TotalPP = 5
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect,CanMirrorMove
+EffectChance = 30
+Description = The user flies up to raise its Sp. Def by four steps in the first turn, then rams the foe on the second.
+Animation = SKYATTACK
+#-------------------------------
 [RAZORWIND]
 Name = Razor Wind
 Type = FLYING
