@@ -123,11 +123,11 @@ Special
 #-------------------------------
 [034] # Battle Plaza
 FloweryGrass,20
-    20,AUDINO,31,33
     20,HAPPINY,31,33
     20,LILLIPUP,31,33
+    20,SAWK,34,36
     20,SKITTY,31,33
-    20,SNUBBULL,31,33
+    20,THROH,34,36
 #-------------------------------
 [035] # Impromptu Lab
 Special
@@ -466,11 +466,10 @@ Special
 #-------------------------------
 [155] # Prizca West
 Land,20
-    33,KOFFING,34,36
-    16,AIPOM,34,36
-    16,MVULPIX,34,36
-    16,PIDOVE,34,36
-    16,SCRAGGY,34,36
+    40,KOFFING,34,36
+    20,AIPOM,34,36
+    20,MVULPIX,34,36
+    20,PIDOVE,34,36
 Special
     1,ROTOM,40
 #-------------------------------
@@ -521,10 +520,11 @@ Puddle,20
 #-------------------------------
 [186] # Frostflow Farms
 LandTall,20
-    25,COTTONEE,32,34
-    25,DEDENNE,32,34
-    25,MILTANK,32,34
-    25,TAUROS,32,34
+    20,AUDINO,31,33
+    20,COTTONEE,32,34
+    20,DEDENNE,32,34
+    20,MILTANK,32,34
+    20,TAUROS,32,34
 FloweryGrass2,20
     20,BOUFFALANT,32,34
     20,COMBEE,32,34
@@ -538,9 +538,9 @@ Special
 FloweryGrass2,20
     20,FURFROU,39,41
     20,INDEEDEE,39,41
-    20,MAKUHITA,39,41
     20,MINCCINO,39,41
     20,SMEARGLE,39,41
+    20,SNUBBULL,31,33
 Special
     1,SEVIPER,40
 #-------------------------------
@@ -728,10 +728,11 @@ LandSparse,20
 #-------------------------------
 [223] # Battle Plaza Underground
 LandSparse,20
-    25,ELGYEM,35,37
-    25,GOLETT,35,37
-    25,KLEFKI,35,37
-    25,SIGILYPH,35,37
+    20,ELGYEM,35,37
+    20,GOLETT,35,37
+    20,KLEFKI,35,37
+    20,SCRAGGY,34,36
+    20,SIGILYPH,35,37
 #-------------------------------
 [228] # Hidden Laboratory
 Special
@@ -869,10 +870,11 @@ LandSparse,20
 #-------------------------------
 [301] # County Park
 Land,20
-    25,BUNNELBY,21,23
-    25,FLETCHLING,21,23
-    25,HATENNA,21,23
-    25,KRICKETOT,21,23
+    20,BUNNELBY,21,23
+    20,FLETCHLING,21,23
+    20,HATENNA,21,23
+    20,KRICKETOT,21,23
+    20,MAKUHITA,21,23
 FloweryGrass,20
     25,LEDYBA,21,23
     25,SUNKERN,21,23
@@ -882,9 +884,6 @@ FloweryGrass,20
     5,FLABEBE_2,21,23
     5,FLABEBE_3,21,23
     5,FLABEBE_4,21,23
-LandSparse,20
-    50,SAWK,34,36
-    50,THROH,34,36
 Special
     1,DRIFLOON,15
 #-------------------------------
