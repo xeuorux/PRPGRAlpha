@@ -314,6 +314,9 @@ module MoveInfoDisplay
         "sleep",
         "asleep",
         "drowsy",
+        "cursing",
+        "cursed",
+        "curse",
         "Attack",
         "Sp. Atk",
         "Defense",
@@ -323,6 +326,10 @@ module MoveInfoDisplay
         "Evasion",
         "maximize",
         "minimize",
+        "aqua ring",
+        "charged",
+        "charge",
+        "recoil",
       ]
     end
 
@@ -348,6 +355,10 @@ module MoveInfoDisplay
         "eighteen",
         "nineteen",
         "twenty",
+        "twice",
+        "three times",
+        "four times",
+        "five times",
       ]
     end
 
@@ -355,15 +366,15 @@ module MoveInfoDisplay
       # Highlight very important words in red
       importantColorTag = getSkinColor(nil, 2, darkMode?, true)
       moveKeywordsImportant.each do |keyword|
-        moveDescription = moveDescription.gsub(" #{keyword}"," #{importantColorTag}#{keyword}</c3>")
+        moveDescription = moveDescription.gsub(/\b(#{keyword})\b/i,"#{importantColorTag}\\1</c3>")
       end
       
       # Outline less important keywords
       unimportantColorTag = getSkinColor(nil, 13, darkMode?, true)
       moveKeywordsUnimportant.each do |keyword|
-        moveDescription = moveDescription.gsub(" #{keyword}"," #{unimportantColorTag}#{keyword}</c3>")
+        moveDescription = moveDescription.gsub(/\b(#{keyword})\b/i,"#{unimportantColorTag}\\1</c3>")
       end
-      moveDescription = moveDescription.gsub("/ [1-9][0-9]*\%\%/"," #{unimportantColorTag}\1</c3>")
+      moveDescription = moveDescription.gsub(/\b(\d+%)/i,"#{unimportantColorTag}\\1</c3>")
 
       return moveDescription
     end
