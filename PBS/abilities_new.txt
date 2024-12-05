@@ -1512,7 +1512,7 @@ Name = Rust & Wrack
 Description = The Pokémon is also Steel-type, but it takes 15% more damage from moves.
 #-------------------------------
 [SAFEPASSAGE]
-Name = Safe Instinct
+Name = Safe Passage
 Description = Doubles Defense in rainstorm.
 Flags = RainstormSynergy
 #-------------------------------
