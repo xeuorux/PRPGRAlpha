@@ -2591,7 +2591,7 @@ Pokemon = GRAPIDASH,70
     EV = 10,20,0,20,20,0
 Pokemon = SWALOT,70
     Moves = POISONGAS,TRICKYTOXINS,CLEARSMOG,SHADOWBALL
-    AbilityIndex = 1 # Corrosion
+    AbilityIndex = 1 # Toxin Tax
     Item = BLACKSLUDGE
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 0,10,20,0,10,20

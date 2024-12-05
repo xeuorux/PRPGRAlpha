@@ -737,3 +737,10 @@ BattleHandlers::DamageCalcUserAbility.add(:CLEANFREAK,
       user.aiLearnsAbility(ability) unless aiCheck
   }
 )
+
+BattleHandlers::DamageCalcUserAbility.add(:PUFFUP,
+  proc { |ability, user, target, move, mults, _baseDmg, type, aiCheck|
+      mults[:attack_multiplier] *= 1 + (0.25 * user.countEffect(:Stockpile))
+      user.aiLearnsAbility(ability) unless aiCheck
+  }
+)

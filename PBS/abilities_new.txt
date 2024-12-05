@@ -1395,6 +1395,10 @@ Name = Pressure Valve
 Description = Right before the Pokémon is attacked, the attacker's stat changes are reset.
 Flags = SetupCounterAI
 #-------------------------------
+[PUFFUP]
+Name = Puff Up
+Description = Deals 25% more damage per stockpile.
+#-------------------------------
 [PUNISHER]
 Name = Punisher
 Description = Special moves against the Pokémon have a 30% chance to leech the attacker.

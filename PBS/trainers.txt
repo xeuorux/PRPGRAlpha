@@ -304,7 +304,7 @@ Pokemon = BELDUM,17
 Policies = PRIORITIZEDOTS
 Pokemon = GRIMER,20
     Moves = POISONGAS,SLUDGE,DISABLE,MUDSHOT
-    AbilityIndex = 0 # Toxin Tax
+    AbilityIndex = 0 # Corrosion
 Pokemon = CHARMELEON,20
     Moves = IGNITE,SQUALLDART,FIREFANG,TWISTER
     AbilityIndex = 0 # Flame Body
@@ -709,7 +709,7 @@ Pokemon = SHELLOS,15
     EV = 19,11,11,0,11,9
 Pokemon = GULPIN,15
     Moves = POISONGAS,ACID,STOCKPILE,SPITUP
-    AbilityIndex = 1 # Corrosion
+    AbilityIndex = 1 # Toxin Tax
     Item = CADOBERRY
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 13,20,17,0,20,0
@@ -1999,7 +1999,7 @@ Pokemon = CENTISKORCH,39
 Pokemon = TROPIUS,38
     AbilityIndex = 0 # Mental Block
 Pokemon = SWALOT,39
-    AbilityIndex = 1 # Corrosion
+    AbilityIndex = 1 # Toxin Tax
 #-------------------------------
 [CEO,Beatrice]
 Flags = NoPerfect
@@ -2909,7 +2909,7 @@ Pokemon = EMBOAR,37
 [SWIMMER_F2,Astrid]
 Pokemon = OVERQWIL,51
     Moves = POISONSPIKES,TRICKYTOXINS,CRUNCH,ENVENOM
-    AbilityIndex = 1 # Venom Gorger
+    AbilityIndex = 0 # Poison Point
     Item = BLACKSLUDGE
 Pokemon = GSLOWBRO,52
     Moves = ENVENOM,PSYCHOBOOST,VENOSHOCK,SHELLSIDEARM
@@ -3309,7 +3309,7 @@ Pokemon = GLIGAR,27
 Flags = NoPerfect
 Pokemon = GRIMER,30
     Moves = POISONGAS,SLUDGE,FIREPULSE,DISSOLUTION
-    AbilityIndex = 0 # Toxin Tax
+    AbilityIndex = 0 # Corrosion
     Item = EVIOLITE
 Pokemon = MIGHTYENA,30
     Moves = ASSURANCE,FAIRPLAY,PLANTDOUBT,MIDNIGHTHUNT
@@ -3512,7 +3512,7 @@ Pokemon = WIGGLYTUFF,39
     Item = THROATSPRAY
 Pokemon = SWALOT,40
     Moves = POISONGAS,ACIDSPRAY,STELLARATE
-    AbilityIndex = 1 # Corrosion
+    AbilityIndex = 1 # Toxin Tax
 Pokemon = HELIOLISK,40
     Moves = LIGHTNINGSPEAR,WEATHERBURST,VOLTSWITCH,BURNINGJEALOUSY
     AbilityIndex = 1 # Water Absorb
@@ -8244,7 +8244,7 @@ Pokemon = GLACEON,70
     AbilityIndex = 1 # Brilliant Flurry
     Item = LEFTOVERS
 Pokemon = MUK,70
-    AbilityIndex = 0 # Toxin Tax
+    AbilityIndex = 0 # Corrosion
     Item = SITRUSBERRY
 #-------------------------------
 [TOURISTM,Francois]
