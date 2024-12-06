@@ -276,6 +276,11 @@ module GameData
                 end
             end
 
+            # Set level from policy
+            if trainer.policies.include?(:MATCH_LEVEL_CAP)
+              pkmn.level = getLevelCap
+            end
+
             # Set Pokémon's properties if defined
             pkmn.name = nickname if !nickname.nil?
 

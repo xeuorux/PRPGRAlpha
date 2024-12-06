@@ -53,6 +53,11 @@ Gender = Female
 BaseMoney = 32
 IntroBGM = AROMALADY
 #-------------------------------
+[ARTIFICIALTRAINER]
+Name = Artificial Trainer
+Gender = Unknown
+BaseMoney = 0
+#-------------------------------
 [ARTIST]
 Name = Artist
 Gender = Male
