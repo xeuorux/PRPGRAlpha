@@ -952,7 +952,7 @@ Pokemon = CENTISKORCH,25
 #-------------------------------
 [POKEMONTRAINER_Yezera,Yezera,3]
 ExtendsVersion = 2
-Policies = CURSE_TYPE_WEAKENED
+Policies = CURSE_VENGEANT
 Pokemon = SANDACONDA,25
     Moves = DUSTDEVIL,GLARE,SANDSTORM
     AbilityIndex = 1 # Disorienting
@@ -3115,22 +3115,16 @@ Pokemon = GDARMANITAN,45
 #-------------------------------
 [LEADER_Noel,Noel,1]
 ExtendsVersion = 0
-Policies = CURSE_EXTRA_TYPES
+Policies = CURSE_TYPE_WEAKENED
 Pokemon = MRRIME,45
-    ExtraTypes = ROCK
     Item = FOCUSSASH
 Pokemon = METAGROSS,45
-    ExtraTypes = FAIRY
 Pokemon = MPOLTEAGEIST,45
-    ExtraTypes = WATER
 Pokemon = CRABOMINABLE,45
-    ExtraTypes = GHOST
     Item = CUSTAPBERRY
 Pokemon = BRUXISH,45
-    ExtraTypes = POISON
     Moves = CRUNCH,PSYCHICFANGS,FIREFANG,POISONFANG
 Pokemon = GDARMANITAN,45
-    ExtraTypes = FIGHTING
     Moves = BURNUP,SUBLIMATE,SOLARBEAM,BODYPRESS
     Item = POWERHERB
 #-------------------------------
@@ -4809,7 +4803,7 @@ Pokemon = GOLISOPOD,55
 [MASKEDVILLAIN_DOUBLE,Crimson,1]
 ExtendsVersion = 0
 NameForHashing = Imogene
-Policies = CURSE_TYPE_WEAKENED
+Policies = CURSE_VENGEANT
 Pokemon = REGIROCK,55
     Item = ROCKGEM
 Pokemon = GOTHITELLE,55
@@ -4849,7 +4843,7 @@ Pokemon = RILLABOOM,55
 [MASKEDVILLAIN,Crimson,3]
 ExtendsVersion = 2
 NameForHashing = Alessa
-Policies = CURSE_TYPE_WEAKENED
+Policies = CURSE_VENGEANT
 Pokemon = REGIROCK,55
     Item = ROCKGEM
 Pokemon = PORYGONZ,55
@@ -4886,7 +4880,7 @@ Pokemon = PALMANTRA,55
 [MASKEDVILLAIN,Crimson,5]
 ExtendsVersion = 4
 NameForHashing = Skyler
-Policies = CURSE_TYPE_WEAKENED
+Policies = CURSE_VENGEANT
 Pokemon = REGIROCK,55
     Item = ROCKGEM
 Pokemon = ABSOLUS,55
@@ -4924,7 +4918,7 @@ Pokemon = AGOLEM,55
 [MASKEDVILLAIN,Crimson,7]
 ExtendsVersion = 6
 NameForHashing = Keoni
-Policies = CURSE_TYPE_WEAKENED
+Policies = CURSE_VENGEANT
 Pokemon = REGIROCK,55
     Item = ROCKGEM
 Pokemon = MPOLTEAGEIST,55
@@ -4961,7 +4955,7 @@ Pokemon = GIGANTEON,55
 [MASKEDVILLAIN,Crimson,9]
 ExtendsVersion = 8
 NameForHashing = Eifion
-Policies = CURSE_TYPE_WEAKENED
+Policies = CURSE_VENGEANT
 Pokemon = REGIROCK,55
     Item = ROCKGEM
 Pokemon = HOUNDOMINUS,55
@@ -5002,7 +4996,7 @@ Pokemon = GOLURK,55
 [MASKEDVILLAIN,Crimson,11]
 ExtendsVersion = 10
 NameForHashing = Candy
-Policies = CURSE_TYPE_WEAKENED
+Policies = CURSE_VENGEANT
 Pokemon = REGIROCK,55
     Item = ROCKGEM
 Pokemon = GRAPIDASH,55
@@ -8185,7 +8179,7 @@ Pokemon = GYARADOS,70
 #-------------------------------
 [SPIRITGUARDIAN4,Brigitte,1]
 ExtendsVersion = 0
-Policies = CURSE_TYPE_WEAKENED
+Policies = CURSE_SELF_DEBUFFING
 #-------------------------------
 [SAGE,Takeshi]
 Pokemon = RAMPARDOS,70
