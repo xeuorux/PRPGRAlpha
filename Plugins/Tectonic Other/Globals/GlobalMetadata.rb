@@ -290,6 +290,12 @@ class PokemonGlobalMetadata
         return @donationBoxesTutorialized
     end
 
+    attr_writer :colorationDifferencesTutorialized
+    def colorationDifferencesTutorialized
+        @colorationDifferencesTutorialized = false if @colorationDifferencesTutorialized.nil?
+        return @colorationDifferencesTutorialized
+    end
+
     ####################################################
     # Misc.
     ####################################################

@@ -138,6 +138,18 @@ def playDonationBoxesTutorial
     playTutorial(tutorialMessages)
 end
 
+def playColorationDifferencesTutorial
+    $PokemonGlobal.colorationDifferencesTutorialized = true
+    tutorialMessages = 
+    [
+        _INTL("Individual Pokémon have individual appearances."),
+        _INTL("They differ in hue and brightness!"),
+        _INTL("If you wish, you can turn this off in the options."),
+    ]
+    playTutorial(tutorialMessages)
+end
+
+
 def tutorialIntro
     pbBGMFade(1.0)
     pbWait(Graphics.frame_rate)
