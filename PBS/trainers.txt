@@ -2887,7 +2887,7 @@ Pokemon = GRIMMSNARL,38
     Item = EJECTBUTTON
 Pokemon = MJELLICENT,36
     Gender = female
-    Moves = BADENDING,BLIGHT,THUNDERCLAP,SHADOWCLAW
+    Moves = BADENDING,BLIGHT,LIGHTNINGSLAM,SHADOWCLAW
     AbilityIndex = 0 # Ruinous
 #-------------------------------
 [GARDENER,Jacek]
@@ -4188,7 +4188,7 @@ Pokemon = SENSIBELLE,55
     Moves = EXTRASENSORY,WARDPRESS,RECOVER,NULLPULSE
     AbilityIndex = 1 # Regenerator
 Pokemon = MSEVIPER,55
-    Moves = FARADAYCAGE,TOXICTASTE,THUNDERCLAP,GLARE
+    Moves = FARADAYCAGE,TOXICTASTE,LIGHTNINGSLAM,GLARE
     AbilityIndex = 0 # Tesla Coils
     Item = ELECTRICGEM
 Pokemon = TOGEKISS,55

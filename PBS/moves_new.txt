@@ -4681,6 +4681,20 @@ FunctionCode = RaiseUserSpAtk2Spd1
 Flags = CanSnatch,Dance
 Description = The user dances with the speed of lightning, raising its Sp. Atk by two steps and Speed by 1.
 #-------------------------------
+[LIGHTNINGSLAM]
+Name = Lightning Slam
+Type = ELECTRIC
+Category = Physical
+Power = 90
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = Numb
+Flags = CanProtect,CanMirrorMove
+EffectChance = 10
+Description = The user slams down into the target with electricity. It has a 10% chance to numb.
+Animation = SPARK
+#-------------------------------
 [LIGHTNINGSPEAR]
 Name = Lightning Spear
 Type = ELECTRIC
@@ -4832,20 +4846,6 @@ FunctionCode = RecoilFullDamageDealt
 Flags = CanProtect,CanMirrorMove
 Description = The user takes an entire grid of power into its belly to slam the target. The user takes 100% recoil.
 Animation = BODYSLAM
-#-------------------------------
-[THUNDERCLAP]
-Name = Thunderclap
-Type = ELECTRIC
-Category = Physical
-Power = 80
-Accuracy = 100
-TotalPP = 15
-Target = NearOther
-FunctionCode = Flinch
-Flags = CanProtect,CanMirrorMove
-EffectChance = 40
-Description = The user jabs the target with electric charges. It has a 40% chance to make the target flinch.
-Animation = SPARK
 #-------------------------------
 [VOLTSEEKERS]
 Name = Volt Seekers

@@ -1967,7 +1967,7 @@ Pokemon = KLEFKI,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,0,20,0,0,10
 Pokemon = BOLTUND,70
-    Moves = THUNDERCLAP,SUCKERPUNCH,PLAYROUGH,INFERNOIMPACT
+    Moves = LIGHTNINGSLAM,SUCKERPUNCH,PLAYROUGH,INFERNOIMPACT
     AbilityIndex = 1 # Strikes Twice
     Item = LIFEORB
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -2514,7 +2514,7 @@ Pokemon = KINGDRA,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,0,20,20,0
 Pokemon = MAROWAK,70
-    Moves = BONEMERANG,DRAINPUNCH,POWERUPPUNCH,THUNDERCLAP
+    Moves = BONEMERANG,DRAINPUNCH,POWERUPPUNCH,LIGHTNINGSLAM
     AbilityIndex = 1 # Break Through
     Item = STRIKEVEST
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def

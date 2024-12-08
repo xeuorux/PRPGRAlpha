@@ -1869,6 +1869,20 @@ FunctionCode = Invalid
 Flags = CanProtect,CanMirrorMove
 Description = Attacks with electric voltage rising from the ground. Power doubles on Electric Terrain.
 #-------------------------------
+[THUNDERCLAP]
+Name = Thunderclap
+Type = ELECTRIC
+Category = Physical
+Power = 80
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect,CanMirrorMove
+EffectChance = 40
+Description = The user jabs the target with electric charges. It has a 40% chance to make the target flinch.
+Animation = SPARK
+#-------------------------------
 [THUNDERWAVE]
 Name = Thunder Wave
 Type = ELECTRIC
