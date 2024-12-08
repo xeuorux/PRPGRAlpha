@@ -22,13 +22,13 @@ def basicPokeMart
 end
 
 def rangerMart
-    setPrice(:SITRUSBERRY,200)
+    setPrice(:SITRUSBERRY,2000)
     if vipCardActive?
         message = _INTL("You a big shot, huh? Well, we're here to supply you.")
     else
         message = _INTL("Get your supplies here!")
     end
-    pbPokemonMart(martStock,)
+    pbPokemonMart(martStock,message)
 end
 
 ######################################################
