@@ -2290,7 +2290,7 @@ Pokemon = SWAMPERT,70
     Gender = male
     AbilityIndex = 1 # Boulder Nest
 #-------------------------------
-[LADY4,Divock]
+[LADY4,Pria]
 TrainerTypeLabel = DEVELOPER
 Pokemon = DRAGONITE,70
     AbilityIndex = 0 # Inner Focus
