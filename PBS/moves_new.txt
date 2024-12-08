@@ -2173,6 +2173,20 @@ Flags = CanProtect,CanMirrorMove
 EffectChance = 100
 Description = The user makes the target have an allergic reaction. This reduces their Speed by three steps.
 #-------------------------------
+[BIOBLITZ]
+Name = Bio-Blitz
+Type = BUG
+Category = Physical
+Power = 90
+Accuracy = 100
+TotalPP = 25
+Target = NearOther
+FunctionCode = Poison
+Flags = CanProtect,CanMirrorMove
+EffectChance = 10
+Description = The user stabs and slashes the target with a flurry of biological weaponry. It has a 10% chance to poison.
+Animation = XSCISSOR
+#-------------------------------
 [CLACKACLACK]
 Name = Clackaclack
 Type = BUG
@@ -2247,6 +2261,20 @@ TotalPP = 10
 Target = NearAlly
 FunctionCode = TargetUsesMoveInUserFirstSlot
 Description = The user makes its ally perform the move in the user's first slot.
+#-------------------------------
+[IRRITATE]
+Name = Irritate
+Type = BUG
+Category = Physical
+Power = 40
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = Poison
+Flags = CanProtect,CanMirrorMove
+EffectChance = 10
+Description = The user applies a painful chemical to the target with a smack. It has a 10% chance to poison.
+Animation = SKITTERSMACK
 #-------------------------------
 [LATCHON]
 Name = Latch On
@@ -2417,6 +2445,20 @@ FunctionCode = LowerTargetDef1
 Flags = CanProtect,CanMirrorMove
 EffectChance = 20
 Description = Avenging bugs everywhere, the user crushes the target. It has a 20% chance to lower their Defense stat.
+#-------------------------------
+[STINGINGJAB]
+Name = Stinging Jab
+Type = BUG
+Category = Physical
+Power = 60
+Accuracy = 100
+TotalPP = 20
+Target = NearOther
+FunctionCode = Poison
+Flags = CanProtect,CanMirrorMove
+EffectChance = 30
+Description = The user stabs the target, injecting a painful chemical. It has a 30% chance to poison.
+Animation = FELLSTINGER
 #-------------------------------
 [STUNNINGCURL]
 Name = Stunning Curl
