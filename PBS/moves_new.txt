@@ -2160,6 +2160,20 @@ Animation = FLASH
 #-------------------------------
 #		BUG MOVES
 #-------------------------------
+[AGONIZE]
+Name = Agonize
+Type = BUG
+Category = Physical
+Power = 90
+Accuracy = 100
+TotalPP = 25
+Target = NearOther
+FunctionCode = Poison
+Flags = CanProtect,CanMirrorMove
+EffectChance = 10
+Description = The user injects the target with an extremely painful bio-chemical. It has a 10% chance to poison.
+Animation = XSCISSOR
+#-------------------------------
 [ALLERGY]
 Name = Allergy
 Type = BUG
@@ -2172,20 +2186,6 @@ FunctionCode = LowerTargetSpd3
 Flags = CanProtect,CanMirrorMove
 EffectChance = 100
 Description = The user makes the target have an allergic reaction. This reduces their Speed by three steps.
-#-------------------------------
-[BIOBLITZ]
-Name = Bio-Blitz
-Type = BUG
-Category = Physical
-Power = 90
-Accuracy = 100
-TotalPP = 25
-Target = NearOther
-FunctionCode = Poison
-Flags = CanProtect,CanMirrorMove
-EffectChance = 10
-Description = The user stabs and slashes the target with a flurry of biological weaponry. It has a 10% chance to poison.
-Animation = XSCISSOR
 #-------------------------------
 [CLACKACLACK]
 Name = Clackaclack
