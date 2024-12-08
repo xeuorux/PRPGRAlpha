@@ -95,10 +95,6 @@ LandSparse,20
     25,PARAS,9,11
     25,SHELLDER,9,11
 #-------------------------------
-[027] # Casaba Mart
-Special
-    1,ASANDSHREW,10
-#-------------------------------
 [029] # Full Blast Records F2
 Special
     1,GMEOWTH,40
@@ -173,6 +169,10 @@ Puddle,20
 Special
     1,SPHEAL,15
 #-------------------------------
+[039] # Casaba Center
+Special
+    1,ASANDSHREW,10
+#-------------------------------
 [040] # Gigalith's Guts
 DarkCave,20
     25,ARON,18,20
@@ -246,6 +246,10 @@ FloweryGrass,20
 Special
     1,EEVEE,15
 #-------------------------------
+[057] # Novo Center
+Special
+    1,AMEOWTH,15
+#-------------------------------
 [059] # Feebas' Fin
 Land,20
     40,MWURMPLE,13,15
@@ -273,10 +277,6 @@ LandTall,20
     25,PIKIPEK,14,16
     25,PINECO,14,16
     25,SCATTERBUG,14,16
-#-------------------------------
-[065] # Novo Mart
-Special
-    1,AMEOWTH,15
 #-------------------------------
 [066] # Apartment Attic
 Special
@@ -473,13 +473,13 @@ Land,20
 Special
     1,ROTOM,40
 #-------------------------------
+[158] # Prizca West Center
+Special
+    1,GFARFETCHD,40
+#-------------------------------
 [159] # Travel Agency
 Special
     1,ORICORIO,10
-#-------------------------------
-[180] # Prizca West Mart
-Special
-    1,GFARFETCHD,40
 #-------------------------------
 [182] # Spirit Atoll
 FloweryGrass,20
@@ -844,7 +844,7 @@ Land,20
     25,PICHU,59,61
     25,ROOKIDEE,59,61
 #-------------------------------
-[264] # Sweetrock Harbor Mart
+[263] # Sweetrock Harbor Center
 Special
     1,BOUNSWEET,10
 #-------------------------------

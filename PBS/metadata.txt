@@ -221,12 +221,6 @@ BicycleAlways = false
 BattleBack = cave1
 Environment = Cave
 #-------------------------------
-[027]
-# Casaba Mart
-Outdoor = false
-ShowArea = false
-Bicycle = false
-#-------------------------------
 [028]
 # Professor's House
 Outdoor = false
@@ -511,12 +505,6 @@ Outdoor = false
 ShowArea = false
 Bicycle = true
 BattleBack = cave3
-#-------------------------------
-[065]
-# Novo Mart
-Outdoor = false
-ShowArea = false
-Bicycle = false
 #-------------------------------
 [066]
 # Apartment Attic
@@ -1305,12 +1293,6 @@ Bicycle = false
 BattleBack = indoor2
 Environment = None
 #-------------------------------
-[180]
-# Prizca West Mart
-Outdoor = false
-ShowArea = false
-Bicycle = false
-#-------------------------------
 [181]
 # Casaba Island
 Outdoor = false
@@ -1403,12 +1385,6 @@ Outdoor = false
 ShowArea = false
 Bicycle = false
 HealingSpot = 187,67,30
-#-------------------------------
-[192]
-# Prizca East Mart
-Outdoor = false
-ShowArea = false
-Bicycle = false
 #-------------------------------
 [193]
 # Volcanic Shore
@@ -1905,12 +1881,6 @@ Outdoor = false
 ShowArea = false
 Bicycle = false
 HealingSpot = 217,27,29
-#-------------------------------
-[264]
-# Sweetrock Harbor Mart
-Outdoor = false
-ShowArea = false
-Bicycle = false
 #-------------------------------
 [265]
 # Lightkeeper's House
