@@ -59,6 +59,12 @@ def fadeSwitchOff(switchName = 'A')
 	}
 end
 
+def toggleSwitch(eventID, switchName = 'A')
+	mapid = $game_map.map_id
+	currentValue = $game_self_switches[[mapid, eventID, switchName]]
+	pbSetSelfSwitch(eventID,switchName,!currentValue,mapid)
+end
+
 def toggleSwitches(eventsArray,switchName="A")
 	mapid = $game_map.map_id
 	eventsArray.each do |eventID|

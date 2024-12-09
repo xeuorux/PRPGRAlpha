@@ -331,8 +331,15 @@ class Game_Map
         return false
     end
 
-    def terrain_tag(x, y, countBridge = false)
+    def terrain_tag(x, y, countBridge = false, checkEvents = false, self_event = nil)
         if valid?(x, y)
+            for event in events.values
+                next if event == self_event || event.tile_id <= 0 || event.through
+                next unless event.at_coordinate?(x, y)
+                tileID = getTileIDForEventAtCoordinate(event, x, y)
+                terrainTag = GameData::TerrainTag.try_get(@terrain_tags[tileID])
+                return terrainTag
+            end
             for i in [2, 1, 0]
                 tile_id = data[x, y, i]
                 terrain = GameData::TerrainTag.try_get(@terrain_tags[tile_id])
