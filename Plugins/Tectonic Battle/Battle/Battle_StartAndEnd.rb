@@ -262,6 +262,8 @@ class PokeBattle_Battle
     # Start a battle
     #=============================================================================
     def pbStartBattle
+        $battle = self
+
         # Spit out lots of debug information
         PBDebug.log("")
         PBDebug.log("******************************************")
@@ -346,6 +348,7 @@ class PokeBattle_Battle
         # Return the speaker box to being visible if it was hidden by the battle
         showSpeaker if reshowSpeakerWindow
 
+        $battle = nil
         return @decision
     end
 
