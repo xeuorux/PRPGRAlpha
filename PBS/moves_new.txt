@@ -1246,18 +1246,6 @@ FunctionCode = RaiseUserSpDef5
 Flags = CanSnatch
 Description = The user partially dissolves, raising its Sp. Def stat by five steps.
 #-------------------------------
-[ENVENOM]
-Name = Envenom
-Type = POISON
-Category = Status
-Accuracy = 100
-TotalPP = 30
-Target = NearFoe
-FunctionCode = Poison
-Flags = CanProtect,CanMagicCoat,CanMirrorMove
-Description = Venom is strategically introduced into the target, poisoning it.
-Animation = POISONSTING
-#-------------------------------
 [EXSANGUINATE]
 Name = Exsanguinate
 Type = POISON
@@ -2227,6 +2215,18 @@ Flags = CanProtect,CanMirrorMove,Sound
 EffectChance = 30
 Description = The user vibrates its wings to make a damaging sound wave. It has a 30% chance to lower Sp. Atk.
 Animation = BUGBUZZ
+#-------------------------------
+[ENVENOM]
+Name = Envenom
+Type = BUG
+Category = Status
+Accuracy = 100
+TotalPP = 30
+Target = NearFoe
+FunctionCode = Poison
+Flags = CanProtect,CanMagicCoat,CanMirrorMove
+Description = Venom is strategically introduced into the target, poisoning it.
+Animation = POISONSTING
 #-------------------------------
 [FEEDON]
 Name = Feed On
