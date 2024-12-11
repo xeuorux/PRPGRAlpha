@@ -1435,14 +1435,14 @@ Animation = POISONSTING
 Name = Stink Cloud
 Type = POISON
 Category = Special
-Power = 50
+Power = 65
 Accuracy = 100
 TotalPP = 20
 Target = NearOther
 FunctionCode = Dizzy
 Flags = CanProtect,CanMirrorMove,Wind
-EffectChance = 20
-Description = The user gives off a terrible stench towards the target. It has a 20% chance to dizzy.
+EffectChance = 30
+Description = The user gives off a terrible stench towards the target. It has a 30% chance to dizzy.
 #-------------------------------
 [STINKCOVER]
 Name = Stink Cover
@@ -6469,7 +6469,7 @@ Animation = SWEETKISS
 Name = Baleful Bop
 Type = FAIRY
 Category = Special
-Power = 60
+Power = 65
 Accuracy = 100
 TotalPP = 20
 Target = NearOther

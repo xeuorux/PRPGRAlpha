@@ -188,14 +188,14 @@ Description = The user slashes the target with hard and sharp claws, lowering th
 Name = Dizzy Punch
 Type = NORMAL
 Category = Physical
-Power = 85
+Power = 80
 Accuracy = 100
 TotalPP = 10
 Target = NearOther
 FunctionCode = Dizzy
 Flags = CanProtect,CanMirrorMove,Punch
-EffectChance = 20
-Description = The target is hit with rhythmically launched punches that have a 20% chance to dizzy.
+EffectChance = 30
+Description = The target is hit with rhythmically launched punches that have a 30% chance to dizzy.
 #-------------------------------
 [DOUBLEEDGE]
 Name = Double-Edge
@@ -3052,14 +3052,14 @@ Description = The user raises their Sp. Atk and Sp. Def by two steps, and Speed 
 Name = Signal Beam
 Type = BUG
 Category = Special
-Power = 75
+Power = 65
 Accuracy = 100
 TotalPP = 12
 Target = NearOther
 FunctionCode = Dizzy
 Flags = CanProtect,CanMirrorMove
-EffectChance = 10
-Description = The user attacks with a beam of light. It has a 10% chance to dizzy.
+EffectChance = 30
+Description = The user attacks with a beam of light. It has a 30% chance to dizzy.
 #-------------------------------
 [SILVERWIND]
 Name = Silver Wind
@@ -4559,14 +4559,14 @@ Description = A column of water strikes the target. When combined with its fire 
 Name = Water Pulse
 Type = WATER
 Category = Special
-Power = 60
+Power = 65
 Accuracy = 100
 TotalPP = 15
 Target = NearOther
 FunctionCode = Dizzy
 Flags = CanProtect,CanMirrorMove,Pulse
-EffectChance = 20
-Description = The user attacks the target with a pulsing blast of water. It has a 20% chance to dizzy.
+EffectChance = 30
+Description = The user attacks the target with a pulsing blast of water. It has a 30% chance to dizzy.
 #-------------------------------
 [WATERSHURIKEN]
 Name = Water Shuriken
@@ -5783,8 +5783,8 @@ TotalPP = 15
 Target = NearOther
 FunctionCode = Dizzy
 Flags = CanProtect,CanMirrorMove
-EffectChance = 10
-Description = The target is attacked with a peculiar ray. It has a 10% chance to dizzy.
+EffectChance = 30
+Description = The target is attacked with a peculiar ray. It has a 30% chance to dizzy.
 #-------------------------------
 [PSYCHIC]
 Name = Psychic
@@ -7198,5 +7198,5 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = Dizzy
 Flags = CanProtect,CanMirrorMove
-EffectChance = 20
-Description = The user attacks the target by emitting steam. It has a 20% chance to dizzy.
+EffectChance = 30
+Description = The user attacks the target by emitting steam. It has a 30% chance to dizzy.
