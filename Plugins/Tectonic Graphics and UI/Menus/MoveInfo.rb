@@ -330,6 +330,9 @@ module MoveInfoDisplay
         "charged",
         "charge",
         "recoil",
+        "flinch",
+        "flinched",
+        "flinching",
       ]
     end
 
