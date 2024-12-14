@@ -2,7 +2,7 @@ TRAINERS_PERFECTED_GLOBAL_VAR = 79
 
 GlobalStateHandlers::GlobalVariableChanged.add(TRAINERS_PERFECTED_GLOBAL_VAR,
     proc { |variableID, value|
-        if pbHasItem?(:OMINOUSEGG)
+        if $PokemonBag && pbHasItem?(:OMINOUSEGG)
             checkForOminousEggRewards
         end
     }
