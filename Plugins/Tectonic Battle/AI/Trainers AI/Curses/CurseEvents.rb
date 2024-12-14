@@ -102,7 +102,7 @@ class PokeBattle_Battle
 
         msgwindow = pbCreateMessageWindow
         msgwindow.z = 100_001
-        waitTime = tutorialMessageDuration
+        waitTime = amuletMessageDuration
         fontSize = 48
         msgwindow.lineHeight(48)
         curseName = _INTL("\\ts[]<c3=4C0D0D,FFFFFF22><b><outln2><ac><fs={1}>\\w[]\\wu\\l[12]{2}</fs></ac></outln2></b></c3>\\wt[{3}]",fontSize,curseName,waitTime)
@@ -117,5 +117,11 @@ class PokeBattle_Battle
             curseBG.opacity = (255 - opacity) / 2
         }
         curseBG.visible = false
+    end
+
+    def amuletMessageDuration
+        dur = 70
+        dur -= 8 * $PokemonSystem.textspeed
+        return dur
     end
 end
