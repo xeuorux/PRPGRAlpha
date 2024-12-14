@@ -11,6 +11,7 @@ class PokeBattle_Battle
             @initialItems[0][pbPlayer.party.length - 1] = pkmn.items.clone if @initialItems
             return
         end
+        promptToTakeItems(pkmn)
         # Messages saying the Pokémon was stored in a PC box
         curBoxName = @peer.pbBoxName(currentBox)
         boxName    = @peer.pbBoxName(storedBox)
