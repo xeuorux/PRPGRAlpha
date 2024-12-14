@@ -6450,11 +6450,11 @@ Category = Special
 Power = 40
 Accuracy = 100
 TotalPP = 15
-Target = AllNearFoes
+Target = NearOther
 FunctionCode = Flinch
 Flags = CanProtect,CanMirrorMove,Wind
 EffectChance = 30
-Description = A small tornado hits the opposing team. It has a 30% chance to make targets flinch.
+Description = A small tornado hits the target. It has a 30% chance to make targets flinch.
 #-------------------------------
 #		DARK MOVES
 #-------------------------------

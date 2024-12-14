@@ -5902,11 +5902,11 @@ Category = Special
 Power = 80
 Accuracy = 100
 TotalPP = 12
-Target = AllNearFoes
+Target = NearOther
 FunctionCode = Flinch
 Flags = CanProtect,CanMirrorMove,Wind
 EffectChance = 30
-Description = The user whips up a tornado to tear at the enemy team. It has a 30% chance to make them flinch.
+Description = The user whips up a tornado to tear at the target. It has a 30% chance to make them flinch.
 #-------------------------------
 [SHRED]
 Name = Shred
