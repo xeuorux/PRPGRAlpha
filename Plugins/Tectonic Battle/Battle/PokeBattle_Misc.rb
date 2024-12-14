@@ -52,6 +52,13 @@ class PokeBattle_Battle
         return @curses.include?(curseID)
     end
 
+    def stolenItemTurnsToDust?(item = nil)
+        return true if curseActive?(:CURSE_SUPER_ITEMS)
+        return true if curseActive?(:CURSE_RECYCLING)
+        return true if item && GameData::Item.get(item).super
+        return false
+    end
+
     def pbCheckNeutralizingGas(battler = nil)
         # Battler = the battler to switch out.
         # Should be specified when called from pbAttackPhaseSwitch

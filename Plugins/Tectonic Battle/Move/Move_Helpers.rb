@@ -113,7 +113,7 @@ class PokeBattle_Move
         end
         oldVictimItemName = getItemName(item)
         victim.removeItem(item)
-        if @battle.curseActive?(:CURSE_SUPER_ITEMS) || GameData::Item.get(item).super
+        if @battle.stolenItemTurnsToDust?(item)
             @battle.pbDisplay(_INTL("{1}'s {2} turned to dust.", victim.pbThis, oldVictimItemName))
             @battle.pbHideAbilitySplash(stealer) if ability
         else
