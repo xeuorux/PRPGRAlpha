@@ -21,7 +21,7 @@ def pbGenerateWildPokemon(species,level,ignoreCap = false,skipAlterations = fals
   return genwildpoke
 end
 
-WILD_ITEM_CHANCE_COMMON = 35
+WILD_ITEM_CHANCE_COMMON = 25
 WILD_ITEM_CHANCE_UNCOMMON = 10
 WILD_ITEM_CHANCE_RARE = 2
 
@@ -35,7 +35,7 @@ def generateWildHeldItem(pokemon,increasedChance=false)
   return nil if itemsWithRarities.empty?
 
   itemRoll = rand(100)
-  itemRoll -= 20 if increasedChance
+  itemRoll -= 10 if increasedChance
   itemRoll = 0 if itemRoll < 0
 
   totalRarity = 0
