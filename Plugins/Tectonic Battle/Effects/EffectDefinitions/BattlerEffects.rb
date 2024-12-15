@@ -2096,3 +2096,13 @@ GameData::BattleEffect.register_effect(:Battler, {
         battle.pbDisplay(_INTL("{1} is jinxed!", battler.pbThis))
     end,
 })
+
+GameData::BattleEffect.register_effect(:Battler, {
+    :id => :Fracture,
+    :real_name => "Fractured",
+    :baton_passed => true,
+    :avatars_purge => true,
+    :apply_proc => proc do |battle, battler, _value|
+        battle.pbDisplay(_INTL("{1} is fractured!", battler.pbThis))
+    end,
+})

@@ -243,6 +243,10 @@ class PokeBattle_Move
             damageIncrease *= 2 if target.hasActiveAbility?(:CLEANFREAK)
             multipliers[:final_damage_multiplier] *= (1.0 + damageIncrease)
         end
+        # Fracture
+        if user.fractured?
+            multipliers[:final_damage_multiplier] *= 0.5
+        end
     end
 
     def pbCalcProtectionsDamageMultipliers(user,target,multipliers,checkingForAI=false)
