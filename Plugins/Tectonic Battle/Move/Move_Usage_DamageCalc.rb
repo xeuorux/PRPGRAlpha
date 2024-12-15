@@ -244,7 +244,7 @@ class PokeBattle_Move
             multipliers[:final_damage_multiplier] *= (1.0 + damageIncrease)
         end
         # Fracture
-        if user.fractured?
+        if user.effectActive?(:Fracture)
             multipliers[:final_damage_multiplier] *= 0.5
         end
     end
