@@ -162,7 +162,7 @@ class PokeBattle_AI
 
         # More likely to switch when poison has worsened
         if battler.poisoned?
-            poisonBias = battler.getPoisonDoublings * -20
+            poisonBias = -10 * (2 ** battler.getPoisonDoublings)
             stayInRating += poisonBias
             PBDebug.log("[STAY-IN RATING] #{battler.pbThis} (#{battler.index}) is poisoned at count (#{battler.getStatusCount(:POISON)}) (#{poisonBias.to_change})")
         end
