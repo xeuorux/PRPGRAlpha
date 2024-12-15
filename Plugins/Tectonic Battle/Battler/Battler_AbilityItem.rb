@@ -189,7 +189,7 @@ class PokeBattle_Battler
                 @battle.pbSetSeen(self)
             end
         end
-        disableEffect(:GastroAcid) if immutableAbility?
+        disableEffect(:AbilitySupressed) if immutableAbility?
         disableEffect(:SlowStart) unless hasAbility?(:SLOWSTART)
         
         # Revert form if Flower Gift/Forecast was lost

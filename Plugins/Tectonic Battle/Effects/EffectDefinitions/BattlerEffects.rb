@@ -360,7 +360,7 @@ GameData::BattleEffect.register_effect(:Battler, {
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
-    :id => :GastroAcid,
+    :id => :AbilitySupressed,
     :real_name => "Ability Surpressed",
     :baton_passed => true,
     :pass_value_proc => proc do |battler, value|

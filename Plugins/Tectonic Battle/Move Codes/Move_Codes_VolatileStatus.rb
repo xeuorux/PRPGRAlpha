@@ -705,16 +705,16 @@ end
 #===============================================================================
 class PokeBattle_Move_NegateTargetAbilityIfTargetActed < PokeBattle_Move
     def pbEffectAgainstTarget(_user, target)
-        return if target.damageState.substitute || target.effectActive?(:GastroAcid)
+        return if target.damageState.substitute || target.effectActive?(:AbilitySupressed)
         return if target.immutableAbility?
         return if @battle.choices[target.index][0] != :UseItem &&
                   !((@battle.choices[target.index][0] == :UseMove ||
                   @battle.choices[target.index][0] == :Shift) && target.movedThisRound?)
-        target.applyEffect(:GastroAcid)
+        target.applyEffect(:AbilitySupressed)
     end
 
     def getEffectScore(user, target)
-        score = getWantsToBeSlowerScore(user, target, 3, move: self) if !target.substituted? && !target.effectActive?(:GastroAcid)
+        score = getWantsToBeSlowerScore(user, target, 3, move: self) if !target.substituted? && !target.effectActive?(:AbilitySupressed)
         return score
     end
 end

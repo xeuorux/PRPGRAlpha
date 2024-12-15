@@ -78,7 +78,7 @@ class PokeBattle_Battler
     def abilityActive?(ignore_fainted = false, ignore_gas = false)
         return false if fainted? && !ignore_fainted
         return false if !ignore_gas && @battle.abilitiesNeutralized?
-        return false if effectActive?(:GastroAcid)
+        return false if effectActive?(:AbilitySupressed)
         return false if dizzy?
         return true
     end
