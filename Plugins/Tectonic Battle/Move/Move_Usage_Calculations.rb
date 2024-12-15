@@ -308,6 +308,7 @@ class PokeBattle_Move
     end
 
     def guaranteedCrit?(user, target)
+        return true if target.effectActive?(:Jinxed)
         return true if user.effectActive?(:LaserFocus) || user.effectActive?(:EmpoweredLaserFocus)
         return true if user.effectActive?(:LuckyCheer)
         return true if pbCriticalOverride(user, target) > 0

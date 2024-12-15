@@ -2086,3 +2086,13 @@ GameData::BattleEffect.register_effect(:Battler, {
         raise _INTL("Last Gasp was disabled somehow.")
     end,
 })
+
+GameData::BattleEffect.register_effect(:Battler, {
+    :id => :Jinxed,
+    :real_name => "Jinxed",
+    :baton_passed => true,
+    :avatars_purge => true,
+    :apply_proc => proc do |battle, battler, _value|
+        battle.pbDisplay(_INTL("{1} is jinxed!", battler.pbThis))
+    end,
+})
