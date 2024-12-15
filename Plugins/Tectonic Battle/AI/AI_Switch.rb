@@ -167,16 +167,15 @@ class PokeBattle_AI
             PBDebug.log("[STAY-IN RATING] #{battler.pbThis} (#{battler.index}) is poisoned at count (#{battler.getStatusCount(:POISON)}) (#{poisonBias.to_change})")
         end
 
-        # More likely to switch when cursed
-        if battler.effectActive?(:Curse)
-            stayInRating -= 20
-            PBDebug.log("[STAY-IN RATING] #{battler.pbThis} (#{battler.index}) is cursed (-20)")
-        end
-
-        # More likely to switch when drowsy
-        if battler.effectActive?(:Yawn)
-            stayInRating -= 25
-            PBDebug.log("[STAY-IN RATING] #{battler.pbThis} (#{battler.index}) is drowsy (-25)")
+        # Switch influencing effect of certain battler effects
+        battler.eachEffect(true) do |effect, value, effectData|
+            next unless effectData.stay_in_rating_proc
+            oldStayInRating = stayInRating
+            stayInRating = effectData.stay_in_rating_proc.call(battle, battler, value, stayInRating)
+            ratingChange = stayInRating - oldStayInRating
+            if ratingChange != 0
+                PBDebug.log("[STAY-IN RATING] #{battler.pbThis} (#{battler.index}) has effect #{effectData.real_name} (#{ratingChange})")\
+            end
         end
 
         # Less likely to switch when any opponent has a force switch out move

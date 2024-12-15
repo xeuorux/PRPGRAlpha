@@ -72,6 +72,9 @@ module GameData
         # Bespoke information for type applying spikes
         attr_reader :status_applying_hazard
 
+        # Effects an AI battlers willingness to stay in
+        attr_reader :stay_in_rating_proc
+
         # Whether its swapped by the move Court Change
         # Defaults to true
         def court_changed?
@@ -265,6 +268,8 @@ module GameData
             @is_spike				= hash[:is_spike] || false
 
             @avatars_purge = hash[:avatars_purge] || false
+
+            @stay_in_rating_proc = hash[:stay_in_rating_proc]
 
             checkForInvalidDefinitions
         end
