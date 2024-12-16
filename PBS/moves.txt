@@ -3324,18 +3324,6 @@ FunctionCode = TwoTurnAttackInvulnerableRemoveProtections
 Flags = CanMirrorMove
 Description = The user vanishes somewhere, becoming invulnerable, then strikes on the next turn. Skips and destroys protections.
 #-------------------------------
-[POLTERGEIST]
-Name = Poltergeist
-Type = GHOST
-Category = Physical
-Power = 110
-Accuracy = 100
-TotalPP = 5
-Target = NearOther
-FunctionCode = FailsTargetNoItem
-Flags = CanProtect,CanMirrorMove
-Description = Attacks the target by controlling its item. Fails if the target doesn't have an item.
-#-------------------------------
 [SCARYFACE]
 Name = Scary Face
 Type = GHOST
