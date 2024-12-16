@@ -3891,9 +3891,9 @@ Category = Status
 Accuracy = 0
 TotalPP = 10
 Target = NearOther
-FunctionCode = NumbTargetStartRainstorm8
+FunctionCode = WaterlogTargetStartRainstorm8
 Flags = CanProtect,CanMagicCoat,CanMirrorMove
-Description = The user numbs the target, then welcomes in rainstorm for four turns.
+Description = The user waterlogs the target, then welcomes in rainstorm for four turns.
 Animation = RAINSTORM
 #-------------------------------
 [MAELSTROM]
