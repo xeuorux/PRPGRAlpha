@@ -87,7 +87,7 @@ Target = NearOther
 FunctionCode = PoisonDizzyOrLeechTarget
 Flags = CanProtect,CanMirrorMove
 EffectChance = 45
-Description = The user thrashes while infused with elements. It has a 15% chance each to poison, dizzy, or leech.
+Description = The user thrashes while infused with elements. It has a 15% chance each to poison, leech, or waterlog.
 Animation = FIERYWRATH
 #-------------------------------
 [CLAMOR]
