@@ -7889,7 +7889,7 @@ Pokemon = EISCUE,70
 #-------------------------------
 [BIRDKEEPER_F,Danika]
 Pokemon = MMANDIBUZZ,70
-    Moves = WILLOWISP,SHIVER,GUNKSHOT,SIXFEETUNDER
+    Moves = WILLOWISP,SHIVER,GUNKSHOT,VIMRIPPER
     AbilityIndex = 1 # Toil and Trouble
 Pokemon = HSAMUROTT,70
     Moves = CEASELESSEDGE,SWORDSDANCE,RAZORSHELL,SEVER
