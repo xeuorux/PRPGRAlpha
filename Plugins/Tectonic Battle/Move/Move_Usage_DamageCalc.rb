@@ -243,6 +243,14 @@ class PokeBattle_Move
             damageIncrease *= 2 if target.hasActiveAbility?(:CLEANFREAK)
             multipliers[:final_damage_multiplier] *= (1.0 + damageIncrease)
         end
+        # Waterlog
+        if target.waterlogged? && !target.shouldAbilityApply?([:MARVELSKIN,:MARVELSCALE],checkingForAI)
+            damageIncrease = (1.0/4.0)
+            damageIncrease = (3.0/20.0) if target.boss? && AVATAR_DILUTED_STATUS_CONDITIONS
+            damageIncrease *= 2 if target.pbOwnedByPlayer? && @battle.curseActive?(:CURSE_STATUS_DOUBLED)
+            damageIncrease *= 2 if target.hasActiveAbility?(:CLEANFREAK)
+            multipliers[:final_damage_multiplier] *= (1.0 + damageIncrease)
+        end
         # Fracture
         if user.effectActive?(:Fracture)
             multipliers[:final_damage_multiplier] *= 0.5
