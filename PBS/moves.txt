@@ -5178,17 +5178,6 @@ FunctionCode = StartUserAirborne5
 Flags = CanSnatch
 Description = The user levitates using electrically generated magnetism for five turns.
 #-------------------------------
-[NUMB]
-Name = Numb
-Type = ELECTRIC
-Category = Status
-Accuracy = 100
-TotalPP = 12
-Target = NearOther
-FunctionCode = Numb
-Flags = CanProtect,CanMagicCoat,CanMirrorMove
-Description = A weak electric charge is launched to numb the target.
-#-------------------------------
 [NUZZLE]
 Name = Nuzzle
 Type = ELECTRIC

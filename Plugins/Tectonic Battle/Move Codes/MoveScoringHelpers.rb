@@ -59,6 +59,20 @@ def getNumbEffectScore(user, target, ignoreCheck: false)
     return score
 end
 
+def getWaterlogEffectScore(user, target, ignoreCheck: false)
+    return 0 if willHealStatus?(target)
+    if target && (ignoreCheck || target.canWaterlog?(user, false))
+        score = 0
+        score += 60 if user.hasDamagingAttack?
+        score += 60 if user && target.pbSpeed(true) > user.pbSpeed(true)
+        score += STATUS_PUNISHMENT_BONUS if user && user.hasStatusPunishMove?
+        score -= getNaturalCureScore(user, target, score) if target.hasActiveAbilityAI?(:NATURALCURE)
+    else
+        return 0
+    end
+    return score
+end
+
 def getPoisonEffectScore(user, target, ignoreCheck: false)
     return 0 if willHealStatus?(target)
     if target && (ignoreCheck || target.canPoison?(user, false))
