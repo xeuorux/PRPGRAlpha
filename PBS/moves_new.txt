@@ -2845,17 +2845,6 @@ EffectChance = 100
 Description = The user unleashes its grudge, damaging the target and cutting 4 PP from the move last used by it.
 Animation = NIGHTSHADE
 #-------------------------------
-[SPOOKYSNUGGLING]
-Name = Spooky Snuggling
-Type = GHOST
-Category = Status
-Accuracy = 100
-TotalPP = 5
-Target = NearOther
-FunctionCode = CurseTarget
-Flags = CanProtect,CanMirrorMove
-Description = The user harnesses its jealousy to attack the opponent with ghostly hugs, cursing them.
-#-------------------------------
 [STITCHUP]
 Name = Stitch Up
 Type = GHOST
@@ -2867,6 +2856,18 @@ FunctionCode = HealUserByTwoThirdsOfTotalHPDisableSelf
 Flags = CanSnatch
 Description = The user restores two thirds of its own HP. Then, this move is disabled.
 Animation = RECOVER
+#-------------------------------
+[SUNDERFATE]
+Name = Sunder Fate
+Type = GHOST
+Category = Physical
+Power = 100
+Accuracy = 50
+TotalPP = 5
+Target = NearOther
+FunctionCode = CurseTarget
+Flags = CanProtect,CanMirrorMove
+Description = The user snips the target's connection to life in order to curse them, damaging their HP by 25% each turn.
 #-------------------------------
 [TONGUETWISTER]
 Name = Tongue Twister
@@ -4232,17 +4233,6 @@ Target = NearOther
 FunctionCode = PoisonSpikes
 Flags = CanProtect,CanMirrorMove,Blade
 Description = The user flicks its thorns, dealing damage and setting a layer of poison spikes around the target.
-#-------------------------------
-[CURSEDROOTS]
-Name = Cursed Roots
-Type = GRASS
-Category = Status
-Accuracy = 0
-TotalPP = 15
-Target = User
-FunctionCode = CurseAllFoesUserPaysQuarterOfTotalHPStartsIngrain
-Flags = CanSnatch
-Description = The user spends 25% HP to lay down evil roots. This curses all foes. The user becomes trapped, but heals by 1/8th HP every turn.
 #-------------------------------
 [ENERGYBALL]
 Name = Energy Ball

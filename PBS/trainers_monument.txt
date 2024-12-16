@@ -1389,7 +1389,7 @@ Pokemon = HARCANINE,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 0,20,5,20,20,5
 Pokemon = KECLEON,70
-    Moves = ICEBEAM,VOLTSWITCH,POLTERGEIST,STINGINGJEALOUSY
+    Moves = ICEBEAM,VOLTSWITCH,SIXFEETUNDER,STINGINGJEALOUSY
     AbilityIndex = 1 # Protean
     Item = AGILITYHERB
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -2197,7 +2197,7 @@ Pokemon = DECEAT,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,20,10,0,20,0
 Pokemon = MJELLICENT,70
-    Moves = BADENDING,POLTERGEIST,VOLTTACKLE,OMNISCIENTBLOW
+    Moves = BADENDING,SIXFEETUNDER,VOLTTACKLE,OMNISCIENTBLOW
     AbilityIndex = 1 # No Hope
     Item = POWERLOCK
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
