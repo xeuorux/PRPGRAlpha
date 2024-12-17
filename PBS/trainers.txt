@@ -125,7 +125,7 @@ Pokemon = POLIWAG,13
 [TUBER_F,Sophie]
 Policies = PRIORITIZESTATDOWN
 Pokemon = TOTODILE,13
-    Moves = WIPEOUT,GROWL,BITE,LEER
+    Moves = WIPEOUT,WATERLOG,BITE,LEER
     AbilityIndex = 0 # Ferocious
 Pokemon = TRAPINCH,13
     Moves = TREADON,DAZZLE,SMUSH,BITE
@@ -452,7 +452,7 @@ Pokemon = AUDINO,23
     Item = CADOBERRY
 Pokemon = FRILLISH,23
     Gender = female
-    Moves = SHIVER,ANGELSKISS,BUBBLEBARRAGE,DEADEND
+    Moves = SHIVER,CONFUSERAY,BUBBLEBARRAGE,DEADEND
     AbilityIndex = 1 # Sentry
 Pokemon = LICKITUNG,22
     Moves = NUMB,SLACKOFF,TAKEDOWN,SHADOWPUNCH

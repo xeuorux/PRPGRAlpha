@@ -2539,7 +2539,7 @@ Animation = CALMMIND
 #		GHOST MOVES
 #-------------------------------
 [BINDFATE]
-Name = Drown
+Name = Bind Fate
 Type = GHOST
 Category = Status
 Accuracy = 100

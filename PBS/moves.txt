@@ -4435,17 +4435,6 @@ FunctionCode = CannotBeRedirected
 Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
 Description = Ignores all attempts at redirection, allowing this move to hit the chosen target. Critical hits twice as often.
 #-------------------------------
-[SOAK]
-Name = Soak
-Type = WATER
-Category = Status
-Accuracy = 100
-TotalPP = 15
-Target = NearOther
-FunctionCode = SetTargetTypesToWater
-Flags = CanProtect,CanMagicCoat,CanMirrorMove
-Description = The user shoots a torrent of water at the target and changes the target's type to Water.
-#-------------------------------
 [SPARKLINGARIA]
 Name = Sparkling Aria
 Type = WATER
