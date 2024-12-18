@@ -2704,7 +2704,7 @@ Pocket = 8
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem
-Description = A mysterious data storage device which can be used to upgrade your PC.
+Description = A mysterious data storage device. Plug it into any PC to unlock The Omnitutor.
 #-------------------------------
 [ANCIENTSEAWATER]
 Name = Ancient Sea Water
