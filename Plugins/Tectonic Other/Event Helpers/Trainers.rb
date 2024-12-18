@@ -35,7 +35,9 @@ def perfectAceTrainer(maxTrainerLevel=15)
 		setFollowerGone
 	}
 	pbTrainerDropsItem(maxTrainerLevel,4) if giveDrop
-    incrementGlobalVar(TRAINERS_PERFECTED_GLOBAL_VAR)
+	incrementGlobalVar(TRAINERS_PERFECTED_GLOBAL_VAR)
+
+	postBattleTeamSnapshot(_INTL("Pro Trainer Level {1}",maxTrainerLevel),true)
 end
 
 def perfectDoubleTrainer(event1,event2,maxTrainerLevel = 15,giveDrop=PERFECTED_TRAINERS_DROP_ITEMS)
