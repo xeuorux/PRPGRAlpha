@@ -1,4 +1,6 @@
-def perfectTrainer(maxTrainerLevel=15,giveDrop=true)
+PERFECTED_TRAINERS_DROP_ITEMS = true
+
+def perfectTrainer(maxTrainerLevel=15,giveDrop=PERFECTED_TRAINERS_DROP_ITEMS)
 	blackFadeOutIn() {
 		setMySwitch('D',true)
 		setFollowerGone
@@ -7,23 +9,23 @@ def perfectTrainer(maxTrainerLevel=15,giveDrop=true)
     incrementGlobalVar(TRAINERS_PERFECTED_GLOBAL_VAR)
 end
 
-def perfectAncientTrainer
+def perfectAncientTrainer(giveDrop=PERFECTED_TRAINERS_DROP_ITEMS)
 	blackFadeOutIn() {
 		setMySwitch('D',true)
 		setFollowerGone
 	}
 	pbMessage(_INTL("The fleeing trainer dropped some food!"))
-	pbReceiveItem(:VANILLATULUMBA)
+	pbReceiveItem(:VANILLATULUMBA) if giveDrop
     incrementGlobalVar(TRAINERS_PERFECTED_GLOBAL_VAR)
 end
 
-def perfectDittoTrainer(maxTrainerLevel=15)
+def perfectDittoTrainer(maxTrainerLevel=15,giveDrop=PERFECTED_TRAINERS_DROP_ITEMS)
 	blackFadeOutIn() {
 		setMySwitch('D',true)
 		pbSEPlay("Cries/DITTO",50,50)
 		setFollowerGone
 	}
-	pbTrainerDropsItem(maxTrainerLevel)
+	pbTrainerDropsItem(maxTrainerLevel) if giveDrop
     incrementGlobalVar(TRAINERS_PERFECTED_GLOBAL_VAR)
 end
 
@@ -32,11 +34,13 @@ def perfectAceTrainer(maxTrainerLevel=15)
 		setMySwitch('D',true)
 		setFollowerGone
 	}
-	pbTrainerDropsItem(maxTrainerLevel,4)
-    incrementGlobalVar(TRAINERS_PERFECTED_GLOBAL_VAR)
+	pbTrainerDropsItem(maxTrainerLevel,4) if giveDrop
+	incrementGlobalVar(TRAINERS_PERFECTED_GLOBAL_VAR)
+
+	postBattleTeamSnapshot(_INTL("Pro Trainer Level {1}",maxTrainerLevel),true)
 end
 
-def perfectDoubleTrainer(event1,event2,maxTrainerLevel = 15)
+def perfectDoubleTrainer(event1,event2,maxTrainerLevel = 15,giveDrop=PERFECTED_TRAINERS_DROP_ITEMS)
 	blackFadeOutIn() {
 		setMySwitch('D',true)
 		pbSetSelfSwitch(event1,'D',true)
@@ -44,11 +48,11 @@ def perfectDoubleTrainer(event1,event2,maxTrainerLevel = 15)
 		setFollowerGone(event1)
 		setFollowerGone(event2)
 	}
-	pbTrainerDropsItem(maxTrainerLevel,2,true)
+	pbTrainerDropsItem(maxTrainerLevel,2,true) if giveDrop
     incrementGlobalVar(TRAINERS_PERFECTED_GLOBAL_VAR)
 end
 
-def perfectDoubleAncientTrainer(event1,event2)
+def perfectDoubleAncientTrainer(event1,event2,giveDrop=PERFECTED_TRAINERS_DROP_ITEMS)
 	blackFadeOutIn() {
 		setMySwitch('D',true)
 		pbSetSelfSwitch(event1,'D',true)
@@ -58,7 +62,7 @@ def perfectDoubleAncientTrainer(event1,event2)
 	}
 
 	pbMessage(_INTL("The fleeing trainers dropped some food!"))
-	pbReceiveItem(:VANILLATULUMBA,2)
+	pbReceiveItem(:VANILLATULUMBA,2) if giveDrop
     incrementGlobalVar(TRAINERS_PERFECTED_GLOBAL_VAR)
 end
 

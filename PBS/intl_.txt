@@ -57045,6 +57045,8 @@ Log Off
 .\|.\|.\|.\|.\|
 \ssOmniTutor now engaged.
 \ssOmniTutor now engaged.
+\ssThe OmniTutor can teach any move available through move reminding, move mentorship, and TMs you own.
+\ssThe OmniTutor can teach any move available through move reminding, move mentorship, and TMs you own.
 Organize Boxes
 Organize Boxes
 Withdraw Pokémon
