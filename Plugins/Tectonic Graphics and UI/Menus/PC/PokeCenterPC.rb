@@ -45,6 +45,7 @@ def pbPokeCenterPC
         pbMessage(_INTL("\\ssLoading Omni-Tutor..."))
         pbMessage(_INTL(".\\|.\\|.\\|.\\|.\\|"))
         pbMessage(_INTL("\\ssOmniTutor now engaged."))
+        pbMessage(_INTL("\\ssThe OmniTutor can teach any move available through move reminding, move mentorship, and TMs you own."))
         $PokemonGlobal.omnitutor_active = true
     end
 
