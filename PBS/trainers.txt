@@ -1238,7 +1238,7 @@ Pokemon = SMEARGLE,37
     Moves = VCREATE,STELLARATE,SIXFEETUNDER,PLANETCRACKER
     AbilityIndex = 1 # Technician
 Pokemon = SMEARGLE,37
-    Moves = COACHING,BLOSSOM,RUPTURESPRING,BREAKDANCE
+    Moves = COACHING,BLOSSOM,PACKAGE,BREAKDANCE
     AbilityIndex = 1 # Technician
 Pokemon = SMEARGLE,37
     Moves = OCTOLOCK,NORETREAT,OBLIVIONWING,TERADRAIN
@@ -1834,7 +1834,7 @@ Pokemon = LEAVANNY,55
     Moves = XSCISSOR,LEAFBLADE,ANESTHETIZE
     AbilityIndex = 1 # Swordplay
 Pokemon = PRIMARINA,55
-    Moves = GROWL,HYPERVOICE,RUPTURESPRING
+    Moves = GROWL,HYPERVOICE,SURF
     AbilityIndex = 0 # Maestro
 Pokemon = BEWEAR,55
     Moves = WIDEGUARD,BODYSLAM,HAMMERARM
@@ -8288,7 +8288,7 @@ Pokemon = GLISCOR,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 12,8,15,0,8,15
 Pokemon = EMPOLEON,70
-    Moves = RUPTURESPRING,ADRENALASH,FARADAYCAGE,SCALD
+    Moves = ICESHARD,ADRENALASH,FARADAYCAGE,SCALD
     AbilityIndex = 1 # Self-Sufficient
     Item = WATERBALLOON
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def

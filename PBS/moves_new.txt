@@ -3955,10 +3955,10 @@ Power = 100
 Accuracy = 50
 TotalPP = 5
 Target = NearOther
-FunctionCode = RaiseUserSpd2
+FunctionCode = Waterlog
 Flags = CanProtect,CanMirrorMove
 EffectChance = 100
-Description = The user crashes into the target on a ripping current. This raises the user's Speed by two steps.
+Description = The user crashes into the target on a ripping current. This waterlogs the target.
 Animation = WATERFALL
 #-------------------------------
 [RIPTURN]
@@ -3998,19 +3998,6 @@ FunctionCode = HealUserHalfOfTotalHPStartHealUserEachTurn
 Flags = CanSnatch
 Description = The user rests in a riverbed, restoring its HP by half of max, and forming an Aqua Ring around themselves, healing 10% HP per turn.
 Animation = REST
-#-------------------------------
-[RUPTURESPRING]
-Name = Rupture Spring
-Type = WATER
-Category = Special
-Power = 85
-Accuracy = 100
-TotalPP = 12
-Target = NearOther
-FunctionCode = HealAllyOrDamageFoe
-Flags = CanProtect,CanMirrorMove
-Description = Creates a violent spring beneath enemies, or a healing one beneath allies.
-Animation = WATERPULSE
 #-------------------------------
 [SHELLTER]
 Name = Shellter
@@ -4126,6 +4113,19 @@ FunctionCode = CureUserPartyStatusStartHealUserEachTurn
 Flags = CanSnatch,Sound
 Description = The user's song heals the status problems of all the party Pokémon, and forms an Aqua Ring around itself, healing 10% HP per turn.
 Animation = HEALBELL
+#-------------------------------
+[WHELM]
+Name = Whelm
+Type = WATER
+Category = Special
+Power = 60
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = Waterlog
+Flags = CanProtect,CanMirrorMove
+EffectChance = 30
+Description = The target is inundated with a wave of seaweater. This has a 30% chance to waterlog.
 #-------------------------------
 [WIPEOUT]
 Name = Wipeout

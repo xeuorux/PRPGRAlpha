@@ -4479,9 +4479,10 @@ Power = 90
 Accuracy = 100
 TotalPP = 12
 Target = AllNearOthers
-FunctionCode = HitsDivers
+FunctionCode = Waterlog
 Flags = CanProtect,CanMirrorMove
-Description = It swamps the area with a giant wave, hitting every battler nearby and underwater.
+EffectChance = 10
+Description = It swamps the area with a giant wave, hitting every battler nearby. Has a 10% chance to waterlog.
 #-------------------------------
 [SURGINGSTRIKES]
 Name = Surging Strikes
@@ -4512,13 +4513,14 @@ Description = The user charges at the target and has a 40% chance to make it fli
 Name = Water Gun
 Type = WATER
 Category = Special
-Power = 45
+Power = 40
 Accuracy = 100
 TotalPP = 20
 Target = NearOther
-FunctionCode = Basic
+FunctionCode = Waterlog
 Flags = CanProtect,CanMirrorMove
-Description = The target is blasted with a forceful shot of water.
+EffectChance = 10
+Description = The target is blasted with a forceful shot of water. This has a 10% chance to waterlog.
 #-------------------------------
 [WATERPLEDGE]
 Name = Water Pledge
