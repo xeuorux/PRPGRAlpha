@@ -1,6 +1,6 @@
-PERFECTED_TRAINERS_DROP_ITEMS = true
+PERFECTED_REGULAR_TRAINERS_DROP_ITEMS = true
 
-def perfectTrainer(maxTrainerLevel=15,giveDrop=PERFECTED_TRAINERS_DROP_ITEMS)
+def perfectTrainer(maxTrainerLevel=15,giveDrop=PERFECTED_REGULAR_TRAINERS_DROP_ITEMS)
 	blackFadeOutIn() {
 		setMySwitch('D',true)
 		setFollowerGone
@@ -9,7 +9,7 @@ def perfectTrainer(maxTrainerLevel=15,giveDrop=PERFECTED_TRAINERS_DROP_ITEMS)
     incrementGlobalVar(TRAINERS_PERFECTED_GLOBAL_VAR)
 end
 
-def perfectAncientTrainer(giveDrop=PERFECTED_TRAINERS_DROP_ITEMS)
+def perfectAncientTrainer(giveDrop=PERFECTED_REGULAR_TRAINERS_DROP_ITEMS)
 	blackFadeOutIn() {
 		setMySwitch('D',true)
 		setFollowerGone
@@ -19,7 +19,7 @@ def perfectAncientTrainer(giveDrop=PERFECTED_TRAINERS_DROP_ITEMS)
     incrementGlobalVar(TRAINERS_PERFECTED_GLOBAL_VAR)
 end
 
-def perfectDittoTrainer(maxTrainerLevel=15,giveDrop=PERFECTED_TRAINERS_DROP_ITEMS)
+def perfectDittoTrainer(maxTrainerLevel=15,giveDrop=PERFECTED_REGULAR_TRAINERS_DROP_ITEMS)
 	blackFadeOutIn() {
 		setMySwitch('D',true)
 		pbSEPlay("Cries/DITTO",50,50)
@@ -29,7 +29,7 @@ def perfectDittoTrainer(maxTrainerLevel=15,giveDrop=PERFECTED_TRAINERS_DROP_ITEM
     incrementGlobalVar(TRAINERS_PERFECTED_GLOBAL_VAR)
 end
 
-def perfectAceTrainer(maxTrainerLevel=15)
+def perfectAceTrainer(maxTrainerLevel=15,giveDrop=true)
 	blackFadeOutIn() {
 		setMySwitch('D',true)
 		setFollowerGone
@@ -40,7 +40,7 @@ def perfectAceTrainer(maxTrainerLevel=15)
 	postBattleTeamSnapshot(_INTL("Pro Trainer Level {1}",maxTrainerLevel),true)
 end
 
-def perfectDoubleTrainer(event1,event2,maxTrainerLevel = 15,giveDrop=PERFECTED_TRAINERS_DROP_ITEMS)
+def perfectDoubleTrainer(event1,event2,maxTrainerLevel = 15,giveDrop=PERFECTED_REGULAR_TRAINERS_DROP_ITEMS)
 	blackFadeOutIn() {
 		setMySwitch('D',true)
 		pbSetSelfSwitch(event1,'D',true)
@@ -52,7 +52,7 @@ def perfectDoubleTrainer(event1,event2,maxTrainerLevel = 15,giveDrop=PERFECTED_T
     incrementGlobalVar(TRAINERS_PERFECTED_GLOBAL_VAR)
 end
 
-def perfectDoubleAncientTrainer(event1,event2,giveDrop=PERFECTED_TRAINERS_DROP_ITEMS)
+def perfectDoubleAncientTrainer(event1,event2,giveDrop=PERFECTED_REGULAR_TRAINERS_DROP_ITEMS)
 	blackFadeOutIn() {
 		setMySwitch('D',true)
 		pbSetSelfSwitch(event1,'D',true)
