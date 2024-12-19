@@ -6067,6 +6067,19 @@ EffectChance = 10
 Description = The user strikes the target with dark energy. It has a 10% chance to leech.
 Animation = SNARL
 #-------------------------------
+[DISARMINGSHOT]
+Name = Disarming Shot
+Type = DARK
+Category = Special
+Power = 80
+Accuracy = 100
+TotalPP = 12
+Target = NearOther
+FunctionCode = DisableTargetBladeMoves3
+Flags = CanProtect,CanMirrorMove
+EffectChance = 100
+Description = The user disarms the target's blade. The target cannot use blade-based moves for two turns.
+#-------------------------------
 [DIVINATION]
 Name = Divination
 Type = DARK

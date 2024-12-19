@@ -611,6 +611,21 @@ class PokeBattle_Move_DisableTargetSoundMoves3 < PokeBattle_Move
 end
 
 #===============================================================================
+# Target cannot use blade-based moves for 2 more rounds. (Disarming Shot)
+#===============================================================================
+class PokeBattle_Move_DisableTargetBladeMoves3 < PokeBattle_Move
+    def pbAdditionalEffect(_user, target)
+        return if target.fainted? || target.damageState.substitute
+        target.applyEffect(:DisarmingShot, 3)
+    end
+
+    def getTargetAffectingEffectScore(_user, target)
+        return 30 if !target.effectActive?(:DisarmingShot) && target.hasBladeMove? && !target.substituted?
+        return 0
+    end
+end
+
+#===============================================================================
 # The next ground type move to hit the target deals double damage. (Volatile Toxin)
 #===============================================================================
 class PokeBattle_Move_TargetTakesDoubleDamageFromNextGroundAttack < PokeBattle_Move

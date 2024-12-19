@@ -1144,6 +1144,16 @@ GameData::BattleEffect.register_effect(:Battler, {
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
+    :id => :DisarmingShot,
+    :real_name => "Blade Disarming Turns",
+    :type => :Integer,
+    :ticks_down => true,
+    :apply_proc => proc do |battle, battler, value|
+        battle.pbDisplay(_INTL("{1} can't use blade-based moves for the next #{value - 1} turns!", battler.pbThis))
+    end,
+})
+
+GameData::BattleEffect.register_effect(:Battler, {
     :id => :Torment,
     :real_name => "Tormented",
     :is_mental => true,
