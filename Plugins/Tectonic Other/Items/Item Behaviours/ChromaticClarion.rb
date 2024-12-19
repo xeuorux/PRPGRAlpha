@@ -38,8 +38,8 @@ def useChromaClarion
 
     pbWildBattleCore(*encounters)
 
-    $PokemonGlobal.chroma_clarion_recharge_steps = 30
-    pbMessage(_INTL("The Chroma Clarion goes silent."))
+    #$PokemonGlobal.chroma_clarion_recharge_steps = 30
+    #pbMessage(_INTL("The Chroma Clarion goes silent."))
 
     return 1
 end
