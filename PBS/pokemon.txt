@@ -2625,7 +2625,7 @@ Kind = Rock Snake
 Pokedex = Onix has a magnet in its brain. It acts as a compass so that this Pokémon does not lose direction while it is tunneling.
 Generation = 1
 WildItemUncommon = METALCOAT
-Evolutions = STEELIX,Level,33
+Evolutions = STEELIX,Level,27
 #-------------------------------
 [96]
 Name = Drowzee
@@ -4982,7 +4982,7 @@ Shape = Head
 Kind = Wool
 Pokedex = If its coat becomes fully charged with electricity, its tail lights up. It fires hair that zaps on impact.
 Generation = 2
-Evolutions = AMPHAROS,Level,39
+Evolutions = AMPHAROS,Item,SHINYSTONE
 #-------------------------------
 [181]
 Name = Ampharos
@@ -5754,7 +5754,7 @@ Kind = Iron Snake
 Pokedex = It chews its way through boulders with its sturdy jaws. Its eyes can see in the darkness underground.
 Generation = 2
 WildItemUncommon = METALCOAT
-Evolutions = TITANIX,Level,50
+Evolutions = TITANIX,Item,SHINYSTONE
 #-------------------------------
 [209]
 Name = Snubbull
@@ -8373,7 +8373,7 @@ Kind = Darkness
 Pokedex = It dwells in the darkness of caves. It uses its sharp claws to dig up gems to nourish itself.
 Generation = 3
 WildItemUncommon = WIDELENS
-Evolutions = RUBARIOR,Level,32
+Evolutions = RUBARIOR,Item,SHINYSTONE
 #-------------------------------
 [303]
 Name = Mawile
@@ -8736,7 +8736,7 @@ Kind = Thorn
 Pokedex = Roselia that drink nutritionally rich springwater are said to reveal rare coloration when they bloom.
 Generation = 3
 WildItemUncommon = POISONBARB
-Evolutions = ROSERADE,Item,SHINYSTONE
+Evolutions = ROSERADE,Level,37
 #-------------------------------
 [316]
 Name = Gulpin
