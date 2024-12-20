@@ -3784,13 +3784,14 @@ Animation = DIVE
 Name = Drag Beneath
 Type = WATER
 Category = Physical
-Power = 75
+Power = 90
 Accuracy = 100
 TotalPP = 10
 Target = NearOther
-FunctionCode = BindTarget3
+FunctionCode = Waterlog
 Flags = CanProtect,CanMirrorMove
-Description = The user pulls the target under the waves, trapping and damaging it for three turns.
+EffectChance = 10
+Description = The user pulls the target under the waves with crushing force. This has a 10% chance to waterlog.
 Animation = WRAP
 #-------------------------------
 [EBBFLOW]
@@ -4058,12 +4059,27 @@ Type = WATER
 Category = Physical
 Power = 60
 Accuracy = 100
-TotalPP = 20
+TotalPP = 15
 Target = NearOther
-FunctionCode = LowerTargetDef1
+FunctionCode = Waterlog
 Flags = CanProtect,CanMirrorMove
 EffectChance = 30
-Description = The user rams the target like a ship. It has a 30% chance to lower Defense.
+Description = The user rams the target while splashing up a lot of water. This has a 30% chance to waterlog.
+Animation = WATERFALL
+#-------------------------------
+[TIDEPULL]
+Name = Tide Pull
+Type = WATER
+Category = Physical
+Power = 40
+Accuracy = 100
+TotalPP = 20
+Target = NearOther
+FunctionCode = Waterlog
+Flags = CanProtect,CanMirrorMove
+EffectChance = 10
+Description = The user weilds tidal power to grab at the target. This has a 10% chance to waterlog.
+Animation = WRAP
 #-------------------------------
 [TORRENTSCYTHE]
 Name = Torrent Scythe
@@ -4088,6 +4104,21 @@ Target = NearOther
 FunctionCode = Waterlog
 Flags = CanProtect,CanMagicCoat,CanMirrorMove
 Description = The target is doused with water in order to waterlog it.
+Animation = SOAK
+#-------------------------------
+[WAVEBREAK]
+Name = Wavebreak
+Type = WATER
+Category = Physical
+Power = 60
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = LowerTargetDef1
+Flags = CanProtect,CanMirrorMove
+EffectChance = 30
+Description = The user crashes into the target with the force of a large wave. This has a 30% chance to lower Defense.
+Animation = SPATTERINGRAM
 #-------------------------------
 [WETLANDWALTZ]
 Name = Wetland Waltz
@@ -6112,6 +6143,20 @@ FunctionCode = Waterlog
 Flags = CanProtect,CanMagicCoat,CanMirrorMove
 Description = The target is forced underwater for a brief time, waterlogging it.
 #-------------------------------
+[DUNK]
+Name = Dunk
+Type = DARK
+Category = Physical
+Power = 40
+Accuracy = 100
+TotalPP = 20
+Target = NearOther
+FunctionCode = Waterlog
+Flags = CanProtect,CanMirrorMove
+EffectChance = 10
+Description = The user pushes the target violently into water. This has a 10% chance to waterlog.
+Animation = AQUAJET
+#-------------------------------
 [FINALIZE]
 Name = Finalize
 Type = DARK
@@ -6228,6 +6273,20 @@ FunctionCode = AlwaysCritialLowerUserSpeed1
 Flags = CanProtect,CanMirrorMove,Blade
 Description = The user prepares a precise cut. Always a critical hit, but lowers the user's Speed.
 Animation = NIGHTSLASH
+#-------------------------------
+[KEELHAUL]
+Name = Keelhaul
+Type = DARK
+Category = Physical
+Power = 60
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = Waterlog
+Flags = CanProtect,CanMirrorMove
+EffectChance = 30
+Description = The target is dragged viciously through water. This has a 30% chance to waterlog.
+Animation = SPATTERINGRAM
 #-------------------------------
 [MASSDESTRUCTION]
 Name = Mass Destruction
@@ -6474,6 +6533,20 @@ Flags = CanProtect,CanMirrorMove
 Description = The user transforms into a cloud of vermin, evading all attacks on the first turn. On the second turn it ambushes the target.
 Animation = FLY
 #-------------------------------
+[WETWORK]
+Name = Wet Work
+Type = DARK
+Category = Physical
+Power = 90
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = Waterlog
+Flags = CanProtect,CanMirrorMove
+EffectChance = 10
+Description = The user submerges the target in water, then bludgeons them repeatedly. This has a 10% chance to waterlog.
+Animation = LIQUIDATION
+#-------------------------------
 #		FAIRY MOVES
 #-------------------------------
 [ANGELSKISS]
@@ -6513,6 +6586,20 @@ FunctionCode = Sleep
 Flags = CanProtect,CanMagicCoat,CanMirrorMove
 Description = The target is lulled to sleep. Can only be used during a Full Moon.
 Animation = SING
+#-------------------------------
+[BUCKETDROP]
+Name = Bucket Drop
+Type = FAIRY
+Category = Physical
+Power = 70
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = Waterlog
+Flags = CanProtect,CanMirrorMove
+EffectChance = 50
+Description = The target is pranked with a huge bucket of water. This has a 50% chance to waterlog it.
+Animation = HYDROVORTEX
 #-------------------------------
 [CRUELKISS]
 Name = Cruel Kiss

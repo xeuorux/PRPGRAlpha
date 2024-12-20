@@ -624,6 +624,18 @@ Flags = Empowered
 Description = The user summons rainstorm for 5 turns, surrounds itself with healing water, and becomes Water-type.
 Animation = RAINSTORM
 #-------------------------------
+[PRIMEVALWATERLOG]
+Name = Primeval Waterlog
+Type = WATER
+Category = Status
+Accuracy = 100
+TotalPP = 1
+Target = AllNearFoes
+FunctionCode = EmpoweredWaterlog
+Flags = CanProtect,CanMirrorMove,Empowered
+Description = The user inflicts waterlog on all nearby foes. User becomes a Water-type.
+Animation = WATERLOG
+#-------------------------------
 [SEVENSEASEDICT]
 Name = Seven Seas Edict
 Type = WATER

@@ -68,18 +68,6 @@ FunctionCode = MultiTurnAttackBideThenReturnDoubleDamage
 Flags = CanProtect,CantForce
 Description = The user endures attacks for two turns, then strikes back to cause double the damage taken.
 #-------------------------------
-[BIND]
-Name = Bind
-Type = NORMAL
-Category = Physical
-Power = 40
-Accuracy = 100
-TotalPP = 15
-Target = NearOther
-FunctionCode = BindTarget3
-Flags = CanProtect,CanMirrorMove
-Description = The user squeezes the target, trapping and damaging it for three turns.
-#-------------------------------
 [BLOCK]
 Name = Block
 Type = NORMAL

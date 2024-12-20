@@ -35,6 +35,18 @@ FunctionCode = Invalid
 Flags = CanProtect,CanMirrorMove
 Description = Round objects are hurled at the target to strike two to five times in a row.
 #-------------------------------
+[BIND]
+Name = Bind
+Type = NORMAL
+Category = Physical
+Power = 40
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect,CanMirrorMove
+Description = The user squeezes the target, trapping and damaging it for three turns.
+#-------------------------------
 [CAMOUFLAGE]
 Name = Camouflage
 Type = NORMAL
