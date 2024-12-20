@@ -491,11 +491,16 @@ module GameData
   #===============================================================================
   # Evolution methods that trigger when using an item on the Pokémon
   #===============================================================================
+  def itemCanEvolve?(itemMatch,itemUsing)
+    return true if GameData::Item.get(itemMatch).is_evolution_stone? && itemUsing == :PRISMSTONE
+    return itemMatch == itemUsing
+  end
+
   GameData::Evolution.register({
     :id            => :Item,
     :parameter     => :Item,
     :use_item_proc => proc { |pkmn, parameter, item|
-      next item == parameter
+      next itemCanEvolve?(parameter,item)
     }
   })
   
@@ -503,7 +508,7 @@ module GameData
     :id            => :ItemMale,
     :parameter     => :Item,
     :use_item_proc => proc { |pkmn, parameter, item|
-      next item == parameter && pkmn.male?
+      next itemCanEvolve?(parameter,item) && pkmn.male?
     }
   })
   
@@ -511,7 +516,7 @@ module GameData
     :id            => :ItemFemale,
     :parameter     => :Item,
     :use_item_proc => proc { |pkmn, parameter, item|
-      next item == parameter && pkmn.female?
+      next itemCanEvolve?(parameter,item) && pkmn.female?
     }
   })
   
@@ -519,7 +524,7 @@ module GameData
     :id            => :ItemDay,
     :parameter     => :Item,
     :use_item_proc => proc { |pkmn, parameter, item|
-      next item == parameter && PBDayNight.isDay?
+      next itemCanEvolve?(parameter,item) && PBDayNight.isDay?
     }
   })
   
@@ -527,7 +532,7 @@ module GameData
     :id            => :ItemNight,
     :parameter     => :Item,
     :use_item_proc => proc { |pkmn, parameter, item|
-      next item == parameter && PBDayNight.isNight?
+      next itemCanEvolve?(parameter,item) && PBDayNight.isNight?
     }
   })
   
@@ -535,7 +540,7 @@ module GameData
     :id            => :ItemHappiness,
     :parameter     => :Item,
     :use_item_proc => proc { |pkmn, parameter, item|
-      next item == parameter && pkmn.happiness >= 220
+      next itemCanEvolve?(parameter,item) && pkmn.happiness >= 220
     }
   })
   

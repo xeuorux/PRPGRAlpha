@@ -1871,9 +1871,6 @@ Pokemon = FURRET,35
 Pokemon = BEAUTIFLY,35
     Moves = SUCKBLOOD,DRAININGKISS,AIRSLASH,UTURN
     AbilityIndex = 0 # Gorging
-Pokemon = NIDOKING,35
-    Moves = VOLATILETOXIN,BULKUP,POISONGAS,BULLDOZE
-    AbilityIndex = 1 # Stressful
 #-------------------------------
 [TWINS2,Bella and Meghan]
 Pokemon = EXCADRILL,35
@@ -1890,9 +1887,6 @@ Pokemon = GSLOWKING,35
     Moves = EERIESPELL,BLIGHT,BELCH
     AbilityIndex = 0 # Curious Medicine
     Item = SALACBERRY
-Pokemon = TANGROWTH,35
-    Moves = KNOCKOFF,VINEBIND,SMACKDOWN,ROOTWRACK
-    AbilityIndex = 1 # Tangling Hair
 #-------------------------------
 [SWIMMER_M,Stannis]
 Policies = MOONGLOW_TEAM
