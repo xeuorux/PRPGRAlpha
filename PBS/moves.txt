@@ -2899,10 +2899,10 @@ Power = 90
 Accuracy = 100
 TotalPP = 15
 Target = NearOther
-FunctionCode = LowerTargetSpAtk1
+FunctionCode = LowerTargetSpDef1
 Flags = CanProtect,CanMirrorMove,Sound
 EffectChance = 20
-Description = The user vibrates its wings to make a damaging sound wave. It has a 20% chance to lower Sp. Atk.
+Description = The user vibrates its wings to make a damaging sound wave. It has a 20% chance to lower Sp. Def.
 #-------------------------------
 [DEFENDORDER]
 Name = Defend Order
@@ -5683,10 +5683,10 @@ Power = 40
 Accuracy = 100
 TotalPP = 30
 Target = NearOther
-FunctionCode = Dizzy
+FunctionCode = LowerTargetAtkSpAtk1
 Flags = CanProtect,CanMirrorMove
 EffectChance = 10
-Description = The target is hit by a weak telekinetic force. It has a 10% chance to dizzy.
+Description = The target is hit by a weak telekinetic force. It has a 10% chance to lower the target's Attack and Sp. Atk.
 Animation = CONFUSION
 #-------------------------------
 [MIRRORCOAT]
@@ -7059,10 +7059,9 @@ Power = 40
 Accuracy = 100
 TotalPP = 25
 Target = NearOther
-FunctionCode = Dizzy
+FunctionCode = Basic
 Flags = CanProtect,CanMirrorMove,Wind
-EffectChance = 10
-Description = The user stirs up a fairy wind and strikes the target with it. There's a 10% chance it becomes dizzy.
+Description = The user stirs up a fairy wind and strikes the target with it.
 #-------------------------------
 [FLEURCANNON]
 Name = Fleur Cannon
