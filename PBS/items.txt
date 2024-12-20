@@ -106,6 +106,15 @@ FieldUse = OnPokemon
 Flags = EvolutionStone
 Description = A peculiar stone that makes certain species of Pokémon evolve. It has a snowflake pattern.
 #-------------------------------
+[PRISMSTONE]
+Name = Prism Stone
+NamePlural = Prism Stones
+Pocket = 1
+Price = 15000
+FieldUse = OnPokemon
+Flags = EvolutionStone
+Description = A many-colored stone that makes a lot of Pokémon evolve. Can be used in place of any evolution stone.
+#-------------------------------
 [DIAMONDTIARA]
 Name = Diamond Tiara
 NamePlural = Diamond Tiaras
