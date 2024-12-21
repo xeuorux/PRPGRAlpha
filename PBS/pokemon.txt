@@ -27688,8 +27688,8 @@ Generation = 9
 WildItemUncommon = SKILLHERB
 #-------------------------------
 [2066]
-Name = H. Rotom
-InternalName = HROTOM
+Name = Heat Rotom
+InternalName = HEATROTOM
 Type1 = ELECTRIC
 Type2 = FIRE
 # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -27716,8 +27716,8 @@ Pokedex = This Rotom has possessed a convection microwave oven that uses a speci
 Generation = 4
 #-------------------------------
 [2067]
-Name = W. Rotom
-InternalName = WROTOM
+Name = Wash Rotom
+InternalName = WASHROTOM
 Type1 = ELECTRIC
 Type2 = WATER
 # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -27744,8 +27744,8 @@ Pokedex = This form of Rotom enjoys coming up with water-based pranks. Be carefu
 Generation = 4
 #-------------------------------
 [2068]
-Name = Fr. Rotom
-InternalName = FRROTOM
+Name = Fridge Rotom
+InternalName = FRIDGEROTOM
 Type1 = ELECTRIC
 Type2 = ICE
 # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -27800,8 +27800,8 @@ Pokedex = In this form, Rotom applies its new power over wind to its love of pra
 Generation = 4
 #-------------------------------
 [2070]
-Name = M. Rotom
-InternalName = MROTOM
+Name = Mow Rotom
+InternalName = MOWROTOM
 Type1 = ELECTRIC
 Type2 = GRASS
 # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def

@@ -362,8 +362,9 @@ end
 #===============================================================================
 class PokeBattle_Move_TypeAndEffectDependsOnUserRotomForm < PokeBattle_Move
     def aiAutoKnows?(pokemon); return true; end
+
     def pbMoveFailed?(user, _targets, show_message)
-        unless user.countsAs?(:ROTOM)
+        unless user.countsAs?(%i[ROTOM HEATROTOM WASHROTOM FRIDGEROTOM FANROTOM MOWROTOM])
             @battle.pbDisplay(_INTL("But {1} can't use the move!", user.pbThis(true))) if show_message
             return true
         end
@@ -372,16 +373,16 @@ class PokeBattle_Move_TypeAndEffectDependsOnUserRotomForm < PokeBattle_Move
 
     def pbBaseType(user)
         ret = :GHOST
-        case user.form
-        when 1
+        case user.species
+        when :HEATROTOM
             ret = :FIRE if GameData::Type.exists?(:FIRE)
-        when 2
+        when :WASHROTOM
             ret = :WATER if GameData::Type.exists?(:WATER)
-        when 3
+        when :FRIDGEROTOM
             ret = :ICE if GameData::Type.exists?(:ICE)
-        when 4
+        when :FANROTOM
             ret = :FLYING if GameData::Type.exists?(:FLYING)
-        when 5
+        when :MOWROTOM
             ret = :GRASS if GameData::Type.exists?(:GRASS)
         end
         return ret
@@ -389,31 +390,31 @@ class PokeBattle_Move_TypeAndEffectDependsOnUserRotomForm < PokeBattle_Move
 
     def pbAdditionalEffect(user, target)
         return if target.damageState.substitute
-        case user.form
-        when 1
+        case user.species
+        when :HEATROTOM
             target.applyBurn(user) if target.canBurn?(user, true, self)
-        when 2
+        when :WASHROTOM
             target.applyNumb(user) if target.canNumb?(user, true, self)
-        when 3
+        when :FRIDGEROTOM
             target.applyFrostbite(user) if target.canFrostbite?(user, true, self)
-        when 4
+        when :FANROTOM
             target.applyDizzy(user) if target.canDizzy?(user, true, self)
-        when 5
+        when :MOWROTOM
             target.applyLeeched(user) if target.canLeech?(user, true, self)
         end
     end
 
     def getTargetAffectingEffectScore(user, target)
-        case user.form
-        when 1
+        case user.species
+        when :HEATROTOM
             return getBurnEffectScore(user, target)
-        when 2
+        when :WASHROTOM
             return getNumbEffectScore(user, target)
-        when 3
+        when :FRIDGEROTOM
             return getFrostbiteEffectScore(user, target)
-        when 4
+        when :FANROTOM
             return getDizzyEffectScore(user, target)
-        when 5
+        when :MOWROTOM
             return getLeechEffectScore(user, target)
         end
         return 0

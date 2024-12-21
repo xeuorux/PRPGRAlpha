@@ -2028,6 +2028,12 @@ FrontSprite = 0,24
 ShadowX = 0
 ShadowSize = 3
 #-------------------------------
+[FRIDGEROTOM]
+BackSprite = 0,10
+FrontSprite = 0,8
+ShadowX = 0
+ShadowSize = 2
+#-------------------------------
 [FRILLISH]
 BackSprite = 0,16
 FrontSprite = 0,22
@@ -2055,12 +2061,6 @@ ShadowSize = 2
 [FROSMOTH]
 BackSprite = 0,15
 FrontSprite = 1,14
-ShadowX = 0
-ShadowSize = 2
-#-------------------------------
-[FRROTOM]
-BackSprite = 0,10
-FrontSprite = 0,8
 ShadowX = 0
 ShadowSize = 2
 #-------------------------------
@@ -2772,6 +2772,12 @@ FrontSprite = 0,24
 ShadowX = 3
 ShadowSize = 3
 #-------------------------------
+[HEATROTOM]
+BackSprite = 0,18
+FrontSprite = 0,18
+ShadowX = 0
+ShadowSize = 2
+#-------------------------------
 [HELECTRODE]
 BackSprite = 0,25
 FrontSprite = 0,26
@@ -2919,12 +2925,6 @@ ShadowSize = 2
 [HQWILFISH]
 BackSprite = 0,23
 FrontSprite = 1,25
-ShadowX = 0
-ShadowSize = 2
-#-------------------------------
-[HROTOM]
-BackSprite = 0,18
-FrontSprite = 0,18
 ShadowX = 0
 ShadowSize = 2
 #-------------------------------
@@ -4122,6 +4122,12 @@ FrontSprite = 1,10
 ShadowX = 0
 ShadowSize = 2
 #-------------------------------
+[MOWROTOM]
+BackSprite = 0,18
+FrontSprite = 0,15
+ShadowX = 0
+ShadowSize = 2
+#-------------------------------
 [MPETILIL]
 BackSprite = 0,26
 FrontSprite = 0,28
@@ -4145,12 +4151,6 @@ BackSprite = 0,29
 FrontSprite = -1,31
 ShadowX = 0
 ShadowSize = 1
-#-------------------------------
-[MROTOM]
-BackSprite = 0,18
-FrontSprite = 0,15
-ShadowX = 0
-ShadowSize = 2
 #-------------------------------
 [MRRIME]
 BackSprite = 0,21
@@ -6726,6 +6726,12 @@ FrontSprite = -4,17
 ShadowX = 0
 ShadowSize = 3
 #-------------------------------
+[WASHROTOM]
+BackSprite = 0,14
+FrontSprite = -2,14
+ShadowX = 0
+ShadowSize = 2
+#-------------------------------
 [WATCHOG]
 BackSprite = 0,15
 FrontSprite = 5,17
@@ -6855,12 +6861,6 @@ ShadowSize = 2
 [WORNET]
 BackSprite = 0,13
 FrontSprite = 0,10
-ShadowX = 0
-ShadowSize = 2
-#-------------------------------
-[WROTOM]
-BackSprite = 0,14
-FrontSprite = -2,14
 ShadowX = 0
 ShadowSize = 2
 #-------------------------------

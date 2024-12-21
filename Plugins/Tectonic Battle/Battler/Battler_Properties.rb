@@ -178,7 +178,15 @@ class PokeBattle_Battler
     end
 
     def countsAs?(speciesCheck)
-        return isSpecies?(speciesCheck) || transformedInto?(speciesCheck)
+        if speciesCheck.is_a?(Array)
+            speciesCheck.each do |speciesToCheck|
+                next unless isSpecies?(speciesToCheck) || transformedInto?(speciesToCheck)
+                return true
+            end
+            return false
+        else
+            return isSpecies?(speciesCheck) || transformedInto?(speciesCheck)
+        end
     end
 
     def transformedInto?(transformSpecies)

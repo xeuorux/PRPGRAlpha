@@ -1418,7 +1418,7 @@ Pokemon = FALINKS,70
     Item = PAYAPABERRY
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,0,20,20,0
-Pokemon = WROTOM,70
+Pokemon = WASHROTOM,70
     Moves = MACHINATE,VOLTSWITCH,NUMB,DEFOG
     AbilityIndex = 0 # Levitate
     Item = LEFTOVERS
@@ -1825,7 +1825,7 @@ Pokemon = HOUNDOMINUS,70
     EV = 0,20,0,20,20,10
 Pokemon = GZDARMANITAN,70
     Moves = FLAMETHROWER,ICEBEAM,SOLARBEAM,PSYCHIC
-    AbilityIndex = 0 # Gorilla Tactics
+    AbilityIndex = 0 # Phase Shift
     Item = HEAVYDUTYBOOTS
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,10,0,20,10
