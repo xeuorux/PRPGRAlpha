@@ -1556,39 +1556,58 @@ Pokemon = LUNATONE,30
     AbilityIndex = 0 # Levitate
 #-------------------------------
 [CAMPER_F,Veronica]
+Pokemon = DELCATTY,35
+    Moves = SUCKERPUNCH,HYPOTHERMIATE,CLOUDBREAK,FAKEOUT
+    AbilityIndex = 0 # Above It All
 Pokemon = FLORGES,35
-    AbilityIndex = 0 # Clover Song
-Pokemon = NIDOKING,35
-    AbilityIndex = 0 # Sheer Force
-Pokemon = BEAUTIFLY,35
-    AbilityIndex = 1 # Dauntless
-    Item = HEAVYDUTYBOOTS
-Pokemon = FURRET,35
-    AbilityIndex = 1 # Slinky
+    Moves = WISH,AROMATHERAPY,DEFOG,GIGADRAIN
+    AbilityIndex = 1 # Sentry
+Pokemon = RUBARIOR,35
+    Moves = GEMSEAL,WILLOWISP,STITCHUP,TAUNT
+    AbilityIndex = 1 # Prankster
+Pokemon = ZEBSTRIKA,35
+    Moves = VOLTSWITCH,FLAREBLITZ,VOLTTACKLE,SUBMISSION
+    AbilityIndex = 1 # Reckless
+    Item = LIFEORB
+Pokemon = RATICATE,35
+    Moves = EXTREMESPEED,SWORDSDANCE,BRAINFREEZE,CRUNCH
+    AbilityIndex = 0 # Filthy
+    Item = FOCUSSASH
 #-------------------------------
 [GUITARIST2,Alan]
 Pokemon = MUSHARNA,35
+    Moves = LIGHTSCREEN,REFLECT,PSYCHIC,MOONBLAST
     AbilityIndex = 1 # Dreamy Haze
 Pokemon = NIDOQUEEN,35
+    Moves = VENOSHOCK,SCORCHINGSANDS,POISONSPIKES,BAR
     AbilityIndex = 0 # Rugged Scales
+    Item = CADOBERRY
 Pokemon = RAPIDASH,35
+    Moves = STAMPDOWN,HEALBELL,BLAZEKICK,SCYTHEKICK
     AbilityIndex = 1 # Heavy Duty Hooves
-Pokemon = SCARODON,35
-    AbilityIndex = 1 # Armor Piercing
-Pokemon = BULBASAUR,1
-    AbilityIndex = 0 # Poison Absorb
+Pokemon = CRAWDAUNT,35
+    Moves = GLEEFULGRASP,LIQUIDATION,EARTHQUAKE,SUCKERPUNCH
+    AbilityIndex = 0 # Filter
+    Item = ASSAULTVEST
+Pokemon = SKARMORY,35
+    Moves = ROOST,STEELWING,SPIKES,SLAG
+    AbilityIndex = 0 # Mental Block
 #-------------------------------
 [SAILOR,Konrad]
 Pokemon = AMPHAROS,35
+    Moves = SIGNALBEAM,DRAGONPULSE,RECOVER,DISCHARGE
     AbilityIndex = 0 # Static
 Pokemon = SYLVEON,35
+    Moves = GLAMOURFLASH,EARTHPOWER,DREAMDANCE,CHARM
     AbilityIndex = 1 # Dragon Slayer
+	Item = SITRUSBERRY
 Pokemon = VICTREEBEL,35
+    Moves = STRAFE,POISONJAB,KNOCKOFF,EARTHQUAKE
     AbilityIndex = 1 # Flytrap
+	Item = FLYINGGEM
 Pokemon = CRAMORANT,35
+    Moves = SURF,DRILLPECK,ICYWIND,DEFOG
     AbilityIndex = 0 # Gulp Missile
-Pokemon = BULBASAUR,1
-    AbilityIndex = 1 # Aromatic
 #-------------------------------
 [LEADER_Rafael,Rafael]
 Policies = RAFAEL
