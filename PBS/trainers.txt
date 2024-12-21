@@ -1555,6 +1555,41 @@ Pokemon = LUNATONE,30
     Moves = SWEETSELENE,CRYSTALGLEAM,PSYBEAM
     AbilityIndex = 0 # Levitate
 #-------------------------------
+[CAMPER_F,Veronica]
+Pokemon = FLORGES,35
+    AbilityIndex = 0 # Clover Song
+Pokemon = NIDOKING,35
+    AbilityIndex = 0 # Sheer Force
+Pokemon = BEAUTIFLY,35
+    AbilityIndex = 1 # Dauntless
+    Item = HEAVYDUTYBOOTS
+Pokemon = FURRET,35
+    AbilityIndex = 1 # Slinky
+#-------------------------------
+[GUITARIST2,Alan]
+Pokemon = MUSHARNA,35
+    AbilityIndex = 1 # Dreamy Haze
+Pokemon = NIDOQUEEN,35
+    AbilityIndex = 0 # Rugged Scales
+Pokemon = RAPIDASH,35
+    AbilityIndex = 1 # Heavy Duty Hooves
+Pokemon = SCARODON,35
+    AbilityIndex = 1 # Armor Piercing
+Pokemon = BULBASAUR,1
+    AbilityIndex = 0 # Poison Absorb
+#-------------------------------
+[SAILOR,Konrad]
+Pokemon = AMPHAROS,35
+    AbilityIndex = 0 # Static
+Pokemon = SYLVEON,35
+    AbilityIndex = 1 # Dragon Slayer
+Pokemon = VICTREEBEL,35
+    AbilityIndex = 1 # Flytrap
+Pokemon = CRAMORANT,35
+    AbilityIndex = 0 # Gulp Missile
+Pokemon = BULBASAUR,1
+    AbilityIndex = 1 # Aromatic
+#-------------------------------
 [LEADER_Rafael,Rafael]
 Policies = RAFAEL
 Flags = NoPerfect
