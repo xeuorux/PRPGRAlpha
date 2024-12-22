@@ -35,6 +35,18 @@ FunctionCode = Invalid
 Flags = CanProtect,CanMirrorMove
 Description = Round objects are hurled at the target to strike two to five times in a row.
 #-------------------------------
+[BIND]
+Name = Bind
+Type = NORMAL
+Category = Physical
+Power = 40
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect,CanMirrorMove
+Description = The user squeezes the target, trapping and damaging it for three turns.
+#-------------------------------
 [CAMOUFLAGE]
 Name = Camouflage
 Type = NORMAL
@@ -1580,6 +1592,30 @@ TotalPP = 10
 Target = BothSides
 FunctionCode = Invalid
 Description = Summons rainstorm for eight turns, boosting Water-type attacks and hindering most others.
+#-------------------------------
+[RUPTURESPRING]
+Name = Rupture Spring
+Type = WATER
+Category = Special
+Power = 85
+Accuracy = 100
+TotalPP = 12
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect,CanMirrorMove
+Description = Creates a violent spring beneath enemies, or a healing one beneath allies.
+Animation = WATERPULSE
+#-------------------------------
+[SOAK]
+Name = Soak
+Type = WATER
+Category = Status
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect,CanMagicCoat,CanMirrorMove
+Description = The user shoots a torrent of water at the target and changes the target's type to Water.
 #-------------------------------
 [TIDALKINESIS]
 Name = Tidalkinesis

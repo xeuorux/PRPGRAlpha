@@ -77,6 +77,10 @@ Events.OnTalkToFollower += proc {|pkmn,event,random_val|
     $scene.spriteset.addUserAnimation(FollowerSettings::Emo_Normal, event.x, event.y)
     pbWait(72)
     pbMessage(_INTL("{1}'s energy is slowly being leeched away.",pkmn.name))
+  when :WATERLOG
+    $scene.spriteset.addUserAnimation(FollowerSettings::Emo_Normal, event.x, event.y)
+    pbWait(72)
+    pbMessage(_INTL("{1} is soaked through.",pkmn.name))
   end
   next true if pkmn.status != :NONE
 }

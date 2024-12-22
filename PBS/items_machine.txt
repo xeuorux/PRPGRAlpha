@@ -56,6 +56,14 @@ Price = 4000
 FieldUse = TM
 Move = NUMB
 #-------------------------------
+[TMWATERLOG]
+Name = Unnamed
+NamePlural = Unnamed
+Pocket = 4
+Price = 4000
+FieldUse = TM
+Move = WATERLOG
+#-------------------------------
 [TMCONFUSERAY]
 Name = Unnamed
 NamePlural = Unnamed

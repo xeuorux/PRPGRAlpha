@@ -68,18 +68,6 @@ FunctionCode = MultiTurnAttackBideThenReturnDoubleDamage
 Flags = CanProtect,CantForce
 Description = The user endures attacks for two turns, then strikes back to cause double the damage taken.
 #-------------------------------
-[BIND]
-Name = Bind
-Type = NORMAL
-Category = Physical
-Power = 40
-Accuracy = 100
-TotalPP = 15
-Target = NearOther
-FunctionCode = BindTarget3
-Flags = CanProtect,CanMirrorMove
-Description = The user squeezes the target, trapping and damaging it for three turns.
-#-------------------------------
 [BLOCK]
 Name = Block
 Type = NORMAL
@@ -4422,17 +4410,6 @@ FunctionCode = CannotBeRedirected
 Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
 Description = Ignores all attempts at redirection, allowing this move to hit the chosen target. Critical hits twice as often.
 #-------------------------------
-[SOAK]
-Name = Soak
-Type = WATER
-Category = Status
-Accuracy = 100
-TotalPP = 15
-Target = NearOther
-FunctionCode = SetTargetTypesToWater
-Flags = CanProtect,CanMagicCoat,CanMirrorMove
-Description = The user shoots a torrent of water at the target and changes the target's type to Water.
-#-------------------------------
 [SPARKLINGARIA]
 Name = Sparkling Aria
 Type = WATER
@@ -4477,9 +4454,10 @@ Power = 90
 Accuracy = 100
 TotalPP = 12
 Target = AllNearOthers
-FunctionCode = HitsDivers
+FunctionCode = Waterlog
 Flags = CanProtect,CanMirrorMove
-Description = It swamps the area with a giant wave, hitting every battler nearby and underwater.
+EffectChance = 10
+Description = It swamps the area with a giant wave, hitting every battler nearby. Has a 10% chance to waterlog.
 #-------------------------------
 [SURGINGSTRIKES]
 Name = Surging Strikes
@@ -4510,13 +4488,14 @@ Description = The user charges at the target and has a 40% chance to make it fli
 Name = Water Gun
 Type = WATER
 Category = Special
-Power = 45
+Power = 40
 Accuracy = 100
 TotalPP = 20
 Target = NearOther
-FunctionCode = Basic
+FunctionCode = Waterlog
 Flags = CanProtect,CanMirrorMove
-Description = The target is blasted with a forceful shot of water.
+EffectChance = 10
+Description = The target is blasted with a forceful shot of water. This has a 10% chance to waterlog.
 #-------------------------------
 [WATERPLEDGE]
 Name = Water Pledge
@@ -5164,17 +5143,6 @@ Target = User
 FunctionCode = StartUserAirborne5
 Flags = CanSnatch
 Description = The user levitates using electrically generated magnetism for five turns.
-#-------------------------------
-[NUMB]
-Name = Numb
-Type = ELECTRIC
-Category = Status
-Accuracy = 100
-TotalPP = 12
-Target = NearOther
-FunctionCode = Numb
-Flags = CanProtect,CanMagicCoat,CanMirrorMove
-Description = A weak electric charge is launched to numb the target.
 #-------------------------------
 [NUZZLE]
 Name = Nuzzle

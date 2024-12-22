@@ -525,7 +525,7 @@ Description = Boosts the power of blade moves by 50%.
 #-------------------------------
 [SHEDSKIN]
 Name = Shed Skin
-Description = Heals from burn, frostbite, poison, numb, or leech at end of turn.
+Description = At the end of each turn, heals from every non-volatile status (except Sleep).
 #-------------------------------
 [SHEERFORCE]
 Name = Sheer Force

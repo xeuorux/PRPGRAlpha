@@ -157,6 +157,9 @@ class PokeBattle_PoisonMove < PokeBattle_Move
     end
 end
 
+#===============================================================================
+# Numbs the target.
+#===============================================================================
 class PokeBattle_NumbMove < PokeBattle_Move
     def pbFailsAgainstTarget?(user, target, show_message)
         return false if damagingMove?
@@ -276,6 +279,31 @@ class PokeBattle_LeechMove < PokeBattle_Move
 
     def getTargetAffectingEffectScore(user, target)
         return getLeechEffectScore(user, target)
+    end
+end
+
+#===============================================================================
+# Waterlogs the target
+#===============================================================================
+class PokeBattle_WaterlogMove < PokeBattle_Move
+    def pbFailsAgainstTarget?(user, target, show_message)
+        return false if damagingMove?
+        return !target.canWaterlog?(user, show_message, self)
+    end
+
+    def pbEffectAgainstTarget(_user, target)
+        return if damagingMove?
+        target.applyWaterlog
+    end
+
+    def pbAdditionalEffect(user, target)
+        return if target.damageState.substitute
+        return unless target.canWaterlog?(user, guaranteedEffect?, self)
+        target.applyWaterlog
+    end
+
+    def getTargetAffectingEffectScore(user, target)
+        return getWaterlogEffectScore(user, target)
     end
 end
 

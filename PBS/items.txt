@@ -1739,22 +1739,6 @@ Price = 0
 Flags = Berry
 Description = It may be held by a Pokémon to recover from a frostbite.
 #-------------------------------
-[LEPPABERRY]
-Name = Leppa Berry
-NamePlural = Leppa Berries
-Pocket = 5
-Price = 0
-Flags = Berry
-Description = It may be held by a Pokémon to restore a move's PP by 10.
-#-------------------------------
-[CADOBERRY]
-Name = Cado Berry
-NamePlural = Cado Berries
-Pocket = 5
-Price = 0
-Flags = Berry,Pinch
-Description = It may be held by a Pokémon to heal the user by 33% in a pinch (below 25% HP).
-#-------------------------------
 [PERSIMBERRY]
 Name = Persim Berry
 NamePlural = Persim Berries
@@ -1762,6 +1746,30 @@ Pocket = 5
 Price = 0
 Flags = Berry
 Description = It may be held by a Pokémon to recover from being dizzy.
+#-------------------------------
+[SPELONBERRY]
+Name = Spelon Berry
+NamePlural = Spelon Berries
+Pocket = 5
+Price = 500
+Flags = Berry
+Description = It may be held by a Pokémon to recover from being leeched.
+#-------------------------------
+[BELUEBERRY]
+Name = Belue Berry
+NamePlural = Belue Berries
+Pocket = 5
+Price = 500
+Flags = Berry
+Description = It may be held by a Pokémon to recover from being waterlogged.
+#-------------------------------
+[LEPPABERRY]
+Name = Leppa Berry
+NamePlural = Leppa Berries
+Pocket = 5
+Price = 0
+Flags = Berry
+Description = It may be held by a Pokémon to restore a move's PP by 10.
 #-------------------------------
 [LUMBERRY]
 Name = Lum Berry
@@ -1779,13 +1787,13 @@ Price = 0
 Flags = Berry
 Description = If held by a Pokémon, it heals its HP by 25% at half health.
 #-------------------------------
-[SPELONBERRY]
-Name = Spelon Berry
-NamePlural = Spelon Berries
+[CADOBERRY]
+Name = Cado Berry
+NamePlural = Cado Berries
 Pocket = 5
-Price = 500
-Flags = Berry
-Description = It may be held by a Pokémon to recover from being leeched.
+Price = 0
+Flags = Berry,Pinch
+Description = It may be held by a Pokémon to heal the user by 33% in a pinch (below 25% HP).
 #-------------------------------
 [OCCABERRY]
 Name = Occa Berry

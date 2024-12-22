@@ -4,41 +4,17 @@ BattleHandlers::StatusImmunityAbility.add(:FLOWERVEIL,
   }
 )
 
-BattleHandlers::StatusImmunityAbility.add(:IMMUNITY,
-  proc { |ability, _battler, status|
-      next true if status == :POISON
-  }
-)
-
-BattleHandlers::StatusImmunityAbility.add(:INSOMNIA,
+BattleHandlers::StatusImmunityAbility.add(:VITALSPIRIT,
   proc { |ability, _battler, status|
       next true if status == :SLEEP
   }
 )
 
-BattleHandlers::StatusImmunityAbility.copy(:INSOMNIA, :SWEETVEIL, :VITALSPIRIT)
+BattleHandlers::StatusImmunityAbility.copy(:VITALSPIRIT, :SWEETVEIL)
 
 BattleHandlers::StatusImmunityAbility.add(:LEAFGUARD,
   proc { |ability, battler, _status|
       next true if battler.battle.sunny?
-  }
-)
-
-BattleHandlers::StatusImmunityAbility.add(:LIMBER,
-  proc { |ability, _battler, status|
-      next true if status == :NUMB
-  }
-)
-
-BattleHandlers::StatusImmunityAbility.add(:WATERVEIL,
-  proc { |ability, _battler, status|
-      next true if status == :BURN
-  }
-)
-
-BattleHandlers::StatusImmunityAbility.add(:ENERGETIC,
-  proc { |ability, _battler, status|
-      next true if %i[FROZEN NUMB POISON].include?(status)
   }
 )
 
@@ -68,13 +44,13 @@ BattleHandlers::StatusImmunityAllyAbility.add(:FAEVEIL,
 
 BattleHandlers::StatusImmunityAbility.add(:CANDYVEIL,
   proc { |ability, _battler, status|
-      next true if %i[POISON LEECHED DIZZY].include?(status)
+      next true if %i[POISON LEECHED WATERLOG].include?(status)
   }
 )
 
 BattleHandlers::StatusImmunityAllyAbility.add(:CANDYVEIL,
   proc { |ability, _battler, status|
-      next true if %i[POISON LEECHED DIZZY].include?(status)
+      next true if %i[POISON LEECHED WATERLOG].include?(status)
   }
 )
 
@@ -86,7 +62,7 @@ BattleHandlers::StatusImmunityAbility.add(:SLICKSURFACE,
 
 BattleHandlers::StatusImmunityAbility.add(:FIGHTINGVIGOR,
   proc { |ability, _battler, status|
-      next true if status == :NUMB
+      next true if %i[NUMB WATERLOG].include?(status)
   }
 )
 
@@ -108,9 +84,15 @@ BattleHandlers::StatusImmunityAbility.add(:DOMINEERING,
   }
 )
 
+BattleHandlers::StatusImmunityAbility.add(:ENERGETIC,
+  proc { |ability, _battler, status|
+      next true if %i[NUMB WATERLOG].include?(status)
+  }
+)
+
 BattleHandlers::StatusImmunityAbility.add(:RUNNINGFREE,
   proc { |ability, _battler, status|
-      next true if %i[NUMB LEECHED].include?(status)
+      next true if %i[NUMB WATERLOG LEECHED].include?(status)
   }
 )
 

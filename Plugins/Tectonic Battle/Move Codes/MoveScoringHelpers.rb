@@ -21,6 +21,8 @@ def getStatusSettingEffectScore(statusApplying, user, target, ignoreCheck: false
         return getDizzyEffectScore(user, target, ignoreCheck: ignoreCheck)
     when :LEECHED
         return getLeechEffectScore(user, target, ignoreCheck: ignoreCheck)
+    when :WATERLOG
+        return getWaterlogEffectScore(user, target, ignoreCheck: ignoreCheck)
     end
 
     raise _INTL("Given status #{statusApplying} is not valid.")
@@ -50,6 +52,20 @@ def getNumbEffectScore(user, target, ignoreCheck: false)
         score += STATUS_PUNISHMENT_BONUS if user && (user.hasStatusPunishMove? ||
                                             user.pbHasMoveFunction?("SmellingSalts", "NumbTargetOrCurseIfNumb")) # Smelling Salts, Spectral Tongue
         score += 60 if user&.hasActiveAbilityAI?(:TENDERIZE)
+        score -= getNaturalCureScore(user, target, score) if target.hasActiveAbilityAI?(:NATURALCURE)
+    else
+        return 0
+    end
+    return score
+end
+
+def getWaterlogEffectScore(user, target, ignoreCheck: false)
+    return 0 if willHealStatus?(target)
+    if target && (ignoreCheck || target.canWaterlog?(user, false))
+        score = 0
+        score += 60 if user.hasDamagingAttack?
+        score += 60 if user && target.pbSpeed(true) > user.pbSpeed(true)
+        score += STATUS_PUNISHMENT_BONUS if user && user.hasStatusPunishMove?
         score -= getNaturalCureScore(user, target, score) if target.hasActiveAbilityAI?(:NATURALCURE)
     else
         return 0
@@ -431,7 +447,7 @@ def getMultiStatUpEffectScore(statUpArray, user, target, fakeStepModifier: 0, ev
                     totalIncrease *= 0.66 unless target.pbHasMoveFunction?("DoubleDamageUserStatused") # Facade / Hard Feelings
                 end
                 damageStatus = 1
-            elsif target.numbed?
+            elsif target.numbed? || target.waterlogged?
                 if statSymbol == :SPEED
                     totalIncrease *= 0.4
                 elsif
@@ -441,7 +457,7 @@ def getMultiStatUpEffectScore(statUpArray, user, target, fakeStepModifier: 0, ev
                 else
                     totalIncrease *= 0.85
                 end
-            elsif target.dizzy?
+            elsif target.dizzy? || target.waterlogged?
                 totalIncrease *= 0.85 # There should probably be a system for evaluating abilities
             elsif target.leeched? or target.poisoned?
                 damageStatus = 1

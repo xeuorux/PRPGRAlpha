@@ -104,6 +104,18 @@ BattleHandlers::StatusCureItem.add(:SPELONBERRY,
   }
 )
 
+BattleHandlers::StatusCureItem.add(:BELUEBERRY,
+  proc { |item, battler, battle, forced|
+      next false if !forced && !battler.canConsumeBerry?
+      next false unless battler.hasStatusNoTrigger(:WATERLOG)
+      itemName = GameData::Item.get(item).name
+      battle.pbCommonAnimation("Nom", battler) unless forced
+      battler.pbCureStatus(forced, :WATERLOG)
+      battle.pbDisplay(_INTL("{1}'s {2} reversed its waterlogging!", battler.pbThis, itemName)) unless forced
+      next true
+  }
+)
+
 BattleHandlers::StatusCureItem.add(:MENTALHERB,
   proc { |item, battler, battle, forced|
       activate = false

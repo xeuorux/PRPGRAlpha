@@ -2238,14 +2238,6 @@ Price = 0
 Flags = Berry
 Description = In the Sinnoh region, they like to make sweets known as Poffins with this Berry.
 #-------------------------------
-[BELUEBERRY]
-Name = Belue Berry
-NamePlural = Belue Berries
-Pocket = 5
-Price = 0
-Flags = Berry
-Description = In the Sinnoh region, they like to make sweets known as Poffins with this Berry.
-#-------------------------------
 [ITEMFINDER]
 Name = Itemfinder
 NamePlural = Itemfinders

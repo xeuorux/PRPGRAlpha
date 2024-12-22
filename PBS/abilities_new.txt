@@ -240,7 +240,7 @@ Description = Has a 30% chance to burn targets when using special moves.
 #-------------------------------
 [CANDYVEIL]
 Name = Candy Veil
-Description = Prevents itself and allies from being poisoned, leeched, or dizzied.
+Description = Prevents itself and allies from being poisoned, leeched, or waterlogged.
 #-------------------------------
 [CHALLENGER]
 Name = Challenger
@@ -486,7 +486,7 @@ Description = Upon entry, creates an Emotion Room for five turns, switching Abil
 #-------------------------------
 [ENERGETIC]
 Name = Energetic
-Description = Can't be numbed, poisoned, or have its Speed reduced.
+Description = Can't be numbed, waterlogged, or have its Speed reduced.
 #-------------------------------
 [ENVY]
 Name = Envy
@@ -600,7 +600,7 @@ Description = Heals by 1/8th HP whenever any Pokémon uses a dance or sound move
 #-------------------------------
 [FIGHTINGVIGOR]
 Name = Fighting Vigor
-Description = Heals 1/12th HP every turn. Protected from being numbed.
+Description = Heals 1/12th HP every turn. Protected from being numbed or waterlogged.
 #-------------------------------
 [FILTHY]
 Name = Filthy
@@ -1513,7 +1513,7 @@ Description = All Pokémon deal 40% more move damage.
 #-------------------------------
 [RUNNINGFREE]
 Name = Running Free
-Description = Can't be numbed, leeched, trapped, or have its Speed reduced by foes.
+Description = Can't be numbed, waterlogged, leeched, trapped, or have its Speed reduced by foes.
 #-------------------------------
 [RUSTWRACK]
 Name = Rust & Wrack
