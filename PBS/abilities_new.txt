@@ -1295,6 +1295,10 @@ Name = Oxygenation
 Description = Heals status problems each turn if in sunshine.
 Flags = SunshineSynergy
 #-------------------------------
+[PALACEGUARD]
+Name = Palace Guard
+Description = Receives 33% less move damage if there is an active Room.
+#-------------------------------
 [PALEOLITHIC]
 Name = Paleolithic
 Description = Powers up Rock-type moves by 50%.
