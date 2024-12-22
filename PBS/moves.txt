@@ -1064,7 +1064,7 @@ TotalPP = 1
 Target = ClosestNearFoe
 FunctionCode = Struggle
 Flags = CanProtect,CantForce
-Description = Used only if the user has no PP. Uses the higher of the user's Attack or Sp. Atk stat. It also hurts the user.
+Description = Used only if the user has no PP. It also hurts the user.
 #-------------------------------
 [STUFFCHEEKS]
 Name = Stuff Cheeks
