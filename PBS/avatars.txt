@@ -469,7 +469,7 @@ HPMult = 4.0
 #-------------------------------
 [DURANT]
 Ability = TUNNELMAKER
-Moves1 = IRONTAIL,SKITTERSMACK,PRIMEVALSANDSTORM
+Moves1 = IRONTAIL,LUNGE,PRIMEVALSANDSTORM
 Moves2 = STONEEDGE,TREMOR,HONECLAWS
 Item = WIDELENS
 #-------------------------------

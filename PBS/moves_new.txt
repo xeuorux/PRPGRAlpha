@@ -1050,10 +1050,10 @@ Power = 40
 Accuracy = 100
 TotalPP = 25
 Target = NearOther
-FunctionCode = Dizzy
+FunctionCode = Numb
 Flags = CanProtect,CanMirrorMove,Kicking
 EffectChance = 10
-Description = The user hops high up to land on the target's head. It has a 10% chance to dizzy.
+Description = The user hops high up to land on the target's head. It has a 10% chance to numb.
 Animation = BOUNCE
 #-------------------------------
 [HUNTDOWN]
@@ -1167,7 +1167,6 @@ Target = NearOther
 FunctionCode = HitOncePerUserTeamMemberSpecial
 Flags = CanProtect,CanMirrorMove
 Description = The user gets all the party Pokémon to attack the foe with aerial projectiles.
-Animation = SQUALLDART
 #-------------------------------
 [WINDTUNNEL]
 Name = Wind Tunnel
@@ -1176,11 +1175,11 @@ Category = Special
 Power = 20
 Accuracy = 100
 TotalPP = 20
-Target = NearOther
-FunctionCode = DizzyTargetHitTwoToFiveTimes
+Target = AllNearFoes
+FunctionCode = HitTwoToFiveTimes
 Flags = CanProtect,CanMirrorMove,Wind
 EffectChance = 10
-Description = Wind rapidly spins the target in place to hit them two to five times. Has a 10% chance to dizzy.
+Description = Wind rapidly spins the target in place to hit them two to five times.
 Animation = GUST
 #-------------------------------
 #		POISON MOVES
@@ -2175,6 +2174,19 @@ Flags = CanProtect,CanMirrorMove
 EffectChance = 100
 Description = The user makes the target have an allergic reaction. This reduces their Speed by three steps.
 #-------------------------------
+[CARAPACECRUSH]
+Name = Carapace Crush
+Type = BUG
+Category = Physical
+Power = 85
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = LowerTargetDef1
+Flags = CanProtect,CanMirrorMove
+EffectChance = 30
+Description = The crushes the target with a hardened carapace. It has a 30% chance to lower the target's Defense stat.
+#-------------------------------
 [CLACKACLACK]
 Name = Clackaclack
 Type = BUG
@@ -2183,10 +2195,10 @@ Power = 40
 Accuracy = 100
 TotalPP = 30
 Target = AllNearFoes
-FunctionCode = LowerTargetSpAtk1
+FunctionCode = LowerTargetSpDef1
 Flags = CanProtect,CanMirrorMove,Sound
 EffectChance = 20
-Description = The user attacks with a horrible clattering noise. It has a 20% chance to lower Sp. Atk.
+Description = The user attacks with a horrible clattering noise. It has a 20% chance to lower Sp. Def.
 Animation = BUGBUZZ
 #-------------------------------
 [CREEPOUT]
@@ -2210,10 +2222,10 @@ Power = 65
 Accuracy = 100
 TotalPP = 20
 Target = NearOther
-FunctionCode = LowerTargetSpAtk1
+FunctionCode = LowerTargetSpDef1
 Flags = CanProtect,CanMirrorMove,Sound
 EffectChance = 30
-Description = The user vibrates its wings to make a damaging sound wave. It has a 30% chance to lower Sp. Atk.
+Description = The user vibrates its wings to make a damaging sound wave. It has a 30% chance to lower Sp. Def.
 Animation = BUGBUZZ
 #-------------------------------
 [ENVENOM]
@@ -2414,10 +2426,10 @@ Power = 110
 Accuracy = 80
 TotalPP = 12
 Target = NearOther
-FunctionCode = Dizzy
+FunctionCode = LowerTargetSpDef2
 Flags = CanProtect,CanMirrorMove,Sound
 EffectChance = 30
-Description = The target is overwhelmed by light and sound. This has a 30% chance to dizzy it.
+Description = The target is overwhelmed by light and sound. This has a 30% chance to lower the Sp. Def stat of the target by two steps.
 Animation = SIGNALBEAM
 #-------------------------------
 [SILKBLADE]
@@ -5142,11 +5154,25 @@ Power = 80
 Accuracy = 100
 TotalPP = 12
 Target = NearOther
-FunctionCode = Dizzy
+FunctionCode = LowerTargetAtkSpAtk1
 Flags = CanProtect,CanMirrorMove
 EffectChance = 30
-Description = The target's psyche is attacked directly. It has a 30% chance to dizzy.
+Description = The target's psyche is attacked directly. It has a 30% chance to lower the target's Attack and Sp. Atk by two steps.
 Animation = PSYCHIC
+#-------------------------------
+[MINDWAVES]
+Name = Mind Waves
+Type = PSYCHIC
+Category = Special
+Power = 40
+Accuracy = 100
+TotalPP = 30
+Target = NearOther
+FunctionCode = LowerTargetSpDef1
+Flags = CanProtect,CanMirrorMove
+EffectChance = 10
+Description = The target is hit by a weak telekinetic force. It has a 10% chance to lower the target's Sp. Def.
+Animation = CONFUSION
 #-------------------------------
 [ODDROOM]
 Name = Odd Room
@@ -6120,6 +6146,19 @@ EffectChance = 10
 Description = The user strikes the target with dark energy. It has a 10% chance to leech.
 Animation = SNARL
 #-------------------------------
+[DISARMINGSHOT]
+Name = Disarming Shot
+Type = DARK
+Category = Special
+Power = 80
+Accuracy = 100
+TotalPP = 12
+Target = NearOther
+FunctionCode = DisableTargetBladeMoves3
+Flags = CanProtect,CanMirrorMove
+EffectChance = 100
+Description = The user disarms the target's blade. The target cannot use blade-based moves for two turns.
+#-------------------------------
 [DIVINATION]
 Name = Divination
 Type = DARK
@@ -6647,11 +6686,10 @@ Category = Special
 Power = 80
 Accuracy = 100
 TotalPP = 12
-Target = AllNearOthers
-FunctionCode = Dizzy
-Flags = CanProtect,CanMirrorMove,Sound
-EffectChance = 30
-Description = An enchanting outcry. It has a 30% chance to dizzy those hit.
+Target = AllNearFoes
+FunctionCode = AlwaysHits
+Flags = CanMirrorMove,Sound
+Description = An enchanting outcry. This attack never misses and skips protections.
 Animation = SING
 #-------------------------------
 [FAIRPLAY]

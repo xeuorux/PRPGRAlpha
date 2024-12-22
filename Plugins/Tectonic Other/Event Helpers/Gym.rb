@@ -78,6 +78,9 @@ end
 def giveBattleReport()
 	pbMessage(_INTL("\\i[PERFORMANCEANALYZER]The Performance Analyzer whirs, then begins printing."))
 	pbReceiveItem(:BATTLEREPORT)
+	if pbConfirmMessageSerious(_INTL("Use the Battle Report immediately?"))
+		pbUseItem($PokemonBag,:BATTLEREPORT)
+	end
 end
 
 def doubleBattleBenceZoe()

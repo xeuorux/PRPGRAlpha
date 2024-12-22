@@ -76,23 +76,28 @@ class WaypointsTracker
 	end
 	
 	def accessWaypoint(waypointName,waypointEvent,alternateMessage=false)
+		if WAYPOINT_REQUIRED_ITEM && !pbHasItem?(WAYPOINT_REQUIRED_ITEM)
+			pbMessage(waypointLackingItemMessage)
+			return
+		end
+
 		@activeWayPoints = {} if @activeWayPoints.nil?
 		
 		if alternateMessage
-			pbMessage(_INTL("#{waypointAccessMessageAlternative}"))
+			pbMessage(waypointAccessMessageAlternative)
 		else
-			pbMessage(_INTL("#{waypointAccessMessage}"))
+			pbMessage(waypointAccessMessage)
 		end
 		
 		unless @activeWayPoints.has_key?(waypointName)
-			pbMessage(_INTL("#{waypointRegisterMessage}"))
+			pbMessage(waypointRegisterMessage)
 			addWaypoint(waypointName,waypointEvent)
 
             checkForWaypointsAchievement
 		end
 		
 		if @activeWayPoints.length <= 1
-			pbMessage(_INTL("#{waypointUnableMessage}"))
+			pbMessage(waypointUnableMessage)
 		else
 			warpByWaypoints
 		end
@@ -100,7 +105,7 @@ class WaypointsTracker
 
 	def warpByWaypoints(skipMessage = false)
 		if @activeWayPoints.empty?
-			pbMessage(_INTL("#{noWaypointsMessage}"))
+			pbMessage(noWaypointsMessage)
 			return
 		end
 
@@ -113,13 +118,13 @@ class WaypointsTracker
 			names.each do |name|
 				commands.push(_INTL(name))
 			end
-			chosen = pbMessage(_INTL("#{waypointChooseMessage}"),commands,0)
+			chosen = pbMessage(waypointChooseMessage,commands,0)
 			if chosen != 0
 				chosenKey = names[chosen-1]
 				chosenLocation = @activeWayPoints[chosenKey]
 			end
 		else
-			pbMessage(_INTL("#{waypointChooseMessage}")) unless skipMessage
+			pbMessage(waypointChooseMessage) unless skipMessage
 			chosenKey = nil
 			pbFadeOutIn {
 				scene = PokemonRegionMap_Scene.new(-1,false)
@@ -143,7 +148,7 @@ class WaypointsTracker
 				$game_temp.transition_name       = ""
 			else
 				event = getEventByID(waypointInfo,mapID)
-				if event.nil? || !event.name.include?("AvatarTotem")
+				if event.nil? || !event.name.include?(WAYPOINT_EVENT_NAME)
 					pbMessage(_INTL("The chosen waypoint is somehow invalid."))
 					pbMessage(_INTL("Removing access."))
 					@activeWayPoints.delete(chosenKey)
@@ -177,7 +182,7 @@ class WaypointsTracker
             for key in map.events.keys
                 event = map.events[key]
                 next if !event || event.pages.length == 0
-                next if event.name != "AvatarTotem"
+                next if event.name != WAYPOINT_EVENT_NAME
                 event.pages.each do |page|
                     page.list.each do |eventCommand|
                         eventCommand.parameters.each do |parameter|
@@ -205,11 +210,11 @@ def accessWaypoint(waypointName,avatarSpecies=nil)
 
 	if avatarSpecies
 		alternate = true
-		if pbHasItem?(:PRIMALCLAY)
+		if pbHasItem?(LEGEND_SUMMONING_ITEM)
 			speciesName = GameData::Species.get(avatarSpecies).name
 
-			pbMessage(_INTL("The totem pulses with the frequency of #{speciesName}."))
-			if pbConfirmMessage(_INTL("Use the Primal Clay to summon #{speciesName}?"))
+			pbMessage(_INTL("The totem pulses with the frequency of {1}.",speciesName))
+			if pbConfirmMessage(_INTL("Use the {1} to summon {2}?", getItemName(LEGEND_SUMMONING_ITEM), speciesName))
 				# No longer allow summoning the pokemon once its been caught once
 				if $waypoints_tracker.summonPokemonFromWaypoint(avatarSpecies,waypointEvent)
 					pbMessage(_INTL("The totem returns to its original state."))
@@ -229,20 +234,24 @@ def setWaypointSummonable(waypointEventID)
 end
 
 def totemAuraSummon(species)
-	unless pbHasItem?(:PRIMALCLAY)
+	unless pbHasItem?(LEGEND_SUMMONING_ITEM)
 		pbMessage(_INTL("You sense an powerful presence trying to manifest on this spot."))
 		pbMessage(_INTL("However, you seem to lack a way to interact with it."))
 		return
 	end
 	speciesName = GameData::Species.get(species).name
 	pbMessage(_INTL("An Avatar Totem is partially manifested on this spot."))
-	pbMessage(_INTL("It pulses with the frequency of #{speciesName}."))
-	return unless pbConfirmMessage(_INTL("Use the Primal Clay to summon #{speciesName}?"))
+	pbMessage(_INTL("It pulses with the frequency of {1}.",speciesName))
+	return unless pbConfirmMessage(_INTL("Use the Primal Clay to summon {1}?",speciesName))
 	if $waypoints_tracker.summonPokemonFromWaypoint(species,get_character(0))
 		pbMessage(_INTL("The summoning spot exhausted its energy."))
 		setMySwitch('A')
 		return true
 	end
+end
+
+def waypointLackingItemMessage
+    return _INTL("A mystical Avatar Totem. You sense it has some purpose, long lost to time.")
 end
 
 def waypointAccessMessage
@@ -254,7 +263,7 @@ def waypointAccessMessageAlternative
 end
 
 def waypointRegisterMessage
-    return _INTL("You see it glow with extra intensity, and sense somehow that a connection has been created.")
+    return _INTL("\\i[SPANNINGBAND]The Spanning Band glows in sync with the totem. You sense that some sort of connection has been created.")
 end
 
 def waypointUnableMessage
@@ -270,3 +279,6 @@ def noWaypointsMessage
 end
 
 CHOOSE_BY_LIST = false
+WAYPOINT_EVENT_NAME = "AvatarTotem"
+WAYPOINT_REQUIRED_ITEM = :SPANNINGBAND
+LEGEND_SUMMONING_ITEM = :PRIMALCLAY

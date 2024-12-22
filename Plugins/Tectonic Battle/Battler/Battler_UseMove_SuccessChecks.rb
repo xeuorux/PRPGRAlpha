@@ -45,6 +45,15 @@ class PokeBattle_Battler
             echoln(msg)
             return false
         end
+        # Disarming Shot
+        if effectActive?(:DisarmingShot) && move.bladeMove?
+            if showMessages
+                msg = _INTL("{1} can't use {2} because of Disarming Shot!", pbThis, move.name)
+                commandPhase ? @battle.pbDisplayPaused(msg) : @battle.pbDisplay(msg)
+            end
+            echoln(msg)
+            return false
+        end
         # Choice Items
         if effectActive?(:ChoiceBand)
             choiceItem = nil

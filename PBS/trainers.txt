@@ -1555,6 +1555,60 @@ Pokemon = LUNATONE,30
     Moves = SWEETSELENE,CRYSTALGLEAM,PSYBEAM
     AbilityIndex = 0 # Levitate
 #-------------------------------
+[CAMPER_F,Veronica]
+Pokemon = DELCATTY,35
+    Moves = SUCKERPUNCH,HYPOTHERMIATE,CLOUDBREAK,FAKEOUT
+    AbilityIndex = 0 # Above It All
+Pokemon = FLORGES,35
+    Moves = WISH,AROMATHERAPY,DEFOG,GIGADRAIN
+    AbilityIndex = 1 # Sentry
+Pokemon = RUBARIOR,35
+    Moves = GEMSEAL,WILLOWISP,STITCHUP,TAUNT
+    AbilityIndex = 1 # Prankster
+Pokemon = ZEBSTRIKA,35
+    Moves = VOLTSWITCH,FLAREBLITZ,VOLTTACKLE,SUBMISSION
+    AbilityIndex = 1 # Reckless
+    Item = LIFEORB
+Pokemon = RATICATE,35
+    Moves = EXTREMESPEED,SWORDSDANCE,BRAINFREEZE,CRUNCH
+    AbilityIndex = 0 # Filthy
+    Item = FOCUSSASH
+#-------------------------------
+[GUITARIST2,Alan]
+Pokemon = MUSHARNA,35
+    Moves = LIGHTSCREEN,REFLECT,PSYCHIC,MOONBLAST
+    AbilityIndex = 1 # Dreamy Haze
+Pokemon = NIDOQUEEN,35
+    Moves = VENOSHOCK,SCORCHINGSANDS,POISONSPIKES,BAR
+    AbilityIndex = 0 # Rugged Scales
+    Item = CADOBERRY
+Pokemon = RAPIDASH,35
+    Moves = STAMPDOWN,HEALBELL,BLAZEKICK,SCYTHEKICK
+    AbilityIndex = 1 # Heavy Duty Hooves
+Pokemon = CRAWDAUNT,35
+    Moves = GLEEFULGRASP,LIQUIDATION,EARTHQUAKE,SUCKERPUNCH
+    AbilityIndex = 0 # Filter
+    Item = ASSAULTVEST
+Pokemon = SKARMORY,35
+    Moves = ROOST,STEELWING,SPIKES,SLAG
+    AbilityIndex = 0 # Mental Block
+#-------------------------------
+[SAILOR,Konrad]
+Pokemon = AMPHAROS,35
+    Moves = SIGNALBEAM,DRAGONPULSE,RECOVER,DISCHARGE
+    AbilityIndex = 0 # Static
+Pokemon = SYLVEON,35
+    Moves = GLAMOURFLASH,EARTHPOWER,DREAMDANCE,CHARM
+    AbilityIndex = 1 # Dragon Slayer
+	Item = SITRUSBERRY
+Pokemon = VICTREEBEL,35
+    Moves = STRAFE,POISONJAB,KNOCKOFF,EARTHQUAKE
+    AbilityIndex = 1 # Flytrap
+	Item = FLYINGGEM
+Pokemon = CRAMORANT,35
+    Moves = SURF,DRILLPECK,ICYWIND,DEFOG
+    AbilityIndex = 0 # Gulp Missile
+#-------------------------------
 [LEADER_Rafael,Rafael]
 Policies = RAFAEL
 Flags = NoPerfect
@@ -1871,9 +1925,6 @@ Pokemon = FURRET,35
 Pokemon = BEAUTIFLY,35
     Moves = SUCKBLOOD,DRAININGKISS,AIRSLASH,UTURN
     AbilityIndex = 0 # Gorging
-Pokemon = NIDOKING,35
-    Moves = VOLATILETOXIN,BULKUP,POISONGAS,BULLDOZE
-    AbilityIndex = 1 # Stressful
 #-------------------------------
 [TWINS2,Bella and Meghan]
 Pokemon = EXCADRILL,35
@@ -1890,9 +1941,6 @@ Pokemon = GSLOWKING,35
     Moves = EERIESPELL,BLIGHT,BELCH
     AbilityIndex = 0 # Curious Medicine
     Item = SALACBERRY
-Pokemon = TANGROWTH,35
-    Moves = KNOCKOFF,VINEBIND,SMACKDOWN,ROOTWRACK
-    AbilityIndex = 1 # Tangling Hair
 #-------------------------------
 [SWIMMER_M,Stannis]
 Policies = MOONGLOW_TEAM
@@ -8396,7 +8444,7 @@ Pokemon = ALAKAZAM,70
     AbilityIndex = 1 # Steelworker
     Item = SITRUSBERRY
 Pokemon = ARAQUANID,70
-    Moves = NATURALPROTECTION,SKITTERSMACK,SCALD,ICEBEAM
+    Moves = NATURALPROTECTION,LEECHLIFE,SCALD,ICEBEAM
     AbilityIndex = 1 # Water Bubble
 #-------------------------------
 [TOURISTM,Calvin]

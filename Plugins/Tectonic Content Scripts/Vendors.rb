@@ -682,29 +682,21 @@ def weirdBallsVendor
 	)
 end
 
-def evoStoneVendor(expanded = false)
+def evoStoneVendor
 	stock = %i[
 		FIRESTONE
 		THUNDERSTONE
 		WATERSTONE
 		LEAFSTONE
+		ICESTONE
 		DAWNSTONE
 		DUSKSTONE
-		MOONSTONE
-		SUNSTONE
-		ICESTONE
-	]
-
-	expandedStock = %i[
 		SHINYSTONE
+		SUNSTONE
+		MOONSTONE
 	]
-	stock = expandedStock.concat(stock) if expanded
 
-	if expanded
-		message = _INTL("How can we help to empower your Pokemon?")
-	else
-		message = _INTL("Regrettably, you are restricted from purchasing any Shiny Stones. Otherwise, how may I serve you?")
-	end
+	message = _INTL("How can we help to empower your Pokemon?")
 
 	pbPokemonMart(
 		stock,

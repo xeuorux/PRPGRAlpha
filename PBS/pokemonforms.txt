@@ -1044,6 +1044,7 @@ BaseStats = 108,155,125,97,100,75
 [GYARADOS,1]
 FormName = Rampage
 BaseStats = 95,155,109,86,85,115
+Abilities = JUGGERNAUT
 #-------------------------------
 [GARDEVOIR,1]
 FormName = Finale

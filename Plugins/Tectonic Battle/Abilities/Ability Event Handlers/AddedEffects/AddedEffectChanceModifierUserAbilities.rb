@@ -19,13 +19,6 @@ BattleHandlers::AddedEffectChanceModifierUserAbility.add(:RATTLEEM,
     }
 )
 
-BattleHandlers::AddedEffectChanceModifierUserAbility.add(:TERRORIZE,
-    proc { |ability, user, target, move, chance|
-        chance *= 2.0 if move.flinchingMove?
-        next chance
-    }
-)
-
 BattleHandlers::AddedEffectChanceModifierUserAbility.add(:SERENEGRACE,
     proc { |ability, user, target, move, chance|
         chance *= 2.0
