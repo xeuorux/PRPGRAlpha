@@ -2651,3 +2651,15 @@ Target = NearOther
 FunctionCode = Invalid
 Flags = CanProtect,CanMagicCoat,CanMirrorMove
 Description = The user kisses the target with a sweet, angelic cuteness that causes charm.
+#-------------------------------
+[PSYWAVE]
+Name = Psywave
+Type = PSYCHIC
+Category = Special
+Power = 1
+Accuracy = 100
+TotalPP = 12
+Target = NearOther
+FunctionCode = SetTargetTypesToBug
+Flags = CanProtect,CanMirrorMove
+Description = The target is attacked with an odd psychic wave. The attack varies in intensity.

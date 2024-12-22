@@ -5799,18 +5799,6 @@ EffectChance = 100
 Description = Cloaking itself in psychic energy, the user slams into the target, raising the user's Defense by two steps.
 Animation = ZENHEADBUTT
 #-------------------------------
-[PSYWAVE]
-Name = Psywave
-Type = PSYCHIC
-Category = Special
-Power = 1
-Accuracy = 100
-TotalPP = 12
-Target = NearOther
-FunctionCode = SetTargetTypesToBug
-Flags = CanProtect,CanMirrorMove
-Description = The target is attacked with an odd psychic wave. The attack varies in intensity.
-#-------------------------------
 [REFLECT]
 Name = Reflect
 Type = PSYCHIC
