@@ -6553,9 +6553,9 @@ Power = 80
 Accuracy = 100
 TotalPP = 12
 Target = AllNearFoes
-FunctionCode = Basic
-Flags = CanProtect,CanMirrorMove,Sound
-Description = An enchanting outcry.
+FunctionCode = AlwaysHits
+Flags = CanMirrorMove,Sound
+Description = An enchanting outcry. This attack never misses and skips protections.
 Animation = SING
 #-------------------------------
 [FAIRPLAY]
