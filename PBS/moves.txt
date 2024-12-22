@@ -6378,7 +6378,7 @@ Description = A small tornado hits the target. It has a 30% chance to make targe
 [ASSURANCE]
 Name = Assurance
 Type = DARK
-Category = Physical
+Category = Adaptive
 Power = 60
 Accuracy = 100
 TotalPP = 10
@@ -6737,7 +6737,7 @@ Description = This attack's power increases by 10 for every one of the target's 
 [PURSUIT]
 Name = Pursuit
 Type = DARK
-Category = Physical
+Category = Adaptive
 Power = 40
 Accuracy = 100
 TotalPP = 15
