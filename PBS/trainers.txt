@@ -8444,7 +8444,7 @@ Pokemon = ALAKAZAM,70
     AbilityIndex = 1 # Steelworker
     Item = SITRUSBERRY
 Pokemon = ARAQUANID,70
-    Moves = NATURALPROTECTION,SKITTERSMACK,SCALD,ICEBEAM
+    Moves = NATURALPROTECTION,LEECHLIFE,SCALD,ICEBEAM
     AbilityIndex = 1 # Water Bubble
 #-------------------------------
 [TOURISTM,Calvin]

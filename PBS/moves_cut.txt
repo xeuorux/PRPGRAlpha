@@ -1191,6 +1191,19 @@ Priority = 2
 FunctionCode = Invalid
 Description = The user scatters irritating powder to draw attention to itself. Opponents aim only at the user.
 #-------------------------------
+[SKITTERSMACK]
+Name = Skitter Smack
+Type = BUG
+Category = Physical
+Power = 70
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect,CanMirrorMove
+EffectChance = 100
+Description = The user skitters behind the target to attack. This also lowers the target's Sp. Atk stat by two steps.
+#-------------------------------
 [SPIDERWEB]
 Name = Spider Web
 Type = BUG
