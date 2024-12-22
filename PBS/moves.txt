@@ -2992,14 +2992,14 @@ Description = The user drains the target's blood. The user's HP is restored by 5
 Name = Lunge
 Type = BUG
 Category = Physical
-Power = 70
+Power = 80
 Accuracy = 100
 TotalPP = 12
 Target = NearOther
-FunctionCode = LowerTargetAtk2
+FunctionCode = LowerTargetAtk1
 Flags = CanProtect,CanMirrorMove
 EffectChance = 100
-Description = The user makes a lunge at the target, attacking with full force. This lowers the target's Attack by two steps.
+Description = The user makes a lunge at the target, attacking with full force. This lowers the target's Attack by one step.
 #-------------------------------
 [MEGAHORN]
 Name = Megahorn
@@ -3073,19 +3073,6 @@ FunctionCode = RaiseUserMainStats1
 Flags = CanProtect,CanMirrorMove,Wind
 EffectChance = 20
 Description = The foe is attacked with powdery scales blown by wind. It has a 20% chance to raise all stats.
-#-------------------------------
-[SKITTERSMACK]
-Name = Skitter Smack
-Type = BUG
-Category = Physical
-Power = 70
-Accuracy = 100
-TotalPP = 10
-Target = NearOther
-FunctionCode = LowerTargetSpAtk2
-Flags = CanProtect,CanMirrorMove
-EffectChance = 100
-Description = The user skitters behind the target to attack. This also lowers the target's Sp. Atk stat by two steps.
 #-------------------------------
 [STEAMROLLER]
 Name = Steamroller

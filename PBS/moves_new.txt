@@ -2174,6 +2174,19 @@ Flags = CanProtect,CanMirrorMove
 EffectChance = 100
 Description = The user makes the target have an allergic reaction. This reduces their Speed by three steps.
 #-------------------------------
+[CARAPACECRUSH]
+Name = Carapace Crush
+Type = BUG
+Category = Physical
+Power = 85
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = LowerTargetDef1
+Flags = CanProtect,CanMirrorMove
+EffectChance = 30
+Description = The crushes the target with a hardened carapace. It has a 30% chance to lower the target's Defense stat.
+#-------------------------------
 [CLACKACLACK]
 Name = Clackaclack
 Type = BUG
@@ -2534,19 +2547,6 @@ FunctionCode = RaiseUserSpAtk2Spd2
 Flags = CanSnatch
 Description = The user amps itself up for performance, raising its Sp. Atk and Speed by two steps each.
 Animation = CALMMIND
-#-------------------------------
-[CARAPACECRUSH]
-Name = Carapace Crush
-Type = BUG
-Category = Physical
-Power = 85
-Accuracy = 100
-TotalPP = 15
-Target = NearOther
-FunctionCode = LowerTargetDef1
-Flags = CanProtect,CanMirrorMove
-EffectChance = 30
-Description = The crushes the target with a hardened carapace. It has a 30% chance to lower the target's Defense stat.
 #-------------------------------
 #		GHOST MOVES
 #-------------------------------
