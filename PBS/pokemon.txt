@@ -19813,7 +19813,7 @@ InternalName = NOIBAT
 Type1 = FLYING
 Type2 = DRAGON
 # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
-BaseStats = 50,40,55,85,80,55
+BaseStats = 50,40,55,80,75,55
 # Total = 365
 GenderRate = Female50Percent
 GrowthRate = Medium
@@ -19843,7 +19843,7 @@ InternalName = NOIVERN
 Type1 = FLYING
 Type2 = DRAGON
 # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
-BaseStats = 75,70,80,123,107,80
+BaseStats = 75,70,80,117,102,80
 # Total = 535
 GenderRate = Female50Percent
 GrowthRate = Medium

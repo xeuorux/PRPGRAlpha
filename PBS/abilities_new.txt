@@ -1890,7 +1890,7 @@ Flags = AllWeatherSynergy
 #-------------------------------
 [TERRORIZE]
 Name = Terrorize
-Description = Moves that can flinch are twice as likely to do so.
+Description = Flinching moves always activate their random effects.
 #-------------------------------
 [TESLACOILS]
 Name = Tesla Coils
