@@ -6451,10 +6451,10 @@ Power = 40
 Accuracy = 100
 TotalPP = 20
 Target = NearOther
-FunctionCode = Flinch
+FunctionCode = LowerTargetDef1
 Flags = CanProtect,CanMirrorMove,Biting
-EffectChance = 30
-Description = The target is bitten with viciously sharp fangs. It has a 30% chance to make the target flinch.
+EffectChance = 20
+Description = The target is bitten with viciously sharp fangs. It has a 20% chance to lower Defense.
 #-------------------------------
 [BRUTALSWING]
 Name = Brutal Swing
