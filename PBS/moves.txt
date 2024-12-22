@@ -3082,10 +3082,10 @@ Power = 65
 Accuracy = 100
 TotalPP = 15
 Target = NearOther
-FunctionCode = Flinch
+FunctionCode = LowerTargetDef1
 Flags = CanProtect,CanMirrorMove
 EffectChance = 30
-Description = The user rolls over its foes, crushing them. It has a 30% chance to make the target flinch.
+Description = The user rolls over its foes, crushing them. It has a 30% chance to reduce the target's Defense.
 #-------------------------------
 [STICKYWEB]
 Name = Sticky Web
