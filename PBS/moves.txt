@@ -5662,20 +5662,6 @@ Priority = 4
 FunctionCode = BounceBackProblemCausingStatusMoves
 Description = Until end of turn, reflects status moves that target the user or create hazards around it.
 #-------------------------------
-[MINDWAVES]
-Name = Mind Waves
-Type = PSYCHIC
-Category = Special
-Power = 40
-Accuracy = 100
-TotalPP = 30
-Target = NearOther
-FunctionCode = LowerTargetAtkSpAtk1
-Flags = CanProtect,CanMirrorMove
-EffectChance = 10
-Description = The target is hit by a weak telekinetic force. It has a 10% chance to lower the target's Attack and Sp. Atk.
-Animation = CONFUSION
-#-------------------------------
 [MIRRORCOAT]
 Name = Mirror Coat
 Type = PSYCHIC
