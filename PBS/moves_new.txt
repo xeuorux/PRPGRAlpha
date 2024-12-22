@@ -2308,10 +2308,10 @@ Power = 40
 Accuracy = 100
 TotalPP = 25
 Target = NearOther
-FunctionCode = Dizzy
+FunctionCode = LowerTargetAtkSpAtk1
 Flags = CanProtect,CanMirrorMove
 EffectChance = 10
-Description = The user attacks with small beams of light. It has a 10% chance to dizzy.
+Description = The user attacks with small beams of light. It has a 10% chance to lower the target's Attack and Sp. Atk.
 Animation = SIGNALBEAM
 #-------------------------------
 [MANYNEEDLE]
@@ -2426,10 +2426,10 @@ Power = 110
 Accuracy = 80
 TotalPP = 12
 Target = NearOther
-FunctionCode = LowerTargetSpDef2
+FunctionCode = LowerTargetAtkSpAtk1
 Flags = CanProtect,CanMirrorMove,Sound
 EffectChance = 30
-Description = The target is overwhelmed by light and sound. This has a 30% chance to lower the Sp. Def stat of the target by two steps.
+Description = The target is overwhelmed by light and sound. It has a 30% chance to lower the target's Attack and Sp. Atk.
 Animation = SIGNALBEAM
 #-------------------------------
 [SILKBLADE]
@@ -5157,7 +5157,7 @@ Target = NearOther
 FunctionCode = LowerTargetAtkSpAtk1
 Flags = CanProtect,CanMirrorMove
 EffectChance = 30
-Description = The target's psyche is attacked directly. It has a 30% chance to lower the target's Attack and Sp. Atk by two steps.
+Description = The target's psyche is attacked directly. It has a 30% chance to lower the target's Attack and Sp. Atk.
 Animation = PSYCHIC
 #-------------------------------
 [MINDWAVES]
