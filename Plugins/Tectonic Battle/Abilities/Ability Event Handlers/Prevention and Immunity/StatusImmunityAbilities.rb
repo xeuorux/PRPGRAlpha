@@ -20,7 +20,7 @@ BattleHandlers::StatusImmunityAbility.add(:LEAFGUARD,
 
 BattleHandlers::StatusImmunityAbility.add(:STABILITY,
   proc { |ability, _battler, status|
-      next true if %i[BURN FROSTBITE POISON].include?(status)
+      next true
   }
 )
 

@@ -1718,7 +1718,7 @@ Description = Speed is raised each turn. Speed is reset when hit, but the attack
 #-------------------------------
 [STABILITY]
 Name = Stability
-Description = Can't be poisoned, burned, or frostbitten.
+Description = Can't be afflicted with any non-volatile status condition.
 #-------------------------------
 [STAGGERINGSLAPS]
 Name = Staggering Slaps
