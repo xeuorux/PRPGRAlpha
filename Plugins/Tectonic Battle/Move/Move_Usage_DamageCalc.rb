@@ -485,6 +485,10 @@ class PokeBattle_Move
             if user.effectActive?(:Echo)
                 multipliers[:final_damage_multiplier] *= 0.75
             end
+            # Refuge
+            if target.effectActive?(:RefugeDamageReduction)
+                multipliers[:final_damage_multiplier] *= 0.7
+            end
         end
 
         # Mass Attack

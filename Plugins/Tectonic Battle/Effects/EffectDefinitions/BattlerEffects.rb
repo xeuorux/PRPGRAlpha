@@ -2108,3 +2108,9 @@ GameData::BattleEffect.register_effect(:Battler, {
         next stay_in_rating
     end
 })
+
+GameData::BattleEffect.register_effect(:Battler, {
+    :id => :RefugeDamageReduction,
+    :real_name => "Refuge",
+    :resets_battlers_eot => true,
+})

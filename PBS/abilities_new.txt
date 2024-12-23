@@ -1473,7 +1473,7 @@ Flags = SunshineSynergy
 #-------------------------------
 [REFUGE]
 Name = Refuge
-Description = Pokémon that swap in for this have their status effects healed.
+Description = Pokémon that swap in for this have their status effects healed, and take 30% less damage that turn.
 #-------------------------------
 [RELUCTANTBLADE]
 Name = Reluctant Blade
