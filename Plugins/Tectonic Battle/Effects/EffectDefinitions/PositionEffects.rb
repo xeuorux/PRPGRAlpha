@@ -136,20 +136,6 @@ GameData::BattleEffect.register_effect(:Position, {
 })
 
 GameData::BattleEffect.register_effect(:Position, {
-    :id => :RefugeDamageReduction,
-    :real_name => "Refuge",
-    :type => :PartyPosition,
-    :swaps_with_battlers => true,
-    :entry_proc => proc do |battle, _index, position, battler|
-        battle.pbCommonAnimation("HealingWish", battler)
-        refugeMaker = battle.pbThisEx(battler.index, position.effects[:Refuge])
-        battle.pbDisplay(_INTL("{1}'s refuge comforts {2}!", refugeMaker, battler.pbThis(true)))
-        battler.pbCureStatus(false)
-        position.disableEffect(:Refuge)
-    end,
-})
-
-GameData::BattleEffect.register_effect(:Position, {
     :id => :PassingAbility,
     :real_name => "PassingAbility",
     :info_displayed => false,
