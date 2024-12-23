@@ -3301,14 +3301,15 @@ Animation = FOCUSENERGY
 Name = Weigh Anchor
 Type = STEEL
 Category = Physical
-Power = 90
+Power = 60
 Accuracy = 100
 TotalPP = 12
 Target = NearOther
-FunctionCode = HitsTargetInSkyGroundsTarget
+FunctionCode = Waterlog
 Flags = CanProtect,CanMirrorMove
-Description = The user chains its heavy anchor to the target. A flying Pokémon will fall to the ground when hit.
+Description = The user drags the target into the water with a heavy anchor. They become waterlogged.
 Animation = ANCHORSHOT
+EffectChance = 100
 #-------------------------------
 [WELD]
 Name = Weld
