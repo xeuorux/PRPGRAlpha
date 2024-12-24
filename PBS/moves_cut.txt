@@ -107,6 +107,16 @@ Flags = CanProtect,CanMirrorMove
 EffectChance = 10
 Description = The user squeezes the target, trapping and damaging it for three turns.
 #-------------------------------
+[COPYCAT]
+Name = Copycat
+Type = NORMAL
+Category = Status
+Accuracy = 0
+TotalPP = 15
+Target = User
+FunctionCode = Invalid
+Description = The user mimics the move used immediately before it. The move fails if no other move has been used yet.
+#-------------------------------
 [COURTCHANGE]
 Name = Court Change
 Type = NORMAL
@@ -385,6 +395,17 @@ Target = NearOther
 FunctionCode = Invalid
 Flags = CanProtect,CanMirrorMove
 Description = The target is attacked by a kick launched with muscle-packed power.
+#-------------------------------
+[MIMIC]
+Name = Mimic
+Type = NORMAL
+Category = Status
+Accuracy = 0
+TotalPP = 10
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect,CantForce
+Description = The user copies the move last used by the foe. The move can be used until the user is switched out.
 #-------------------------------
 [MINIMIZE]
 Name = Minimize
@@ -825,6 +846,16 @@ Flags = CanProtect,CanMirrorMove
 EffectChance = 30
 Description = The user flies up to raise its Sp. Def by four steps in the first turn, then rams the foe on the second.
 Animation = SKYATTACK
+#-------------------------------
+[MIRRORMOVE]
+Name = Mirror Move
+Type = FLYING
+Category = Status
+Accuracy = 0
+TotalPP = 15
+Target = NearOther
+FunctionCode = Invalid
+Description = The user counters the target by mimicking the target's last move.
 #-------------------------------
 [RAZORWIND]
 Name = Razor Wind

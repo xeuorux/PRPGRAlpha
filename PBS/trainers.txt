@@ -3586,7 +3586,7 @@ Pokemon = TORTERRA,40
 #-------------------------------
 [BOARDER,Lev]
 Pokemon = JYNX,30
-    Moves = FRIGIDJEALOUSY,DEMONSKISS,PSYBEAM,COPYCAT
+    Moves = FRIGIDJEALOUSY,DEMONSKISS,PSYBEAM,DREAMABSORB
     AbilityIndex = 0 # Fascinate
 Pokemon = PELIPPER,30
     Moves = BRINE,WINDTUNNEL,SUPERSONIC,SHOUT
@@ -4328,7 +4328,7 @@ Pokemon = GLACEON,48
     Moves = HALTINGCOLD,CHILL,HYPOTHERMIATE,FRIGIDJEALOUSY
     AbilityIndex = 1 # Brilliant Flurry
 Pokemon = GIGANTEON,48
-    Moves = RETALIATE,COPYCAT,QUICKATTACK,DOUBLEEDGE
+    Moves = RETALIATE,QUICKATTACK,DOUBLEEDGE,HEALBELL
     AbilityIndex = 0 # Ultra Adapted
     Item = SITRUSBERRY
 #-------------------------------
@@ -4700,7 +4700,7 @@ Pokemon = FLAREON,48
     Moves = IGNITE,FIRELASH,INFERNOIMPACT,WORKUP
     AbilityIndex = 1 # Ignition Cycle
 Pokemon = GIGANTEON,48
-    Moves = RETALIATE,COPYCAT,QUICKATTACK,DOUBLEEDGE
+    Moves = RETALIATE,QUICKATTACK,DOUBLEEDGE,HEALBELL
     AbilityIndex = 0 # Ultra Adapted
     Item = AGILITYHERB
 #-------------------------------
@@ -8675,10 +8675,10 @@ Pokemon = HZOROARK,70
 [ARTIFICIALTRAINER,Solitaire]
 Policies = MATCH_LEVEL_CAP
 Pokemon = STOUTLAND,70
-    Moves = MIMIC,ANGELSKISS,CHARM,SLACKOFF
+    Moves = ANGELSKISS,CHARM,SLACKOFF
     AbilityIndex = 1 # Herding
 Pokemon = BLISSEY,70
-    Moves = COPYCAT,NERVEBLOCK,EERIEIMPULSE,SOFTBOILED
+    Moves = NERVEBLOCK,EERIEIMPULSE,SOFTBOILED
     AbilityIndex = 1 # Bliss
 Pokemon = SHUCKLE,70
     Moves = STRUGGLEBUG,POWERSPLIT,GUARDSPLIT,REST

@@ -6837,6 +6837,18 @@ Flags = CanProtect,CanMirrorMove
 Description = The user attempts to humble the target, guaranteeing a critical hit on foes with boosted stats.
 Animation = SPIRITBREAK
 #-------------------------------
+[ILLWISHES]
+Name = Ill Wishes
+Type = FAIRY
+Category = Status
+Accuracy = 0
+TotalPP = 10
+Target = NearOther
+FunctionCode = JinxTarget
+Flags = CanProtect,CanMagicCoat,CanMirrorMove
+Description = The user hopes for bad luck, jinxing the target. Attacks against them crit and pierce protection.
+Animation = MEANLOOK
+#-------------------------------
 [INFINITEFORCE]
 Name = Infinite Force
 Type = FAIRY
@@ -6998,6 +7010,20 @@ FunctionCode = SleepTargetIfBelowHalfHPRaiseUserAtk1
 Flags = CanProtect,CanMirrorMove,Sound
 Description = The target is put to sleep, and the user's Attack is raised. Fails unless the target is at or below half health.
 Animation = SING
+#-------------------------------
+[TRUENAME]
+Name = True Name
+Type = FAIRY
+Category = Special
+Power = 100
+Accuracy = 50
+TotalPP = 5
+Target = NearOther
+FunctionCode = JinxTarget
+Flags = CanProtect,CanMagicCoat,CanMirrorMove
+EffectChance = 100
+Description = The user invokes the target's true name as a fae curse, jinxing them.
+Animation = MEANLOOK
 #-------------------------------
 [WARDPRESS]
 Name = Ward Press

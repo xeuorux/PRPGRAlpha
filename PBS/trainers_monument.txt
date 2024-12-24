@@ -166,7 +166,7 @@ Pokemon = SWAMPERT,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,0,0,20,20
 Pokemon = MISMAGIUS,70
-    Moves = ENCHANTINGSONG,DEATHKNELL,CONFUSERAY,HYPERVOICE
+    Moves = ENCHANTINGSONG,DEATHKNELL,SPELLBIND,HYPERVOICE
     AbilityIndex = 1 # Ear-Splitting
     Item = PRISMATICPLATE
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def

@@ -800,3 +800,27 @@ class PokeBattle_Move_FractureTarget < PokeBattle_Move
         return score
     end
 end
+
+#===============================================================================
+# User jinxes the target.
+#===============================================================================
+class PokeBattle_Move_JinxTarget < PokeBattle_Move
+    def ignoresSubstitute?(_user); return true; end
+
+    def pbFailsAgainstTarget?(user, target, show_message)
+        if target.effectActive?(:Jinx)
+            @battle.pbDisplay(_INTL("But it failed, since #{target.pbThis(true)} is already jinxed!")) if show_message
+            return true
+        end
+        return false
+    end
+
+    def pbEffectAgainstTarget(user, target)
+        target.applyEffect(:Jinx)
+    end
+
+    def getEffectScore(user, target)
+        score = getJinxEffectScore(user, target)
+        return score
+    end
+end

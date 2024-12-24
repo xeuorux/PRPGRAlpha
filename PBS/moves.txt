@@ -137,16 +137,6 @@ Target = NearOther
 FunctionCode = SetUserTypesToResistLastAttack
 Description = The user changes its type to make itself resistant to the type of the attack the opponent used last.
 #-------------------------------
-[COPYCAT]
-Name = Copycat
-Type = NORMAL
-Category = Status
-Accuracy = 0
-TotalPP = 15
-Target = User
-FunctionCode = UseLastMoveUsed
-Description = The user mimics the move used immediately before it. The move fails if no other move has been used yet.
-#-------------------------------
 [COVET]
 Name = Covet
 Type = NORMAL
@@ -606,17 +596,6 @@ Target = User
 FunctionCode = HealUserHalfOfTotalHP
 Flags = CanSnatch
 Description = The user restores its own HP by up to half of its maximum HP.
-#-------------------------------
-[MIMIC]
-Name = Mimic
-Type = NORMAL
-Category = Status
-Accuracy = 0
-TotalPP = 10
-Target = NearOther
-FunctionCode = ReplaceMoveThisBattleWithTargetLastMoveUsed
-Flags = CanProtect,CantForce
-Description = The user copies the move last used by the foe. The move can be used until the user is switched out.
 #-------------------------------
 [MULTIATTACK]
 Name = Multi-Attack
@@ -2018,16 +1997,6 @@ Target = NearOther
 FunctionCode = Basic
 Flags = CanProtect,CanMirrorMove,Wind
 Description = The user whips up a gust of wind to attack the target.
-#-------------------------------
-[MIRRORMOVE]
-Name = Mirror Move
-Type = FLYING
-Category = Status
-Accuracy = 0
-TotalPP = 15
-Target = NearOther
-FunctionCode = UseLastMoveUsedByTarget
-Description = The user counters the target by mimicking the target's last move.
 #-------------------------------
 [OBLIVIONWING]
 Name = Oblivion Wing

@@ -936,7 +936,7 @@ end
 class PokeBattle_AI_MRMIME < PokeBattle_AI_Boss
     def initialize(user, battle)
         super
-        secondMoveEveryTurn(:MIMIC)
+        secondMoveEveryOtherTurn(:ROLEPLAY)
     end
 end
 
