@@ -162,7 +162,7 @@ DisabledInRandomizer = true
 #-------------------------------
 [DEFEAT_MASTER_VANYA_FULL_GENDERLESS_TEAM]
 Name = Gender Schmender
-Description = After being crowned champion, defeat Pokémon Master Vanya in the Tournament Grounds with a full team of genderless Pokémon.
+Description = After being crowned champion, defeat Pokémon Master Vanya with a full team of genderless Pokémon.
 Page = 6
 DisabledInRandomizer = true
 #-------------------------------
