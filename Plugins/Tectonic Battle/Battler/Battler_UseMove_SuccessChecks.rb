@@ -287,7 +287,12 @@ GameData::Move.get(@effects[:GorillaTactics]).name)
     end
 
     def doesProtectionEffectNegateThisMove?(effectDisplayName, move, user, target, protectionIgnoredByAbility, animationName = nil, showMessages = true)
-        if move.canProtectAgainst? && !protectionIgnoredByAbility
+        if target.effectActive?(:Jinxed)
+            if showMessages
+                @battle.pbDisplay(_INTL("{1} is jinxed! {2} failed to protect it!", target.pbThis(true), effectDisplayName))
+            end
+            return false
+        else move.canProtectAgainst? && !protectionIgnoredByAbility
             @battle.pbCommonAnimation(animationName, target) unless animationName.nil?
             @battle.pbDisplay(_INTL("{1} protected {2}!", effectDisplayName, target.pbThis(true))) if showMessages
             if user.boss? && (move.empoweredMove? || AVATARS_REGULAR_ATTACKS_PIERCE_PROTECT)
@@ -311,8 +316,8 @@ GameData::Move.get(@effects[:GorillaTactics]).name)
                 @battle.pbDisplay(_INTL("{1} was ignored, and failed to protect {2}!", effectDisplayName,
 target.pbThis(true)))
             end
+            return false
         end
-        return false
     end
 
     #=============================================================================
