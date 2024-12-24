@@ -704,10 +704,36 @@ def getCurseEffectScore(user, target)
     score += 50 if target.aboveHalfHealth?
 	if user.battle.pbCanSwitch?(target.index)
 	    score += getForceOutEffectScore(user, target) # Encouraging target to switch might be benefical
-	else score += statStepsValueScore(target)
+        score = score * 0.70
+    else
+        score += statStepsValueScore(target)
 	end
     score *= 1.5 if user.hasActiveAbilityAI?(:AGGRAVATE)
-    score = score * 0.70 if user.battle.pbCanSwitch?(target.index)
+    return score
+end
+
+def getFractureEffectScore(user, target)
+    return 0 unless target.hasDamagingAttack?
+    score = 100
+    if user.battle.pbCanSwitch?(target.index)
+	    score += getForceOutEffectScore(user, target) # Encouraging target to switch might be benefical
+        score = score * 0.70
+    else
+        score += statStepsValueScore(target)
+	end
+    return score
+end
+
+def getFractureEffectScore(user, target)
+    score = 50
+    score += 30 if user.hasDamagingAttack?
+    score += 30 if user.canChooseProtect?
+    if user.battle.pbCanSwitch?(target.index)
+	    score += getForceOutEffectScore(user, target) # Encouraging target to switch might be benefical
+        score = score * 0.70
+    else
+        score += statStepsValueScore(target)
+	end
     return score
 end
 
