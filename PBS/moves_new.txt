@@ -1837,6 +1837,20 @@ Flags = CanProtect,CanMirrorMove
 Description = The user smashes its rock-hard head into the target. The user also takes 33% recoil.
 Animation = HEADSMASH
 #-------------------------------
+[BLUNTFORCE]
+Name = Blunt Force
+Type = ROCK
+Category = Physical
+Power = 50
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = FractureTarget
+Flags = CanProtect,CanMirrorMove
+EffectChance = 30
+Description = The user bludgeons the target's arms and legs with a large rock. This has a 50% chance to fracture it.
+Animation = ROCKTOMB
+#-------------------------------
 [CRANIALGUARD]
 Name = Cranial Guard
 Type = ROCK
@@ -1884,6 +1898,18 @@ FunctionCode = Basic
 Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
 Description = The user calls up spikes of diamond. Critical hits twice as often.
 Animation = DIAMONDSTORM
+#-------------------------------
+[EMBRITTLE]
+Name = Embrittle
+Type = ROCK
+Category = Status
+Accuracy = 0
+TotalPP = 10
+Target = NearOther
+FunctionCode = FractureTarget
+Flags = CanProtect,CanMagicCoat,CanMirrorMove
+Description = The user weakens the target's bones, making them fracture. They deal 50% less damage.
+Animation = TARSHOT
 #-------------------------------
 [GLIMMERPULSE]
 Name = Glimmer Pulse
@@ -1987,6 +2013,18 @@ Flags = CanMagicCoat
 Description = The user calls all rocks to join it, summoning sandstorm for five turns and laying a trap of levitating stones around the target.
 Animation = STEALTHROCK
 #-------------------------------
+[MONOLITHDROP]
+Name = Monolith Drop
+Type = ROCK
+Category = Physical
+Power = 100
+Accuracy = 50
+TotalPP = 5
+Target = NearOther
+FunctionCode = FractureTarget
+Flags = CanProtect,CanMirrorMove
+Description = The user drops a single piece of solid bedrock on the target, fracturing them.
+#-------------------------------
 [OMNISHELTER]
 Name = Omnishelter
 Type = ROCK
@@ -2004,14 +2042,14 @@ Animation = WIDEGUARD
 Name = Petrify
 Type = ROCK
 Category = Special
-Power = 70
+Power = 80
 Accuracy = 100
 TotalPP = 12
 Target = NearOther
 FunctionCode = Numb
 Flags = CanProtect,CanMirrorMove
 EffectChance = 50
-Description = The user turns the target into stone. This has a 50% chance to numb it.
+Description = The user afflicts the target by turning their skin into stone. This has a 30% chance to fracture it.
 #-------------------------------
 [PLANETCRACKER]
 Name = Planetcracker
@@ -2024,6 +2062,20 @@ Target = NearOther
 FunctionCode = RecoilHalfOfDamageDealt
 Flags = CanProtect,CanMirrorMove
 Description = The user slams itself into the target with absurd force, taking 50% recoil.
+#-------------------------------
+[ROCKALANCHE]
+Name = Rockalanche
+Type = ROCK
+Category = Physical
+Power = 80
+Accuracy = 100
+TotalPP = 15
+Target = AllNearFoes
+FunctionCode = FractureTarget
+Flags = CanProtect,CanMirrorMove
+EffectChance = 30
+Description = Large boulders are hurled at the foes to inflict damage. This has a 30% chance to fracture it.
+Animation = ROCKSLIDE
 #-------------------------------
 [ROCKAPULT]
 Name = Rockapult
@@ -2070,13 +2122,14 @@ Animation = SMACKDOWN
 Name = Shatter Shot
 Type = ROCK
 Category = Special
-Power = 45
+Power = 50
 Accuracy = 100
-TotalPP = 20
+TotalPP = 15
 Target = NearOther
-FunctionCode = Basic
+FunctionCode = FractureTarget
 Flags = CanProtect,CanMirrorMove
-Description = The user grinds stone into shrapnel and sprays it at the target.
+EffectChance = 30
+Description = The user grinds stone into shrapnel and sprays it at the target. This has a 50% chance to fracture it.
 Animation = SANDATTACK
 #-------------------------------
 [SIEGEBREAKER]
@@ -2105,6 +2158,19 @@ Flags = CanProtect,CanMirrorMove,Sound
 EffectChance = 100
 Description = The user thrums ominously, lowering the target's Attack and Sp. Atk.
 Animation = ECHOEDVOICE
+#-------------------------------
+[SLINGSHOT]
+Name = Sling Shot
+Type = ROCK
+Category = Special
+Power = 45
+Accuracy = 100
+TotalPP = 20
+Target = NearOther
+FunctionCode = Basic
+Flags = CanProtect,CanMirrorMove
+Description = The user carefully lobs a small stone at high speed.
+Animation = ROCKTHROW
 #-------------------------------
 [STARFALL]
 Name = Star Fall
@@ -3307,9 +3373,9 @@ TotalPP = 12
 Target = NearOther
 FunctionCode = Waterlog
 Flags = CanProtect,CanMirrorMove
+EffectChance = 100
 Description = The user drags the target into the water with a heavy anchor. They become waterlogged.
 Animation = ANCHORSHOT
-EffectChance = 100
 #-------------------------------
 [WELD]
 Name = Weld

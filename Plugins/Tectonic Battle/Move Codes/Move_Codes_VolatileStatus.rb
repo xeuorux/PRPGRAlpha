@@ -776,3 +776,27 @@ class PokeBattle_Move_TargetHasHalvedHealing < PokeBattle_Move
         return 0
     end
 end
+
+#===============================================================================
+# User fractures the target.
+#===============================================================================
+class PokeBattle_Move_FractureTarget < PokeBattle_Move
+    def ignoresSubstitute?(_user); return true; end
+
+    def pbFailsAgainstTarget?(user, target, show_message)
+        if target.effectActive?(:Fracture)
+            @battle.pbDisplay(_INTL("But it failed, since #{target.pbThis(true)} is already fractured!")) if show_message
+            return true
+        end
+        return false
+    end
+
+    def pbEffectAgainstTarget(user, target)
+        target.applyEffect(:Fracture)
+    end
+
+    def getEffectScore(user, target)
+        score = getFractureEffectScore(user, target)
+        return score
+    end
+end

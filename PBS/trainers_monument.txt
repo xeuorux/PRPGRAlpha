@@ -344,7 +344,7 @@ Pokemon = WORNET,70
 #-------------------------------
 [POKEMANIAC,Chris]
 Pokemon = MUDSDALE,70
-    Moves = TRAMPLE,SMACKDOWN,STEALTHROCK,ROAR
+    Moves = TRAMPLE,ROCKALANCHE,STEALTHROCK,ROAR
     AbilityIndex = 0 # Iron Heel
     Item = LEFTOVERS
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -1242,7 +1242,7 @@ Pokemon = SERPERIOR,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,10,0,0,10,20
 Pokemon = SNEASLER,70
-    Moves = DIRECLAW,CROSSCHOP,ROCKSLIDE,XSCISSOR
+    Moves = DIRECLAW,CROSSCHOP,ADAMANTINEPRESS,XSCISSOR
     AbilityIndex = 1 # Frustrate
     Item = ROCKGEM
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -2311,7 +2311,7 @@ Pokemon = ARAQUANID,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,20,10,0,20,0
 Pokemon = SNEASLER,70
-    Moves = DIRECLAW,CROSSCHOP,ROCKSLIDE,XSCISSOR
+    Moves = DIRECLAW,CROSSCHOP,ADAMANTINEPRESS,XSCISSOR
     AbilityIndex = 1 # Frustrate
     Item = STRIKEVEST
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -2399,7 +2399,7 @@ Pokemon = BLASFEMMIE,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,20,0,0,20,10
 Pokemon = SNEASLER,70
-    Moves = DIRECLAW,CROSSCHOP,ROCKSLIDE,SWORDSDANCE
+    Moves = DIRECLAW,CROSSCHOP,ADAMANTINEPRESS,SWORDSDANCE
     AbilityIndex = 1 # Frustrate
     Item = POISONGEM
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def

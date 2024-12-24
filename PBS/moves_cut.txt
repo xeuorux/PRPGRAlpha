@@ -1128,6 +1128,19 @@ Description = The user spins a sandstorm around the target, trapping and damagin
 #-------------------------------
 #		ROCK MOVES
 #-------------------------------
+[ROCKSLIDE]
+Name = Rock Slide
+Type = ROCK
+Category = Physical
+Power = 75
+Accuracy = 100
+TotalPP = 10
+Target = AllNearFoes
+FunctionCode = Invalid
+Flags = CanProtect,CanMirrorMove
+EffectChance = 30
+Description = Large boulders are hurled at the foes to inflict damage. It has a 30% chance to cause flinching.
+#-------------------------------
 [ROLLOUT]
 Name = Rollout
 Type = ROCK
@@ -1139,6 +1152,18 @@ Target = NearOther
 FunctionCode = Invalid
 Flags = CanProtect,CanMirrorMove
 Description = The user rolls into the target. Its power doubles if it hits in succession.
+#-------------------------------
+[SMACKDOWN]
+Name = Smack Down
+Type = ROCK
+Category = Physical
+Power = 50
+Accuracy = 100
+TotalPP = 12
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect,CanMirrorMove
+Description = The user throws a stone or projectile to attack. A flying Pokémon will fall to the ground when hit.
 #-------------------------------
 #		BUG MOVES
 #-------------------------------

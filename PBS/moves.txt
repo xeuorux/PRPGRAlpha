@@ -2733,19 +2733,6 @@ Flags = CanProtect,CanMirrorMove
 Description = The user rolls into the target. Its power doubles if it hits in succession.
 Animation = ROLLOUT
 #-------------------------------
-[ROCKSLIDE]
-Name = Rock Slide
-Type = ROCK
-Category = Physical
-Power = 75
-Accuracy = 100
-TotalPP = 10
-Target = AllNearFoes
-FunctionCode = Flinch
-Flags = CanProtect,CanMirrorMove
-EffectChance = 30
-Description = Large boulders are hurled at the foes to inflict damage. It has a 30% chance to cause flinching.
-#-------------------------------
 [ROCKTHROW]
 Name = Rock Throw
 Type = ROCK
@@ -2792,18 +2779,6 @@ TotalPP = 10
 Target = BothSides
 FunctionCode = StartSandstorm8
 Description = Summons sandstorm for eight turns. Damages non-Rock, non-Ground Pokémon every turn.
-#-------------------------------
-[SMACKDOWN]
-Name = Smack Down
-Type = ROCK
-Category = Physical
-Power = 50
-Accuracy = 100
-TotalPP = 12
-Target = NearOther
-FunctionCode = HitsTargetInSkyGroundsTarget
-Flags = CanProtect,CanMirrorMove
-Description = The user throws a stone or projectile to attack. A flying Pokémon will fall to the ground when hit.
 #-------------------------------
 [STEALTHROCK]
 Name = Stealth Rock
