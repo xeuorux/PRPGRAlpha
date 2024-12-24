@@ -374,7 +374,7 @@ Flags = Immutable
 #-------------------------------
 [NOGUARD]
 Name = No Guard
-Description = Ensures attacks by or against the Pokémon land.
+Description = Attacks by or against the Pokémon can't miss.
 #-------------------------------
 [NORMALIZE]
 Name = Normalize
