@@ -101,8 +101,16 @@ class MoveDex_Entry_Scene
 
     def generateLevelUpLearnablesSpeciesList
         @levelUpLearnables = @moveData.level_up_learners.clone
-        @levelUpLearnables.sort_by! { |learningEntry|
-            learningEntry[1]
+        @levelUpLearnables.sort! { |learningEntryA, learningEntryB|
+            if learningEntryA[1] > learningEntryB[1]
+                next 1
+            elsif learningEntryA[1] < learningEntryB[1]
+                next -1
+            else
+                idNumberA = GameData::Species.get(learningEntryA[0]).id_number
+                idNumberB = GameData::Species.get(learningEntryB[0]).id_number
+                next idNumberA <=> idNumberB
+            end
         }
         @levelUpLearnables.reject! { |learningEntry|
             !speciesInfoViewable?(learningEntry[0])
@@ -129,14 +137,8 @@ class MoveDex_Entry_Scene
 
         @currentSpeciesList = [[],[]]
         if newSpeciesList
-            columnCutoff = (newSpeciesList.length / 2.0).ceil
             newSpeciesList.each_with_index do |listEntry, index|
-                if index < columnCutoff
-                    columnIndex = 0
-                else
-                    columnIndex = 1
-                end
-                @currentSpeciesList[columnIndex].push(listEntry)
+                @currentSpeciesList[index % 2].push(listEntry)
             end
         end
     end
@@ -212,6 +214,7 @@ class MoveDex_Entry_Scene
         if @currentSpeciesList[0].empty?
             drawSpeciesColumn(overlay,[_INTL("None")], [], 0)
 		else
+            count = 0
             [0,1].each do |columnIndex|
                 speciesColumn = @currentSpeciesList[columnIndex]
                 next if speciesColumn.empty?
@@ -233,7 +236,10 @@ class MoveDex_Entry_Scene
                     end
                 end
                 drawSpeciesColumn(overlay,speciesLabelList,levelLabelList,columnIndex)
+                
+                count += speciesColumn.length
             end
+            echoln("Level up learners count: #{count}")
 		end
 
         updateSpeciesPageScrollArrows
@@ -253,6 +259,7 @@ class MoveDex_Entry_Scene
         if @currentSpeciesList[0].empty?
             drawSpeciesColumn(overlay,[_INTL("None")], [], 0)
 		else
+            count = 0
             [0,1].each do |columnIndex|
                 speciesColumn = @currentSpeciesList[columnIndex]
                 next if speciesColumn.empty?
@@ -267,7 +274,11 @@ class MoveDex_Entry_Scene
                     end
                 end
                 drawSpeciesColumn(overlay,speciesLabelList, [], columnIndex)
+
+                count += speciesColumn.length
             end
+
+            echoln("Other count: #{count}")
 		end
 
         updateSpeciesPageScrollArrows
