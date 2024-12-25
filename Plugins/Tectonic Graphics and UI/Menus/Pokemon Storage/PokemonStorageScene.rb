@@ -655,8 +655,13 @@ class PokemonStorageScene
         return pbShowCommands(msg, searchMethods)
     end
 
-    def pbChooseSort(msg)
+    def pbChooseBoxSort(msg)
         sortMethods = [_INTL("Cancel"), _INTL("Name"), _INTL("Species"), _INTL("Dex ID"), _INTL("Type"), _INTL("Level")]
+        return pbShowCommands(msg, sortMethods)
+    end
+
+    def pbChooseAllSort(msg)
+        sortMethods = [_INTL("Cancel"), _INTL("Name"), _INTL("Species"), _INTL("Dex ID"), _INTL("Type"), _INTL("Level"), _INTL("Living Dex")]
         return pbShowCommands(msg, sortMethods)
     end
 
