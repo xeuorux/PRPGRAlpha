@@ -490,7 +490,7 @@ Pokemon = TYRUNT,24
     Moves = LASHOUT,GRANITEHEAD,CLASH,DRAGONTAIL
     AbilityIndex = 0 # Wrath Instinct
 Pokemon = WOOBAT,24
-    Moves = HEARTSTAMP,AERIALACE,ANGELSKISS,ECHOLOCATE
+    Moves = HEARTSTAMP,AERIALACE,SWEETKISS,ECHOLOCATE
     AbilityIndex = 0 # Clumsy Kinesis
     Item = SITRUSBERRY,PSYCHICGEM
 #-------------------------------
@@ -567,7 +567,7 @@ Pokemon = HSNEASEL,19
     Moves = KARATECHOP,HONECLAWS,FURYCUTTER,CAUSTICPUNCH
     AbilityIndex = 1 # Frustrate
 Pokemon = SHELLOS,19
-    Moves = MUDSHOT,SPELLBIND,WATERGUN,HARDEN
+    Moves = MUDSHOT,SWEETKISS,WATERGUN,HARDEN
     AbilityIndex = 0 # Fascinate
 #-------------------------------
 [LEADER_Helena,Helena]
@@ -702,7 +702,7 @@ Pokemon = JOLTIK,15
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 9,20,12,9,20,0
 Pokemon = SHELLOS,15
-    Moves = MUDSLING,RECOVER,SPELLBIND,WATERGUN
+    Moves = MUDSLING,RECOVER,SWEETKISS,WATERGUN
     AbilityIndex = 0 # Fascinate
     Item = SITRUSBERRY
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -1054,7 +1054,7 @@ Pokemon = CHANSEY,30
     AbilityIndex = 0 # Serene Grace
     Item = LIGHTCLAY
 Pokemon = SWOOBAT,30
-    Moves = AERIALACE,HEARTSTAMP,ANGELSKISS
+    Moves = AERIALACE,HEARTSTAMP,SWEETKISS
     AbilityIndex = 0 # Clumsy Kinesis
     Item = LUCKHERB,STRENGTHHERB
 Pokemon = DUDUNSPARCE,30
@@ -1073,7 +1073,7 @@ Pokemon = NIDOKING,35
     AbilityIndex = 0 # Sheer Force
     Item = LIFEORB
 Pokemon = NINETALES,35
-    Moves = CRIMSONSTORM,DAZZLINGGLEAM,ANGELSKISS,DISABLE
+    Moves = CRIMSONSTORM,DAZZLINGGLEAM,SWEETKISS,DISABLE
     AbilityIndex = 0 # Cursed Tail
 Pokemon = NOIVERN,35
     Moves = SCOUR,AIRSLASH,SUPERSONIC,GIGADRAIN
@@ -1300,7 +1300,7 @@ Pokemon = HERDIER,27
     Moves = NUMB,CHARM,HOWL,HEADBUTT
     AbilityIndex = 0 # Break Through
 Pokemon = CHANSEY,27
-    Moves = ANGELSKISS,EERIEIMPULSE,MINDLINK,STELLARATE
+    Moves = SWEETKISS,EERIEIMPULSE,MINDLINK,STELLARATE
     AbilityIndex = 0 # Serene Grace
 #-------------------------------
 [PARASOLLADY,Clarissa]
@@ -1688,7 +1688,7 @@ Pokemon = SLURPUFF,70
     AbilityIndex = 0 # Candy Veil
     Item = SITRUSBERRY
 Pokemon = BLISSEY,70
-    Moves = FOLLOWME,ANGELSKISS,LIGHTSCREEN,LIFEDEW
+    Moves = FOLLOWME,SWEETKISS,LIGHTSCREEN,LIFEDEW
     AbilityIndex = 0 # Serene Grace
     Item = ROCKYHELMET
 Pokemon = GASTRODON,70
@@ -2242,7 +2242,7 @@ Pokemon = GOLEM,40
     AbilityIndex = 0 # Unbreakable
     Item = NORMALGEM
 Pokemon = CARBINK,40
-    Moves = FROLIC,SPELLBIND,DIAMONDFORCE,SWEETSELENE
+    Moves = FROLIC,SWEETKISS,DIAMONDFORCE,SWEETSELENE
     AbilityIndex = 0 # Clear Body
     Item = LEFTOVERS
 #-------------------------------
@@ -3011,7 +3011,7 @@ Pokemon = DRAGAPULT,53
     Moves = UTURN,SIXFEETUNDER,DRAGONDARTS,DRAGONDANCE
     AbilityIndex = 0 # Clear Body
 Pokemon = KLEFKI,54
-    Moves = SPELLBIND,SPIKES,GYROBALL,SUGARBALL
+    Moves = SWEETKISS,SPIKES,GYROBALL,SUGARBALL
     AbilityIndex = 0 # Prankster
     Item = LEFTOVERS
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -3270,7 +3270,7 @@ Pokemon = KOMMOO,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,0,15,0,0,15
 Pokemon = MAROMATISSE,70
-    Moves = SPELLBIND,AROMATHERAPY,HEX,FLORALGRAMARYE
+    Moves = SWEETKISS,AROMATHERAPY,HEX,FLORALGRAMARYE
     AbilityIndex = 1 # Uncanny Luck
     Item = LEFTOVERS
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -3601,7 +3601,7 @@ Pokemon = LOPUNNY,30
 #-------------------------------
 [SKIER_F2,Valeriya]
 Pokemon = ALCREMIE,30
-    Moves = TEASE,DRAININGKISS,AROMATHERAPY,SPELLBIND
+    Moves = TEASE,DRAININGKISS,AROMATHERAPY,SWEETKISS
     AbilityIndex = 1 # Hubris
     Item = FAIRYGEM
 Pokemon = DUSCLOPS,30
@@ -3667,7 +3667,7 @@ Pokemon = VOLCARONA,48
     AbilityIndex = 1 # Dawnfall
     Item = LEFTOVERS
 Pokemon = PRIMARINA,47
-    Moves = SPARKLINGARIA,ENCHANTINGSONG,HYPERVOICE,ANGELSKISS
+    Moves = SPARKLINGARIA,ENCHANTINGSONG,HYPERVOICE,SWEETKISS
     AbilityIndex = 0 # Maestro
 Pokemon = ANNIHILAPE,48
     Moves = CROSSCHOP,COLDSHOULDER,BULKUP,KINDLE
@@ -3887,7 +3887,7 @@ Pokemon = FLORGES,53
 #-------------------------------
 [CYCLIST_F2,Lukka]
 Pokemon = BLISSEY,51
-    Moves = SOFTBOILED,RUIN,ANGELSKISS,NERVEBLOCK
+    Moves = SOFTBOILED,RUIN,SWEETKISS,NERVEBLOCK
     AbilityIndex = 0 # Serene Grace
     Item = HIVISJACKET
 Pokemon = CONKELDURR,52
@@ -4264,7 +4264,7 @@ Pokemon = ARCANINE,48
     AbilityIndex = 0 # Intimidate
     Item = ROCKYHELMET
 Pokemon = GASTRODON,48
-    Moves = SILTSURGE,EARTHPOWER,SPELLBIND,RECOVER
+    Moves = SILTSURGE,EARTHPOWER,SWEETKISS,RECOVER
     AbilityIndex = 1 # Water Absorb
 Pokemon = MINIOR,48
     Moves = DIAMONDFORCE,COLDFRONT,STEALTHROCK,COSMICPOWER
@@ -4321,7 +4321,7 @@ Pokemon = ESPEON,48
     Moves = PSYCHIC,DREAMABSORB,CONFUSERAY
     AbilityIndex = 0 # Overthinking
 Pokemon = SYLVEON,48
-    Moves = WARDPRESS,GLAMOURFLASH,ANGELSKISS,PACIFY
+    Moves = WARDPRESS,GLAMOURFLASH,SWEETKISS,PACIFY
     AbilityIndex = 1 # Dragon Slayer
     Item = LEFTOVERS
 Pokemon = GLACEON,48
@@ -8481,7 +8481,7 @@ Pokemon = SIRFETCHD,70
 #-------------------------------
 [HARLEQUIN,Regis]
 Pokemon = PACHIRISU,70
-    Moves = AMPUP,VOLTTACKLE,ANGELSKISS,SUPERFANG
+    Moves = AMPUP,VOLTTACKLE,SWEETKISS,SUPERFANG
     AbilityIndex = 0 # Bad Luck
 Pokemon = DRAMPA,70
     Moves = DRAGONENERGY,HYPERVOICE,SHADOWBALL,BUBBLEBLASTER
@@ -8675,7 +8675,7 @@ Pokemon = HZOROARK,70
 [ARTIFICIALTRAINER,Solitaire]
 Policies = MATCH_LEVEL_CAP
 Pokemon = STOUTLAND,70
-    Moves = ANGELSKISS,CHARM,SLACKOFF
+    Moves = SWEETKISS,CHARM,SLACKOFF
     AbilityIndex = 1 # Herding
 Pokemon = BLISSEY,70
     Moves = NERVEBLOCK,EERIEIMPULSE,SOFTBOILED
@@ -8713,7 +8713,7 @@ Pokemon = DRAGAPULT,70
     Moves = UTURN,CRUELTY,SUCKERPUNCH,PROTECT
     AbilityIndex = 0 # Clear Body
 Pokemon = PACHIRISU,70
-    Moves = NUZZLE,BESTOW,AMPUP,ANGELSKISS
+    Moves = NUZZLE,BESTOW,AMPUP,SWEETKISS
     AbilityIndex = 0 # Bad Luck
     Item = SITRUSBERRY
 #-------------------------------

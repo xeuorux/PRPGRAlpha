@@ -166,7 +166,7 @@ Pokemon = SWAMPERT,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,0,0,20,20
 Pokemon = MISMAGIUS,70
-    Moves = ENCHANTINGSONG,DEATHKNELL,SPELLBIND,HYPERVOICE
+    Moves = ENCHANTINGSONG,DEATHKNELL,SWEETKISS,HYPERVOICE
     AbilityIndex = 1 # Ear-Splitting
     Item = PRISMATICPLATE
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -1008,7 +1008,7 @@ Pokemon = MNINETALES,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,0,20,20,0
 Pokemon = NINETALES,70
-    Moves = ANGELSKISS,WARDPRESS,CRIMSONSTORM,WEATHERBURST
+    Moves = SWEETKISS,WARDPRESS,CRIMSONSTORM,WEATHERBURST
     AbilityIndex = 1 # Feedback
     Item = UTILITYUMBRELLA
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -1961,7 +1961,7 @@ Pokemon = FLORGES,70
 [SWIMMER_M4,Lars]
 Policies = RAIN_TEAM
 Pokemon = KLEFKI,70
-    Moves = RAINSTORM,SPELLBIND,SUGARBALL,DEFOG
+    Moves = RAINSTORM,SWEETKISS,SUGARBALL,DEFOG
     AbilityIndex = 0 # Prankster
     Item = DAMPROCK
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -2393,7 +2393,7 @@ Pokemon = TEAMUJIN,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,0,0,20,20
 Pokemon = BLASFEMMIE,70
-    Moves = SPELLBIND,GLAMOURFLASH,MOONBLAST,RAPIDSPIN
+    Moves = SWEETKISS,GLAMOURFLASH,MOONBLAST,RAPIDSPIN
     AbilityIndex = 1 # Hubris
     Item = LEFTOVERS
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def

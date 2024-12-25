@@ -6656,18 +6656,6 @@ Animation = LIQUIDATION
 #-------------------------------
 #		FAIRY MOVES
 #-------------------------------
-[ANGELSKISS]
-Name = Angel's Kiss
-Type = FAIRY
-Category = Status
-Accuracy = 100
-TotalPP = 10
-Target = NearOther
-FunctionCode = Dizzy
-Flags = CanProtect,CanMagicCoat,CanMirrorMove
-Description = The user kisses the target with a sweet, angelic cuteness that dizzies the target.
-Animation = SWEETKISS
-#-------------------------------
 [BALEFULBOP]
 Name = Baleful Bop
 Type = FAIRY
@@ -7041,7 +7029,7 @@ FunctionCode = JinxTarget
 Flags = CanProtect,CanMagicCoat,CanMirrorMove
 EffectChance = 30
 Description = The user causes nearby objects to fall onto the target. This has a 30% chance of jinxing them.
-Animation = POLTERGEIST
+Animation = POLTERGEIST\
 #-------------------------------
 [TANTRUM]
 Name = Tantrum

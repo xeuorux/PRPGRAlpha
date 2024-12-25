@@ -2572,6 +2572,18 @@ Description = The user boasts of its strength. Power increases the more the user
 #-------------------------------
 #		FAIRY MOVES
 #-------------------------------
+[ANGELSKISS]
+Name = Angel's Kiss
+Type = FAIRY
+Category = Status
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect,CanMagicCoat,CanMirrorMove
+Description = The user kisses the target with a sweet, angelic cuteness that dizzies the target.
+Animation = SWEETKISS
+#-------------------------------
 [CAPTIVATE]
 Name = Captivate
 Type = FAIRY
@@ -2721,14 +2733,3 @@ Target = NearOther
 FunctionCode = Invalid
 Flags = CanProtect,CanMagicCoat,CanMirrorMove
 Description = The user gazes charmingly at the target. The target's Attack is lowered by four steps.
-#-------------------------------
-[SWEETKISS]
-Name = Sweet Kiss
-Type = FAIRY
-Category = Status
-Accuracy = 75
-TotalPP = 10
-Target = NearOther
-FunctionCode = Invalid
-Flags = CanProtect,CanMagicCoat,CanMirrorMove
-Description = The user kisses the target with a sweet, angelic cuteness that causes charm.
