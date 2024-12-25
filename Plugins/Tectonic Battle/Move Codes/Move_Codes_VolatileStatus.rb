@@ -808,7 +808,7 @@ class PokeBattle_Move_JinxTarget < PokeBattle_Move
     def ignoresSubstitute?(_user); return true; end
 
     def pbFailsAgainstTarget?(user, target, show_message)
-        if target.effectActive?(:Jinx)
+        if target.effectActive?(:Jinxed)
             @battle.pbDisplay(_INTL("But it failed, since #{target.pbThis(true)} is already jinxed!")) if show_message
             return true
         end
@@ -816,7 +816,7 @@ class PokeBattle_Move_JinxTarget < PokeBattle_Move
     end
 
     def pbEffectAgainstTarget(user, target)
-        target.applyEffect(:Jinx)
+        target.applyEffect(:Jinxed)
     end
 
     def getEffectScore(user, target)
