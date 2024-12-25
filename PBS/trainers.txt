@@ -42,7 +42,7 @@ Pokemon = MVULPIX,9
 #-------------------------------
 [YOUNGSTER,Harvey]
 Pokemon = LUVDISC,8
-    Moves = WIPEOUT,GLITTERBOMB,CHARM
+    Moves = WIPEOUT,EAGERTICKLING,CHARM
     AbilityIndex = 0 # Slick Surface
 Pokemon = SEEDOT,8
     AbilityIndex = 0 # Air Lock
@@ -394,7 +394,7 @@ Pokemon = TRANQUILL,21
     Moves = FOCUSENERGY,PLUCK,INCISION,SCRATCH
     AbilityIndex = 0 # Deterrent
 Pokemon = GOLDEEN,20
-    Moves = FAIRPLAY,AQUAJET,TEETERDANCE,LEER
+    Moves = FROLIC,AQUAJET,TEETERDANCE,LEER
     AbilityIndex = 1 # Volt Absorb
     Item = WATERGEM
 Pokemon = PRINPLUP,21
@@ -410,7 +410,7 @@ Pokemon = BUIZEL,21
     Moves = QUICKATTACK,FAKEOUT,WIPEOUT,DAZZLE
     AbilityIndex = 1 # Technician
 Pokemon = GROWLITHE,21
-    Moves = FAIRPLAY,FIREFANG,GROWL
+    Moves = FROLIC,FIREFANG,GROWL
     AbilityIndex = 1 # Heart of Justice
 #-------------------------------
 [SOCIALITE,Elizabeth]
@@ -532,7 +532,7 @@ Pokemon = LOUDRED,24
     Moves = SHOUT,VALORBOLT,ROUND,HARSHVOICE
     AbilityIndex = 1 # Loud
 Pokemon = GPONYTA,24
-    Moves = FAIRPLAY,HEARTSTAMP,GROWL,FLATTER
+    Moves = FROLIC,HEARTSTAMP,GROWL,FLATTER
     AbilityIndex = 1 # Heart of Justice
 Pokemon = MACHOKE,24
     Moves = KNOCKOFF,MACHPUNCH,LOWSWEEP,KINDLE
@@ -1043,7 +1043,7 @@ Pokemon = BOLDORE,25
     AbilityIndex = 1 # Unburden
     Item = SITRUSBERRY
 Pokemon = POOCHYENA,25
-    Moves = ROAR,FAIRPLAY,ASSURANCE,SCARYFACE
+    Moves = ROAR,FROLIC,ASSURANCE,SCARYFACE
     AbilityIndex = 0 # Intimidate
     Item = DARKGEM
 #-------------------------------
@@ -1320,7 +1320,7 @@ Pokemon = LAPRAS,28
     Moves = BRINE,ROUND,GALLINGSPIT,SHOUT
     AbilityIndex = 0 # Arctic Ariette
 Pokemon = CARBINK,26
-    Moves = FAIRPLAY,ANCIENTPOWER,WORKUP,SWEETSELENE
+    Moves = FROLIC,ANCIENTPOWER,WORKUP,SWEETSELENE
     AbilityIndex = 0 # Clear Body
 Pokemon = METANG,28
     Moves = MAGNETIZE,BULLETPUNCH,PSYCHOCUT,THUNDERPUNCH
@@ -1461,7 +1461,7 @@ Pokemon = HSLIGGOO,28
     Moves = MAGNETIZE,SHRED,DRAGONCLAW,SLUDGE
     AbilityIndex = 1 # Impetuous
 Pokemon = MPETILIL,28
-    Moves = FROSTBARB,FAIRPLAY,WAVEBREAK,FLATTER
+    Moves = FROSTBARB,FROLIC,WAVEBREAK,FLATTER
     AbilityIndex = 0 # Tangling Hair
     Item = ICEGEM
 Pokemon = SPOINK,28
@@ -1753,7 +1753,7 @@ Pokemon = HYPNO,35
     Moves = DREAMFEAST,WAKEUPSLAP,CONFUSERAY,PACIFY
     AbilityIndex = 0 # Bad Dreams
 Pokemon = ALTARIA,35
-    Moves = DRAGONCLAW,FAIRPLAY,BOREALWIND,DAZZLINGGLEAM
+    Moves = DRAGONCLAW,FROLIC,BOREALWIND,DAZZLINGGLEAM
     AbilityIndex = 0 # Levitate
     Item = SITRUSBERRY
 #-------------------------------
@@ -2242,7 +2242,7 @@ Pokemon = GOLEM,40
     AbilityIndex = 0 # Unbreakable
     Item = NORMALGEM
 Pokemon = CARBINK,40
-    Moves = FAIRPLAY,SPELLBIND,DIAMONDFORCE,SWEETSELENE
+    Moves = FROLIC,SPELLBIND,DIAMONDFORCE,SWEETSELENE
     AbilityIndex = 0 # Clear Body
     Item = LEFTOVERS
 #-------------------------------
@@ -3354,7 +3354,7 @@ Pokemon = GRIMER,30
     AbilityIndex = 0 # Corrosion
     Item = EVIOLITE
 Pokemon = MIGHTYENA,30
-    Moves = ASSURANCE,FAIRPLAY,PLANTDOUBT,MIDNIGHTHUNT
+    Moves = ASSURANCE,FROLIC,PLANTDOUBT,MIDNIGHTHUNT
     AbilityIndex = 0 # Intimidate
 Pokemon = ALTARIA,30
     Moves = ICYWIND,DRAGONCLAW,DAZZLINGGLEAM,BOREALWIND
@@ -3616,7 +3616,7 @@ Pokemon = PINSIR,30
 #-------------------------------
 [BURGLAR,Barret]
 Pokemon = DUDUNSPARCE,26
-    Moves = DUSTDEVIL,BOREALWIND,BALEFULBOP
+    Moves = DUSTDEVIL,BOREALWIND,FOOL
     AbilityIndex = 0 # Serene Grace
 Pokemon = SLOWPOKE,26
     Moves = PSYCHOCUT,SLACKOFF,WAVEBREAK,DISABLE
@@ -4679,7 +4679,7 @@ Pokemon = PYROAR,63
 [ABSOL,Absol]
 Pokemon = ABSOL,20
     Gender = female
-    Moves = FAIRPLAY,PLANTDOUBT,LIFEDEW,TAUNT
+    Moves = FROLIC,PLANTDOUBT,LIFEDEW,TAUNT
     AbilityIndex = 1 # Vengeance
     Item = SITRUSBERRY
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -4710,7 +4710,7 @@ Pokemon = BEHEEYEM,56
     AbilityIndex = 1 # Puzzling
     Item = REINFORCINGROD
 Pokemon = ABSOLUS,57
-    Moves = INFINITEFORCE,DARKALLURE,ENCHANTINGSONG,ICEBEAM
+    Moves = INFINITEFORCE,DARKALLURE,SUPERSTITION,ICEBEAM
     AbilityIndex = 1 # Vengeance
 Pokemon = EMPOLEON,58
     Moves = HARBORBREAKER,FLASHCANNON,BRAVEBIRD,AQUAJET

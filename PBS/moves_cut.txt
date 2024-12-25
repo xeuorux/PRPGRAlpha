@@ -2583,6 +2583,19 @@ FunctionCode = Invalid
 Flags = CanProtect,CanMagicCoat,CanMirrorMove
 Description = The target is charmed into harshly lowering its Sp. Atk stat.
 #-------------------------------
+[FAIRPLAY]
+Name = Fair Play
+Type = FAIRY
+Category = Physical
+Power = 65
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect,CanMirrorMove,Blade
+Description = The user attacks the target with just force. Guaranteed critical hit on foes with boosted stats.
+Animation = PLAYROUGH
+#-------------------------------
 [FAIRYTERRAIN]
 Name = Fairy Terrain
 Type = FAIRY

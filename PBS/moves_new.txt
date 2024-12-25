@@ -5101,7 +5101,7 @@ TotalPP = 3
 Target = NearOther
 FunctionCode = SleepTargetUserLosesHalfMaxHP
 Flags = CanProtect,CanMagicCoat,CanMirrorMove
-Description = By sacrificing half its total HP, the user jinxes the target with a kiss, making it fall asleep.
+Description = By sacrificing half its total HP, the user makes the target fall asleep.
 Animation = LOVELYKISS
 #-------------------------------
 [DISCOVEREDPOWER]
@@ -6760,19 +6760,6 @@ Flags = CanMirrorMove,Sound
 Description = An enchanting outcry. This attack never misses and skips protections.
 Animation = SING
 #-------------------------------
-[FAIRPLAY]
-Name = Fair Play
-Type = FAIRY
-Category = Physical
-Power = 65
-Accuracy = 100
-TotalPP = 15
-Target = NearOther
-FunctionCode = CritsAgainstRaisedStats
-Flags = CanProtect,CanMirrorMove,Blade
-Description = The user attacks the target with just force. Guaranteed critical hit on foes with boosted stats.
-Animation = PLAYROUGH
-#-------------------------------
 [FLORALGRAMARYE]
 Name = Floral Gramarye
 Type = FAIRY
@@ -6783,6 +6770,34 @@ Target = User
 FunctionCode = StartAllBattlersHealEightOfMaxHPEachTurn5
 Description = A patch of medicinal flowers sprouts across the battlefield. This heals every Pokémon for 1/8th HP each turn for five turns.
 Animation = GRASSYTERRAIN
+#-------------------------------
+[FOOL]
+Name = Fool
+Type = FAIRY
+Category = Special
+Power = 50
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = JinxTarget
+Flags = CanProtect,CanMagicCoat,CanMirrorMove
+EffectChance = 50
+Description = The user causes the target to trip and fall. This has a 50% chance of jinxing them.
+Animation = PRANK
+#-------------------------------
+[FROLIC]
+Name = Frolic
+Type = FAIRY
+Category = Physical
+Power = 60
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = LowerTargetAtk1
+Flags = CanProtect,CanMirrorMove
+EffectChance = 50
+Description = The user plays with the target with unneccessary force. It has a 50% chance to lower Attack.
+Animation = PLAYROUGH
 #-------------------------------
 [GLAMOURFLASH]
 Name = Glamour Flash
@@ -6887,6 +6902,34 @@ Flags = CanSnatch
 Description = The user doubles its critical strike chance and raises its Sp. Atk and Sp. Def by two steps each.
 Animation = FOCUSENERGY
 #-------------------------------
+[MISADVENTURE]
+Name = Misadventure
+Type = FAIRY
+Category = Physical
+Power = 80
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = JinxTarget
+Flags = CanProtect,CanMagicCoat,CanMirrorMove
+EffectChance = 30
+Description = The user causes an accident, damaging the target. This has a 30% chance of jinxing them.
+Animation = SPIRITBREAK
+#-------------------------------
+[MISHAP]
+Name = Mishap
+Type = FAIRY
+Category = Physical
+Power = 50
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = JinxTarget
+Flags = CanProtect,CanMagicCoat,CanMirrorMove
+EffectChance = 50
+Description = The user causes the target to trip and fall. This has a 50% chance of jinxing them.
+Animation = LOWKICK
+#-------------------------------
 [MISTBURST]
 Name = Mist Burst
 Type = FAIRY
@@ -6985,6 +7028,20 @@ FunctionCode = ScalesSlowerThanTarget
 Flags = CanProtect,CanMirrorMove
 Description = The user spins sugar into a ball launched at the target. The slower the user, the greater the damage.
 Animation = GYROBALL
+#-------------------------------
+[SUPERSTITION]
+Name = Superstition
+Type = FAIRY
+Category = Special
+Power = 80
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = JinxTarget
+Flags = CanProtect,CanMagicCoat,CanMirrorMove
+EffectChance = 30
+Description = The user causes nearby objects to fall onto the target. This has a 30% chance of jinxing them.
+Animation = MEANLOOK
 #-------------------------------
 [TANTRUM]
 Name = Tantrum

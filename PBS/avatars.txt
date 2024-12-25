@@ -301,7 +301,7 @@ Item = WISEGLASSES
 #-------------------------------
 [LINOONE]
 Ability = GLUTTONY
-Moves1 = HEADBUTT,FAIRPLAY,COVET,PRIMEVALWATERLOG
+Moves1 = HEADBUTT,FROLIC,COVET,PRIMEVALWATERLOG
 Moves2 = WAVEBREAK,COVET
 HPMult = 5.0
 #-------------------------------
