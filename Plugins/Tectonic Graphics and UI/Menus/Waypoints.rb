@@ -156,6 +156,7 @@ class WaypointsTracker
 				end
 				transferPlayerToEvent(waypointInfo,Up,mapID,[0,1])
 			end
+			pbSEPlay("Anim/PRSFX- Teleport",100,100)
 			$scene.transfer_player
 			$game_map.autoplay
 			$game_map.refresh
