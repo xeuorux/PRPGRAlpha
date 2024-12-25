@@ -6782,8 +6782,8 @@ Target = NearOther
 FunctionCode = JinxTarget
 Flags = CanProtect,CanMagicCoat,CanMirrorMove
 EffectChance = 50
-Description = The user causes the target to trip and fall. This has a 50% chance of jinxing them.
-Animation = PRANK
+Description = The user makes a fool out of the target. This has a 50% chance of jinxing them.
+Animation = FAKEOUT
 #-------------------------------
 [FROLIC]
 Name = Frolic
@@ -6914,7 +6914,7 @@ FunctionCode = JinxTarget
 Flags = CanProtect,CanMagicCoat,CanMirrorMove
 EffectChance = 30
 Description = The user causes an accident, damaging the target. This has a 30% chance of jinxing them.
-Animation = SPIRITBREAK
+Animation = LOWSWEEP
 #-------------------------------
 [MISHAP]
 Name = Mishap
@@ -7041,7 +7041,7 @@ FunctionCode = JinxTarget
 Flags = CanProtect,CanMagicCoat,CanMirrorMove
 EffectChance = 30
 Description = The user causes nearby objects to fall onto the target. This has a 30% chance of jinxing them.
-Animation = MEANLOOK
+Animation = POLTERGEIST
 #-------------------------------
 [TANTRUM]
 Name = Tantrum
