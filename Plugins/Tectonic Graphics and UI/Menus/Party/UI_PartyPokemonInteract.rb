@@ -78,10 +78,10 @@ class TilingCardsPokemonMenu_Scene < TilingCardsMenu_Scene
                   :MASTERDEX => {
                       :label => _INTL("MasterDex"),
                       :active_proc => proc do
-                          $Trainer.has_pokedex
+                          $Trainer.has_pokedex || $DEBUG
                       end,
                       :press_proc => proc do |_scene|
-                          openSingleDexScreen(@pkmn)
+                            openPartyDexScreen(@pkmn,@pkmnid)
                       end,
                   },
                   :SEND_PC => {

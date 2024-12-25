@@ -20,6 +20,28 @@ def openSingleDexScreen(pokemon)
 end
 alias speciesEntry openSingleDexScreen
 
+def openPartyDexScreen(pokemon,index)
+	if pokemon.respond_to?('species')
+		$Trainer.pokedex.register_last_seen(pokemon)
+		species = pokemon.species
+	else
+		speciesData = GameData::Species.get(pokemon)
+		species = speciesData.species
+		$Trainer.pokedex.set_last_form_seen(speciesData.species, 0, speciesData.form)
+	end
+	ret = nil
+	pbFadeOutIn {
+		scene = PokemonPokedexInfo_Scene.new
+		screen = PokemonPokedexInfoScreen.new(scene)
+		ret = screen.pbStartSceneParty(index)
+	}
+	if ret.is_a?(Symbol)
+		echoln("Opening single dex screen from hyperlink to: #{ret}")
+		openSingleDexScreen(ret)
+	end
+end
+alias speciesEntry openSingleDexScreen
+
 def unlockDex(showMessage = false)
 	$Trainer.has_pokedex = true
   	$Trainer.pokedex.unlock(-1)
