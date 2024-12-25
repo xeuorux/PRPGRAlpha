@@ -1,5 +1,5 @@
 #########################################
-# Status condition abilities
+# Poison abilities
 #########################################
 
 BattleHandlers::UserAbilityOnHit.add(:POISONTOUCH,
@@ -16,62 +16,9 @@ BattleHandlers::UserAbilityOnHit.add(:INTOXICATE,
   }
 )
 
-BattleHandlers::UserAbilityOnHit.add(:CHRONICCOLD,
-  proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
-    next unless move.physicalMove?
-    randomStatusProcUserAbility(ability, :FROSTBITE, 30, user, target, move, battle, aiCheck, aiNumHits)
-  }
-)
-
-BattleHandlers::UserAbilityOnHit.add(:CHILLOUT,
-  proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
-    next unless move.specialMove?
-    randomStatusProcUserAbility(ability, :FROSTBITE, 30, user, target, move, battle, aiCheck, aiNumHits)
-  }
-)
-
-BattleHandlers::UserAbilityOnHit.add(:NUMBINGTOUCH,
-  proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
-    next unless move.physicalMove?
-    randomStatusProcUserAbility(ability, :NUMB, 30, user, target, move, battle, aiCheck, aiNumHits)
-  }
-)
-
-BattleHandlers::UserAbilityOnHit.add(:NERVENUMBER,
-  proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
-    next unless move.specialMove?
-    randomStatusProcUserAbility(ability, :NUMB, 30, user, target, move, battle, aiCheck, aiNumHits)
-  }
-)
-
-BattleHandlers::UserAbilityOnHit.add(:STAGGERINGSLAPS,
-  proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
-    next unless move.physicalMove?
-    randomStatusProcUserAbility(ability, :DIZZY, 30, user, target, move, battle, aiCheck, aiNumHits)
-  }
-)
-
-BattleHandlers::UserAbilityOnHit.add(:BRAINSCRAMBLE,
-  proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
-    next unless move.specialMove?
-    randomStatusProcUserAbility(ability, :DIZZY, 30, user, target, move, battle, aiCheck, aiNumHits)
-  }
-)
-
-BattleHandlers::UserAbilityOnHit.add(:PREDATION,
-  proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
-    next unless move.physicalMove?
-    randomStatusProcUserAbility(ability, :LEECHED, 30, user, target, move, battle, aiCheck, aiNumHits)
-  }
-)
-
-BattleHandlers::UserAbilityOnHit.add(:SEEDSOWING,
-  proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
-    next unless move.specialMove?
-    randomStatusProcUserAbility(ability, :LEECHED, 30, user, target, move, battle, aiCheck, aiNumHits)
-  }
-)
-
+#########################################
+# Burn abilities
+#########################################
 BattleHandlers::UserAbilityOnHit.add(:BURNSKILL,
   proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
     next unless move.specialMove?
@@ -86,17 +33,10 @@ BattleHandlers::UserAbilityOnHit.add(:BURNOUT,
   }
 )
 
-BattleHandlers::UserAbilityOnHit.add(:FROSTWINGS,
+BattleHandlers::UserAbilityOnHit.add(:DAWNFALL,
   proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
-    next unless move.calcType == :FLYING
-    randomStatusProcUserAbility(ability, :FROSTBITE, 40, user, target, move, battle, aiCheck, aiNumHits)
-  }
-)
-
-BattleHandlers::UserAbilityOnHit.add(:SHOCKWINGS,
-  proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
-    next unless move.calcType == :FLYING  
-    randomStatusProcUserAbility(ability, :NUMB, 40, user, target, move, battle, aiCheck, aiNumHits)
+    next unless user.firstTurn?
+    randomStatusProcUserAbility(ability, :BURN, 100, user, target, move, battle, aiCheck, aiNumHits)
   }
 )
 
@@ -107,10 +47,20 @@ BattleHandlers::UserAbilityOnHit.add(:FLAMEWINGS,
   }
 )
 
-BattleHandlers::UserAbilityOnHit.add(:DAWNFALL,
+#########################################
+# Frostbite abilities
+#########################################
+BattleHandlers::UserAbilityOnHit.add(:CHRONICCOLD,
   proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
-    next unless user.firstTurn?
-    randomStatusProcUserAbility(ability, :BURN, 100, user, target, move, battle, aiCheck, aiNumHits)
+    next unless move.physicalMove?
+    randomStatusProcUserAbility(ability, :FROSTBITE, 30, user, target, move, battle, aiCheck, aiNumHits)
+  }
+)
+
+BattleHandlers::UserAbilityOnHit.add(:CHILLOUT,
+  proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
+    next unless move.specialMove?
+    randomStatusProcUserAbility(ability, :FROSTBITE, 30, user, target, move, battle, aiCheck, aiNumHits)
   }
 )
 
@@ -118,6 +68,88 @@ BattleHandlers::UserAbilityOnHit.add(:FLASHFREEZE,
   proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
     next unless user.firstTurn?
     randomStatusProcUserAbility(ability, :FROSTBITE, 100, user, target, move, battle, aiCheck, aiNumHits)
+  }
+)
+
+BattleHandlers::UserAbilityOnHit.add(:FROSTWINGS,
+  proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
+    next unless move.calcType == :FLYING
+    randomStatusProcUserAbility(ability, :FROSTBITE, 40, user, target, move, battle, aiCheck, aiNumHits)
+  }
+)
+
+#########################################
+# Numb abilities
+#########################################
+BattleHandlers::UserAbilityOnHit.add(:NUMBINGTOUCH,
+  proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
+    next unless move.physicalMove?
+    randomStatusProcUserAbility(ability, :NUMB, 30, user, target, move, battle, aiCheck, aiNumHits)
+  }
+)
+
+BattleHandlers::UserAbilityOnHit.add(:NERVENUMBER,
+  proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
+    next unless move.specialMove?
+    randomStatusProcUserAbility(ability, :NUMB, 30, user, target, move, battle, aiCheck, aiNumHits)
+  }
+)
+
+BattleHandlers::UserAbilityOnHit.add(:SHOCKWINGS,
+  proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
+    next unless move.calcType == :FLYING  
+    randomStatusProcUserAbility(ability, :NUMB, 40, user, target, move, battle, aiCheck, aiNumHits)
+  }
+)
+
+#########################################
+# Waterlog abilities
+#########################################
+BattleHandlers::UserAbilityOnHit.add(:NUMBINGTOUCH,
+  proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
+    next unless move.physicalMove?
+    randomStatusProcUserAbility(ability, :NUMB, 30, user, target, move, battle, aiCheck, aiNumHits)
+  }
+)
+
+BattleHandlers::UserAbilityOnHit.add(:NERVENUMBER,
+  proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
+    next unless move.specialMove?
+    randomStatusProcUserAbility(ability, :NUMB, 30, user, target, move, battle, aiCheck, aiNumHits)
+  }
+)
+
+#########################################
+# Dizzy abilities
+#########################################
+BattleHandlers::UserAbilityOnHit.add(:STAGGERINGSLAPS,
+  proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
+    next unless move.physicalMove?
+    randomStatusProcUserAbility(ability, :DIZZY, 30, user, target, move, battle, aiCheck, aiNumHits)
+  }
+)
+
+BattleHandlers::UserAbilityOnHit.add(:BRAINSCRAMBLE,
+  proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
+    next unless move.specialMove?
+    randomStatusProcUserAbility(ability, :DIZZY, 30, user, target, move, battle, aiCheck, aiNumHits)
+  }
+)
+
+#########################################
+# Leech abilities
+#########################################
+BattleHandlers::UserAbilityOnHit.add(:PREDATION,
+  proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
+    next unless move.physicalMove?
+    randomStatusProcUserAbility(ability, :LEECHED, 30, user, target, move, battle, aiCheck, aiNumHits)
+  }
+)
+
+BattleHandlers::UserAbilityOnHit.add(:SEEDSOWING,
+  proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
+    next unless move.specialMove?
+    randomStatusProcUserAbility(ability, :LEECHED, 30, user, target, move, battle, aiCheck, aiNumHits)
   }
 )
 
