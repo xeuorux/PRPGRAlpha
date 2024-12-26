@@ -2733,3 +2733,15 @@ Target = NearOther
 FunctionCode = Invalid
 Flags = CanProtect,CanMagicCoat,CanMirrorMove
 Description = The user gazes charmingly at the target. The target's Attack is lowered by four steps.
+#-------------------------------
+[SPELLBIND]
+Name = Spellbind
+Type = FAIRY
+Category = Status
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect,CanMagicCoat,CanMirrorMove
+Description = Dizzies the target by putting them under a magical spell.
+Animation = CHARM
