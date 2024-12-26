@@ -1544,6 +1544,31 @@ class Pokemon
             return @poke_ball
         end
     end
+
+    def switchBall
+        pbMessage(_INTL("Choose the Poké Ball to put {1} into.",name))
+        pbChoosePokeball(1)
+        itemID = pbGet(1)
+        currentBallName = getItemName(poke_ball)
+        unless itemID == :NONE
+            newBallName = getItemName(itemID)
+            if GameData::Item.get(itemID).no_ball_swap?
+                pbMessage(_INTL("A {1} is too special to swap {2} into.",newBallName,name))
+            else
+                pbMessage(_INTL("You remove {1} from the {2}, and throw it away.",name,currentBallName))
+                if itemID == :BALLLAUNCHER
+                    pbMessage(_INTL("You bring out the {1}, and launch a ball at {2}!",newBallName,name))
+                else
+                    pbMessage(_INTL("You bring out a {1}, and put {2} into it!",newBallName,name))
+                    pbDeleteItem(itemID)
+                end
+                pbSEPlay("Battle catch click")
+                @poke_ball = itemID
+            end
+        else
+            pbMessage(_INTL("You decide to keep {1} in its {2}.",name,currentBallName))
+        end
+    end
 end
 
 def hash32Bit(item)

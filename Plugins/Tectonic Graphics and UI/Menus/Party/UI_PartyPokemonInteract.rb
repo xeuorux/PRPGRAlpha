@@ -216,11 +216,13 @@ existingIndex)
     def modifyCommandMenu
         commands   = []
         cmdRename  = -1
+        cmdSwapPokeBall = -1
         cmdEvolve  = -1
         cmdStyle = -1
 
         # Build the commands
         commands[cmdRename = commands.length]       = _INTL("Rename")
+        commands[cmdSwapPokeBall = commands.length]   = _INTL("Swap Ball")
         commands[cmdStyle = commands.length]        = _INTL("Set Style") if pbHasItem?(:STYLINGKIT)
         newspecies = @pkmn.check_evolution_on_level_up(false)
         commands[cmdEvolve = commands.length]       = _INTL("Evolve") if newspecies
@@ -235,6 +237,8 @@ existingIndex)
             else
                 @pkmn.name = pbGet(5)
             end
+        elsif cmdSwapPokeBall >= 0 && modifyCommand == cmdSwapPokeBall
+			@pkmn.switchBall
         elsif cmdEvolve >= 0 && modifyCommand == cmdEvolve
             newspecies = @pkmn.check_evolution_on_level_up(true)
             return false if newspecies.nil?

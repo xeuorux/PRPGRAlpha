@@ -181,6 +181,10 @@ module GameData
         return @flags.include?("SnagBall")
       end
 
+      def no_ball_swap?
+        return @flags.include?("NoBallSwap")
+      end
+
       def is_mail?
         return @flags.include?("Mail")
       end

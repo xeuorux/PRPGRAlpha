@@ -1498,7 +1498,7 @@ NamePlural = Master Balls
 Pocket = 3
 Price = 0
 BattleUse = OnFoe
-Flags = PokeBall,SnagBall
+Flags = PokeBall,SnagBall,NoBallSwap
 Description = The best Ball with the ultimate level of performance. It will catch any wild Pokémon without fail.
 #-------------------------------
 [RADIANTBALL]
@@ -1507,7 +1507,7 @@ NamePlural = Radiant Balls
 Pocket = 3
 Price = 0
 BattleUse = OnFoe
-Flags = PokeBall,SnagBall
+Flags = PokeBall,SnagBall,NoBallSwap
 Description = A ball with a mythical quality. It will catch any wild Pokémon without fail, and turn that Pokémon shiny.
 #-------------------------------
 [ULTRABALL]
@@ -1624,7 +1624,7 @@ NamePlural = Cherish Balls
 Pocket = 3
 Price = 800
 BattleUse = OnFoe
-Flags = PokeBall,SnagBall,SkipPocketMessage
+Flags = PokeBall,SnagBall,SkipPocketMessage,NoBallSwap
 Description = A quite rare Poké Ball that has been specially crafted to commemorate an occasion of some sort.
 #-------------------------------
 [FRIENDBALL]
@@ -1651,7 +1651,7 @@ NamePlural = Beast Balls
 Pocket = 3
 Price = 1000
 BattleUse = OnFoe
-Flags = PokeBall,SnagBall,SkipPocketMessage
+Flags = PokeBall,SnagBall,SkipPocketMessage,NoBallSwap
 Description = A special Poké Ball designed to catch Ultra Beasts. It has a low success rate for catching others.
 #-------------------------------
 [SLICEBALL]
@@ -1696,7 +1696,7 @@ NamePlural = Royal Balls
 Pocket = 3
 Price = 1000
 BattleUse = OnFoe
-Flags = PokeBall,SnagBall,SkipPocketMessage
+Flags = PokeBall,SnagBall,SkipPocketMessage,NoBallSwap
 Description = A ball whose striking appearance makes it popular despite its poor performance.
 #-------------------------------
 [CHERIBERRY]
