@@ -307,7 +307,7 @@ Moves2 = WAVEBREAK,COVET
 Ability = ADAPTED
 Moves1 = MEGADRAIN,POISONIVY,ACID,PRIMEVALECLIPSE
 Moves2 = PSYBEAM,SLUDGEWAVE
-HPMult = 4.0
+HPMult = 5.0
 #-------------------------------
 [ELECTRODE]
 Ability = BUNKERDOWN
