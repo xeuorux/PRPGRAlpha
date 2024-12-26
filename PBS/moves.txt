@@ -7049,7 +7049,7 @@ EffectChance = 30
 Description = The user attacks the target by emitting steam. It has a 30% chance to dizzy.
 #-------------------------------
 [SWEETKISS]
-Name = Sweet
+Name = Sweet Kiss
 Type = FAIRY
 Category = Status
 Accuracy = 100
