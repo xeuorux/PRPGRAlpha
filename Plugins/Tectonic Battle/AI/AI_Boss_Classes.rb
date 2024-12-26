@@ -766,6 +766,19 @@ class PokeBattle_AI_KLANG < PokeBattle_AI_Boss
     def initialize(user, battle)
         super
         secondMoveEveryTurn(:METALSOUND)
+
+        @useMovesIFF.push(proc { |move, user, battle|
+            if move.type == :ELECTRIC
+                if user.effectActive?(:Charge)
+                    next 1
+                else
+                    next -1
+                end
+            end
+        })
+
+        @wholeRound.push(:DISCHARGE)
+        @wholeRound.push(:VOLTTACKLE)
     end
 end
 
