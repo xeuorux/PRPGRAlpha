@@ -302,7 +302,6 @@ Item = WISEGLASSES
 Ability = GLUTTONY
 Moves1 = HEADBUTT,FROLIC,COVET,PRIMEVALWATERLOG
 Moves2 = WAVEBREAK,COVET
-HPMult = 5.0
 #-------------------------------
 [VILEPLUME]
 Ability = ADAPTED
