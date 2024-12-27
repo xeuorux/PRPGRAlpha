@@ -315,7 +315,9 @@ sp.form) && !Settings::DEX_SHOWS_ALL_FORMS
                 end
                 drawFormattedTextEx(overlay, abilityTextX, ability1Y, 450, abilityNameText, abilityNameColor,
               abilityNameShadow)
-                drawTextEx(overlay, abilityTextX, ability1Y + 32, 450, 3, ability1.description, base, shadow)
+
+                ability1Description = addDescriptionKeywordHighlighting(ability1.description)
+                drawFormattedTextEx(overlay, abilityTextX, ability1Y + 32, 450, ability1Description, base, shadow)
             else
                 drawTextEx(overlay, abilityTextX, 128, 450, 1, _INTL("None"), base, shadow)
             end
@@ -334,7 +336,9 @@ sp.form) && !Settings::DEX_SHOWS_ALL_FORMS
                 end
                 drawFormattedTextEx(overlay, abilityTextX, ability2Y, 450, abilityNameText, abilityNameColor,
               abilityNameShadow)
-                drawTextEx(overlay, abilityTextX, ability2Y + 32, 450, 3, ability2.description, base, shadow)
+
+                ability2Description = addDescriptionKeywordHighlighting(ability2.description)
+                drawFormattedTextEx(overlay, abilityTextX, ability2Y + 32, 450, ability2Description, base, shadow)
             else
                 drawTextEx(overlay, abilityTextX, ability2Y, 450, 1, _INTL("None"), base, shadow)
             end
