@@ -177,7 +177,7 @@ Description = Its attacks are critical against frostbitten targets.
 #-------------------------------
 [BITTERCOLD]
 Name = Bitter Cold
-Description = Causes hail to deal double damage and increase Defense of Ice types by 2.0x instead of 1.5x.
+Description = Causes hail to deal double damage and increase Defense of Ice-types by 2.0x instead of 1.5x.
 Flags = HailSynergy
 #-------------------------------
 [BIZARRE]
@@ -979,7 +979,7 @@ Description = Boosts the power of kicking moves by 30%.
 #-------------------------------
 [IRONSTORM]
 Name = Iron Storm
-Description = Causes sandstorm to deal double damage and increase Sp. Def of Rock types by 2.0x instead of 1.5x.
+Description = Causes sandstorm to deal double damage and increase Sp. Def of Rock-types by 2.0x instead of 1.5x.
 Flags = SandstormSynergy
 #-------------------------------
 [IRREFUTABLE]
