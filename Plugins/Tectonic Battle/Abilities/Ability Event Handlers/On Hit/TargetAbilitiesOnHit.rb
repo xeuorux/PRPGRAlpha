@@ -365,7 +365,7 @@ BattleHandlers::TargetAbilityOnHit.add(:LOUDSLEEPER,
 )
 
 #########################################
-# Status inducing abilities
+# Numb inducing abilities
 #########################################
 
 BattleHandlers::TargetAbilityOnHit.add(:STATIC,
@@ -382,6 +382,9 @@ BattleHandlers::TargetAbilityOnHit.add(:PETRIFYING,
     }
 )
 
+#########################################
+# Poison inducing abilities
+#########################################
 BattleHandlers::TargetAbilityOnHit.add(:POISONPOINT,
     proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
         next unless move.physicalMove?
@@ -396,6 +399,33 @@ BattleHandlers::TargetAbilityOnHit.add(:POISONPUNISH,
     }
 )
 
+#########################################
+# Burn inducing abilities
+#########################################
+BattleHandlers::TargetAbilityOnHit.add(:FLAMEBODY,
+    proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
+        next unless move.physicalMove?
+        randomStatusProcTargetAbility(ability, :BURN, 30, user, target, move, battle, aiCheck, aiNumHits)
+    }
+)
+
+BattleHandlers::TargetAbilityOnHit.add(:FIERYSPIRIT,
+    proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
+        next unless move.specialMove?
+        randomStatusProcTargetAbility(ability, :BURN, 30, user, target, move, battle, aiCheck, aiNumHits)
+    }
+)
+
+#########################################
+# Frostbite inducing abilities
+#########################################
+BattleHandlers::TargetAbilityOnHit.add(:CHILLEDBODY,
+    proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
+        next unless move.physicalMove?
+        randomStatusProcTargetAbility(ability, :FROSTBITE, 30, user, target, move, battle, aiCheck, aiNumHits)
+    }
+)
+
 BattleHandlers::TargetAbilityOnHit.add(:SUDDENCHILL,
     proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
         next unless move.specialMove?
@@ -403,10 +433,13 @@ BattleHandlers::TargetAbilityOnHit.add(:SUDDENCHILL,
     }
 )
 
-BattleHandlers::TargetAbilityOnHit.add(:CHILLEDBODY,
+#########################################
+# Dizzy inducing abilities
+#########################################
+BattleHandlers::TargetAbilityOnHit.add(:DISORIENT,
     proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
         next unless move.physicalMove?
-        randomStatusProcTargetAbility(ability, :FROSTBITE, 30, user, target, move, battle, aiCheck, aiNumHits)
+        randomStatusProcTargetAbility(ability, :DIZZY, 30, user, target, move, battle, aiCheck, aiNumHits)
     }
 )
 
@@ -417,13 +450,9 @@ BattleHandlers::TargetAbilityOnHit.add(:BEGUILING,
     }
 )
 
-BattleHandlers::TargetAbilityOnHit.add(:DISORIENT,
-    proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
-        next unless move.physicalMove?
-        randomStatusProcTargetAbility(ability, :DIZZY, 30, user, target, move, battle, aiCheck, aiNumHits)
-    }
-)
-
+#########################################
+# Leech inducing abilities
+#########################################
 BattleHandlers::TargetAbilityOnHit.add(:KELPLINK,
     proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
         next unless move.physicalMove?
@@ -438,17 +467,20 @@ BattleHandlers::TargetAbilityOnHit.add(:PUNISHER,
     }
 )
 
-BattleHandlers::TargetAbilityOnHit.add(:FLAMEBODY,
+#########################################
+# Waterlog inducing abilities
+#########################################
+BattleHandlers::TargetAbilityOnHit.add(:SOPPING,
     proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
         next unless move.physicalMove?
-        randomStatusProcTargetAbility(ability, :BURN, 30, user, target, move, battle, aiCheck, aiNumHits)
+        randomStatusProcTargetAbility(ability, :WATERLOG, 30, user, target, move, battle, aiCheck, aiNumHits)
     }
 )
 
-BattleHandlers::TargetAbilityOnHit.add(:FIERYSPIRIT,
+BattleHandlers::TargetAbilityOnHit.add(:BACKWASH,
     proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
         next unless move.specialMove?
-        randomStatusProcTargetAbility(ability, :BURN, 30, user, target, move, battle, aiCheck, aiNumHits)
+        randomStatusProcTargetAbility(ability, :WATERLOG, 30, user, target, move, battle, aiCheck, aiNumHits)
     }
 )
 

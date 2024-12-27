@@ -105,17 +105,17 @@ BattleHandlers::UserAbilityOnHit.add(:SHOCKWINGS,
 #########################################
 # Waterlog abilities
 #########################################
-BattleHandlers::UserAbilityOnHit.add(:NUMBINGTOUCH,
+BattleHandlers::UserAbilityOnHit.add(:MARINE,
   proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
     next unless move.physicalMove?
-    randomStatusProcUserAbility(ability, :NUMB, 30, user, target, move, battle, aiCheck, aiNumHits)
+    randomStatusProcUserAbility(ability, :WATERLOG, 30, user, target, move, battle, aiCheck, aiNumHits)
   }
 )
 
-BattleHandlers::UserAbilityOnHit.add(:NERVENUMBER,
+BattleHandlers::UserAbilityOnHit.add(:SATURATER,
   proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
     next unless move.specialMove?
-    randomStatusProcUserAbility(ability, :NUMB, 30, user, target, move, battle, aiCheck, aiNumHits)
+    randomStatusProcUserAbility(ability, :WATERLOG, 30, user, target, move, battle, aiCheck, aiNumHits)
   }
 )
 

@@ -21,6 +21,15 @@ BattleHandlers::TargetAbilityKnockedBelowHalf.add(:STICKYMOLD,
     }
 )
 
+BattleHandlers::TargetAbilityKnockedBelowHalf.add(:MOISTSKIN,
+    proc { |ability, target, user, move, _switched, battle|
+        next if user.waterlogged?
+        battle.pbShowAbilitySplash(target, ability)
+        user.applyWaterlog(target) if user.canWaterlog?(target, true)
+        battle.pbHideAbilitySplash(target)
+    }
+)
+
 BattleHandlers::TargetAbilityKnockedBelowHalf.add(:WRATHINSTINCT,
     proc { |ability, target, user, move, _switched, battle|
         battle.forceUseMove(target, :DRAGONDANCE, ability: ability)

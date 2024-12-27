@@ -43,7 +43,7 @@ Pokemon = MVULPIX,9
 [YOUNGSTER,Harvey]
 Pokemon = LUVDISC,8
     Moves = WIPEOUT,EAGERTICKLING,CHARM
-    AbilityIndex = 0 # Slick Surface
+    AbilityIndex = 0 # Mucus Layer
 Pokemon = SEEDOT,8
     AbilityIndex = 0 # Air Lock
 #-------------------------------
@@ -4186,7 +4186,7 @@ Pokemon = XATU,59
 Pokemon = SALAMENCE,57
     AbilityIndex = 1 # Scathing Syzygy
 Pokemon = GRUMPIG,58
-    AbilityIndex = 1 # Pearl Seeker
+    AbilityIndex = 1 # Anarchic
 Pokemon = DRAMPA,58
     AbilityIndex = 1 # Apprehensive
     Item = LEFTOVERS
@@ -7505,7 +7505,7 @@ Pokemon = GOGOAT,70
 Pokemon = HIPPOWDON,70
     AbilityIndex = 1 # Glass Firing
 Pokemon = JELLICENT,70
-    AbilityIndex = 0 # Stability
+    AbilityIndex = 0 # Backwash
 #-------------------------------
 [POKEMONMASTER_Vanya,Vanya,5]
 Flags = NoPerfect
@@ -8605,7 +8605,7 @@ Pokemon = MAGMORTAR,70
 Pokemon = VOLCARONA,70
     AbilityIndex = 1 # Dawnfall
 Pokemon = JELLICENT,70
-    AbilityIndex = 0 # Stability
+    AbilityIndex = 0 # Backwash
 Pokemon = STOUTLAND,70
     AbilityIndex = 0 # Break Through
 Pokemon = SAWSBUCK,70

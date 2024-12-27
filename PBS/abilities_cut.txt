@@ -451,6 +451,10 @@ Description = Prevents Bug- or Poison-type moves during moonglow.
 Name = Lunar Loyalty
 Description = Summons moonglow for four turns when hit by an attack.
 #-------------------------------
+[LURING]
+Name = Luring
+Description = Its attacks are critical against dizzy targets.
+#-------------------------------
 [MAGMAARMOR]
 Name = Magma Armor
 Description = Prevents the Pokémon from becoming frozen.
@@ -555,6 +559,11 @@ Description = Reduces each other Pokémon's HP by 1/12th at the end of each turn
 [PASTELVEIL]
 Name = Pastel Veil
 Description = Protects it and ally Pokémon from being poisoned.
+#-------------------------------
+[PEARLSEEKER]
+Name = Pearl Seeker
+Description = Upon entry during eclipse, if it has no item, finds and equips the Pearl of Fate.
+Flags = EclipseSynergy
 #-------------------------------
 [PICKUP]
 Name = Pickup
