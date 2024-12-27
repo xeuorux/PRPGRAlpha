@@ -708,7 +708,7 @@ Description = Prevents the foe from escaping during hail.
 #-------------------------------
 [FROSTSCATTER]
 Name = Frost Scatter
-Description = Summons a hailstorm for four turns when hit by an attack.
+Description = Summons a hail for four turns when hit by an attack.
 Flags = HailSynergy
 #-------------------------------
 [FROSTWINGS]
@@ -815,7 +815,7 @@ Description = Doubles Sp. Atk, but the Pokemon becomes dizzy after attacking.
 #-------------------------------
 [HEARTLESS]
 Name = Heartless
-Description = Immune to Fairy-type moves and restores HP if hit by one. This can overheal.
+Description = Immune to Fairy-type moves and restores 25% of max HP if hit by one. This can overheal.
 #-------------------------------
 [HEARTOFJUSTICE]
 Name = Heart of Justice
@@ -1368,7 +1368,7 @@ Flags = Uncopyable
 #-------------------------------
 [POISONABSORB]
 Name = Poison Absorb
-Description = Grants immunity to Poison-type moves and restores HP if hit by one.
+Description = Immune to Poison-type moves and restores 25% of max HP if hit by one.
 #-------------------------------
 [POISONPUNISH]
 Name = Poison Punish
@@ -1650,7 +1650,7 @@ Description = Whenever a foe fails or misses, they take 1/8th HP damage.
 #-------------------------------
 [SLEETSHAKER]
 Name = Sleetshaker
-Description = Boosts Attack by 30% in hailstorms.
+Description = Boosts Attack by 30% in hails.
 Flags = HailSynergy
 #-------------------------------
 [SLICKSURFACE]
@@ -1679,7 +1679,7 @@ Description = Whenever the Pokémon falls asleep, each other battler becomes dro
 #-------------------------------
 [SNOWSHROUD]
 Name = Snow Shroud
-Description = Takes 25% less damage in a hailstorm.
+Description = Takes 25% less damage in a hail.
 Flags = HailSynergy
 #-------------------------------
 [SOLARCELL]
@@ -1748,7 +1748,7 @@ Description = Takes 50% less damage from Water-type moves. Raises Speed by four 
 #-------------------------------
 [STEELABSORB]
 Name = Steel Absorb
-Description = Immune to Steel-type moves and restores HP if hit by one.
+Description = Immune to Steel-type moves and restores 25% of max HP if hit by one.
 #-------------------------------
 [STEELYSHELL]
 Name = Steely Shell

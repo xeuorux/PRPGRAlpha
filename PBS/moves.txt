@@ -5858,7 +5858,7 @@ TotalPP = 15
 Target = UserSide
 FunctionCode = StartWeakenDamageAgainstUserSideIfInHail5
 Flags = CanSnatch
-Description = This move reduces damage from attacks for five turns. This can be used only in a hailstorm.
+Description = This move reduces damage from attacks for five turns. This can be used only in hail.
 #-------------------------------
 [AVALANCHE]
 Name = Avalanche

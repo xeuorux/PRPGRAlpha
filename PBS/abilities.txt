@@ -36,7 +36,7 @@ Description = Reverses "Aura" Abilities to weaken affected moves.
 #-------------------------------
 [BADDREAMS]
 Name = Bad Dreams
-Description = Reduces a sleeping foe's HP by 1/8 at the end of a round.
+Description = Reduces a sleeping foe's HP by 1/8th at the end of a round.
 #-------------------------------
 [BATTERY]
 Name = Battery
@@ -254,7 +254,7 @@ Flags = RainstormSynergy
 #-------------------------------
 [ICEBODY]
 Name = Ice Body
-Description = Heals 1/8th of its max HP each turn in a hailstorm.
+Description = Heals 1/8th of its max HP each turn in a hail.
 Flags = HailSynergy
 #-------------------------------
 [ICESCALES]
@@ -554,7 +554,7 @@ Description = Halves Attack and Speed for 3 turns.
 #-------------------------------
 [SLUSHRUSH]
 Name = Slush Rush
-Description = Doubles the Pokémon's Speed stat in a hailstorm.
+Description = Doubles the Pokémon's Speed stat in a hail.
 Flags = HailSynergy
 #-------------------------------
 [SNIPER]
@@ -563,7 +563,7 @@ Description = Doubles critical hit chance. Powers up critical hits by another 50
 #-------------------------------
 [SNOWWARNING]
 Name = Snow Warning
-Description = Summons a hailstorm for 4 turns when it enters battle.
+Description = Summons a hail for 4 turns when it enters battle.
 Flags = HailSynergy
 #-------------------------------
 [SOLARPOWER]
@@ -687,7 +687,7 @@ Description = Prevents the Pokémon from falling asleep.
 #-------------------------------
 [VOLTABSORB]
 Name = Volt Absorb
-Description = Immune to Electric-type moves and restores HP when hit by one.
+Description = Immune to Electric-type moves and restores 25% of max HP when hit by one.
 #-------------------------------
 [WANDERINGSPIRIT]
 Name = Wandering Spirit
@@ -695,7 +695,7 @@ Description = Taking a physical hit exchanges Abilities.
 #-------------------------------
 [WATERABSORB]
 Name = Water Absorb
-Description = Immune to Water-type moves and restores HP when hit by one.
+Description = Immune to Water-type moves and restores 25% of max HP when hit by one.
 #-------------------------------
 [WATERBUBBLE]
 Name = Water Bubble
