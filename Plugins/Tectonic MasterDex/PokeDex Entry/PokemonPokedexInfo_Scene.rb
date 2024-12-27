@@ -862,7 +862,7 @@ sp.form) && !Settings::DEX_SHOWS_ALL_FORMS
 
             # Show pre-volutions
             unless prevolutions.empty?
-                prevoTitle = _INTL("<u>Pre-Evolutions of {1}</u>", @title)
+                prevoTitle = _INTL("<u>Pre-Evolutions</u>")
                 drawFormattedTextEx(overlay, xLeft, coordinateY, 450, prevoTitle, base, shadow)
                 coordinateY += 34
 
@@ -876,10 +876,10 @@ sp.form) && !Settings::DEX_SHOWS_ALL_FORMS
                     methodDescription = describeEvolutionMethod(method, parameter)
                     # Draw preevolution description
                     color = index == @evolutionIndex ? Color.new(255, 100, 80) : base
-                    evolutionLineText = _INTL("Evolves from {1} {2}",evolutionName,methodDescription)
+                    evolutionLineText = _INTL("<b>{1}</b> {2}",evolutionName,methodDescription)
                     drawTextEx(overlay, xLeft, coordinateY, 450, 2, evolutionLineText, color, shadow)
                     coordinateY += 30
-                    coordinateY += 30 if method != :Level
+                    coordinateY += 30 if overlay.text_size(evolutionLineText).width > 450
                     index += 1
                 end
 
@@ -887,41 +887,33 @@ sp.form) && !Settings::DEX_SHOWS_ALL_FORMS
             end
 
             # Show evolutions
-            if @species == :EEVEE || !allEvolutions.empty?
-                evoTitle = _INTL("<u>Evolutions of {1}</u>", @title)
+            unless allEvolutions.empty?
+                evoTitle = _INTL("<u>Evolutions</u>")
                 drawFormattedTextEx(overlay, xLeft, coordinateY, 450, evoTitle, base, shadow)
                 coordinateY += 34
 
-                if @species == :EEVEE
-                    drawTextEx(overlay, xLeft, coordinateY, 450, 7, _INTL("Evolves into Vaporeon with a Water Stone, " +
-                        _INTL("Jolteon with a Thunder Stone, Flareon with a Fire Stone, Espeon with a Dawn Stone, ") +
-                            _INTL("Umbreon with a Dusk Stone, Leafeon with a Leaf Stone, Glaceon with an Ice Stone, ") +
-                                _INTL("Sylveon with a Moon Stone, and Giganteon at level 40.")
-                                                                        ), base, shadow)
-                elsif !allEvolutions.empty?
-                    allEvolutions.each do |fromSpecies, evolutions|
-                        evolutions.each do |evolution|
-                            species = evolution[0]
-                            method = evolution[1]
-                            parameter = evolution[2]
-                            next if method.nil? || species.nil?
-                            speciesData = GameData::Species.get_species_form(species, i[2])
-                            next if speciesData.nil?
-                            @evolutionsArray.push(evolution)
-                            evolutionName = speciesData.name
-                            methodDescription = describeEvolutionMethod(method, parameter)
-                            # Draw evolution description
-                            color = index == @evolutionIndex ? Color.new(255, 100, 80) : base
-                            fromSpeciesName = GameData::Species.get(fromSpecies).name
-                            evolutionTextLine = _INTL("Evolves into {1} {2}",evolutionName,methodDescription)
-                            if fromSpecies != fSpecies.species
-                                evolutionTextLine = evolutionTextLine + " " +  _INTL("(through {1})",fromSpeciesName)
-                            end
-                            drawTextEx(overlay, xLeft, coordinateY, 450, 3, evolutionTextLine, color, shadow)
-                            coordinateY += 30
-                            coordinateY += 30 if method != :Level || fromSpecies != fSpecies.species
-                            index += 1
+                allEvolutions.each do |fromSpecies, evolutions|
+                    evolutions.each do |evolution|
+                        species = evolution[0]
+                        method = evolution[1]
+                        parameter = evolution[2]
+                        next if method.nil? || species.nil?
+                        speciesData = GameData::Species.get_species_form(species, i[2])
+                        next if speciesData.nil?
+                        @evolutionsArray.push(evolution)
+                        evolutionName = speciesData.name
+                        methodDescription = describeEvolutionMethod(method, parameter)
+                        # Draw evolution description
+                        color = index == @evolutionIndex ? Color.new(255, 100, 80) : base
+                        fromSpeciesName = GameData::Species.get(fromSpecies).name
+                        evolutionTextLine = _INTL("<b>{1}</b> {2}",evolutionName,methodDescription)
+                        if fromSpecies != fSpecies.species
+                            evolutionTextLine = evolutionTextLine + " " +  _INTL("(through {1})",fromSpeciesName)
                         end
+                        drawTextEx(overlay, xLeft, coordinateY, 450, 3, evolutionTextLine, color, shadow)
+                        coordinateY += 30
+                        coordinateY += 30 if overlay.text_size(evolutionTextLine).width > 450
+                        index += 1
                     end
                 end
             end
