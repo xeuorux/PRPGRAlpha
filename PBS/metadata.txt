@@ -116,6 +116,7 @@ Environment = Forest
 Outdoor = false
 ShowArea = false
 Bicycle = false
+BattleBack = cave1
 WildBattleBGM = Tectonic_Epitaph_of_the_Demiurge.ogg
 #-------------------------------
 [013]
@@ -2696,6 +2697,7 @@ BattleBack = cave1
 Outdoor = false
 ShowArea = true
 Bicycle = true
+BattleBack = cave1
 #-------------------------------
 [383]
 # Mirror Tundra
@@ -2855,16 +2857,18 @@ Bicycle = false
 Weather = Sandstorm,100
 #-------------------------------
 [406]
-# Sandstone Switchbox
+# Oasis System
 Outdoor = false
 ShowArea = true
 Bicycle = true
+BattleBack = cave1
 #-------------------------------
 [407]
 # Wave Lengths
 Outdoor = false
 ShowArea = true
 Bicycle = true
+BattleBack = cave1
 #-------------------------------
 [408]
 # Tournament Grounds EQ
@@ -2878,12 +2882,14 @@ Weather = Overcast,100
 Outdoor = false
 ShowArea = true
 Bicycle = true
+BattleBack = cave1
 #-------------------------------
 [410]
 # Terminal Confusion
 Outdoor = false
 ShowArea = true
 Bicycle = true
+BattleBack = cave1
 #-------------------------------
 [411]
 # Tri Island
@@ -2993,7 +2999,6 @@ BattleBack = indoor2
 Environment = None
 #-------------------------------
 [425]
-# Sandstone Switchbox Draft
 Outdoor = false
 ShowArea = true
 Bicycle = true
