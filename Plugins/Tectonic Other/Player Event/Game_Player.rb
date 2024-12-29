@@ -146,7 +146,7 @@ class Game_Player < Game_Character
     end
 
     def pushingTag
-      return $game_map.pushing_tag(@x, @y)
+      return $game_map.pushing_tag(@x, @y, false, self)
     end
   
     def pbFacingEvent(ignoreInterpreter=false)

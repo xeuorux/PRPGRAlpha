@@ -120,3 +120,30 @@ def circuitTerminalConfusionPrison(mapEventIDs,integrationEventIDs)
         electricFenceDectivates
     end
 end
+
+##########################################################
+### INTEGRATION CHAMBER
+##########################################################
+def circuitIntegrationChamberWave
+    solved = circuitPuzzle(:IC_WAVE)
+
+    if solved
+        # TODO
+    end
+end
+
+def circuitIntegrationChamberMaze
+    solved = circuitPuzzle(:IC_ELECTRIC_MAZE)
+
+    if solved
+        # TODO
+    end
+end
+
+def circuitIntegrationChamberAvatarCage
+    solved = circuitPuzzle(:IC_AVATAR_CAGE)
+
+    if solved
+        # TODO
+    end
+end
