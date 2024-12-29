@@ -877,7 +877,7 @@ sp.form) && !Settings::DEX_SHOWS_ALL_FORMS
                     # Draw preevolution description
                     color = index == @evolutionIndex ? Color.new(255, 100, 80) : base
                     evolutionLineText = _INTL("<b>{1}</b> {2}",evolutionName,methodDescription)
-                    drawTextEx(overlay, xLeft, coordinateY, 450, 2, evolutionLineText, color, shadow)
+                    drawFormattedTextEx(overlay, xLeft, coordinateY, 450, evolutionLineText, color, shadow)
                     coordinateY += 30
                     coordinateY += 30 if overlay.text_size(evolutionLineText).width > 450
                     index += 1
@@ -910,7 +910,7 @@ sp.form) && !Settings::DEX_SHOWS_ALL_FORMS
                         if fromSpecies != fSpecies.species
                             evolutionTextLine = evolutionTextLine + " " +  _INTL("(through {1})",fromSpeciesName)
                         end
-                        drawTextEx(overlay, xLeft, coordinateY, 450, 3, evolutionTextLine, color, shadow)
+                        drawFormattedTextEx(overlay, xLeft, coordinateY, 450, evolutionTextLine, color, shadow)
                         coordinateY += 30
                         coordinateY += 30 if overlay.text_size(evolutionTextLine).width > 450
                         index += 1
