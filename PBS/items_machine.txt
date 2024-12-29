@@ -512,13 +512,13 @@ Price = 4000
 FieldUse = TM
 Move = COVET
 #-------------------------------
-[TMRANSACK]
+[TMRISINGPOWER]
 Name = Unnamed
 NamePlural = Unnamed
 Pocket = 4
 Price = 4000
 FieldUse = TM
-Move = RANSACK
+Move = RISINGPOWER
 #-------------------------------
 [TMTRIATTACK]
 Name = Unnamed
