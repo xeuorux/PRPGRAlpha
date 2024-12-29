@@ -1046,7 +1046,7 @@ LandTall,20
     20,JYNX,54,56
     20,MNOCTOWL,54,56
 #-------------------------------
-[406] # Sandstone Switchbox
+[406] # Oasis System
 DarkCave,20
     20,EELEKTROSS,53,55
     20,GYARADOS,53,55

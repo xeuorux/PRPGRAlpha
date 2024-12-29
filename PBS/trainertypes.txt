@@ -1754,6 +1754,12 @@ Gender = Female
 BaseMoney = 48
 IntroBGM = ARTIST
 #-------------------------------
+[TECHWIZARD_JOVAN]
+Name = Tech Wizard
+Gender = Male
+BaseMoney = 100
+IntroBGM = POKEFAN
+#-------------------------------
 [TEENAGERF]
 Name = Teenager
 Gender = Female

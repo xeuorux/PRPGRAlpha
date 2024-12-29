@@ -7162,6 +7162,32 @@ Pokemon = TENTACRUEL,60
     AbilityIndex = 1 # Grip Strength
     Item = GRIPCLAW
 #-------------------------------
+[TECHWIZARD_JOVAN,Jovan]
+Pokemon = LURANTIS,60
+    Moves = HOLLYCHARM,LEECHSEED,AROMATHERAPY
+    AbilityIndex = 1 # Polarizing
+    Item = REINFORCINGROD
+Pokemon = DURANT,60
+    Moves = UTURN,EARTHQUAKE,IRONHEAD,CRUNCH
+    AbilityIndex = 1 # Tunnel Maker
+    Item = CHOICESCARF
+Pokemon = STARMIE,60
+    Moves = RAPIDSPIN,BUBBLEBARRAGE,PULSAR,RAPIDHERTZ
+    AbilityIndex = 1 # Energetic
+    Item = LOADEDDICE
+Pokemon = HARCANINE,60
+    Moves = INFERNOIMPACT,ADAMANTINEPRESS,PSYCHICFANGS,BULLETTRAIN
+    AbilityIndex = 0 # Palace Guard
+    Item = EXPERTBELT
+Pokemon = KLEFKI,60
+    Moves = POLARIZEDROOM,ILLWISHES,BAR,NUMB
+    AbilityIndex = 0 # Prankster
+    Item = REINFORCINGROD
+Pokemon = CLEFABLE,60
+    Moves = TELEPORT,SWEETKISS,MISTBURST,WISH
+    AbilityIndex = 0 # Magic Guard
+    Item = LEFTOVERS
+#-------------------------------
 [DELINQUENT,Jeralyn]
 Pokemon = DITTO,58
     AbilityIndex = 0 # Imposter
