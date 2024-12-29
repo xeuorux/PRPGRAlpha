@@ -649,7 +649,7 @@ Name = Reinforcing Rod
 NamePlural = Reinforcing Rods
 Pocket = 5
 Price = 4000
-Description = An item to be held by a Pokémon. It extends the duration of Rooms created by the holder.
+Description = An item to be held by a Pokémon. It doubles the duration of Rooms created by the holder.
 #-------------------------------
 [GRIPCLAW]
 Name = Grip Claw

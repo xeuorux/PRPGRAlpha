@@ -658,12 +658,10 @@ class PokeBattle_Battler
         return shouldAbilityApply?(:BUNKERDOWN, checkingForAI) && @hp == @totalhp
     end
 
-    def getRoomDuration(aiCheck = false)
-        if shouldItemApply?(:REINFORCINGROD,aiCheck)
-            return 8
-        else
-            return 5
-        end
+    def getRoomDuration(baseDuration = 5, aiCheck: false)
+        ret = baseDuration
+        ret *= 2 if shouldItemApply?(:REINFORCINGROD,aiCheck)
+        return ret
     end
 
     def getScreenDuration(baseDuration = 5,aiCheck: false)
