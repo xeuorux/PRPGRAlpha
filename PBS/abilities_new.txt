@@ -147,7 +147,7 @@ Description = Sets a Reflect for 4 turns upon entering the battle.
 #-------------------------------
 [BATTLEHARDENED]
 Name = Battle-Hardened
-Description = Raises Def and Sp. Def by three steps each when its HP is lowered below half.
+Description = Raises Defense and Sp. Def by three steps each when its HP is lowered below half.
 #-------------------------------
 [BEGUILING]
 Name = Beguiling
