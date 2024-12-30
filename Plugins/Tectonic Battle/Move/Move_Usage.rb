@@ -567,7 +567,7 @@ target.pbThis(true)))
             target.pointAt(:MirrorCoatTarget, user)
         end
         if target.effectActive?(:Bide)
-            target.effects[:BideDamage] += damage
+            target.effects[:BideDamage] += damage * 2
             target.pointAt(:BideTarget, user) if user.index != target.index
         end
         target.damageState.fainted = true if target.fainted? || target.damageState.fear

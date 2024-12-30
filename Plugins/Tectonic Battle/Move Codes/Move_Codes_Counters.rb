@@ -187,7 +187,7 @@ class PokeBattle_Move_MultiTurnAttackBideThenReturnDoubleDamage < PokeBattle_Fix
     end
 
     def pbFixedDamage(user, _target)
-        return user.effects[:BideDamage] * 2
+        return user.effects[:BideDamage]
     end
 
     def pbEffectGeneral(user)
