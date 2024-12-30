@@ -206,7 +206,7 @@ Description = Normal-type moves become Electric-type and power up by 30%.
 #-------------------------------
 [GLUTTONY]
 Name = Gluttony
-Description = Eats pinch berries earlier than normal.
+Description = Will eat berries normally eaten at 25% HP (in a pinch) at 50% instead.
 #-------------------------------
 [GOOEY]
 Name = Gooey
