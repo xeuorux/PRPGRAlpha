@@ -542,7 +542,7 @@ Flags = Immutable
 #-------------------------------
 [SIMPLE]
 Name = Simple
-Description = Stat changes in the Pokemon are doubled.
+Description = Stat changes in the Pokémon are doubled.
 #-------------------------------
 [SKILLLINK]
 Name = Skill Link

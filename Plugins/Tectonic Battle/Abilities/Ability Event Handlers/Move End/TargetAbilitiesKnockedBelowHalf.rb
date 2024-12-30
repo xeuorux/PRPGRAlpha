@@ -51,6 +51,24 @@ BattleHandlers::TargetAbilityKnockedBelowHalf.add(:MALICE,
     }
 )
 
+BattleHandlers::TargetAbilityKnockedBelowHalf.add(:HARDAS,
+    proc { |ability, target, user, move, _switched, battle|
+        next if user.effectActive?(:Fracture)
+        battle.pbShowAbilitySplash(target, ability)
+        user.applyEffect(:Fracture)
+        battle.pbHideAbilitySplash(target)
+    }
+)
+
+BattleHandlers::TargetAbilityKnockedBelowHalf.add(:KARMA,
+    proc { |ability, target, user, move, _switched, battle|
+        next if user.effectActive?(:Jinx)
+        battle.pbShowAbilitySplash(target, ability)
+        user.applyEffect(:Jinx)
+        battle.pbHideAbilitySplash(target)
+    }
+)
+
 BattleHandlers::TargetAbilityKnockedBelowHalf.add(:DREAMYHAZE,
     proc { |ability, target, user, move, _switched, battle|
         next unless user.canSleep?(target, true)

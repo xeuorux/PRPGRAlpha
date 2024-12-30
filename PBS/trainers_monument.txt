@@ -1047,7 +1047,7 @@ Pokemon = ACCELGOR,70
     EV = 0,20,0,20,20,10
 Pokemon = HARCANINE,70
     Moves = FLAREBLITZ,BEDROCKBREAKER,ELECTROSLASH,PLAYROUGH
-    AbilityIndex = 1 # Rock Head
+    AbilityIndex = 1 # Stone Mane
     Item = ROCKGEM
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 0,20,10,20,20,0
@@ -1179,7 +1179,7 @@ Pokemon = FLOATZEL,70
     EV = 0,20,10,20,20,0
 Pokemon = RHYPERIOR,70
     Moves = ROCKWRECKER,EARTHSPLITTER,EARTHPOWER,ACCELEROCK
-    AbilityIndex = 1 # Fortified
+    AbilityIndex = 1 # Hard As
     Item = ENERGYHERB
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,20,10,0,20,0
@@ -1358,7 +1358,7 @@ Pokemon = ROSERADE,70
     EV = 5,20,0,20,20,5
 Pokemon = RHYPERIOR,70
     Moves = EARTHQUAKE,ADAMANTINEPRESS,LEAFSTORM,OVERHEAT
-    AbilityIndex = 1 # Fortified
+    AbilityIndex = 1 # Hard As
     Item = ASSAULTVEST
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,0,0,20,20
@@ -1384,7 +1384,7 @@ Pokemon = HSAMUROTT,70
     EV = 0,20,0,20,20,10
 Pokemon = HARCANINE,70
     Moves = FLAREBLITZ,BEDROCKBREAKER,HUMBLE,PSYCHICFANGS
-    AbilityIndex = 1 # Rock Head
+    AbilityIndex = 1 # Stone Mane
     Item = LIFEORB
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 0,20,5,20,20,5
@@ -2204,7 +2204,7 @@ Pokemon = MJELLICENT,70
     EV = 10,20,0,0,20,20
 Pokemon = HARCANINE,70
     Moves = BULLETTRAIN,BEDROCKBREAKER,FLAREBLITZ,IGNITE
-    AbilityIndex = 1 # Rock Head
+    AbilityIndex = 1 # Stone Mane
     Item = HEAVYDUTYBOOTS
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 0,20,0,20,20,10

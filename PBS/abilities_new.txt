@@ -327,7 +327,7 @@ Description = When hit with a special move, hits back instantly with Breach.
 #-------------------------------
 [CURSEDTAIL]
 Name = Cursed Tail
-Description = When a foe hits the Pokémon, they are warned. If they do it again, they become Cursed, taking 25% HP damage per turn.
+Description = When a foe hits the Pokémon, they are warned. If they do it again, they become cursed.
 #-------------------------------
 [DARING]
 Name = Daring
@@ -646,7 +646,7 @@ Flags = Immutable
 #-------------------------------
 [FLUSTERFLOCK]
 Name = Fluster Flock
-Description = Doubles Attack, but the Pokemon becomes dizzy after attacking.
+Description = Doubles Attack, but the Pokémon becomes dizzy after attacking.
 #-------------------------------
 [FLUTTERTOTEM]
 Name = Flutter Totem
@@ -801,6 +801,10 @@ Name = Harbinger
 Description = Summons eclipse for four turns when it enters battle.
 Flags = EclipseSynergy
 #-------------------------------
+[HARDAS]
+Name = Hard As
+Description = If an attack lowers the Pokémon's HP to half or less, the attacker becomes fractured.
+#-------------------------------
 [HARDFALL]
 Name = Hard Fall
 Description = Deals 30% more move damage to Pokémon that are taller than it.
@@ -815,7 +819,7 @@ Description = The Pokémon is also Ghost-type.
 #-------------------------------
 [HEADACHE]
 Name = Headache
-Description = Doubles Sp. Atk, but the Pokemon becomes dizzy after attacking.
+Description = Doubles Sp. Atk, but the Pokémon becomes dizzy after attacking.
 #-------------------------------
 [HEARTLESS]
 Name = Heartless
@@ -852,7 +856,7 @@ Flags = MultipleItems
 #-------------------------------
 [HERDING]
 Name = Herding
-Description = Wild Pokemon are more likely to hold items and to be species you've never caught before.
+Description = Wild Pokémon are more likely to hold items and to be species you've never caught before.
 #-------------------------------
 [HEROICFINALE]
 Name = Heroic Finale
@@ -995,6 +999,10 @@ Name = Juggernaut
 Description = Ignores Abilities that would affect its moves or activate after hitting the target.
 Flags = MoldBreaking
 #-------------------------------
+[KARMA]
+Name = Hard As
+Description = If an attack lowers the Pokémon's HP to half or less, the attacker becomes jinxed.
+#-------------------------------
 [KELPLINK]
 Name = Kelp Link
 Description = Physical moves against the Pokémon have a 30% chance to leech the attacker.
@@ -1105,7 +1113,7 @@ Description = Prevents foes whose Sp. Atk is less than its from fleeing.
 #-------------------------------
 [MALICE]
 Name = Malice
-Description = If an attack lowers its HP to half or less, they become Cursed, taking 25% HP damage per turn.
+Description = If an attack lowers the Pokémon's HP to half or less, the attacker becomes cursed.
 #-------------------------------
 [MALICIOUSGLOW]
 Name = Malicious Glow
@@ -1131,7 +1139,7 @@ Flags = EclipseSynergy
 #-------------------------------
 [MENTALBLOCK]
 Name = Mental Block
-Description = The Pokemon can't be Taunted, Encored, Tormented, Heal Blocked, Disabled, Barred, Dizzied, or Flinched.
+Description = The Pokémon can't be Taunted, Encored, Tormented, Heal Blocked, Disabled, Barred, Dizzied, or Flinched.
 Flags = FlinchImmunity
 #-------------------------------
 [MENTALDAMAGE]
@@ -1345,7 +1353,7 @@ Description = Whenever a foe raises their stats, the Pokémon follows suit.
 #-------------------------------
 [PHASESHIFT]
 Name = Phase Shift
-Description = The Pokemon's moves deal 50% more damage if they're a different type than last.
+Description = The Pokémon's moves deal 50% more damage if they're a different type than last.
 #-------------------------------
 [PLACIDITY]
 Name = Placidity
@@ -1446,7 +1454,7 @@ Flags = MoldBreaking
 #-------------------------------
 [RATTLEEM]
 Name = Rattle 'Em
-Description = Moves that can flinch are 50% more likely. Deals 50% more damage to Pokemon with flinch immunity.
+Description = Moves that can flinch are 50% more likely. Deals 50% more damage to Pokémon with flinch immunity.
 #-------------------------------
 [RAZORSEDGE]
 Name = Razor's Edge
@@ -1763,7 +1771,7 @@ Description = Immune to Steel-type moves and restores 25% of max HP if hit by on
 #-------------------------------
 [STEELYSHELL]
 Name = Steely Shell
-Description = Steel-type attacks deal 50% more damage, and the Pokemon is protected from critical hits.
+Description = Steel-type attacks deal 50% more damage, and the Pokémon is protected from critical hits.
 #-------------------------------
 [STEEPFLYING]
 Name = Steep Flying
@@ -1777,6 +1785,10 @@ Flags = MultipleItems
 [STICKYMOLD]
 Name = Sticky Mold
 Description = If an attack lowers its HP to half or less, leeches the attacker.
+#-------------------------------
+[STONEMANE]
+Name = Stone Mane
+Description = Prevents half the self-damage from recoil. Powers up moves that have recoil damage by 20%.
 #-------------------------------
 [STORMBRINGER]
 Name = Stormbringer

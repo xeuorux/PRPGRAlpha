@@ -78,6 +78,15 @@ BattleHandlers::DamageCalcUserAbility.add(:HOOLIGAN,
   }
 )
 
+BattleHandlers::DamageCalcUserAbility.add(:STONEMANE,
+  proc { |ability, user, target, move, mults, _baseDmg, type, aiCheck|
+    if move.recoilMove?
+      mults[:base_damage_multiplier] *= 1.2
+      user.aiLearnsAbility(ability) unless aiCheck
+    end
+  }
+)
+
 BattleHandlers::DamageCalcUserAbility.add(:STRONGJAW,
   proc { |ability, user, target, move, mults, _baseDmg, type, aiCheck|
     if move.bitingMove?

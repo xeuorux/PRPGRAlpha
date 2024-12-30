@@ -2320,7 +2320,7 @@ Pokemon = WHIMSICOTT,70
 Pokemon = HARCANINE,70
     Name = Jun
     Gender = male
-    AbilityIndex = 1 # Rock Head
+    AbilityIndex = 1 # Stone Mane
 Pokemon = MANIKLAW,70
     Name = Jumble
     Gender = female
@@ -2567,7 +2567,7 @@ Pokemon = SMEARGLE,70
 Pokemon = DRACOVISH,70
     AbilityIndex = 0 # Live Fast
 Pokemon = HARCANINE,70
-    AbilityIndex = 1 # Rock Head
+    AbilityIndex = 1 # Stone Mane
 Pokemon = REAVOR,70
     AbilityIndex = 0 # Technician
 #-------------------------------
@@ -3740,7 +3740,7 @@ Pokemon = VILEPLUME,43
     AbilityIndex = 0 # Sickening
 Pokemon = RHYPERIOR,44
     Moves = DRILLRUN,ADAMANTINEPRESS,ACCELEROCK,POISONJAB
-    AbilityIndex = 1 # Fortified
+    AbilityIndex = 1 # Hard As
     Item = LUCKHERB
 #-------------------------------
 [BEAUTY3,Ester]
@@ -7426,7 +7426,7 @@ Pokemon = METAGROSS,55
 [CHALLENGER_Vanya,Vanya,7]
 Flags = NoPerfect
 Pokemon = HARCANINE,60
-    AbilityIndex = 1 # Rock Head
+    AbilityIndex = 1 # Stone Mane
 Pokemon = WIGGLYTUFF,60
     AbilityIndex = 1 # Maestro
 Pokemon = DRAGAPULT,60
@@ -7823,7 +7823,7 @@ Pokemon = INFERNAPE,70
 Pokemon = KINGDRA,60
     AbilityIndex = 1 # Gyre Spinner
 Pokemon = RIBOMBEE,60
-    AbilityIndex = 0 # Candy Veil
+    AbilityIndex = 0 # Hard As
     Item = FOCUSSASH
 #-------------------------------
 [POKEMONBREEDER_F4,Sara]
