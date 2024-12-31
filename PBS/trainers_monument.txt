@@ -268,7 +268,7 @@ Pokemon = NIDOKING,70
 #-------------------------------
 [POKEMONRANGER_M3,Benny]
 Pokemon = QWILFISH,70
-    Moves = FUGUFRENZY,TAUNT,TRICKYTOXINS,POISONSPIKES
+    Moves = FUGUFRENZY,TAUNT,GUNKSHOT,POISONSPIKES
     AbilityIndex = 0 # Quiller Instinct
     Item = FOCUSSASH
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -312,7 +312,7 @@ Pokemon = RIOJIN,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 0,20,10,20,20,0
 Pokemon = DELCATTY,70
-    Moves = FAKEOUT,HYPOTHERMIATE,FOULPLAY,TRICKYTOXINS
+    Moves = FAKEOUT,HYPOTHERMIATE,FOULPLAY,SHORTCIRCUIT
     AbilityIndex = 0 # Above It All
     Item = ASSAULTVEST
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -554,7 +554,7 @@ Pokemon = CHATOT,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 5,20,0,20,20,5
 Pokemon = DUSKNOIR,70
-    Moves = WILLOWISP,TRICKYTOXINS,GREYMIST,STITCHUP
+    Moves = WILLOWISP,SHORTCIRCUIT,GREYMIST,STITCHUP
     AbilityIndex = 0 # Aggravate
     Item = ROCKYHELMET
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -624,7 +624,7 @@ Pokemon = HTYPHLOSION,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,0,10,0,0,20
 Pokemon = HDECIDUEYE,70
-    Moves = THREEFOLDVOLLEY,VACUUMWAVE,GIGADRAIN,TRICKYTOXINS
+    Moves = THREEFOLDVOLLEY,VACUUMWAVE,GIGADRAIN,ICEBEAM
     AbilityIndex = 1 # Feather Coat
     Item = ASSAULTVEST
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -772,13 +772,13 @@ Pokemon = METAGROSS,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,10,0,20,10
 Pokemon = GLISCOR,70
-    Moves = ROOST,DEFOG,EARTHQUAKE,TRICKYTOXINS
+    Moves = ROOST,DEFOG,EARTHQUAKE,BLIGHT
     AbilityIndex = 0 # Grotesque Vitals
     Item = HIVISJACKET
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,0,10,0,0,20
 Pokemon = DUSKNOIR,70
-    Moves = WILLOWISP,TRICKYTOXINS,GREYMIST,STITCHUP
+    Moves = WILLOWISP,SHORTCIRCUIT,GREYMIST,STITCHUP
     AbilityIndex = 0 # Aggravate
     Item = ROCKYHELMET
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -1345,7 +1345,7 @@ Pokemon = SKARMORY,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,0,0,10,0,20
 Pokemon = OVERQWIL,70
-    Moves = POISONSPIKES,SPIKYBURST,TRICKYTOXINS,LIQUIDATION
+    Moves = POISONSPIKES,SPIKYBURST,GRIMEGRAPPLE,LIQUIDATION
     AbilityIndex = 0 # Poison Point
     Item = DARKGEM
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -1466,7 +1466,7 @@ Pokemon = GOLISOPOD,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,20,0,0,20,10
 Pokemon = GLISCOR,70
-    Moves = EARTHQUAKE,UTURN,DEFOG,TRICKYTOXINS
+    Moves = EARTHQUAKE,UTURN,DEFOG,BLIGHT
     AbilityIndex = 0 # Grotesque Vitals
     Item = SITRUSBERRY
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -2082,7 +2082,7 @@ Pokemon = CARRACOSTA,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,0,10,0,0,20
 Pokemon = DELCATTY,70
-    Moves = FOULPLAY,TRICKYTOXINS,PARTINGSHOT,HYPOTHERMIATE
+    Moves = FOULPLAY,SHORTCIRCUIT,PARTINGSHOT,HYPOTHERMIATE
     AbilityIndex = 1 # Normalize
     Item = SEVENLEAGUEBOOTS
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -2253,7 +2253,7 @@ Pokemon = MTANGROWTH,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,20,0,0,20,10
 Pokemon = LICKILICKY,70
-    Moves = TRICKYTOXINS,TONGUETWISTER,MEGAPUNCH,SLACKOFF
+    Moves = SHORTCIRCUIT,TONGUETWISTER,MEGAPUNCH,SLACKOFF
     AbilityIndex = 0 # Tenderize
     Item = LEFTOVERS
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -2355,7 +2355,7 @@ Pokemon = FURRET,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,10,20,0,10,0
 Pokemon = AMUK,70
-    Moves = POISONGAS,RECOVER,FOULPLAY,TRICKYTOXINS
+    Moves = POISONGAS,RECOVER,FOULPLAY,GUNKSHOT
     AbilityIndex = 0 # Power of Alchemy
     Item = BLACKSLUDGE
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -2590,7 +2590,7 @@ Pokemon = GRAPIDASH,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,0,20,20,0
 Pokemon = SWALOT,70
-    Moves = POISONGAS,TRICKYTOXINS,CLEARSMOG,SHADOWBALL
+    Moves = POISONGAS,SHORTCIRCUIT,CLEARSMOG,SHADOWBALL
     AbilityIndex = 1 # Toxin Tax
     Item = BLACKSLUDGE
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def

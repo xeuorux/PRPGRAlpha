@@ -1467,19 +1467,6 @@ FunctionCode = TrashTreasure
 Flags = CanProtect,CanMagicCoat,CanMirrorMove
 Description = The target is given a Black Sludge, replacing their item if any. Their Sp. Def is lowered.
 #-------------------------------
-[TRICKYTOXINS]
-Name = Tricky Toxins
-Type = POISON
-Category = Special
-Power = 95
-Accuracy = 100
-TotalPP = 12
-Target = NearOther
-FunctionCode = AttacksWithTargetsStats
-Flags = CanProtect,CanMirrorMove
-Description = Turns the foe's power against it, dealing damage using the target's Sp. Atk stat.
-Animation = VENOSHOCK
-#-------------------------------
 [VENOMGUARD]
 Name = Venom Guard
 Type = POISON
@@ -4969,6 +4956,19 @@ Target = UserSide
 FunctionCode = StartWeaken100PowerOrHigherDamageAgainstUserSide5
 Flags = CanSnatch
 Description = This move creates a directional magnetic field which reduces damage from attacks with 100 or more base power for five turns.
+#-------------------------------
+[SHORTCIRCUIT]
+Name = Short Circuit
+Type = ELECTRIC
+Category = Special
+Power = 95
+Accuracy = 100
+TotalPP = 12
+Target = NearOther
+FunctionCode = AttacksWithTargetsStats
+Flags = CanProtect,CanMirrorMove
+Description = Turns the foe's power against it, dealing damage using the target's Sp. Atk stat.
+Animation = SHOCKWAVE
 #-------------------------------
 [SPLITTHESKY]
 Name = Split the Sky

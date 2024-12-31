@@ -1010,6 +1010,19 @@ FunctionCode = Invalid
 Flags = CanMagicCoat
 Description = The user lays a trap of poison spikes at the foe's feet. They poison foes that switch into battle.
 #-------------------------------
+[TRICKYTOXINS]
+Name = Tricky Toxins
+Type = POISON
+Category = Special
+Power = 95
+Accuracy = 100
+TotalPP = 12
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect,CanMirrorMove
+Description = Turns the foe's power against it, dealing damage using the target's Sp. Atk stat.
+Animation = VENOSHOCK
+#-------------------------------
 #		GROUND MOVES
 #-------------------------------
 [DUSTFORCE]
