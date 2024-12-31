@@ -2142,6 +2142,17 @@ FunctionCode = Invalid
 Flags = CanProtect,CanMirrorMove
 Description = The user employs its psychic power to switch changes to its Defense and Sp. Def with the target.
 #-------------------------------
+[HEALBLOCK]
+Name = Heal Block
+Type = PSYCHIC
+Category = Status
+Accuracy = 100
+TotalPP = 12
+Target = AllNearFoes
+FunctionCode = Invalid
+Flags = CanProtect,CanMagicCoat,CanMirrorMove
+Description = For five turns, the foe is prevented from using any moves, Abilities, or held items that recover HP.
+#-------------------------------
 [HYPNOSIS]
 Name = Hypnosis
 Type = PSYCHIC
@@ -2533,6 +2544,17 @@ Target = AllNearOthers
 FunctionCode = Invalid
 Flags = CanProtect,CanMagicCoat,CanMirrorMove
 Description = Darkness rolls over the field, damaging all other Pokémon, ending weather, and healing statuses.
+#-------------------------------
+[EMBARGO]
+Name = Embargo
+Type = DARK
+Category = Status
+Accuracy = 100
+TotalPP = 12
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect,CanMagicCoat,CanMirrorMove
+Description = The user prevents the target from using its held item.
 #-------------------------------
 [NASTYPLOT]
 Name = Nasty Plot

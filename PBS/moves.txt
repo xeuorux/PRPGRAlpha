@@ -5448,17 +5448,6 @@ FunctionCode = AverageUserTargetDefenses
 Flags = CanProtect
 Description = The user employs psychic power to average its base Defense and base Sp. Def stats with those of its target.
 #-------------------------------
-[HEALBLOCK]
-Name = Heal Block
-Type = PSYCHIC
-Category = Status
-Accuracy = 100
-TotalPP = 12
-Target = AllNearFoes
-FunctionCode = DisableTargetHealingMoves5
-Flags = CanProtect,CanMagicCoat,CanMirrorMove
-Description = For five turns, the foe is prevented from using any moves, Abilities, or held items that recover HP.
-#-------------------------------
 [HEALINGWISH]
 Name = Healing Wish
 Type = PSYCHIC
@@ -6442,17 +6431,6 @@ Priority = -1
 FunctionCode = SleepTargetIfUserDarkrai
 Flags = CanProtect,CanMagicCoat,CanMirrorMove
 Description = Targets are dragged into a world of total darkness that makes them sleep. This move always goes last.
-#-------------------------------
-[EMBARGO]
-Name = Embargo
-Type = DARK
-Category = Status
-Accuracy = 100
-TotalPP = 12
-Target = NearOther
-FunctionCode = Embargo
-Flags = CanProtect,CanMagicCoat,CanMirrorMove
-Description = The user prevents the target from using its held item.
 #-------------------------------
 [FAKETEARS]
 Name = Fake Tears

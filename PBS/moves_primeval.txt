@@ -930,18 +930,6 @@ Animation = LOOMOVER
 #-------------------------------
 #		DARK MOVES
 #-------------------------------
-[PRIMEVALEMBARGO]
-Name = Primeval Embargo
-Type = DARK
-Category = Status
-Accuracy = 100
-TotalPP = 1
-Target = FoeSide
-FunctionCode = EmpoweredEmbargo
-Flags = CanProtect,CanMirrorMove,Empowered
-Description = The enemy side is prevented from using items for the rest of the battle, and the user becomes Dark-type.
-Animation = EMBARGO
-#-------------------------------
 [PRIMEVALHOWL]
 Name = Primeval Howl
 Type = DARK
