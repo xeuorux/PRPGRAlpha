@@ -539,6 +539,14 @@ Mi niño.
 …Dolorosamente familiar.
 But, still, she is a stranger to you, this woman who almost has your mother’s voice.
 Pero, aún así, es una extraña para tí, este mujer que casi tiene la voz de tu madre.
+Heard about this place called the <imp>Battle Monument</imp>.
+Escuché sobre este lugar llamado <imp>Monumento Batalla</imp>.
+The whole idea is that you can fight through a gauntlet of AI trainers. Neat, right?
+Toda la idea es que puedes combatir contra una serie de entrenadores IA. Genial, ¿Verdad? 
+Anyways, I'll be hanging around the Battle Monument for the foreseeable future, so meet me here, ya hear?
+Como sea, estaré por el Monumento Batalla por el momento, así que encuéntrame allí, ¿me escuchas?
+I've got some new team configurations I really wanna try against you.
+Tengo algunos nuevos equipos que realmente quiero intentar contra tuyo.
 [Map1]
 Do you need information about the game controls?
 ¿Necesitas información sobre los controles?
@@ -715,7 +723,7 @@ Un entrenador como tú debe estar buscando medallas, ¿Me equivoco? Encontrémon
 I hear there’s a gym leader there. So long, my knight in shining armor.
 Escuché que hay un líder de gimnasio allá. Hasta luego, mi caballero en su corcel.
 My grandpapa gave me this Tranquill. He's in the ground now. Wanna fight?
-Mi abuelito me dió este Tranquill. Él está en el suelo ahora. ¿Quieres combati?
+Mi abuelito me dió este Tranquill. Él está en el suelo ahora. ¿Quieres combatir?
 Welp, I've gotta go! Grandpapa's gonna give me a tour of the mines today!
 ¡Bueno, tengo que irme! ¡Abuelito va a darme un tour por las minas hoy!
 Tranquill! No! Use your Tranquill powers! ...oh.
@@ -1099,6 +1107,10 @@ LuxTech Condos
 Apartamentos LuxTech 
 Healing centers uhh... to the west. So go off and do that now.
 Los Centros Pokémon aah... al oeste. Así que ve y haz eso ahora.
+A Shiny Corviknight!
+¡Un Corviknight Variocolor!
+It's too busy watching the campus to notice you.
+Está muy ocupado mirando el campus como para prestarte atención.
 [Map7]
 The Growlithe seems to be cowering from everything.
 Este Growlithe parece acobardarse por todo.
@@ -1186,8 +1198,8 @@ He crafted something mighty gross outta my failed harvest.
 Hizo algo bien asqueroso con mi cosecha fallida.
 So, you gots one of them mushroom 'mons?
 Entonces, ¿Tienes uno de esos 'mons hongos?
-It's called <i>my</i>cology because <i>i</i> need it!
-¡Se llama <i>mi</i>cología porque <i>yo</i> la necesito!
+It's called <i>my</i>cology because <i>I</i> need it!
+¡Se llama <i>mi</i>cología porque <i>mi</i> ser la necesita!
 Just what the Nurse Joy ordered!
 ¡Justo lo que la Enfermera Joy ordenó!
 Appreciate it. Now, lemme get this over with.
@@ -1385,6 +1397,46 @@ If one was feeling particularly devilish, one could aquire a Hattrem.
 Si uno se siente particularmente diabólico, uno podría conseguir un Hattrem.
 That witch has a special ability which can prevent Pokemon from utilizing dance.
 La bruja tiene una habilidad especial que impide bailar a los Pokémon.
+My cousin and I like to hang out here. Take in the cool atmosphere and the night sky.
+A mi primo y yo nos gustar estar por aquí. Disfrutamos la fría atmósfera y el cielo nocturno.
+We still battle people, but like... in a chill way...
+Todavía combatimos gente, pero tipo... en un modo tranquilo...
+I'm gonna leave now. Don't like your vibes.
+Me voy ahora. No me gustan tus vibras.
+Can you feel the energy given off by those evolution stones?
+¿Puedes sentir la energía dada por estas piedras evolutivas?
+It's doing wonders for my stress.
+Está haciendo maravillosas para mi estrés.
+Is life worth living if you can't take time to be transfixed by the beauty of nature?
+¿Vale la pena vivir si no puedes hacer tiempo para ser embelesado por la maravilla de la naturaleza?
+Don't tell the others, but I'm getting bored of waiting.
+No le diga a los demás, pero me estoy aburriendo de esperar.
+Well, might as well battle you before <i>they</i> arrive.
+Bueno, ya que estamos combatamos antes de que <i>ellos</i> lleguen.
+I saw a light come down from the sky and land west of Velenz.
+Vi una luz venir del cielo y del lado oeste de Velenz.
+I was hoping these stones would draw the aliens out, but it's been a week and nothing.
+Estaba esperando que estas piedras atrayeran los aliens, pero ha sido una semana y nada.
+Since that failed, you can just take them. Good luck.
+Como eso no funcionón, puedes llevártelos. Buena suerte.
+Losing? Now that's an alien feeling.
+¿Perder? Ahora eso se siente alien.
+That mansion near the menagerie must have something to do with the light I saw.
+Esa mansión cerca de la muestra debe tener algo que ver con la luz que ví.
+My cousin says I'm paranoid, but I definitely saw the place glowing last night.
+Mi primo dice que soy paranoide, pero definitivamente vía ver ese lugar brillar anoche.
+No earthlings allowed: that's the rule.
+No se permiten terrícolas: esa es la regla.
+By the power of the Moon Stone, I will punish you!
+¡Por del poder de la Piedra Lungar, serás castigado!
+What? Friendship wasn't enough!?
+¿Qué? ¿¡La amistad no fue suficiente!?
+You're really gonna invade our special space like this?
+¿Realmente vas a invadir nuestro lugar especial de este modo?
+I haven't been a real sailor since they scuttled my ship.
+No he sido un marinero de verdad desde que sabotearon mi barco.
+I just like the clothes.
+Simplemente me gusta la ropa.
 [Map9]
 STAY AWAY FROM MY PLANTS!
 ¡ALÉJATE DE MIS PLANTAS!
@@ -1647,8 +1699,21 @@ Estoy bien.
 Sure, I'll pay for that.
 Seguro, pagaré por eso.
 
-[Map15]
 
+[Map16]
+
+I'll take your Pokémon for a few seconds.
+Tomaré tus Pokémon por unos segundos.
+First, you should restore your Pokémon to full health.
+Primero, deberíamos restaurar la salud de tus Pokémon.
+We hope you excel!
+¡Te deseamos suerte!
+Walking through Makya really makes me appreciate the drive of some folk.
+Caminar por Makya me hace apreciar la mentalidad de cierta gente.
+They basically looked at a spot, decided they wanted to build an entire tech campus over it, and they did it.
+Básicamente miraron a un lugar, decidieron que querían construir un campus de tecnología entero sobre este, y lo hicieron.
+Wild stuff.
+De locos.
 I got some extra dynamite. Want it for $5000?
 Tengo un poco de dinamita extra. ¿La quieres por $5000?
 Eh, I can't blame ya. It's dangerous stuff.
@@ -1665,22 +1730,6 @@ No
 No
 Yes
 Sí
-
-[Map16]
-
-I'll take your Pokémon for a few seconds.
-Tomaré tus Pokémon por unos segundos.
-First, you should restore your Pokémon to full health.
-Primero, deberíamos restaurar la salud de tus Pokémon.
-We hope you excel!
-¡Te deseamos suerte!
-Walking through Makya really makes me appreciate the drive of some folk.
-Caminar por Makya me hace apreciar la mentalidad de cierta gente.
-They basically looked at a spot, decided they wanted to build an entire tech campus over it, and they did it.
-Básicamente miraron a un lugar, decidieron que querían construir un campus de tecnología entero sobre este, y lo hicieron.
-Wild stuff.
-De locos.
-
 [Map17]
 
 Oh, hello there.
@@ -2720,32 +2769,7 @@ Tengo la sensación de que te veré en el gimnasio algún día pronto, ¿Sí?
 
 [Map27]
 
-Oh, a trainer are you?
-Oh, ¿Eres un entrenador?
-Would you be interested in taking my Sandshrew?
-¿Te interesa tomar mi Sandshrew?
-I brought it here from Alola, but I'm far too old to travel now, and it's getting restless.
-Lo traje aquí desde Alola, pero ya estoy vieja para viajar, y se está poniendo inquieto.
-I'd need $5000 in return. Sorry, but I've got to survive somehow!
-Pero necesito $5000 a cambio. Perdona, ¡Pero tengo que sobrevivir!
-What do you say?
-¿Qué dices?
-I understand. That's fine, dear.
-Lo entiendo. Está bien, cariño.
-You won't regret this.
-No te arrepentirás de esto.
-\PN hands over $5000 in exchange.
-\PN paga los $5000.
-Now to find my wife, wherever she's run off to.
-Ahora tengo que encontrar a mi esposa, donde sea que haya huído.
-Toodaloo!
-¡Adiooos!
-Oh my, you don't have enough money.
-Oh, no tienes suficiente dinero.
-No
-No
-Yes
-Sí
+
 At first I was dissapointed that Makyan marts don't stock potions.
 En un principio estaba decepcionado de que las tiendas de Makya no vendan pociones.
 Turns out this whole region loves their vending machines.
@@ -2990,12 +3014,12 @@ Sí.
 
 [Map32]
 
-Room 102\nCurrent Residents: Kaylee, Aisha
-Habitación 102\nResidentes Actuales: Kaylee, Aisha
-Room 103\nCurrent Resident: Eric
-Habitación 103\nResidente Actual: Eric
-Room 104\nCurrent Residents: Li Jie, Alexander
-Habitación 104\nResidentes Actuales: Li, Jie, Alexander
+Room 101\nCurrent Residents: Kaylee, Aisha
+Habitación 101\nResidentes Actuales: Kaylee, Aisha
+Room 102\nCurrent Resident: Iseul, Galina
+Habitación 103\nResidente Actual: Iseul, Galina
+Room 104\nCurrent Residents: Manuel, Anja
+Habitación 104\nResidentes Actuales: Manuel, Anja
 Hello, welcome to Novo Apartments.
 Hola, bienvenido a los Apartamentos Novo.
 We have no vacancies at the moment, unfortunately.
@@ -3022,8 +3046,6 @@ Es una máquina expendedora.\n ¿Qué bebida quieres?\G
 \GDecidiste no comprar una bebida.
 Room 101\nCurrent Resident: José
 Habitación 101\nResidente Actual: José
-Room 106\nCurrent Resident: Noah
-Habitación 106\nResidente Actual: Noah
 My parents were really excited for my first Pokemon. They gave me a few Pokeballs and sent me on my way.
 Mis padres estaban muy emocionados por mi primer Pokémon. Me dieron un par de Poké Ball y me mandaron a ello.
 But they were expecting me to get a Buneary or a Yamper or something, not a Vulpix.
@@ -3467,6 +3489,10 @@ You look up Numel in your new MasterDex...
 Buscas a Numel en tu nueva MasterDex...
 You look up Krabby in your new MasterDex...
 Buscas a Krabby en tu nueva MasterDex...
+It also comes along with a <imp>MoveDex</imp> and a <imp>DexNav</imp>.
+También viene con una <imp>MoveDex</imp> y un <imp>DexNav</imp>.
+Both useful resources that I'm sure you can figure out on your own.
+Ambos son recursos útiles que estoy segura puedes entender por tu cuenta.
 [Map37]
 
 The lake here used to be pretty. The ice rink is nice, but it just doesn't have the same appeal.
@@ -3611,6 +3637,8 @@ I don’t know what came over me, \PN. I really lost myself for a moment.
 No sé qué me pasó, \PN. Me perdí a mí misma por un momento.
 Yes
 Sí
+South: Repora Forest
+Sur: Bosque Repora
 [Map38]
 
 Okay, now just to dig the moat!
@@ -3760,7 +3788,32 @@ After beating the seventh gym, I decided that me and the team needed a vacation.
 Después de vencer al séptimo gimnasio, decidí que mi equipo y yo necesitamos unas vacaciones.
 Need to be rested up before the championship, right?
 Hay que estar descansados antes del campeonato, ¿No?
-
+Oh, a trainer are you?
+Oh, ¿Eres un entrenador?
+Would you be interested in taking my Sandshrew?
+¿Te interesa tomar mi Sandshrew?
+I brought it here from Alola, but I'm far too old to travel now, and it's getting restless.
+Lo traje aquí desde Alola, pero ya estoy vieja para viajar, y se está poniendo inquieto.
+I'd need $5000 in return. Sorry, but I've got to survive somehow!
+Pero necesito $5000 a cambio. Perdona, ¡Pero tengo que sobrevivir!
+What do you say?
+¿Qué dices?
+I understand. That's fine, dear.
+Lo entiendo. Está bien, cariño.
+You won't regret this.
+No te arrepentirás de esto.
+\PN hands over $5000 in exchange.
+\PN paga los $5000.
+Now to find my wife, wherever she's run off to.
+Ahora tengo que encontrar a mi esposa, donde sea que haya huído.
+Toodaloo!
+¡Adiooos!
+Oh my, you don't have enough money.
+Oh, no tienes suficiente dinero.
+No
+No
+Yes
+Sí
 [Map40]
 You looking for the missing package?
 ¿Estás buscando el paquete perdido?
@@ -4049,7 +4102,8 @@ No ahora mismo.
 Let’s go.
 Vamos.
 [Map43]
-
+Room 104\nCurrent Resident: Noah
+Habitación 104\nResidente Actual: Noah
 Room 204\nCurrent Resident: Aditya
 Habitación 204\nResidente Actual: Aditya
 You should keep active, it has a ton of health benefits.
@@ -4419,7 +4473,24 @@ La TV está apagada.
 A peice of laminated paper attached to front lists the over 300 available TV channels.
 Un pedazo de papel laminado pegado al frente lista más de 300 canales disponibles.
 [Map51]
-
+You have absconded with my fungus.
+Te has fugado con mi hongo.
+Nevermind my meditations upon its structure, sustenance, and provenance - surely your whims trump any of my concerns.
+Olvida mis meditacions sobre su estructura, sustento, y fuete - seguro que tus caprichos triunfan cualquiera de mis preocupaciones.
+I shall remain here and contemplate the impermanence of... well, fungi, I suppose.
+Me quedaré aquí contemplando la impermanencia de... bueno, hongos, supongo.
+We ran out of sweets at the resort, so we're turning to desperate measures.
+Nos quedamos sin dulces en el resort, así que estamos empleando medidas desesperadas.
+The blue mineral over there is edible. And quite energizing, if my coworkers are to be believed.
+El mineral azull allí es comestible. Y bastante energizante, si mis compañero de trabajo tienen razón.
+Except... I don't think I can bring myself to serve rocks to our guests.
+Excepto... que no creo que pueda forzarme a servirle rocas a nuestros huéspedes.
+So, I decided to give my mining tool away to the first trainer to pass through.
+Así que, decidí darle mi equipo de minería al primer entrenador que pasara.
+Here.
+Toma.
+Wish me luck facing my boss.
+Deséame suerte para hablar con mi jefe.
 I'm studying the process of growing berries in caves and cave-like environments.
 Estoy estudiando el proceso del crecimiento de bayas en cuevas y ambientes semejantes.
 Feel free to take some!
@@ -4955,7 +5026,16 @@ Oh! It's floating on an Air Balloon!
 Huff...huff...
 Huff...huff...
 [Map56]
-
+Aww.
+Oww.
+A Shiny Corviknight!
+¡Un Corviknight variocolor!
+it's too busy watching the town to notice you.
+Está demasiado ocupado observando el pueblo como para prestarte atención.
+I hiked up to the top earlier to capture it, but it wouldn't even battle me.
+Recién fui hasta la cima para atraparlo, pero ni siquiera quiso combatir conmigo.
+Beats me.
+Ni idea.
 I come here to practice my dance routines.
 Vine aquí a practicar mis rutinas de baile. 
 I come here to battle as well. Do you partake?
@@ -5449,8 +5529,28 @@ Ama a los Pokémon que pueden aplicar problemas de estado dañinos: quemadura, v
 They also run a few moves that trap the target, and damage them over time. Brutal!
 También usa algunos movimientos que pueden atrapar al objetivo y dañarlos con el pasar del tiempo. ¡Brutal!
 [Map57]
-
-
+The Aether Foundation, from Alola, is looking to establish a branch in Makya.
+La Fundación Æther, de Alola, está buscando establecer una sucursal en Makya.
+I'm here to do some location research for that, but I also have a secret project of my own.
+Estoy aquí para hacer un poco de investigación de ubicación para eso, pero tengo un proyecto secreto propio.
+To help me along, think you'd like to buy this Alolan Meowth?
+Para ayudarme, ¿Crees que te gustaría comprar este Meowth de Alola?
+For a low, low price of $5000, you could help me along.
+Por un bajo, bajo precio de $5000, podrías ayudarme con eso.
+Sure, I'm certain another Alolan Meowth will just stumble into your hands.
+Seguro, estoy segura que otro Meowth de Alola sólo aparecerá en tus manos.
+Why thank you, stranger. Rest well knowing that you are a patron of science.
+Muchas gracias, extraño. Descansa bien sabiendo que eres un patrón de la ciencia.
+\PN hands over $5000 in exchange.
+\PN paga los $5000.
+Well, not gonna waste any more time here. I've got science to do.
+Bueno, no voy a perder más tiempo aquí. Tengo ciencia que hacer.
+Hm? Pay? With what cash?
+¿Eh? ¿Pagar? ¿Con ese dinero?
+No thanks.
+No gracias.
+Sure, I'll pay.
+Seguro, pagaré.
 I'll take your Pokémon for a few seconds.
 Tomaré tus Pokémon por un par de segundos.
 First, you should restore your Pokémon to full health.
@@ -5664,7 +5764,10 @@ Están abriendo esa puerta.
 Your point?
 ¿Tu punto?
 [Map59]
-
+Hey, you!
+¡Hey, tú!
+Yeah, you, get over here!
+¡Seh, tú, el que está por allí!
 A Bicycle. It looks slightly dinged up.
 Una Bicicleta. Se ve un poco abollada.
 I bought these orbs to spice up my juggling act.
@@ -5912,7 +6015,8 @@ Si fuera tú, me cuidaría de no terminar como los barcos destrozados al oeste d
 Damn rich folk and their careless sailin'...
 Maldita gente rica y su navegación sin cuidado'...
 [Map62]
-
+There are <imp>vending machines</imp> in all PokéCenters and Ranger Stations.
+¡Hay <imp>máquinas expendedoras</imp> en todos los Centros Pokémon y Estaciones Ranger.
 At the northernmost part of the Shipping Lane there is a house, and inside of that house a cave, and in that cave an Avatar!
 En la parte más al norte de la Ruta Pezquera hay una casa, y dentro de esa casa hay una cueva, ¡Y dentro de esa cueva hay un Avatar!
 Destroy it!
@@ -6028,7 +6132,7 @@ Un modelo 3D muestra un maquillaje quimíco basado en el veneno de Tangela de Ma
 Let me tend to your Pokémon while you bask in your victory.
 Déjame atender a tus Pokémon mientras disfrutas tu victoria.
 Sorry for blocking the way, but I'm desperately dehydrated.
-Pero por bloquear el camino, pero estoy desesperadamente deshidratado.
+Perdón por bloquear el camino, pero estoy desesperadamente deshidratado.
 You have a <imp>Fresh Water</imp>! I'll be taking that...
 ¡Tienes una <imp>Agua Fresca</imp>! Voy a tomar eso...
 The man takes a Fresh Water from your bag.
@@ -6108,30 +6212,6 @@ Aún no.
 Of course.
 Por supuesto.
 [Map65]
-
-The Aether Foundation, from Alola, is looking to establish a branch in Makya.
-La Fundación Æther, de Alola, está buscando establecer una sucursal en Makya.
-I'm here to do some location research for that, but I also have a secret project of my own.
-Estoy aquí para hacer un poco de investigación de ubicación para eso, pero tengo un proyecto secreto propio.
-To help me along, think you'd like to buy this Alolan Meowth?
-Para ayudarme, ¿Crees que te gustaría comprar este Meowth de Alola?
-For a low, low price of $5000, you could help me along.
-Por un bajo, bajo precio de $5000, podrías ayudarme con eso.
-Sure, I'm certain another Alolan Meowth will just stumble into your hands.
-Seguro, estoy segura que otro Meowth de Alola sólo aparecerá en tus manos.
-Why thank you, stranger. Rest well knowing that you are a patron of science.
-Muchas gracias, extraño. Descansa bien sabiendo que eres un patrón de la ciencia.
-\PN hands over $5000 in exchange.
-\PN paga los $5000.
-Well, not gonna waste any more time here. I've got science to do.
-Bueno, no voy a perder más tiempo aquí. Tengo ciencia que hacer.
-Hm? Pay? With what cash?
-¿Eh? ¿Pagar? ¿Con ese dinero?
-No thanks.
-No gracias.
-Sure, I'll pay.
-Seguro, pagaré.
-
 [Map66]
 
 Wow! Well done! That must have been nervewracking.
@@ -6858,6 +6938,42 @@ Swadloon is looking lovingly at its trainer.
 Swadloon mira con amor a su entrenador.
 You look skilled enough to participate. Please, go on ahead!
 Te ves lo suficientemente habilidoso para participar. ¡Por favor, continúa!
+Begin a doubles battle against the Artificial Trainer?
+¿Empiezas un combate doble contra el Entrenador Artificial?
+Strategic Battling Testing Room
+Habitación de Pruebas de Estrategias para Combates
+Begin a triple battle against the Artificial Trainer?
+¿Empiezas un combate triple contra el Entrenador Artificial?
+Artificial Battlers Testing Room
+Habitación de Pruebas Entrenadores Artificiales.
+Truly, nothing fires my neurons quite like coding.
+Verdaderamente, nada dispara mis neuronas más como la programación.
+It is for this reason that I embarked on my quest--to construct the perfect artificially intelligent trainers!
+¡Y es por esa razón que me embarqué en una misión--construir los entrenadores hechos con inteligencia artificial perfectos!
+I beg you, please battle them!
+¡Te lo ruego, combate con ellos!
+There's no reward to earn by defeating them, and your Pokemon will learn nothing from the experience...
+No hay recompensa que ganar por vencerlos, y tus Pokémon no van a aprender nada de la experiencia...
+But you and I both, well, we'll gain terrabytes of wisdom about battling.
+Pero tanto tú como yo, bueno, ganaremos terabyes de conocimiento sobre combates.
+Need I remind you--knowledge is it's own reward.
+Tengo que recordarte--el conocimiento es su propia recompensa.
+If you're worried about difficulty, note that the battlers automatically adjust their levels to match your skill level.
+Si te preocupas sobre la dificultad, ten en cuenta que los combatientes ajustarán sus niveles para coincidir con tu nivel de habilidad.
+I am sure you will learn a lot from the experience of battling my Artificial Trainers.
+Estoy seguro que aprenderás mucho de la experiencia de combatir con mis Entrenadores Artificiales.
+In fact, I'm betting on these being an excellent training tool.
+De hecho, apuesto a que estos serán una excelente herramienta de entrenamiento.
+My government contract depends on it.
+Mi contrato gubernamental depende de eso.
+If my project succeeds, it'll be implemented in some tourist attraction they're building off the southern coast.
+Si mi proyecto tiene éxito, será implementando en una atracción turísticas que están construyendo en la costa sur.
+Begin a singles battle against the Artificial Trainer?
+¿Empezar un combate individual contra Entrenadores Artificiales?
+No
+No
+Yes
+Sí
 [Map80]
 
 Oh, hey. Didn't see you there. Nice to meet you.
@@ -6894,6 +7010,22 @@ A Pokemon Contest Spectacular is being shown on TV.
 Se ve un Gran Concurso Pokémon en la TV.
 The audience is watching in awe as a Galvantula weaves an electrified web in the shape of a Pikachu.
 El público mira maravillado a un Galvantula tejiendo una red electrificada con la forma de un Pokémon.
+I'm a berry farmer now, but I used to be a Team Chasm grunt.
+Soy una granjera de bayas ahora, pero solía ser una recluta del Team Chasm.
+Been feeling nostalgic, lately. Looking at photos of me and my old team.
+Pero últimamente me estuve sintiéndo nostálgica. Mirando las fotos de mi viejo equipo. 
+My Pokemon were all adorable. Course, they're all grown up now.
+Mis Pokémon eran todos adorables. Por supuesto, ya están todos crecidos.
+Hey, that gives me an idea!
+¡Hey, eso me da una idea!
+If you round up my old team and bring 'em here for me to look at, I'll give you this Catching Charm I've been holdin' on to.
+Si juntas a mi antiguo equipo y me los traes para que pueda verlos, te daré este Amuleto Captura que aún conservo. 
+A Bergmite, a Klink, a Dreepy, a Makyan Tangela, and an Elekid. Bring me these five and it'll make my year.
+Un Bergmite, un Klink, un Dreepy, un Tangela de Makya, y un Elekid. Traéme a esos cinco y haría mi año.
+A Bergmite, a Klink, a Dreepy, a Makyan Tangela, and an Elekid. You have 'em?
+Un Bergmite, un Klink, un Dreepy, un Tangelade Makya, y un Elekid. ¿Las tienes?
+Here's the charm I promised.
+Aquí está el amuleto que prometí.
 [Map81]
 
 Ah, hello. A trainer, I take it?
@@ -8341,18 +8473,20 @@ You? I... I remember... outside of Novo Town.
 ¿Tú? Yo… recuerdo… fuera de Novo.
 You aren’t – I mean, you are – it doesn’t matter.
 Tú no eres – osea, sí eres – no importa.
-You’re here. I’m here. I have more Pokémon to train. A duel?
-Estás aquí. Estoy aquí. Tengo más Pokémon que entrenar. ¿Un duelo?
+You’re here. I’m here. I have more Pokémon to train. A duel? Doubles.
+Estás aquí. Estoy aquí. Tengo más Pokémon que entrenar. ¿Un duelo? Dobles.
 W-well, I could ask you the same thing. Can we start?
 B-bueno, podría preguntarte lo mismo. ¿Empezamos?
 Then go! Don’t bother me and then not even – whatever.
 ¡Entonces vamos! No me molestes y luego ni siquiera – como sea.
 But you’re not getting past me without a duel.
 Pero no vas a pasar encima de mí sin un duelo.
+So? I’m not moving until I get a double battle out of you.
+¿Entonces? No me voy a mover hasta tener un combate doble contigo.
 Good. OK. No more talking. Just... this.
 Bien. Ok. No hablemos más. Sólo… esto.
 That was -- you’re... yeah, you are, aren’t you?
-Eso fue – tú estás… sí, estás, ¿Me equivoco?
+Eso fue – tú eres… sí, eres, ¿Me equivoco?
 If you’re looking deeper in the caves, then I -- I mean, if you don’t mind, may I come along?
 Si estás buscando más profundo en las cuevas, entonces yo  – osea, si no te importa, ¿Puedo unirme? 
 I have healing items for the both of us. It’s dangerous and we -- I’d like to talk. And that’s... that’s not very common for me.
@@ -10062,6 +10196,16 @@ I wouldn't know much about it, I study ecology.
 No sabría mucho al respecto, estudio ecología.
 "Aerodactyl, Terror of the Skies"
 "Aerodactyl, Terror de los Cielos"
+Everybody knows about the small white totems that are common throughout the region.
+Todos conocen los pequeños tótems blancos que son comunes por toda la región.
+The archeological consensus was that they were religious artifacts from an ancient race that worshipped Regigigas.
+El consenso arqueológico era que eran artefactos religiosos de una antigua raza que veneraba a Regigigas.
+After years of studying them, we moved on to other subjects.
+Luego de años de estudio, pasamos a otros temas.
+But then the totems suddently started <i>glowing</i>!
+¡Pero de pronto los totems empezaron a <i>brillar</i>!
+Nobody has been able to figure out how that happened, or what it means.
+Nadie ha podido descifrar cómo eso ocurrió, o qué significa.
 [Map134]
 
 Hey! Great job on making it through the gym – I know things are a little hectic right now.
@@ -11152,7 +11296,7 @@ You've done a great service. We'll make sure everyone is brought to justice.
 Hiciste un gran servicio. Nos aseguraremos de que todos sean llevados a la justicia.
 Here, as a reward. A wonderful Pokemon for a wonderful Trainer.
 Toma, como una recompensa. Un maravilloso Pokémon para un maravilloso Entrenador.
-Farewell Trainer, The Rangers owe you one.
+Farewell Trainer, the Rangers owe you one.
 Adiós Entrenador, los Rangers te debemos una.
 Any luck?
 ¿Tuviste suerte?
@@ -11558,6 +11702,10 @@ On the surface, the ideals seem conflicting, but they'd actually work together q
 En un inicio, los ideales parecen conflictivos, pero de hecho funcionan bastante bien juntos.
 When I grow up, I wanna be a shiny bird...
 Cuando crezca, quiero ser una ave brillante...
+A Shiny Corviknight!
+¡Un Corviknight Variocolor!
+It's too busy watching the city to notice you.
+Está muy ocupado observando la ciudad como para prestarte atención.
 [Map157]
 
 The destruction of the bridge over at the Eleig River Crossing has really put a hamper on things.
@@ -11639,7 +11787,37 @@ No me interesa.
 Sure, I'll adopt it.
 Seguro, lo adoptaré.
 Farewell Trainer, the Rangers owe you one.
-Adiós Entrenadores, los Rangers te debemos una.
+Adiós Entrenador, los Rangers te debemos una.
+Trainer, have you ever punched a bird?
+Entrenador, ¿Has golpeado alguna vez una ave?
+It's impossible. How can I ever spar with it properly?
+Es imposible. ¿Cómo voy a luchar con él apropiadamente?
+This Pokemon I have, a Farfetch'd from the faraway region of Galar.
+Este Pokémon que tengo, un Farfetch’d de la lejana región de Galar.
+It refused to take a hit, like a real Pokemon would.
+Rechazó recibir un golpe, como un Pokémon real lo haría.
+It is a coward, a complete disgrace to the Ironclad Dojo.
+Es un cobarde, una completa desgracia para el Dojo Férreo
+I offer it to you for a mere $5000, as I need to atone for the money I wasted on its room and board.
+Te lo ofrezco por unos meros $5000, ya que lo necesito para reparar por el dinero que gasté en su habitación y alojamiento.
+I understand. Who would want such a disgrace on their team?
+Lo entiendo. ¿Quién querría esta desgracia en su equipo?
+Very well, perhaps a new master shall bring our its potential.
+Muy bien, quizás un nuevo maestro podrá liberar su potencial.
+Though I doubt it.
+Aunque lo dudo.
+\PN hands over $5000 in exchange.
+\PN paga los $5000.
+I shall now resume my journey, free of such a burden.
+Ahora reanudaré mi viaje, libre de esta carga.
+Farewell.
+Adiós.
+You have not the financial requirements.
+No tienes los requerimientos financieros.
+No
+No
+Yes
+Sí
 [Map159]
 
 Travel Agency: Orre
@@ -12282,8 +12460,8 @@ You've found IgnitedxSoul, a design contributor and community manager.
 Has encontrado a IgnitedxSoul, un diseñador y administrador de la comunidad.
 You've found Brickbat, the Project Lead.
 Has encontrado a Brickbat, el Líder del proyecto.
-You've found Divock, a designer, audio engineer and video producer.
-Has encontrado a Divock, un diseñadora, ingeniera de sonido y productora de video.
+You've found Pria, a designer, audio engineer and video producer.
+Has encontrado a Pria, una diseñadora, ingeniera de sonido y productora de video.
 You've found Zeu, Lead Designer and Lead Programmer.
 Has encontrado a Zeu, Diseñadora Líder y Programadora Líder.
 You've found Agentbla, Lead Mapper and tileset arranger.
@@ -12313,39 +12491,6 @@ You've found Jaggedthorn, a spriting contributor.
 Has encontrado a Jaggedthorn, un contribuidor de sprites!
 Estás a punto de enfrentar a Valrex, traductor al Español.
 You're about to battle Valrex, Spanish translator.
-[Map180]
-
-Trainer, have you ever punched a bird?
-Entrenador, ¿Has golpeado alguna vez una ave?
-It's impossible. How can I ever spar with it properly?
-Es imposible. ¿Cómo voy a luchar con él apropiadamente?
-This Pokemon I have, a Farfetch'd from the faraway region of Galar.
-Este Pokémon que tengo, un Farfetch’d de la lejana región de Galar.
-It refused to take a hit, like a real Pokemon would.
-Rechazó recibir un golpe, como un Pokémon real lo haría.
-It is a coward, a complete disgrace to the Ironclad Dojo.
-Es un cobarde, una completa desgracia para el Dojo Férreo
-I offer it to you for a mere $5000, as I need to atone for the money I wasted on its room and board.
-Te lo ofrezco por unos meros $5000, ya que lo necesito para reparar por el dinero que gasté en su habitación y alojamiento.
-I understand. Who would want such a disgrace on their team?
-Lo entiendo. ¿Quién querría esta desgracia en su equipo?
-Very well, perhaps a new master shall bring our its potential.
-Muy bien, quizás un nuevo maestro podrá liberar su potencial.
-Though I doubt it.
-Aunque lo dudo.
-\PN hands over $5000 in exchange.
-\PN paga los $5000.
-I shall now resume my journey, free of such a burden.
-Ahora reanudaré mi viaje, libre de esta carga.
-Farewell.
-Adiós.
-You have not the financial requirements.
-No tienes los requerimientos financieros.
-No
-No
-Yes
-Sí
-
 [Map182]
 
 This maze is part of the ruins of a long-lost civilization.
@@ -13576,8 +13721,29 @@ Oh, it looks like you're a little short. The offer's still here, just come back 
 Oh, parece que te falta un poco. La oferta sigue en pie, sólo regresa cuando tengas algo más de dinero.
 The 'mons here are such hard workers.
 Los 'mons aquí son fuertes trabajadores.
+What a magnificant sight!
+¡Qué vista magnífica!
+White carnations... white clay bricks—this tower is clearly related to ruins throughout Makya.
+Claveles blancos... ladrillos de arcilla blancas—esta torre está claramente relacionada a las ruinas por toda Makya.
+The Carnation Graves, of course, but likely also to the Nebula Ruins on Mt. Kilna.
+Las Tumbas Clavel, por supuesto, pero seguramente también las Ruinas Nebulosa en Mt. Kilna.
+If only I could find a way inside...
+Si tan solo pudiera encontrar una entrada...
+A Shiny Corviknight!
+¡Un Corviknight Variocolor!
+it's too busy watching the river to notice you.
+Está demasiado ocupado observando el río como para prestarte atención.
 [Map187]
-
+I saw a famous singer appear out of thin air.
+Ví a un cantante famoso aparecer de la nada.
+Right in front of that clay statue near the castle.
+Justo en frente de esa estatua de arcilla cerca del castillo.
+I tried reporting it to the rangers, but they all just laughed at me.
+Intenté reportarlo a los rangers, pero todos se rieron de mí.
+I know what I saw!
+¡Sé lo que ví!
+Just because I can't remember his name doesn't mean you shouldn't believe me...
+Sólo porque no pueda recordar su nombre no significa que no deberías creerme...
 A few months ago someone tried to bring their yacht through this river.
 Hace un par de meses alguien intentó traer su yate a través de este río.
 His boat hit some rocks and sunk. Right here.
@@ -14248,9 +14414,6 @@ Talk about inspiring loyalty. I bet her Pokemon would follow her to hell and bac
 Habla sobre lealtad inspiradora. Apuesto que sus Pokémon la seguirían hasta el fin del mundo.
 Hella metal.
 Hella metal.
-
-[Map192]
-
 I smuggled some dynamite into the city, but I think the cops are onto me.
 Pude meter algo de dinamita a la ciudad, pero creo que la poli está sobre mi.
 Take it off my hands for $5000?
@@ -14275,7 +14438,6 @@ No
 No
 Yes
 Sí
-
 [Map193]
 A fight next to lava! How dramatic!
 ¡Un combate al lado de la lava! ¡Qué dramático!
@@ -17401,6 +17563,16 @@ Got that recipe from one o' the Trainers that come 'round here to train.
 Conseguí esa receta de uno de los Entrenadores que vienen aquí para entrenar.
 'Bout as many of them around as Makyan natives nowadays. Not like it's a bad thing though.
 Hay tantos como nativos de Makya estos días. No es como si eso fuera algo malo tampoco.
+It's a business show.
+Es un programa de negocios.
+A gentleman with thick glasses faces the camera, explaining the impact the Avatar attack is having on stock prices.
+Un caballero con lentes gruesos mira hacia la cámara, explicando el impacto que tiene el ataque Avatar en precios de la bolsa.
+Two refrigerators!
+¡Dos refrigeradores!
+The freezer compartments are overflowing with frozen meat products.
+Los congeladores están llenos de productos de carne congelada.
+You even spot a large fish with a label attached: "For Purrcy."
+Incluso encuentras un gran pez con una etiqueta que dice: "Para Purrcy."
 [Map225]
 
 You decide not to pet it.
@@ -17494,6 +17666,16 @@ Is your team six Combee?
 ¿Tu equipo son seis Combee?
 Sure.
 Seguro.
+Crumpled paper notes fill the bin. They smell vaguely sweet.
+Papeles aplastados llenan la papelera. Huelen vagamente dulce.
+You select one and go to grab it, but it's stuck to the rest of the pile.
+Eliges uno y vas a tomarlo, pero está pegado al resto de la pila.
+An email client is open. The font size has been set to extra large.
+Un cliente de email está abierto. El tamaño de la fuente está en extra largo.
+An email is being drafted to a gardener named Bud.
+Hay un borrador de un email para un jardinero llamado Bud.
+Sofia is asking him to volunteer to help her with planting more flowers, "for science and sweetness."
+Sofia está pidiendo que se ofrezca para ayudarla a plantar más flores, "por la ciencia y dulzura."
 [Map227]
 The bed is well made with multiple layers of blankets.
 La cama está armada con múltiples capas de mantas.
@@ -18106,6 +18288,16 @@ A chalkboard lists a short menu of food items.
 Una pizarra muestra un pequeño menú con diferentes comidas.
 Kantoan, Unovan, and Galarian culture are all represented, among others.
 Las culturas de Kanto, Teselia y Galar están representadas, entre otras.
+Hey, you got any info about those white totems?
+Hey, ¿tienes algo de info sobre esos totems blancos?
+When I still worked in Prizca West I took them for granted.
+Cuando aún trabajaba en Prizca Occidental los dí por sentado.
+What sort of geek has time to worry about old ceramics?
+¿Qué clase de noño tiene el tiempo de preocuparse de cerámicas viejas?
+But I got the chance to touch a few while out on patrol, and they made my hand tingle in the strangest way.
+Pero tuve la oportunidad de tocar algunos mientras estuve en patrulla, e hicieron que mi mano se estremeciera de la forma más extraña.
+Something is definitely fishy with them.
+Definitivamente hay algo extraño sobre ellos.
 [Map250]
 
 Novo Academy hired me from Galar to work on advanced fossil resurrection.
@@ -18931,9 +19123,6 @@ First, you should restore your Pokémon to full health.
 Primero, deberíamos restaurar la salud de tus Pokémon.
 We hope you excel!
 ¡Te deseamos suerte!
-
-[Map264]
-
 The shipment of fruit from Frostflow got done without a hitch.
 El cargamento de fruta de Escarcha se hizo sin problemas.
 Or so I thought. This here Bounsweet tagged along, the rascal, and now I don't know what to do with it.
@@ -18956,7 +19145,6 @@ No
 No
 Yes
 Sí
-
 [Map265]
 
 Huh? Oh! You must be the Trainer that Scilla was talking about.
@@ -21467,7 +21655,10 @@ Doesn't matter.
 No importa.
 
 [Map316]
-
+A Shiny Corviknight!
+¡Un Corviknight Variocolor!
+It's too busy watching the ocean to notice you.
+Está demasiado ocupado observando el oceáno como para prestarte atención.
 Yo, yo, yo, what's a Trainer like you doing out here? Ain't nothing out here but sand and salt water.
 Hey, hey, hey, ¿Qué hace un Entrenador como tú aquí? No hay nada que ver aquí a excepción de arena y agua salada.
 Hey wait a second...
@@ -21866,7 +22057,8 @@ Mavis...
 Mavis...
 
 [Map318]
-
+I was saving this to evolve a surprise pick, but I guess I don't have a use for it anymore.
+Estaba guardando esto para evolucionar a una elección sorpresa, pero supongo que ya no me sirve.
 \PN, eh? How do ya spell that?
 ¿\PN, eh? ¿Cómo escribes eso?
 Don't want to have to redo the engraving like 8 years ago.
@@ -22023,28 +22215,6 @@ I bet people'll be falling over themselves to give you healing items, now.
 Apuesto a que la gente está haciendo fila para darte objetos curativos.
 Not me, though, I still gotta do things the old fashioned way. I'll need time to do that, if you don't mind.
 Pero no yo, todavía tengo que hacer las cosas en la forma de siempre. Necesitaré tiempo para eso, si no te importa.
-The peeps on the TV are saying that the Avatar Crisis is over now.
-La gente en la TV está diciendo que la Crisis Avatar ya terminó.
-I bet you ain't got much to spend your time on, therefore.
-Por lo tanto, apuesto que no tienes mucho en lo que pasar el tiempo.
-Wanna just keep fighting me? I collected a ton of different Pokemon during this journey, so I have a lot of teams I want to try out.
-¿Todavía quieres enfrentarme? Atrapé un montón de Pokémon diferentes en mi viaje, así que tengo un montóm de equipos que quiero probar.
-Ooh, to spice it up, I should switch to different teams between battles. A surprise every time!
-Ooh, para hacerlo más interesante, debería cambiar a diferentes equipos entre combates. ¡Una sorpresa cada vez!
-Yeah, I really love the sound of that.
-Seh, realmente me encanta el sonido de eso.
-Plus, I've stocked up on enough medicine at this point to afford healing up your team between bouts.
-Además, tengo suficiente medicina en este punto para permitirme curar a tu equipo entre cada riña.
-Lame.
-Aburrido.
-And here I put so much effort into preparing all these different parties...
-Y aquí yo poniendo todo este esfuerzo en preparar todos estos equipos...
-Let's get into it!
-¡Vamos a ello!
-Maybe later.
-Quizás luego.
-Sure, let's go.
-Seguro, vamos.
 Nothing like a warmup scrim before the next round!
 ¡Nada como una riña de calentamiento antes de la siguiente ronda!
 The battles that take place each year are nothing short of inspirational!
@@ -24222,6 +24392,32 @@ My deepest apologies, it seems we've run out of Galettes.
 Mis más sinceras disculpas, parece que se agotaron los Crêpes. 
 Just talking about it has got me in a giving mood. Here, take this.
 Sólo hablar de eso me puso de un humor caritativo. Toma, ten esto.
+What in the world is wrong with this thing...
+Pero qué rayos está mal con esta cosa...
+You see the scientist struggle with a computer that is rapidly blinking and turns off.
+Ves al científico peleando con una computador que se está encendiendo y apagando repetidamente.
+There's something up with this computer. If only I had a Porygon to work it out...
+Algo le pasa a esta computadora. Si tan solo tuviera un Porygon para solucionar esto... 
+Actually hey, could you go and get me one please?
+Hey, de hecho, ¿podrías ir y conseguirme uno por favor? 
+I've been needing one anyways, since I work with computers. So please do a trade with me for it, I'll figure out what to get you for it.
+He estado necesitando uno de todos modos, ya que trabajo con computadores. Así que por favor hazme un intercambio por él, ya veré que te puedo dar a cambio.
+Well no rush, maybe it'll mysteriously start working again... and yes, I turned it off and on again.
+Bueno, no hay apuro, quizás empezará a funcionar misteriosamente de nuevo... y sí, ya la apagué y encendí de nuevo.
+Ah, alright. Check again with me if you change your mind.
+Ah, muy bien 
+Thank you, let's get it traded.
+Gracias, hagamos el intercambio.
+You trade over the Porygon. It enters the computer, and a buzzing sound is heard as a Shedinja flies out.
+Intercambias el Porygon. Entra a la computadora, y un zumbido es escuchado mientras Shedinja sale volando. 
+You catch it to prevent it from causing any other trouble.
+Lo atrapas para impedir que cause más problemas.
+What the- it was actually a bug in there? Well damn, okay. You can keep it I guess, the computer is working perfectly.
+¿Pero qué- era eso un verdadero "bug"? Bueno rayos, ok. Supongo que puedes quedártelo, la computadora está funcionando perfectamente.
+Thank you for this!
+¡Gracias por esto!
+Yes
+Sí
 [Map347]
 
 I used to do maintanence on the bridge that crosses the Eleig river to the west of here.
@@ -24657,6 +24853,28 @@ A small logo at the bottom right identifies Bogdan Concrete as the company hired
 Un pequeño logo en la esquina inferior derecha identifica a Concreto Bogdan como la compañía contratada para este proyecto.
 Yes
 Sí
+The peeps on the TV are saying that the Avatar Crisis is over now.
+La gente en la TV está diciendo que la Crisis Avatar ya terminó.
+I bet you ain't got much to spend your time on, therefore.
+Por lo tanto, apuesto que no tienes mucho en lo que pasar el tiempo.
+Wanna just keep fighting me? I collected a ton of different Pokemon during this journey, so I have a lot of teams I want to try out.
+¿Todavía quieres enfrentarme? Atrapé un montón de Pokémon diferentes en mi viaje, así que tengo un montóm de equipos que quiero probar.
+Ooh, to spice it up, I should switch to different teams between battles. A surprise every time!
+Ooh, para hacerlo más interesante, debería cambiar a diferentes equipos entre combates. ¡Una sorpresa cada vez!
+Yeah, I really love the sound of that.
+Seh, realmente me encanta el sonido de eso.
+Plus, I've stocked up on enough medicine at this point to afford healing up your team between bouts.
+Además, tengo suficiente medicina en este punto para permitirme curar a tu equipo entre cada riña.
+Lame.
+Aburrido.
+And here I put so much effort into preparing all these different parties...
+Y aquí yo poniendo todo este esfuerzo en preparar todos estos equipos...
+Let's get into it!
+¡Vamos a ello!
+Maybe later.
+Quizás luego.
+Sure, let's go.
+Seguro, vamos.
 [Map358]
 
 Hello to you, young one.
@@ -45780,7 +45998,7 @@ Los puntos de estilo afectan x2 a este Pokémon.
 Gets 50% more healing from all sources.
 Se cura un 50% más mediante cualquier método curativo.
 Restores 1/8 HP in sunshine, 1/4 when hit by Fire-type moves. Loses 1/8 in rainstorm, takes 25% more from Water-type moves.
-Restaura 1/8 de sus PS bajo sol, 1/4 al recibir un movimiento Fuego. Pierde 1/8 bajo lluvia, recibe 25% más daño por Fuego.
+Restaura 1/8 de sus PS bajo sol, 1/4 al recibir un movimiento Fuego. Pierde 1/8 bajo lluvia, recibe 25% más daño por Agua.
 The user's Speed is doubled while using recoil moves.
 La Velocidad del usuario es duplicada mientras usa movimientos de retroceso.
 Increases Sp. Atk by 30%.
