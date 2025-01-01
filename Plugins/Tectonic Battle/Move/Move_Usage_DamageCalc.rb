@@ -470,11 +470,11 @@ class PokeBattle_Move
                 multipliers[:base_damage_multiplier] *= 1.5
             end
             # Helping Hand
-            if user.effectActive?(:HelpingHand) && !self.is_a?(PokeBattle_Confusion)
+            if user.effectActive?(:HelpingHand) && !self.is_a?(PokeBattle_SelfHit)
                 multipliers[:base_damage_multiplier] *= 1.5
             end
             # Helping Hand
-            if user.effectActive?(:Spotting) && !self.is_a?(PokeBattle_Confusion)
+            if user.effectActive?(:Spotting) && !self.is_a?(PokeBattle_SelfHit)
                 multipliers[:base_damage_multiplier] *= 1.5
             end
             # Shimmering Heat
@@ -524,7 +524,7 @@ class PokeBattle_Move
         end
 
         # Random variance (What used to be for that)
-        if !self.is_a?(PokeBattle_Confusion) && !self.is_a?(PokeBattle_Charm)
+        if !self.is_a?(PokeBattle_SelfHit)
             multipliers[:final_damage_multiplier] *= 0.9
         end
 
