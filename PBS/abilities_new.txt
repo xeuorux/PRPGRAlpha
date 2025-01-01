@@ -450,6 +450,10 @@ Name = Drifting Mist
 Description = Creates Grey Mist for three turns when entering the battlefield.
 Flags = SetupCounterAI
 #-------------------------------
+[DYNAMICENTRANCE]
+Name = Dynamic Entrance
+Description = Speed is doubled on the first turn.
+#-------------------------------
 [DYNAMO]
 Name = Dynamo
 Description = Whenever it uses a status move, becomes charged, doubling the power of its next Electric-type attack.

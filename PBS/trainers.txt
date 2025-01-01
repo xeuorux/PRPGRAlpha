@@ -3078,7 +3078,7 @@ Pokemon = FROSLASS,45
 #-------------------------------
 [SKIER_F,Natalia]
 Pokemon = MNOCTOWL,45
-    Moves = SILVERSTORM,ROOST,COLDFRONT,HONESIGHT
+    Moves = HAIL,ROOST,COLDFRONT,HONESIGHT
     AbilityIndex = 0 # Sentry
 Pokemon = MBEAUTIFLY,45
     Moves = UTURN,ICECALIBUR,PLAYROUGH,LEECHLIFE
@@ -3412,7 +3412,7 @@ Pokemon = ARATICATE,40
 Policies = HAIL_TEAM
 Flags = NoPerfect
 Pokemon = MNOCTOWL,70
-    Moves = SILVERSTORM,AURORAVEIL,BLIZZARD,COLDFRONT
+    Moves = HAIL,AURORAVEIL,BLIZZARD,COLDFRONT
     AbilityIndex = 1 # Winter Insulation
     Item = ICYROCK
 Pokemon = PERRSERKER,70
@@ -7903,7 +7903,7 @@ Pokemon = GOLISOPOD,70
 #-------------------------------
 [NIGHTMAREQUEEN_Elise,Elise]
 Pokemon = MNOCTOWL,70
-    Moves = BLIZZARD,SILVERSTORM,ROOST,AURORAVEIL
+    Moves = BLIZZARD,HAIL,ROOST,AURORAVEIL
     AbilityIndex = 1 # Winter Insulation
     Item = LIGHTCLAY
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def

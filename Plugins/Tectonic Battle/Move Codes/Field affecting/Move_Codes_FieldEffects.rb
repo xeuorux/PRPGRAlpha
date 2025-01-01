@@ -98,7 +98,7 @@ end
 #===============================================================================
 # Resets all stat steps at end of turn and at the end of the next four turns. (Grey Mist)
 #===============================================================================
-class PokeBattle_Move_StartResetAllBattlersStatStepsEachRound5 < PokeBattle_Move
+class PokeBattle_Move_StartGreyMist5 < PokeBattle_Move
     def pbEffectGeneral(_user)
         @battle.field.applyEffect(:GreyMist, 5) unless @battle.field.effectActive?(:GreyMist)
     end
@@ -120,7 +120,7 @@ class PokeBattle_Move_StartResetAllBattlersStatStepsEachRound5 < PokeBattle_Move
 end
 
 # Empowered Grey Mist
-class PokeBattle_Move_EmpoweredGreyMist < PokeBattle_Move_StartResetAllBattlersStatStepsEachRound5
+class PokeBattle_Move_EmpoweredGreyMist < PokeBattle_Move_StartGreyMist5
     include EmpoweredMove
 
     def pbEffectGeneral(user)
@@ -131,6 +131,20 @@ class PokeBattle_Move_EmpoweredGreyMist < PokeBattle_Move_StartResetAllBattlersS
         user.giveItem(:BLACKSLUDGE)
 
         transformType(user, :POISON)
+    end
+end
+
+#===============================================================================
+# Summons both hail and grey mist for 5 turns. (Diamond Dust)
+#===============================================================================
+class PokeBattle_Move_StartGreyMist5StartHail5 < PokeBattle_Move_StartGreyMist5
+    def pbMoveFailed?(user, _targets, show_message)
+        return false
+    end
+
+    def pbEffectGeneral(user)
+        super
+        @battle.pbStartWeather(user, :Hail, 5, false) unless @battle.primevalWeatherPresent?
     end
 end
 

@@ -721,8 +721,8 @@ Pokemon = AMPHAROS,70
     EV = 20,0,15,0,0,15
 Pokemon = BRAVIARY,70
     Moves = CLOSECOMBAT,BRAVEBIRD,RIGHTEOUSKICK,DISTURB
-    AbilityIndex = 1 # Sleetshaker
-    Item = CHOICESCARF
+    AbilityIndex = 1 # Dynamic Entrance
+    Item = UTILITYUMBRELLA
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 0,20,0,20,20,10
 #-------------------------------

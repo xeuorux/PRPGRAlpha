@@ -2553,6 +2553,19 @@ FunctionCode = Invalid
 Flags = CanProtect,CanMirrorMove
 Description = The foe is attacked with a blast of absolute-zero cold. The target instantly faints if it hits.
 #-------------------------------
+[SILVERSTORM]
+Name = Silver Storm
+Type = ICE
+Category = Special
+Power = 50
+Accuracy = 100
+TotalPP = 10
+Target = NearFoe
+FunctionCode = Invalid
+Flags = CanProtect,CanMirrorMove
+Description = The user creates a nascent ice storm, attacking and causing hail for eight turns.
+Animation = HAIL
+#-------------------------------
 [TRIPLEAXEL]
 Name = Triple Axel
 Type = ICE
