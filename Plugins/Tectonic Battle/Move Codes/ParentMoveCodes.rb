@@ -14,9 +14,9 @@ class PokeBattle_UnimplementedMove < PokeBattle_Move
 end
 
 #===============================================================================
-# Pseudomove for confusion damage.
+# Pseudomove parent for self-hit damage.
 #===============================================================================
-class PokeBattle_Confusion < PokeBattle_Move
+class PokeBattle_SelfHit < PokeBattle_Move
     def initialize(battle, move, basePower = 50)
         @battle     = battle
         @realMove   = move
@@ -25,7 +25,7 @@ class PokeBattle_Confusion < PokeBattle_Move
         @function   = "Basic"
         @baseDamage = basePower
         @type       = nil
-        @category   = 0
+        @category   = 4 # Adaptive
         @accuracy   = 100
         @pp         = -1
         @target     = 0
@@ -37,38 +37,33 @@ class PokeBattle_Confusion < PokeBattle_Move
         @snatched   = false
     end
 
-    def physicalMove?(_thisType = nil);    return true;  end
-    def specialMove?(_thisType = nil);     return false; end
     def pbCriticalOverride(_user, _target); return -1; end
 end
 
 #===============================================================================
-# Pseudomove for charm damage.
+# Pseudomove for physical self-hit damage.
 #===============================================================================
-class PokeBattle_Charm < PokeBattle_Move
+class PokeBattle_SelfHitPhysical < PokeBattle_SelfHit
     def initialize(battle, move, basePower = 50)
-        @battle     = battle
-        @realMove   = move
-        @id         = 0
-        @name       = ""
-        @function   = "Basic"
-        @baseDamage = basePower
-        @type       = nil
+        super
+        @category   = 0
+    end
+
+    def physicalMove?(_thisType = nil);    return true;  end
+    def specialMove?(_thisType = nil);     return false; end
+end
+
+#===============================================================================
+# Pseudomove for special self-hit damage.
+#===============================================================================
+class PokeBattle_SelfHitSpecial < PokeBattle_SelfHit
+    def initialize(battle, move, basePower = 50)
+        super
         @category   = 1
-        @accuracy   = 100
-        @pp         = -1
-        @target     = 0
-        @priority   = 0
-        @flags      = ""
-        @effectChance = 0
-        @calcType   = nil
-        @powerBoost = false
-        @snatched   = false
     end
 
     def physicalMove?(_thisType = nil);    return false; end
     def specialMove?(_thisType = nil);     return true; end
-    def pbCriticalOverride(_user, _target); return -1; end
 end
 
 #===============================================================================

@@ -124,15 +124,17 @@ class PokeBattle_Battler
         @battle.eachBattler { |b| b.pbContinualAbilityChecks } # Trace, end primordial weathers
     end
 
-    def pbConfusionDamage(msg, charm = false, superEff = false, basePower = 50)
+    def pbConfusionDamage(msg, superEff = false, basePower = 50, category: 3)
         @damageState.reset
         @damageState.initialHP = @hp
-        confusionMove = if charm
-                            PokeBattle_Charm.new(@battle, nil,
-                          basePower)
-                        else
-                            PokeBattle_Confusion.new(@battle, nil, basePower)
-                        end
+        confusionMove = case category
+        when 0
+            PokeBattle_SelfHitPhysical.new
+        when 1
+            PokeBattle_SelfHitSpecial.new
+        when 3
+            PokeBattle_SelfHit.new
+        end
         confusionMove.calcType = confusionMove.pbCalcType(self) # nil
         @damageState.typeMod = confusionMove.pbCalcTypeMod(confusionMove.calcType, self, self) # 8
         @damageState.typeMod *= 2.0 if superEff

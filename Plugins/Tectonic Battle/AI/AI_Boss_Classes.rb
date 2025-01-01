@@ -473,13 +473,6 @@ class PokeBattle_AI_ELECTRODE < PokeBattle_AI_Boss
     end
 end
 
-class PokeBattle_AI_INCINEROAR < PokeBattle_AI_Boss
-    def initialize(user, battle)
-        super
-        @lastTurnOnly += %i[SWAGGER TAUNT]
-    end
-end
-
 class PokeBattle_AI_LINOONE < PokeBattle_AI_Boss
     def initialize(user, battle)
         super
@@ -707,7 +700,7 @@ class PokeBattle_AI_GRIMMSNARL < PokeBattle_AI_Boss
         super
         secondMoveEveryTurn(:TEARFULLOOK)
 
-        @warnedIFFMove.add(:SWAGGER, {
+        @warnedIFFMove.add(:BACKHAND, {
             :condition => proc { |_move, _user, target, battle|
                 next target.fullHealth?
             },
@@ -792,11 +785,10 @@ end
 class PokeBattle_AI_ELDEGOSS < PokeBattle_AI_Boss
     def initialize(user, battle)
         super
-        @useMoveIFF.add(:SWAGGER, proc { |_move, user, target, _battle|
-            next target.pbAttack(true) > target.pbDefense(true)
-        })
-        @useMoveIFF.add(:FLATTER, proc { |_move, user, target, _battle|
-            next target.pbSpAtk(true) > target.pbSpDef(true)
+        @useMoveIFF.add(:BACKHAND, proc { |_move, user, target, _battle|
+            next true if target.pbAttack(true) > target.pbDefense(true)
+            next true if target.pbSpAtk(true) > target.pbSpDef(true)
+            next false
         })
     end
 end

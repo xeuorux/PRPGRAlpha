@@ -567,17 +567,6 @@ Flags = CanProtect,CanMirrorMove
 Description = A barrage of star-shaped rays are shot at the opposing team, never missing.
 Animation = SWIFT
 #-------------------------------
-[SWAGGER]
-Name = Swagger
-Type = NORMAL
-Category = Status
-Accuracy = 100
-TotalPP = 12
-Target = NearOther
-FunctionCode = RaiseTargetAtk3TargetHitsSelfPhysical
-Flags = CanProtect,CanMagicCoat,CanMirrorMove
-Description = The target's Attack stat is raised by three steps. It then hits itself in a rage.
-#-------------------------------
 [THIEVINGSPREE]
 Name = Thieving Spree
 Type = NORMAL
@@ -6123,6 +6112,18 @@ Flags = CanProtect,CanMirrorMove
 Description = Darkness rolls over the field, damaging all other Pokémon and setting Grey Mist for 5 turns.
 Animation = GREYMIST
 #-------------------------------
+[BACKHAND]
+Name = Backhand
+Type = DARK
+Category = Status
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = RaiseTargetAtkSpAtk3TargetHitsSelfAdaptive
+Flags = CanProtect,CanMagicCoat,CanMirrorMove
+Description = The user insults the target using a compliment. The target's attacking stats are raised by 3 steps, but they hurt themselves in confusion.
+Animation = FLATTER
+#-------------------------------
 [BLACKOUT]
 Name = Blackout
 Type = DARK
@@ -6263,17 +6264,6 @@ Target = NearOther
 FunctionCode = RaiseUserSpAtk5IfTargetFaints
 Flags = CanProtect,CanMirrorMove
 Description = When the user knocks out a target with this move, the user's Sp. Atk stat rises by five steps.
-#-------------------------------
-[FLATTER]
-Name = Flatter
-Type = DARK
-Category = Status
-Accuracy = 100
-TotalPP = 12
-Target = NearOther
-FunctionCode = RaiseTargetSpAtk3TargetHitsSelfSpecial
-Flags = CanProtect,CanMagicCoat,CanMirrorMove
-Description = The target's Sp. Atk stat is raised by three steps. It then hurts itself in its mental turmoil.
 #-------------------------------
 [GLEEFULGRASP]
 Name = Gleeful Grasp

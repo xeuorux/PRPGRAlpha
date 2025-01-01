@@ -633,6 +633,17 @@ FunctionCode = Invalid
 Flags = CanProtect,CanMirrorMove
 Description = The target is slugged with a punch thrown at maximum power.
 #-------------------------------
+[SWAGGER]
+Name = Swagger
+Type = NORMAL
+Category = Status
+Accuracy = 100
+TotalPP = 12
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect,CanMagicCoat,CanMirrorMove
+Description = The target's Attack stat is raised by three steps. It then hits itself in a rage.
+#-------------------------------
 [TAILSLAP]
 Name = Tail Slap
 Type = NORMAL
@@ -2643,6 +2654,17 @@ Target = NearOther
 FunctionCode = Invalid
 Flags = CanProtect,CanMagicCoat,CanMirrorMove
 Description = The user prevents the target from using its held item.
+#-------------------------------
+[FLATTER]
+Name = Flatter
+Type = DARK
+Category = Status
+Accuracy = 100
+TotalPP = 12
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect,CanMagicCoat,CanMirrorMove
+Description = The target's Sp. Atk stat is raised by three steps. It then hurts itself in its mental turmoil.
 #-------------------------------
 [NASTYPLOT]
 Name = Nasty Plot
