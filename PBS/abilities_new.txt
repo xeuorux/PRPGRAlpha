@@ -1365,8 +1365,7 @@ Description = Takes no damage from status ailments.
 #-------------------------------
 [PLANARVEIL]
 Name = Planar Veil
-Description = Sets screens for twice as long during eclipse.
-Flags = EclipseSynergy
+Description = Sets screens for two more turns.
 #-------------------------------
 [PLASMAGLOBE]
 Name = Plasma Globe
@@ -1968,6 +1967,10 @@ Description = Powers up Poison-type moves of itself and its allies by 50%.
 [TOXINTAX]
 Name = Toxin Tax
 Description = Heals based on the damage other battlers take from being poisoned.
+#-------------------------------
+[TRACTORBEAM]
+Name = Tractor Beam
+Description = Prevents the foe from escaping during eclipse.
 #-------------------------------
 [TRAPPER]
 Name = Trapper

@@ -22,6 +22,12 @@ BattleHandlers::TrappingTargetAbility.add(:FROSTPITALITY,
   }
 )
 
+BattleHandlers::TrappingTargetAbility.add(:TRACTORBEAM,
+  proc { |ability, switcher, _bearer, battle|
+      next true if battle.eclipsed?
+  }
+)
+
 BattleHandlers::TrappingTargetAbility.add(:MAGNETTRAP,
   proc { |ability, switcher, bearer, _battle|
       next true if bearer.pbSpAtk > switcher.pbSpAtk

@@ -3063,7 +3063,7 @@ Pokemon = MEOWSTIC,45
 [ARTIST,Arnold]
 Pokemon = VENOMOTH,45
     Moves = PENUMBRA,PSYCHIC,CREEPOUT,BUGBUZZ
-    AbilityIndex = 0 # Fluffy
+    AbilityIndex = 0 # Fell Omen
     Item = SITRUSBERRY
 Pokemon = CLAYDOL,45
     Moves = LEYLINEBURST,EERIESPELL,EARTHPOWER,SELFDESTRUCT
@@ -3264,7 +3264,7 @@ Pokemon = GALLADE,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,0,20,20,0
 Pokemon = KOMMOO,70
-    Moves = CLANGOROUSSOUL,CLANGINGSCALES,IRONTAIL,EARTHQUAKE
+    Moves = CLANGOROUSSOUL,DRACOMETEOR,IRONTAIL,EARTHQUAKE
     AbilityIndex = 0 # Sound Barrier
     Item = LEFTOVERS
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -3500,7 +3500,7 @@ Pokemon = RAICHU,37
 [PSYCHIC_M2,Rohan]
 Pokemon = VENOMOTH,36
     Moves = PSYBEAM,CREEPOUT,SIGNALBEAM
-    AbilityIndex = 0 # Fluffy
+    AbilityIndex = 1 # Tinted Lens
 Pokemon = POLIWRATH,37
     Moves = CROSSCHOP,LIQUIDATION,NERVEBLOCK,ENCORE
     AbilityIndex = 0 # Counter Flow
@@ -4305,7 +4305,7 @@ Pokemon = ORANGURU,48
 #-------------------------------
 [LINEBACKER,Lorenzo]
 Pokemon = KOMMOO,48
-    Moves = CLANGINGSCALES,AURASPHERE
+    Moves = CRUELTY,AURASPHERE,NERVEBLOCK,SHOUT
     AbilityIndex = 0 # Sound Barrier
     Item = AGILITYHERB
 Pokemon = GRENINJA,48
@@ -7815,8 +7815,8 @@ Pokemon = HAXORUS,70
 Pokemon = STARMIE,70
     AbilityIndex = 0 # Stars Align
     Item = SITRUSBERRY
-Pokemon = INFERNAPE,70
-    AbilityIndex = 1 # Heaven's Crown
+Pokemon = DRAMPA,70
+    AbilityIndex = 1 # Apprehensive
     Item = SHELLBELL
 #-------------------------------
 [SAILOR2,Noah]
@@ -7858,10 +7858,10 @@ Pokemon = CLAYDOL,60
     Moves = LIGHTSCREEN,REFLECT,MINDWARP,RAPIDSPIN
     AbilityIndex = 0 # Planar Veil
     Item = LIGHTCLAY
-Pokemon = INFERNAPE,60
-    Moves = NERVEBLOCK,MACHPUNCH,FLAMETHROWER,TAUNT
-    AbilityIndex = 1 # Heaven's Crown
-    Item = FIGHTINGGEM
+Pokemon = ZOROARK,60
+    Moves = SNARL,BLACKOUT,TAUNT,CRAFTYSHIELD
+    AbilityIndex = 1 # Territorial
+    Item = FOCUSSASH
 Pokemon = LATIOS,60
     Moves = DRACOMETEOR,SHADOWBALL,AURASPHERE,PSYCHIC
     AbilityIndex = 0 # Levitate
@@ -8033,7 +8033,7 @@ Pokemon = MMUSHARNA,70
     Item = CHESTOBERRY
 Pokemon = PORYGONZ,70
     Moves = TRIATTACK,DISCHARGE,HEX,NUMB
-    AbilityIndex = 1 # Shaky Code
+    AbilityIndex = 1 # Adapted
 Pokemon = INCINEROAR,70
     Moves = SUBMISSION,KNOCKOFF,BLAZEKICK,BULKUP
     AbilityIndex = 0 # Intimidate
@@ -8119,7 +8119,7 @@ Pokemon = BRONZONG,70
     EV = 20,0,15,0,0,15
 Pokemon = PORYGONZ,70
     Moves = PHANTOMGATE,SUBLIMATE,HONESIGHT,BURNUP
-    AbilityIndex = 1 # Shaky Code
+    AbilityIndex = 1 # Adapted
     Item = COLBURBERRY
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,0,20,20,0
@@ -8146,7 +8146,7 @@ Pokemon = MUSHARNA,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,20,10,0,20,0
 Pokemon = KOMMOO,70
-    Moves = CLANGOROUSSOUL,CLANGINGSCALES,CLOSECOMBAT,FLASHCANNON
+    Moves = CLANGOROUSSOUL,OCCULTATION,CLOSECOMBAT,FLASHCANNON
     AbilityIndex = 1 # Plot Armor
     Item = SALACBERRY
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def

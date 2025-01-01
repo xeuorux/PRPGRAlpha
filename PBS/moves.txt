@@ -6014,18 +6014,6 @@ Flags = CanProtect,CanMirrorMove
 EffectChance = 100
 Description = The user swings its tail wildly and attacks opposing Pokémon, lowering their Attack stats by two steps.
 #-------------------------------
-[CLANGINGSCALES]
-Name = Clanging Scales
-Type = DRAGON
-Category = Special
-Power = 115
-Accuracy = 100
-TotalPP = 5
-Target = AllNearFoes
-FunctionCode = LowerUserDef3
-Flags = CanProtect,CanMirrorMove,Sound
-Description = The user rubs its scales and makes a huge noise. Also lowers the user's Defense stat by three steps.
-#-------------------------------
 [CLANGOROUSSOUL]
 Name = Clangorous Soul
 Type = DRAGON

@@ -668,7 +668,7 @@ class PokeBattle_Battler
         ret = baseDuration
         ret += 3 if shouldItemApply?(:LIGHTCLAY,aiCheck)
         ret += 6 if shouldItemApply?(:BRIGHTCLAY,aiCheck)
-        ret *= 2 if shouldAbilityApply?(:PLANARVEIL,aiCheck) && @battle.eclipsed?
+        ret += 2 if shouldAbilityApply?(:PLANARVEIL,aiCheck)
         return ret
     end
 

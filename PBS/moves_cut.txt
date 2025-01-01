@@ -1310,6 +1310,16 @@ Flags = CanProtect,CanMagicCoat,CanMirrorMove
 Description = The target is covered in a powder that explodes if it uses a Fire-type move. It always goes first.
 Animation = POWDER
 #-------------------------------
+[HIVEMIND]
+Name = Hive Mind
+Type = BUG
+Category = Status
+Accuracy = 0
+TotalPP = 10
+Target = NearAlly
+FunctionCode = Invalid
+Description = The user makes its ally perform the move in the user's first slot.
+#-------------------------------
 [POWDER]
 Name = Powder
 Type = BUG
@@ -2593,6 +2603,18 @@ FunctionCode = Invalid
 Flags = CanProtect,CanMirrorMove
 Description = The user dismisses the target, forcing it to switch out. Always goes last.
 Animation = ROAR
+#-------------------------------
+[CLANGINGSCALES]
+Name = Clanging Scales
+Type = DRAGON
+Category = Special
+Power = 115
+Accuracy = 100
+TotalPP = 5
+Target = AllNearFoes
+FunctionCode = Invalid
+Flags = CanProtect,CanMirrorMove,Sound
+Description = The user rubs its scales and makes a huge noise. Also lowers the user's Defense stat by three steps.
 #-------------------------------
 [DRAGONBLOOD]
 Name = Dragon Blood

@@ -2306,16 +2306,6 @@ FunctionCode = RaiseTargetWorstThreeStats1
 Description = The user raises all of the target's attacking and defensive stats.
 Animation = AROMATICMIST
 #-------------------------------
-[HIVEMIND]
-Name = Hive Mind
-Type = BUG
-Category = Status
-Accuracy = 0
-TotalPP = 10
-Target = NearAlly
-FunctionCode = TargetUsesMoveInUserFirstSlot
-Description = The user makes its ally perform the move in the user's first slot.
-#-------------------------------
 [IRRITATE]
 Name = Irritate
 Type = BUG
