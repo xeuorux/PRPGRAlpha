@@ -104,18 +104,6 @@ FunctionCode = Basic
 Flags = CanProtect,CanMirrorMove,Sound
 Description = The user attacks everything around it with the destructive power of a terrible, explosive sound.
 #-------------------------------
-[CHIPAWAY]
-Name = Chip Away
-Type = NORMAL
-Category = Physical
-Power = 70
-Accuracy = 100
-TotalPP = 15
-Target = NearOther
-FunctionCode = IgnoreTargetDefSpDefEvaStatStages
-Flags = CanProtect,CanMirrorMove
-Description = Seeking an opening, the user strikes continually. Ignores the target's stat step changes.
-#-------------------------------
 [CONVERSION]
 Name = Conversion
 Type = NORMAL
@@ -148,19 +136,6 @@ Target = NearOther
 FunctionCode = StealsItem
 Flags = CanProtect,CanMirrorMove
 Description = The user approaches the target, then steals their item. Items stolen from wild Pokémon are stored.
-#-------------------------------
-[CRUSHCLAW]
-Name = Crush Claw
-Type = NORMAL
-Category = Physical
-Power = 75
-Accuracy = 100
-TotalPP = 10
-Target = NearOther
-FunctionCode = LowerTargetDef3
-Flags = CanProtect,CanMirrorMove
-EffectChance = 100
-Description = The user slashes the target with hard and sharp claws, lowering their Defense by three steps.
 #-------------------------------
 [DIZZYPUNCH]
 Name = Dizzy Punch
@@ -307,19 +282,6 @@ Flags = CanProtect,CanMirrorMove
 EffectChance = 100
 Description = An attack that hits first and makes the target flinch. It only works the first turn the user is in battle.
 #-------------------------------
-[FEINT]
-Name = Feint
-Type = NORMAL
-Category = Physical
-Power = 30
-Accuracy = 100
-TotalPP = 10
-Target = NearOther
-Priority = 2
-FunctionCode = RemoveProtections
-Flags = CanMirrorMove
-Description = An attack that hits a target using Protect or Detect. It also lifts the effects of those moves.
-#-------------------------------
 [FLAIL]
 Name = Flail
 Type = NORMAL
@@ -457,18 +419,6 @@ Target = NearOther
 FunctionCode = CannotMakeTargetFaint
 Flags = CanProtect,CanMirrorMove
 Description = The user holds back when it attacks, and the target is left with at least 1 HP.
-#-------------------------------
-[HORNATTACK]
-Name = Horn Attack
-Type = NORMAL
-Category = Physical
-Power = 65
-Accuracy = 100
-TotalPP = 20
-Target = NearOther
-FunctionCode = Basic
-Flags = CanProtect,CanMirrorMove
-Description = The target is jabbed with a sharply pointed horn to inflict damage.
 #-------------------------------
 [HYPERBEAM]
 Name = Hyper Beam
@@ -1019,19 +969,6 @@ Target = User
 FunctionCode = UserAddStockpileRaiseDefSpDef2
 Flags = CanSnatch
 Description = The user charges up power and raises its Defense and Sp. Def by two steps. The move can be stacked twice.
-#-------------------------------
-[STOMP]
-Name = Stomp
-Type = NORMAL
-Category = Physical
-Power = 65
-Accuracy = 100
-TotalPP = 15
-Target = NearOther
-FunctionCode = Flinch
-Flags = CanProtect,CanMirrorMove,Kicking
-EffectChance = 30
-Description = The target is stomped with a big foot. It has a 30% chance to make the target flinch.
 #-------------------------------
 [STRUGGLE]
 Name = Struggle

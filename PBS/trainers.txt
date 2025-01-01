@@ -433,7 +433,7 @@ Pokemon = ROSELIA,22
 #-------------------------------
 [GAMBLER,Gregor]
 Pokemon = MEOWTH,21
-    Moves = PAYDAY,FEINT,STAMPDOWN
+    Moves = PAYDAY,SCRATCH,STAMPDOWN
     AbilityIndex = 1 # All That Glitters
     Item = NORMALGEM,GROUNDGEM
 Pokemon = AMEOWTH,22
@@ -1450,7 +1450,7 @@ Pokemon = MTANGELA,27
     AbilityIndex = 0 # Petrifying
     Item = SITRUSBERRY
 Pokemon = CORVISQUIRE,28
-    Moves = STEELWING,CRUSHCLAW,PLUCK,HONECLAWS
+    Moves = STEELWING,TAUNT,PLUCK,HONECLAWS
     AbilityIndex = 0 # Mirror Armor
 Pokemon = GABITE,27
     Moves = GLARE,BITE,TREMOR,CRUELTY
@@ -2226,7 +2226,7 @@ Pokemon = SKARMORY,40
     Moves = FEATHERWARD,STEELWING,COLDFRONT,SPIKES
     AbilityIndex = 1 # Weathered
 Pokemon = RAMPARDOS,40
-    Moves = CRANIALGUARD,CRUNCH,ADAMANTINEPRESS,CHIPAWAY
+    Moves = CRANIALGUARD,CRUNCH,ADAMANTINEPRESS,ROCKPOLISH
     AbilityIndex = 0 # Sand Rush
     Item = ROCKGEM
 #-------------------------------
@@ -2976,11 +2976,11 @@ Pokemon = DRAPION,55
 #-------------------------------
 [SWIMMER_F5,Shreya]
 Pokemon = FERALIGATR,56
-    Moves = RIPTURN,CRUNCH,AQUAJET,CHIPAWAY
+    Moves = RIPTURN,CRUNCH,AQUAJET,ICEFANG
     AbilityIndex = 0 # Ferocious
     Item = SITRUSBERRY
 Pokemon = ARMALDO,56
-    Moves = UTURN,ADAMANTINEPRESS,CRUSHCLAW,WAVEBREAK
+    Moves = UTURN,ADAMANTINEPRESS,AQUAJET,WAVEBREAK
     AbilityIndex = 0 # Selective Scutes
 Pokemon = JOLTEON,56
     Moves = NUMB,VOLTSWITCH,SHOUT,STELLARATE
@@ -3361,7 +3361,7 @@ Pokemon = ALTARIA,30
     AbilityIndex = 0 # Levitate
     Item = LEFTOVERS
 Pokemon = KANGASKHAN,30
-    Moves = PUMMEL,SUCKERPUNCH,FLAMECHARGE,STOMP
+    Moves = PUMMEL,SUCKERPUNCH,FLAMECHARGE,HEADBUTT
     AbilityIndex = 0 # Inner Focus
 #-------------------------------
 [TRAINER_Candy,Candy]

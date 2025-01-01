@@ -68,6 +68,18 @@ Target = User
 FunctionCode = Invalid
 Description = The Pokémon congratulates you on your special day!
 #-------------------------------
+[CHIPAWAY]
+Name = Chip Away
+Type = NORMAL
+Category = Physical
+Power = 70
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect,CanMirrorMove
+Description = Seeking an opening, the user strikes continually. Ignores the target's stat step changes.
+#-------------------------------
 [COMETPUNCH]
 Name = Comet Punch
 Type = NORMAL
@@ -127,6 +139,19 @@ Target = BothSides
 FunctionCode = Invalid
 Flags = CanMirrorMove
 Description = With its mysterious power, the user swaps the effects on either side of the field.
+#-------------------------------
+[CRUSHCLAW]
+Name = Crush Claw
+Type = NORMAL
+Category = Physical
+Power = 75
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect,CanMirrorMove
+EffectChance = 100
+Description = The user slashes the target with hard and sharp claws, lowering their Defense by three steps.
 #-------------------------------
 [CRUSHGRIP]
 Name = Crush Grip
@@ -222,6 +247,19 @@ FunctionCode = Invalid
 Flags = CanProtect,CanMirrorMove
 Description = A full-power special attack that grows more powerful the more the user likes its Trainer.
 Animation = RETURN
+#-------------------------------
+[FEINT]
+Name = Feint
+Type = NORMAL
+Category = Physical
+Power = 30
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+Priority = 2
+FunctionCode = Invalid
+Flags = CanMirrorMove
+Description = An attack that hits a target using Protect or Detect. It also lifts the effects of those moves.
 #-------------------------------
 [FLASH]
 Name = Flash
@@ -349,6 +387,18 @@ TotalPP = 30
 Target = NearAlly
 FunctionCode = Invalid
 Description = The user and an ally hold hands. This makes them very happy.
+#-------------------------------
+[HORNATTACK]
+Name = Horn Attack
+Type = NORMAL
+Category = Physical
+Power = 65
+Accuracy = 100
+TotalPP = 20
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect,CanMirrorMove
+Description = The target is jabbed with a sharply pointed horn to inflict damage.
 #-------------------------------
 [HORNDRILL]
 Name = Horn Drill
@@ -557,6 +607,19 @@ Target = NearOther
 FunctionCode = Invalid
 Flags = CanProtect,CanMirrorMove
 Description = The target is hit with a destructive shock wave that always inflicts 20 HP damage.
+#-------------------------------
+[STOMP]
+Name = Stomp
+Type = NORMAL
+Category = Physical
+Power = 65
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect,CanMirrorMove,Kicking
+EffectChance = 30
+Description = The target is stomped with a big foot. It has a 30% chance to make the target flinch.
 #-------------------------------
 [STRENGTH]
 Name = Strength
