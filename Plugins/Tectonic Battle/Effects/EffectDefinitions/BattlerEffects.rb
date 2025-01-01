@@ -794,15 +794,18 @@ GameData::BattleEffect.register_effect(:Battler, {
     :type => :Integer,
     :baton_passed => true,
     :apply_proc => proc do |battle, battler, value|
-        if value > 5
-            battle.pbDisplay(_INTL("{1} heard the Perish Song, but weakly!", battler.pbThis, value))
-            battle.pbDisplay(_INTL("It will faint in {2} turns!", battler.pbThis, value))
+        if battler.boss?
+            battle.pbDisplay(_INTL("{1} heard the Perish Song! It will take massive damage in {2} turns!", battler.pbThis, value))
         else
             battle.pbDisplay(_INTL("{1} heard the Perish Song! It will faint in {2} turns!", battler.pbThis, value))
         end
     end,
     :expire_proc => proc do |battle, battler|
-        battler.pbReduceHP(battler.hp)
+        if battler.boss? # bosses only lose half a health bar
+            battler.pbReduceHP(battler.avatarHealthPerPhase / 2.0)
+        else
+            battler.pbReduceHP(battler.hp)
+        end
         battler.pbFaint if battler.fainted?
         if battler.hasActiveAbility?(:REAPWHATYOUSOW, true) &&
                 battler.countsAs?(:MAROMATISSE) &&

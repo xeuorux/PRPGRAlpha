@@ -695,6 +695,11 @@ class PokeBattle_Battler
         return (@totalhp * hpFraction).floor
     end
 
+    def avatarHealthPerPhase
+        raise _INTL("#{@name} isn't an avatar, but something is requesting its Health Per Phase!") unless boss?
+        return (@totalhp / avatarData.num_phases.to_f).ceil
+    end
+
     #=============================================================================
     # Methods relating to this battler's position on the battlefield
     #=============================================================================
