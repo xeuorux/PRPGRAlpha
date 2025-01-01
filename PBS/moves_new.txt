@@ -148,7 +148,7 @@ TotalPP = 4
 Target = User
 FunctionCode = RaiseUserDefSpDef2CurlsUp
 Flags = CanSnatch
-Description = The user curls up to conceal weak spots and raise both of its defensive stats.
+Description = The user curls up to conceal weak spots and raise both of its defensive stats by two steps.
 Animation = DEFENSECURL
 #-------------------------------
 [DAZZLE]
@@ -4065,18 +4065,6 @@ FunctionCode = HealUserHalfOfTotalHPStartHealUserEachTurn
 Flags = CanSnatch
 Description = The user rests in a riverbed, restoring its HP by half of max, and forming an Aqua Ring around themselves, healing 10% HP per turn.
 Animation = REST
-#-------------------------------
-[SHELLTER]
-Name = Shellter
-Type = WATER
-Category = Status
-Accuracy = 0
-TotalPP = 4
-Target = User
-FunctionCode = RaiseUserDefSpDef2GainsShellArmor
-Flags = CanSnatch
-Description = The user withdraws its body into its hard shell, raising both defensive stats by two steps and gaining Shell Armor.
-Animation = WITHDRAW
 #-------------------------------
 [SILTSURGE]
 Name = Silt Surge

@@ -1738,6 +1738,18 @@ Flags = CanProtect,CanMirrorMove
 Description = Creates a violent spring beneath enemies, or a healing one beneath allies.
 Animation = WATERPULSE
 #-------------------------------
+[SHELLTER]
+Name = Shellter
+Type = WATER
+Category = Status
+Accuracy = 0
+TotalPP = 4
+Target = User
+FunctionCode = Invalid
+Flags = CanSnatch
+Description = The user withdraws its body into its hard shell, raising both defensive stats by two steps and gaining Shell Armor.
+Animation = WITHDRAW
+#-------------------------------
 [SOAK]
 Name = Soak
 Type = WATER
