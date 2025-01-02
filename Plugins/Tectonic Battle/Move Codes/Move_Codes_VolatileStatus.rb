@@ -784,6 +784,7 @@ class PokeBattle_Move_FractureTarget < PokeBattle_Move
     def ignoresSubstitute?(_user); return true; end
 
     def pbFailsAgainstTarget?(user, target, show_message)
+        return false if damagingMove?
         if target.effectActive?(:Fracture)
             @battle.pbDisplay(_INTL("But it failed, since #{target.pbThis(true)} is already fractured!")) if show_message
             return true
@@ -792,12 +793,18 @@ class PokeBattle_Move_FractureTarget < PokeBattle_Move
     end
 
     def pbEffectAgainstTarget(user, target)
+        return if damagingMove?
+        target.applyEffect(:Fracture)
+    end
+
+    def pbAdditionalEffect(user, target)
+        return if target.damageState.substitute
+        return if target.effectActive?(:Fracture)
         target.applyEffect(:Fracture)
     end
 
     def getEffectScore(user, target)
-        score = getFractureEffectScore(user, target)
-        return score
+        return getFractureEffectScore(user, target)
     end
 end
 
@@ -808,6 +815,7 @@ class PokeBattle_Move_JinxTarget < PokeBattle_Move
     def ignoresSubstitute?(_user); return true; end
 
     def pbFailsAgainstTarget?(user, target, show_message)
+        return false if damagingMove?
         if target.effectActive?(:Jinxed)
             @battle.pbDisplay(_INTL("But it failed, since #{target.pbThis(true)} is already jinxed!")) if show_message
             return true
@@ -816,11 +824,17 @@ class PokeBattle_Move_JinxTarget < PokeBattle_Move
     end
 
     def pbEffectAgainstTarget(user, target)
+        return if damagingMove?
+        target.applyEffect(:Jinxed)
+    end
+
+    def pbAdditionalEffect(user, target)
+        return if target.damageState.substitute
+        return if target.effectActive?(:Jinxed)
         target.applyEffect(:Jinxed)
     end
 
     def getEffectScore(user, target)
-        score = getJinxEffectScore(user, target)
-        return score
+        return getJinxEffectScore(user, target)
     end
 end
