@@ -309,6 +309,7 @@ class PokeBattle_Scene
           trueChance = @battle.captureChanceCalc(ballTarget.pokemon,ballTarget,nil,itemSym)
           chance = (trueChance*100/5).floor * 5
           chance = 100 if chance > 100
+          chance = 0 if chance < 0
           case chance
           when 0
             pbMessage(_INTL("This ball has a very low chance to capture {1}.",ballTarget.pbThis(true)))

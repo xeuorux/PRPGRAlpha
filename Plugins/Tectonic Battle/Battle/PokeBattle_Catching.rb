@@ -287,11 +287,11 @@ class PokeBattle_Battle
         ultraBeast = %i[NIHILEGO BUZZWOLE PHEROMOSA XURKITREE CELESTEELA
                         KARTANA GUZZLORD POIPOLE NAGANADEL STAKATAKA
                         BLACEPHALON].include?(pkmn.species)
-        if !ultraBeast || ball == :BEASTBALL
-            catch_rate = BallHandlers.modifyCatchRate(ball, catch_rate, self, battler, ultraBeast)
-        else
-            # All balls but the beast ball have a 1/10 chance to catch Ultra Beasts
+        # All balls but the beast ball have a 1/10 chance to catch Ultra Beasts
+        if ultraBeast && ball != :BEASTBALL 
             catch_rate /= 10
+        else
+            catch_rate = BallHandlers.modifyCatchRate(ball, catch_rate, self, battler, ultraBeast)
         end
         catch_rate = (catch_rate * 1.5).floor if ballMimicActive?
         return PokeBattle_Battle.captureThresholdCalcInternals(battler.status, battler.hp, battler.totalhp, catch_rate)
