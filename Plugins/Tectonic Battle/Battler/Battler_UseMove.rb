@@ -129,13 +129,14 @@ class PokeBattle_Battler
         @damageState.initialHP = @hp
         confusionMove = case category
         when 0
-            PokeBattle_SelfHitPhysical.new
+            PokeBattle_SelfHitPhysical.new(@battle, nil, basePower)
         when 1
-            PokeBattle_SelfHitSpecial.new
+            PokeBattle_SelfHitSpecial.new(@battle, nil, basePower)
         when 3
-            PokeBattle_SelfHit.new
+            PokeBattle_SelfHit.new(@battle, nil, basePower)
         end
         confusionMove.calcType = confusionMove.pbCalcType(self) # nil
+        confusionMove.calculateUsageOverrides(self, [self])
         @damageState.typeMod = confusionMove.pbCalcTypeMod(confusionMove.calcType, self, self) # 8
         @damageState.typeMod *= 2.0 if superEff
         confusionMove.pbCheckDamageAbsorption(self, self)
