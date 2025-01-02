@@ -868,6 +868,10 @@ LandSparse,20
     25,HEATMOR,48,50
     25,PYUKUMUKU,48,50
 #-------------------------------
+[299] # Fin Center
+Special
+    1,COTTONEE,20
+#-------------------------------
 [301] # County Park
 Land,20
     20,BUNNELBY,21,23
