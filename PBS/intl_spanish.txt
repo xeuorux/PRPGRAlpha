@@ -38132,7 +38132,7 @@ Prominencia
 Icicle Pin
 Trampa Carámbano
 Head Throw
-Perder la Cabeza
+Perder La Cabeza
 Rotary Headbutt
 Cabezazo Rotatorio
 Diamond Field
@@ -38519,6 +38519,80 @@ Primeval Polarized Room
 Zona Polarizada Primitiva
 Primeval Odd Room
 Zona Anómala Primitiva
+Sweet Kiss
+Beso Dulce
+Blunt Force
+Traumatismo
+Embrittle
+Quebrantar
+Monolith Drop
+Caída de Monolito
+Rockalanche
+Rocavalancha
+Sling Shot
+Tirachinas
+Agonize
+Agonizar
+Carapace Crush
+Caparazón Pesado
+Irritate
+Irritar
+Stinging Jab
+Punzada
+Bind Fate
+Maldición de Atadura
+Drift Off
+Adormecer
+Sunder Fate
+Destino Final
+Tide Pull
+A La Deriva
+Waterlog
+Embeber
+Wavebreak
+Rompe-Olas
+Whelm
+Oleada
+Lightning Slam
+Relámpachoque
+Live Wire
+Cable Vivo
+Short Circuit
+Cortocircuito
+Diamond Dust
+Polvo Diamantino
+Snow Spill
+Desparranieve
+Heliopause
+Heliopausa
+Backhand
+Del Revés
+Disarming Shot
+Aplacamiento 
+Dunk
+Zambullir
+Keelhaul
+Doblegar
+Wet Work
+Baño de Sangre
+Bucket Drop
+Cubo de Agua
+Fool
+Tomar el Pelo
+Frolic
+Travesura
+Ill Wishes
+Malos Deseos
+Misadventure
+Desventura
+Mishap
+Contratiempo
+Superstition
+Superstición
+True Name
+Nombre Verdadero
+Primeval Waterlog
+Embeber Primitivo
 [6]
 Using its tough and impressive horn, the user rams into the target with no letup.
 Usando su impresionante cuerno, el usuario embiste al rival.
@@ -39726,8 +39800,8 @@ The user crashes into the target with its quills. It leaves the target poisoned.
 El usuario ataca al objetivo con sus púas. Siempre envenena al objetivo.
 The user sings with deathly sounds to harm the target. It has a 20% chance to reduce Sp. Def.
 El usuario canta letalmente al objetivo. Tiene un 20% de disminuir la Defensa Especial del objetivo.
-The user attacks with a horrible clattering noise. It has a 20% chance to lower Sp. Atk.
-El usuario ataca con un horrible sonido retumbante. Tiene un 20% de disminuir el Ataque Especial del objetivo.
+The user attacks with a horrible clattering noise. It has a 20% chance to lower Sp. Def.
+El usuario ataca con un horrible sonido retumbante. Tiene un 20% de disminuir la Defensa Especial del objetivo.
 The user dances with the speed of lightning, raising its Sp. Atk by two steps and Speed by 1.
 El usuario danza con la velocidad de un relámpago, aumentando su Ataque Especial dos grados y su Velocidad uno.
 The user crashes into the target like a tsunami. The user also takes 33% recoil.
@@ -40066,8 +40140,8 @@ The user lays poison spikes on the foe's side. One layer hurts switched in foes,
 El usuario coloca púas venenosas en el lado contrario. Una capa daña a los oponentes, dos los envenenan.
 Venom is strategically introduced into the target, poisoning it.
 El usuario introduce veneno estrátegicamente en el objetivo, envenenándolo.
-The user thrashes while infused with elements. It has a 15% chance each to poison, dizzy, or leech.
-El usuario golpea infusionado de elementos. Tiene un 15% de probabilidad de envenenar, marear o infectar.
+The user thrashes while infused with elements. It has a 15% chance each to poison, leech, or waterlog.
+El usuario golpea infusionado de elementos. Tiene un 15% de probabilidad de envenenar, infectar, o embeber.
 The user syncs its mind with its teammates, raising the Sp. Atk of itself and its allies by two steps.
 El usuario sincroniza su mente con la de sus aliados, aumentando el Ataque Especial de sí mismo y de sus aliados dos grados.
 The user uses gunpowder to rocket at its foe. It has a 30% chance to raise its Speed.
@@ -40810,14 +40884,14 @@ The user conjures up the past, transforming the target into their previous evolu
 El usuario conjura el pasado, transformando al objetivo en su etapa evolutiva anterior.
 The user hits a pitch that turns earth and stone to dust, damaging its foes.
 Una avalancha de arena causa vibraciones dolorosas.
-Wind rapidly spins the target in place to hit them two to five times. Has a 10% chance to dizzy.
-Viento gira rápidamente al objetivo para atacar entre dos a cinco veces. Tiene un 10% de probabilidad de marear al objetivo.
+Wind rapidly spins the target in place to hit them two to five times.
+Viento gira rápidamente al objetivo para atacar entre dos a cinco veces. 
 The user leeches the target's life. The user's HP is restored by half the damage taken by the target.
 El usuario absorbe la fuerza vital del objetivo. El usuario recupera la mitad de PS que le quite al objetivo.
 The user gets all the party Pokémon to attack the foe with aerial projectiles.
 El usuario hace que todos los Pokémon del equipo ataquen con proyectiles aéreos.
-The user vibrates its wings to make a damaging sound wave. It has a 30% chance to lower Sp. Atk.
-El usuario vibra sus alas para crear una onda de sonido dañina. Tiene un 30% de probabilidad de disminuir el Ataque Especial del objetivo.
+The user vibrates its wings to make a damaging sound wave. It has a 30% chance to lower Sp. Def.
+El usuario vibra sus alas para crear una onda de sonido dañina. Tiene un 30% de probabilidad de disminuir la Defensa Especial del objetivo.
 Disables the target's last used move for four turns, then reduces a relevant stat on them by 4 steps.
 Anula el último movimiento usado por el objetivo durante cuatro turnos, luego disminuye su stat más alta 4 grados.
 Grips the target with its entire mouth. The user can’t attack next turn unless the target faints or switches out.
@@ -40856,8 +40930,8 @@ The user concentrates to stabilize its mood. It raises the user's Sp. Def by thr
 El usuario se concentra para estabilizar su estado de ánimo. Aumenta la Defensa Especial tres grados.
 The user stimulates its brain by planning. It raises the user's Sp. Atk by three steps.
 El usuario estimula su cerebro planificando. Aumenta el Ataque Especial tres grados.
-The user crashes into the target on a ripping current. This raises the user's Speed by two steps.
-El usuario choca contra el objetivo en una corriente desgarradora. Esto aumenta la Velocidad del usuario dos grados.
+The user crashes into the target on a ripping current. This waterlogs the target.
+El usuario choca contra el objetivo en una corriente desgarradora. Esto aumenta embebe al objetivo.
 The user hops high up to land on the target's head. It has a 10% chance to dizzy.
 El usuario salta muy alto para aterrizar en la cabeza del objetivo. Tiene un 10% de probabilidad de marear.
 The user attacks the target with stored power. Has 10 more base power for each raised stat step.
@@ -41164,6 +41238,204 @@ The user creates an Odd Room for 5 turns, raises its Speed, and becomes Psychic-
 El usuario crea una Zona Anómala durante 5 turnos, aumentado su Velocidad, y se vuelve tipo Psíquico.
 The user torments all near foes, preventing them from repeating moves. The user becomes Dark-type.
 El usuario tormenta a todos los objetivos cercanos, impidiendo que repita movimientos. El usuario se vuelve tipo Siniestro.
+The target is hit with rhythmically launched punches that have a 30% chance to dizzy.
+El objetivo es golpeado con unos puños rítmicos que tienen un 30% de probabilidad de marear.
+An energy-draining punch. The user's HP is restored by 33% of the damage dealt.
+Un puño que drena energía. Los PS del usuario son restaurados por el 33% del daño que cause.
+Gravity is intensified for five turns, forcing Pokémon down from the air and doubling all move accuracy.
+La gravedad es intensificada por cinco turnos, tumbando a Pokémon del cielo y duplicando la precisión de todo movimiento.
+Summons sandstorm for eight turns. Damages non-Rock, non-Ground Pokémon every turn.
+Invoca la tormenta de arena por ocho turnos. Dañando a Pokémon que no sean Roca o Tierra cada turno.
+The user vibrates its wings to make a damaging sound wave. It has a 20% chance to lower Sp. Def.
+El usuario vibra sus alas para crear una onda de sonido dañina. Tiene un 20% de disminuir la Defensa Especial del objetivo.
+The user drains the target's blood. The user's HP is restored by 50% of the damage dealt.
+El usuario drena la sangre del objetivo. Los PS del usuario son restaurados por el 50% del daño que cause.
+The user makes a lunge at the target, attacking with full force. This lowers the target's Attack by one step.
+El usuario aplasta al objetivo con toda su fuerza, disminuyendo su ataque un grado.
+The user attacks with a beam of light. It has a 30% chance to dizzy.
+El usuario ataca con un rayo de luz. Tiene un 30% de probabilidad de marear.
+The user rolls over its foes, crushing them. It has a 30% chance to reduce the target's Defense.
+El usuario rueda sobre sus objetivos, aplastándolos. Tiene un 30$ de probabilidad de disminuir la Defensa del objetivo.
+The user focuses intensely. For the next three turns, its attacks will be guarenteed critical hits.
+El usuario se concentra intensamente. Durante los siguientes tres turnos, sus ataques serán golpes críticos garantizados.
+It swamps the area with a giant wave, hitting every battler nearby. Has a 10% chance to waterlog.
+Inunda el área con una ola gigante, golpeando a cada Pokémon siguiente. Tiene un 10% de probabilidad de embeber.
+The target is blasted with a forceful shot of water. This has a 10% chance to waterlog.
+El usuario ataca con un poderoso disparo de agua. Tiene un 10% de probabilidad de embeber el objetivo.
+The user attacks the target with a pulsing blast of water. It has a 30% chance to dizzy.
+El usuario ataca al objetivo con un disparo de agua pulsante. Tiene un 30% de probabilidad de marear.
+A nutrient-draining attack. The user's HP is restored by 50% of the damage dealt.
+Un ataque drenador de nutrientes. The user's HP is restored by 50% of the damage dealt.
+The user's body grows all at once, raising Atk and Sp. Atk by two steps each, or 4 in sunshine.
+El cuerpo del usuario crece de golpe, aumentando ambos Ataques dos grados, o cuatro bajo luz solar.
+The user charges, then attacks on the second turn. Charges instantly in sunshine.
+El usuario carga, luego ataca en el segundo turno. Carga de inmediato bajo luz solar.
+Attacks by gliding on the ground. This move always goes first in sunshine.
+El usuario ataca impulsándose por la tierra. Siempre va primero bajo luz solar.
+The user restores 1/2 of its HP, or 2/3rds in sunshine.
+El usuario recupera 1/2 de sus PS, o 2/3 bajo sol.
+The user attacks everything around it. The user's HP is restored by 50% of the damage dealt.
+El usuario ataca todo a su alrededor. Los PS del usuario son restaurados por el 50% del daño que cause.
+The user's HP is restored by 50% of the damage dealt. Power doubles if the foe is asleep.
+Los PS del usuario son restaurados por el 50% del daño que cause. Duplica su potencia si el enemigo está dormido.
+Using a hyperspace hole, the user appears next to the target and strikes. Skips and destroys protections and substitutes. Always hits.
+Usando un agujero de gusano, el usuario aparece al lado del objetivo y ataca. Salta y destruye protecciones y sustitutos. Siempre golpea.
+The target is attacked with a peculiar ray. It has a 30% chance to dizzy.
+El usuario es atacado con un rayo peculiar. Tiene un 30% de probabilidad de marear al objetivo.
+This move reduces damage from attacks for five turns. This can be used only in hail.
+Este movimiento reduce el daño de ataques por cinco turnos. Sólo puede ser usado en granizo.
+A small tornado hits the target. It has a 30% chance to make targets flinch.
+Un pequeño tornado golpea al objetivo. Esto tiene un 30% de probabilidad de amedrentar al objetivo.
+The target is bitten with viciously sharp fangs. It has a 20% chance to lower Defense.
+El usuario muerde son sus colmillos afilados. Tiene un 20% de probabilidad de disminuir la Defensa del objetivo.
+The user stirs up a fairy wind and strikes the target with it.
+El usuario levanta un viento feérico y ataca al objetivo con él.
+The user attacks the target by emitting steam. It has a 30% chance to dizzy.
+El usuario ataca al objetivo emitiendo vapor. Tiene un 30% de probabilidad de marear al objetivo.
+The user curls up to conceal weak spots and raise both of its defensive stats by two steps.
+El usuario se hace bolita para proteger puntos débiles y aumentar sus stats defensivas dos grados.
+The user causes the air around the target to explode. The move's type is changed based on the active weather.
+El usuario causa que el aire a su alrededor explote. El tipo del movimiento es cambiado basado en el clima activo.
+The user hops high up to land on the target's head. It has a 10% chance to numb.
+El usuario salta a lo alto para caer en la cabeza del objetivo. Tiene un 10% de probabilidad de aturdir al objetivo.
+Summons a storm of poisonous gas to hit all nearby Pokémon with a 30% chance to poison.
+Invoca una tormenta de gas venenoso para golpear a todos los Pokémon cercanos con un 30% de probabilidad de envenenar.
+The user gives off a terrible stench towards the target. It has a 30% chance to dizzy.
+El usuario suelta un terrible hedor hacia al objetivo. Tiene un 30% de probabilidad de marear al objetivo.
+The user chomps with venomous teeth. The user's HP is restored by 33% of the damage dealt.
+El usuario muerde con sus dientes venenosos. Los PS del usuario son restaurados por el 33% del daño que cause.
+The user bludgeons the target's arms and legs with a large rock. This has a 50% chance to fracture it.
+El usuario aporrea a los brazos y piernas del objetivo con una gran roca. Esto tiene un 50% de probabilidad de fracturarlo.
+The user weakens the target's bones, making them fracture. They deal 50% less damage.
+El usuario debilita los huesos del objetivo, fracturándolo. Hace que lidien un 50% menos de daño.
+The user drops a single piece of solid bedrock on the target, fracturing them.
+El usuario suelta un pedazo de piedra firme al objetivo, fracturándolo.
+The user afflicts the target by turning their skin into stone. This has a 30% chance to fracture it.
+El usuario aflige al objetivo convirtiendo su piel en piedra. Esto tiene un 30% de probabilidad de fracturar al objetivo. 
+Large boulders are hurled at the foes to inflict damage. This has a 30% chance to fracture it.
+El usuario lanza grandes piedras a los rivales para atacarlos. Esto tiene 30% de probabilidad de fracturar.
+The user grinds stone into shrapnel and sprays it at the target. This has a 50% chance to fracture it.
+El usuario convierte piedra en añicos y los dispara al objetivo. Tiene un 50% de probabilidad de fracturar al objetivo.
+The user carefully lobs a small stone at high speed.
+El usuario dispara una pequeña roca a grandes velocidades.
+The user injects the target with an extremely painful bio-chemical. It has a 10% chance to poison.
+El usuario inyecta al objetivo con un bioquímico extremadamente doloroso. Tiene un 10% de probabilidad de envenenar al objetivo.
+The user crushes the target with a hardened carapace. It has a 30% chance to lower the target's Defense stat.
+El usuario aplasta al objetivo con un caparazón duro. Tiene un 30% de probabilidad de disminuir la Defensa del objetivo.
+The user consumes a bit of the target's blood. The user's HP is restored by 50% the damage dealt.
+El usuario consume un poco de la sangre del objetivo. El usuario recupera un 50% del daño que lidie.
+The user applies a painful chemical to the target with a smack. It has a 10% chance to poison.
+El usuario aplica un doloroso químico al objetivo con un golpe. Tiene un 10% de probabilidad de envenenar al objetivo.
+The user attacks with small beams of light. It has a 10% chance to lower the target's Attack and Sp. Atk.
+El usuario ataca con pequeños rayos de luz. Tiene un 10% de disminuir ambos Ataques del objetivo.
+The target is overwhelmed by light and sound. It has a 30% chance to lower the target's Attack and Sp. Atk.
+El usuario es abrumado con luz y sonido. Tiene un 30% de probabilidad de disminuir ambos Ataques del objetivo.
+The user stabs the target, injecting a painful chemical. It has a 30% chance to poison.
+El usuario apuñala al objetivo, inyectando un doloroso químico. Tiene un 30% de probabilidad de envenenar al bojetivo.
+The user leeches the target's life. The user's HP is restored by 50% the damage dealt.
+El usuario absorbe la vida del objetivo. El usuario recupera un 50% del daño que lidie.
+The user loses 25% of their max HP to curse the target, damaging their HP by 25% each turn.
+El usuario pierde el 25% de sus PS totales para maldecir al objetivo, dañándolo por el 25% de sus PS totales cada turno.
+The user soothes the target, lowering its Speed by 4 steps. If in hail, they also become drowsy.
+El usuario calma al objetivo, disminuyendo su Velocidad 4 grados. Bajo granizo, también lo adormece.
+The user snips the target's connection to life in order to curse them, damaging their HP by 25% each turn.
+El usuario corta la conexión a la vida del objetivo para maldecirlo, dañándolo por el 25% de sus PS totales cada turno. 
+The user drags the target into the water with a heavy anchor. They become waterlogged.
+El usuario hunde al objetivo con un ancla pesada, embebiéndolo.
+Summons sunshine for five turns on the first turn, then overwhelms the foe with fiery light on the second.
+Invoca la luz solar durante cinco turnos en el primer turno, luego abruma al objetivo con una poderosa luz en el segundo.
+The user pulls the target under the waves with crushing force. This has a 10% chance to waterlog.
+El usuario lleva al objetivo debajo de las olas con fuerza aplastante. Tiene un 10% de probabilidad de embeber al objetivo.
+The user waterlogs the target, then welcomes in rainstorm for four turns.
+El usuario embebe al objetivo, luego le da la bienvenida a la tormenta de lluvia por cuatro turnos.
+The user opens a spring to blast the target, also forming an Aqua Ring around themselves, healing 10% HP per turn.
+El usuario abre una fuente para disparar al objetivo, también formando un Acua Aro a su alrededor, curándose 10% de sus PS totales cada turno.
+The user rests in a riverbed, restoring its HP by half of max, and forming an Aqua Ring around themselves, healing 10% HP per turn.
+El usuario descansa en un lecho, recuperando la mitad de sus PS totales, y formando un Acua Aro a su alrededor, curando 10% de sus PS cada turno.
+The user rams the target while splashing up a lot of water. This has a 30% chance to waterlog.
+El usuario arremeta contra el objetivo salpicando un montón de agua. Esto tiene un 30% de probabilidad de embeber al objetivo.
+The user wields tidal power to grab at the target. This has a 10% chance to waterlog.
+El usuario emplea el poder de las olas para agarrar al objetivo. Esto tiene un 10% de probabilidad de embeber al objetivo.
+The target is doused with water in order to waterlog it.
+El usuario empapa con agua al objetivo, embebiéndolo.
+The user crashes into the target with the force of a large wave. This has a 30% chance to lower Defense.
+El usuario aplasta al objetivo con la fuerza de una gran ola. Esto tiene un 30% de probabilidad de disminuir la Defensa.
+The user attacks the target using graceful fluid movements, also forming an Aqua Ring around themselves, healing 10% HP per turn.
+El usuario ataca al objetivo usando movimientos elegantes y fluidos, también formando un Acua Aro a su alrededor, recuperando un 10% de sus PS totales cada turno. 
+The user's song heals the status problems of all the party Pokémon, and forms an Aqua Ring around itself, healing 10% HP per turn.
+La canción del usuario cura los problemas de estado de todo tu equipo, formando un Acua Aro a su alrededor, recuperando un 10% de sus PS totales cada turno.  
+The target is inundated with a wave of seaweater. This has a 30% chance to waterlog.
+El objetivo es inundado con una ola de algas marinas. Esto tiene un 30% de probabilidad de embeber.
+A nutrient-draining attack. The user's HP is restored by 75% of the damage dealt.
+Un ataque drenador de nutrientes. El usuario recupera el 75% del daño que lidie.
+Lures an enemy into its jaws. If they hit the user this turn, the user's HP is restored by 66% the damage dealt.
+Atrae al enemigo a sus colmillos. Si golpea al usuario en el mismo turno, el usuario recupera el 60% del daño que lidie.
+The user slams down into the target with electricity. It has a 10% chance to numb.
+El usuario aplasta al objetivo con electricidad. Esto tiene un 10% de probabilidad de aturdir.
+The user lays an electrical hazard which hurts foes that switch into battle. It deals double damage in rainstorm.
+El usuario deja una trampa eléctrica que daña al objetivo al entrar al campo. Duplica su daño bajo lluvia.
+Turns the foe's power against it, dealing damage using the target's Sp. Atk stat.
+Usa el poder del rival en su contra, atacando con el Ataque Especial del objetivo.
+The user fires a dimensional mote, lowering the target's Sp. Def.
+El usuario dispara un risco dimensional, disminuyendo la Defensa Especial del objetivo.
+By sacrificing half its total HP, the user makes the target fall asleep.
+Sacrificando la mitad de sus PS totales, el usuario duerme al objetivo.
+Doubles in power if the foe is asleep. The user's HP is restored by 50% the damage dealt. This can overheal.
+Duplica su poder si el objetivo está dormido. El usuario recupera el 50% del daño que lidie. Esto puede sobrecurar.
+Summons eclipse for eight turns, boosting Psychic-type attacks and heralding the total eclipse.
+Invoca el ecilpse durante ocho turnos, potenciando ataques tipo Psíquico y proclamando el eclipse total. 
+The target's psyche is attacked directly. It has a 30% chance to lower the target's Attack and Sp. Atk.
+La psique del objetivo es ataca directamente. Esto tiene un 30% de disminuir ambos Ataques del objetivo.
+The target is hit by a weak telekinetic force. It has a 10% chance to lower the target's Sp. Def.
+El usuario ataca con una fuerza telequinética débil. Tiene un 10% de probabilidad de disminuir la Defensa Especial del objetivo.
+The user covers the field with an fog of ice crystals, summoning hail and creating grey mist for 5 turns.
+El usuario cubre el objetivo con una niebla de cristales de hielo, invocando granizo y creando una niebla gris por 5 turnos.
+The user makes the target to trip into a huge pile of snow, damaging them and summoning hail for eight turns.
+El usuario hace tropezar al objetivo en una enorme pila de nieve, dañándolo e invocando el granizo durante ocho turnos.
+Drains the heat from the target. The user's HP is restored by 50% the damage dealt.
+Drena el calor del objetivo. El usuario recupera el 50% del daño que lidie.
+Protects the user from attacks. If an eclipse is active, extends it by one turn. Fails if used in succession.
+Protege al usuario de ataques. Si un eclipse es activo, lo extiende por un turno. Falla si es usado consecutivamente. 
+The user whips up a tornado to tear at the target. It has a 30% chance to make them flinch.
+El usuario levanta un tornado para atacar al objetiv. Tiene un 30% de probabilidad de amedrentar.
+The user insults the target using a compliment. The target's attacking stats are raised by 3 steps, but they hurt themselves in confusion.
+El usuario insulta al objetivo usando un cumplido. Las stats ofensivas del objetivo son aumentadas 3 grados, pero se daña a sí mismo confundido.  
+The user disarms the target's blade. The target cannot use blade-based moves for two turns.
+El usuario desarma el filo del objetivo. El objetivo no puede usar movimiento de corte durante dos turnos.
+The target is forced underwater for a brief time, waterlogging it.
+El objetivo fuerza debajo del rival al objetivo por un momento, embebiéndolo.
+The user pushes the target violently into water. This has a 10% chance to waterlog.
+El usuario empuja al objetivo violentamente al agua. Esto tiene un 10% de probabilidad de embeber.
+For the rest of the round, the healing of all damaged Pokémon is reversed.
+Por el resto del turno, la curación de todos los Pokémon dañados es invertida.
+The target is dragged viciously through water. This has a 30% chance to waterlog.
+El usuario es arrastrado agresivamente por el agua. Esto tiene un 30% de probabilidad de embeber.
+The user chomps hard, cutting the target's HP by 50%, and the user's HP is restored by 50% of that.
+El usuario muerde fuertemente, quitándole al objetivo el 50% de sus PS, y el usuario recupera el 50% de eso.
+The user submerges the target in water, then bludgeons them repeatedly. This has a 10% chance to waterlog.
+El usuario sumerge al objetivo, luego lo aporrea repetidamente. Esto tiene un 10% de probabilidad de embeber.
+The target is pranked with a huge bucket of water. This has a 50% chance to waterlog it.
+El usuario hace una broma con un gran cubo de agua. Tiene un 50% de probabilidad de embeberlo.
+An enchanting outcry. This attack never misses and skips protections.
+Un grito encantador. Este ataque nunca falla y atraviesa protecciones.
+The user makes a fool out of the target. This has a 50% chance of jinxing them.
+El usuario hace quedar al enemigo en ridículo. Esto tiene un 50% de probabilidad de embrujarlo.
+The user plays with the target with unneccessary force. It has a 50% chance to lower Attack.
+El usuario juega con el objetivo con fuerza innecesaria. Esto tiene un 50% de probabilidad de disminuir el Ataque del objetivo. 
+The user hopes for bad luck, jinxing the target. Attacks against them crit and pierce protection.
+El usuario desea la mala suerte, embrujando al objetivo. Ataques contra ellos siempre serán critícos y atravesarán protecciones.
+The user causes an accident, damaging the target. This has a 30% chance of jinxing them.
+El usuario causa un accidente, dañando al objetivo. Esto tiene un 30% de probabilidad de embrujarlo.
+The user causes the target to trip and fall. This has a 50% chance of jinxing them.
+El usuario causa que el objetivo se tropiece y caiga. Esto tiene un 50% de probabilidad de embrujarlo.
+The user causes nearby objects to fall onto the target. This has a 30% chance of jinxing them.
+El usuario causa que objetos cercanos caigan al objetivo. Esto tiene un 30% de probabilidad de embrujar al objetivo.
+The user invokes the target's true name as a fae curse, jinxing them.
+El usuario invoca el verdadero nombre del objetivo, embrujándolo.
+A spray of bubbles is forcefully ejected at all nearby foes, lowering their Speed by 3 steps.
+Una lluvia de burbujas es disparada forzosamente a todos los objetivos cercanos, disminuyendo su Velocidad 3 grados.
+The user inflicts waterlog on all nearby foes. User becomes a Water-type.
+El usuario embebe a todos los rivales cercanos. El usuario se vuelve tipo Agua.
 [7]
 Repel
 Repelente
@@ -43948,6 +44220,8 @@ Un trozo de fragmento del universo. Muy inestable.
 A USB containing data from a Team Chasm's early days.
 Un USB que contiene datos de los días tempranos del Team Chasm.
 [10]
+Backwash
+Inundación
 Shell Armor
 Caparazón
 Hybrid Fighter
@@ -45323,6 +45597,8 @@ Inusual
 Groovy
 Rítmico
 [11]
+Special attacks against the Pokémon have a 30% chance to waterlog the attacker.
+Cuando el Pokémon es alcanzado por un movimiento especial, tiene un 30% de probabilidad de embeber al atacante.
 When the Pokémon eats a Berry, it will regurgitate that Berry at the end of the next turn and eat it one more time.
 Cuando el Pokémon come una Baya, regurgita esa Baya al final del siguiente turno y la come una vez más.
 Attacks have a 50% chance to cause the target to flinch.

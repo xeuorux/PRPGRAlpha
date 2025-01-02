@@ -2227,7 +2227,7 @@ Target = NearOther
 FunctionCode = LowerTargetDef1
 Flags = CanProtect,CanMirrorMove
 EffectChance = 30
-Description = The crushes the target with a hardened carapace. It has a 30% chance to lower the target's Defense stat.
+Description = The user crushes the target with a hardened carapace. It has a 30% chance to lower the target's Defense stat.
 #-------------------------------
 [CLACKACLACK]
 Name = Clackaclack
@@ -4111,7 +4111,7 @@ Target = NearOther
 FunctionCode = Waterlog
 Flags = CanProtect,CanMirrorMove
 EffectChance = 10
-Description = The user weilds tidal power to grab at the target. This has a 10% chance to waterlog.
+Description = The user wields tidal power to grab at the target. This has a 10% chance to waterlog.
 Animation = WRAP
 #-------------------------------
 [TORRENTSCYTHE]
