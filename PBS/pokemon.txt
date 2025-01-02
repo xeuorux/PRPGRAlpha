@@ -2624,7 +2624,7 @@ Kind = Rock Snake
 Pokedex = Onix has a magnet in its brain. It acts as a compass so that this Pokémon does not lose direction while it is tunneling.
 Generation = 1
 WildItemUncommon = METALCOAT
-Evolutions = STEELIX,Level,27
+Evolutions = STEELIX,Level,22
 #-------------------------------
 [96]
 Name = Drowzee
