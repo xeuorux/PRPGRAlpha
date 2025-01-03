@@ -53,17 +53,23 @@ class MoveDex_Scene
     end
 
     def searchByMoveCategory
-        selections = [_INTL("Physical"),_INTL("Special"),_INTL("Status"),_INTL("Adaptive"),_INTL("Cancel")]
+        selections = [_INTL("Physical"),_INTL("Special"),_INTL("Adaptive"),_INTL("Status"),_INTL("Not Status"),_INTL("Cancel")]
         moveCategorySelection = pbMessage(_INTL("Which category?"), selections, selections.length)
         return if moveCategorySelection == selections.length - 1
+
+        moveCategorySelection = [0,1,3,2,-1][moveCategorySelection] # Reorder values
 
         dexlist = searchStartingList
         dexlist = dexlist.find_all do |dex_item|
             next false if autoDisqualifyFromSearch(dex_item[:move])
             moveCategory = dex_item[:data].category
-            categoryMatches = moveCategory == moveCategorySelection
-            # Show adaptive moves in searches for physical or special
-            categoryMatches = true if moveCategory == 3 && [0,1].include?(moveCategorySelection)
+            if moveCategorySelection < 0
+                categoryMatches = moveCategory != 2 # Not status
+            else
+                categoryMatches = moveCategory == moveCategorySelection
+                # Show adaptive moves in searches for physical or special
+                categoryMatches = true if moveCategory == 3 && [0,1].include?(moveCategorySelection)
+            end
             next categoryMatches
         end
         return dexlist
