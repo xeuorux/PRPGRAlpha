@@ -105,10 +105,9 @@ class MoveDex_Scene
 
         textpos = [
             [_INTL("MoveDex"), Graphics.width / 8, -2, 2, zBase, zShadow],
+            ["(#{@moveList.length.to_s})", 160, -2, 2, base, shadow],
         ]
         if @searchResults
-            textpos.push([_INTL("Search results"), 112, 302, 2, base, shadow])
-            textpos.push([@moveList.length.to_s, 112, 334, 2, base, shadow])
             textpos.push([_INTL("ACTION/Z to search further."), Graphics.width - 5, -2, 1, zBase, zShadow])
         else
             textpos.push([_INTL("ACTION/Z to search."), Graphics.width - 5, -2, 1, zBase, zShadow])
