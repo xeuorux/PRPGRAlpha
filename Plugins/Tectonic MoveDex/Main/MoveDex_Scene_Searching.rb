@@ -108,7 +108,7 @@ class MoveDex_Scene
         miscSearches[cmdEffectChance = miscSearches.length] = _INTL("Effect Chance")
         miscSearches[cmdPriority = miscSearches.length]     = _INTL("Priority")
         miscSearches[cmdPP = miscSearches.length]           = _INTL("Power Points")
-        #miscSearches[cmdTargeting = miscSearches.length]    = _INTL("Targeting")
+        miscSearches[cmdTargeting = miscSearches.length]    = _INTL("Targeting")
         miscSearches[cmdSignature = miscSearches.length]    = _INTL("Signature")
         miscSearches[cmdNotes = miscSearches.length]        = _INTL("Has Notes")
         miscSearches[cmdInvertList = miscSearches.length]   = _INTL("Invert Current")
@@ -230,6 +230,23 @@ class MoveDex_Scene
     end
 
     def searchByMoveTargeting
+        selection = pbMessage(_INTL("Which targeting?"), [_INTL("Single Target"), _INTL("Multi Target"), _INTL("No Target"), _INTL("Cancel")], 4)
+        if selection != 3
+            dexlist = searchStartingList
+
+            dexlist = dexlist.find_all do |dex_item|
+                target_data = GameData::Target.get(dex_item[:data].target)
+                case selection
+                when 0
+                    next target_data.single_target?
+                when 1
+                    next target_data.spread?
+                when 2
+                    next target_data.no_targets?
+                end
+            end
+            return dexlist
+        end
     end
 
     def searchByMoveAvailabilityByLevel
