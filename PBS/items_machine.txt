@@ -552,6 +552,14 @@ Price = 4000
 FieldUse = TM
 Move = RAPIDSPIN
 #-------------------------------
+[TMNULLPULSE]
+Name = Unnamed
+NamePlural = Unnamed
+Pocket = 4
+Price = 4000
+FieldUse = TM
+Move = NULLPULSE
+#-------------------------------
 [TMBODYSLAM]
 Name = Unnamed
 NamePlural = Unnamed
@@ -560,13 +568,13 @@ Price = 4000
 FieldUse = TM
 Move = BODYSLAM
 #-------------------------------
-[TMNULLPULSE]
+[TMLAUNDER]
 Name = Unnamed
 NamePlural = Unnamed
 Pocket = 4
 Price = 4000
 FieldUse = TM
-Move = NULLPULSE
+Move = LAUNDER
 #-------------------------------
 [TMMEGAPUNCH]
 Name = Unnamed

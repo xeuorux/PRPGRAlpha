@@ -379,12 +379,12 @@ Type = NORMAL
 Category = Physical
 Power = 60
 Accuracy = 100
-TotalPP = 12
+TotalPP = 20
 Target = NearOther
 FunctionCode = Numb
 Flags = CanProtect,CanMirrorMove
-EffectChance = 20
-Description = The user sticks out its head and attacks by charging into the foe. It has a 20% chance to numb.
+EffectChance = 50
+Description = The user sticks out its head and attacks by charging into the foe. It has a 50% chance to numb.
 #-------------------------------
 [HEALBELL]
 Name = Heal Bell
@@ -436,7 +436,7 @@ Description = The foe is attacked with a powerful beam. The user must rest on th
 Name = Hyper Fang
 Type = NORMAL
 Category = Physical
-Power = 80
+Power = 90
 Accuracy = 100
 TotalPP = 12
 Target = NearOther
@@ -938,7 +938,7 @@ Description = The user restores its own HP by up to half of its maximum HP.
 [SPITUP]
 Name = Spit Up
 Type = NORMAL
-Category = Special
+Category = Adaptive
 Power = 1
 Accuracy = 100
 TotalPP = 10
@@ -958,6 +958,19 @@ Priority = 3
 FunctionCode = RedirectAllMovesToTarget
 Flags = CanProtect,CanMagicCoat
 Description = The user shines a spotlight on the target so that only it will be attacked during the turn.
+#-------------------------------
+[STELLARATE]
+Name = Stellarate
+Type = NORMAL
+Category = Special
+Power = 25
+Accuracy = 0
+TotalPP = 15
+Target = AllNearFoes
+FunctionCode = HitTwoToFiveTimesAlwaysHits
+Flags = CanProtect,CanMirrorMove
+Description = A barrage of two to five star-shaped rays are shot at the opposing team. Can't miss and skips protections.
+Animation = SWIFT
 #-------------------------------
 [STOCKPILE]
 Name = Stockpile
@@ -1042,7 +1055,7 @@ Description = The power stored using the move Stockpile is absorbed by the user 
 Name = Swift
 Type = NORMAL
 Category = Special
-Power = 60
+Power = 65
 Accuracy = 0
 TotalPP = 15
 Target = AllNearFoes
@@ -1181,7 +1194,7 @@ Description = The user unleashes its ultimate move. Can't miss and skips protect
 Name = Uproar
 Type = NORMAL
 Category = Special
-Power = 110
+Power = 130
 Accuracy = 100
 TotalPP = 10
 Target = ClosestNearFoe

@@ -2085,7 +2085,7 @@ Pokemon = INFERNAPE,42
     Moves = MACHPUNCH,FIREPUNCH,KNOCKOFF,DRAINPUNCH
     AbilityIndex = 0 # Mystic Fist
 Pokemon = PURUGLY,41
-    Moves = RUIN,FACADE,SNARL,STAREDOWN
+    Moves = LAUNDER,FACADE,SNARL,STAREDOWN
     AbilityIndex = 1 # Competitive
 Pokemon = DELIBIRD,42
     Moves = PACKAGE,REFLECT,LIGHTSCREEN,COLDFRONT
@@ -5633,7 +5633,7 @@ Pokemon = SENSIBELLE,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,0,0,20,20
 Pokemon = INDEEDEE,70
-    Moves = RISINGPOWER,MYSTICALFIRE,RUIN,CALMMIND
+    Moves = RISINGPOWER,MYSTICALFIRE,LAUNDER,CALMMIND
     AbilityIndex = 1 # Mental Block
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,0,0,20,20

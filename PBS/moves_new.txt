@@ -94,7 +94,7 @@ Animation = FIERYWRATH
 Name = Clamor
 Type = NORMAL
 Category = Special
-Power = 75
+Power = 90
 Accuracy = 100
 TotalPP = 10
 Target = ClosestNearFoe
@@ -167,7 +167,7 @@ Animation = FLASH
 Name = Diffuse Pulse
 Type = NORMAL
 Category = Special
-Power = 45
+Power = 50
 Accuracy = 100
 TotalPP = 30
 Target = NearOther
@@ -323,6 +323,34 @@ Flags = CanSnatch
 Description = The user focuses its aim to raise its Sp. Atk and accuracy by three steps each.
 Animation = LASERFOCUS
 #-------------------------------
+[LATHER]
+Name = Lather
+Type = NORMAL
+Category = Special
+Power = 60
+Accuracy = 100
+TotalPP = 20
+Target = NearOther
+FunctionCode = Waterlog
+Flags = CanProtect,CanMirrorMove
+EffectChance = 50
+Description = The user cleans the target aggressively with soapy water. It has a 50% chance to waterlog.
+Animation = SOAK
+#-------------------------------
+[LAUNDER]
+Name = Launder
+Type = NORMAL
+Category = Special
+Power = 85
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = Waterlog
+Flags = CanProtect,CanMirrorMove
+EffectChance = 30
+Description = The user spins the target with a cleansing vortex. It has a 30% chance to waterlog.
+Animation = SOAK
+#-------------------------------
 [LONGSHOT]
 Name = Long Shot
 Type = NORMAL
@@ -364,7 +392,7 @@ Animation = SING
 Name = Multi-strike
 Type = NORMAL
 Category = Adaptive
-Power = 14
+Power = 15
 Accuracy = 100
 TotalPP = 30
 Target = NearOther
@@ -376,14 +404,14 @@ Description = The target is hit two to five times in a row.
 Name = Null Pulse
 Type = NORMAL
 Category = Special
-Power = 85
+Power = 90
 Accuracy = 100
 TotalPP = 12
 Target = NearOther
-FunctionCode = Numb
+FunctionCode = ResetTargetStatSteps
 Flags = CanProtect,CanMirrorMove,Pulse
 EffectChance = 30
-Description = The target is struck by a pulse of negative energy. It has a 30% chance to numb.
+Description = The target is struck by a pulse of negative energy. This resets the target's stat changes.
 Animation = WEATHERBALL
 #-------------------------------
 [PALEBLADE]
@@ -553,19 +581,6 @@ FunctionCode = LowerTargetSpDef2
 Flags = CanProtect,CanMagicCoat,CanMirrorMove
 Description = The user smirks with confidence. The Sp. Def of nearby enemies is reduced.
 Animation = SCARYFACE
-#-------------------------------
-[STELLARATE]
-Name = Stellarate
-Type = NORMAL
-Category = Special
-Power = 95
-Accuracy = 0
-TotalPP = 15
-Target = AllNearFoes
-FunctionCode = AlwaysHits
-Flags = CanProtect,CanMirrorMove
-Description = A barrage of star-shaped rays are shot at the opposing team, never missing.
-Animation = SWIFT
 #-------------------------------
 [THIEVINGSPREE]
 Name = Thieving Spree
