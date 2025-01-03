@@ -277,6 +277,10 @@ class MoveDex_Scene
             elsif Input.trigger?(Input::ACTION)
                 pbPlayDecisionSE
                 pbDexSearch
+            elsif Input.pressex?(0x46) && $DEBUG # F, for Filter
+                acceptSearchResults do
+                    debugFilterToNonSignature
+                end
             else
                 for key_index in 1..6 do
                     if Input.pressex?("NUMBER_#{key_index}".to_sym)

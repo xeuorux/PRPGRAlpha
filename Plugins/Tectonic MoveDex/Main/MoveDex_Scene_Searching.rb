@@ -278,6 +278,15 @@ class MoveDex_Scene
         return nil
     end
 
+    def debugFilterToNonSignature
+        dexlist = searchStartingList
+
+        dexlist = dexlist.find_all do |dex_item|
+            next !dex_item[:data].is_signature?
+        end
+        return dexlist
+    end
+
     def searchByMoveHasNotes
         dexlist = searchStartingList
 
