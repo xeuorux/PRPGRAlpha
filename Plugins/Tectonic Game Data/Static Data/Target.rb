@@ -244,6 +244,7 @@ GameData::Target.register({
   :id_number        => 40,
   :name             => _INTL("User Side"),
   :affects_user_side => true,
+  :targeting_label  => "Side",
 })
 
 # Entry hazards
@@ -252,6 +253,7 @@ GameData::Target.register({
   :id_number        => 80,
   :name             => _INTL("Foe Side"),
   :affects_foe_side => true,
+  :targeting_label  => "Side",
 })
 
 GameData::Target.register({
