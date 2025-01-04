@@ -1004,7 +1004,7 @@ Description = Ignores Abilities that would affect its moves or activate after hi
 Flags = MoldBreaking
 #-------------------------------
 [KARMA]
-Name = Hard As
+Name = Karma
 Description = If an attack lowers the Pokémon's HP to half or less, the attacker becomes jinxed.
 #-------------------------------
 [KELPLINK]
@@ -1125,7 +1125,7 @@ Description = When attacking during moonglow, uses the target's attacking stats 
 Flags = MoonglowSynergy
 #-------------------------------
 [MARINE]
-Name = 
+Name = Marine
 Description = Physical moves have a 30% chance to waterlog targets.
 #-------------------------------
 [MARINEMENACE]
@@ -1562,7 +1562,7 @@ Name = Sapper
 Description = Upon entry, traps each opponent in a sand tomb for two turns.
 #-------------------------------
 [SATURATER]
-Name = 
+Name = Saturater
 Description = Special moves have a 30% chance to waterlog targets.
 #-------------------------------
 [SATURNALSKY]
@@ -1668,7 +1668,7 @@ Description = Whenever a foe fails or misses, they take 1/8th HP damage.
 #-------------------------------
 [SLEETSHAKER]
 Name = Sleetshaker
-Description = Boosts Attack by 30% in hails.
+Description = Boosts Attack by 30% in hail.
 Flags = HailSynergy
 #-------------------------------
 [SLICKSURFACE]
