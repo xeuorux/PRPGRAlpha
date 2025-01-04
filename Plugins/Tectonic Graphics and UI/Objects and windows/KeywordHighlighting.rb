@@ -1,4 +1,4 @@
-def moveKeywordsImportant
+def battleKeywordsImportant
     return [
         "rainstorm",
         "sunshine",
@@ -66,19 +66,21 @@ def moveKeywordsImportant
     ]
 end
 
-def moveKeywordsImportantCaseSensitive
+def battleKeywordsImportantCaseSensitive
     return [
         "Attack",
         "Sp. Atk",
+        "Special Attack",
         "Defense",
         "Sp. Def",
+        "Special Defense",
         "Speed",
         "Accuracy",
         "Evasion",
     ]
 end
 
-def moveKeywordsUnimportant
+def battleKeywordsUnimportant
     return [
         "two",
         "three",
@@ -119,19 +121,19 @@ def moveKeywordsUnimportant
     ]
 end
 
-def addDescriptionKeywordHighlighting(description)
+def addBattleKeywordHighlighting(description)
     # Highlight very important words in red
     importantColorTag = getSkinColor(nil, 2, darkMode?, true)
-    moveKeywordsImportant.each do |keyword|
+    battleKeywordsImportant.each do |keyword|
         description = description.gsub(/\b(#{keyword})\b/i,"#{importantColorTag}\\1</c3>")
     end
-    moveKeywordsImportantCaseSensitive.each do |keyword|
+    battleKeywordsImportantCaseSensitive.each do |keyword|
         description = description.gsub(/\b(#{keyword})\b/,"#{importantColorTag}\\1</c3>")
     end
 
     # Outline less important keywords
     unimportantColorTag = getSkinColor(nil, 13, darkMode?, true)
-    moveKeywordsUnimportant.each do |keyword|
+    battleKeywordsUnimportant.each do |keyword|
         description = description.gsub(/\b(#{keyword})\b/i,"#{unimportantColorTag}\\1</c3>")
     end
     description = description.gsub(/\b(\d+%)/i,"#{unimportantColorTag}\\1</c3>")

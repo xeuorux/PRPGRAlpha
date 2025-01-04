@@ -137,7 +137,7 @@ module MoveInfoDisplay
         pbDrawTextPositions(overlay, textpos)
       
         # Draw selected move's description
-        formattedDescription = addDescriptionKeywordHighlighting(moveData.description)
+        formattedDescription = addBattleKeywordHighlighting(moveData.description)
         drawFormattedTextEx(overlay, 8, 96 + 12, 496, formattedDescription, base, shadow)
 
         playAdaptiveMovesTutorial if moveData.category == 3 && !$PokemonGlobal.adaptiveMovesTutorialized && !skipTutorial
@@ -273,7 +273,7 @@ module MoveInfoDisplay
       pbDrawTextPositions(overlay, textpos)
 
       # Draw selected move's description
-      formattedDescription = addDescriptionKeywordHighlighting(moveData.description)
+      formattedDescription = addBattleKeywordHighlighting(moveData.description)
       drawFormattedTextEx(overlay, descriptionX, descriptionY, 496, formattedDescription, base, shadow)
 
       playAdaptiveMovesTutorial if moveData.category == 3 && !$PokemonGlobal.adaptiveMovesTutorialized

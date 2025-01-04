@@ -3,7 +3,8 @@ class PokeBattle_Battle
         return !@messagesBlocked && !@autoTesting
     end
 
-    def pbDisplay(msg, &block)
+    def pbDisplay(msg, no_highlighting: false, &block)
+        msg = addBattleKeywordHighlighting(msg) unless no_highlighting
         @scene.pbDisplayMessage(msg, &block) if showMessages?
     end
 
@@ -11,7 +12,8 @@ class PokeBattle_Battle
         @scene.pbDisplayMessage(msg, true) if showMessages?
     end
 
-    def pbDisplayPaused(msg, &block)
+    def pbDisplayPaused(msg, no_highlighting: false, &block)
+        msg = addBattleKeywordHighlighting(msg) unless no_highlighting
         @scene.pbDisplayPausedMessage(msg, &block) if showMessages?
     end
 
@@ -29,7 +31,8 @@ class PokeBattle_Battle
         @scene.resetMessageTextColor
     end
 
-    def pbDisplaySlower(msg)
+    def pbDisplaySlower(msg, no_highlighting: false)
+        msg = addBattleKeywordHighlighting(msg) unless no_highlighting
         pbDisplayWithFormatting(_INTL("\\ss#{msg}\\1")) if showMessages?
     end
 
