@@ -171,7 +171,7 @@ class PokeBattle_AI
         battler.eachEffect(true) do |effect, value, effectData|
             next unless effectData.stay_in_rating_proc
             oldStayInRating = stayInRating
-            stayInRating = effectData.stay_in_rating_proc.call(battle, battler, value, stayInRating)
+            stayInRating = effectData.stay_in_rating_proc.call(@battle, battler, value, stayInRating)
             ratingChange = stayInRating - oldStayInRating
             if ratingChange != 0
                 PBDebug.log("[STAY-IN RATING] #{battler.pbThis} (#{battler.index}) has effect #{effectData.real_name} (#{ratingChange})")\
