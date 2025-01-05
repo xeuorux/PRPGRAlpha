@@ -68,12 +68,12 @@ end
 
 def battleKeywordsImportantCaseSensitive
     return [
-        "Attack",
         "Sp. Atk",
         "Special Attack",
-        "Defense",
+        "Attack",
         "Sp. Def",
         "Special Defense",
+        "Defense",
         "Speed",
         "Accuracy",
         "Evasion",
