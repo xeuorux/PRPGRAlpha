@@ -7823,7 +7823,7 @@ Pokemon = DRAMPA,70
 Pokemon = KINGDRA,60
     AbilityIndex = 1 # Gyre Spinner
 Pokemon = RIBOMBEE,60
-    AbilityIndex = 0 # Hard As
+    AbilityIndex = 0 # Karma
     Item = FOCUSSASH
 #-------------------------------
 [POKEMONBREEDER_F4,Sara]
