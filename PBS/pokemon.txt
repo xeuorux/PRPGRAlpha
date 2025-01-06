@@ -4183,9 +4183,6 @@ Kind = New Species
 Pokedex = It's very intelligent and can use an incredible variety of moves. Many believe that all other Pokémon are descendants of this one.
 Generation = 1
 Flags = Legendary
-WildItemCommon = LUMBERRY
-WildItemUncommon = LUMBERRY
-WildItemRare = LUMBERRY
 #-------------------------------
 [152]
 Name = Chikorita
@@ -6949,9 +6946,6 @@ Kind = Time Travel
 Pokedex = This Pokémon traveled through time to come from the future. It bolsters grass and trees with its own strength, and it can heal wounds, too.
 Generation = 2
 Flags = Legendary
-WildItemCommon = LUMBERRY
-WildItemUncommon = LUMBERRY
-WildItemRare = LUMBERRY
 #-------------------------------
 [252]
 Name = Treecko
@@ -13642,9 +13636,6 @@ Pokedex = The blooming of Gracidea flowers confers the power of flight upon it. 
 FormName = Land
 Generation = 4
 Flags = Legendary
-WildItemCommon = LUMBERRY
-WildItemUncommon = LUMBERRY
-WildItemRare = LUMBERRY
 #-------------------------------
 [493]
 Name = Arceus
@@ -27982,7 +27973,7 @@ Shape = Insectoid
 Habitat = Forest
 Kind = Hot Cold Worm
 Pokedex = Its horns efficiently regulate its body temperature. It seeks out Fire- and Ice-type predators to charge itself with energy for evolution.
-WildItemCommon = LUMBERRY
+WildItemUncommon = LUMBERRY
 Evolutions = MSILCOON,Ability0,18,MCASCOON,Ability1,18
 #-------------------------------
 [2511]
