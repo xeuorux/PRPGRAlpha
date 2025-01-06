@@ -561,11 +561,6 @@ Outdoor = false
 ShowArea = false
 Bicycle = false
 #-------------------------------
-[075]
-Outdoor = false
-ShowArea = false
-Bicycle = false
-#-------------------------------
 [076]
 # Room 201
 Outdoor = false
@@ -1295,6 +1290,12 @@ Bicycle = false
 BattleBack = indoor2
 Environment = None
 #-------------------------------
+[180]
+# Blustery Bosk
+Outdoor = true
+ShowArea = true
+Bicycle = true
+#-------------------------------
 [181]
 # Casaba Island
 Outdoor = false
@@ -1387,6 +1388,12 @@ Outdoor = false
 ShowArea = false
 Bicycle = false
 HealingSpot = 187,67,30
+#-------------------------------
+[192]
+# Field of Spires
+Outdoor = true
+ShowArea = true
+Bicycle = true
 #-------------------------------
 [193]
 # Volcanic Shore
@@ -1883,6 +1890,14 @@ Outdoor = false
 ShowArea = false
 Bicycle = false
 HealingSpot = 217,27,29
+#-------------------------------
+[264]
+# Storm Sound
+Outdoor = true
+ShowArea = true
+Bicycle = true
+Weather = Storm,100
+BattleBack = forest_night
 #-------------------------------
 [265]
 # Lightkeeper's House
@@ -3000,7 +3015,8 @@ BattleBack = indoor2
 Environment = None
 #-------------------------------
 [425]
-Outdoor = false
+# Shimmer Haven
+Outdoor = true
 ShowArea = true
 Bicycle = true
 #-------------------------------

@@ -848,6 +848,14 @@ Land,20
 Special
     1,BOUNSWEET,10
 #-------------------------------
+[264] # Storm Sound
+Land,20
+    20,DREDNAW,62,64
+    20,EMOLGA,62,64
+    20,FALINKS,62,64
+    20,DEDENNE,62,64
+    20,MILCERY,62,64
+#-------------------------------
 [282] # The Catacombs B1
 LandSparse,20
     20,AEGISLASH,49,51
