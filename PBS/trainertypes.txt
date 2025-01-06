@@ -553,6 +553,11 @@ Gender = Male
 BaseMoney = 32
 IntroBGM = ACETRAINER
 #-------------------------------
+[DREAM]
+Name = Dream
+Gender = Unknown
+BaseMoney = 20
+#-------------------------------
 [ELDER]
 Name = Elder
 Gender = Male

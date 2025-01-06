@@ -8763,3 +8763,33 @@ Pokemon = DELIBIRD,70
 Pokemon = STONJOURNER,70
     Moves = HELPINGHAND,NERVEBLOCK,WIDEGUARD
     AbilityIndex = 0 # Power Spot
+#-------------------------------
+[BAKER,Frederica]
+TrainerTypeLabel = DREAM
+Pokemon = RIBOMBEE,60
+    AbilityIndex = 0 # Karma
+Pokemon = GRAPPLOCT,60
+    AbilityIndex = 0 # Numbing Touch
+Pokemon = BULBASAUR,1
+    AbilityIndex = 0 # Poison Absorb
+Pokemon = BULBASAUR,1
+    AbilityIndex = 0 # Poison Absorb
+Pokemon = BULBASAUR,1
+    AbilityIndex = 0 # Poison Absorb
+Pokemon = BULBASAUR,1
+    AbilityIndex = 0 # Poison Absorb
+#-------------------------------
+[SAILOR2,Laszlo]
+TrainerTypeLabel = DREAM
+Pokemon = MALAMAR,60
+    AbilityIndex = 0 # Contrary
+Pokemon = LUMINEON,60
+    AbilityIndex = 1 # Saturater
+Pokemon = BULBASAUR,1
+    AbilityIndex = 1 # Aromatic
+Pokemon = BULBASAUR,1
+    AbilityIndex = 1 # Aromatic
+Pokemon = BULBASAUR,1
+    AbilityIndex = 1 # Aromatic
+Pokemon = BULBASAUR,1
+    AbilityIndex = 1 # Aromatic
