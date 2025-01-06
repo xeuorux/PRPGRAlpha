@@ -565,7 +565,6 @@ BattleHandlers::TargetAbilityOnHit.add(:INNARDSOUT,
   
 BattleHandlers::TargetAbilityOnHit.add(:MUMMY,
     proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
-        next unless move.physicalMove?
         next if user.fainted?
         next if user.immutableAbility?
         next if user.hasAbility?(ability)
@@ -576,7 +575,6 @@ BattleHandlers::TargetAbilityOnHit.add(:MUMMY,
   
 BattleHandlers::TargetAbilityOnHit.add(:INFECTED,
     proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
-        next unless move.physicalMove?
         next if user.fainted?
         next if user.immutableAbility?
         next if user.hasAbility?(ability)
@@ -589,7 +587,6 @@ BattleHandlers::TargetAbilityOnHit.add(:INFECTED,
 
 BattleHandlers::TargetAbilityOnHit.add(:WANDERINGSPIRIT,
     proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
-        next unless move.physicalMove?
         next if user.fainted?
         next if user.immutableAbility?
         next if user.hasAbility?(ability)

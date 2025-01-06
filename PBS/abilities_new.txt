@@ -958,7 +958,7 @@ Description = Pokémon take damage from status conditions even while switched ou
 #-------------------------------
 [INFECTED]
 Name = Infected
-Description = Also Grass in addition to its other types. When hit by a physical move, the attacker is also infected.
+Description = The Pokémon is also Grass-type. When hit by an attack, the attacker's ability becomes Infected.
 #-------------------------------
 [INNERLIGHT]
 Name = Inner Light
