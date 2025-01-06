@@ -1118,7 +1118,7 @@ Cloud,20
     20,MANERGETIC,62,64
 #-------------------------------
 [425] # Shimmer Haven
-Land,20
+LandTall,20
     20,ACCELGOR,62,64
     20,ESCAVALIER,62,64
     20,FLORGES,62,64

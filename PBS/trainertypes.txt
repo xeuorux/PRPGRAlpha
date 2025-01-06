@@ -554,7 +554,7 @@ BaseMoney = 32
 IntroBGM = ACETRAINER
 #-------------------------------
 [DREAM]
-Name = Dream
+Name = Dream Trainer
 Gender = Unknown
 BaseMoney = 20
 #-------------------------------

@@ -8786,10 +8786,40 @@ Pokemon = MALAMAR,60
 Pokemon = LUMINEON,60
     AbilityIndex = 1 # Saturater
 Pokemon = BULBASAUR,1
-    AbilityIndex = 1 # Aromatic
+    AbilityIndex = 0 # Poison Absorb
 Pokemon = BULBASAUR,1
-    AbilityIndex = 1 # Aromatic
+    AbilityIndex = 0 # Poison Absorb
 Pokemon = BULBASAUR,1
-    AbilityIndex = 1 # Aromatic
+    AbilityIndex = 0 # Poison Absorb
 Pokemon = BULBASAUR,1
-    AbilityIndex = 1 # Aromatic
+    AbilityIndex = 0 # Poison Absorb
+#-------------------------------
+[FAIRYTALEGIRL,Danica]
+TrainerTypeLabel = DREAM
+Pokemon = TREVENANT,60
+    AbilityIndex = 0 # Schadenfreude
+Pokemon = DUBWOOL,60
+    AbilityIndex = 0 # Fluffy
+Pokemon = BULBASAUR,1
+    AbilityIndex = 0 # Poison Absorb
+Pokemon = BULBASAUR,1
+    AbilityIndex = 0 # Poison Absorb
+Pokemon = BULBASAUR,1
+    AbilityIndex = 0 # Poison Absorb
+Pokemon = BULBASAUR,1
+    AbilityIndex = 0 # Poison Absorb
+#-------------------------------
+[BUGCATCHER,Dimitri]
+TrainerTypeLabel = DREAM
+Pokemon = VOLBEAT,60
+    AbilityIndex = 0 # Night Life
+Pokemon = TANGROWTH,60
+    AbilityIndex = 1 # Tangling Hair
+Pokemon = BULBASAUR,1
+    AbilityIndex = 0 # Poison Absorb
+Pokemon = BULBASAUR,1
+    AbilityIndex = 0 # Poison Absorb
+Pokemon = BULBASAUR,1
+    AbilityIndex = 0 # Poison Absorb
+Pokemon = BULBASAUR,1
+    AbilityIndex = 0 # Poison Absorb
