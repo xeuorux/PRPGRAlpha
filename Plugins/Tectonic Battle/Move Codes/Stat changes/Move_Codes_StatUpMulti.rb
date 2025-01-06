@@ -602,12 +602,12 @@ class PokeBattle_Move_RaiseUserAccSpd1IfMisses < PokeBattle_Move
 end
 
 #===============================================================================
-# Increases Speed by 4 steps and Crit Chance by 2 steps. (Deep Breathing)
+# Increases Speed by 2 steps and Crit Chance by 2 steps. (Deep Breathing)
 #===============================================================================
-class PokeBattle_Move_RaiseUserSpd4CriticalHitRate2 < PokeBattle_StatUpMove
+class PokeBattle_Move_RaiseUserSpd2CriticalHitRate2 < PokeBattle_StatUpMove
     def initialize(battle, move)
         super
-        @statUp = [:SPEED, 4]
+        @statUp = [:SPEED, 2]
     end
 
     def pbMoveFailed?(user, _targets, show_message)
@@ -630,6 +630,6 @@ class PokeBattle_Move_RaiseUserSpd4CriticalHitRate2 < PokeBattle_StatUpMove
 end
 
 # Empowered Deep Breathing
-class PokeBattle_Move_EmpoweredDeepBreathing < PokeBattle_Move_RaiseUserSpd4CriticalHitRate2
+class PokeBattle_Move_EmpoweredDeepBreathing < PokeBattle_Move_RaiseUserSpd2CriticalHitRate2
     include EmpoweredMove
 end

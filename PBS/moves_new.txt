@@ -769,9 +769,9 @@ Category = Status
 Accuracy = 0
 TotalPP = 15
 Target = User
-FunctionCode = RaiseUserSpd4CriticalHitRate2
+FunctionCode = RaiseUserSpd2CriticalHitRate2
 Flags = CanSnatch
-Description = The user breathes deeply, raising its Speed by four steps and quadrupling its critical hit chance.
+Description = The user breathes deeply, raising its Speed by two steps and quadrupling its critical hit chance.
 Animation = FOCUSENERGY
 #-------------------------------
 [DETACHMENT]
