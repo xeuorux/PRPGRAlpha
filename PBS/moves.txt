@@ -314,7 +314,7 @@ TotalPP = 15
 Target = User
 Priority = 2
 FunctionCode = RedirectAllMovesToUser
-Description = The user draws attention to itself, making all targets take aim only at the user.
+Description = The user draws attention to itself, making all targets take aim only at the user this turn.
 #-------------------------------
 [FURYSWIPES]
 Name = Fury Swipes
