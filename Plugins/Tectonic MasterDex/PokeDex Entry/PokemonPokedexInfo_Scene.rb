@@ -929,8 +929,8 @@ sp.form) && !Settings::DEX_SHOWS_ALL_FORMS
     def getEncounterableAreas(species)
         areas = []
         GameData::Encounter.each_of_version($PokemonGlobal.encounter_version) do |enc_data|
-            if HIDDEN_MAPS.key?(enc_data.map)
-                switchID = HIDDEN_MAPS[enc_data.map]
+            if hidden_map_encounter_switch_hash.key?(enc_data.map)
+                switchID = hidden_map_encounter_switch_hash[enc_data.map]
                 next unless $game_switches[switchID]
             end
 
