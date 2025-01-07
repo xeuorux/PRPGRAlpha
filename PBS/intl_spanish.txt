@@ -42695,6 +42695,30 @@ Space-time Shard
 Fragmento Espaciotiempo
 Old USB Drive
 Unidad USB Antigua
+Prism Stone
+Piedra Prisma
+Radiant Ball
+Refulge Ball
+Saccharite Pick
+Pico Azucarero
+Spanning Band
+Banda Alcance
+Chroma Clarion
+Clarín Cromático
+Gilded Apricorn
+Bonguri Dorada
+Ragged Journal
+Diario Desgastado
+Dead Sky Sliver
+Trozo Cielo Caído
+Timelost Alabaster
+Alabastro Perdido
+Wretched Whitewing
+Desdichada Alablanca
+VIP Card
+Tarjeta VIP
+Ominous Egg
+Huevo Ominoso
 [8]
 Repels
 Repelentes
@@ -43416,7 +43440,69 @@ Fairy Feathers
 Plumas Feathers
 Space-time Shard
 Fragmentos Espaciotiempo
+Prism Stones
+Piedras Prisma
+Alolan Wreathes
+Coronas de Alola
+Relic Statues
+Efigies Antiguas
+Lumber Axes
+Hachas de Leñador
+Fragile Lockets
+Medallones Frágiles
+Water Balloons
+Globos de Agua
+Covert Cloaks
+Capas Furtivas
+Soft Sand
+Arena Fina
+Fresh Waters
+Aguas Frescas
+Rare Candies
+Caramelos Raros
+Vanilla Tulumba
+Tulumbas de Vainilla
+Radiant Balls
+Refulge Balls
 [9]
+A many-colored stone that makes a lot of Pokémon evolve. Can be used in place of any evolution stone.
+Una piedra colorida que hace que muchos Pokémon evolucionan. Puede ser usada en lugar de cualquier piedra evolutiva.
+A wreath made from woven Galarica Twigs. It makes certain species of Pokémon evolve.
+Una corona hecha con Ramas Galanuez. Hace que ciertas especies de Pokémon evolucionen.
+Held item which boosts move damage by 25%, but lowers the user's Speed by 1 step on entry.
+Objeto equipable que potencia ataques un 25%, pero disminuye la Velocidad del usuario 1 grado al entrar al campo.
+An item to be held by a Pokémon. It doubles the duration of Rooms created by the holder.
+Un objeto equipable. Duplica la duraci~n de Zonas creadas por el usuario.
+A held item. Boosts a move used consecutively by 20% more each time. This resets if another move is used.
+Un objeto equipable. Potencia un movimiento usado consecutivamente 20% por cada vez. Se reinicia si otro movimiento es usado.
+A ball with a mythical quality. It will catch any wild Pokémon without fail, and turn that Pokémon shiny.
+Una bola con cualidades míticas. Atrapará a cualquier Pokémon salvaje sin falla, y volverá a ese Pokémon variocolor.
+It may be held by a Pokémon to recover from being waterlogged.
+Puede ser equipada a un Pokémon para recuparse de ser embebido.
+A charm in the shape of a tooth. It increases the EXP. gained from EXP Candy by 15%.
+Un amuleto con la forma de un diente. Aumenta la EXP ganada de Caramelos EXP un 15%.
+A food grade mining tool. Allows you to extract EXP. Candy from saccharite deposits.
+Un pico para comida. Te permite extraer Caramelos EXP. de depósitos de sacarita.
+An ancient ceramic ring. Unlocks the ability to teleport between Avatar Totems.
+Un antiguo anillo de cerámico. Te desbloquea la habilidad de teletransportarte entre Totems Avatar.
+An ancient horn. Sound it to call 3 rare Pokémon to battle you. Recharged by walking in encounter zones.
+Un antiguo cuerno. Úsalo para llamar a 3 Pokémon raros para combatir. Recárgalo caminando en zonas de necuentros.
+A mysterious data storage device. Plug it into any PC to unlock The Omnitutor.
+Un misterioso dispositivo de almacenamiento. Conéctalo en cualquier PC para desbloquear el OmniTutor,
+A gleaming golden fruit. Someone skilled may be able to craft it into a unique Poké Ball.
+Una fruta dorada. Puede que alguien con habilidad pueda convertirla en una Poké Ball única.
+A damaged traveler's journal. If you find its scattered pages, you can put them back in place.
+Un diario de viajero dañado. Si encuentras sus páginas perdidas, puedes regresarlas a su lugar.
+A dark sliver of something that hurts to look at. It bears an inscription.
+Un pedazo oscuro de algo que duele observar. Posee una inscripción.
+Inscribed, delicate pale stone. It’s always been here, but it hasn’t always always been here.
+Una delicada piedra pélido inscrita. Siempre ha estado aquí, peor no siempre ha estado aquí.
+A radiant wing. It radiates misery, but you feel peaceful holding it. Returning home, returning home...
+Un ala radiante. Irradia miseria, pero siente paz al sostenerla. Regresar a casa, regresar a casa...
+A glamorous steel card. While holding it, all vendors cost 10% less and Poké Marts have extra items.
+Una tarjeta metálica glamorosa. Al sostenterla, todos los vendedores cuestan un 10% y las Tiendas tienen más objetos.
+A vessel for negative emotions. If you perfectly defeat enough route or gym trainers, it will grant you rewards.
+Un recipiente para emociones negaivos. Si perfeccionas suficientes entrenadores, te dará recompensas.
 An item that prevents wild Pokémon from appearing for 100 steps after its use.
 Un objeto que impide que Pokémon salvajes aparezcan por 100 pasos.
 A sweet honey with a sweeter aroma. It can be sold to shops for $750.
