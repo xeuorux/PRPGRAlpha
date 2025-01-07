@@ -481,6 +481,14 @@ Special
 Special
     1,ORICORIO,10
 #-------------------------------
+[180] # Blustery Bosk
+FloweryGrass2,20
+    20,FEAROW,55,57
+    20,LEDIAN,55,57
+    20,LUXRAY,55,57
+    20,MSEVIPER,55,57
+    20,MZANGOOSE,55,57
+#-------------------------------
 [182] # Spirit Atoll
 FloweryGrass,20
     25,CHERRIM,56,58
@@ -848,13 +856,13 @@ Land,20
 Special
     1,BOUNSWEET,10
 #-------------------------------
-[264] # Storm Sound
+[264] # Thunder Point
 Land,20
-    20,DEDENNE,62,64
-    20,EMOLGA,62,64
-    20,FALINKS,62,64
-    20,MILCERY,62,64
-    20,SEISMAW,62,64
+    20,DEDENNE,55,57
+    20,EMOLGA,55,57
+    20,FALINKS,55,57
+    20,MILCERY,55,57
+    20,SEISMAW,55,57
 #-------------------------------
 [282] # The Catacombs B1
 LandSparse,20
@@ -1119,11 +1127,11 @@ Cloud,20
 #-------------------------------
 [425] # Shimmer Haven
 LandTall,20
-    20,ACCELGOR,62,64
-    20,ESCAVALIER,62,64
-    20,FLORGES,62,64
-    20,PETILIL,62,64
-    20,PURUGLY,62,64
+    20,ACCELGOR,55,57
+    20,ESCAVALIER,55,57
+    20,FLORGES,55,57
+    20,LILLIGANT,55,57
+    20,PURUGLY,55,57
 #-------------------------------
 [428] # Steamy Valley
 FloweryGrass,20

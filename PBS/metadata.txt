@@ -1892,7 +1892,7 @@ Bicycle = false
 HealingSpot = 217,27,29
 #-------------------------------
 [264]
-# Storm Sound
+# Thunder Point
 Outdoor = true
 ShowArea = true
 Bicycle = true
