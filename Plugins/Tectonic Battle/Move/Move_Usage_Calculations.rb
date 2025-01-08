@@ -292,9 +292,7 @@ class PokeBattle_Move
         elsif highCriticalRate?
             c += 1
         end
-        c += user.effects[:FocusEnergy]
-        c += 1 if user.effectActive?(:LuckyStar)
-        c += 1 if user.inHyperMode? && @calcType == :SHADOW
+        c += user.effects[:RaisedCritChance]
 
         return c
     end

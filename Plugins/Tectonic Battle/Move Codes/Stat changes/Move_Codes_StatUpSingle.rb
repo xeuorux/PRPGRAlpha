@@ -348,15 +348,11 @@ end
 #===============================================================================
 class PokeBattle_Move_RaiseCriticalHitRate1 < PokeBattle_Move
     def pbEffectGeneral(user)
-        user.applyEffect(:LuckyStar)
+        user.applyEffect(:RaisedCritChance)
     end
 
     def getEffectScore(user, _target)
-        if user.effectActive?(:LuckyStar)
-            return 0
-        else
-            return getCriticalRateBuffEffectScore(user)
-        end
+        return getCriticalRateBuffEffectScore(user)
     end
 end
 
@@ -365,7 +361,7 @@ end
 #===============================================================================
 class PokeBattle_Move_RaiseCriticalHitRate2 < PokeBattle_Move
     def pbMoveFailed?(user, _targets, show_message)
-        if user.effectAtMax?(:FocusEnergy)
+        if user.effectAtMax?(:RaisedCritChance)
             @battle.pbDisplay(_INTL("But it failed, since it cannot get any more pumped!")) if show_message
             return true
         end
@@ -373,7 +369,7 @@ class PokeBattle_Move_RaiseCriticalHitRate2 < PokeBattle_Move
     end
 
     def pbEffectGeneral(user)
-        user.incrementEffect(:FocusEnergy, 2)
+        user.incrementEffect(:RaisedCritChance, 2)
     end
 
     def getEffectScore(user, _target)

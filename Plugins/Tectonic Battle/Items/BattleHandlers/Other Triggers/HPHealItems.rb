@@ -60,14 +60,14 @@ BattleHandlers::HPHealItem.add(:MICLEBERRY,
 BattleHandlers::HPHealItem.add(:LANSATBERRY,
   proc { |item, battler, battle, forced, filchedFrom, filchingAbility|
       next false if !forced && !battler.canConsumePinchBerry?
-      next false if battler.effectAtMax?(:FocusEnergy)
+      next false if battler.effectAtMax?(:RaisedCritChance)
       if filchedFrom
         battle.pbShowAbilitySplash(battler, filchingAbility)
         itemName = GameData::Item.get(item).name
         battle.pbDisplay(_INTL("#{battler.pbThis} filched #{filchedFrom.pbThis(true)}'s #{itemName}!"))
       end
       battle.pbCommonAnimation("Nom", battler) unless forced
-      battler.incrementEffect(:FocusEnergy, 2)
+      battler.incrementEffect(:RaisedCritChance, 2)
       battle.pbHideAbilitySplash(battler) if filchedFrom
       next true
   }

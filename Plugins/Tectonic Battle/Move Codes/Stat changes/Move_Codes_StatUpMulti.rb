@@ -57,13 +57,13 @@ class PokeBattle_Move_RaiseUserAtkDef2CriticalHitRate1 < PokeBattle_MultiStatUpM
 	end
 
 	def pbMoveFailed?(user, _targets, show_message)
-        return super if user.effectAtMax?(:FocusEnergy) 
+        return super if user.effectAtMax?(:RaisedCritChance) 
         return false
     end
 
 	def pbEffectGeneral(user)
 		super
-		user.incrementEffect(:FocusEnergy, 1) unless user.effectAtMax?(:FocusEnergy)
+		user.incrementEffect(:RaisedCritChance, 1) unless user.effectAtMax?(:RaisedCritChance)
     end
 
     def getEffectScore(user, _target)
@@ -433,13 +433,13 @@ class PokeBattle_Move_RaiseUserSpAtkSpDef2CriticalHitRate1 < PokeBattle_MultiSta
 	end
     
 	def pbMoveFailed?(user, _targets, show_message)
-        return super if user.effectAtMax?(:FocusEnergy)
+        return super if user.effectAtMax?(:RaisedCritChance)
         return false
     end
     
 	def pbEffectGeneral(user)
 		super
-		user.incrementEffect(:FocusEnergy, 1) unless user.effectAtMax?(:FocusEnergy)
+		user.incrementEffect(:RaisedCritChance, 1) unless user.effectAtMax?(:RaisedCritChance)
     end
 
     def getEffectScore(user, _target)
@@ -611,7 +611,7 @@ class PokeBattle_Move_RaiseUserSpd2CriticalHitRate2 < PokeBattle_StatUpMove
     end
 
     def pbMoveFailed?(user, _targets, show_message)
-        if user.effectAtMax?(:FocusEnergy)
+        if user.effectAtMax?(:RaisedCritChance)
             return super
         end
         return false
@@ -619,7 +619,7 @@ class PokeBattle_Move_RaiseUserSpd2CriticalHitRate2 < PokeBattle_StatUpMove
 
     def pbEffectGeneral(user)
         super
-        user.incrementEffect(:FocusEnergy, 2)
+        user.incrementEffect(:RaisedCritChance, 2)
     end
 
     def getEffectScore(user, _target)

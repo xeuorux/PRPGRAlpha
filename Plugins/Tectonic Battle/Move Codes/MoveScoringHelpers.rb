@@ -668,7 +668,7 @@ def getWeatherSettingEffectScore(weatherType, user, battle, finalDuration = 4, c
 end
 
 def getCriticalRateBuffEffectScore(user, steps = 1)
-    return 0 if user.effectAtMax?(:FocusEnergy)
+    return 0 if user.effectAtMax?(:RaisedCritChance)
     score = 20
     score += 15 if user.firstTurn?
     score += 30 if user.hasActiveAbilityAI?(%i[SUPERLUCK SNIPER])

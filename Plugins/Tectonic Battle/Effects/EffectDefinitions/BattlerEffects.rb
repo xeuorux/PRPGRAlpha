@@ -299,7 +299,7 @@ GameData::BattleEffect.register_effect(:Battler, {
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
-    :id => :FocusEnergy,
+    :id => :RaisedCritChance,
     :real_name => "Crit Chance Up",
     :type => :Integer,
     :maximum => 4,
@@ -1505,15 +1505,6 @@ GameData::BattleEffect.register_effect(:Battler, {
     :avatars_purge => true,
     :apply_proc => proc do |battle, battler, _value|
         battle.pbDisplay(_INTL("{1} is now afraid of Bug-type moves!", battler.pbThis))
-    end,
-})
-
-GameData::BattleEffect.register_effect(:Battler, {
-    :id => :LuckyStar,
-    :real_name => "Added Crit Chance",
-    :critical_rate_buff => true,
-    :apply_proc => proc do |battle, battler, _value|
-        battle.pbDisplay(_INTL("{1} is blessed by the lucky star!", battler.pbThis))
     end,
 })
 
