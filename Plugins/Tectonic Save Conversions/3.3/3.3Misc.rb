@@ -22,6 +22,9 @@ SaveData.register_conversion(:new_boss_loot_3_3_0) do
 
         # Defeated the Avatar of Vigoroth in the Bluepoint Grotto
         itemBag.pbStoreItem(:SPANNINGBAND, 1, false) if selfSwitches[[26,4,'A']]
+
+        # Move was replaced
+        itemBag.pbChangeItem(:TMTRICKYTOXINS,:TMSHORTCIRCUIT)
     end
 end
 
