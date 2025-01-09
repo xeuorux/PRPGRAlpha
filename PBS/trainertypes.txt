@@ -320,6 +320,11 @@ Name = Champion
 Gender = Male
 BaseMoney = 60
 #-------------------------------
+[CHASMGANG]
+Name = Driller
+Gender = Unknown
+BaseMoney = 16
+#-------------------------------
 [CHEF]
 Name = Chef
 Gender = Male
@@ -552,11 +557,6 @@ Name = Dragon Tamer
 Gender = Male
 BaseMoney = 32
 IntroBGM = ACETRAINER
-#-------------------------------
-[DREAM]
-Name = Dream Trainer
-Gender = Unknown
-BaseMoney = 20
 #-------------------------------
 [ELDER]
 Name = Elder

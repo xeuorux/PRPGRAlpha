@@ -8764,62 +8764,78 @@ Pokemon = STONJOURNER,70
     Moves = HELPINGHAND,NERVEBLOCK,WIDEGUARD
     AbilityIndex = 0 # Power Spot
 #-------------------------------
-[BAKER,Frederica]
-TrainerTypeLabel = DREAM
-Pokemon = RIBOMBEE,60
-    AbilityIndex = 0 # Karma
-Pokemon = GRAPPLOCT,60
-    AbilityIndex = 0 # Numbing Touch
-Pokemon = BULBASAUR,1
-    AbilityIndex = 0 # Poison Absorb
-Pokemon = BULBASAUR,1
-    AbilityIndex = 0 # Poison Absorb
-Pokemon = BULBASAUR,1
-    AbilityIndex = 0 # Poison Absorb
-Pokemon = BULBASAUR,1
-    AbilityIndex = 0 # Poison Absorb
+[POKEMONRANGER_F,Mina]
+TrainerTypeLabel = CHASMGANG
+Pokemon = URSALUNA,60
+    AbilityIndex = 1 # Tough
+    Item = SALACBERRY
+Pokemon = AMUK,60
+    AbilityIndex = 1 # Poison Punish
+    Item = BLACKSLUDGE
+Pokemon = CORVIKNIGHT,60
+    AbilityIndex = 1 # Expertise
+    Item = EXPERTBELT
+Pokemon = INTELEON,60
+    AbilityIndex = 0 # Sniper
+    Item = SCOPELENS
 #-------------------------------
-[SAILOR2,Laszlo]
-TrainerTypeLabel = DREAM
-Pokemon = MALAMAR,60
-    AbilityIndex = 0 # Contrary
-Pokemon = LUMINEON,60
-    AbilityIndex = 1 # Saturater
-Pokemon = BULBASAUR,1
-    AbilityIndex = 0 # Poison Absorb
-Pokemon = BULBASAUR,1
-    AbilityIndex = 0 # Poison Absorb
-Pokemon = BULBASAUR,1
-    AbilityIndex = 0 # Poison Absorb
-Pokemon = BULBASAUR,1
-    AbilityIndex = 0 # Poison Absorb
+[POKEMONRANGER_F2,Amber]
+TrainerTypeLabel = CHASMGANG
+Pokemon = KROOKODILE,60
+    AbilityIndex = 1 # Regenerator
+    Item = LEFTOVERS
+Pokemon = SCEPTILE,60
+    AbilityIndex = 0 # Regenerator
+    Item = LEFTOVERS
+Pokemon = SENSIBELLE,60
+    AbilityIndex = 1 # Regenerator
+    Item = LEFTOVERS
+Pokemon = TOXAPEX,60
+    AbilityIndex = 1 # Regenerator
+    Item = BLACKSLUDGE
 #-------------------------------
-[FAIRYTALEGIRL,Danica]
-TrainerTypeLabel = DREAM
-Pokemon = TREVENANT,60
-    AbilityIndex = 0 # Schadenfreude
-Pokemon = DUBWOOL,60
-    AbilityIndex = 0 # Fluffy
-Pokemon = BULBASAUR,1
-    AbilityIndex = 0 # Poison Absorb
-Pokemon = BULBASAUR,1
-    AbilityIndex = 0 # Poison Absorb
-Pokemon = BULBASAUR,1
-    AbilityIndex = 0 # Poison Absorb
-Pokemon = BULBASAUR,1
-    AbilityIndex = 0 # Poison Absorb
+[POKEMONRANGER_M,Terrance]
+TrainerTypeLabel = CHASMGANG
+Pokemon = ARATICATE,60
+    AbilityIndex = 1 # Gourmand
+    Item = FOCUSSASH
+Pokemon = MZANGOOSE,60
+    AbilityIndex = 1 # Mental Damage
+    Item = SPELLTAG
+Pokemon = ADUGTRIO,60
+    AbilityIndex = 0 # Tangling Hair
+    Item = ASSAULTVEST
+Pokemon = EXEGGUTOR,60
+    AbilityIndex = 0 # Arcane
+    Item = CHOICESCARF
 #-------------------------------
-[BUGCATCHER,Dimitri]
-TrainerTypeLabel = DREAM
-Pokemon = VOLBEAT,60
-    AbilityIndex = 0 # Night Life
-Pokemon = TANGROWTH,60
-    AbilityIndex = 1 # Tangling Hair
-Pokemon = BULBASAUR,1
-    AbilityIndex = 0 # Poison Absorb
-Pokemon = BULBASAUR,1
-    AbilityIndex = 0 # Poison Absorb
-Pokemon = BULBASAUR,1
-    AbilityIndex = 0 # Poison Absorb
-Pokemon = BULBASAUR,1
-    AbilityIndex = 0 # Poison Absorb
+[POKEMONRANGER_M2,Mason]
+TrainerTypeLabel = CHASMGANG
+Pokemon = SHUCKLE,60
+    Moves = STEALTHROCK
+    AbilityIndex = 0 # Ripen
+    Item = CADOBERRY
+Pokemon = EXCADRILL,60
+    AbilityIndex = 1 # Juggernaut
+    Item = STEELGEM
+Pokemon = HONCHKROW,60
+    AbilityIndex = 0 # Rattle 'Em
+    Item = DARKGEM
+Pokemon = AMOONGUSS,60
+    AbilityIndex = 0 # Regenerator
+    Item = LEFTOVERS
+#-------------------------------
+[POKEMONRANGER_M3,Micah]
+TrainerTypeLabel = CHASMGANG
+Pokemon = CLAYDOL,60
+    AbilityIndex = 1 # Magic Bounce
+    Item = LIGHTCLAY
+Pokemon = FEAROW,60
+    AbilityIndex = 0 # Tough
+    Item = FOCUSSASH
+Pokemon = KINGAMBIT,60
+    AbilityIndex = 0 # Defiant
+    Item = LIFEORB
+Pokemon = KINGDRA,60
+    AbilityIndex = 1 # Gyre Spinner
+    Item = LEFTOVERS

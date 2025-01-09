@@ -552,6 +552,14 @@ FloweryGrass2,20
 Special
     1,SEVIPER,40
 #-------------------------------
+[192] # Field of Spires
+Land,20
+    20,AMBIPOM,55,57
+    20,CLAYDOL,55,57
+    20,DUGTRIO,55,57
+    20,GLISCOR,55,57
+    20,UNFEZANT,55,57
+#-------------------------------
 [193] # Volcanic Shore
 Land,20
     25,COMFEY,49,51
