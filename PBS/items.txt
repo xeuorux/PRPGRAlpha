@@ -707,7 +707,7 @@ Name = Shell Bell
 NamePlural = Shell Bells
 Pocket = 5
 Price = 6000
-Description = An item to be held by a Pokémon. The holder restores 1/6th HP of the damage it deals with moves.
+Description = An item to be held by a Pokémon. The holder restores 1/5th HP of the damage it deals with moves.
 #-------------------------------
 [WATERBALLOON]
 Name = Water Balloon
