@@ -1473,7 +1473,7 @@ Description = Boosts the power of blade moves by 30%. They're twice as likely to
 #-------------------------------
 [REALIST]
 Name = Realist
-Description = Takes half damage from Dragon- and Fairy-type attacks.
+Description = Takes half damage from Dragon-, Fairy-, and Ghost-type attacks.
 #-------------------------------
 [REAPWHATYOUSOW]
 Name = Reap What You Sow
