@@ -307,7 +307,7 @@ Pokemon = GRIMER,20
     AbilityIndex = 0 # Corrosion
 Pokemon = CHARMELEON,20
     Moves = IGNITE,SQUALLDART,FIREFANG,TWISTER
-    AbilityIndex = 0 # Flame Body
+    AbilityIndex = 0 # Pure Rage
 Pokemon = SOLOSIS,20
     AbilityIndex = 1 # Magic Guard
 #-------------------------------
@@ -913,7 +913,7 @@ Pokemon = BLASTOISE,65
     EV = 20,20,0,0,20,10
 Pokemon = CHARIZARD,65
     Moves = OVERHEAT,DRACOMETEOR,MIRAGEFLARE,CRUELTY
-    AbilityIndex = 0 # Levitate
+    AbilityIndex = 0 # Pure Rage
     Item = WHITEHERB
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,0,20,20,0
@@ -2484,7 +2484,7 @@ Pokemon = NIDOKING,70
 Pokemon = TYRANITAR,70
     AbilityIndex = 1 # Stressful
 Pokemon = CHARIZARD,70
-    AbilityIndex = 0 # Levitate
+    AbilityIndex = 0 # Pure Rage
 Pokemon = VIKAVOLT,70
     AbilityIndex = 1 # Levitate
 Pokemon = CORVIKNIGHT,70
@@ -4406,7 +4406,7 @@ Pokemon = SCARAPACE,60
     AbilityIndex = 1 # Juggernaut
 Pokemon = CHARIZARD,60
     Moves = DRACOMETEOR,MIRAGEFLARE,FLAMETHROWER,OVERHEAT
-    AbilityIndex = 0 # Levitate
+    AbilityIndex = 0 # Pure Rage
     Item = FIREGEM
 #-------------------------------
 [SCHOOLKID_F4,Lucia]

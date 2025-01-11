@@ -1425,6 +1425,10 @@ Description = Special moves against the Pokémon have a 30% chance to leech the 
 Name = Pure Energy
 Description = Raises the Pokémon's Sp. Atk by 50%, including Style Values and other bonuses.
 #-------------------------------
+[PURERAGE]
+Name = Pure Rage
+Description = The Pokémon's Dragon-type hits deal additional damage equal to half the Pokémon's level.
+#-------------------------------
 [PUZZLING]
 Name = Puzzling
 Description = Upon entry, creates a Puzzle Room for five turns, swapping base Attack and Sp. Atk.

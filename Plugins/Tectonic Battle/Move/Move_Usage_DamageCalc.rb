@@ -42,7 +42,7 @@ class PokeBattle_Move
         # Main damage calculation
         finalCalculatedDamage = calcDamageWithMultipliers(baseDmg,attack,defense,user.level,multipliers)
         finalCalculatedDamage  = [(finalCalculatedDamage * multipliers[:final_damage_multiplier]).round, 1].max
-        finalCalculatedDamage = flatDamageReductions(finalCalculatedDamage,user,target,aiCheck)
+        finalCalculatedDamage = flatDamageModifiers(finalCalculatedDamage,user,target,type,aiCheck)
 
         # Delayed Reaction
         if !@battle.moldBreaker && target.shouldAbilityApply?(:DELAYEDREACTION,aiCheck)
@@ -532,7 +532,13 @@ class PokeBattle_Move
         multipliers[:final_damage_multiplier] = pbModifyDamage(multipliers[:final_damage_multiplier], user, target)
     end
 
-    def flatDamageReductions(finalCalculatedDamage,user,target,aiCheck = false)
+    def flatDamageModifiers(finalCalculatedDamage,user,target,type,aiCheck = false)
+        # Additive effects
+        if user.shouldAbilityApply?(:PURERAGE,aiCheck) && type == :DRAGON
+            finalCalculatedDamage += (user.level / 2).ceil
+        end
+
+        # Subtractive effects
         if target.shouldAbilityApply?(:DRAGONSBLOOD,aiCheck) && !@battle.moldBreaker
             finalCalculatedDamage -= target.level
             target.aiLearnsAbility(:DRAGONSBLOOD) unless aiCheck
