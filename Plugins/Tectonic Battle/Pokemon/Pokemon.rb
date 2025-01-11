@@ -1101,14 +1101,6 @@ class Pokemon
         return species_data.weight
     end
 
-    # @return [Hash<Integer>] the EV yield of this Pokémon (a hash with six key/value pairs)
-    def evYield
-        this_evs = species_data.evs
-        ret = {}
-        GameData::Stat.each_main { |s| ret[s.id] = this_evs[s.id] }
-        return ret
-    end
-
     #=============================================================================
     # Happiness, traits, and likes/dislikes
     #=============================================================================
