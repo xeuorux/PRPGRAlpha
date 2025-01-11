@@ -3581,7 +3581,7 @@ Pokemon = TALONFLAME,40
     AbilityIndex = 1 # Gale Wings
     Item = LIFEORB
 Pokemon = TORTERRA,40
-    Moves = EARTHQUAKE,SNAPTRAP,BRUTALSWING,POLARIZEDROOM
+    Moves = EARTHQUAKE,LEAFBLADE,BRUTALSWING,POLARIZEDROOM
     AbilityIndex = 1 # Living Armor
 #-------------------------------
 [BOARDER,Lev]
@@ -8221,7 +8221,7 @@ Pokemon = TOGEDEMARU,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,0,0,20,0,10
 Pokemon = TORTERRA,70
-    Moves = LEECHSEED,PROTECT,SNAPTRAP,STAMPDOWN
+    Moves = LEECHSEED,PROTECT,WOODHAMMER,STAMPDOWN
     AbilityIndex = 1 # Living Armor
     Item = LEFTOVERS
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
