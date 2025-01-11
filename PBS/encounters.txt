@@ -483,11 +483,11 @@ Special
 #-------------------------------
 [180] # Blustery Bosk
 FloweryGrass2,20
+    20,CORVIKNIGHT,55,57
     20,FEAROW,55,57
     20,LEDIAN,55,57
     20,LUXRAY,55,57
-    20,MSEVIPER,55,57
-    20,MZANGOOSE,55,57
+    20,TOUCANNON,55,57
 #-------------------------------
 [182] # Spirit Atoll
 FloweryGrass,20
@@ -866,10 +866,10 @@ Special
 #-------------------------------
 [264] # Thunder Point
 Land,20
+    20,BLASFEMMIE,55,57
     20,DEDENNE,55,57
     20,EMOLGA,55,57
     20,FALINKS,55,57
-    20,MILCERY,55,57
     20,SEISMAW,55,57
 #-------------------------------
 [282] # The Catacombs B1
