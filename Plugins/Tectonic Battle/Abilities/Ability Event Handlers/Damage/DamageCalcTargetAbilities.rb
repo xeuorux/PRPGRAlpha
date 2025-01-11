@@ -121,7 +121,7 @@ BattleHandlers::DamageCalcTargetAbility.add(:FEATHERCOAT,
 
 BattleHandlers::DamageCalcTargetAbility.add(:REALIST,
   proc { |ability, user, target, _move, mults, _baseDmg, type, aiCheck|
-    if %i[DRAGON FAIRY].include?(type)
+    if %i[DRAGON FAIRY GHOST].include?(type)
       mults[:base_damage_multiplier] /= 2
       target.aiLearnsAbility(ability) unless aiCheck
     end
