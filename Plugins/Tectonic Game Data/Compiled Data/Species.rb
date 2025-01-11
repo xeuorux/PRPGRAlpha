@@ -1,5 +1,9 @@
 module GameData
     class Species
+        DEFAULT_GROWTH_RATE = :Medium
+        DEFAULT_GENDER_RATIO = :Female50Percent
+        DEFAULT_BASE_HAPPINESS = 70
+
         attr_reader :id
         attr_reader :id_number
         attr_reader :species
@@ -12,7 +16,6 @@ module GameData
         attr_reader :type1
         attr_reader :type2
         attr_reader :base_stats
-        attr_reader :evs
         attr_reader :base_exp
         attr_reader :growth_rate
         attr_reader :gender_ratio
@@ -26,15 +29,10 @@ module GameData
         attr_reader :wild_item_common
         attr_reader :wild_item_uncommon
         attr_reader :wild_item_rare
-        attr_reader :egg_groups
         attr_reader :hatch_steps
-        attr_reader :incense
         attr_reader :evolutions
         attr_reader :height
         attr_reader :weight
-        attr_reader :color
-        attr_reader :shape
-        attr_reader :habitat
         attr_reader :generation
         attr_reader :mega_stone
         attr_reader :mega_move
@@ -75,7 +73,6 @@ module GameData
               "Type1"             => [0, "e", :Type],
               "Type2"             => [0, "e", :Type],
               "BaseStats"         => [0, "vvvvvv"],
-              "EffortPoints"      => [0, "uuuuuu"],
               "BaseEXP"           => [0, "v"],
               "Rareness"          => [0, "u"],
               "Happiness"         => [0, "u"],
@@ -88,13 +85,9 @@ module GameData
               "WildItemCommon"    => [0, "e", :Item],
               "WildItemUncommon"  => [0, "e", :Item],
               "WildItemRare"      => [0, "e", :Item],
-              "Compatibility"     => [0, "*e", :EggGroup],
               "StepsToHatch"      => [0, "v"],
               "Height"            => [0, "f"],
               "Weight"            => [0, "f"],
-              "Color"             => [0, "e", :BodyColor],
-              "Shape"             => [0, "y", :BodyShape],
-              "Habitat"           => [0, "e", :Habitat],
               "Generation"        => [0, "i"],
               "Flags"             => [0, "*s"],
               "BattlerPlayerX"    => [0, "i"],
@@ -119,7 +112,6 @@ module GameData
                 ret["Name"]         = [0, "s"]
                 ret["GrowthRate"]   = [0, "e", :GrowthRate]
                 ret["GenderRate"]   = [0, "e", :GenderRatio]
-                ret["Incense"]      = [0, "e", :Item]
                 ret["Evolutions"]   = [0, "*ses", nil, :Evolution, nil]
             end
             return ret
@@ -138,16 +130,14 @@ module GameData
             @type1                 = hash[:type1]                 || :NORMAL
             @type2                 = hash[:type2]                 || @type1
             @base_stats            = hash[:base_stats]            || {}
-            @evs                   = hash[:evs]                   || {}
             GameData::Stat.each_main do |s|
                 @base_stats[s.id] = 1 if !@base_stats[s.id] || @base_stats[s.id] <= 0
-                @evs[s.id] = 0 if !@evs[s.id] || @evs[s.id] < 0
             end
             @base_exp              = hash[:base_exp]              || 100
-            @growth_rate           = hash[:growth_rate]           || :Medium
-            @gender_ratio          = hash[:gender_ratio]          || :Female50Percent
+            @growth_rate           = hash[:growth_rate]           || DEFAULT_GROWTH_RATE
+            @gender_ratio          = hash[:gender_ratio]          || DEFAULT_GENDER_RATIO
             @catch_rate            = hash[:catch_rate]            || 255
-            @happiness             = hash[:happiness]             || 70
+            @happiness             = hash[:happiness]             || DEFAULT_BASE_HAPPINESS
             @moves                 = hash[:moves]                 || []
             @tutor_moves           = hash[:tutor_moves]           || []
             @tutor_moves.uniq!
@@ -160,15 +150,10 @@ module GameData
             @wild_item_common      = hash[:wild_item_common]
             @wild_item_uncommon    = hash[:wild_item_uncommon]
             @wild_item_rare        = hash[:wild_item_rare]
-            @egg_groups            = hash[:egg_groups]            || [:Undiscovered]
             @hatch_steps           = hash[:hatch_steps]           || 1
-            @incense               = hash[:incense]
             @evolutions            = hash[:evolutions]            || []
             @height                = hash[:height]                || 1
             @weight                = hash[:weight]                || 1
-            @color                 = hash[:color]                 || :Red
-            @shape                 = hash[:shape]                 || :Head
-            @habitat               = hash[:habitat]               || :None
             @generation            = hash[:generation]            || 0
             @mega_stone            = hash[:mega_stone]
             @mega_move             = hash[:mega_move]
@@ -312,12 +297,7 @@ module GameData
             return ret if @evolutions.length == 0
             @evolutions.each do |evo|
                 next unless evo[3] # Not the prevolution
-                if check_items
-                    incense = GameData::Species.get(evo[0]).incense
-                    ret = evo[0] if !incense || item1 == incense || item2 == incense
-                else
-                    ret = evo[0] # Species of prevolution
-                end
+                ret = evo[0] # Species of prevolution
                 break
             end
             ret = GameData::Species.get(ret).get_baby_species(check_items, item1, item2) if ret != @species
@@ -579,7 +559,7 @@ module Compiler
                         contents[key] = value
                         # Sanitise data
                         case key
-                        when "BaseStats", "EffortPoints"
+                        when "BaseStats"
                             value_hash = {}
                             GameData::Stat.each_main do |s|
                                 value_hash[s.id] = value[s.pbs_order] if s.pbs_order >= 0
@@ -601,7 +581,7 @@ module Compiler
                             move_array.sort! { |a, b| (a[0] == b[0]) ? a[2] <=> b[2] : a[0] <=> b [0] }
                             move_array.each { |arr| arr.pop }
                             contents[key] = move_array
-                        when "TutorMoves", "EggMoves", "LineMoves", "Abilities", "HiddenAbility", "Compatibility"
+                        when "TutorMoves", "EggMoves", "LineMoves", "Abilities", "HiddenAbility"
                             contents[key] = [contents[key]] unless contents[key].is_a?(Array)
                             contents[key].compact!
                         when "Evolutions"
@@ -624,7 +604,6 @@ module Compiler
                       :type1                 => contents["Type1"],
                       :type2                 => contents["Type2"],
                       :base_stats            => contents["BaseStats"],
-                      :evs                   => contents["EffortPoints"],
                       :base_exp              => contents["BaseEXP"],
                       :growth_rate           => contents["GrowthRate"],
                       :gender_ratio          => contents["GenderRate"],
@@ -639,15 +618,10 @@ module Compiler
                       :wild_item_common      => contents["WildItemCommon"],
                       :wild_item_uncommon    => contents["WildItemUncommon"],
                       :wild_item_rare        => contents["WildItemRare"],
-                      :egg_groups            => contents["Compatibility"],
                       :hatch_steps           => contents["StepsToHatch"],
-                      :incense               => contents["Incense"],
                       :evolutions            => contents["Evolutions"],
                       :height                => contents["Height"],
                       :weight                => contents["Weight"],
-                      :color                 => contents["Color"],
-                      :shape                 => GameData::BodyShape.get(contents["Shape"]).id,
-                      :habitat               => contents["Habitat"],
                       :generation            => contents["Generation"],
                       :flags                 => contents["Flags"],
                       :notes                 => contents["Notes"],
@@ -764,7 +738,7 @@ module Compiler
                     contents[key] = value
                     # Sanitise data
                     case key
-                    when "BaseStats", "EffortPoints"
+                    when "BaseStats"
                         value_hash = {}
                         GameData::Stat.each_main do |s|
                             value_hash[s.id] = value[s.pbs_order] if s.pbs_order >= 0
@@ -786,7 +760,7 @@ module Compiler
                         move_array.sort! { |a, b| (a[0] == b[0]) ? a[2] <=> b[2] : a[0] <=> b [0] }
                         move_array.each { |arr| arr.pop }
                         contents[key] = move_array
-                    when "TutorMoves", "EggMoves", "LineMoves", "Abilities", "HiddenAbility", "Compatibility"
+                    when "TutorMoves", "EggMoves", "LineMoves", "Abilities", "HiddenAbility"
                         contents[key] = [contents[key]] unless contents[key].is_a?(Array)
                         contents[key].compact!
                     when "Evolutions"
@@ -831,7 +805,6 @@ module Compiler
                   :type1                 => contents["Type1"] || base_data.type1,
                   :type2                 => contents["Type2"] || base_data.type2,
                   :base_stats            => contents["BaseStats"] || base_data.base_stats,
-                  :evs                   => contents["EffortPoints"] || base_data.evs,
                   :base_exp              => contents["BaseEXP"] || base_data.base_exp,
                   :growth_rate           => base_data.growth_rate,
                   :gender_ratio          => base_data.gender_ratio,
@@ -846,15 +819,10 @@ module Compiler
                   :wild_item_common      => contents["WildItemCommon"] || base_data.wild_item_common,
                   :wild_item_uncommon    => contents["WildItemUncommon"] || base_data.wild_item_uncommon,
                   :wild_item_rare        => contents["WildItemRare"] || base_data.wild_item_rare,
-                  :egg_groups            => contents["Compatibility"] || base_data.egg_groups.clone,
                   :hatch_steps           => contents["StepsToHatch"] || base_data.hatch_steps,
-                  :incense               => base_data.incense,
                   :evolutions            => evolutions,
                   :height                => contents["Height"] || base_data.height,
                   :weight                => contents["Weight"] || base_data.weight,
-                  :color                 => contents["Color"] || base_data.color,
-                  :shape                 => (contents["Shape"]) ? GameData::BodyShape.get(contents["Shape"]).id : base_data.shape,
-                  :habitat               => contents["Habitat"] || base_data.habitat,
                   :generation            => contents["Generation"] || base_data.generation,
                   :flags                 => contents["Flags"] || base_data.flags,
                   :mega_stone            => contents["MegaStone"],
@@ -950,7 +918,7 @@ FileLineData.linereport)
                     contents[key] = value
                     # Sanitise data
                     case key
-                    when "BaseStats", "EffortPoints"
+                    when "BaseStats"
                         value_hash = {}
                         GameData::Stat.each_main do |s|
                             value_hash[s.id] = value[s.pbs_order] if s.pbs_order >= 0
@@ -972,7 +940,7 @@ FileLineData.linereport)
                         move_array.sort! { |a, b| (a[0] == b[0]) ? a[2] <=> b[2] : a[0] <=> b [0] }
                         move_array.each { |arr| arr.pop }
                         contents[key] = move_array
-                    when "TutorMoves", "EggMoves", "LineMoves", "Abilities", "HiddenAbility", "Compatibility"
+                    when "TutorMoves", "EggMoves", "LineMoves", "Abilities", "HiddenAbility"
                         contents[key] = [contents[key]] unless contents[key].is_a?(Array)
                         contents[key].compact!
                     when "Evolutions"
@@ -995,7 +963,6 @@ FileLineData.linereport)
                   :type1                 => contents["Type1"],
                   :type2                 => contents["Type2"],
                   :base_stats            => contents["BaseStats"],
-                  :evs                   => contents["EffortPoints"],
                   :base_exp              => contents["BaseEXP"],
                   :growth_rate           => contents["GrowthRate"],
                   :gender_ratio          => contents["GenderRate"],
@@ -1010,15 +977,10 @@ FileLineData.linereport)
                   :wild_item_common      => contents["WildItemCommon"],
                   :wild_item_uncommon    => contents["WildItemUncommon"],
                   :wild_item_rare        => contents["WildItemRare"],
-                  :egg_groups            => contents["Compatibility"],
                   :hatch_steps           => contents["StepsToHatch"],
-                  :incense               => contents["Incense"],
                   :evolutions            => contents["Evolutions"],
                   :height                => contents["Height"],
                   :weight                => contents["Weight"],
-                  :color                 => contents["Color"],
-                  :shape                 => GameData::BodyShape.get(contents["Shape"]).id,
-                  :habitat               => contents["Habitat"],
                   :generation            => contents["Generation"],
                   :notes                 => contents["Notes"],
                 }
@@ -1188,38 +1150,28 @@ FileLineData.linereport)
         f.write(format("Type1 = %s\r\n", species.type1))
         f.write(format("Type2 = %s\r\n", species.type2)) if species.type2 != species.type1
         stats_array = []
-        evs_array = []
         total = 0
         GameData::Stat.each_main do |s|
             next if s.pbs_order < 0
             stats_array[s.pbs_order] = species.base_stats[s.id]
-            evs_array[s.pbs_order] = species.evs[s.id]
             total += species.base_stats[s.id]
         end
         f.write(format("# HP, Attack, Defense, Speed, Sp. Atk, Sp. Def\r\n", total))
         f.write(format("BaseStats = %s\r\n", stats_array.join(",")))
         f.write(format("# Total = %s\r\n", total))
-        f.write(format("GenderRate = %s\r\n", species.gender_ratio))
-        f.write(format("GrowthRate = %s\r\n", species.growth_rate))
+        f.write(format("GenderRate = %s\r\n", species.gender_ratio)) unless species.gender_ratio == GameData::Species::DEFAULT_GENDER_RATIO
+        f.write(format("GrowthRate = %s\r\n", species.growth_rate)) unless species.growth_rate == GameData::Species::DEFAULT_GROWTH_RATE
         f.write(format("BaseEXP = %d\r\n", species.base_exp))
-        f.write(format("EffortPoints = %s\r\n", evs_array.join(",")))
         f.write(format("Rareness = %d\r\n", species.catch_rate))
-        f.write(format("Happiness = %d\r\n", species.happiness))
+        f.write(format("Happiness = %d\r\n", species.happiness)) unless species.happiness == GameData::Species::DEFAULT_BASE_HAPPINESS
         f.write(format("Abilities = %s\r\n", species.abilities.join(","))) if species.abilities.length > 0
-        if species.hidden_abilities.length > 0
-            f.write(format("HiddenAbility = %s\r\n", species.hidden_abilities.join(",")))
-        end
         f.write(format("Moves = %s\r\n", species.moves.join(","))) if species.moves.length > 0
         f.write(format("TutorMoves = %s\r\n", species.tutor_moves.join(","))) if species.tutor_moves.length > 0
         f.write(format("LineMoves = %s\r\n", species.egg_moves.join(","))) if species.egg_moves.length > 0
-        f.write(format("Compatibility = %s\r\n", species.egg_groups.join(","))) if species.egg_groups.length > 0
         f.write(format("Tribes = %s\r\n", species.tribes(true).join(","))) if species.tribes(true).length > 0
         f.write(format("StepsToHatch = %d\r\n", species.hatch_steps))
         f.write(format("Height = %.1f\r\n", species.height / 10.0))
         f.write(format("Weight = %.1f\r\n", species.weight / 10.0))
-        f.write(format("Color = %s\r\n", species.color))
-        f.write(format("Shape = %s\r\n", species.shape))
-        f.write(format("Habitat = %s\r\n", species.habitat)) if species.habitat != :None
         f.write(format("Kind = %s\r\n", species.real_category))
         f.write(format("Pokedex = %s\r\n", species.real_pokedex_entry))
         if species.real_form_name && !species.real_form_name.empty?
@@ -1250,7 +1202,6 @@ FileLineData.linereport)
             end
             f.write("\r\n")
         end
-        f.write(format("Incense = %s\r\n", species.incense)) if species.incense
     end
 
     #=============================================================================
@@ -1289,22 +1240,16 @@ FileLineData.linereport)
             f.write(format("Type2 = %s\r\n", species.type2)) if species.type2 != species.type1
         end
         stats_array = []
-        evs_array = []
         GameData::Stat.each_main do |s|
             next if s.pbs_order < 0
             stats_array[s.pbs_order] = species.base_stats[s.id]
-            evs_array[s.pbs_order] = species.evs[s.id]
         end
         f.write(format("BaseStats = %s\r\n", stats_array.join(","))) if species.base_stats != base_species.base_stats
         f.write(format("BaseEXP = %d\r\n", species.base_exp)) if species.base_exp != base_species.base_exp
-        f.write(format("EffortPoints = %s\r\n", evs_array.join(","))) if species.evs != base_species.evs
         f.write(format("Rareness = %d\r\n", species.catch_rate)) if species.catch_rate != base_species.catch_rate
         f.write(format("Happiness = %d\r\n", species.happiness)) if species.happiness != base_species.happiness
         if species.abilities.length > 0 && species.abilities != base_species.abilities
             f.write(format("Abilities = %s\r\n", species.abilities.join(",")))
-        end
-        if species.hidden_abilities.length > 0 && species.hidden_abilities != base_species.hidden_abilities
-            f.write(format("HiddenAbility = %s\r\n", species.hidden_abilities.join(",")))
         end
         if species.moves.length > 0 && species.moves != base_species.moves
             f.write(format("Moves = %s\r\n", species.moves.join(",")))
@@ -1315,17 +1260,9 @@ FileLineData.linereport)
         if species.egg_moves.length > 0 && species.egg_moves != base_species.egg_moves
             f.write(format("LineMoves = %s\r\n", species.egg_moves.join(",")))
         end
-        if species.egg_groups.length > 0 && species.egg_groups != base_species.egg_groups
-            f.write(format("Compatibility = %s\r\n", species.egg_groups.join(",")))
-        end
         f.write(format("StepsToHatch = %d\r\n", species.hatch_steps)) if species.hatch_steps != base_species.hatch_steps
         f.write(format("Height = %.1f\r\n", species.height / 10.0)) if species.height != base_species.height
         f.write(format("Weight = %.1f\r\n", species.weight / 10.0)) if species.weight != base_species.weight
-        f.write(format("Color = %s\r\n", species.color)) if species.color != base_species.color
-        f.write(format("Shape = %s\r\n", species.shape)) if species.shape != base_species.shape
-        if species.habitat != :None && species.habitat != base_species.habitat
-            f.write(format("Habitat = %s\r\n", species.habitat))
-        end
         f.write(format("Kind = %s\r\n", species.real_category)) if species.real_category != base_species.real_category
         if species.real_pokedex_entry != base_species.real_pokedex_entry
             f.write(format("Pokedex = %s\r\n",

@@ -2,72 +2,58 @@
 #-------------------------------
 [PIKACHU,3]
 FormName = Cosplay
-Compatibility = Undiscovered
 Pokedex = Whenever Pikachu comes across something new, it blasts it with a jolt of electricity. If you come across a blackened berry, it's evidence that this Pokémon mistook the intensity of its charge.
 #-------------------------------
 [PIKACHU,4]
 FormName = Cosplay - Belle
-Compatibility = Undiscovered
 Pokedex = Whenever Pikachu comes across something new, it blasts it with a jolt of electricity. If you come across a blackened berry, it's evidence that this Pokémon mistook the intensity of its charge.
 #-------------------------------
 [PIKACHU,5]
 FormName = Cosplay - Libre
-Compatibility = Undiscovered
 Pokedex = Whenever Pikachu comes across something new, it blasts it with a jolt of electricity. If you come across a blackened berry, it's evidence that this Pokémon mistook the intensity of its charge.
 #-------------------------------
 [PIKACHU,6]
 FormName = Cosplay - Ph.D.
-Compatibility = Undiscovered
 Pokedex = Whenever Pikachu comes across something new, it blasts it with a jolt of electricity. If you come across a blackened berry, it's evidence that this Pokémon mistook the intensity of its charge.
 #-------------------------------
 [PIKACHU,7]
 FormName = Cosplay - Pop Star
-Compatibility = Undiscovered
 Pokedex = Whenever Pikachu comes across something new, it blasts it with a jolt of electricity. If you come across a blackened berry, it's evidence that this Pokémon mistook the intensity of its charge.
 #-------------------------------
 [PIKACHU,8]
 FormName = Cosplay - Rock Star
-Compatibility = Undiscovered
 Pokedex = Whenever Pikachu comes across something new, it blasts it with a jolt of electricity. If you come across a blackened berry, it's evidence that this Pokémon mistook the intensity of its charge.
 #-------------------------------
 [PIKACHU,9]
 FormName = Original Cap
-Compatibility = Undiscovered
 Pokedex = This Pikachu wears its partner's cap, which is brimming with memories of traveling through many different regions.
 #-------------------------------
 [PIKACHU,10]
 FormName = Hoenn Cap
-Compatibility = Undiscovered
 Pokedex = This Pikachu wears its partner's cap, which is brimming with memories of traveling through the Hoenn region.
 #-------------------------------
 [PIKACHU,11]
 FormName = Sinnoh Cap
-Compatibility = Undiscovered
 Pokedex = This Pikachu wears its partner's cap, which is brimming with memories of traveling through the Sinnoh region.
 #-------------------------------
 [PIKACHU,12]
 FormName = Unova Cap
-Compatibility = Undiscovered
 Pokedex = This Pikachu wears its partner's cap, which is brimming with memories of traveling through the Unova region.
 #-------------------------------
 [PIKACHU,13]
 FormName = Kalos Cap
-Compatibility = Undiscovered
 Pokedex = This Pikachu wears its partner's cap, which is brimming with memories of traveling through the Kalos region.
 #-------------------------------
 [PIKACHU,14]
 FormName = Alola Cap
-Compatibility = Undiscovered
 Pokedex = This Pikachu wears its partner's cap, which is brimming with memories of traveling through the Alola region.
 #-------------------------------
 [PIKACHU,15]
 FormName = Partner Cap
-Compatibility = Undiscovered
 Pokedex = This Pikachu wears its partner's cap, which is brimming with memories of when they first met.
 #-------------------------------
 [PIKACHU,16]
 FormName = World Cap
-Compatibility = Undiscovered
 Pokedex = This Pikachu is wearing its Trainer's cap. The cap is a precious symbol that travels across different regions with Pikachu.
 #-------------------------------
 [UNOWN,1]
@@ -154,78 +140,62 @@ FormName = !
 [CASTFORM,1]
 FormName = Sun
 Type1 = FIRE
-Color = Red
 Pokedex = This is the form Castform takes on the brightest of days. Its skin is unexpectedly hot to the touch, so approach with care.
 #-------------------------------
 [CASTFORM,2]
 FormName = Rain
 Type1 = WATER
-Color = Blue
 Pokedex = This is the form Castform takes when soaked with rain. When its body is compressed, water will seep out as if from a sponge.
 #-------------------------------
 [CASTFORM,3]
 FormName = Hail
 Type1 = ICE
-Color = White
 Pokedex = This is the form Castform takes when covered in snow. Its body becomes an ice-like material, with a temperature near -5 degrees Celsius.
 #-------------------------------
 [CASTFORM,4]
 FormName = Sand
 Type1 = ROCK
-Color = Yellow
 Pokedex = This is the form Castform takes when sand sweeps up. Its body is made of particles that are constantly spinning.
 #-------------------------------
 [DEOXYS,1]
 FormName = Attack
 BaseStats = 50,180,20,150,180,20
-EffortPoints = 0,2,0,0,1,0
 Moves = 1,LEER,1,GRAVITY,5,TELEPORT,10,PULSAR,15,TAUNT,20,PURSUIT,25,PSYCHIC,30,SUPERPOWER,35,PSYCHOSHIFT,40,ZENHEADBUTT,45,WORKUP,50,ZAPCANNON,55,PSYCHOBOOST,60,HYPERBEAM
 #-------------------------------
 [DEOXYS,2]
 FormName = Defense
 BaseStats = 50,70,160,90,70,160
-EffortPoints = 0,0,2,0,0,1
 Moves = 1,LEER,1,GRAVITY,5,TELEPORT,10,PULSAR,15,KNOCKOFF,20,SPIKES,25,PSYCHIC,30,SNATCH,35,PSYCHOSHIFT,40,ZENHEADBUTT,45,COSMICPOWER,50,AMNESIA,55,RECOVER,60,PSYCHOBOOST,65,COUNTER,65,MIRRORCOAT
 #-------------------------------
 [DEOXYS,3]
 FormName = Speed
 BaseStats = 50,95,90,180,95,90
-EffortPoints = 0,0,0,3,0,0
 Moves = 1,LEER,1,GRAVITY,5,TELEPORT,10,PULSAR,15,KNOCKOFF,20,PURSUIT,25,PSYCHIC,30,SWIFT,35,PSYCHOSHIFT,40,ZENHEADBUTT,45,AGILITY,50,RECOVER,55,PSYCHOBOOST,60,EXTREMESPEED
 #-------------------------------
 [BURMY,1]
 FormName = Sand
-Color = Brown
 #-------------------------------
 [BURMY,2]
 FormName = Trash
-Color = Red
 #-------------------------------
 [WORMADAM,1]
 FormName = Sand
 Type1 = BUG
 Type2 = GROUND
-EffortPoints = 0,0,2,0,0,0
-Color = Brown
 #-------------------------------
 [WORMADAM,2]
 FormName = Trash
 Type1 = BUG
 Type2 = STEEL
-EffortPoints = 0,0,1,0,0,1
-Color = Red
 #-------------------------------
 [CHERRIM,1]
 FormName = Sun
-Color = Pink
 #-------------------------------
 [SHELLOS,1]
 FormName = East Sea
-Color = Blue
 #-------------------------------
 [GASTRODON,1]
 FormName = East Sea
-Color = Blue
 #-------------------------------
 [ROTOM,1]
 FormName = Heat
@@ -268,14 +238,12 @@ BaseStats = 150,120,100,90,120,100
 Abilities = LEVITATE
 Height = 6.9
 Weight = 650.0
-Shape = Serpentine
 #-------------------------------
 [SHAYMIN,1]
 FormName = Sky
 Type1 = GRASS
 Type2 = FLYING
 BaseStats = 100,103,75,127,120,75
-EffortPoints = 0,0,0,3,0,0
 Abilities = AERODYNAMIC,FLOWERVEIL
 Moves = 1,GROWTH,5,GUST,10,MAGICALLEAF,15,LEECHSEED,20,QUICKATTACK,25,NATURALGIFT,30,BLUSTER,35,ROOST,40,ENERGYBALL,45,SWEETKISS,50,AIRSLASH,55,LEAFSTORM,60,SEEDFLARE
 Height = 0.4
@@ -363,7 +331,6 @@ Type1 = NORMAL
 Type2 = GRASS
 BaseStats = 60,80,50,70,40,80
 Moves = 1,TACKLE,1,GROWL,4,LEAFAGE,8,SMIRK,12,ANESTHETIZE,16,RAZORLEAF,20,HEADBUTT,24,DOUBLEKICK,28,TAKEDOWN,32,SCYTHEKICK,36,WHIPKICK,40,AROMATHERAPY,44,TAUNT,48,DOUBLEEDGE,52,SOLARGLIDE,56,SYNTHESIS,60,SEASONSEND
-Color = Green
 #-------------------------------
 [DEERLING,2]
 FormName = Autumn
@@ -371,7 +338,6 @@ Type1 = NORMAL
 Type2 = GROUND
 BaseStats = 60,50,50,85,40,95
 Moves = 1,TACKLE,1,GROWL,4,TREADON,8,LEER,12,BESTOW,16,TREMOR,20,HEADBUTT,24,DOUBLEKICK,28,TAKEDOWN,32,SCYTHEKICK,36,TRAMPLE,40,SYMBIOSIS,44,SPIKES,48,DOUBLEEDGE,52,EARTHQUAKE,56,SHOREUP,60,SEASONSEND
-Color = Red
 #-------------------------------
 [DEERLING,3]
 FormName = Winter
@@ -379,7 +345,6 @@ Type1 = NORMAL
 Type2 = ICE
 BaseStats = 60,65,95,55,45,60
 Moves = 1,TACKLE,1,GROWL,4,COLDEMBRACE,8,DAZZLE,12,CHILL,16,FROSTBARB,20,HEADBUTT,24,DOUBLEKICK,28,TAKEDOWN,32,SCYTHEKICK,36,ICECALIBUR,40,CHARM,44,SHIVERDANCE,48,DOUBLEEDGE,52,GLACIALRAM,56,WISH,60,SEASONSEND
-Color = Brown
 #-------------------------------
 [SAWSBUCK,1]
 FormName = Summer
@@ -405,31 +370,24 @@ Moves = 0,NATUREPOWER,1,NATUREPOWER,1,TACKLE,1,GROWL,4,COLDEMBRACE,8,DAZZLE,12,C
 [TORNADUS,1]
 FormName = Therian
 BaseStats = 79,100,80,121,110,90
-EffortPoints = 0,0,0,3,0,0
 Abilities = REGENERATOR
 Height = 1.4
-Shape = Winged
 #-------------------------------
 [THUNDURUS,1]
 FormName = Therian
 BaseStats = 79,105,70,101,145,80
-EffortPoints = 0,0,0,0,3,0
 Abilities = VOLTABSORB
 Height = 3.0
-Shape = BipedalTail
 #-------------------------------
 [LANDORUS,1]
 FormName = Therian
 BaseStats = 89,145,90,91,105,80
-EffortPoints = 0,3,0,0,0,0
 Abilities = INTIMIDATE
 Height = 1.3
-Shape = Quadruped
 #-------------------------------
 [KYUREM,1]
 FormName = White
 BaseStats = 125,120,90,95,170,100
-EffortPoints = 0,0,0,0,3,0
 Abilities = JUGGERNAUT
 Moves = 1,DRAGONBREATH,1,NOBLEROAR,4,ANCIENTPOWER,8,POWDERSNOW,12,SLASH,16,ENDEAVOR,20,CHILL,24,DRAGONPULSE,28,ICEBEAM,32,HYPERVOICE,36,SCARYFACE,40,BLIZZARD,44,OUTRAGE,48,ICEBURN,52,GLACIALRAM
 Height = 3.6
@@ -438,7 +396,6 @@ Pokedex = It has foreseen that a world of truth will arrive for people and Poké
 [KYUREM,2]
 FormName = Black
 BaseStats = 125,170,100,95,120,90
-EffortPoints = 0,3,0,0,0,0
 Abilities = JUGGERNAUT
 Moves = 1,DRAGONBREATH,1,NOBLEROAR,4,ANCIENTPOWER,8,POWDERSNOW,12,SLASH,16,ENDEAVOR,20,CHILL,24,DRAGONPULSE,28,ICEBEAM,32,HYPERVOICE,36,SCARYFACE,40,BLIZZARD,44,OUTRAGE,48,FREEZESHOCK,52,GLACIALRAM
 Height = 3.3
@@ -446,14 +403,12 @@ Pokedex = It's said that this Pokémon battles in order to protect the ideal wor
 #-------------------------------
 [KYUREM,3]
 BaseStats = 125,120,90,95,170,100
-EffortPoints = 0,0,0,0,3,0
 Abilities = JUGGERNAUT
 Moves = 1,ICYWIND,1,CLASH,8,BAR,15,ANCIENTPOWER,22,ICEBEAM,29,DRAGONBREATH,36,SLASH,43,FUSIONFLARE,50,ICEBURN,57,DRAGONPULSE,64,NOBLEROAR,71,ENDEAVOR,78,BLIZZARD,85,OUTRAGE,92,HYPERVOICE
 Height = 3.6
 #-------------------------------
 [KYUREM,4]
 BaseStats = 125,170,100,95,120,90
-EffortPoints = 0,3,0,0,0,0
 Abilities = JUGGERNAUT
 Moves = 1,ICYWIND,1,CLASH,8,BAR,15,ANCIENTPOWER,22,ICEBEAM,29,DRAGONBREATH,36,SLASH,43,FUSIONBOLT,50,FREEZESHOCK,57,DRAGONPULSE,64,NOBLEROAR,71,ENDEAVOR,78,BLIZZARD,85,OUTRAGE,92,HYPERVOICE
 Height = 3.3
@@ -467,7 +422,6 @@ FormName = Pirouette
 Type1 = NORMAL
 Type2 = FIGHTING
 BaseStats = 100,128,90,128,77,77
-EffortPoints = 0,1,1,1,0,0
 #-------------------------------
 [GENESECT,1]
 FormName = Shock Drive
@@ -603,12 +557,10 @@ FormName = Pharaoh Trim
 #-------------------------------
 [MEOWSTIC,1]
 FormName = Female
-Color = White
 #-------------------------------
 [AEGISLASH,1]
 FormName = Blade
 BaseStats = 60,150,50,60,150,50
-EffortPoints = 0,2,0,0,1,0
 #-------------------------------
 [PUMPKABOO,1]
 FormName = Average Size
@@ -659,8 +611,6 @@ FormName = 10%
 BaseStats = 54,91,71,115,71,85
 Height = 1.2
 Weight = 33.5
-Color = Black
-Shape = Quadruped
 Pokedex = This is Zygarde when about 10% of its pieces have been assembled. It leaps at its opponent's chest and sinks its sharp fangs into them.
 #-------------------------------
 [ZYGARDE,2]
@@ -669,8 +619,6 @@ BaseStats = 225,91,121,85,91,95
 Abilities = POWERCONSTRUCT
 Height = 4.5
 Weight = 610.0
-Color = Black
-Shape = BipedalTail
 Pokedex = This is Zygarde's perfected form. From the orifice on its chest, it radiates high-powered energy that eliminates everything.
 #-------------------------------
 [ZYGARDE,3]
@@ -685,27 +633,23 @@ Abilities = SUBSPACESCHISM
 Moves = 1,ALLYSWITCH,1,MINDWAVES,4,ASTONISH,8,MAGICCOAT,12,LIGHTSCREEN,16,PSYBEAM,20,SKILLSWAP,24,POWERSPLIT,28,GUARDSPLIT,32,PHANTOMFORCE,36,ZENHEADBUTT,40,SHADOWBALL,44,TRICK,48,DESTINYBOND,52,DREAMDANCE,56,PSYCHIC,60,HYPERSPACEFURY
 Height = 6.5
 Weight = 490.0
-Shape = BipedalTail
 #-------------------------------
 [ORICORIO,1]
 FormName = Pom-Pom Style
 Type1 = ELECTRIC
 Type2 = FLYING
-Color = Yellow
 Pokedex = It creates an electric charge by rubbing its feathers together. It dances over to its enemies and delivers shocking electrical punches.
 #-------------------------------
 [ORICORIO,2]
 FormName = Pa'u Style
 Type1 = PSYCHIC
 Type2 = FLYING
-Color = Pink
 Pokedex = This Oricorio relaxes by swaying gently. This increases its psychic energy, which it then fires at its enemies.
 #-------------------------------
 [ORICORIO,3]
 FormName = Sensu Style
 Type1 = GHOST
 Type2 = FLYING
-Color = Purple
 Pokedex = It summons the dead with its dreamy dancing. From their malice, it draws power with which to curse its enemies.
 #-------------------------------
 [LYCANROC,1]
@@ -715,8 +659,6 @@ Type2 = DARK
 BaseStats = 75,125,105,135,65,95
 Abilities = NOGUARD
 Height = 1.1
-Color = Red
-Shape = BipedalTail
 Pokedex = It goads its enemies into attacking, withstands the hits, and in return, delivers a headbutt, crushing their bones with its rocky mane.
 #-------------------------------
 [LYCANROC,2]
@@ -729,7 +671,6 @@ FormName = School
 BaseStats = 45,140,130,30,140,135
 Height = 8.2
 Weight = 78.6
-Shape = MultiBody
 Pokedex = Weak Wishiwashi school together to concentrate their power. Their united force makes them the demon of the sea, feared near and far.
 #-------------------------------
 [SILVALLY,1]
@@ -807,57 +748,43 @@ Type1 = FAIRY
 [MINIOR,7]
 FormName = Red
 BaseStats = 65,100,60,120,130,60
-EffortPoints = 0,1,0,0,1,0
 Weight = 0.3
-Color = Red
 Pokedex = If its core stays exposed, it will soon die off. It's possible that it may survive if it's put into a Poké Ball quickly enough.
 #-------------------------------
 [MINIOR,8]
 FormName = Orange
 BaseStats = 65,100,60,120,130,60
-EffortPoints = 0,1,0,0,1,0
 Weight = 0.3
-Color = Red
 Pokedex = If its core stays exposed, it will soon die off. It's possible that it may survive if it's put into a Poké Ball quickly enough.
 #-------------------------------
 [MINIOR,9]
 FormName = Yellow
 BaseStats = 65,100,60,120,130,60
-EffortPoints = 0,1,0,0,1,0
 Weight = 0.3
-Color = Yellow
 Pokedex = If its core stays exposed, it will soon die off. It's possible that it may survive if it's put into a Poké Ball quickly enough.
 #-------------------------------
 [MINIOR,10]
 FormName = Green
 BaseStats = 65,100,60,120,130,60
-EffortPoints = 0,1,0,0,1,0
 Weight = 0.3
-Color = Green
 Pokedex = If its core stays exposed, it will soon die off. It's possible that it may survive if it's put into a Poké Ball quickly enough.
 #-------------------------------
 [MINIOR,11]
 FormName = Blue
 BaseStats = 65,100,60,120,130,60
-EffortPoints = 0,1,0,0,1,0
 Weight = 0.3
-Color = Blue
 Pokedex = If its core stays exposed, it will soon die off. It's possible that it may survive if it's put into a Poké Ball quickly enough.
 #-------------------------------
 [MINIOR,12]
 FormName = Indigo
 BaseStats = 65,100,60,120,130,60
-EffortPoints = 0,1,0,0,1,0
 Weight = 0.3
-Color = Blue
 Pokedex = If its core stays exposed, it will soon die off. It's possible that it may survive if it's put into a Poké Ball quickly enough.
 #-------------------------------
 [MINIOR,13]
 FormName = Violet
 BaseStats = 65,100,60,120,130,60
-EffortPoints = 0,1,0,0,1,0
 Weight = 0.3
-Color = Purple
 Pokedex = If its core stays exposed, it will soon die off. It's possible that it may survive if it's put into a Poké Ball quickly enough.
 #-------------------------------
 [MIMIKYU,1]
@@ -869,11 +796,8 @@ FormName = Dusk Mane
 Type1 = PSYCHIC
 Type2 = STEEL
 BaseStats = 97,157,127,77,113,109
-EffortPoints = 0,3,0,0,0,0
 Height = 3.8
 Weight = 460.0
-Color = Yellow
-Shape = Quadruped
 Pokedex = This is Necrozma's form while it's absorbing the power of Solgaleo, making it extremely ferocious and impossible to control.
 #-------------------------------
 [NECROZMA,2]
@@ -881,10 +805,8 @@ FormName = Dawn Wings
 Type1 = PSYCHIC
 Type2 = GHOST
 BaseStats = 97,113,109,77,157,127
-EffortPoints = 0,0,0,0,3,0
 Height = 4.2
 Weight = 350.0
-Color = Blue
 Pokedex = Lunala no longer has a will of its own. Now under the control of Necrozma, it continuously expels all of its energy.
 #-------------------------------
 [NECROZMA,3]
@@ -892,24 +814,19 @@ FormName = Ultra
 Type1 = PSYCHIC
 Type2 = DRAGON
 BaseStats = 97,167,97,129,167,97
-EffortPoints = 0,1,0,1,1,0
 Abilities = NEUROFORCE
 Height = 7.5
-Color = Yellow
 Pokedex = The light pouring out from all over its body affects living things and nature, impacting them in various ways.
 #-------------------------------
 [NECROZMA,4]
 Type1 = PSYCHIC
 Type2 = DRAGON
 BaseStats = 97,167,97,129,167,97
-EffortPoints = 0,1,0,1,1,0
 Abilities = NEUROFORCE
 Height = 7.5
-Color = Yellow
 #-------------------------------
 [MAGEARNA,1]
 FormName = Original Color
-Color = Red
 Pokedex = This gorgeous Magearna looks as it did at the time of its invention. Its luxurious decoration pleased the king's daughter.
 #-------------------------------
 [CRAMORANT,1]
@@ -936,7 +853,6 @@ Pokedex = Trainers Polteageist trusts will be allowed to experience its distinct
 #-------------------------------
 [INDEEDEE,1]
 FormName = Female
-EffortPoints = 0,0,0,0,0,2
 Pokedex = They diligently serve people and Pokémon so they can gather feelings of gratitude. The females are particularly good at babysitting.
 #-------------------------------
 [MORPEKO,1]
@@ -973,7 +889,6 @@ FormName = Ice
 Type1 = PSYCHIC
 Type2 = ICE
 BaseStats = 100,165,150,50,85,130
-EffortPoints = 0,3,0,0,0,0
 Abilities = ASONEICE
 Moves = 1,GLACIALLANCE,1,TACKLE,1,LEER,1,DOUBLEKICK,1,AVALANCHE,1,TAKEDOWN,1,TORMENT,1,GREYMIST,1,ICECALIBUR,1,BODYSLAM,1,IRONDEFENSE,1,THRASH,1,TAUNT,1,DOUBLEEDGE,1,SWORDSDANCE,1,POUND,1,MEGADRAIN,1,MINDWAVES,5,GROWTH,10,LIFEDEW,15,GIGADRAIN,20,PULSAR,25,HELPINGHAND,30,AROMATHERAPY,35,ENERGYBALL,40,PSYCHIC,45,LEECHSEED,50,HEALPULSE,55,SOLARBEAM,60,FUTURESIGHT
 Kind = High King
@@ -984,7 +899,6 @@ FormName = Shadow
 Type1 = PSYCHIC
 Type2 = GHOST
 BaseStats = 100,85,80,150,165,100
-EffortPoints = 0,0,0,0,3,0
 Abilities = ASONEGHOST
 Moves = 1,ASTRALBARRAGE,1,TACKLE,1,LEER,1,DOUBLEKICK,1,HEX,1,RUIN,1,CONFUSERAY,1,GREYMIST,1,SHADOWBALL,1,TAKEDOWN,1,AGILITY,1,THRASH,1,DISABLE,1,DOUBLEEDGE,1,DREAMDANCE,1,POUND,1,MEGADRAIN,1,MINDWAVES,5,GROWTH,10,LIFEDEW,15,GIGADRAIN,20,PULSAR,25,HELPINGHAND,30,AROMATHERAPY,35,ENERGYBALL,40,PSYCHIC,45,LEECHSEED,50,HEALPULSE,55,SOLARBEAM,60,FUTURESIGHT
 Kind = High King
@@ -1020,9 +934,7 @@ FormName = Zen
 Type1 = FIRE
 Type2 = PSYCHIC
 BaseStats = 105,30,105,55,140,105
-EffortPoints = 0,0,0,0,2,0
 Abilities = TOUGH
-Color = Blue
 Pokedex = When wounded, it stops moving. It goes as still as stone to meditate, sharpening its mind and spirit.
 #-------------------------------
 [GDARMANITAN,1]
@@ -1079,7 +991,6 @@ Pokedex = Despite its diminished size, its mental power has grown phenomenally. 
 FormName = Therian
 BaseStats = 74,115,110,46,135,100
 Abilities = WEATHERED
-Shape = Quadruped
 #-------------------------------
 [MAROMATISSE,1]
 FormName = Harvest
