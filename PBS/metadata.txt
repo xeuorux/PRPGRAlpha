@@ -39,7 +39,7 @@ Environment = TallGrass
 # Scientist's House
 Outdoor = false
 ShowArea = false
-Bicycle = true
+Bicycle = false
 BattleBack = indoor1
 Environment = None
 #-------------------------------
