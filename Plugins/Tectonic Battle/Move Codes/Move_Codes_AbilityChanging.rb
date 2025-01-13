@@ -125,6 +125,20 @@ class PokeBattle_Move_SetUserAbilityToTargetAbility < PokeBattle_Move
     end
 end
 
+class PokeBattle_Move_EmpoweredRolePlay < PokeBattle_Move
+    include EmpoweredMove
+    
+    def ignoresSubstitute?(_user); return true; end
+
+    def pbEffectGeneral(user)
+        super
+        user.eachOpposing do |b|
+            @battle.pbDisplay(_INTL("{1} copies {2}'s ability!",user.pbThis,target.pbThis(true)))
+            user.addAbility(b.firstAbility)
+        end
+    end  
+end
+
 #===============================================================================
 # Target copies user's ability. (Entrainment)
 #===============================================================================

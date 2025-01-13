@@ -52,6 +52,18 @@ Flags = CanProtect,CanMirrorMove,Empowered
 Description = The user growls fiercly, lowering each foe's Attack by two steps and raising its own Attack by two steps.
 Animation = GROWL
 #-------------------------------
+[PRIMEVALROLEPLAY]
+Name = Primeval Role Play
+Type = NORMAL
+Category = Status
+Accuracy = 0
+TotalPP = 1
+Target = AllNearFoes
+FunctionCode = EmpoweredRolePlay
+Flags = CanProtect,CanMirrorMove,Empowered
+Description = The user copies and gains the first ability of each foe.
+Animation = ROLEPLAY
+#-------------------------------
 [PRIMEVALYAWN]
 Name = Primeval Yawn
 Type = NORMAL
@@ -442,6 +454,20 @@ Priority = 1
 FunctionCode = EmpoweredBulletPunch
 Flags = CanProtect,CanMirrorMove,Punch,Empowered
 Description = The user strikes the target with 3 punches like bullets. This move always goes first.
+#-------------------------------
+[EMPOWEREDBULLETTRAIN]
+Name = Empowered Bullet Train
+Type = STEEL
+Category = Physical
+Power = 200
+Accuracy = 100
+TotalPP = 1
+Target = NearOther
+FunctionCode = EmpoweredBulletTrain
+Flags = CanProtect,CanMirrorMove,Empowered
+EffectChance = 100
+Description = The user becomes a pain train. This raises the user's Speed by 2 steps.
+Animation = BULLETTRAIN
 #-------------------------------
 [EMPOWEREDMETALCLAW]
 Name = Empowered Metal Claw

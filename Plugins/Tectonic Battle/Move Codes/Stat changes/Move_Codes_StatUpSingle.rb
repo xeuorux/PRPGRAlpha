@@ -153,6 +153,10 @@ class PokeBattle_Move_RaiseUserSpd2 < PokeBattle_StatUpMove
     end
 end
 
+class PokeBattle_Move_EmpoweredBulletTrain < PokeBattle_Move_RaiseUserSpd2  
+    include EmpoweredMove  
+end
+
 #===============================================================================
 # Increases the user's Speed by 3 steps.
 #===============================================================================
@@ -178,6 +182,8 @@ class PokeBattle_Move_RaiseUserSpd4 < PokeBattle_StatUpMove
         return score
     end
 end
+
+# Empowered Bullet Train
 
 # Empowered Rock Polish
 class PokeBattle_Move_EmpoweredRockPolish < PokeBattle_Move_RaiseUserSpd4

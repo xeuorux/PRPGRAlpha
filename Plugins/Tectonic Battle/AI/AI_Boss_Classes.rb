@@ -1025,3 +1025,17 @@ class PokeBattle_AI_BELLOSSOM < PokeBattle_AI_Boss
         @requiredMoves.push(:HELPINGHAND)
     end
 end
+
+class PokeBattle_AI_ASANDSLASH < PokeBattle_AI_Boss
+    def initialize(user, battle)
+        super
+        @warnedIFFMove.add(:INURE, {
+            :condition => proc { |_move, _user, _target, battle|
+                next true
+            },
+            :warning => proc { |_move, user, targets, _battle|
+                _INTL("{1} is getting used to the harsh conditions!",user.pbThis)
+            },
+        })
+    end
+end
