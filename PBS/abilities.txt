@@ -307,7 +307,7 @@ Flags = SunshineSynergy
 #-------------------------------
 [LEVITATE]
 Name = Levitate
-Description = Gives full immunity to all Ground-type moves.
+Description = Immune to Ground-type moves. Immune to grounded hazards.
 Flags = Levitation
 #-------------------------------
 [MAGICBOUNCE]
