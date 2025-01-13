@@ -16,6 +16,12 @@ BattleHandlers::GuaranteedCriticalUserAbility.add(:BITTER,
     }
 )
 
+BattleHandlers::GuaranteedCriticalUserAbility.add(:SEVERE,
+    proc { |ability, _user, target, _battle|
+        next true if target.numbed?
+    }
+)
+
 BattleHandlers::GuaranteedCriticalUserAbility.add(:WALLNINJA,
     proc { |ability, user, _target, _battle|
         next true if user.battle.roomActive?

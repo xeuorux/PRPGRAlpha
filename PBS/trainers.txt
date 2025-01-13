@@ -1341,7 +1341,7 @@ Pokemon = MARILL,28
 [REPORTER,Helga]
 Pokemon = ELECTABUZZ,28
     Moves = POWERUPPUNCH,QUICKATTACK,THUNDERPUNCH,CHARGE
-    AbilityIndex = 0 # Shock Style
+    AbilityIndex = 0 # Severe
 Pokemon = STARAVIA,28
     Moves = DROPKICK,ROOST,AIRSTRIKE,QUICKATTACK
     AbilityIndex = 1 # Reckless
@@ -8305,7 +8305,7 @@ Pokemon = METAGROSS,70
 #-------------------------------
 [EXPERTM,Hiroshi]
 Pokemon = ELECTIVIRE,70
-    AbilityIndex = 0 # Shock Style
+    AbilityIndex = 0 # Severe
 Pokemon = GASTRODON,70
     AbilityIndex = 1 # Water Absorb
 Pokemon = GLACEON,70

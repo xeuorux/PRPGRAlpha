@@ -1628,6 +1628,10 @@ Description = Takes 25% less damage while using a status move.
 Name = Served Cold
 Description = Boosts Attack by 20% in hail, or 40% if also below half health.
 #-------------------------------
+[SEVERE]
+Name = Severe
+Description = Its attacks are critical against numbed targets.
+#-------------------------------
 [SHAKYCODE]
 Name = Shaky Code
 Description = During eclipse, changes the Pokémon's type to the type of the move it's using.
