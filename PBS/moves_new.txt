@@ -2824,7 +2824,7 @@ TotalPP = 5
 Target = NearOther
 FunctionCode = LowerUserSpAtkSpDef2
 Flags = CanProtect,CanMirrorMove
-Description = The user opens its soul to unleash massive energy. This lowers the user's Sp. Atk and Sp. Def.
+Description = The user opens its soul to unleash massive energy. This lowers the user's Sp. Atk and Sp. Def by 2 steps.
 Animation = OMINOUSWIND
 #-------------------------------
 [SEANCE]
