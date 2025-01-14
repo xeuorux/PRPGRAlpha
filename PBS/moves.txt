@@ -1539,7 +1539,7 @@ TotalPP = 5
 Target = NearOther
 FunctionCode = TwoTurnAttack
 Flags = CanProtect,CanMirrorMove,CantForce
-Description = Attacks wildly with swords or fists. The user can't move on the next turn.
+Description = Attacks wildly with swords or fists. The user must rest on the next turn, however.
 #-------------------------------
 [NORETREAT]
 Name = No Retreat
