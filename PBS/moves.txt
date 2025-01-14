@@ -1049,7 +1049,7 @@ TotalPP = 10
 Target = User
 FunctionCode = HealUserDependingOnUserStockpile
 Flags = CanSnatch
-Description = The power stored using the move Stockpile is absorbed by the user to heal its HP. 50% max HP heal per Stockpile charge.
+Description = The user consumes its Stockpile to heal for 50% max HP per charge. This can overheal.
 #-------------------------------
 [SWIFT]
 Name = Swift

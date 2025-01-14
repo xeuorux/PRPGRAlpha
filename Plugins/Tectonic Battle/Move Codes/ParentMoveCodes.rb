@@ -646,6 +646,8 @@ class PokeBattle_HealingMove < PokeBattle_Move
     def healingMove?; return true; end
     def healRatio(_user); return 0.0; end # A float value representing the percent HP heal
 
+    def canOverheal?(user); return false; end
+
     def pbMoveFailed?(user, _targets, show_message)
         if user.fullHealth?
             @battle.pbDisplay(_INTL("{1}'s HP is full!", user.pbThis)) if show_message
@@ -655,7 +657,7 @@ class PokeBattle_HealingMove < PokeBattle_Move
     end
 
     def pbEffectGeneral(user)
-        user.applyFractionalHealing(healRatio(user)) unless user.fainted?
+        user.applyFractionalHealing(healRatio(user), canOverheal: canOverheal?(user)) unless user.fainted?
     end
 
     def getEffectScore(user, target)

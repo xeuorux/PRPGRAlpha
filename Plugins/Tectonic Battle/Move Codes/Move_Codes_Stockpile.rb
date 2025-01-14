@@ -89,6 +89,8 @@ class PokeBattle_Move_HealUserDependingOnUserStockpile < PokeBattle_HealingMove
         return 0.0
     end
 
+    def canOverheal?(user); return false; end
+
     def pbEffectGeneral(user)
         super
         @battle.pbDisplay(_INTL("{1}'s stockpiled effect wore off!", user.pbThis))
