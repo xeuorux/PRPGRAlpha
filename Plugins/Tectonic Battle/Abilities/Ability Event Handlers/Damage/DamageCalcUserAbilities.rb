@@ -753,3 +753,12 @@ BattleHandlers::DamageCalcUserAbility.add(:PUFFUP,
       user.aiLearnsAbility(ability) unless aiCheck
   }
 )
+
+BattleHandlers::DamageCalcUserAbility.add(:WREAKHAVOC,
+  proc { |ability, user, target, move, mults, _baseDmg, type, aiCheck|
+    if move.rampagingMove?
+      mults[:base_damage_multiplier] *= 1.3
+      user.aiLearnsAbility(ability) unless aiCheck
+    end
+  }
+)

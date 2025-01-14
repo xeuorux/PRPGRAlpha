@@ -342,6 +342,10 @@ Description = Takes 50% less damage from Fire-type moves.
 Name = Honorable
 Description = Lowers priority of status moves used by any Pokémon.
 #-------------------------------
+[HOOLIGAN]
+Name = Hooligan
+Description = Powers up recoil and sound moves by 30%.
+#-------------------------------
 [HUGEPOWER]
 Name = Huge Power
 Description = Raises the Pokémon's Attack stat.
