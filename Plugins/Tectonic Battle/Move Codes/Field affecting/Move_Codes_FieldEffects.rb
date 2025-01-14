@@ -150,13 +150,13 @@ end
 
 #===============================================================================
 # Reduces the damage the user's side takes from non-attack sources of damage
-# for 4 turns.
+# for 8 turns.
 # (Natural Protection)
 #===============================================================================
 class PokeBattle_Move_StartUserSideLessDamageFromNonAttackDamage < PokeBattle_Move
     def initialize(battle, move)
         super
-        @enchantmentDuration = 4
+        @enchantmentDuration = 8
     end
 
     def pbEffectGeneral(user)
