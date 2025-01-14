@@ -542,3 +542,9 @@ MultipleForms.register(:URSHIFU,{
     end
   }
 })
+
+MultipleForms.register(:MORPEKO, {
+  "getFormOnLeavingBattle" => proc { |pkmn, _battle, _usedInBattle, endBattle|
+      next 0 if pkmn.form == 1 && (pkmn.fainted? || endBattle)
+  },
+})
