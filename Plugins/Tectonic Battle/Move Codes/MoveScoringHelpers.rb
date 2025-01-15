@@ -724,7 +724,7 @@ def getFractureEffectScore(user, target)
     return score
 end
 
-def getFractureEffectScore(user, target)
+def getJinxEffectScore(user, target)
     score = 50
     score += 30 if user.hasDamagingAttack?
     score += 30 if user.canChooseProtect?
