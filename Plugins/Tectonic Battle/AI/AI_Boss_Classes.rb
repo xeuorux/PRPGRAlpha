@@ -515,27 +515,34 @@ class PokeBattle_AI_PORYGONZ < PokeBattle_AI_Boss
 end
 
 class PokeBattle_AI_GREEDENT < PokeBattle_AI_Boss
+    def useUniversalBehaviours?; return false; end
+
     def initialize(user, battle)
         super
-        @nonFirstTurnOnly += [:STOCKPILE]
-        @fallback.push(:STOCKPILE)
+        # Will only use Body Slam if no other moves are available
+        @fallback.push(:BODYSLAM)
+        @rejectedMoves.push(:BODYSLAM)
 
-        @lastUsedMove = :SWALLOW
+        @lastUsedStockpileMove = :SWALLOW
         @decidedOnMove[:SWALLOW] = proc { |_move, _user, _targets, _battle|
-            @lastUsedMove = :SWALLOW
+            @lastUsedStockpileMove = :SWALLOW
         }
         @decidedOnMove[:SPITUP] = proc { |_move, _user, _targets, _battle|
-            @lastUsedMove = :SPITUP
+            @lastUsedStockpileMove = :SPITUP
         }
 
         @useMoveIFF.add(:SPITUP, proc { |_move, user, _target, _battle|
-            next @lastUsedMove == :SWALLOW && user.firstTurnThisRound? &&
+            next @lastUsedStockpileMove == :SWALLOW && user.firstTurnThisRound? &&
                 user.countEffect(:Stockpile) >= 2 && user.empoweredTimer < 3
         })
 
         @useMoveIFF.add(:SWALLOW, proc { |_move, user, _target, _battle|
-            next @lastUsedMove == :SPITUP && user.firstTurnThisRound? &&
+            next @lastUsedStockpileMove == :SPITUP && user.firstTurnThisRound? &&
                 user.countEffect(:Stockpile) >= 2 && user.empoweredTimer < 3
+        })
+
+        @useMoveIFF.add(:STOCKPILE, proc { |_move, user, _target, _battle|
+            next !user.effectAtMax?(:Stockpile)
         })
     end
 end
