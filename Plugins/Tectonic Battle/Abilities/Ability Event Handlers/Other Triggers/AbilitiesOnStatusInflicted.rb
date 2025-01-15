@@ -19,3 +19,9 @@ BattleHandlers::AbilityOnStatusInflicted.add(:IMPULSIVE,
         battler.tryRaiseStat(:SPECIAL_ATTACK, battler, increment: 3, ability: ability)
     }
 )
+
+BattleHandlers::AbilityOnStatusInflicted.add(:HASTY,
+    proc { |ability, battler, _user, _status|
+        battler.tryRaiseStat(:SPEED, battler, increment: 3, ability: ability)
+    }
+)

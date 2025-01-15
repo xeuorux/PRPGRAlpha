@@ -106,10 +106,10 @@ Land,20
     16,HOPPIP,8,10
     16,MAREEP,8,10
 LandTall,20
+    40,MWURMPLE,8,10
     20,STARLY,8,10
     20,STUNKY,8,10
     20,WOOLOO,8,10
-	40,MWURMPLE,8,10
 Special
     1,PIDOVE,15
 #-------------------------------
@@ -251,8 +251,8 @@ Land,20
 Puddle,20
     20,BINACLE,13,15
     20,FEEBAS,13,15
-    20,MSKRELP,13,15
     20,MAGIKARP,13,15
+    20,MSKRELP,13,15
     10,SHELLOS,13,15
     10,SHELLOS_1,13,15
 Special
@@ -422,10 +422,10 @@ FloweryGrass,20
 [138] # Scenic Trail
 Land,20
     20,CATERPIE,7,9
-	20,WEEDLE,7,9
     20,IMPIDIMP,7,9
     20,LITLEO,7,9
     20,SEEDOT,7,9
+    20,WEEDLE,7,9
 LandTall,20
     40,PICHU,7,9
     20,MEDITITE,7,9
@@ -1163,5 +1163,5 @@ Puddle,15
     20,DEWGONG,62,64
     20,JELLICENT,62,64
     20,KINGDRA,62,64
-    20,PELIPPER,62,64
     20,MDRAGALGE,62,64
+    20,PELIPPER,62,64

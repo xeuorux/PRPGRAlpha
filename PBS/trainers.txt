@@ -43,7 +43,7 @@ Pokemon = MVULPIX,9
 [YOUNGSTER,Harvey]
 Pokemon = LUVDISC,8
     Moves = WIPEOUT,EAGERTICKLING,CHARM
-    AbilityIndex = 0 # Mucus Layer
+    AbilityIndex = 0 # Moist Skin
 Pokemon = SEEDOT,8
     AbilityIndex = 0 # Air Lock
 #-------------------------------

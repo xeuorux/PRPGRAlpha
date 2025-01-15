@@ -124,6 +124,15 @@ BattleHandlers::EOREffectAbility.add(:TENDERIZE,
   }
 )
 
+BattleHandlers::EOREffectAbility.add(:SINKINGFEELING,
+  proc { |ability, battler, _battle|
+      battler.eachOther do |b|
+          next unless b.waterlogged?
+          b.pbLowerMultipleStatSteps(ATTACKING_STATS_2, battler, ability: ability)
+      end
+  }
+)
+
 BattleHandlers::EOREffectAbility.add(:VITALRHYTHM,
   proc { |ability, battler, battle|
       canHealAny = false

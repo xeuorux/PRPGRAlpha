@@ -821,6 +821,10 @@ Description = Deals 30% more move damage to Pokémon that are taller than it.
 Name = Harsh
 Description = Its attacks are critical against burned targets.
 #-------------------------------
+[HASTY]
+Name = Hasty
+Description = When this Pokémon becomes statused, its Sp. Atk is raised by three steps.
+#-------------------------------
 [HAUNTED]
 Name = Haunted
 Description = The Pokémon is also Ghost-type.
@@ -1169,7 +1173,7 @@ Description = Powers up Dark-type moves by 50% in sunshine.
 Flags = SunshineSynergy
 #-------------------------------
 [MOISTSKIN]
-Name = Mucus Layer
+Name = Moist Skin
 Description = If an attack lowers its HP to half or less, waterlogs the attacker.
 #-------------------------------
 [MOONBASKING]
@@ -1665,6 +1669,10 @@ Description = The Pokémon and other battlers don't benefit from same-type attac
 Name = Silver Lining
 Description = Boosts Speed by 50% in rainstorm. Doubles random added effect chance in rainstorm.
 Flags = RainstormSynergy
+#-------------------------------
+[SINKINGFEELING]
+Name = Sinking Feeling
+Description = At the end of each round, lowers other waterlogged Pokémon's Attack and Sp. Atk by two steps.
 #-------------------------------
 [SIPHONSNIPER]
 Name = Siphon Sniper
