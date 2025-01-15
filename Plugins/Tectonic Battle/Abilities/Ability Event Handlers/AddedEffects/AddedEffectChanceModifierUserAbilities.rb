@@ -19,16 +19,16 @@ BattleHandlers::AddedEffectChanceModifierUserAbility.add(:RATTLEEM,
     }
 )
 
-BattleHandlers::AddedEffectChanceModifierUserAbility.add(:TERRORIZE,
+BattleHandlers::AddedEffectChanceModifierUserAbility.add(:SERENEGRACE,
     proc { |ability, user, target, move, chance|
-        chance *= 2.0 if move.flinchingMove?
+        chance *= 2.0
         next chance
     }
 )
 
-BattleHandlers::AddedEffectChanceModifierUserAbility.add(:SERENEGRACE,
+BattleHandlers::AddedEffectChanceModifierUserAbility.add(:SILVERLINING,
     proc { |ability, user, target, move, chance|
-        chance *= 2.0
+        chance *= 2.0 if user.battle.rainy?
         next chance
     }
 )

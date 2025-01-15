@@ -367,35 +367,47 @@ class TilemapRenderer
         terrain_tag = map.terrain_tags[tile_id] || 0
         terrain_tag_data = GameData::TerrainTag.try_get(terrain_tag)
         priority = map.priorities[tile_id] || 0
-        single_autotile_start_id = TILESET_START_ID
-        true_tileset_start_id = TILESET_START_ID
-        extra_autotile_arrays = EXTRA_AUTOTILES[map.tileset_id]
-        if extra_autotile_arrays
-          large_autotile_count = extra_autotile_arrays[0].length
-          single_autotile_count = extra_autotile_arrays[1].length
-          single_autotile_start_id += large_autotile_count * TILES_PER_AUTOTILE
-          true_tileset_start_id += large_autotile_count * TILES_PER_AUTOTILE
-          true_tileset_start_id += single_autotile_count
-        end
-        if tile_id < true_tileset_start_id
-          filename = ""
-          if tile_id < TILESET_START_ID   # Real autotiles
-            filename = map.autotile_names[(tile_id / TILES_PER_AUTOTILE) - 1]
-          elsif tile_id < single_autotile_start_id   # Large extra autotiles
-            filename = extra_autotile_arrays[0][(tile_id - TILESET_START_ID) / TILES_PER_AUTOTILE]
-          else   # Single extra autotiles
-            filename = extra_autotile_arrays[1][tile_id - single_autotile_start_id]
-          end
-          tile.set_bitmap(filename, tile_id, true, @autotiles.animated?(filename),
-                          priority, @autotiles[filename])
+
+        file_name, is_auto_tile = get_bitmap_filename_for_tile(map, tile_id)
+
+        if is_auto_tile
+          tile.set_bitmap(file_name, tile_id, true, @autotiles.animated?(file_name),
+                        priority, @autotiles[file_name])
         else
-          filename = map.tileset_name
-          tile.set_bitmap(filename, tile_id, false, false, priority, @tilesets[filename])
+          tile.set_bitmap(file_name, tile_id, false, false, priority, @tilesets[file_name])
         end
+
         tile.shows_reflection = terrain_tag_data&.shows_reflections
         tile.bridge           = terrain_tag_data&.bridge
       end
       refresh_tile_src_rect(tile, tile_id)
+    end
+
+    def get_bitmap_filename_for_tile(map, tile_id)
+      single_autotile_start_id = TILESET_START_ID
+      true_tileset_start_id = TILESET_START_ID
+      extra_autotile_arrays = EXTRA_AUTOTILES[map.tileset_id]
+      if extra_autotile_arrays
+        large_autotile_count = extra_autotile_arrays[0].length
+        single_autotile_count = extra_autotile_arrays[1].length
+        single_autotile_start_id += large_autotile_count * TILES_PER_AUTOTILE
+        true_tileset_start_id += large_autotile_count * TILES_PER_AUTOTILE
+        true_tileset_start_id += single_autotile_count
+      end
+      if tile_id < true_tileset_start_id
+        filename = ""
+        if tile_id < TILESET_START_ID   # Real autotiles
+          filename = map.autotile_names[(tile_id / TILES_PER_AUTOTILE) - 1]
+        elsif tile_id < single_autotile_start_id   # Large extra autotiles
+          filename = extra_autotile_arrays[0][(tile_id - TILESET_START_ID) / TILES_PER_AUTOTILE]
+        else   # Single extra autotiles
+          filename = extra_autotile_arrays[1][tile_id - single_autotile_start_id]
+        end
+        return filename, true
+      else
+        filename = map.tileset_name
+        return filename, false
+      end
     end
   
     def refresh_tile_src_rect(tile, tile_id)

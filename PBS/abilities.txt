@@ -36,7 +36,7 @@ Description = Reverses "Aura" Abilities to weaken affected moves.
 #-------------------------------
 [BADDREAMS]
 Name = Bad Dreams
-Description = Reduces a sleeping foe's HP by 1/8 at the end of a round.
+Description = Reduces a sleeping foe's HP by 1/8th at the end of a round.
 #-------------------------------
 [BATTERY]
 Name = Battery
@@ -44,7 +44,7 @@ Description = Powers up ally Pokémon's special moves by 30%.
 #-------------------------------
 [BERSERK]
 Name = Berserk
-Description = Raises Atk and Sp. Atk by two steps each when its HP is lowered below half.
+Description = Raises Attack and Sp. Atk by two steps each when its HP is lowered below half.
 #-------------------------------
 [CHEEKPOUCH]
 Name = Cheek Pouch
@@ -78,7 +78,7 @@ Description = Makes stat changes have an opposite effect.
 #-------------------------------
 [CORROSION]
 Name = Corrosion
-Description = Can poison the target even if it's a Steel or Poison type.
+Description = Can poison the target even if it's a Steel or Poison-type.
 #-------------------------------
 [COTTONDOWN]
 Name = Cotton Down
@@ -206,7 +206,7 @@ Description = Normal-type moves become Electric-type and power up by 30%.
 #-------------------------------
 [GLUTTONY]
 Name = Gluttony
-Description = Eats pinch berries earlier than normal.
+Description = Will eat berries normally eaten at 25% HP (in a pinch) at 50% instead.
 #-------------------------------
 [GOOEY]
 Name = Gooey
@@ -254,7 +254,7 @@ Flags = RainstormSynergy
 #-------------------------------
 [ICEBODY]
 Name = Ice Body
-Description = Heals 1/8th of its max HP each turn in a hailstorm.
+Description = Heals 1/8th of its max HP each turn in a hail.
 Flags = HailSynergy
 #-------------------------------
 [ICESCALES]
@@ -307,7 +307,7 @@ Flags = SunshineSynergy
 #-------------------------------
 [LEVITATE]
 Name = Levitate
-Description = Gives full immunity to all Ground-type moves.
+Description = Immune to Ground-type moves. Immune to grounded hazards.
 Flags = Levitation
 #-------------------------------
 [MAGICBOUNCE]
@@ -357,7 +357,7 @@ Flags = Immutable
 #-------------------------------
 [MUMMY]
 Name = Mummy
-Description = Physical moves against the Pokémon spread this Ability.
+Description = When the Pokémon is hit by an attack, the attacker's ability becomes Mummy.
 #-------------------------------
 [NATURALCURE]
 Name = Natural Cure
@@ -374,7 +374,7 @@ Flags = Immutable
 #-------------------------------
 [NOGUARD]
 Name = No Guard
-Description = Ensures attacks by or against the Pokémon land.
+Description = Attacks by or against the Pokémon can't miss.
 #-------------------------------
 [NORMALIZE]
 Name = Normalize
@@ -525,7 +525,7 @@ Description = Boosts the power of blade moves by 50%.
 #-------------------------------
 [SHEDSKIN]
 Name = Shed Skin
-Description = Heals from burn, frostbite, poison, numb, or leech at end of turn.
+Description = At the end of each turn, heals from every non-volatile status (except Sleep).
 #-------------------------------
 [SHEERFORCE]
 Name = Sheer Force
@@ -542,7 +542,7 @@ Flags = Immutable
 #-------------------------------
 [SIMPLE]
 Name = Simple
-Description = Stat changes in the Pokemon are doubled.
+Description = Stat changes in the Pokémon are doubled.
 #-------------------------------
 [SKILLLINK]
 Name = Skill Link
@@ -554,7 +554,7 @@ Description = Halves Attack and Speed for 3 turns.
 #-------------------------------
 [SLUSHRUSH]
 Name = Slush Rush
-Description = Doubles the Pokémon's Speed stat in a hailstorm.
+Description = Doubles the Pokémon's Speed stat in a hail.
 Flags = HailSynergy
 #-------------------------------
 [SNIPER]
@@ -563,7 +563,7 @@ Description = Doubles critical hit chance. Powers up critical hits by another 50
 #-------------------------------
 [SNOWWARNING]
 Name = Snow Warning
-Description = Summons a hailstorm for 4 turns when it enters battle.
+Description = Summons a hail for 4 turns when it enters battle.
 Flags = HailSynergy
 #-------------------------------
 [SOLARPOWER]
@@ -607,10 +607,6 @@ Description = Powers up Steel-type moves by 50%.
 [STEELYSPIRIT]
 Name = Steely Spirit
 Description = Powers up Steel-type moves of itself and its allies by 50%.
-#-------------------------------
-[STENCH]
-Name = Stench
-Description = Attacks have a 50% chance to cause the target to flinch.
 #-------------------------------
 [STRONGJAW]
 Name = Strong Jaw
@@ -691,15 +687,15 @@ Description = Prevents the Pokémon from falling asleep.
 #-------------------------------
 [VOLTABSORB]
 Name = Volt Absorb
-Description = Immune to Electric-type moves and restores HP when hit by one.
+Description = Immune to Electric-type moves and restores 25% of max HP when hit by one.
 #-------------------------------
 [WANDERINGSPIRIT]
 Name = Wandering Spirit
-Description = Taking a physical hit exchanges Abilities.
+Description = When the Pokémon is hit by an attack, the Pokémon and the attacker switch abilities.
 #-------------------------------
 [WATERABSORB]
 Name = Water Absorb
-Description = Immune to Water-type moves and restores HP when hit by one.
+Description = Immune to Water-type moves and restores 25% of max HP when hit by one.
 #-------------------------------
 [WATERBUBBLE]
 Name = Water Bubble

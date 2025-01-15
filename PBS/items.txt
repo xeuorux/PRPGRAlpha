@@ -20,7 +20,7 @@ Description = Rare contraband. Any average solo trainer will flee from the stenc
 Name = Fire Stone
 NamePlural = Fire Stones
 Pocket = 1
-Price = 8000
+Price = 5000
 FieldUse = OnPokemon
 Flags = EvolutionStone
 Description = A peculiar stone that makes certain species of Pokémon evolve. It is colored orange.
@@ -29,7 +29,7 @@ Description = A peculiar stone that makes certain species of Pokémon evolve. It
 Name = Thunder Stone
 NamePlural = Thunder Stones
 Pocket = 1
-Price = 8000
+Price = 5000
 FieldUse = OnPokemon
 Flags = EvolutionStone
 Description = A peculiar stone that makes certain species of Pokémon evolve. It has a thunderbolt pattern.
@@ -38,7 +38,7 @@ Description = A peculiar stone that makes certain species of Pokémon evolve. It
 Name = Water Stone
 NamePlural = Water Stones
 Pocket = 1
-Price = 8000
+Price = 5000
 FieldUse = OnPokemon
 Flags = EvolutionStone
 Description = A peculiar stone that makes certain species of Pokémon evolve. It is a clear, light blue.
@@ -47,7 +47,7 @@ Description = A peculiar stone that makes certain species of Pokémon evolve. It
 Name = Leaf Stone
 NamePlural = Leaf Stones
 Pocket = 1
-Price = 8000
+Price = 5000
 FieldUse = OnPokemon
 Flags = EvolutionStone
 Description = A peculiar stone that makes certain species of Pokémon evolve. It has a leaf pattern.
@@ -56,7 +56,7 @@ Description = A peculiar stone that makes certain species of Pokémon evolve. It
 Name = Moon Stone
 NamePlural = Moon Stones
 Pocket = 1
-Price = 8000
+Price = 5000
 FieldUse = OnPokemon
 Flags = EvolutionStone
 Description = A peculiar stone that makes certain species of Pokémon evolve. It is as black as the night sky.
@@ -65,7 +65,7 @@ Description = A peculiar stone that makes certain species of Pokémon evolve. It
 Name = Sun Stone
 NamePlural = Sun Stones
 Pocket = 1
-Price = 8000
+Price = 5000
 FieldUse = OnPokemon
 Flags = EvolutionStone
 Description = A peculiar stone that makes certain species of Pokémon evolve. It is as red as the sun.
@@ -74,7 +74,7 @@ Description = A peculiar stone that makes certain species of Pokémon evolve. It
 Name = Dusk Stone
 NamePlural = Dusk Stones
 Pocket = 1
-Price = 8000
+Price = 5000
 FieldUse = OnPokemon
 Flags = EvolutionStone
 Description = A peculiar stone that makes certain species of Pokémon evolve. It is as dark as dark can be.
@@ -83,7 +83,7 @@ Description = A peculiar stone that makes certain species of Pokémon evolve. It
 Name = Dawn Stone
 NamePlural = Dawn Stones
 Pocket = 1
-Price = 8000
+Price = 5000
 FieldUse = OnPokemon
 Flags = EvolutionStone
 Description = A peculiar stone that makes certain species of Pokémon evolve. It sparkles like eyes.
@@ -92,7 +92,7 @@ Description = A peculiar stone that makes certain species of Pokémon evolve. It
 Name = Shiny Stone
 NamePlural = Shiny Stones
 Pocket = 1
-Price = 8000
+Price = 5000
 FieldUse = OnPokemon
 Flags = EvolutionStone
 Description = A peculiar stone that makes certain species of Pokémon evolve. It shines with a dazzling light.
@@ -101,10 +101,19 @@ Description = A peculiar stone that makes certain species of Pokémon evolve. It
 Name = Ice Stone
 NamePlural = Ice Stones
 Pocket = 1
-Price = 8000
+Price = 5000
 FieldUse = OnPokemon
 Flags = EvolutionStone
 Description = A peculiar stone that makes certain species of Pokémon evolve. It has a snowflake pattern.
+#-------------------------------
+[PRISMSTONE]
+Name = Prism Stone
+NamePlural = Prism Stones
+Pocket = 1
+Price = 15000
+FieldUse = OnPokemon
+Flags = EvolutionStone
+Description = A many-colored stone that makes a lot of Pokémon evolve. Can be used in place of any evolution stone.
 #-------------------------------
 [DIAMONDTIARA]
 Name = Diamond Tiara
@@ -137,7 +146,7 @@ Description = A cool scarf. It makes a certain Pokémon evolve.
 Name = Alolan Wreath
 NamePlural = Alolan Wreathes
 Pocket = 1
-Price = 5000
+Price = 4000
 FieldUse = OnPokemon
 Flags = EvolutionStone,Clothing
 Description = A beautiful floral wreath from Alola that makes certain species of Pokémon evolve.
@@ -146,7 +155,7 @@ Description = A beautiful floral wreath from Alola that makes certain species of
 Name = Galarica Wreath
 NamePlural = Galarica Wreaths
 Pocket = 1
-Price = 5000
+Price = 4000
 FieldUse = OnPokemon
 Flags = EvolutionStone,Clothing
 Description = A wreath made from woven Galarica Twigs. It makes certain species of Pokémon evolve.
@@ -155,7 +164,7 @@ Description = A wreath made from woven Galarica Twigs. It makes certain species 
 Name = Sweet Apple
 NamePlural = Sweet Apples
 Pocket = 1
-Price = 2200
+Price = 2000
 FieldUse = OnPokemon
 Flags = EvolutionStone
 Description = A peculiar apple that can make a certain species of Pokémon evolve. It's exceptionally sweet.
@@ -164,7 +173,7 @@ Description = A peculiar apple that can make a certain species of Pokémon evolv
 Name = Tart Apple
 NamePlural = Tart Apples
 Pocket = 1
-Price = 2200
+Price = 2000
 FieldUse = OnPokemon
 Flags = EvolutionStone
 Description = A peculiar apple that can make a certain species of Pokémon evolve. It's exceptionally tart.
@@ -640,7 +649,7 @@ Name = Reinforcing Rod
 NamePlural = Reinforcing Rods
 Pocket = 5
 Price = 4000
-Description = An item to be held by a Pokémon. It extends the duration of Rooms created by the holder.
+Description = An item to be held by a Pokémon. It doubles the duration of Rooms created by the holder.
 #-------------------------------
 [GRIPCLAW]
 Name = Grip Claw
@@ -698,7 +707,7 @@ Name = Shell Bell
 NamePlural = Shell Bells
 Pocket = 5
 Price = 6000
-Description = An item to be held by a Pokémon. The holder restores 1/6th HP of the damage it deals with moves.
+Description = An item to be held by a Pokémon. The holder restores 1/5th HP of the damage it deals with moves.
 #-------------------------------
 [WATERBALLOON]
 Name = Water Balloon
@@ -1338,6 +1347,7 @@ NamePlural = Potions
 Pocket = 2
 Price = 300
 FieldUse = OnPokemon
+Flags = SkipPocketMessage
 Description = A spray-type medicine for wounds. It restores the HP of one Pokémon, fainted or able, by 40 points.
 #-------------------------------
 [SUPERPOTION]
@@ -1346,6 +1356,7 @@ NamePlural = Super Potions
 Pocket = 2
 Price = 600
 FieldUse = OnPokemon
+Flags = SkipPocketMessage
 Description = A spray-type medicine for wounds. It restores the HP of one Pokémon, fainted or able, by 80 points.
 #-------------------------------
 [HYPERPOTION]
@@ -1354,6 +1365,7 @@ NamePlural = Hyper Potions
 Pocket = 2
 Price = 900
 FieldUse = OnPokemon
+Flags = SkipPocketMessage
 Description = A spray-type medicine for wounds. It restores the HP of one Pokémon, fainted or able, by 120 points.
 #-------------------------------
 [MAXPOTION]
@@ -1362,6 +1374,7 @@ NamePlural = Max Potions
 Pocket = 2
 Price = 1200
 FieldUse = OnPokemon
+Flags = SkipPocketMessage
 Description = A spray-type medicine for wounds. It completely restores the HP of a single Pokémon, fainted or able.
 #-------------------------------
 [FULLRESTORE]
@@ -1370,6 +1383,7 @@ NamePlural = Full Restores
 Pocket = 2
 Price = 1500
 FieldUse = OnPokemon
+Flags = SkipPocketMessage
 Description = A medicine that fully restores the HP and heals any status problems of a single Pokémon, fainted or able.
 #-------------------------------
 [SACREDASH]
@@ -1467,6 +1481,7 @@ NamePlural = Rare Candies
 Pocket = 2
 Price = 1000
 FieldUse = OnPokemon
+Flags = SkipPocketMessage
 Description = A candy that is packed with energy. It raises the level of a single Pokémon by one.
 #-------------------------------
 [VANILLATULUMBA]
@@ -1483,7 +1498,7 @@ NamePlural = Master Balls
 Pocket = 3
 Price = 0
 BattleUse = OnFoe
-Flags = PokeBall,SnagBall
+Flags = PokeBall,SnagBall,NoBallSwap
 Description = The best Ball with the ultimate level of performance. It will catch any wild Pokémon without fail.
 #-------------------------------
 [RADIANTBALL]
@@ -1492,7 +1507,7 @@ NamePlural = Radiant Balls
 Pocket = 3
 Price = 0
 BattleUse = OnFoe
-Flags = PokeBall,SnagBall
+Flags = PokeBall,SnagBall,NoBallSwap
 Description = A ball with a mythical quality. It will catch any wild Pokémon without fail, and turn that Pokémon shiny.
 #-------------------------------
 [ULTRABALL]
@@ -1501,7 +1516,7 @@ NamePlural = Ultra Balls
 Pocket = 3
 Price = 800
 BattleUse = OnFoe
-Flags = PokeBall,SnagBall
+Flags = PokeBall,SnagBall,SkipPocketMessage
 Description = An ultra-performance Ball with 2x the strength of a regular ball.
 #-------------------------------
 [GREATBALL]
@@ -1510,16 +1525,16 @@ NamePlural = Great Balls
 Pocket = 3
 Price = 400
 BattleUse = OnFoe
-Flags = PokeBall,SnagBall
+Flags = PokeBall,SnagBall,SkipPocketMessage
 Description = A good, high-performance Ball with 1.5x strength compared to a regular ball.
 #-------------------------------
 [POKEBALL]
 Name = Poké Ball
 NamePlural = Poké Balls
 Pocket = 3
-Price = 100
+Price = 200
 BattleUse = OnFoe
-Flags = PokeBall,SnagBall
+Flags = PokeBall,SnagBall,SkipPocketMessage
 Description = A device for catching wild Pokémon. It is thrown like a ball at the target. It is designed as a capsule system.
 #-------------------------------
 [SAFARIBALL]
@@ -1528,7 +1543,7 @@ NamePlural = Safari Balls
 Pocket = 3
 Price = 0
 BattleUse = OnFoe
-Flags = PokeBall,SnagBall
+Flags = PokeBall,SnagBall,SkipPocketMessage
 Description = A special Poké Ball that is used only in the Safari Zone. It is decorated in a camouflage pattern.
 #-------------------------------
 [SPORTBALL]
@@ -1537,7 +1552,7 @@ NamePlural = Sport Balls
 Pocket = 3
 Price = 300
 BattleUse = OnFoe
-Flags = PokeBall,SnagBall
+Flags = PokeBall,SnagBall,SkipPocketMessage
 Description = A special Poké Ball for the Bug-Catching Contest.
 #-------------------------------
 [NESTBALL]
@@ -1546,7 +1561,7 @@ NamePlural = Nest Balls
 Pocket = 3
 Price = 400
 BattleUse = OnFoe
-Flags = PokeBall,SnagBall
+Flags = PokeBall,SnagBall,SkipPocketMessage
 Description = A somewhat different Poké Ball that works better the lower the Pokémon's level is below your level cap.
 #-------------------------------
 [REPEATBALL]
@@ -1555,7 +1570,7 @@ NamePlural = Repeat Balls
 Pocket = 3
 Price = 400
 BattleUse = OnFoe
-Flags = PokeBall,SnagBall
+Flags = PokeBall,SnagBall,SkipPocketMessage
 Description = A somewhat different Poké Ball that works at 3.5x strength on Pokémon species that were previously caught.
 #-------------------------------
 [TIMERBALL]
@@ -1564,7 +1579,7 @@ NamePlural = Timer Balls
 Pocket = 3
 Price = 400
 BattleUse = OnFoe
-Flags = PokeBall,SnagBall
+Flags = PokeBall,SnagBall,SkipPocketMessage
 Description = A somewhat different Ball that becomes up to 4x better the more turns there are in a battle.
 #-------------------------------
 [LUXURYBALL]
@@ -1573,7 +1588,7 @@ NamePlural = Luxury Balls
 Pocket = 3
 Price = 800
 BattleUse = OnFoe
-Flags = PokeBall,SnagBall
+Flags = PokeBall,SnagBall,SkipPocketMessage
 Description = A comfortable Poké Ball that makes a caught wild Pokémon gain happiness twice as quickly.
 #-------------------------------
 [PREMIERBALL]
@@ -1582,7 +1597,7 @@ NamePlural = Premier Balls
 Pocket = 3
 Price = 20
 BattleUse = OnFoe
-Flags = PokeBall,SnagBall
+Flags = PokeBall,SnagBall,SkipPocketMessage
 Description = A somewhat rare Poké Ball that has been specially made to commemorate an event of some sort.
 #-------------------------------
 [HEALBALL]
@@ -1591,7 +1606,7 @@ NamePlural = Heal Balls
 Pocket = 3
 Price = 400
 BattleUse = OnFoe
-Flags = PokeBall,SnagBall
+Flags = PokeBall,SnagBall,SkipPocketMessage
 Description = A remedial Poké Ball that restores the caught Pokémon's HP and eliminates any status problem.
 #-------------------------------
 [QUICKBALL]
@@ -1600,7 +1615,7 @@ NamePlural = Quick Balls
 Pocket = 3
 Price = 800
 BattleUse = OnFoe
-Flags = PokeBall,SnagBall
+Flags = PokeBall,SnagBall,SkipPocketMessage
 Description = A somewhat different Poké Ball which has 5x strength on the first turn of a wild encounter.
 #-------------------------------
 [CHERISHBALL]
@@ -1609,7 +1624,7 @@ NamePlural = Cherish Balls
 Pocket = 3
 Price = 800
 BattleUse = OnFoe
-Flags = PokeBall,SnagBall
+Flags = PokeBall,SnagBall,SkipPocketMessage,NoBallSwap
 Description = A quite rare Poké Ball that has been specially crafted to commemorate an occasion of some sort.
 #-------------------------------
 [FRIENDBALL]
@@ -1618,7 +1633,7 @@ NamePlural = Friend Balls
 Pocket = 3
 Price = 300
 BattleUse = OnFoe
-Flags = PokeBall,SnagBall
+Flags = PokeBall,SnagBall,SkipPocketMessage
 Description = A Poké Ball that makes caught Pokémon more friendly.
 #-------------------------------
 [DREAMBALL]
@@ -1627,7 +1642,7 @@ NamePlural = Dream Balls
 Pocket = 3
 Price = 300
 BattleUse = OnFoe
-Flags = PokeBall,SnagBall
+Flags = PokeBall,SnagBall,SkipPocketMessage
 Description = A somewhat different Poké Ball that makes it easier to catch wild Pokémon while they're asleep.
 #-------------------------------
 [BEASTBALL]
@@ -1636,7 +1651,7 @@ NamePlural = Beast Balls
 Pocket = 3
 Price = 1000
 BattleUse = OnFoe
-Flags = PokeBall,SnagBall
+Flags = PokeBall,SnagBall,SkipPocketMessage,NoBallSwap
 Description = A special Poké Ball designed to catch Ultra Beasts. It has a low success rate for catching others.
 #-------------------------------
 [SLICEBALL]
@@ -1645,7 +1660,7 @@ NamePlural = Slice Balls
 Pocket = 3
 Price = 200
 BattleUse = OnFoe
-Flags = PokeBall,SnagBall
+Flags = PokeBall,SnagBall,SkipPocketMessage
 Description = A sharp Poké Ball that damages the Pokémon for 1/4th of its HP if it fails to catch it.
 #-------------------------------
 [LEECHBALL]
@@ -1654,7 +1669,7 @@ NamePlural = Leech Balls
 Pocket = 3
 Price = 200
 BattleUse = OnFoe
-Flags = PokeBall,SnagBall
+Flags = PokeBall,SnagBall,SkipPocketMessage
 Description = A parasitic Poké Ball that leeches the Pokémon if it fails to catch it.
 #-------------------------------
 [POTIONBALL]
@@ -1663,7 +1678,7 @@ NamePlural = Potion Balls
 Pocket = 3
 Price = 200
 BattleUse = OnFoe
-Flags = PokeBall,SnagBall
+Flags = PokeBall,SnagBall,SkipPocketMessage
 Description = A medicinal Poké Ball that heals the Pokémon for 1/4th of its HP if it fails to catch it.
 #-------------------------------
 [DISABLEBALL]
@@ -1672,7 +1687,7 @@ NamePlural = Disable Balls
 Pocket = 3
 Price = 200
 BattleUse = OnFoe
-Flags = PokeBall,SnagBall
+Flags = PokeBall,SnagBall,SkipPocketMessage
 Description = A mentally disrupting Poké Ball that disables the Pokémon's last used move for 10 turns if it fails to catch it.
 #-------------------------------
 [ROYALBALL]
@@ -1681,7 +1696,7 @@ NamePlural = Royal Balls
 Pocket = 3
 Price = 1000
 BattleUse = OnFoe
-Flags = PokeBall,SnagBall
+Flags = PokeBall,SnagBall,SkipPocketMessage,NoBallSwap
 Description = A ball whose striking appearance makes it popular despite its poor performance.
 #-------------------------------
 [CHERIBERRY]
@@ -1724,22 +1739,6 @@ Price = 0
 Flags = Berry
 Description = It may be held by a Pokémon to recover from a frostbite.
 #-------------------------------
-[LEPPABERRY]
-Name = Leppa Berry
-NamePlural = Leppa Berries
-Pocket = 5
-Price = 0
-Flags = Berry
-Description = It may be held by a Pokémon to restore a move's PP by 10.
-#-------------------------------
-[CADOBERRY]
-Name = Cado Berry
-NamePlural = Cado Berries
-Pocket = 5
-Price = 0
-Flags = Berry,Pinch
-Description = It may be held by a Pokémon to heal the user by 33% in a pinch (below 25% HP).
-#-------------------------------
 [PERSIMBERRY]
 Name = Persim Berry
 NamePlural = Persim Berries
@@ -1747,6 +1746,30 @@ Pocket = 5
 Price = 0
 Flags = Berry
 Description = It may be held by a Pokémon to recover from being dizzy.
+#-------------------------------
+[SPELONBERRY]
+Name = Spelon Berry
+NamePlural = Spelon Berries
+Pocket = 5
+Price = 500
+Flags = Berry
+Description = It may be held by a Pokémon to recover from being leeched.
+#-------------------------------
+[BELUEBERRY]
+Name = Belue Berry
+NamePlural = Belue Berries
+Pocket = 5
+Price = 500
+Flags = Berry
+Description = It may be held by a Pokémon to recover from being waterlogged.
+#-------------------------------
+[LEPPABERRY]
+Name = Leppa Berry
+NamePlural = Leppa Berries
+Pocket = 5
+Price = 0
+Flags = Berry
+Description = It may be held by a Pokémon to restore a move's PP by 10.
 #-------------------------------
 [LUMBERRY]
 Name = Lum Berry
@@ -1764,13 +1787,13 @@ Price = 0
 Flags = Berry
 Description = If held by a Pokémon, it heals its HP by 25% at half health.
 #-------------------------------
-[SPELONBERRY]
-Name = Spelon Berry
-NamePlural = Spelon Berries
+[CADOBERRY]
+Name = Cado Berry
+NamePlural = Cado Berries
 Pocket = 5
-Price = 500
-Flags = Berry
-Description = It may be held by a Pokémon to recover from being leeched.
+Price = 0
+Flags = Berry,Pinch
+Description = It may be held by a Pokémon to heal the user by 33% in a pinch (below 25% HP).
 #-------------------------------
 [OCCABERRY]
 Name = Occa Berry
@@ -2055,22 +2078,6 @@ FieldUse = OnPokemon
 Flags = KeyItem
 Description = A flower that conveys gratitude. Use it to transform Shaymin into or out of Sky form.
 #-------------------------------
-[AURORATICKET]
-Name = Aurora Ticket
-NamePlural = Aurora Tickets
-Pocket = 7
-Price = 0
-Flags = KeyItem
-Description = A ticket required to board the ship to Doxy Island. It glows beautifully.
-#-------------------------------
-[OLDSEAMAP]
-Name = Old Sea Map
-NamePlural = Old Sea Maps
-Pocket = 7
-Price = 0
-Flags = KeyItem
-Description = A faded sea chart that shows the way to a certain island.
-#-------------------------------
 [DNASPLICERS]
 Name = DNA Splicers
 NamePlural = DNA Splicers
@@ -2095,16 +2102,16 @@ NamePlural = Shiny Charms
 Pocket = 7
 Price = 0
 Consumable = true
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = A shiny charm which doubles the chance of finding a Shiny Pokémon.
 #-------------------------------
 [SWEETTOOTH]
 Name = Sweet Tooth
 NamePlural = Sweet Teeth
-Pocket = 8
+Pocket = 7
 Price = 0
-Flags = KeyItem
-Description = A charm in the shape of a tooth. It increases the EXP gained from EXP Candy by 15%.
+Flags = KeyItem,SkipPocketMessage
+Description = A charm in the shape of a tooth. It increases the EXP. gained from EXP Candy by 15%.
 #-------------------------------
 [SOOTHECHARM]
 Name = Soothe Charm
@@ -2112,7 +2119,7 @@ NamePlural = Soothe Charms
 Pocket = 7
 Price = 0
 Consumable = true
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = A comforting charm which doubles the happiness your Pokémon gain from being close to you.
 #-------------------------------
 [REDORB]
@@ -2201,7 +2208,7 @@ Name = Mega Ring
 NamePlural = Mega Rings
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = This ring contains an untold power that somehow enables Pokémon carrying Mega Stones to Mega Evolve.
 #-------------------------------
 [ZYGARDECUBE]
@@ -2219,6 +2226,7 @@ NamePlural = Exp. Candies XS
 Pocket = 2
 Price = 60
 FieldUse = OnPokemon
+Flags = SkipPocketMessage
 Description = A candy that is packed with energy. When consumed, it will grant a single Pokémon 250 Exp. Points.
 #-------------------------------
 [EXPCANDYS]
@@ -2227,6 +2235,7 @@ NamePlural = Exp. Candies S
 Pocket = 2
 Price = 225
 FieldUse = OnPokemon
+Flags = SkipPocketMessage
 Description = A candy that is packed with energy. When consumed, it will grant a single Pokémon 1000 Exp. Points.
 #-------------------------------
 [EXPCANDYM]
@@ -2235,6 +2244,7 @@ NamePlural = Exp. Candies M
 Pocket = 2
 Price = 800
 FieldUse = OnPokemon
+Flags = SkipPocketMessage
 Description = A candy that is packed with energy. When consumed, it will grant a single Pokémon 4,000 Exp. Points.
 #-------------------------------
 [EXPCANDYL]
@@ -2243,6 +2253,7 @@ NamePlural = Exp. Candies L
 Pocket = 2
 Price = 3200
 FieldUse = OnPokemon
+Flags = SkipPocketMessage
 Description = A candy that is packed with energy. When consumed, it will grant a single Pokémon 16,000 Exp. Points.
 #-------------------------------
 [EXPCANDYXL]
@@ -2251,6 +2262,7 @@ NamePlural = Exp. Candies XL
 Pocket = 2
 Price = 12000
 FieldUse = OnPokemon
+Flags = SkipPocketMessage
 Description = A candy that is packed with energy. When consumed, it will grant a single Pokémon 64,000 Exp. Points.
 #-------------------------------
 [FOSSILIZEDBIRD]
@@ -2313,7 +2325,7 @@ Name = EXP Charm
 NamePlural = EXP Charms
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = A charm that increases the Exp. Points that Pokémon can get by 10%. A machine-like object is inside the charm.
 #-------------------------------
 [CATCHINGCHARM]
@@ -2321,7 +2333,7 @@ Name = Catching Charm
 NamePlural = Catching Charms
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = A charm that doubles the chance of getting a critical catch.
 #-------------------------------
 [INFINITEROPE]
@@ -2462,6 +2474,14 @@ Price = 8000
 FieldUse = OnPokemon
 Description = A wisp of ideas with infinite potential. Use it on a Pokemon to teach any one of their legal moves.
 #-------------------------------
+[SACCHARITEPICK]
+Name = Saccharite Pick
+NamePlural = Saccharite Picks
+Pocket = 8
+Price = 0
+Flags = KeyItem
+Description = A food grade mining tool. Allows you to extract EXP. Candy from saccharite deposits.
+#-------------------------------
 [SURFBOARD]
 Name = Surf Board
 NamePlural = Surf Boards
@@ -2475,7 +2495,7 @@ Name = Chasm ID Card
 NamePlural = Chasm ID Cards
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = An ID card which unlocks Team Chasm gates and doors, giving access to dangers and rewards.
 #-------------------------------
 [CLIMBINGGEAR]
@@ -2528,6 +2548,14 @@ Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem
 Description = Use on a Pokémon to switch it into another one of its forms.
+#-------------------------------
+[SPANNINGBAND]
+Name = Spanning Band
+NamePlural = Spanning Bands
+Pocket = 8
+Price = 0
+Flags = KeyItem
+Description = An ancient ceramic ring. Unlocks the ability to teleport between Avatar Totems.
 #-------------------------------
 [POCKETTOTEM]
 Name = Pocket Totem
@@ -2622,7 +2650,7 @@ Name = House Deed
 NamePlural = House Deeds
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = Proof of ownership for the house you bought in Prizca East.
 #-------------------------------
 [GLEAMPOWDER]
@@ -2682,7 +2710,7 @@ Name = Milk Bone Treat
 NamePlural = Milk Bone Treats
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = It would be a delicious treat if you were a Pokémon.
 #-------------------------------
 [PRIMALCLAY]
@@ -2701,7 +2729,7 @@ Pocket = 8
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem
-Description = A mysterious data storage device which can be used to upgrade your PC.
+Description = A mysterious data storage device. Plug it into any PC to unlock The Omnitutor.
 #-------------------------------
 [ANCIENTSEAWATER]
 Name = Ancient Sea Water
@@ -2718,7 +2746,7 @@ NamePlural = Cups of Coffee
 Pocket = 7
 Price = 0
 Consumable = true
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = It's a cup filled with warm coffee. You probably shouldn't be keeping this in your backpack.
 #-------------------------------
 [LUXTECHSHIPMENT]
@@ -2726,7 +2754,7 @@ Name = LuxTech Shipment
 NamePlural = LuxTech Shipments
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = A package containing an important shipment destined for LuxTech.
 #-------------------------------
 [WEIRDPACKAGE]
@@ -2734,6 +2762,7 @@ Name = Weird Package
 NamePlural = Weird Packages
 Pocket = 7
 Price = 0
+Flags = KeyItem,SkipPocketMessage
 Description = A suspicious package. Probably best not to look inside.
 #-------------------------------
 [AEGISIDCARD]
@@ -2741,7 +2770,7 @@ Name = Aegis ID Card
 NamePlural = Aegis ID Cards
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = A forged ID card. It will let you pretend you work at Aegis Insurance.
 #-------------------------------
 [INCRIMINATINGEVIDENCE]
@@ -2749,7 +2778,7 @@ Name = Incriminating Evidence
 NamePlural = Incriminating Evidence
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = A device containing evidence against Aegis Insurance.
 #-------------------------------
 [DIGITSLIP]
@@ -2758,7 +2787,7 @@ NamePlural = Digit Slips
 Pocket = 7
 Price = 0
 Consumable = true
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = A slip of paper with one digit of the code for the lock to Rafael's gym door.
 #-------------------------------
 [SIGILLEFTHALF]
@@ -2766,7 +2795,7 @@ Name = Sigil Left Half
 NamePlural = Sigils Left Half
 Pocket = 8
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = The left half of the sigil of an ancient order of knights.
 #-------------------------------
 [SIGILRIGHTHALF]
@@ -2774,7 +2803,7 @@ Name = Sigil Right Half
 NamePlural = Sigils Right Half
 Pocket = 8
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = The right half of the sigil of an ancient order of knights.
 #-------------------------------
 [CARNATIONSIGIL]
@@ -2792,7 +2821,7 @@ NamePlural = Condensed Light
 Pocket = 7
 Price = 0
 Consumable = true
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = A strange ball of light. You should gather these for a friend.
 #-------------------------------
 [CHAMBER1KEY]
@@ -2800,7 +2829,7 @@ Name = Chamber 1 Key
 NamePlural = Chamber 1 Keys
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = The key to the first chamber containing a powerful avatar.
 #-------------------------------
 [CHAMBER2KEY]
@@ -2808,7 +2837,7 @@ Name = Chamber 2 Key
 NamePlural = Chamber 2 Keys
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = The key to the second chamber containing a powerful avatar.
 #-------------------------------
 [CHAMBER3KEY]
@@ -2816,7 +2845,7 @@ Name = Chamber 3 Key
 NamePlural = Chamber 3 Keys
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = The key to the third chamber containing a powerful avatar.
 #-------------------------------
 [CHAMBER4KEY]
@@ -2824,7 +2853,7 @@ Name = Chamber 4 Key
 NamePlural = Chamber 4 Keys
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = The key to the fourth chamber containing a powerful avatar.
 #-------------------------------
 [CHAMBER5KEY]
@@ -2832,7 +2861,7 @@ Name = Chamber 5 Key
 NamePlural = Chamber 5 Keys
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = The key to the fifth chamber containing a powerful avatar.
 #-------------------------------
 [CHAMBER6KEY]
@@ -2840,7 +2869,7 @@ Name = Chamber 6 Key
 NamePlural = Chamber 6 Keys
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = The key to the sixth chamber containing a powerful avatar.
 #-------------------------------
 [CHAMBER7KEY]
@@ -2848,7 +2877,7 @@ Name = Chamber 7 Key
 NamePlural = Chamber 7 Keys
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = The key to the seventh chamber containing a powerful avatar.
 #-------------------------------
 [CHAMBER8KEY]
@@ -2856,7 +2885,7 @@ Name = Chamber 8 Key
 NamePlural = Chamber 8 Keys
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = The key to the eighth chamber containing a powerful avatar.
 #-------------------------------
 [UBCONTAINMENTKEY]
@@ -2864,7 +2893,7 @@ Name = UB Containment Key
 NamePlural = UB Containment Keys
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = A key which unlocks the Ultra Beast Containment Room at Novo College.
 #-------------------------------
 [FACTORYPASS]
@@ -2873,7 +2902,7 @@ NamePlural = Factory Passes
 Pocket = 7
 Price = 0
 FieldUse = OnPokemon
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = A pass that grants you access through the locked door in Victoire's factory.
 #-------------------------------
 [RUINEDTOWERKEY]
@@ -2881,7 +2910,7 @@ Name = Ruined Tower Key
 NamePlural = Ruined Tower Keys
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = A key which unlocks the ruined tower on the Sandstone Estuary coastline.
 #-------------------------------
 [LATENTSEED]
@@ -2992,7 +3021,7 @@ Name = VIP Card
 NamePlural = VIP Cards
 Pocket = 7
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = A glamorous steel card. While holding it, all vendors cost 10% less and Poké Marts have extra items.
 #-------------------------------
 [OMINOUSEGG]
@@ -3000,5 +3029,5 @@ Name = Ominous Egg
 NamePlural = Ominous Eggs
 Pocket = 8
 Price = 0
-Flags = KeyItem
+Flags = KeyItem,SkipPocketMessage
 Description = A vessel for negative emotions. If you perfectly defeat enough route or gym trainers, it will grant you rewards.

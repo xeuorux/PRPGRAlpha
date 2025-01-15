@@ -140,6 +140,7 @@ def battleGuideStatusConditionsHash
         _INTL("Frostbite") => _INTL("When frostbitten, a Pokémon's Sp. Atk is reduced by 33%, and loses 1/8th HP every turn. Ice- and Flying-types do the most frostbiting. Ice is immune."),
         _INTL("Poison") => _INTL("When poisoned, a Pokémon loses 1/10th HP every turn. This doubles every 2 turns. Poison- and Grass-types do the most poisoning. Poison/Steel are immune."),
         _INTL("Numb") => _INTL("When numbed, a Pokémon's Speed is halved, and it deals 25% less damage. Electric- and Fighting-types do the most numbing. Electric is immune."),
+        _INTL("Waterlog") => _INTL("When waterlogged, a Pokémon's Speed is halved, and it takes 25% more attack damage. Water- and Dark-types do the most waterlogged. Water is immune."),
         _INTL("Dizzy") => _INTL("When dizzied, a Pokémon takes 25% more attack damage, and its ability doesn't function. Psychic- and Fairy-types do the most dizzying."),
         _INTL("Leeched") => _INTL("When leeched, a Pokémon loses 1/10th HP every turn, and its opponent(s) split that health. Bug- and Dark-types do the most leeching. Grass is immune."),
         _INTL("Sleep") => _INTL("A rarer status that causes a Pokémon to be unable to do anything for 2 turns. Psychic- and Grass-types put Pokémon to sleep the most often."),

@@ -460,6 +460,19 @@ GameData::BattleEffect.register_effect(:Side, {
 })
 
 GameData::BattleEffect.register_effect(:Side, {
+    :id => :LiveWire,
+    :real_name => "Live Wire",
+    :is_hazard => true,
+    :apply_proc => proc do |battle, _side, teamName, _value|
+        battle.pbDisplay(_INTL("A live wire was set on the ground around {1}!", teamName))
+    end,
+    :disable_proc => proc do |battle, _side, teamName|
+        teamName[0] = teamName[0].downcase
+        battle.pbDisplay(_INTL("The live wire near {1} was removed!", teamName))
+    end,
+})
+
+GameData::BattleEffect.register_effect(:Side, {
     :id => :StickyWeb,
     :real_name => "Sticky Web",
     :is_hazard => true,

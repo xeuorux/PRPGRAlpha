@@ -13,6 +13,7 @@ def unlockTools
         CLIMBINGGEAR
         FLORASCEPTRE
         POKEXRAY
+        SACCHARITEPICK
     ]
     
     itemList.each do |itemID|

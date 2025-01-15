@@ -512,7 +512,7 @@ end
 #===============================================================================
 class PokeBattle_Move_DoubleDamageGravity < PokeBattle_Move
     def pbBaseDamage(baseDmg, _user, _target)
-        baseDmg *= 2.0 if @battle.field.effectActive?(:Gravity)
+        baseDmg *= 2.0 if @battle.gravityIntensified?
         return baseDmg
     end
 end

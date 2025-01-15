@@ -54,14 +54,14 @@ class PokeBattle_Move_EmpoweredRainstorm < PokeBattle_Move_StartRainstorm8
 end
 
 #===============================================================================
-# Numbs the target and sets Rain
+# Waterlogs the target and sets Rain
 #===============================================================================
-class PokeBattle_Move_NumbTargetStartRainstorm8 < PokeBattle_InviteMove
+class PokeBattle_Move_WaterlogTargetStartRainstorm8 < PokeBattle_InviteMove
     def initialize(battle, move)
         super
         @weatherType = :Rainstorm
         @durationSet = 8
-        @statusToApply = :NUMB
+        @statusToApply = :WATERLOG
     end
 end
 

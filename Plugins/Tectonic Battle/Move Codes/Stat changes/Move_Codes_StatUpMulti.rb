@@ -57,13 +57,13 @@ class PokeBattle_Move_RaiseUserAtkDef2CriticalHitRate1 < PokeBattle_MultiStatUpM
 	end
 
 	def pbMoveFailed?(user, _targets, show_message)
-        return super if user.effectAtMax?(:FocusEnergy) 
+        return super if user.effectAtMax?(:RaisedCritChance) 
         return false
     end
 
 	def pbEffectGeneral(user)
 		super
-		user.incrementEffect(:FocusEnergy, 1) unless user.effectAtMax?(:FocusEnergy)
+		user.incrementEffect(:RaisedCritChance, 1) unless user.effectAtMax?(:RaisedCritChance)
     end
 
     def getEffectScore(user, _target)
@@ -316,17 +316,11 @@ class PokeBattle_Move_RaiseUserDefSpDef2EmpowersNextElectricAttack < PokeBattle_
     end
 
     def getEffectScore(user, target)
-        foundMove = false
+        score = super
         user.eachMove do |m|
             next if m.type != :ELECTRIC || !m.damagingMove?
-            foundMove = true
+            score += 40
             break
-        end
-        score = super
-        if foundMove
-            score += 20
-        else
-            score -= 20
         end
         return score
     end
@@ -439,13 +433,13 @@ class PokeBattle_Move_RaiseUserSpAtkSpDef2CriticalHitRate1 < PokeBattle_MultiSta
 	end
     
 	def pbMoveFailed?(user, _targets, show_message)
-        return super if user.effectAtMax?(:FocusEnergy)
+        return super if user.effectAtMax?(:RaisedCritChance)
         return false
     end
     
 	def pbEffectGeneral(user)
 		super
-		user.incrementEffect(:FocusEnergy, 1) unless user.effectAtMax?(:FocusEnergy)
+		user.incrementEffect(:RaisedCritChance, 1) unless user.effectAtMax?(:RaisedCritChance)
     end
 
     def getEffectScore(user, _target)
@@ -608,16 +602,16 @@ class PokeBattle_Move_RaiseUserAccSpd1IfMisses < PokeBattle_Move
 end
 
 #===============================================================================
-# Increases Speed by 4 steps and Crit Chance by 2 steps. (Deep Breathing)
+# Increases Speed by 2 steps and Crit Chance by 2 steps. (Deep Breathing)
 #===============================================================================
-class PokeBattle_Move_RaiseUserSpd4CriticalHitRate2 < PokeBattle_StatUpMove
+class PokeBattle_Move_RaiseUserSpd2CriticalHitRate2 < PokeBattle_StatUpMove
     def initialize(battle, move)
         super
-        @statUp = [:SPEED, 4]
+        @statUp = [:SPEED, 2]
     end
 
     def pbMoveFailed?(user, _targets, show_message)
-        if user.effectAtMax?(:FocusEnergy)
+        if user.effectAtMax?(:RaisedCritChance)
             return super
         end
         return false
@@ -625,7 +619,7 @@ class PokeBattle_Move_RaiseUserSpd4CriticalHitRate2 < PokeBattle_StatUpMove
 
     def pbEffectGeneral(user)
         super
-        user.incrementEffect(:FocusEnergy, 2)
+        user.incrementEffect(:RaisedCritChance, 2)
     end
 
     def getEffectScore(user, _target)
@@ -636,6 +630,6 @@ class PokeBattle_Move_RaiseUserSpd4CriticalHitRate2 < PokeBattle_StatUpMove
 end
 
 # Empowered Deep Breathing
-class PokeBattle_Move_EmpoweredDeepBreathing < PokeBattle_Move_RaiseUserSpd4CriticalHitRate2
+class PokeBattle_Move_EmpoweredDeepBreathing < PokeBattle_Move_RaiseUserSpd2CriticalHitRate2
     include EmpoweredMove
 end

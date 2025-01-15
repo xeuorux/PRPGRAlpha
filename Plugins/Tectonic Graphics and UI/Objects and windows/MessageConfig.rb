@@ -382,6 +382,8 @@ def getSkinColor(windowskin, color, isDarkSkin, asTag = true)
             colorToRgb32(MessageConfig::DARK_TEXT_SHADOW_COLOR), # 11 Dark default
             colorToRgb32(MessageConfig::LIGHT_TEXT_MAIN_COLOR),
             colorToRgb32(MessageConfig::LIGHT_TEXT_SHADOW_COLOR), # 12 Light default
+            "3976BF", "96B4CA",    # 13 Faded blue
+            "B84940", "E6BAC3",   # 14 Faded red
         ]
         # No special colour, use default
         if color == 0 || color > textcolors.length / 2

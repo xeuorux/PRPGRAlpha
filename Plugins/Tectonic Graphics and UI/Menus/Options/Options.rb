@@ -38,7 +38,7 @@ class PokemonSystem
     attr_accessor :aid_kit_animation
     attr_accessor :quick_evolution
     attr_accessor :name_on_showcases
-    attr_accessor :disable_flashing_weather
+    attr_accessor :flashing_weather
 
     def bgmvolume
         return @bgmvolume / VOLUME_FAKERY_MULT
@@ -85,9 +85,9 @@ class PokemonSystem
         @color_shifts = 0 # (0=true, 1=false)
         @particle_effects = 0 # (0=true, 1=false)
         @overworld_weather        = 0 # (0=true, 1=false)
-        @disable_flashing_weather = 1 # (0=true, 1=false)
         @forced_time_tint         = 0 # (0=off,1=morning,2=mid-day,3=evening,4=night)
         @screenshake              = 0 # (0=true, 1=false)
+        @flashing_weather         = 0 # (0=true, 1=false)
         @skip_fades = 1 # (0=true, 1=false)
         @gendered_look 		        = 0 # (0 = Masc, 1 = Fem, 2 = Andro)
         @damage_numbers 	        = 0 # (0=true, 1=false)
@@ -143,6 +143,10 @@ module PropertyMixin
     def set(value)
         @setProc.call(value) if @setProc
     end
+
+    def description
+        return @description ? @description : ""
+    end
 end
 
 #===============================================================================
@@ -153,11 +157,12 @@ class EnumOption
     attr_reader :values
     attr_reader :name
 
-    def initialize(name, options, getProc, setProc)
+    def initialize(name, description, options, getProc, setProc)
         @name    = name
         @values  = options
         @getProc = getProc
         @setProc = setProc
+        @description = description
     end
 
     def next(current)
@@ -181,11 +186,12 @@ class EnumOption2
     attr_reader :values
     attr_reader :name
 
-    def initialize(name, options, getProc, setProc)
+    def initialize(name, description, options, getProc, setProc)
         @name    = name
         @values  = options
         @getProc = getProc
         @setProc = setProc
+        @description = description
     end
 
     def next(current)
@@ -210,12 +216,13 @@ class NumberOption
     attr_reader :optstart
     attr_reader :optend
 
-    def initialize(name, optstart, optend, getProc, setProc)
+    def initialize(name, description, optstart, optend, getProc, setProc)
         @name     = name
         @optstart = optstart
         @optend   = optend
         @getProc  = getProc
         @setProc  = setProc
+        @description = description
     end
 
     def next(current)
@@ -242,13 +249,15 @@ class SliderOption
     attr_reader :optstart
     attr_reader :optend
 
-    def initialize(name, optstart, optend, optinterval, getProc, setProc)
+
+    def initialize(name, description, optstart, optend, optinterval, getProc, setProc)
         @name        = name
         @optstart    = optstart
         @optend      = optend
         @optinterval = optinterval
         @getProc     = getProc
         @setProc     = setProc
+        @description = description
     end
 
     def next(current)
@@ -417,6 +426,7 @@ class PokemonOption_Scene_Base
         for i in 0...@PokemonOptions.length
             @sprites["option"].setValueNoRefresh(i, (@PokemonOptions[i].get || 0))
         end
+        @sprites["textbox"].text = @PokemonOptions[0].description
         @sprites["option"].refresh
         pbDeactivateWindows(@sprites)
         pbFadeInAndShow(@sprites) { pbUpdate }
@@ -429,11 +439,22 @@ class PokemonOption_Scene_Base
     def pbOptions
         oldSystemSkin = $PokemonSystem.frame # Menu
         oldTextSkin = $PokemonSystem.textskin # Speech
+        oldIndex = @sprites["option"].index
         pbActivateWindow(@sprites, "option") do
             loop do
                 Graphics.update
                 Input.update
                 pbUpdate
+
+                if @sprites["option"].index != oldIndex
+                    if @sprites["option"].index < @PokemonOptions.length
+                        @sprites["textbox"].text = @PokemonOptions[@sprites["option"].index].description
+                    else
+                        @sprites["textbox"].text = ""
+                    end
+                end
+                oldIndex = @sprites["option"].index
+
                 if @sprites["option"].mustUpdateOptions
                     # Set the values of each option
                     for i in 0...@PokemonOptions.length
@@ -441,7 +462,6 @@ class PokemonOption_Scene_Base
                     end
                     if $PokemonSystem.textskin != oldTextSkin
                         @sprites["textbox"].setSkin(MessageConfig.pbGetSpeechFrame)
-                        @sprites["textbox"].text = _INTL("Speech frame {1}.", 1 + $PokemonSystem.textskin)
                         oldTextSkin = $PokemonSystem.textskin
                     end
                     if $PokemonSystem.frame != oldSystemSkin
@@ -506,7 +526,10 @@ class PokemonOption_Scene_Audio < PokemonOption_Scene_Base
 
 	def pbAddOnOptions(options)
 		options.concat([
-			SliderOption.new(_INTL("Music Volume"), 0, 100, 5,
+			SliderOption.new(
+                _INTL("Music Volume"),
+                _INTL("The loudness of background music, fanfares, and jingles."),
+                0, 100, 5,
 				proc { $PokemonSystem.bgmvolume * VOLUME_FAKERY_MULT },
 				proc { |value|
 					if $PokemonSystem.bgmvolume * VOLUME_FAKERY_MULT != value
@@ -519,7 +542,10 @@ class PokemonOption_Scene_Audio < PokemonOption_Scene_Base
 					end
 				}
 			),
-			SliderOption.new(_INTL("SE Volume"), 0, 100, 5,
+			SliderOption.new(
+                _INTL("SE Volume"),
+                _INTL("The loudness of sound effects, both in and out of battle."),
+                0, 100, 5,
 				proc { $PokemonSystem.sevolume * VOLUME_FAKERY_MULT },
 				proc { |value|
 					if $PokemonSystem.sevolume * VOLUME_FAKERY_MULT != value
@@ -534,7 +560,10 @@ class PokemonOption_Scene_Audio < PokemonOption_Scene_Base
 					end
 				}
 			),
-            EnumOption.new(_INTL("Bicycle Music"), [_INTL("On"), _INTL("Off")],
+            EnumOption.new(
+                _INTL("Bicycle Music"),
+                _INTL("Whether to play special music while riding the bicycle."),
+                [_INTL("On"), _INTL("Off")],
 				proc { $PokemonSystem.bike_bgm },
 				proc { |value|
 					$PokemonSystem.bike_bgm = value
@@ -554,7 +583,10 @@ class PokemonOption_Scene_Speed < PokemonOption_Scene_Base
 
 	def pbAddOnOptions(options)
 		options.concat([
-			EnumOption.new(_INTL("Text Speed"), [_INTL("1"), _INTL("2"), _INTL("3"), _INTL("4"), _INTL("5")],
+			EnumOption.new(
+                _INTL("Text Speed"),
+                _INTL("How quickly to display text in message boxes."),
+                [_INTL("1"), _INTL("2"), _INTL("3"), _INTL("4"), _INTL("5")],
 				proc { $PokemonSystem.textspeed },
 				proc { |value|
                     if value >= 4 && $PokemonSystem.textspeed < 4 && !$PokemonGlobal.customSpeedTutorialized
@@ -564,47 +596,71 @@ class PokemonOption_Scene_Speed < PokemonOption_Scene_Base
 					MessageConfig.pbSetTextSpeed(MessageConfig.pbSettingToTextSpeed(value))
 				}
 			),
-			EnumOption.new(_INTL("Nicknaming Prompt"), [_INTL("On"), _INTL("Off")],
+			EnumOption.new(
+                _INTL("Nicknaming Prompt"),
+                _INTL("Whether the game should ask you to set nicknames for newly caught Pokémon."),
+                [_INTL("On"), _INTL("Off")],
 				proc { $PokemonSystem.nicknaming_prompt },
 				proc { |value|
 					$PokemonSystem.nicknaming_prompt = value
 				}
 			),
-            EnumOption.new(_INTL("Dex Register Popup"), [_INTL("On"), _INTL("Off")],
+            EnumOption.new(
+                _INTL("Dex Register Popup"),
+                _INTL("Whether to show a species' MasterDex entry when you first catch one."),
+                [_INTL("On"), _INTL("Off")],
 				proc { $PokemonSystem.dex_shown_register },
 				proc { |value|
 					$PokemonSystem.dex_shown_register = value
 				}
 			),
-			EnumOption.new(_INTL("Item Desc Popups"), [_INTL("On"), _INTL("Off")],
+			EnumOption.new(
+                _INTL("Item Popups"),
+                _INTL("Whether to show an item's description when you acquire one for the first time."),
+                [_INTL("On"), _INTL("Off")],
 				proc { $PokemonSystem.show_item_descriptions },
 				proc { |value|
 					$PokemonSystem.show_item_descriptions = value
 				}
 			),
-			EnumOption.new(_INTL("Trait Unlock Popups"), [_INTL("On"), _INTL("Off")],
+			EnumOption.new(
+                _INTL("Trait Unlock Popups"),
+                _INTL("Whether to alert you when one of your Pokémon reveals personality traits."),
+                [_INTL("On"), _INTL("Off")],
 				proc { $PokemonSystem.show_trait_unlocks },
 				proc { |value|
 					$PokemonSystem.show_trait_unlocks = value
 				}
 			),
-			EnumOption.new(_INTL("Team Snapshots"), [_INTL("On"), _INTL("Off")],
+			EnumOption.new(
+                _INTL("Team Snapshots"),
+                _INTL("Whether to automatically take screenshots of your Party Showcase after major victories."),
+                [_INTL("On"), _INTL("Off")],
 				proc { $PokemonSystem.party_snapshots },
 				proc { |value|
 					$PokemonSystem.party_snapshots = value
 				}
 			),
-            EnumOption.new(_INTL("Prompt Level Moves"), [_INTL("On"), _INTL("Off")],
+            EnumOption.new(
+                _INTL("Prompt Level Moves"),
+                _INTL("Whether to let your Pokémon learn new moves when leveling up."),
+                [_INTL("On"), _INTL("Off")],
 				proc { $PokemonSystem.prompt_level_moves },
 				proc { |value|
 					$PokemonSystem.prompt_level_moves = value
 				}
 			),
-            EnumOption.new(_INTL("Aid Kit Animation"), [_INTL("On"), _INTL("Off")],
+            EnumOption.new(
+                _INTL("Aid Kit Animation"),
+                _INTL("Whether to play ananimation showing your party being healed by the Aid Kit."),
+                [_INTL("On"), _INTL("Off")],
 				proc { $PokemonSystem.aid_kit_animation },
 				proc { |value| $PokemonSystem.aid_kit_animation = value }
 			),
-            EnumOption.new(_INTL("Quick Evolution"), [_INTL("On"), _INTL("Off")],
+            EnumOption.new(
+                _INTL("Quick Evolution"),
+                _INTL("Whether to shorten the cutscene that plays when a Pokémon evolves."),
+                [_INTL("On"), _INTL("Off")],
 				proc { $PokemonSystem.quick_evolution },
 				proc { |value| $PokemonSystem.quick_evolution = value }
 			),
@@ -622,7 +678,10 @@ class PokemonOption_Scene_UserInterface < PokemonOption_Scene_Base
 
 	def pbAddOnOptions(options)
 		options.concat([
-            EnumOption.new(_INTL("Screen Size"),[_INTL("S"),_INTL("M"),_INTL("L"),_INTL("XL"),_INTL("Full")],
+            EnumOption.new(
+                _INTL("Screen Size"),
+                _INTL("How large the game screen is."),
+                [_INTL("S"),_INTL("M"),_INTL("L"),_INTL("XL"),_INTL("Full")],
                 proc { [$PokemonSystem.screensize, 4].min },
                 proc { |value|
                 if $PokemonSystem.screensize != value
@@ -631,7 +690,10 @@ class PokemonOption_Scene_UserInterface < PokemonOption_Scene_Base
                 end
                 }
             ),
-            EnumOption.new(_INTL("Dark Mode"), [_INTL("On"), _INTL("Off")],
+            EnumOption.new(
+                _INTL("Dark Mode"),
+                _INTL("Whether or not user interface elements use a darker color scheme."),
+                [_INTL("On"), _INTL("Off")],
 				proc { $PokemonSystem.dark_mode },
 				proc { |value|
                     $PokemonSystem.dark_mode = value
@@ -642,14 +704,20 @@ class PokemonOption_Scene_UserInterface < PokemonOption_Scene_Base
                     @sprites["title"].setSkin(MessageConfig.pbGetSystemFrame)
                 }
 			),
-			NumberOption.new(_INTL("Speech Frame"), 1, Settings::SPEECH_WINDOWSKINS.length,
+			NumberOption.new(
+                _INTL("Speech Frame"),
+                _INTL("Which frame surrounds message boxes."),
+                1, Settings::SPEECH_WINDOWSKINS.length,
 				proc { $PokemonSystem.textskin },
 				proc { |value|
 					$PokemonSystem.textskin = value
 					@sprites["textbox"].setSkin(MessageConfig.pbGetSpeechFrame)
 				}
 			),
-			NumberOption.new(_INTL("Menu Frame"), 1, Settings::MENU_WINDOWSKINS.length,
+			NumberOption.new(
+                _INTL("Menu Frame"),
+                _INTL("Which frame surrounds other user interface menus."),
+                1, Settings::MENU_WINDOWSKINS.length,
 				proc { $PokemonSystem.frame },
 				proc { |value|
 					$PokemonSystem.frame = value
@@ -657,24 +725,35 @@ class PokemonOption_Scene_UserInterface < PokemonOption_Scene_Base
                     @sprites["title"].setSkin(MessageConfig.pbGetSystemFrame)
 				}
 			),
-			EnumOption.new(_INTL("Text Entry"), [_INTL("Cursor"), _INTL("Keyboard")],
+			EnumOption.new(
+                _INTL("Text Entry"),
+                _INTL("Which method you want to use to enter text."),
+                [_INTL("Cursor"), _INTL("Keyboard")],
 				proc { $PokemonSystem.textinput },
 				proc { |value| $PokemonSystem.textinput = value }
 			),
-			EnumOption.new(_INTL("Bag Sorting"), [_INTL("Off"), _INTL("Name"), _INTL("Type")],
+			EnumOption.new(
+                _INTL("Bag Sorting"),
+                _INTL("How should items in your bag be sorted? Automatic."),
+                [_INTL("Off"), _INTL("Name"), _INTL("Type")],
 				proc { $PokemonSystem.bag_sorting },
 				proc { |value|
 					$PokemonSystem.bag_sorting = value
 					$PokemonBag.sortItems
 				}
 			),
-            EnumOption.new(_INTL("Name on Showcase"), [_INTL("On"), _INTL("Off")],
+            EnumOption.new(_INTL("Name on Showcase"),
+                _INTL("Whether or not to put your player name on Party Showcases."),
+                [_INTL("On"), _INTL("Off")],
 				proc { $PokemonSystem.name_on_showcases },
 				proc { |value|
 					$PokemonSystem.name_on_showcases = value
 				}
 			),
-            EnumOption.new(_INTL("Advanced Tutorials"), [_INTL("On"), _INTL("Off")],
+            EnumOption.new(
+                _INTL("Advanced Tutorials"),
+                _INTL("Whether to show popups explaining changes and new mechanics."),
+                [_INTL("On"), _INTL("Off")],
 				proc { $PokemonSystem.tutorial_popups },
 				proc { |value|
 					$PokemonSystem.tutorial_popups = value
@@ -699,45 +778,69 @@ class PokemonOption_Scene_Battle < PokemonOption_Scene_Base
 
 	def pbAddOnOptions(options)
 		options.concat([
-			EnumOption.new(_INTL("Battle Effects"), [_INTL("Standard"), _INTL("Fast"), _INTL("Off")],
+			EnumOption.new(
+                _INTL("Battle Effects"),
+                _INTL("How to treat move and effect animations. Fast is 2x speed."),
+                [_INTL("Standard"), _INTL("Fast"), _INTL("Off")],
 				proc { $PokemonSystem.battlescene },
 				proc { |value| $PokemonSystem.battlescene = value }
 			),
-			EnumOption.new(_INTL("Battle Transitions"), [_INTL("Standard"), _INTL("Fast")],
+			EnumOption.new(
+                _INTL("Battle Transitions"),
+                _INTL("Whether to speed up animations like starting battle or switching battlers."),
+                [_INTL("Standard"), _INTL("Fast")],
 				proc { $PokemonSystem.battle_transitions },
 				proc { |value| $PokemonSystem.battle_transitions = value }
 			),
-			EnumOption.new(_INTL("Damage Numbers"), [_INTL("On"), _INTL("Off")],
+			EnumOption.new(
+                _INTL("Damage Numbers"),
+                _INTL("Whether to display how much damage an attack did over the Pokémon's head."),
+                [_INTL("On"), _INTL("Off")],
 				proc { $PokemonSystem.damage_numbers },
 				proc { |value|
 					$PokemonSystem.damage_numbers = value
 				}
 			),
-			EnumOption.new(_INTL("Effectiveness Msgs"), [_INTL("On"), _INTL("Off")],
+			EnumOption.new(
+                _INTL("Effect. Messages"),
+                _INTL("Whether to state how effective a move was."),
+                [_INTL("On"), _INTL("Off")],
 				proc { $PokemonSystem.effectiveness_messages },
 				proc { |value|
 					$PokemonSystem.effectiveness_messages = value
 				}
 			),
-			EnumOption.new(_INTL("Weather Msgs"), [_INTL("On"), _INTL("Off")],
+			EnumOption.new(
+                _INTL("Weather Messages"),
+                _INTL("Whether to show messages about weather mechanics."),
+                [_INTL("On"), _INTL("Off")],
 				proc { $PokemonSystem.weather_messages },
 				proc { |value|
 					$PokemonSystem.weather_messages = value
 				}
 			),
-			EnumOption.new(_INTL("Status Condition Msgs"), [_INTL("On"), _INTL("Off")],
+			EnumOption.new(
+                _INTL("Status Messages"),
+                _INTL("Whether to show messages about status condition mechanics."),
+                [_INTL("On"), _INTL("Off")],
 				proc { $PokemonSystem.status_effect_messages },
 				proc { |value|
 					$PokemonSystem.status_effect_messages = value
 				}
 			),
-			EnumOption.new(_INTL("Move Clarifying Msgs"), [_INTL("On"), _INTL("Off")],
+			EnumOption.new(
+                _INTL("Move Messages"),
+                _INTL("Whether to show messages when moves change base power or category."),
+                [_INTL("On"), _INTL("Off")],
 				proc { $PokemonSystem.move_clarifying_messages },
 				proc { |value|
 					$PokemonSystem.move_clarifying_messages = value
 				}
 			),
-            EnumOption.new(_INTL("Avatar Mechanics Msgs"), [_INTL("On"), _INTL("Off")],
+            EnumOption.new(
+                _INTL("Avatar Messages"),
+                _INTL("Whether to show messages about avatar mechanics."),
+                [_INTL("On"), _INTL("Off")],
 				proc { $PokemonSystem.avatar_mechanics_messages },
 				proc { |value|
 					$PokemonSystem.avatar_mechanics_messages = value
@@ -757,30 +860,45 @@ class PokemonOption_Scene_Overworld < PokemonOption_Scene_Base
 
 	def pbAddOnOptions(options)
 		options.concat([
-			EnumOption.new(_INTL("Default Movement"), [_INTL("Walking"), _INTL("Running")],
+			EnumOption.new(
+                _INTL("Default Movement"),
+                _INTL("Whether walking or running should be your player character's default."),
+                [_INTL("Walking"), _INTL("Running")],
 				proc { $PokemonSystem.runstyle },
 				proc { |value| $PokemonSystem.runstyle = value }
 			),
-			EnumOption.new(_INTL("Autosave"), [_INTL("On"), _INTL("Off")],
+			EnumOption.new(
+                _INTL("Autosave"),
+                _INTL("Whether the game should save when healing and every 40 steps taken."),
+                [_INTL("On"), _INTL("Off")],
 				proc { $PokemonSystem.autosave },
 				proc { |value|
 					$PokemonSystem.autosave = value
 				}
 			),
-			EnumOption.new(_INTL("Look"), [_INTL("M"), _INTL("F"), _INTL("A")],
+			EnumOption.new(
+                _INTL("Look"),
+                _INTL("What sort of gendered expression you want for your player character."),
+                [_INTL("M"), _INTL("F"), _INTL("A")],
 				proc { $PokemonSystem.gendered_look },
 				proc { |value|
 					pbChangePlayer(value)
 				}
 			),
-			EnumOption.new(_INTL("Pokemon Follow"), [_INTL("On"), _INTL("Off")],
+			EnumOption.new(
+                _INTL("Pokémon Follow"),
+                _INTL("Whether your first Pokémon follows behind you."),
+                [_INTL("On"), _INTL("Off")],
 				proc { $PokemonSystem.followers },
 				proc { |value|
 					$PokemonSystem.followers = value
 					pbToggleFollowingPokemon($PokemonSystem.followers == 0 ? "on" : "off", false)
 				}
 			),
-            EnumOption.new(_INTL("World Weather"), [_INTL("On"), _INTL("Off")],
+            EnumOption.new(
+                _INTL("World Weather"),
+                _INTL("Whether overworld areas experience random weathers."),
+                [_INTL("On"), _INTL("Off")],
 				proc { $PokemonSystem.overworld_weather },
 				proc { |value|
 					$PokemonSystem.overworld_weather = value
@@ -791,13 +909,19 @@ class PokemonOption_Scene_Overworld < PokemonOption_Scene_Base
 					end
 				}
 			),
-            EnumOption.new(_INTL("No Flashing"), [_INTL("On"), _INTL("Off")],
-				proc { $PokemonSystem.disable_flashing_weather },
-				proc { |value|
-					$PokemonSystem.disable_flashing_weather = value
-				}
-			),
-            EnumOption.new(_INTL("Force Time"), [_INTL("Off"), _INTL("6"), _INTL("12"), _INTL("18"), _INTL("24")],
+            EnumOption.new(
+                _INTL("Flashing"),
+                _INTL("Whether lightning storms display a flashing lightning effect."),
+                [_INTL("On"), _INTL("Off")],
+                proc { $PokemonSystem.flashing_weather },
+                proc { |value|
+                    $PokemonSystem.flashing_weather = value
+                }
+            ),
+            EnumOption.new(
+                _INTL("Force Time"),
+                _INTL("Force the overworld lighting of a certain hour of the day."),
+                [_INTL("Off"), _INTL("6"), _INTL("12"), _INTL("18"), _INTL("24")],
 				proc { $PokemonSystem.forced_time_tint },
 				proc { |value|
 					$PokemonSystem.forced_time_tint = value
@@ -818,19 +942,28 @@ class PokemonOption_Scene_AdvancedGraphics < PokemonOption_Scene_Base
 
 	def pbAddOnOptions(options)
 		options.concat([
-			EnumOption.new(_INTL("Color Shifts"), [_INTL("On"), _INTL("Off")],
+			EnumOption.new(
+                _INTL("Color Shifts"),
+                _INTL("Whether Pokémon have unique appearances. Disable if laggy."),
+                [_INTL("On"), _INTL("Off")],
 				proc { $PokemonSystem.color_shifts },
 				proc { |value|
 					$PokemonSystem.color_shifts = value
 				}
 			),
-			EnumOption.new(_INTL("Particles"), [_INTL("On"), _INTL("Off")],
+			EnumOption.new(
+                _INTL("Particles"),
+                _INTL("Whether to display particle effects. Disable if laggy."),
+                [_INTL("On"), _INTL("Off")],
 				proc { $PokemonSystem.particle_effects },
 				proc { |value|
 					$PokemonSystem.particle_effects = value
 				}
 			),
-			EnumOption.new(_INTL("Screenshake"), [_INTL("On"), _INTL("Off")],
+			EnumOption.new(
+                _INTL("Screenshake"),
+                _INTL("Whether to use screen shake effects. Disable if laggy."),
+                [_INTL("On"), _INTL("Off")],
 				proc { $PokemonSystem.screenshake },
 				proc { |value|
 					$PokemonSystem.screenshake = value

@@ -28,6 +28,8 @@ class PokeBattle_Move_UseRandomUserMoveIfAsleep < PokeBattle_Move
             next if @moveBlacklist.include?(m.function)
             next if m.is_a?(PokeBattle_TwoTurnMove)
             next if m.callsAnotherMove?
+            battleMoveInstance = @battle.getBattleMoveInstanceFromID(m.id)
+            next if battleMoveInstance.forceSwitchMove?
             next unless @battle.pbCanChooseMove?(user.index, i, false, true)
             sleepTalkMoves.push(i)
         end

@@ -115,7 +115,7 @@ class PokeBattle_Battle
         end
         return if exp <= 0
         # Pokémon gain more Exp from trainer battles
-        if trainerBattle?
+        if trainerBattle? || defeatedBattler.boss?
             exp *= 1.5
             if $PokemonBag.pbHasItem?(:PERFORMANCEANALYZER2)
                 exp *= 1.1

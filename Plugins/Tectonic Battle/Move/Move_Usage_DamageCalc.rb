@@ -42,7 +42,7 @@ class PokeBattle_Move
         # Main damage calculation
         finalCalculatedDamage = calcDamageWithMultipliers(baseDmg,attack,defense,user.level,multipliers)
         finalCalculatedDamage  = [(finalCalculatedDamage * multipliers[:final_damage_multiplier]).round, 1].max
-        finalCalculatedDamage = flatDamageReductions(finalCalculatedDamage,user,target,aiCheck)
+        finalCalculatedDamage = flatDamageModifiers(finalCalculatedDamage,user,target,type,aiCheck)
 
         # Delayed Reaction
         if !@battle.moldBreaker && target.shouldAbilityApply?(:DELAYEDREACTION,aiCheck)
@@ -242,6 +242,18 @@ class PokeBattle_Move
             damageIncrease *= 2 if target.pbOwnedByPlayer? && @battle.curseActive?(:CURSE_STATUS_DOUBLED)
             damageIncrease *= 2 if target.hasActiveAbility?(:CLEANFREAK)
             multipliers[:final_damage_multiplier] *= (1.0 + damageIncrease)
+        end
+        # Waterlog
+        if target.waterlogged? && !target.shouldAbilityApply?([:MARVELSKIN,:MARVELSCALE],checkingForAI)
+            damageIncrease = (1.0/4.0)
+            damageIncrease = (3.0/20.0) if target.boss? && AVATAR_DILUTED_STATUS_CONDITIONS
+            damageIncrease *= 2 if target.pbOwnedByPlayer? && @battle.curseActive?(:CURSE_STATUS_DOUBLED)
+            damageIncrease *= 2 if target.hasActiveAbility?(:CLEANFREAK)
+            multipliers[:final_damage_multiplier] *= (1.0 + damageIncrease)
+        end
+        # Fracture
+        if user.effectActive?(:Fracture)
+            multipliers[:final_damage_multiplier] *= 0.5
         end
     end
 
@@ -458,11 +470,11 @@ class PokeBattle_Move
                 multipliers[:base_damage_multiplier] *= 1.5
             end
             # Helping Hand
-            if user.effectActive?(:HelpingHand) && !self.is_a?(PokeBattle_Confusion)
+            if user.effectActive?(:HelpingHand) && !self.is_a?(PokeBattle_SelfHit)
                 multipliers[:base_damage_multiplier] *= 1.5
             end
             # Helping Hand
-            if user.effectActive?(:Spotting) && !self.is_a?(PokeBattle_Confusion)
+            if user.effectActive?(:Spotting) && !self.is_a?(PokeBattle_SelfHit)
                 multipliers[:base_damage_multiplier] *= 1.5
             end
             # Shimmering Heat
@@ -472,6 +484,10 @@ class PokeBattle_Move
             # Echo
             if user.effectActive?(:Echo)
                 multipliers[:final_damage_multiplier] *= 0.75
+            end
+            # Refuge
+            if target.effectActive?(:RefugeDamageReduction)
+                multipliers[:final_damage_multiplier] *= 0.7
             end
         end
 
@@ -508,7 +524,7 @@ class PokeBattle_Move
         end
 
         # Random variance (What used to be for that)
-        if !self.is_a?(PokeBattle_Confusion) && !self.is_a?(PokeBattle_Charm)
+        if !self.is_a?(PokeBattle_SelfHit)
             multipliers[:final_damage_multiplier] *= 0.9
         end
 
@@ -516,7 +532,13 @@ class PokeBattle_Move
         multipliers[:final_damage_multiplier] = pbModifyDamage(multipliers[:final_damage_multiplier], user, target)
     end
 
-    def flatDamageReductions(finalCalculatedDamage,user,target,aiCheck = false)
+    def flatDamageModifiers(finalCalculatedDamage,user,target,type,aiCheck = false)
+        # Additive effects
+        if user.shouldAbilityApply?(:PURERAGE,aiCheck) && type == :DRAGON
+            finalCalculatedDamage += (user.level / 2).ceil
+        end
+
+        # Subtractive effects
         if target.shouldAbilityApply?(:DRAGONSBLOOD,aiCheck) && !@battle.moldBreaker
             finalCalculatedDamage -= target.level
             target.aiLearnsAbility(:DRAGONSBLOOD) unless aiCheck

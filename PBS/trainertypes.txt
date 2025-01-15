@@ -53,6 +53,11 @@ Gender = Female
 BaseMoney = 32
 IntroBGM = AROMALADY
 #-------------------------------
+[ARTIFICIALTRAINER]
+Name = Artificial Trainer
+Gender = Unknown
+BaseMoney = 0
+#-------------------------------
 [ARTIST]
 Name = Artist
 Gender = Male
@@ -314,6 +319,11 @@ BaseMoney = 60
 Name = Champion
 Gender = Male
 BaseMoney = 60
+#-------------------------------
+[CHASMGANG]
+Name = Driller
+Gender = Unknown
+BaseMoney = 16
 #-------------------------------
 [CHEF]
 Name = Chef
@@ -1748,6 +1758,12 @@ Name = Teacher
 Gender = Female
 BaseMoney = 48
 IntroBGM = ARTIST
+#-------------------------------
+[TECHWIZARD_JOVAN]
+Name = Tech Wizard
+Gender = Male
+BaseMoney = 100
+IntroBGM = POKEFAN
 #-------------------------------
 [TEENAGERF]
 Name = Teenager

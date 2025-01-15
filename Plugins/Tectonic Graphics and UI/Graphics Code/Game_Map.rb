@@ -331,8 +331,15 @@ class Game_Map
         return false
     end
 
-    def terrain_tag(x, y, countBridge = false)
+    def terrain_tag(x, y, countBridge = false, checkEvents = false, self_event = nil)
         if valid?(x, y)
+            for event in events.values
+                next if event == self_event || event.tile_id <= 0 || event.through
+                next unless event.at_coordinate?(x, y)
+                tileID = getTileIDForEventAtCoordinate(event, x, y)
+                terrainTag = GameData::TerrainTag.try_get(@terrain_tags[tileID])
+                return terrainTag
+            end
             for i in [2, 1, 0]
                 tile_id = data[x, y, i]
                 terrain = GameData::TerrainTag.try_get(@terrain_tags[tile_id])
@@ -568,8 +575,21 @@ class Game_Map
         }
     end
 
-    def pushing_tag(x, y, countBridge = false)
+    def pushing_tag(x, y, countBridge = false, self_event = nil)
         if valid?(x, y)
+            # Events
+            for event in events.values
+                next if event.tile_id <= 0
+                next if event == self_event
+                next unless event.at_coordinate?(x, y)
+                next if event.through
+                tileID = getTileIDForEventAtCoordinate(event, x, y)
+                tag = @terrain_tags[tileID]
+                terrainTagData = GameData::TerrainTag.try_get(tag)
+                next unless terrainTagData.push_direction
+                return terrainTagData
+            end
+
             for i in [2, 1, 0]
                 tile_id = data[x, y, i]
                 next unless tile_id

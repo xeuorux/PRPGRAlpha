@@ -181,6 +181,10 @@ module GameData
         return @flags.include?("SnagBall")
       end
 
+      def no_ball_swap?
+        return @flags.include?("NoBallSwap")
+      end
+
       def is_mail?
         return @flags.include?("Mail")
       end
@@ -283,6 +287,10 @@ module GameData
 
       def consumed_after_use?
         return !is_important? && @consumable
+      end
+
+      def show_pocket_message?
+        return !@flags.include?("SkipPocketMessage")
       end
   
       def unlosable?(species, ability)

@@ -2,6 +2,8 @@
 # User must use this move for 2 more rounds. (Outrage, etc.)
 #===============================================================================
 class PokeBattle_Move_Rampage < PokeBattle_Move
+    def rampagingMove?; return true; end
+
     def pbEffectAfterAllHits(user, target)
         user.applyEffect(:Outrage, 3) if !target.damageState.unaffected && !user.effectActive?(:Outrage)
         user.tickDownAndProc(:Outrage)

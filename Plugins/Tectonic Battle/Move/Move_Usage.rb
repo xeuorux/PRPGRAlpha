@@ -40,6 +40,7 @@ class PokeBattle_Move
 
     def calculateCategoryOverride(user, targets)
         return selectBestCategory(user, targets[0]) if punchingMove? && user.hasActiveAbility?(:MYSTICFIST)
+        return selectBestCategory(user, targets[0]) if rampagingMove? && user.hasActiveAbility?(:WREAKHAVOC)
         return selectBestCategory(user) if adaptiveMove?
         return nil
     end
@@ -567,7 +568,7 @@ target.pbThis(true)))
             target.pointAt(:MirrorCoatTarget, user)
         end
         if target.effectActive?(:Bide)
-            target.effects[:BideDamage] += damage
+            target.effects[:BideDamage] += damage * 2
             target.pointAt(:BideTarget, user) if user.index != target.index
         end
         target.damageState.fainted = true if target.fainted? || target.damageState.fear

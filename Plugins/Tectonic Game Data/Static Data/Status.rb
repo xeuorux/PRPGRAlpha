@@ -91,3 +91,10 @@ module GameData
     :name      => _INTL("Leeched"),
     :animation => "LeechSeed"
   })
+
+  GameData::Status.register({
+    :id        => :WATERLOG,
+    :id_number => 8,
+    :name      => _INTL("Waterlogged"),
+    :animation => "Soak"
+  })

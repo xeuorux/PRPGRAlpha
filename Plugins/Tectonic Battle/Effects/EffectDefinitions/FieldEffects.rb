@@ -58,6 +58,33 @@ GameData::BattleEffect.register_effect(:Field, {
 })
 
 GameData::BattleEffect.register_effect(:Field, {
+    :id => :WarpingCore,
+    :real_name => "Warped Core",
+    :apply_proc => proc do |battle, _value|
+        battle.pbDisplay(_INTL("Gravity was extremely warped!"))
+        battle.pbDisplay(_INTL("Everyone is twice as accurate and weighs twice as much!"))
+        battle.eachBattler do |b|
+            showMessage = false
+            if b.inTwoTurnSkyAttack?
+                b.disableEffect(:TwoTurnAttack)
+                battle.pbClearChoice(b.index) unless b.movedThisRound?
+                showMessage = true
+            end
+            if b.effectActive?(:MagnetRise) || b.effectActive?(:Telekinesis) || b.effectActive?(:SkyDrop)
+                b.disableEffect(:MagnetRise)
+                b.disableEffect(:Telekinesis)
+                b.disableEffect(:SkyDrop)
+                showMessage = true
+            end
+            battle.pbDisplay(_INTL("{1} couldn't stay airborne because of gravity!", b.pbThis)) if showMessage
+        end
+    end,
+    :disable_proc => proc do |battle, _battler|
+        battle.pbDisplay(_INTL("The warped gravity was forced back to normal!"))
+    end,
+})
+
+GameData::BattleEffect.register_effect(:Field, {
     :id => :HappyHour,
     :real_name => "Happy Hour",
 })

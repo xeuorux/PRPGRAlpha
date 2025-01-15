@@ -36,7 +36,6 @@ BattleHandlers::TargetAbilityAfterMoveUse.add(:PICKPOCKET,
       next if switched.include?(user.index)
       next unless move.damagingMove?
       next unless user.activatesTargetAbilities?
-      next unless move.physicalMove?
       next if battle.futureSight
       move.stealItem(target, user, target.firstItem, ability: ability)
   }

@@ -2,7 +2,7 @@
 #
 #===============================================================================
 class AnimatedBitmap
-    def initialize(file, hue = 0)
+    def initialize(file, hue = 0, numFrames: nil, delay: nil)
       raise "Filename is nil (missing graphic)." if file.nil?
       path     = file
       filename = ""
@@ -11,8 +11,8 @@ class AnimatedBitmap
         filename = split_file.pop
         path = split_file.join('/') + '/'
       end
-      if filename[/^\[\d+(?:,\d+)?\]/]   # Starts with 1 or 2 numbers in square brackets
-        @bitmap = PngAnimatedBitmap.new(path, filename, hue)
+      if numFrames || filename[/^\[\d+(?:,\d+)?\]/]   # Starts with 1 or 2 numbers in square brackets
+        @bitmap = PngAnimatedBitmap.new(path, filename, hue, numFrames: numFrames, delay: delay)
       else
         @bitmap = GifBitmap.new(path, filename, hue)
       end
@@ -40,16 +40,15 @@ class AnimatedBitmap
     attr_accessor :frames
   
     # Creates an animated bitmap from a PNG file.
-    def initialize(dir, filename, hue = 0)
+    def initialize(dir, filename, hue = 0, numFrames: nil, delay: nil)
       @frames       = []
       @currentFrame = 0
       @framecount   = 0
       panorama = RPG::Cache.load_bitmap(dir, filename, hue)
-      if filename[/^\[(\d+)(?:,(\d+))?\]/]   # Starts with 1 or 2 numbers in brackets
+      if numFrames || filename[/^\[(\d+)(?:,(\d+))?\]/]   # Starts with 1 or 2 numbers in brackets
         # File has a frame count
-        numFrames = $1.to_i
-        delay     = $2.to_i
-        delay     = 10 if delay == 0
+        numFrames ||= $1.to_i
+        delay = delay || $2.to_i || 10
         raise "Invalid frame count in #{filename}" if numFrames <= 0
         raise "Invalid frame delay in #{filename}" if delay <= 0
         if panorama.width % numFrames != 0
@@ -222,6 +221,12 @@ class AnimatedBitmap
   def pbGetTileBitmap(filename, tile_id, hue, width = 1, height = 1)
     return RPG::Cache.tileEx(filename, tile_id, hue, width, height) { |f|
       AnimatedBitmap.new("Graphics/Tilesets/" + filename).deanimate
+    }
+  end
+
+  def pbGetAutoTileBitmap(filename, tile_id, hue, width = 1, height = 1)
+    return RPG::Cache.tileEx(filename, tile_id, hue, width, height) { |f|
+      AnimatedBitmap.new("Graphics/Autotiles/" + filename)
     }
   end
   

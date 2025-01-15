@@ -124,16 +124,19 @@ class PokeBattle_Battler
         @battle.eachBattler { |b| b.pbContinualAbilityChecks } # Trace, end primordial weathers
     end
 
-    def pbConfusionDamage(msg, charm = false, superEff = false, basePower = 50)
+    def pbConfusionDamage(msg, superEff = false, basePower = 50, category: 3)
         @damageState.reset
         @damageState.initialHP = @hp
-        confusionMove = if charm
-                            PokeBattle_Charm.new(@battle, nil,
-                          basePower)
-                        else
-                            PokeBattle_Confusion.new(@battle, nil, basePower)
-                        end
+        confusionMove = case category
+        when 0
+            PokeBattle_SelfHitPhysical.new(@battle, nil, basePower)
+        when 1
+            PokeBattle_SelfHitSpecial.new(@battle, nil, basePower)
+        when 3
+            PokeBattle_SelfHit.new(@battle, nil, basePower)
+        end
         confusionMove.calcType = confusionMove.pbCalcType(self) # nil
+        confusionMove.calculateUsageOverrides(self, [self])
         @damageState.typeMod = confusionMove.pbCalcTypeMod(confusionMove.calcType, self, self) # 8
         @damageState.typeMod *= 2.0 if superEff
         confusionMove.pbCheckDamageAbsorption(self, self)
@@ -216,13 +219,7 @@ class PokeBattle_Battler
         # Try to use the move (inc. disobedience)
         @lastMoveFailed = false
         unless pbTryUseMove(move, specialUsage, skipAccuracyCheck)
-            @lastMoveUsed = nil
-            @lastMoveUsedType = nil
-            @lastMoveUsedCategory = -1
-            unless specialUsage
-                @lastRegularMoveUsed = nil
-                @lastRegularMoveTarget = -1
-            end
+            trackMoveUsage
             @battle.pbGainExp # In case self is KO'd due to confusion
             pbCancelMoves
             pbEndTurn(choice)
@@ -239,12 +236,7 @@ class PokeBattle_Battler
         if !specialUsage && !pbReducePP(move)
             @battle.pbDisplay(_INTL("{1} used {2}!", pbThis, move.name))
             @battle.pbDisplay(_INTL("But there was no PP left for the move!"))
-            @lastMoveUsed          = nil
-            @lastMoveUsedType      = nil
-            @lastMoveUsedCategory = -1
-            @lastRegularMoveUsed   = nil
-            @lastRegularMoveTarget = -1
-            @lastMoveFailed        = true
+            trackMoveUsage
             pbCancelMoves
             pbEndTurn(choice)
             return
@@ -292,17 +284,8 @@ class PokeBattle_Battler
         aiSeesMove(move) if pbOwnedByPlayer? && !boss? # Enemy trainers now know of this move's existence
         aiLearnsAbility(:ILLUSION) if hasActiveAbility?(:ILLUSION) && effectActive?(:Illusion)
         increaseMoveUsageCount(move.id)
-        @lastMoveUsed     = move.id
-        @lastMoveUsedType = move.calcType # For Conversion 2
-        @lastMoveUsedCategory = move.calculatedCategory
-        @usedDamagingMove = true if move.damagingMove?
-        unless specialUsage
-            @lastRegularMoveUsed = move.id # For Disable, Encore, Instruct, Mimic, Mirror Move, Sketch, Spite
-            @lastRegularMoveTarget = choice[3] # For Instruct (remembering original target is fine)
-            @movesUsed.push(move.id) unless @movesUsed.include?(move.id) # For Last Resort
-        end
-        @battle.lastMoveUsed = move.id # For Copycat
-        @battle.lastMoveUser = @index # For "self KO" battle clause to avoid draws
+
+        trackMoveUsage(move: move,specialUsage: specialUsage, target: choice[3])
 
         # For Cross Examine and such
         if opposes?
@@ -438,6 +421,7 @@ class PokeBattle_Battler
                 showFailMessages = move.pbShowFailMessages?(targets)
                 unless pbSuccessCheckAgainstTarget(move, user, b, typeMod, showFailMessages)
                     b.damageState.unaffected = true
+                    user.onMoveFailed(move)
                 end
             end
             # Magic Coat/Magic Bounce/Magic Shield checks (for moves which don't target Pokémon)
@@ -648,6 +632,36 @@ class PokeBattle_Battler
 
         moveSucceeded = !user.lastMoveFailed && realNumHits > 0 && !move.snatched && magicCoater < 0
         postMoveUseTriggers(user, move, targets, choice, moveSucceeded)
+    end
+
+    # If move is nil, move usage was failed
+    def trackMoveUsage(move: nil, specialUsage: false, target: nil)
+        if move.nil?
+            @lastMoveUsed = nil
+            @lastMoveUsedType = nil
+            @lastMoveUsedCategory = -1
+
+            unless specialUsage
+                @lastRegularMoveUsed   = nil
+                @lastRegularMoveTarget = -1
+                @lastMoveFailed        = true
+            end
+        else
+            @lastMoveUsed     = move.id
+            @lastMoveUsedType = move.calcType # For Conversion 2
+            @lastMoveUsedCategory = move.calculatedCategory
+            
+            @usedDamagingMove = true if move.damagingMove?
+            unless specialUsage
+                @lastRegularMoveUsed = move.id # For Disable, Encore, Instruct, Mimic, Mirror Move, Sketch, Spite
+                @lastRegularMoveTarget = target # For Instruct (remembering original target is fine)
+                @movesUsed.push(move.id) unless @movesUsed.include?(move.id) # For Last Resort
+            end
+            @battle.lastMoveUsed = move.id # For Copycat
+            @battle.lastMoveUser = @index # For "self KO" battle clause to avoid draws
+        end
+
+        @moveUsageHistory.unshift(move.nil? ? nil : move.id) # Push to front of array
     end
 
     def postMoveUseTriggers(user, move, targets, choice, moveSucceeded)

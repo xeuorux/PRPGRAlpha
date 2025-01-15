@@ -82,6 +82,7 @@ module Compiler
         f.write("Description = #{achievement.real_description}\r\n")
         f.write("Page = #{achievement.page}\r\n")
         f.write("Hidden = true\r\n") if achievement.hidden
+        f.write("DisabledInRandomizer = true\r\n") if achievement.disabled_in_randomizer?
     end
 end
 
@@ -93,6 +94,7 @@ module GameData
         attr_reader :real_description
         attr_reader :hidden
         attr_reader :page
+        attr_reader :disabled_in_randomizer
 
         DATA = {}
         DATA_FILENAME = "achievements.dat"
@@ -101,10 +103,11 @@ module GameData
         include InstanceMethods
 
         SCHEMA = {
-            "Name"         => [:name,        "s"],
-            "Description"  => [:description, "q"],
-            "Page"         => [:page,      "y"],
-            "Hidden"       => [:hidden,      "B"],
+            "Name"                  => [:name,                      "s"],
+            "Description"           => [:description,               "q"],
+            "Page"                  => [:page,                      "y"],
+            "Hidden"                => [:hidden,                    "B"],
+            "DisabledInRandomizer"  => [:disabled_in_randomizer,    "B"],
         }
         
         def initialize(hash)
@@ -114,6 +117,7 @@ module GameData
             @real_description       = hash[:description]  || "???"
             @page                   = hash[:page]         || 0
             @hidden                 = hash[:hidden]       || false
+            @disabled_in_randomizer = hash[:disabled_in_randomizer] || false
             @defined_in_extension   = hash[:defined_in_extension] || false
         end
 
@@ -125,6 +129,10 @@ module GameData
         # @return [String] the translated description of this achievement
         def description
             return pbGetMessageFromHash(MessageTypes::AchievementDescs, @real_description)
+        end
+
+        def disabled_in_randomizer?
+            return @disabled_in_randomizer
         end
 
         def self.each

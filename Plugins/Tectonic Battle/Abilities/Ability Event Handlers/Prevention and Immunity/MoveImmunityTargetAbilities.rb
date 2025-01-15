@@ -250,6 +250,32 @@ BattleHandlers::MoveImmunityTargetAbility.add(:FULLBLUBBER,
   }
 )
 
+BattleHandlers::MoveImmunityTargetAbility.add(:CYNIC,
+  proc { |ability, user, target, _move, type, battle, showMessages, aiCheck|
+      next false if user.index == target.index
+      next false unless %i[FAIRY DRAGON GHOST].include?(type)
+      if showMessages
+          battle.pbShowAbilitySplash(target, ability)
+          battle.pbDisplay(_INTL("It doesn't affect {1}...", target.pbThis(true)))
+          battle.pbHideAbilitySplash(target)
+      end
+      next true
+  }
+)
+
+BattleHandlers::MoveImmunityTargetAbility.add(:RESOLUTE,
+  proc { |ability, user, target, _move, type, battle, showMessages, aiCheck|
+      next false if user.index == target.index
+      next false unless %i[DARK BUG].include?(type)
+      if showMessages
+          battle.pbShowAbilitySplash(target, ability)
+          battle.pbDisplay(_INTL("It doesn't affect {1}...", target.pbThis(true)))
+          battle.pbHideAbilitySplash(target)
+      end
+      next true
+  }
+)
+
 BattleHandlers::MoveImmunityTargetAbility.add(:MUPROTOCOL,
   proc { |ability, user, target, _move, type, battle, showMessages, aiCheck|
       next false if user.index == target.index

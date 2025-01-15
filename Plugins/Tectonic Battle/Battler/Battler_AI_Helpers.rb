@@ -156,6 +156,14 @@ class PokeBattle_Battler
         return false
     end
 
+    def hasBladeMove?
+        eachAIKnownMove do |m|
+            next unless m.bladeMove?
+            return true
+        end
+        return false
+    end
+
     def hasStatusPunishMove?
         return pbHasMoveFunction?("DoubleDamageTargetStatused") # Hex, Cruelty
     end
@@ -260,19 +268,11 @@ class PokeBattle_Battler
     end
 
     def hasUseableHazardMove?
-        eachAIKnownMove do |m|
-            isHazard,hazardType = m.hazardMove?
-            next unless isHazard
-            # TODO: This is terrible, rework ASAP
-            next if hazardType == 1 && pbOpposingSide.effectActive?(:StealthRock)
-            next if hazardType == 2 && pbOpposingSide.countEffect(:Spikes) == 3
-            next if hazardType == 3 && pbOpposingSide.effectActive?(:FeatherWard)
-            next if hazardType == 4 && pbOpposingSide.effectActive?(:StickyWeb)
-            next if hazardType == 5 && pbOpposingSide.countEffect(:PoisonSpikes) == 2
-            next if hazardType == 6 && pbOpposingSide.countEffect(:FlameSpikes) == 2
-            next if hazardType == 7 && pbOpposingSide.countEffect(:FrostSpikes) == 2
-            uSHM = true if m.statusMove?
-            return true,uSHM
+        eachAIKnownMoveWithIndex do |move, i|
+            next unless move.hazardMove?
+            next unless @battle.pbCanChooseMove?(index, i, false)
+            next if @battle.battleAI.aiPredictsFailure?(move, self, self)
+            return true, move.statusMove?
         end
         return false
     end

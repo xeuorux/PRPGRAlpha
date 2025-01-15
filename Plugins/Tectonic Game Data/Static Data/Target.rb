@@ -72,9 +72,9 @@ module GameData
           return _INTL(@targeting_label) if @targeting_label
           if targets_all
             return _INTL("All")
-          elsif @num_targets > 1
+          elsif spread?
             return _INTL("Each")
-          elsif @num_targets == 1
+          elsif single_target?
             return _INTL("One")
           elsif @targets_user
             return _INTL("User")
@@ -82,8 +82,16 @@ module GameData
           return _INTL("Error")
       end
 
+      def single_target?
+        return @num_targets  == 1
+      end
+
       def spread?
         return @num_targets > 1
+      end
+
+      def no_targets?
+        return @num_targets == 0
       end
   end
 end
@@ -236,6 +244,7 @@ GameData::Target.register({
   :id_number        => 40,
   :name             => _INTL("User Side"),
   :affects_user_side => true,
+  :targeting_label  => "Side",
 })
 
 # Entry hazards
@@ -244,6 +253,7 @@ GameData::Target.register({
   :id_number        => 80,
   :name             => _INTL("Foe Side"),
   :affects_foe_side => true,
+  :targeting_label  => "Side",
 })
 
 GameData::Target.register({

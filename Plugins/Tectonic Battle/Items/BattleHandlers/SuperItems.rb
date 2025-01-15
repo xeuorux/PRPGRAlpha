@@ -201,7 +201,7 @@ BattleHandlers::WeatherExtenderItem.copy(:SMOOTHROCK,:SMOOTHSASH)
 # Death Orb
 BattleHandlers::DamageCalcUserItem.add(:DEATHORB,
   proc { |item,user,target,move,mults,baseDmg,type,aiCheck|
-    if !move.is_a?(PokeBattle_Confusion)
+    if !move.is_a?(PokeBattle_SelfHit)
       mults[:final_damage_multiplier] *= 1.3
     end
   }

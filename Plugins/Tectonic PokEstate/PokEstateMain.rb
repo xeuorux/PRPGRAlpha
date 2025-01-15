@@ -437,19 +437,15 @@ class PokEstate
 		cmdTake = -1
 		cmdInteract = -1
 		cmdUseItem = -1
-		cmdRename = -1
-		cmdEvolve = -1
+		cmdModify = -1
 		cmdCancel = -1
-		cmdStyle = -1
+
 		commands[cmdInteract = commands.length] = _INTL("Interact")
-		commands[cmdTake = commands.length] = _INTL("Take") unless donationBox
-		commands[cmdSummary = commands.length] = _INTL("View Summary")
-		commands[cmdRename = commands.length] = _INTL("Rename") unless donationBox
-		commands[cmdUseItem = commands.length] = _INTL("Use Item") unless donationBox
-		newspecies = pokemon.check_evolution_on_level_up(false)
-		commands[cmdEvolve = commands.length]       = _INTL("Evolve") if newspecies
-		commands[cmdStyle = commands.length]  = _INTL("Set Style") if pbHasItem?(:STYLINGKIT)
-		commands[cmdCancel = commands.length] = _INTL("Cancel")
+		commands[cmdTake = commands.length] 	= _INTL("Take") unless donationBox
+		commands[cmdSummary = commands.length] 	= _INTL("View Summary")
+		commands[cmdUseItem = commands.length] 	= _INTL("Use Item") unless donationBox
+		commands[cmdModify = commands.length]	= _INTL("Modify") unless donationBox
+		commands[cmdCancel = commands.length] 	= _INTL("Cancel")
 		command = 0
 
 		species = pokemon.species
@@ -463,15 +459,6 @@ class PokEstate
 					screen = PokemonSummaryScreen.new(scene)
 					screen.pbStartSingleScreen(pokemon)
 				}
-			elsif cmdRename > -1 && command == cmdRename
-				currentName = pokemon.name
-				pbTextEntry("#{currentName}'s nickname?",0,Pokemon::MAX_NAME_SIZE,5)
-				if pbGet(5)=="" || pbGet(5) == currentName
-				  pokemon.name = currentName
-				else
-				  pokemon.name = pbGet(5)
-				end
-				convertEventToPokemon(eventCalling,pokemon)
 			elsif cmdTake > -1 && command == cmdTake
 				if $Trainer.party_full?
 					pbPlayDecisionSE
@@ -517,24 +504,68 @@ class PokEstate
 					convertEventToPokemon(eventCalling,pokemon)
 					break
 				end
-			elsif cmdEvolve > -1 && command == cmdEvolve
-				newspecies = pokemon.check_evolution_on_level_up(true)
-				break if newspecies.nil?
-				pbFadeOutInWithMusic do
-					evo = PokemonEvolutionScene.new
-					evo.pbStartScreen(pokemon, newspecies)
-					evo.pbEvolution
-					evo.pbEndScreen
-					convertEventToPokemon(eventCalling,pokemon)
-					eventCalling.turn_toward_player
-					break
-				end
-			elsif cmdStyle >= 0 && command == cmdStyle
-				pbStyleValueScreen(pokemon)
+			elsif cmdModify > -1 && command == cmdModify
+				break if modifyCommandMenu(eventCalling,pokemon,donationBox)
 			elsif cmdCancel > -1 && command == cmdCancel
 				break
 			end
 		end
+	end
+
+	# Return whether to exit the interaction menu
+	def modifyCommandMenu(eventCalling,pokemon,donationBox=false)
+		commands   = []
+		cmdRename  = -1
+		cmdSwapPokeBall = -1
+		cmdEvolve  = -1
+		cmdStyle = -1
+		cmdOmnitutor = -1
+		cmdCancel = -1
+
+		commands[cmdRename = commands.length] 	= _INTL("Rename") unless donationBox
+		commands[cmdSwapPokeBall = commands.length]   = _INTL("Swap Ball")
+		newspecies = pokemon.check_evolution_on_level_up(false)
+		commands[cmdEvolve = commands.length]   = _INTL("Evolve") if newspecies
+		commands[cmdStyle = commands.length]  	= _INTL("Set Style") if pbHasItem?(:STYLINGKIT)
+
+		if $PokemonGlobal.omnitutor_active && !getOmniMoves(pokemon).empty?
+			commands[cmdOmnitutor = commands.length]	= _INTL("OmniTutor")
+		end
+		commands[cmdCancel = commands.length] = _INTL("Cancel")
+
+		modifyCommand = 0
+		modifyCommand = pbMessage(_INTL("Do what with {1}?", pokemon.name),commands,commands.length,nil,modifyCommand)
+		if cmdRename > -1 && modifyCommand == cmdRename
+			currentName = pokemon.name
+			pbTextEntry("#{currentName}'s nickname?",0,Pokemon::MAX_NAME_SIZE,5)
+			if pbGet(5)=="" || pbGet(5) == currentName
+			  pokemon.name = currentName
+			else
+			  pokemon.name = pbGet(5)
+			end
+			convertEventToPokemon(eventCalling,pokemon)
+		elsif cmdSwapPokeBall >= 0 && modifyCommand == cmdSwapPokeBall
+			pokemon.switchBall
+		elsif cmdEvolve > -1 && modifyCommand == cmdEvolve
+			newspecies = pokemon.check_evolution_on_level_up(true)
+			return true if newspecies.nil?
+			pbFadeOutInWithMusic do
+				evo = PokemonEvolutionScene.new
+				evo.pbStartScreen(pokemon, newspecies)
+				evo.pbEvolution
+				evo.pbEndScreen
+				convertEventToPokemon(eventCalling,pokemon)
+				eventCalling.turn_toward_player
+				return true
+			end
+		elsif cmdStyle >= 0 && modifyCommand == cmdStyle
+			pbStyleValueScreen(pokemon)
+		elsif cmdOmnitutor >= 0 && modifyCommand == cmdOmnitutor
+			omniTutorScreen(pokemon)
+		elsif cmdCancel > -1 && modifyCommand == cmdCancel
+			return true
+		end
+		return false
 	end
 	
 	def beginWandering(page,pokemon,stepAnimation=false)

@@ -1082,11 +1082,7 @@ BattleHandlers::AbilityOnSwitchIn.add(:LASTGASP,
     next 0 if aiCheck
     battler.showMyAbilitySplash(ability)
     battler.applyEffect(:LastGasp)
-    if battler.boss?
-      battler.applyEffect(:PerishSong, 12)
-    else
-      battler.applyEffect(:PerishSong, 3)
-    end
+    battler.applyEffect(:PerishSong, 3)
     battler.hideMyAbilitySplash
   }
 )

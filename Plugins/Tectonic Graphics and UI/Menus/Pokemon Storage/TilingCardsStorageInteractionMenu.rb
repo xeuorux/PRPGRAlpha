@@ -253,6 +253,7 @@ class TilingCardsStorageInteractionMenu_Scene < TilingCardsMenu_Scene
     def modifyCommandMenu
 		commands   = []
 		cmdRename  = -1
+		cmdSwapPokeBall = -1
 		cmdEvolve  = -1
 		cmdStyle = -1
 		cmdOmnitutor = -1
@@ -262,10 +263,11 @@ class TilingCardsStorageInteractionMenu_Scene < TilingCardsMenu_Scene
 		if $PokemonGlobal.omnitutor_active && !getOmniMoves(@pkmn).empty?
 			commands[cmdOmnitutor = commands.length]	= _INTL("OmniTutor")
 		end
-		commands[cmdRename = commands.length]       = _INTL("Rename")
+		commands[cmdRename = commands.length]       	= _INTL("Rename")
+		commands[cmdSwapPokeBall = commands.length]   = _INTL("Swap Ball")
 		newspecies = @pkmn.check_evolution_on_level_up(false)
-		commands[cmdEvolve = commands.length]       = _INTL("Evolve") if newspecies
-		commands[commands.length]                   = _INTL("Cancel")
+		commands[cmdEvolve = commands.length]       	= _INTL("Evolve") if newspecies
+		commands[commands.length]                   	= _INTL("Cancel")
 		modifyCommand = pbShowCommands(_INTL("Do what with {1}?",@pkmn.name),commands)
 		if cmdRename >= 0 && modifyCommand == cmdRename
 			currentName = @pkmn.name
@@ -275,6 +277,8 @@ class TilingCardsStorageInteractionMenu_Scene < TilingCardsMenu_Scene
 			else
 				@pkmn.name = pbGet(5)
 			end
+		elsif cmdSwapPokeBall >= 0 && modifyCommand == cmdSwapPokeBall
+			@pkmn.switchBall
 		elsif cmdEvolve >= 0 && modifyCommand == cmdEvolve
 			newspecies = @pkmn.check_evolution_on_level_up(true)
 			return false if newspecies.nil?

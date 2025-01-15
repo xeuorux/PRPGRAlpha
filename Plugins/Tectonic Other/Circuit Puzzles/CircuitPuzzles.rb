@@ -11,7 +11,7 @@ def circuitPuzzle(circuitPuzzleID)
         }
         return ret
     else
-        pbMessageDisplay(_INTL("Circuit puzzle with ID #{circuitPuzzleID} not found. Aborting."))
+        pbMessage(_INTL("Circuit puzzle with ID #{circuitPuzzleID} not found. Aborting."))
     end
 end
 

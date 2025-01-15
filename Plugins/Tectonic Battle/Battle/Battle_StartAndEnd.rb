@@ -262,6 +262,8 @@ class PokeBattle_Battle
     # Start a battle
     #=============================================================================
     def pbStartBattle
+        $battle = self
+
         # Spit out lots of debug information
         PBDebug.log("")
         PBDebug.log("******************************************")
@@ -346,6 +348,7 @@ class PokeBattle_Battle
         # Return the speaker box to being visible if it was hidden by the battle
         showSpeaker if reshowSpeakerWindow
 
+        $battle = nil
         return @decision
     end
 
@@ -363,6 +366,16 @@ class PokeBattle_Battle
         @scene.pbStartBattle(self)
         # Show trainers on both sides sending out Pokémon
         pbStartBattleSendOut(sendOuts) unless @autoTesting
+        # Coloration differences tutorial
+        if $PokemonSystem.color_shifts == 0 && !$PokemonGlobal.colorationDifferencesTutorialized
+            eachOtherSideBattler do |b|
+                totalColorationDiff = b.pokemon.hueShift.abs + (b.pokemon.shadeShift.abs) / 4
+                echoln("Total coloration diff: #{totalColorationDiff}")
+                next unless totalColorationDiff >= 16
+                playColorationDifferencesTutorial
+                break
+            end
+        end
         # Curses apply if at all
         if @opponent && $PokemonGlobal.tarot_amulet_active
             @statItemsAreMetagameRevealed = false

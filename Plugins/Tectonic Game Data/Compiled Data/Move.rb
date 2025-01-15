@@ -173,6 +173,7 @@ module GameData
         return false if @primeval
         return false if @zmove
         return false if avatarSignature?
+        return false if @id == :STRUGGLE
         return true
       end
 

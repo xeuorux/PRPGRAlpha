@@ -162,7 +162,7 @@ class PokeBattle_Battle
             damageDealt = damageFromDOTStatus(b, :POISON)
 
             # Venom Gorger
-            if b.getStatusCount(:POISON) % POISON_DOUBLING_TURNS == 0
+            if b.getStatusCount(:POISON) % POISON_DOUBLING_TURNS == 0 && !b.fainted?
                 b.eachOpposing do |opposingB|
                     next unless opposingB.hasActiveAbility?(:VENOMGORGER)
                     healingMessage = _INTL("{1} slurped up venom leaking from #{b.pbThis(true)}.", opposingB.pbThis)

@@ -844,7 +844,9 @@ class PokemonSummary_Scene
             ability_base   = MessageConfig.pbDefaultTextMainColor
             ability_shadow = MessageConfig.pbDefaultTextShadowColor
             textpos.push([ability.name, 138, 278, 0, ability_base, ability_shadow])
-            drawTextEx(overlay, 8, 320, Graphics.width, 2, ability.description, ability_base, ability_shadow)
+
+            abilityDescription = addBattleKeywordHighlighting(ability.description)
+            drawFormattedTextEx(overlay, 8, 320, Graphics.width, abilityDescription, ability_base, ability_shadow)
         end
         # Draw all text
         pbDrawTextPositions(overlay, textpos)
@@ -1417,8 +1419,8 @@ class PokemonSummary_Scene
         ability = @pokemon.ability
         if ability
             textpos.push([ability.name, 138, 278, 0, MessageConfig::DARK_TEXT_MAIN_COLOR, MessageConfig::DARK_TEXT_SHADOW_COLOR])
-            drawTextEx(overlay, 8, 320, Graphics.width - 12, 2, ability.description, MessageConfig::DARK_TEXT_MAIN_COLOR,
-  MessageConfig::DARK_TEXT_SHADOW_COLOR)
+            abilityDescription = addBattleKeywordHighlighting(ability.description)
+            drawFormattedTextEx(overlay, 8, 320, Graphics.width - 12, abilityDescription, MessageConfig::DARK_TEXT_MAIN_COLOR, MessageConfig::DARK_TEXT_SHADOW_COLOR)
         end
         # Draw Pokémon's type icon(s)
         type1_number = GameData::Type.get(@pokemon.type1).id_number

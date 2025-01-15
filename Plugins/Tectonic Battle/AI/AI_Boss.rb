@@ -8,6 +8,8 @@ class PokeBattle_AI_Boss
     DEFAULT_BOSS_AGGRESSION = 2
     MAX_BOSS_AGGRESSION = 8
 
+    def useUniversalBehaviours?; return true; end
+
     def initialize(_user, _battle)
         # Always or never use a move (if possible)
         # Arrays of moves
@@ -78,7 +80,7 @@ class PokeBattle_AI_Boss
         # Arrays of condition procs, that can evaluate multiple moves
         @scoreMoves = {}
 
-        setUniversalBehaviours
+        setUniversalBehaviours if useUniversalBehaviours?
     end
 
     def self.from_boss_battler(battler)

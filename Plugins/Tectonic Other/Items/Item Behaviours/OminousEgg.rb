@@ -2,7 +2,7 @@ TRAINERS_PERFECTED_GLOBAL_VAR = 79
 
 GlobalStateHandlers::GlobalVariableChanged.add(TRAINERS_PERFECTED_GLOBAL_VAR,
     proc { |variableID, value|
-        if pbHasItem?(:OMINOUSEGG)
+        if $PokemonBag && pbHasItem?(:OMINOUSEGG)
             checkForOminousEggRewards
         end
     }
@@ -19,22 +19,22 @@ def checkForOminousEggRewards
     value = getGlobalVariable(TRAINERS_PERFECTED_GLOBAL_VAR)
     rewards = []
 
-    if value >= 20 && stage == 0
+    if value >= 25 && stage == 0
         rewards.push(:LIFEORB)
         $PokemonGlobal.ominous_egg_stage += 1
     end
 
-    if value >= 40 && stage == 1
+    if value >= 50 && stage == 1
         rewards.push(:MASTERBALL)
         $PokemonGlobal.ominous_egg_stage += 1
     end
 
-    if value >= 60 && stage == 2
+    if value >= 75 && stage == 2
         rewards.push(:RELICSTATUE)
         $PokemonGlobal.ominous_egg_stage += 1
     end
 
-    if value >= 80 && stage == 3
+    if value >= 100 && stage == 3
         rewards.push(:SHINYCHARM)
         $PokemonGlobal.ominous_egg_stage += 1
     end

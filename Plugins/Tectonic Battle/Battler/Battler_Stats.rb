@@ -307,6 +307,15 @@ class PokeBattle_Battler
             speedMult /= 2 if shouldAbilityApply?(:CLEANFREAK, aiCheck)
         end
 
+        # Waterlog
+        waterlogRelevant = waterlogged?
+        waterlogRelevant = false if afterSwitching && hasActiveAbilityAI?(:NATURALCURE)
+        if waterlogRelevant
+            speedMult /= 2
+            speedMult /= 2 if pbOwnedByPlayer? && @battle.curseActive?(:CURSE_STATUS_DOUBLED)
+            speedMult /= 2 if shouldAbilityApply?(:CLEANFREAK, aiCheck)
+        end
+
         speedMult *= applySpeedTriggers(move,true) if aiCheck
 
         # Calculation

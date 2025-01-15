@@ -77,16 +77,35 @@ Events.OnTalkToFollower += proc {|pkmn,event,random_val|
     $scene.spriteset.addUserAnimation(FollowerSettings::Emo_Normal, event.x, event.y)
     pbWait(72)
     pbMessage(_INTL("{1}'s energy is slowly being leeched away.",pkmn.name))
+  when :WATERLOG
+    $scene.spriteset.addUserAnimation(FollowerSettings::Emo_Normal, event.x, event.y)
+    pbWait(72)
+    pbMessage(_INTL("{1} is soaked through.",pkmn.name))
   end
   next true if pkmn.status != :NONE
 }
 
 Events.OnTalkToFollower += proc {|pkmn,event,random_val|
   if $PokemonGlobal.follower_hold_item
-    items = [:FULLRESTORE,:FULLRESTORE,:ESCAPEROPE,:ESCAPEROPE,
-         :RARECANDY,:RARECANDY,:REPEL,:REPEL,:MAXREPEL,
-         :TINYMUSHROOM,:TINYMUSHROOM,:PEARL,:NUGGET,:BIGMUSHROOM,
-         :POKEBALL,:POKEBALL,:POKEBALL,:GREATBALL,:GREATBALL,:ULTRABALL
+    items = %i[
+      FULLRESTORE
+      FULLRESTORE
+      RARECANDY
+      RARECANDY
+      REPEL
+      REPEL
+      MAXREPEL
+      TINYMUSHROOM
+      TINYMUSHROOM
+      PEARL
+      NUGGET
+      BIGMUSHROOM
+      POKEBALL
+      POKEBALL
+      POKEBALL
+      GREATBALL
+      GREATBALL
+      ULTRABALL
     ]
     # If no message or quantity is specified the default message is used and the quantity of item is 1
     next true if pbPokemonFound(items[rand(items.length)])

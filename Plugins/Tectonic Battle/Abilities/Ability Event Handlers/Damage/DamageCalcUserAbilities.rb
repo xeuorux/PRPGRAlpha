@@ -78,6 +78,15 @@ BattleHandlers::DamageCalcUserAbility.add(:HOOLIGAN,
   }
 )
 
+BattleHandlers::DamageCalcUserAbility.add(:STONEMANE,
+  proc { |ability, user, target, move, mults, _baseDmg, type, aiCheck|
+    if move.recoilMove?
+      mults[:base_damage_multiplier] *= 1.2
+      user.aiLearnsAbility(ability) unless aiCheck
+    end
+  }
+)
+
 BattleHandlers::DamageCalcUserAbility.add(:STRONGJAW,
   proc { |ability, user, target, move, mults, _baseDmg, type, aiCheck|
     if move.bitingMove?
@@ -735,5 +744,21 @@ BattleHandlers::DamageCalcUserAbility.add(:CLEANFREAK,
   proc { |ability, user, target, move, mults, _baseDmg, type, aiCheck|
       mults[:attack_multiplier] *= 1.5 if user.pbHasAnyStatus?
       user.aiLearnsAbility(ability) unless aiCheck
+  }
+)
+
+BattleHandlers::DamageCalcUserAbility.add(:PUFFUP,
+  proc { |ability, user, target, move, mults, _baseDmg, type, aiCheck|
+      mults[:attack_multiplier] *= 1 + (0.25 * user.countEffect(:Stockpile))
+      user.aiLearnsAbility(ability) unless aiCheck
+  }
+)
+
+BattleHandlers::DamageCalcUserAbility.add(:WREAKHAVOC,
+  proc { |ability, user, target, move, mults, _baseDmg, type, aiCheck|
+    if move.rampagingMove?
+      mults[:base_damage_multiplier] *= 1.3
+      user.aiLearnsAbility(ability) unless aiCheck
+    end
   }
 )

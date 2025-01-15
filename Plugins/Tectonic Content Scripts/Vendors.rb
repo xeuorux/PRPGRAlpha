@@ -22,13 +22,13 @@ def basicPokeMart
 end
 
 def rangerMart
-    setPrice(:SITRUSBERRY,200)
+    setPrice(:SITRUSBERRY,2000)
     if vipCardActive?
         message = _INTL("You a big shot, huh? Well, we're here to supply you.")
     else
         message = _INTL("Get your supplies here!")
     end
-    pbPokemonMart(martStock,)
+    pbPokemonMart(martStock,message)
 end
 
 ######################################################
@@ -682,29 +682,21 @@ def weirdBallsVendor
 	)
 end
 
-def evoStoneVendor(expanded = false)
+def evoStoneVendor
 	stock = %i[
 		FIRESTONE
 		THUNDERSTONE
 		WATERSTONE
 		LEAFSTONE
+		ICESTONE
 		DAWNSTONE
 		DUSKSTONE
-		MOONSTONE
-		SUNSTONE
-		ICESTONE
-	]
-
-	expandedStock = %i[
 		SHINYSTONE
+		SUNSTONE
+		MOONSTONE
 	]
-	stock = expandedStock.concat(stock) if expanded
 
-	if expanded
-		message = _INTL("How can we help to empower your Pokemon?")
-	else
-		message = _INTL("Regrettably, you are restricted from purchasing any Shiny Stones. Otherwise, how may I serve you?")
-	end
+	message = _INTL("How can we help to empower your Pokemon?")
 
 	pbPokemonMart(
 		stock,
@@ -724,6 +716,7 @@ def berryVendor
 	setPrice(:PECHABERRY,500)
 	setPrice(:PERSIMBERRY,500)
 	setPrice(:CHERIBERRY,500)
+	setPrice(:BELUEBERRY,500)
 	setPrice(:CHESTOBERRY,500)
 	setPrice(:SPELONBERRY,500)
 
@@ -734,7 +727,7 @@ def berryVendor
 		RAWSTBERRY ASPEARBERRY
 		PECHABERRY
 		PERSIMBERRY
-		CHERIBERRY
+		CHERIBERRY BELUEBERRY
 		CHESTOBERRY
 		SPELONBERRY
 	]
@@ -851,6 +844,7 @@ def statusTMVendor()
 		TMIGNITE
 		TMCHILL
 		TMNUMB
+		TMWATERLOG
 		TMLEECHSEED
 		TMCONFUSERAY
 	]

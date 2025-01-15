@@ -175,7 +175,7 @@ class PokeBattle_Move
         end
         # Other effects, inc. ones that set accuracy_multiplier or evasion_step to
         # specific values
-        modifiers[:accuracy_multiplier] *= 2.0 if @battle.field.effectActive?(:Gravity)
+        modifiers[:accuracy_multiplier] *= 2.0 if @battle.gravityIntensified?
         modifiers[:accuracy_multiplier] *= 1.5 if user.effectActive?(:Spotting)
 
         if aiCheck
@@ -292,9 +292,7 @@ class PokeBattle_Move
         elsif highCriticalRate?
             c += 1
         end
-        c += user.effects[:FocusEnergy]
-        c += 1 if user.effectActive?(:LuckyStar)
-        c += 1 if user.inHyperMode? && @calcType == :SHADOW
+        c += user.effects[:RaisedCritChance]
 
         return c
     end
@@ -308,6 +306,7 @@ class PokeBattle_Move
     end
 
     def guaranteedCrit?(user, target)
+        return true if target.effectActive?(:Jinxed)
         return true if user.effectActive?(:LaserFocus) || user.effectActive?(:EmpoweredLaserFocus)
         return true if user.effectActive?(:LuckyCheer)
         return true if pbCriticalOverride(user, target) > 0

@@ -509,11 +509,17 @@ BattleHandlers::UserAbilityEndOfMove.add(:HYBRIDFIGHTER,
         break
       end
       next unless hitAnything
-      next unless user.lastRoundMove
       
-      previousMove = battle.getBattleMoveInstanceFromID(user.lastRoundMove)
-      currentMove = battle.getBattleMoveInstanceFromID(user.lastMoveUsed)
-      if previousMove.kickingMove? && currentMove.bitingMove?
+      previousMoveID = user.moveUsageHistory[1] || nil
+      currentMoveID = user.moveUsageHistory[0] || nil
+
+      next if currentMoveID.nil?
+      next if previousMoveID.nil?
+      
+      previousMoveData = battle.getBattleMoveInstanceFromID(previousMoveID)
+      currentMoveData = battle.getBattleMoveInstanceFromID(currentMoveID)
+
+      if previousMoveData.kickingMove? && currentMoveData.bitingMove?
         user.showMyAbilitySplash(ability)
         if user.fullHealth?
           battle.pbDisplay(_INTL("{1}'s HP is full!", user.pbThis))
@@ -521,25 +527,29 @@ BattleHandlers::UserAbilityEndOfMove.add(:HYBRIDFIGHTER,
           user.applyFractionalHealing(1.0/4.0)
         end
         user.hideMyAbilitySplash
-      elsif previousMove.punchingMove? && currentMove.kickingMove?
+      elsif previousMoveData.punchingMove? && currentMoveData.kickingMove?
         user.showMyAbilitySplash(ability)
         move.switchOutUser(user,switchedBattlers)
         user.hideMyAbilitySplash
-      elsif previousMove.bitingMove? && currentMove.punchingMove?
+      elsif previousMoveData.bitingMove? && currentMoveData.punchingMove?
         targets.each do |target|
           target.pbLowerMultipleStatSteps(ATTACKING_STATS_2, user, ability: ability)
         end
-      elsif previousMove.bitingMove? && currentMove.kickingMove?
+      elsif previousMoveData.bitingMove? && currentMoveData.kickingMove?
         user.tryRaiseStat(:SPEED, user, increment: 2, ability: ability)
-      elsif previousMove.kickingMove? && currentMove.punchingMove?
+      elsif previousMoveData.kickingMove? && currentMoveData.punchingMove?
         user.showMyAbilitySplash(ability)
         targets.each do |target|
           target.applyNumb if target.canNumb?(user, true)
         end
         user.hideMyAbilitySplash
-      elsif previousMove.punchingMove? && currentMove.bitingMove?
+      elsif previousMoveData.punchingMove? && currentMoveData.bitingMove?
         user.showMyAbilitySplash(ability)
-        user.applyEffect(:Charge)
+        if user.effectActive?(:Charge)
+          battle.pbDisplay(_INTL("But {1} is already charged...", user.pbThis(true)))
+        else
+          user.applyEffect(:Charge)
+        end
         user.hideMyAbilitySplash
       end
   }
@@ -559,5 +569,18 @@ BattleHandlers::UserAbilityEndOfMove.add(:SUDDENTURN,
     end
     next unless hitAnything
     battle.forceUseMove(user, :RAPIDSPIN, moveUsageEffect: :SuddenTurn, ability: ability)
+  }
+)
+
+BattleHandlers::UserAbilityEndOfMove.add(:OFFENSIVE,
+  proc { |ability, user, targets, move, battle, switchedBattlers|
+    next if battle.futureSight
+    next unless move.damagingMove?
+    next unless user.firstTurn?
+    targets.each do |b|
+      next if b.fainted?
+      next if b.damageState.calcDamage == 0 || b.damageState.substitute
+      b.pbFlinch
+    end
   }
 )

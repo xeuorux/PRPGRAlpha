@@ -8,6 +8,11 @@ TRI_ISLAND_VISITED_SWITCH = 332
 BATTLE_MONUMENT_VISITED_SWITCH = 333
 SPIRIT_ATOLL_VISITED_SWITCH = 334
 
+BLUSTERY_BOSK_VISITED_SWITCH = 335
+STORM_SOUND_VISITED_SWITCH = 336
+FIELD_OF_SPIRES_VISITED_SWITCH = 337
+SHIMMER_HAVEN_VISITED_SWITCH = 338
+
 Events.onMapLoadIn += proc { |_sender,_e|
     mapID = $game_map.map_id
 
@@ -30,5 +35,13 @@ Events.onMapLoadIn += proc { |_sender,_e|
         setGlobalSwitch(BATTLE_MONUMENT_VISITED_SWITCH)
     when 182, 375, 419, 420, 421
         setGlobalSwitch(SPIRIT_ATOLL_VISITED_SWITCH)
+    when 180
+        setGlobalSwitch(BLUSTERY_BOSK_VISITED_SWITCH)
+    when 264
+        setGlobalSwitch(STORM_SOUND_VISITED_SWITCH)
+    when 192
+        setGlobalSwitch(FIELD_OF_SPIRES_VISITED_SWITCH)
+    when 425
+        setGlobalSwitch(SHIMMER_HAVEN_VISITED_SWITCH)
     end
 }

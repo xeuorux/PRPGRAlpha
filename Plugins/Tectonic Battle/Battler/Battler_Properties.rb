@@ -6,7 +6,7 @@ class PokeBattle_Battler
 
     # Trackers
     attr_accessor  :participants, :lastAttacker, :lastFoeAttacker, :lastHPLost, :lastHPLostFromFoe
-    attr_accessor  :lastMoveUsed, :lastMoveUsedType, :lastMoveUsedCategory
+    attr_accessor  :lastMoveUsed, :lastMoveUsedType, :lastMoveUsedCategory, :moveUsageHistory # All moves used, in order
     attr_accessor  :lastRoundMove, :lastRoundMoveType, :lastRoundMoveCategory
     attr_accessor  :lastRegularMoveUsed, :lastRegularMoveTarget, :usedDamagingMove
     attr_accessor  :lastRoundMoved, :lastMoveFailed, :lastRoundMoveFailed, :movesUsed, :currentMove
@@ -266,7 +266,7 @@ class PokeBattle_Battler
         @effects[:Refurbished].times do
             ret /= 2.0
         end
-        ret *= 2 if effectActive?(:WarpingCore)
+        ret *= 2 if @battle.field.effectActive?(:WarpingCore)
         ret = ret.round
         ret = 1 if ret < 1
         unless @battle.moldBreaker

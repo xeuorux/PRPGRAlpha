@@ -14,9 +14,9 @@ class PokeBattle_UnimplementedMove < PokeBattle_Move
 end
 
 #===============================================================================
-# Pseudomove for confusion damage.
+# Pseudomove parent for self-hit damage.
 #===============================================================================
-class PokeBattle_Confusion < PokeBattle_Move
+class PokeBattle_SelfHit < PokeBattle_Move
     def initialize(battle, move, basePower = 50)
         @battle     = battle
         @realMove   = move
@@ -25,7 +25,7 @@ class PokeBattle_Confusion < PokeBattle_Move
         @function   = "Basic"
         @baseDamage = basePower
         @type       = nil
-        @category   = 0
+        @category   = 4 # Adaptive
         @accuracy   = 100
         @pp         = -1
         @target     = 0
@@ -37,38 +37,33 @@ class PokeBattle_Confusion < PokeBattle_Move
         @snatched   = false
     end
 
-    def physicalMove?(_thisType = nil);    return true;  end
-    def specialMove?(_thisType = nil);     return false; end
     def pbCriticalOverride(_user, _target); return -1; end
 end
 
 #===============================================================================
-# Pseudomove for charm damage.
+# Pseudomove for physical self-hit damage.
 #===============================================================================
-class PokeBattle_Charm < PokeBattle_Move
+class PokeBattle_SelfHitPhysical < PokeBattle_SelfHit
     def initialize(battle, move, basePower = 50)
-        @battle     = battle
-        @realMove   = move
-        @id         = 0
-        @name       = ""
-        @function   = "Basic"
-        @baseDamage = basePower
-        @type       = nil
+        super
+        @category   = 0
+    end
+
+    def physicalMove?(_thisType = nil);    return true;  end
+    def specialMove?(_thisType = nil);     return false; end
+end
+
+#===============================================================================
+# Pseudomove for special self-hit damage.
+#===============================================================================
+class PokeBattle_SelfHitSpecial < PokeBattle_SelfHit
+    def initialize(battle, move, basePower = 50)
+        super
         @category   = 1
-        @accuracy   = 100
-        @pp         = -1
-        @target     = 0
-        @priority   = 0
-        @flags      = ""
-        @effectChance = 0
-        @calcType   = nil
-        @powerBoost = false
-        @snatched   = false
     end
 
     def physicalMove?(_thisType = nil);    return false; end
     def specialMove?(_thisType = nil);     return true; end
-    def pbCriticalOverride(_user, _target); return -1; end
 end
 
 #===============================================================================
@@ -157,6 +152,9 @@ class PokeBattle_PoisonMove < PokeBattle_Move
     end
 end
 
+#===============================================================================
+# Numbs the target.
+#===============================================================================
 class PokeBattle_NumbMove < PokeBattle_Move
     def pbFailsAgainstTarget?(user, target, show_message)
         return false if damagingMove?
@@ -276,6 +274,31 @@ class PokeBattle_LeechMove < PokeBattle_Move
 
     def getTargetAffectingEffectScore(user, target)
         return getLeechEffectScore(user, target)
+    end
+end
+
+#===============================================================================
+# Waterlogs the target
+#===============================================================================
+class PokeBattle_WaterlogMove < PokeBattle_Move
+    def pbFailsAgainstTarget?(user, target, show_message)
+        return false if damagingMove?
+        return !target.canWaterlog?(user, show_message, self)
+    end
+
+    def pbEffectAgainstTarget(_user, target)
+        return if damagingMove?
+        target.applyWaterlog
+    end
+
+    def pbAdditionalEffect(user, target)
+        return if target.damageState.substitute
+        return unless target.canWaterlog?(user, guaranteedEffect?, self)
+        target.applyWaterlog
+    end
+
+    def getTargetAffectingEffectScore(user, target)
+        return getWaterlogEffectScore(user, target)
     end
 end
 
@@ -623,6 +646,8 @@ class PokeBattle_HealingMove < PokeBattle_Move
     def healingMove?; return true; end
     def healRatio(_user); return 0.0; end # A float value representing the percent HP heal
 
+    def canOverheal?(user); return false; end
+
     def pbMoveFailed?(user, _targets, show_message)
         if user.fullHealth?
             @battle.pbDisplay(_INTL("{1}'s HP is full!", user.pbThis)) if show_message
@@ -632,7 +657,7 @@ class PokeBattle_HealingMove < PokeBattle_Move
     end
 
     def pbEffectGeneral(user)
-        user.applyFractionalHealing(healRatio(user)) unless user.fainted?
+        user.applyFractionalHealing(healRatio(user), canOverheal: canOverheal?(user)) unless user.fainted?
     end
 
     def getEffectScore(user, target)

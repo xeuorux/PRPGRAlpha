@@ -1,6 +1,5 @@
 MOVE_RENAMES =
 {
-	:CHARM => :POUT,
 	:ROCKSMASH => :SMASH,
 	:SMARTSTRIKE => :SMARTHORN,
 	:SWEETKISS => :ANGELSKISS,
@@ -193,23 +192,40 @@ def createChangeLog(generationNumber = nil,fileName = "Changelogs/changelog.txt"
 			
 			newMovesLearned = newSpeciesData.learnable_moves
 			
-			cutMoves = []
+			removedMoves = [] # Still in the game, but no longer on this mon
+			cutMoves = [] # Cut from the game
 
 			oldMovesLearned.each do |oldMove|
 				moveRename = MOVE_RENAMES[oldMove] || oldMove
 				next if newMovesLearned.include?(moveRename)
-				next if GameData::Move.get(moveRename).cut
-				cutMoves.push(oldMove)
+				if GameData::Move.get(moveRename).cut
+					cutMoves.push(oldMove)
+				else
+					removedMoves.push(oldMove)
+				end
 			end
 			
+			if removedMoves.length > 0
+				str = "No Longer Learns Move#{removedMoves.length > 1 ? "s" : ""}: "
+				removedMoves.each_with_index do |move,index|
+					str += GameData::Move.get(move).real_name
+					if index != removedMoves.length - 1
+						str += ", "
+					end
+				end
+				changeLog.push("")
+				changeLog.push(str)
+			end
+	
 			if cutMoves.length > 0
-				str = "Removed Move#{cutMoves.length > 1 ? "s" : ""}: "
+				str = "Move#{removedMoves.length > 1 ? "s" : ""} No Longer Exist#{removedMoves.length > 1 ? "" : "s"}: "
 				cutMoves.each_with_index do |move,index|
 					str += GameData::Move.get(move).real_name
 					if index != cutMoves.length - 1
 						str += ", "
 					end
 				end
+				changeLog.push("")
 				changeLog.push(str)
 			end
 			
@@ -229,25 +245,29 @@ def createChangeLog(generationNumber = nil,fileName = "Changelogs/changelog.txt"
 					end
 				end
 
-                unless addedMoves.empty?
-                    str = "Added Move#{addedMoves.length > 1 ? "s" : ""}: "
-                    addedMoves.each_with_index do |move,index|
-                        str += GameData::Move.get(move).real_name
-                        if index != addedMoves.length - 1
-                            str += ", "
-                        end
-                    end
-                    changeLog.push(str)
-                end
+				unless addedMoves.empty?
+						str = "Added Move#{addedMoves.length > 1 ? "s" : ""}: "
+						addedMoves.each_with_index do |move,index|
+								str += GameData::Move.get(move).real_name
+								if index != addedMoves.length - 1
+										str += ", "
+								end
+						end
+						changeLog.push("")
+						changeLog.push(str)
+				end
 			end
 
 			if addedSignatureMoves.length > 0
+				changeLog.push("")
 				signatureLabel = "Added Signature Move#{addedSignatureMoves.length > 1 ? "s" : ""}:"
 				changeLog.push(signatureLabel)
 				addedSignatureMoves.each_with_index do |move,index|
 					changeLog.concat(describeMoveForChangelog(move))
 				end
 			end
+
+			changeLog.push("")
 			
 			# Check for evolution changes
 			species_data.evolutions.each do |evolutionData|

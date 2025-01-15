@@ -63,3 +63,9 @@ BattleHandlers::AccuracyCalcUserAbility.add(:FREESTYLE,
       mults[:accuracy_multiplier] *= 0.8
   }
 )
+
+BattleHandlers::AccuracyCalcUserAbility.add(:WATERFALLCONDITIONING,
+    proc { |ability, mults, user, _target, _move, _type|
+        mults[:base_accuracy] = 0 if user.battle.rainy?
+    }
+)

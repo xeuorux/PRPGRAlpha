@@ -127,6 +127,29 @@ def playPokecenterNPCsTutorial
     playTutorialMessage(_INTL("Speak to them to learn how they can upgrade your team!"))
 end
 
+def playDonationBoxesTutorial
+    $PokemonGlobal.donationBoxesTutorialized = true
+    tutorialMessages = 
+    [
+        _INTL("The last 5 boxes of the PC are donation boxes."),
+        _INTL("Pokémon placed in these boxes can never be withdrawn."),
+        _INTL("In repayment, you get candy equal to their lifetime EXP earnings."),
+    ]
+    playTutorial(tutorialMessages)
+end
+
+def playColorationDifferencesTutorial
+    $PokemonGlobal.colorationDifferencesTutorialized = true
+    tutorialMessages = 
+    [
+        _INTL("Individual Pokémon have individual appearances."),
+        _INTL("They differ in hue and brightness!"),
+        _INTL("If you wish, you can turn this off in the options."),
+    ]
+    playTutorial(tutorialMessages)
+end
+
+
 def tutorialIntro
     pbBGMFade(1.0)
     pbWait(Graphics.frame_rate)

@@ -1,7 +1,7 @@
 
 class PokeBattle_Battle
     def pbStartRoom(roomEffect, user, aiCheck = false)
-        duration = user.getRoomDuration(aiCheck)
+        duration = user.getRoomDuration(aiCheck: aiCheck)
         effectName = GameData::BattleEffect.get(roomEffect).name
         
         if @field.effectActive?(roomEffect)

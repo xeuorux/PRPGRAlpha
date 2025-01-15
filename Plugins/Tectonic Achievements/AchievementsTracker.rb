@@ -18,6 +18,12 @@ class AchievementsTracker
             echoln(_INTL("Achievement {1} is already unlocked! Cannot unlock again.",achievementID))
             return
         end
+
+        if GameData::Achievement.get(achievementID).disabled_in_randomizer? && Randomizer.on?
+            echoln(_INTL("Achievement {1} is blocked from being completed, since randomizer is active.",achievementID))
+            return
+        end
+
         @achievementsEarned.push(achievementID)
         storeAchievements
         echoln(_INTL("Unlocking achievement {1}.",achievementID))
