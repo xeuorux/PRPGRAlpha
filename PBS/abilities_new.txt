@@ -1377,7 +1377,7 @@ Description = Attacks against the Pokémon deal 50% more damage, but the attacke
 #-------------------------------
 [PLOTARMOR]
 Name = Plot Armor
-Description = During eclipse, immune to status conditions and having its stats lowered by enemies.
+Description = During eclipse, immune to status conditions and having its stats lowered.
 #-------------------------------
 [PLURIPOTENCE]
 Name = Pluripotence

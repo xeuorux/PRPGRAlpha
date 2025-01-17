@@ -35,6 +35,7 @@ module BattleHandlers
     StatLossImmunityAbility             = AbilityHandlerHash.new
     StatLossImmunityAbilityNonIgnorable = AbilityHandlerHash.new   # Full Metal Body
     StatLossImmunityAllyAbility         = AbilityHandlerHash.new   # Flower Veil
+    StatLossImmunitySelfAbility         = AbilityHandlerHash.new   # Plot Armor
     AbilityOnStatGain                   = AbilityHandlerHash.new
     AbilityOnEnemyStatGain              = AbilityHandlerHash.new
     AbilityOnStatLoss                   = AbilityHandlerHash.new
@@ -246,6 +247,11 @@ module BattleHandlers
 
     def self.triggerStatLossImmunityAllyAbility(ability, bearer, battler, stat, battle, showMessages)
         ret = StatLossImmunityAllyAbility.trigger(ability, bearer, battler, stat, battle, showMessages)
+        return !ret.nil? ? ret : false
+    end
+
+    def self.triggerStatLossImmunitySelfAbility(ability, battler, stat, battle, showMessages)
+        ret = StatLossImmunitySelfAbility.trigger(ability, battler, stat, battle, showMessages)
         return !ret.nil? ? ret : false
     end
 
