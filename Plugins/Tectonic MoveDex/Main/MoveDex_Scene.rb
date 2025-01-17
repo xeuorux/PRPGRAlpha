@@ -180,23 +180,18 @@ class MoveDex_Scene
             shavedName = shavedName[0..-1] if shavedName[shavedName.length-1] == " "
             moveName = shavedName + "..."
         end
-        if partyCanLearnMove(move_data.id)
+        if move_data.is_signature?
             moveName = "<outln>" + moveName + "</outln>"
-            shadow = LEARNABLE_PARTY_COLOR
+            shadow = SIGNATURE_COLOR
         else
-            if move_data.is_signature?
-                moveName = "<outln>" + moveName + "</outln>"
-                shadow = SIGNATURE_COLOR
-            else
-                shadow = MessageConfig.pbDefaultTextShadowColor
-            end
+            shadow = MessageConfig.pbDefaultTextShadowColor
         end
         return moveName, shadow
     end
 
     def partyCanLearnMove(move_data)
         $Trainer.party.each do |partyMember|
-            if partyMember.learnable_moves(false).include?move_data 
+            if partyMember.learnable_moves(false).include?(move_data)
                 return true
             end
         end
