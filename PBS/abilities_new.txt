@@ -823,7 +823,7 @@ Description = Its attacks are critical against burned targets.
 #-------------------------------
 [HASTY]
 Name = Hasty
-Description = When this Pokémon becomes statused, its Sp. Atk is raised by three steps.
+Description = When this Pokémon becomes statused, its Speed is raised by three steps.
 #-------------------------------
 [HAUNTED]
 Name = Haunted
