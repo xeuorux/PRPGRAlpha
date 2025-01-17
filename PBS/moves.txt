@@ -1614,19 +1614,6 @@ FunctionCode = ScalesWithLostHP
 Flags = CanProtect,CanMirrorMove
 Description = An all-out attack that becomes more powerful the less HP the user has.
 #-------------------------------
-[ROLLINGKICK]
-Name = Rolling Kick
-Type = FIGHTING
-Category = Physical
-Power = 60
-Accuracy = 100
-TotalPP = 12
-Target = NearOther
-FunctionCode = Flinch
-Flags = CanProtect,CanMirrorMove,Kicking
-EffectChance = 40
-Description = The user lashes out with a quick, spinning kick. It has a 40% chance to make the target flinch.
-#-------------------------------
 [SACREDSWORD]
 Name = Sacred Sword
 Type = FIGHTING

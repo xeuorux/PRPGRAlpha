@@ -806,6 +806,19 @@ Flags = CanProtect,CanMirrorMove
 EffectChance = 50
 Description = The user attacks with a punch that can shatter a rock. It may also lower the foe's Defense stat.
 #-------------------------------
+[ROLLINGKICK]
+Name = Rolling Kick
+Type = FIGHTING
+Category = Physical
+Power = 60
+Accuracy = 100
+TotalPP = 12
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect,CanMirrorMove,Kicking
+EffectChance = 40
+Description = The user lashes out with a quick, spinning kick. It has a 40% chance to make the target flinch.
+#-------------------------------
 [SEISMICTOSS]
 Name = Seismic Toss
 Type = FIGHTING
