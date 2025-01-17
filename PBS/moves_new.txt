@@ -1887,7 +1887,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = FractureTarget
 Flags = CanProtect,CanMagicCoat,CanMirrorMove
-Description = The user weakens the target's bones, making them fracture. They deal 50% less damage.
+Description = The user weakens the target's bones, making them fracture. They deal 33% less damage.
 Animation = TARSHOT
 #-------------------------------
 [GLIMMERPULSE]

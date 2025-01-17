@@ -253,7 +253,7 @@ class PokeBattle_Move
         end
         # Fracture
         if user.effectActive?(:Fracture)
-            multipliers[:final_damage_multiplier] *= 0.5
+            multipliers[:final_damage_multiplier] *= 0.66
         end
     end
 
