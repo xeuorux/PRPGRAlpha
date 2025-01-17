@@ -313,3 +313,15 @@ class PokeBattle_Move_CantMissLowerUserSpeedDef1 < PokeBattle_StatDownMove
 
     def pbAccuracyCheck(_user, _target); return true; end
 end
+
+#===============================================================================
+# Decreases the user's Speed and Sp. Def by 1 step each. Can't miss. (Scale Storm)
+#===============================================================================
+class PokeBattle_Move_CantMissLowerUserSpeedSpDef1 < PokeBattle_StatDownMove
+    def initialize(battle, move)
+        super
+        @statDown = [:SPEED, 1, :SPECIAL_DEFENSE, 1]
+    end
+
+    def pbAccuracyCheck(_user, _target); return true; end
+end
