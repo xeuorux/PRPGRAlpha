@@ -1099,6 +1099,19 @@ Animation = VENOSHOCK
 #-------------------------------
 #		GROUND MOVES
 #-------------------------------
+[BONECLUB]
+Name = Bone Club
+Type = GROUND
+Category = Physical
+Power = 65
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect,CanMirrorMove
+EffectChance = 50
+Description = The user clubs the target with a bone. It has a 50% chance to make the target flinch.
+#-------------------------------
 [DUSTFORCE]
 Name = Dust Force
 Type = GROUND

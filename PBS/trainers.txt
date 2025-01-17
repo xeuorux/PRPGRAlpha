@@ -1312,7 +1312,7 @@ Pokemon = BANETTE,28
     Moves = SHADOWCLAW,SLASH,WILLOWISP,SHADOWSNEAK
     AbilityIndex = 1 # Razor's Edge
 Pokemon = CUBONE,26
-    Moves = SHADOWPUNCH,BONECLUB,DROPKICK,IGNITE
+    Moves = SHADOWPUNCH,STAMPDOWN,DROPKICK,IGNITE
     AbilityIndex = 1 # Break Through
 #-------------------------------
 [POKEFAN_F2,Tsveta]
@@ -1626,7 +1626,7 @@ Pokemon = QUILLADIN,30
 Pokemon = AMAROWAK,30
     Name = Apotropaia
     Gender = female
-    Moves = BONECLUB,SHADOWPUNCH,FIRELASH,BREAKDANCE
+    Moves = BULLDOZE,SHADOWPUNCH,FIRELASH,BREAKDANCE
     AbilityIndex = 1 # Ancestral Dance
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,12,9,0,12,9
@@ -1673,7 +1673,7 @@ Pokemon = WHIMSICOTT,30
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,0,20,20,0
 Pokemon = AMAROWAK,30
-    Moves = BONECLUB,SHADOWPUNCH,FIRELASH,SWORDSDANCE
+    Moves = BULLDOZE,SHADOWPUNCH,FIRELASH,SWORDSDANCE
 Pokemon = ORICORIO,30
     Moves = FEATHERDANCE,LIGHTNINGDANCE,SQUALLDART,SMOLDERRAVE
 RemovePokemon = QUILLADIN,30
