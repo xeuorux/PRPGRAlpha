@@ -1012,6 +1012,13 @@ Pocket = 5
 Price = 3000
 Description = A held item. The holder is protected from flinching.
 #-------------------------------
+[CLEARAMULET]
+Name = Clear Amulet
+NamePlural = Clear Amulets
+Pocket = 5
+Price = 3000
+Description = A held item. The holder is protected from stat drops.
+#-------------------------------
 [ADAMANTORB]
 Name = Adamant Orb
 NamePlural = Adamant Orbs
