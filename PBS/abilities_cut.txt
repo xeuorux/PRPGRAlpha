@@ -569,6 +569,10 @@ Name = Pearl Seeker
 Description = Upon entry during eclipse, if it has no item, finds and equips the Pearl of Fate.
 Flags = EclipseSynergy
 #-------------------------------
+[PICKPOCKET]
+Name = Pickpocket
+Description = Steals an item when hit by another Pokémon.
+#-------------------------------
 [PICKUP]
 Name = Pickup
 Description = The Pokémon may pick up items.
