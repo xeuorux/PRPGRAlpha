@@ -934,6 +934,18 @@ EffectChance = 30
 Description = The user flies up to raise its Sp. Def by four steps in the first turn, then rams the foe on the second.
 Animation = SKYATTACK
 #-------------------------------
+[MIRAGEFLARE]
+Name = Mirage Flare
+Type = FLYING
+Category = Special
+Power = 120
+Accuracy = 100
+TotalPP = 5
+Target = AllNearOthers
+FunctionCode = Basic
+Flags = CanProtect,CanMirrorMove
+Description = The user creates a storm using its flaming body, damaging everything around it.
+#-------------------------------
 [MIRRORMOVE]
 Name = Mirror Move
 Type = FLYING
