@@ -162,7 +162,9 @@ class PokemonEncounters
     return false if $Trainer.able_pokemon_count <= 1
     return false if $PokemonTemp.currentDexSearch
     return true if $game_player.pbTerrainTag.double_wild_encounters
-    return true if rand(100) < Settings::DOUBLE_WILD_BATTLE_CHANCE
+    chance = Settings::DOUBLE_WILD_BATTLE_CHANCE
+    chance *= 2 if herdingActive?
+    return true if rand(100) < chance
     return false
   end
 

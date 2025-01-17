@@ -868,7 +868,7 @@ Flags = MultipleItems
 #-------------------------------
 [HERDING]
 Name = Herding
-Description = Wild Pokémon are more likely to hold items and to be species you've never caught before.
+Description = Wild Pokémon are more likely to appear in pairs and to be species you've never caught before.
 #-------------------------------
 [HEROICFINALE]
 Name = Heroic Finale

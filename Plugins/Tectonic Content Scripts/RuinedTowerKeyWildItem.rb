@@ -18,7 +18,7 @@ Events.onWildPokemonCreate += proc {|sender,e|
     chance *= 2 if getLevelCap >= 35
     chance *= 2 if getLevelCap >= 50
 
-    chance *= 2 if herdingActive?
+    # chance *= 2 if herdingActive?
     next unless rand(1000) < chance
     pokemon.setItems([:RUINEDTOWERKEY])
 }
