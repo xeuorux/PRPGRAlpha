@@ -23,6 +23,18 @@ BattleHandlers::StatLossImmunityAbility.add(:PLOTARMOR,
   }
 )
 
+BattleHandlers::StatLossImmunitySelfAbility.add(:PLOTARMOR,
+  proc { |ability, battler, _stat, battle, showMessages|
+      next false unless battle.eclipsed?
+      if showMessages
+          battle.pbShowAbilitySplash(battler, ability)
+          battle.pbDisplay(_INTL("{1}'s stats cannot be lowered!", battler.pbThis))
+          battle.pbHideAbilitySplash(battler)
+      end
+      next true
+  }
+)
+
 BattleHandlers::StatLossImmunityAbility.add(:FLOWERVEIL,
   proc { |ability, battler, _stat, battle, showMessages|
       next false unless battler.pbHasType?(:GRASS)
