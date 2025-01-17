@@ -1577,7 +1577,7 @@ Pokemon = CHESNAUGHT,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,20,10,0,20,0
 Pokemon = CHARIZARD,70
-    Moves = DRACOMETEOR,OVERHEAT,MIRAGEFLARE,OUTRAGE
+    Moves = DRACOMETEOR,OVERHEAT,WILDFIREMELT,OUTRAGE
     AbilityIndex = 0 # Pure Rage
     Item = EJECTPACK
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def

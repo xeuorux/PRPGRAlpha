@@ -912,7 +912,7 @@ Pokemon = BLASTOISE,65
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,20,0,0,20,10
 Pokemon = CHARIZARD,65
-    Moves = OVERHEAT,DRACOMETEOR,MIRAGEFLARE,CRUELTY
+    Moves = OVERHEAT,DRACOMETEOR,WILDFIREMELT,CRUELTY
     AbilityIndex = 0 # Pure Rage
     Item = WHITEHERB
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -4405,7 +4405,7 @@ Pokemon = SCARAPACE,60
     Moves = SUPERPOWER,XSCISSOR,MACHPUNCH,DIVEBOMB
     AbilityIndex = 1 # Juggernaut
 Pokemon = CHARIZARD,60
-    Moves = DRACOMETEOR,MIRAGEFLARE,FLAMETHROWER,OVERHEAT
+    Moves = DRACOMETEOR,WILDFIREMELT,FLAMETHROWER,OVERHEAT
     AbilityIndex = 0 # Pure Rage
     Item = FIREGEM
 #-------------------------------
