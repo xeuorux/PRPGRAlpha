@@ -1003,7 +1003,7 @@ NamePlural = Covert Cloaks
 Pocket = 5
 Price = 3000
 Flags = Clothing
-Description = A held item. The holder is protected from the random added effects of enemy attacks.
+Description = A held item. The holder is protected from the random added effects of enemy attacks and takes 10% less damage.
 #-------------------------------
 [ADAMANTORB]
 Name = Adamant Orb
