@@ -5,16 +5,12 @@ class PokeBattle_Move_RemovesTargetItem < PokeBattle_Move
     def pbEffectAgainstTarget(user, target)
         return if damagingMove?
         return unless canKnockOffItems?(user, target)
-        knockOffItems(user, target) do |_item, itemName|
-            @battle.pbDisplay(_INTL("{1}'s {2} became unusuable, so it dropped it!", target.pbThis, itemName))
-        end
+        knockOffItems(user, target)
     end
 
     def pbEffectWhenDealingDamage(user, target)
         return unless canKnockOffItems?(user, target)
-        knockOffItems(user, target) do |_item, itemName|
-            @battle.pbDisplay(_INTL("{1}'s {2} became unusuable, so it dropped it!", target.pbThis, itemName))
-        end
+        knockOffItems(user, target)
     end
 
     def getTargetAffectingEffectScore(user, target)

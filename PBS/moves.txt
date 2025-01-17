@@ -6492,13 +6492,13 @@ Description = Prevents the user and target from switching out until either of th
 Name = Knock Off
 Type = DARK
 Category = Physical
-Power = 65
+Power = 75
 Accuracy = 100
 TotalPP = 15
 Target = NearOther
-FunctionCode = RemovesTargetItemDamageBoost50Percent
+FunctionCode = RemovesTargetItem
 Flags = CanProtect,CanMirrorMove
-Description = The user slaps the target to knock off their item. If they have an item, this deals 50% more damage.
+Description = The user slaps the target to knock off their item.
 #-------------------------------
 [LASHOUT]
 Name = Lash Out
