@@ -14,7 +14,7 @@ def pbGenerateWildPokemon(species,level,ignoreCap = false,skipAlterations = fals
   end
   genwildpoke = Pokemon.new(species,level)
   # Give the wild Pokémon a held item
-  item = generateWildHeldItem(genwildpoke,herdingActive?)
+  item = generateWildHeldItem(genwildpoke)
   genwildpoke.giveItem(item) if item
   # Trigger events that may alter the generated Pokémon further
   Events.onWildPokemonCreate.trigger(nil,genwildpoke) unless skipAlterations
@@ -25,7 +25,7 @@ WILD_ITEM_CHANCE_COMMON = 25
 WILD_ITEM_CHANCE_UNCOMMON = 10
 WILD_ITEM_CHANCE_RARE = 2
 
-def generateWildHeldItem(pokemon,increasedChance=false)
+def generateWildHeldItem(pokemon)
   if pokemon.is_a?(Symbol)
     itemsWithRarities = GameData::Species.get(pokemon).wildHeldItemsWithRarities
   else
@@ -35,7 +35,7 @@ def generateWildHeldItem(pokemon,increasedChance=false)
   return nil if itemsWithRarities.empty?
 
   itemRoll = rand(100)
-  itemRoll -= 10 if increasedChance
+  # itemRoll -= 10 if increasedChance
   itemRoll = 0 if itemRoll < 0
 
   totalRarity = 0
@@ -53,7 +53,7 @@ def runItemGenerationTest(pokemon,increasedChance=false,testCount = 10000)
 
   itemCounts = {}
   testCount.times do
-    itemGenerated = generateWildHeldItem(pokemon,increasedChance)
+    itemGenerated = generateWildHeldItem(pokemon)
     next unless itemGenerated
     if itemCounts.key?(itemGenerated)
       itemCounts[itemGenerated] += 1

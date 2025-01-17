@@ -942,7 +942,7 @@ Power = 120
 Accuracy = 100
 TotalPP = 5
 Target = AllNearOthers
-FunctionCode = Basic
+FunctionCode = Invalid
 Flags = CanProtect,CanMirrorMove
 Description = The user creates a storm using its flaming body, damaging everything around it.
 #-------------------------------

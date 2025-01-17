@@ -382,7 +382,7 @@ class NewDexNav
     else
         move = getRandomNonLevelMove(species_data.species)
     end
-	item = generateWildHeldItem(species_data.species,herdingActive?)
+	item = generateWildHeldItem(species_data.species)
 	abilityIndex = rand(2)
 	$PokemonTemp.currentDexSearch = [species_data,move,abilityIndex,item]
   end
