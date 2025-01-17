@@ -5,6 +5,7 @@ class MoveDex_Scene
 	MOVE_LIST_SUMMARY_MOVE_NAMES_Y_INIT = 56
     MOVE_LIST_X_LEFT = 32
     SIGNATURE_COLOR = Color.new(211, 175, 44)
+    LEARNABLE_PARTY_COLOR = Color.new(175, 211, 44)
 
     def generateMoveList
         moveList = []
@@ -179,13 +180,27 @@ class MoveDex_Scene
             shavedName = shavedName[0..-1] if shavedName[shavedName.length-1] == " "
             moveName = shavedName + "..."
         end
-        if move_data.is_signature?
+        if partyCanLearnMove(move_data.id)
             moveName = "<outln>" + moveName + "</outln>"
-            shadow = SIGNATURE_COLOR
+            shadow = LEARNABLE_PARTY_COLOR
         else
-            shadow = MessageConfig.pbDefaultTextShadowColor
+            if move_data.is_signature?
+                moveName = "<outln>" + moveName + "</outln>"
+                shadow = SIGNATURE_COLOR
+            else
+                shadow = MessageConfig.pbDefaultTextShadowColor
+            end
         end
         return moveName, shadow
+    end
+
+    def partyCanLearnMove(move_data)
+        $Trainer.party.each do |partyMember|
+            if partyMember.learnable_moves(false).include?move_data 
+                return true
+            end
+        end
+        return false
     end
 
     def navigateMoveDex

@@ -106,6 +106,7 @@ class MoveDex_Scene
         cmdTargeting    = -1
         cmdSignature    = -1
         cmdNotes        = -1
+        cmdLearnableOwned = -1
         cmdInvertList   = -1
         cmdEffectChance = -1
         miscSearches[cmdTag = miscSearches.length]          = _INTL("Tag")
@@ -117,6 +118,7 @@ class MoveDex_Scene
         miscSearches[cmdTargeting = miscSearches.length]    = _INTL("Targeting")
         miscSearches[cmdSignature = miscSearches.length]    = _INTL("Signature")
         miscSearches[cmdNotes = miscSearches.length]        = _INTL("Has Notes")
+        miscSearches[cmdLearnableOwned = miscSearches.length]        = _INTL("Learnable By")
         miscSearches[cmdInvertList = miscSearches.length]   = _INTL("Invert Current")
         miscSearches.push(_INTL("Cancel"))
         searchSelection = pbMessage(_INTL("Which search?"), miscSearches, miscSearches.length + 1)
@@ -136,6 +138,8 @@ class MoveDex_Scene
             return searchByMoveTargeting
         elsif cmdSignature > -1 && searchSelection == cmdSignature
             return searchByMoveSignature
+        elsif cmdLearnableOwned > -1 && searchSelection == cmdLearnableOwned
+            return searchByMoveLearnableOwned
         elsif cmdNotes > -1 && searchSelection == cmdNotes
             return searchByMoveHasNotes
         elsif cmdInvertList > -1 && searchSelection == cmdInvertList
@@ -273,6 +277,43 @@ class MoveDex_Scene
                     next dex_item[:data].is_signature?
                 end
             end
+            return dexlist
+        end
+        return nil
+    end
+
+    def searchByMoveLearnableOwned
+       selection = pbMessage(_INTL("Move learnable by?"), [_INTL("Party Pokemon"), _INTL("Caught Pokemon"), _INTL("Cancel")], 3)
+       partyLearnable = {}
+       caughtLearnable = {}
+       #precalc learnables to avoid lag
+       if selection == 0
+            $Trainer.party.each do |partyMember|
+                partyMember.learnable_moves(false).each do |move|
+                    partyLearnable[move] = true
+                end
+            end
+       end
+
+       if selection == 1
+            eachPokemonInPartyOrStorage do |ownedPokemon| 
+                ownedPokemon.learnable_moves(false).each do |move|
+                     caughtLearnable[move] = true
+                end
+            end
+        end
+
+       if selection != 2
+            dexlist = searchStartingList
+            dexlist = dexlist.find_all do |dex_item|
+                if selection == 0 
+                     next partyLearnable.include?dex_item[:move]
+                end
+                if selection == 1
+                     next caughtLearnable.include?dex_item[:move]
+                end
+            end
+            puts "dexList " + dexlist.length.to_s
             return dexlist
         end
         return nil
