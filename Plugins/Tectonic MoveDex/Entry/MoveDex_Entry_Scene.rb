@@ -2,9 +2,8 @@ class MoveDex_Entry_Scene
     attr_reader :sprites
     attr_reader :viewport
 
-    #should match same value in MoveDex_Scene
-    POKEMON_IN_PARTY_COLOR = Color.new(175, 211, 44)
-    POKEMON_IN_BOX_COLOR = Color.new(120, 150, 30)
+    POKEMON_IN_BOX_COLOR_BASE = Color.new(150, 180, 202)
+    POKEMON_IN_BOX_COLOR_SHADOW = Color.new(57, 118, 191)
 
     MAX_LENGTH_SPECIES_LIST = 10
 	SPECIES_LIST_Y_INIT = 52
@@ -297,37 +296,34 @@ class MoveDex_Entry_Scene
         
         #store all caught species for coloring the results. might be faster to do it once per scene?
         ownedPokemonSpecies = {}
-        partyPokemonSpecies = {}
         eachPokemonInPartyOrStorage do |pkmn|
             ownedPokemonSpecies[pkmn.species] = true;
         end
-        $Trainer.party.each do |pkmn|
-            partyPokemonSpecies[pkmn.species] = true;
-        end
+
+        base = MessageConfig.pbDefaultTextMainColor
+        shadow = MessageConfig.pbDefaultTextShadowColor
         
         displayIndex = 0
 		listIndex = -1
         speciesLabelList.each_with_index do |speciesLabel, index|
+
             #determine text color. default for unowned, blue for box, light green for party
-            shadow = MessageConfig.pbDefaultTextShadowColor
+            species_base = base
+            species_shadow = shadow
+
             #species data can be empty for the "None" page. In this case skipping custom coloring is fine
             if index < speciesDataList.length
                 speciesData = speciesDataList[index]
                 if ownedPokemonSpecies.include?speciesData.id
-                    shadow = POKEMON_IN_BOX_COLOR
-                end
-                #party color has higher priority than box color
-                if partyPokemonSpecies.include?speciesData.id
-                    shadow = POKEMON_IN_PARTY_COLOR
-                end
-                
+                    species_base = darkMode? ? POKEMON_IN_BOX_COLOR_BASE : POKEMON_IN_BOX_COLOR_SHADOW
+                    species_shadow = darkMode? ? POKEMON_IN_BOX_COLOR_SHADOW : POKEMON_IN_BOX_COLOR_BASE
+                end                
             end
-
 
             listIndex += 1
             next if listIndex < @scroll
             speciesDrawX, speciesDrawY = getSpeciesDisplayCoordinates(displayIndex,columnIndex)
-            drawFormattedTextEx(overlay, speciesDrawX , speciesDrawY, 450, speciesLabel, base, shadow)
+            drawFormattedTextEx(overlay, speciesDrawX , speciesDrawY, 450, speciesLabel, species_base, species_shadow)
             if levelLabelsList[index]
                 levelDrawX = 212 + (columnIndex * 260)
                 levelLabel = levelLabelsList[index]
