@@ -354,7 +354,7 @@ end
 #===============================================================================
 class PokeBattle_Move_RaiseCriticalHitRate1 < PokeBattle_Move
     def pbEffectGeneral(user)
-        user.applyEffect(:RaisedCritChance)
+        user.applyEffect(:RaisedCritChance,1)
     end
 
     def getEffectScore(user, _target)
