@@ -215,6 +215,7 @@ def getFlinchingEffectScore(baseScore, user, target, move)
     return 0 if target.substituted? && !move.ignoresSubstitute?(user)
     return 0 if target.effectActive?(:FlinchImmunity)
     return 0 if target.battle.pbCheckSameSideAbility(:EFFLORESCENT,target.index)
+    return 0 if target.hasActiveItemAI?(:COURAGEBADGE)
 
     score = baseScore
     score *= 2.0 if user.hasAlly?

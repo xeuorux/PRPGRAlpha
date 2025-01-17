@@ -1005,6 +1005,13 @@ Price = 3000
 Flags = Clothing
 Description = A held item. The holder is protected from the random added effects of enemy attacks and takes 10% less damage.
 #-------------------------------
+[COURAGEBADGE]
+Name = Courage Badge
+NamePlural = Courage Badges
+Pocket = 5
+Price = 3000
+Description = A held item. The holder is protected from flinching.
+#-------------------------------
 [ADAMANTORB]
 Name = Adamant Orb
 NamePlural = Adamant Orbs
