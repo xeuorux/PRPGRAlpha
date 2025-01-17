@@ -786,3 +786,23 @@ class PokeBattle_Move_UseChoiceOf3ElementalFangs < PokeBattle_Move
         return # No animation
     end
 end
+
+#===============================================================================
+# Fails if the user is not asleep. (Snore)
+#===============================================================================
+class PokeBattle_Move_FailsIfUserNotAsleep < PokeBattle_Move
+    def usableWhenAsleep?; return true; end
+
+    def pbMoveFailed?(user, _targets, show_message)
+        unless user.asleep?
+            @battle.pbDisplay(_INTL("But it failed, since #{user.pbThis(true)} isn't asleep!")) if show_message
+            return true
+        end
+        return false
+    end
+
+    def pbMoveFailedAI?(user, targets)
+        return true unless user.willStayAsleepAI?
+        return pbMoveFailed?(user, targets, false)
+    end
+end

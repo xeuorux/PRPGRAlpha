@@ -914,15 +914,15 @@ Description = This attack inflicts double damage on a numbed foe. It also cures 
 [SNORE]
 Name = Snore
 Type = NORMAL
-Category = Special
-Power = 75
+Category = Adaptive
+Power = 90
 Accuracy = 100
 TotalPP = 12
 Target = NearOther
-FunctionCode = FlinchTargetFailsIfUserNotAsleep
+FunctionCode = FailsIfUserNotAsleep
 Flags = CanProtect,CanMirrorMove,Sound
 EffectChance = 50
-Description = An attack that can be used only if the user is asleep. It has a 50% chance to make the target flinch.
+Description = An attack that can be used only if the user is asleep.
 #-------------------------------
 [SOFTBOILED]
 Name = Soft-Boiled
