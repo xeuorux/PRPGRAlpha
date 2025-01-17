@@ -918,11 +918,11 @@ Special
 #-------------------------------
 [304] # Ruined Tower F1
 LandSparse,20
-    20,ABSOLUS,43,45
-    20,COALOSSAL,43,45
-    20,GOLURK,43,45
-    20,VICTREEBEL,43,45
-    20,VOLCARONA,43,45
+    20,ABSOL,43,45
+    20,CARKOL,43,45
+    20,GOLETT,43,45
+    20,LARVESTA,43,45
+    20,WEEPINBELL,43,45
 #-------------------------------
 [305] # Dock Warehouse
 Special
