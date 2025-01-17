@@ -273,7 +273,7 @@ GameData::Move.get(@effects[:GorillaTactics]).name)
                     @battle.pbHideTribeSplash(self)
                     pbOwnSide.applyEffect(:TyrannicalImmunity)
                 elsif hasActiveItem?(:COURAGEBADGE)
-                    @battle.pbDisplay("#{pbThis}'s Courage Badge prevents the flinch!")    
+                    @battle.pbDisplay("#{pbThis} would have flinched, but it holds a Courage Badge!")    
                 else
                     @battle.pbDisplay(_INTL("{1} flinched and couldn't move!", pbThis))
                     eachActiveAbility do |ability|
