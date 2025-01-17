@@ -389,10 +389,6 @@ Name = Perish Body
 Description = When it takes a hit, both Pokémon faint after 3 turns.
 Flags = SetupCounterAI
 #-------------------------------
-[PICKPOCKET]
-Name = Pickpocket
-Description = Steals an item when hit by another Pokémon.
-#-------------------------------
 [POISONPOINT]
 Name = Poison Point
 Description = Physical attacks against the Pokémon have a 30% chance to poison the attacker.

@@ -1176,6 +1176,10 @@ Flags = SunshineSynergy
 Name = Moist Skin
 Description = If an attack lowers its HP to half or less, waterlogs the attacker.
 #-------------------------------
+[MONKEYMISCHIEF]
+Name = Monkey Mischief
+Description = Destroys an item when hit by another Pokémon.
+#-------------------------------
 [MOONBASKING]
 Name = Moon Basking
 Description = Heals 1/8th of its max HP each turn if in moonglow.
