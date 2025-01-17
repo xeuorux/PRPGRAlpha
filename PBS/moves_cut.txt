@@ -1938,6 +1938,19 @@ Flags = CanProtect,CanMirrorMove
 EffectChance = 50
 Description = The user attacks its foe by encircling it in sharp leaves. It has a 50% chance to lower accuracy.
 #-------------------------------
+[NEEDLEARM]
+Name = Needle Arm
+Type = GRASS
+Category = Physical
+Power = 60
+Accuracy = 100
+TotalPP = 12
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect,CanMirrorMove
+EffectChance = 50
+Description = The user attacks by wildly swinging its thorny arms. It has a 50% chance to make the target flinch.
+#-------------------------------
 [PETALBLIZZARD]
 Name = Petal Blizzard
 Type = GRASS

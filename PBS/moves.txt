@@ -4713,19 +4713,6 @@ FunctionCode = HealUserByHalfOfDamageDone
 Flags = CanProtect,CanMirrorMove
 Description = A nutrient-draining attack. The user's HP is restored by 50% of the damage dealt.
 #-------------------------------
-[NEEDLEARM]
-Name = Needle Arm
-Type = GRASS
-Category = Physical
-Power = 60
-Accuracy = 100
-TotalPP = 12
-Target = NearOther
-FunctionCode = Flinch
-Flags = CanProtect,CanMirrorMove
-EffectChance = 50
-Description = The user attacks by wildly swinging its thorny arms. It has a 50% chance to make the target flinch.
-#-------------------------------
 [PETALDANCE]
 Name = Petal Dance
 Type = GRASS

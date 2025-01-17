@@ -547,7 +547,7 @@ Pokemon = MONFERNO,22
     Moves = MACHPUNCH,KNOCKOFF,FIREPUNCH,TAUNT
     AbilityIndex = 0 # Mystic Fist
 Pokemon = CACNEA,21
-    Moves = LEECHSEED,NEEDLEARM,FEINTATTACK,CAUSTICPUNCH
+    Moves = LEECHSEED,RAZORLEAF,FEINTATTACK,CAUSTICPUNCH
     AbilityIndex = 0 # Heartless
     Item = SITRUSBERRY
 Pokemon = KROKOROK,22
@@ -678,7 +678,7 @@ Pokemon = BRAIXEN,26
     Moves = FIRESPIN,PSYBEAM,EERIEIMPULSE,WILLOWISP
     AbilityIndex = 1 # Fascinate
 Pokemon = QUILLADIN,26
-    Moves = BULKUP,FORCEPALM,NEEDLEARM,LEECHSEED
+    Moves = BULKUP,FORCEPALM,RAZORLEAF,LEECHSEED
     AbilityIndex = 1 # Aggravate
     Item = SITRUSBERRY
 #-------------------------------
@@ -2903,7 +2903,7 @@ Pokemon = ELECTIVIRE,35
     AbilityIndex = 1 # Adrenaline Rush
     Item = LIECHIBERRY
 Pokemon = CACTURNE,36
-    Moves = SUCKERPUNCH,NEEDLEARM,PAYBACK,LEECHSEED
+    Moves = SUCKERPUNCH,LEAFBLADE,PAYBACK,LEECHSEED
     AbilityIndex = 0 # Heartless
 #-------------------------------
 [POKEMONRANGER_M2,Martel]
