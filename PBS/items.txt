@@ -2643,7 +2643,7 @@ Pocket = 8
 Price = 0
 FieldUse = Direct
 Flags = KeyItem
-Description = An ancient horn. Sound it to call 3 rare Pokémon to battle you. Recharged by walking in encounter zones.
+Description = An ancient horn. Sound it to call 3 Pokémon to battle you. They have a higher chance of having items and unique moves.
 #-------------------------------
 [HOUSEDEED1]
 Name = House Deed
