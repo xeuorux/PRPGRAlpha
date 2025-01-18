@@ -311,7 +311,7 @@ class PokeBattle_Move_RaiseUserDefSpDef2EmpowersNextElectricAttack < PokeBattle_
     end
 
     def pbEffectGeneral(user)
-        user.applyEffect(:Charge)
+        user.applyEffect(:EnergyCharge)
         super
     end
 

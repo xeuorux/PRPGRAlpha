@@ -353,9 +353,9 @@ class PokeBattle_Move
         echoln("[DAMAGE CALC] Calcing damage based on expected type effectiveness mult of #{effectiveness}") if DAMAGE_CALC_DEBUG
 
         # Charge
-        if user.effectActive?(:Charge) && type == :ELECTRIC
+        if user.effectActive?(:EnergyCharge) && type == :ELECTRIC
             multipliers[:base_damage_multiplier] *= 2
-            user.applyEffect(:ChargeExpended) unless checkingForAI
+            user.applyEffect(:EnergyChargeExpended) unless checkingForAI
         end
         
 		# Volatile Toxin

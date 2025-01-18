@@ -460,7 +460,7 @@ Description = Speed is doubled on the first turn.
 #-------------------------------
 [DYNAMO]
 Name = Dynamo
-Description = Whenever it uses a status move, becomes charged, doubling the power of its next Electric-type attack.
+Description = Whenever it uses a status move, becomes energy charged, doubling the power of its next Electric-type attack.
 #-------------------------------
 [EARSPLITTING]
 Name = Ear-Splitting
@@ -1948,11 +1948,11 @@ Description = Flinching moves always activate their random effects.
 #-------------------------------
 [TESLACOILS]
 Name = Tesla Coils
-Description = Becomes charged upon entry, doubling the power of its next Electric-type attack.
+Description = Becomes energy charged upon entry, doubling the power of its next Electric-type attack.
 #-------------------------------
 [THUNDERSTRUCK]
 Name = Thunderstruck
-Description = Becomes charged when hit by an attack, doubling the power of its next Electric-type attack.
+Description = Becomes energy charged when hit by an attack, doubling the power of its next Electric-type attack.
 #-------------------------------
 [TIMEINTERLOPER]
 Name = Time Interloper

@@ -769,7 +769,7 @@ class PokeBattle_AI_KLANG < PokeBattle_AI_Boss
 
         @useMovesIFF.push(proc { |move, user, battle|
             if move.type == :ELECTRIC
-                if user.effectActive?(:Charge)
+                if user.effectActive?(:EnergyCharge)
                     next 1
                 else
                     next -1

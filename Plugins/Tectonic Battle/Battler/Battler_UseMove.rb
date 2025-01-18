@@ -829,8 +829,8 @@ class PokeBattle_Battler
                 @battle.pbDisplay(_INTL("The {1} burst, causing {2} to deal double damage!", effectName, move.name))
             end
         end
-        # Volatile Toxin proc message
-        if user.effectActive?(:ChargeExpended) && hitNum == 0
+        # Energy Charge expended message
+        if user.effectActive?(:EnergyChargeExpended) && hitNum == 0
             @battle.pbDisplay(_INTL("{1} expended its charge to empower {2}!", user.pbThis, move.name))
         end
         # Bubble Barrier proc message

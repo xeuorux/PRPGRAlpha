@@ -146,7 +146,7 @@ BattleHandlers::SpeedCalcAbility.add(:FROSTFANGED,
 
 BattleHandlers::SpeedCalcAbility.add(:LIGHTNINGRIDE,
   proc { |ability, battler, mult|
-      next mult * 2.0 if battler.effectActive?(:Charge)
+      next mult * 2.0 if battler.effectActive?(:EnergyCharge)
   }
 )
 

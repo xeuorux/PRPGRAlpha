@@ -142,8 +142,8 @@ user.pbThis(true)))
             end
         end
         # Consume Charge
-        if user.effectActive?(:ChargeExpended)
-            user.disableEffect(:Charge)
+        if user.effectActive?(:EnergyChargeExpended)
+            user.disableEffect(:EnergyCharge)
         end
         # Pokémon switching caused by Roar, Whirlwind, Discourage, Dragon Tail
         move.pbSwitchOutTargetsEffect(user, targets, numHits, switchedBattlers)

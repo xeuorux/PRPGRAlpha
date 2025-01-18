@@ -4912,7 +4912,7 @@ TotalPP = 15
 Target = User
 FunctionCode = RaiseUserDefSpDef2EmpowersNextElectricAttack
 Flags = CanSnatch
-Description = The user becomes charged, doubling its next Electric-type attack. Also raises the user's defensive stats by two steps each.
+Description = The user becomes energy charged, doubling its next Electric-type attack. Also raises the user's defensive stats by two steps each.
 #-------------------------------
 [CHARGEBEAM]
 Name = Charge Beam

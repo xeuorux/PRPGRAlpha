@@ -279,9 +279,10 @@ BattleHandlers::UserAbilityEndOfMove.add(:DYNAMO,
   proc { |ability, user, _targets, move, battle, _switchedBattlers|
       next if battle.futureSight
       next if move.damagingMove?
-      next if user.effectActive?(:Charge)
+      next if user.effectActive?(:EnergyCharge)
       battle.pbShowAbilitySplash(user, ability)
-      user.applyEffect(:Charge)
+      battle.pbAnimation(:CHARGE, user, nil, 0)
+      user.applyEffect(:EnergyCharge)
       battle.pbHideAbilitySplash(user)
   }
 )
@@ -545,10 +546,11 @@ BattleHandlers::UserAbilityEndOfMove.add(:HYBRIDFIGHTER,
         user.hideMyAbilitySplash
       elsif previousMoveData.punchingMove? && currentMoveData.bitingMove?
         user.showMyAbilitySplash(ability)
-        if user.effectActive?(:Charge)
+        if user.effectActive?(:EnergyCharge)
           battle.pbDisplay(_INTL("But {1} is already charged...", user.pbThis(true)))
         else
-          user.applyEffect(:Charge)
+          battle.pbAnimation(:CHARGE, user, nil)
+          user.applyEffect(:EnergyCharge)
         end
         user.hideMyAbilitySplash
       end

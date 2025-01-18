@@ -857,7 +857,8 @@ BattleHandlers::AbilityOnSwitchIn.add(:TESLACOILS,
           end
       end
       battle.pbShowAbilitySplash(battler, ability)
-      battler.applyEffect(:Charge)
+      battle.pbAnimation(:CHARGE, battler, nil)
+      battler.applyEffect(:EnergyCharge)
       battle.pbHideAbilitySplash(battler)
   }
 )
