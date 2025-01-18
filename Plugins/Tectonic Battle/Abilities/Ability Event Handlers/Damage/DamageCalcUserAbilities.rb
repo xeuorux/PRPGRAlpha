@@ -44,7 +44,7 @@ BattleHandlers::DamageCalcUserAbility.add(:DEFEATIST,
 
 BattleHandlers::DamageCalcUserAbility.add(:PERFECTIONIST,
   proc { |ability, user, target, move, mults, _baseDmg, type, aiCheck|
-    if !target.damageState.critical # TODO: Ai check
+    unless target.damageState.critical # TODO: Ai check
       mults[:final_damage_multiplier] /= 2
       user.aiLearnsAbility(ability) unless aiCheck
     end

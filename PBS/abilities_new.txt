@@ -1345,7 +1345,7 @@ Description = After fainting from exploding, revives after six turns.
 #-------------------------------
 [PERFECTIONIST]
 Name = Perfectionist
-Description = Halves move damage if its moves are not critical.
+Description = The Pokémon's hits deal half damage unless they are critical.
 #-------------------------------
 [PERFECTLUCK]
 Name = Perfect Luck
