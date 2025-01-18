@@ -1407,6 +1407,20 @@ Priority = 2
 FunctionCode = Invalid
 Description = The user scatters irritating powder to draw attention to itself. Opponents aim only at the user.
 #-------------------------------
+[SIGNALOVERLOAD]
+Name = Signal Overload
+Type = BUG
+Category = Special
+Power = 110
+Accuracy = 80
+TotalPP = 12
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect,CanMirrorMove,Sound
+EffectChance = 30
+Description = The target is overwhelmed by light and sound. It has a 30% chance to lower the target's Attack and Sp. Atk.
+Animation = SIGNALBEAM
+#-------------------------------
 [SKITTERSMACK]
 Name = Skitter Smack
 Type = BUG
@@ -2303,6 +2317,19 @@ Target = AllNearOthers
 FunctionCode = Invalid
 Flags = CanProtect,CanMirrorMove
 Description = Attacks with its psychic power. Power increases and damages all opponents on Psychic Terrain.
+#-------------------------------
+[EXTRASENSORY]
+Name = Extrasensory
+Type = PSYCHIC
+Category = Special
+Power = 80
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = Flinch
+Flags = CanProtect,CanMirrorMove
+EffectChance = 40
+Description = The user attacks with an odd, unseeable power. It has a 40% chance to make the target flinch.
 #-------------------------------
 [GUARDSWAP]
 Name = Guard Swap

@@ -2206,6 +2206,20 @@ Flags = CanProtect,CanMirrorMove
 EffectChance = 100
 Description = The user makes the target have an allergic reaction. This reduces their Speed by three steps.
 #-------------------------------
+[BIOFLASH]
+Name = Bio Flash
+Type = BUG
+Category = Special
+Power = 40
+Accuracy = 100
+TotalPP = 25
+Target = NearOther
+Priority = 1
+FunctionCode = Basic
+Flags = CanProtect,CanMirrorMove
+Description = The user shoots out a quick flash of light energy. This move always goes first.
+Animation = SIGNALBEAM
+#-------------------------------
 [CARAPACECRUSH]
 Name = Carapace Crush
 Type = BUG
@@ -2330,10 +2344,24 @@ Power = 40
 Accuracy = 100
 TotalPP = 25
 Target = NearOther
-FunctionCode = LowerTargetAtkSpAtk1
+FunctionCode = Flinch
 Flags = CanProtect,CanMirrorMove
-EffectChance = 10
-Description = The user attacks with small beams of light. It has a 10% chance to lower the target's Attack and Sp. Atk.
+EffectChance = 20
+Description = The user attacks with small beams of light. It has a 20% chance to make the target flinch.
+Animation = SIGNALBEAM
+#-------------------------------
+[LUMINBURST]
+Name = Lumin Burst
+Type = BUG
+Category = Special
+Power = 80
+Accuracy = 100
+TotalPP = 12
+Target = NearOther
+FunctionCode = Flinch
+Flags = CanProtect,CanMirrorMove
+EffectChance = 40
+Description = The user attacks with a blinding flash of bioluminscence. It has a 40% chance to make the target flinch.
 Animation = SIGNALBEAM
 #-------------------------------
 [MANYNEEDLE]
@@ -2428,6 +2456,18 @@ Flags = CanProtect,CanMirrorMove
 Description = The target is plastered with irritating scales, damaging it and changing its type to Bug.
 Animation = POWDER
 #-------------------------------
+[SCALESTORM]
+Name = Scale Storm
+Type = BUG
+Category = Special
+Power = 110
+Accuracy = 0
+TotalPP = 10
+Target = NearOther
+FunctionCode = CantMissLowerUserSpeedDef1
+Flags = CanProtect,CanMirrorMove,Wind
+Description = The user sheds and launches a volley of scales at the target. Lands without fail and lowers the user's Defense and Speed.
+#-------------------------------
 [SEDATINGDUST]
 Name = Sedating Dust
 Type = BUG
@@ -2439,20 +2479,6 @@ FunctionCode = SleepTargetIfSlowerThanUserMinUserSpeed
 Flags = CanProtect,CanMagicCoat,CanMirrorMove
 Description = If the user is faster than the target, puts the target to sleep, then minimizes the user's Speed stat.
 Animation = POISONPOWDER
-#-------------------------------
-[SIGNALOVERLOAD]
-Name = Signal Overload
-Type = BUG
-Category = Special
-Power = 110
-Accuracy = 80
-TotalPP = 12
-Target = NearOther
-FunctionCode = LowerTargetAtkSpAtk1
-Flags = CanProtect,CanMirrorMove,Sound
-EffectChance = 30
-Description = The target is overwhelmed by light and sound. It has a 30% chance to lower the target's Attack and Sp. Atk.
-Animation = SIGNALBEAM
 #-------------------------------
 [SILKBLADE]
 Name = Silk Blade
@@ -3077,6 +3103,20 @@ FunctionCode = BindTarget3
 Flags = CanProtect,CanMirrorMove
 Description = The user curls its metal hair around the target, trapping and damaging it for three turns.
 Animation = BIND
+#-------------------------------
+[HELMBUTT]
+Name = Helmbutt
+Type = STEEL
+Category = Physical
+Power = 40
+Accuracy = 100
+TotalPP = 20
+Target = NearOther
+FunctionCode = Flinch
+Flags = CanProtect,CanMirrorMove
+EffectChance = 40
+Description = The user headbutts the target with a metal head. It has a 20% chance to make the target flinch.
+Animation = IRONHEAD
 #-------------------------------
 [IMPALINGSPIKE]
 Name = Impaling Spike
@@ -4967,6 +5007,19 @@ Flags = CanProtect,CanMirrorMove
 Description = The user charges, then attacks on the second turn. Charges instantly in rainstorm.
 Animation = WILDCHARGE
 #-------------------------------
+[SURGESNARE]
+Name = Surge Snare
+Type = ELECTRIC
+Category = Special
+Power = 45
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = BindTarget3
+Flags = CanProtect,CanMirrorMove
+Description = The user creates an electric fueled cage, trapping and damaging it for three turns.
+Animation = THUNDERCAGE
+#-------------------------------
 [THUNDERBELLY]
 Name = Thunder Belly
 Type = ELECTRIC
@@ -5117,7 +5170,19 @@ Target = User
 FunctionCode = SwapSpecialStats
 Flags = CanSnatch
 Description = The user employs psychic power to switch its base Sp. Atk with its base Sp. Def stat.
-Animation = POWERTRICK
+#-------------------------------
+[EXPLOIT]
+Name = Exploit
+Type = PSYCHIC
+Category = Special
+Power = 60
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = Basic
+Flags = CanProtect,CanMirrorMove,VeryHighCriticalHitRate
+Description = The user psychically exploits weak points in the target's mind. Critical hits four times as often.
+Animation = CONFUSION
 #-------------------------------
 [GENOTHEOSIS]
 Name = Genotheosis
@@ -5349,6 +5414,20 @@ FunctionCode = ProtectUserFromDamagingMovesLowerSpecAttackerSpDef2
 Description = Protects the user from damage this turn. It also lowers the Sp. Def of special attackers by four steps.
 Animation = PROTECT
 #-------------------------------
+[SCRUTINIZE]
+Name = Scrutinize
+Type = PSYCHIC
+Category = Special
+Power = 40
+Accuracy = 100
+TotalPP = 30
+Target = NearOther
+FunctionCode = Basic
+Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
+EffectChance = 10
+Description = The target is scrutinized, damaging their psyche. Critical hits twice as often.
+Animation = CONFUSION
+#-------------------------------
 [SEERSTRIKE]
 Name = Seer Strike
 Type = PSYCHIC
@@ -5385,6 +5464,19 @@ FunctionCode = LowerTargetSpAtk5
 Flags = CanProtect,CanMagicCoat,CanMirrorMove,Dance
 Description = The user dazzles the target with celestial visions that lowers its Sp. Atk stat by five steps.
 Animation = COSMICPOWER
+#-------------------------------
+[TOTALCONTROL]
+Name = Total Control
+Type = PSYCHIC
+Category = Special
+Power = 90
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = Basic
+Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
+Description = The user takes control of the target's mind to unleash an attack on it. Critical hits twice as often.
+Animation = PSYCHOCUT
 #-------------------------------
 [TUTELAGE]
 Name = Tutelage
