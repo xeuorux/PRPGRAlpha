@@ -1957,7 +1957,7 @@ TotalPP = 30
 Target = NearOther
 FunctionCode = Basic
 Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
-Description = The target is jabbed with a sharply pointed beak or horn.
+Description = The target is jabbed with a sharply pointed beak or horn. Critical hits twice as often.
 #-------------------------------
 [PLUCK]
 Name = Pluck
