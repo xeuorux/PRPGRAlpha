@@ -175,7 +175,8 @@ def findBottom(bitmap)
         pbMessage(_INTL("This species has its own shadow sprite in Graphics/Pokemon/Shadow/. The shadow size metric cannot be edited."))
         return false
       end
-      oldval = species_data.shadow_size
+      species_metrics = GameData::SpeciesMetrics.get(@species)
+      oldval = species_metrics.shadow_size
       cmdvals = [0]
       commands = [_INTL("None")]
       defindex = 0
@@ -200,17 +201,17 @@ def findBottom(bitmap)
         self.update
         if cw.index != oldindex
           oldindex = cw.index
-          species_data.shadow_size = cmdvals[cw.index]
+          species_metrics.shadow_size = cmdvals[cw.index]
           pbChangeSpecies(@species)
           refresh
         end
         if Input.trigger?(Input::ACTION)   # Cycle to next option
           pbPlayDecisionSE
-          @metricsChanged = true if species_data.shadow_size != oldval
+          @metricsChanged = true if species_metrics.shadow_size != oldval
           ret = true
           break
         elsif Input.trigger?(Input::BACK)
-          species_data.shadow_size = oldval
+          species_metrics.shadow_size = oldval
           pbPlayCancelSE
           break
         elsif Input.trigger?(Input::USE)
@@ -229,7 +230,7 @@ def findBottom(bitmap)
         pbAutoPosition
         return false
       end
-      metrics_data = GameData::SpeciesMetrics.get_species_form(@species, @form)
+      metrics_data = GameData::SpeciesMetrics.get(@species)
       case param
       when 0
         sprite = @sprites["pokemon_0"]
