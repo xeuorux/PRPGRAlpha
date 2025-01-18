@@ -394,6 +394,7 @@ Flags = SandstormSynergy,Levitation
 [DESICCATE]
 Name = Desiccate
 Description = Prevents Water- or Grass-type moves during sandstorm.
+Flags = SandstormSynergy
 #-------------------------------
 [DETERRENT]
 Name = Deterrent
