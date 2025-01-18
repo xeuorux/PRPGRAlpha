@@ -357,11 +357,6 @@ class PokeBattle_Move
             multipliers[:base_damage_multiplier] *= 2
             user.applyEffect(:EnergyChargeExpended) unless checkingForAI
         end
-        
-		# Volatile Toxin
-		if target.effectActive?(:VolatileToxin) && (type == :GROUND)
-			multipliers[:base_damage_multiplier] *= 2
-		end
 
         # Turbulent Sky
         if user.pbOwnSide.effectActive?(:TurbulentSky)

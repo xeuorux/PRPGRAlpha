@@ -820,15 +820,6 @@ class PokeBattle_Battler
             @battle.pbDisplay(_INTL("{1}'s patience pays off!", user.pbThis))
             @battle.pbHideTribeSplash(user)
         end
-        # Volatile Toxin proc message
-        if move.damagingMove?
-            targets.each do |b|
-                next unless b.effectActive?(:VolatileToxin)
-                @battle.pbCommonAnimation("Toxic", b)
-                effectName = GameData::BattleEffect.get(:VolatileToxin).name
-                @battle.pbDisplay(_INTL("The {1} burst, causing {2} to deal double damage!", effectName, move.name))
-            end
-        end
         # Energy Charge expended message
         if user.effectActive?(:EnergyChargeExpended) && hitNum == 0
             @battle.pbDisplay(_INTL("{1} expended its charge to empower {2}!", user.pbThis, move.name))

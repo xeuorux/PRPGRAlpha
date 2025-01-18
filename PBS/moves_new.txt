@@ -1497,19 +1497,6 @@ Flags = CanProtect,CanMirrorMove
 Description = The user finishes off its prey. Power is tripled against poisoned targets.
 Animation = POISONFANG
 #-------------------------------
-[VOLATILETOXIN]
-Name = Volatile Toxin
-Type = POISON
-Category = Physical
-Power = 75
-Accuracy = 100
-TotalPP = 12
-Target = NearOther
-FunctionCode = TargetTakesDoubleDamageFromNextGroundAttack
-Flags = CanProtect,CanMirrorMove
-Description = The user injects an unstable toxin into the target. The next Ground-type attack they take deals double damage.
-Animation = POISONJAB
-#-------------------------------
 #		GROUND MOVES
 #-------------------------------
 [DEVOURINGDUST]

@@ -135,13 +135,7 @@ user.pbThis(true)))
         end
         # Consume gems, etc.
         consumeMoveTriggeredItems(user)
-        # Consume Volatile Toxin
-        if move.damagingMove?
-            targets.each do |b|
-                b.disableEffect(:VolatileToxin)
-            end
-        end
-        # Consume Charge
+        # Consume Energy Charge
         if user.effectActive?(:EnergyChargeExpended)
             user.disableEffect(:EnergyCharge)
         end

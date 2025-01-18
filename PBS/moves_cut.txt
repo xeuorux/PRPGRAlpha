@@ -1122,6 +1122,19 @@ Flags = CanProtect,CanMirrorMove
 Description = Turns the foe's power against it, dealing damage using the target's Sp. Atk stat.
 Animation = VENOSHOCK
 #-------------------------------
+[VOLATILETOXIN]
+Name = Volatile Toxin
+Type = POISON
+Category = Physical
+Power = 75
+Accuracy = 100
+TotalPP = 12
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect,CanMirrorMove
+Description = The user injects an unstable toxin into the target. The next Ground-type attack they take deals double damage.
+Animation = POISONJAB
+#-------------------------------
 #		GROUND MOVES
 #-------------------------------
 [BONECLUB]

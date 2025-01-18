@@ -626,15 +626,6 @@ class PokeBattle_Move_DisableTargetBladeMoves3 < PokeBattle_Move
 end
 
 #===============================================================================
-# The next ground type move to hit the target deals double damage. (Volatile Toxin)
-#===============================================================================
-class PokeBattle_Move_TargetTakesDoubleDamageFromNextGroundAttack < PokeBattle_Move
-    def pbEffectAgainstTarget(_user, target)
-        target.applyEffect(:VolatileToxin)
-    end
-end
-
-#===============================================================================
 # Target gains a weakness to Bug-type attacks. (Creep Out)
 #===============================================================================
 class PokeBattle_Move_MakeTargetWeakerToBug < PokeBattle_Move
