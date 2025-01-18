@@ -1343,6 +1343,10 @@ Description = Immune to Flying-type moves and deals 50% more damage with them.
 Name = Perennial Payload
 Description = After fainting from exploding, revives after six turns.
 #-------------------------------
+[PERFECTIONIST]
+Name = Perfectionist
+Description = Halves move damage if its moves are not critical.
+#-------------------------------
 [PERFECTLUCK]
 Name = Perfect Luck
 Description = Maximizes the frequency of multi-strike moves. Always deals critical hits.
