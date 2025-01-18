@@ -6164,7 +6164,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = Bully
 Flags = CanProtect,CanMirrorMove
-Description = This attack deals 50 percent more damage if the target has any raised or lowered stat steps.
+Description = This attack deals 50% more damage if the target has any raised or lowered stat steps.
 Animation = PUNISHMENT
 #-------------------------------
 [CALTROPARTS]
