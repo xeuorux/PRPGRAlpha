@@ -1951,12 +1951,12 @@ Description = The user absorbs its target's HP. The user's HP is restored by 75%
 Name = Peck
 Type = FLYING
 Category = Physical
-Power = 45
+Power = 40
 Accuracy = 100
 TotalPP = 30
 Target = NearOther
 FunctionCode = Basic
-Flags = CanProtect,CanMirrorMove
+Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
 Description = The target is jabbed with a sharply pointed beak or horn.
 #-------------------------------
 [PLUCK]
