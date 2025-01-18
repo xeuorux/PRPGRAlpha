@@ -1648,7 +1648,7 @@ Pokemon = HAEROBIC,70
 #-------------------------------
 [VETERAN_F,Iva]
 Pokemon = GALVANTULA,70
-    Moves = STICKYWEB,THUNDER,SIGNALOVERLOAD,VOLTSWITCH
+    Moves = STICKYWEB,THUNDER,SCALESTORM,VOLTSWITCH
     AbilityIndex = 0 # Ocular
     Item = FOCUSSASH
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def

@@ -1215,7 +1215,7 @@ Pokemon = ABSOLUS,70
     AbilityIndex = 1 # Vengeance
     Item = LEFTOVERS
 Pokemon = ALAKAZAM,70
-    Moves = EXTRASENSORY,STEELBEAM,MISTBURST,RECOVER
+    Moves = PSYCHIC,STEELBEAM,MISTBURST,RECOVER
     AbilityIndex = 1 # Steelworker
     Item = SHELLBELL
 Pokemon = VICTREEBEL,70
@@ -2069,7 +2069,7 @@ Pokemon = DODRIO,40
     Moves = CHAOSWHEEL,DRILLPECK,GRANITEHEAD,QUICKATTACK
     AbilityIndex = 0 # Fluster Flock
 Pokemon = GOLDUCK,41
-    Moves = SCALD,EXTRASENSORY,CONFUSERAY,REFLECT
+    Moves = SCALD,PSYCHIC,CONFUSERAY,REFLECT
     AbilityIndex = 0 # Headache
 Pokemon = AGGRON,41
     Moves = IRONHEAD,ADAMANTINEPRESS,HEAVYSLAM,DRILLRUN
@@ -2124,7 +2124,7 @@ Pokemon = BARBARACLE,41
     Moves = CROSSCHOP,ADAMANTINEPRESS,RAZORSHELL,ROCKPOLISH
     AbilityIndex = 1 # Steel Absorb
 Pokemon = SENSIBELLE,42
-    Moves = HEARTRHYTHM,NULLPULSE,EXTRASENSORY,SHOUT
+    Moves = HEARTRHYTHM,NULLPULSE,PSYCHIC,SHOUT
     AbilityIndex = 1 # Regenerator
     Item = HIVISJACKET
 #-------------------------------
@@ -4233,7 +4233,7 @@ Pokemon = CLEFABLE,55
 #-------------------------------
 [LASS3,Carmen]
 Pokemon = SENSIBELLE,55
-    Moves = EXTRASENSORY,WARDPRESS,RECOVER,NULLPULSE
+    Moves = PSYCHIC,WARDPRESS,RECOVER,NULLPULSE
     AbilityIndex = 1 # Regenerator
 Pokemon = MSEVIPER,55
     Moves = FARADAYCAGE,TOXICTASTE,LIGHTNINGSLAM,GLARE
@@ -4418,7 +4418,7 @@ Pokemon = DRACOZOLT,60
     Moves = VOLTSEEKERS,REND,HUMBLE,DRACOMETEOR
     AbilityIndex = 1 # Challenger
 Pokemon = MASQUERAIN,60
-    Moves = BUBBLEBLASTER,BUGBUZZ,BLUSTER,SIGNALOVERLOAD
+    Moves = BUBBLEBLASTER,BUGBUZZ,BLUSTER,SCALESTORM
     AbilityIndex = 1 # Intimidate
 Pokemon = CRUSTLE,60
     Moves = BEDROCKBREAKER,LEECHLIFE,EARTHQUAKE,STEALTHROCK
@@ -4485,7 +4485,7 @@ Pokemon = REAVOR,60
 ExtendsVersion = 0
 Policies = CURSE_SAND_ABILITIES,SANDSTORM_TEAM
 Pokemon = FLYGON,60
-    Moves = PULVERIZERCHORD,SIGNALOVERLOAD,GUTTURALROAR,ERODE
+    Moves = PULVERIZERCHORD,SCALESTORM,GUTTURALROAR,ERODE
     ExtraAbilities = SIRENSONG
     Item = WIDELENS
 Pokemon = TOWERPODA,60
@@ -4538,7 +4538,7 @@ Pokemon = CACTURNE,56
     Moves = SUCKERPUNCH,SINISTERSPINES,PAYBACK,LEECHSEED
     AbilityIndex = 0 # Heartless
 Pokemon = MGIGALITH,56
-    Moves = EXTRASENSORY,SINGINGSTONE,STRUGGLEBUG,NULLPULSE
+    Moves = PSYCHIC,SINGINGSTONE,STRUGGLEBUG,NULLPULSE
     AbilityIndex = 0 # Time Interloper
     Item = LIFEORB
 Pokemon = GOLISOPOD,56
@@ -4922,7 +4922,7 @@ Pokemon = FLORGES,55
     AbilityIndex = 1 # Sentry
     Item = OCCABERRY
 Pokemon = PALMANTRA,55
-    Moves = ADRENALASH,EXTRASENSORY,DEADEND,CALMMIND
+    Moves = ADRENALASH,TOTALCONTROL,DEADEND,CALMMIND
     AbilityIndex = 1 # Stability
 #-------------------------------
 [MASKEDVILLAIN,Crimson,5]
@@ -5152,7 +5152,7 @@ Pokemon = FLORGES,65
     AbilityIndex = 1 # Sentry
     Item = OCCABERRY
 Pokemon = PALMANTRA,65
-    Moves = ADRENALASH,EXTRASENSORY,DEADEND,CALMMIND
+    Moves = ADRENALASH,TOTALCONTROL,DEADEND,CALMMIND
     AbilityIndex = 1 # Stability
 #-------------------------------
 [MASKEDVILLAIN2,Teal,5]
@@ -5415,7 +5415,7 @@ Pokemon = DRACOZOLT,70
 Flags = NoPerfect
 Pokemon = GALVANTULA,70
     Name = Dr. Silk
-    Moves = STICKYWEB,SIGNALOVERLOAD,VOLTSWITCH,THUNDER
+    Moves = STICKYWEB,SCALESTORM,VOLTSWITCH,THUNDER
     AbilityIndex = 0 # Ocular
     Item = FOCUSSASH
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -5910,7 +5910,7 @@ Pokemon = HAWLUCHA,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 0,20,10,20,20,0
 Pokemon = PALMANTRA,70
-    Moves = ADRENALASH,ENERGYBALL,PSYCHIC,SIGNALOVERLOAD
+    Moves = ADRENALASH,ENERGYBALL,PSYCHIC,SCALESTORM
     AbilityIndex = 1 # Stability
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,0,20,20,0
