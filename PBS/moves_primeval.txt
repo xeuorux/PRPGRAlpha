@@ -600,14 +600,14 @@ Animation = SUNSHINE
 #		WATER MOVES
 #-------------------------------
 [EMPOWEREDBUBBLEBEAM]
-Name = Bubble Beam
+Name = Empowered Bubble Beam
 Type = WATER
 Category = Special
 Power = 180
 Accuracy = 100
 TotalPP = 15
 Target = AllNearFoes
-FunctionCode = LowerTargetSpd3
+FunctionCode = EmpoweredBubbleBeam
 Flags = CanProtect,CanMirrorMove,Empowered
 EffectChance = 100
 Description = A spray of bubbles is forcefully ejected at all nearby foes, lowering their Speed by 3 steps.
