@@ -1542,6 +1542,12 @@ FrontSprite = 0,5
 ShadowX = 0
 ShadowSize = 2
 #-------------------------------
+[MDRAGALGE]
+BackSprite = 0,1
+FrontSprite = 0,5
+ShadowX = 0
+ShadowSize = 2
+#-------------------------------
 [DRAGAPULT]
 BackSprite = 0,9
 FrontSprite = 0,13
@@ -5641,6 +5647,12 @@ ShadowX = 0
 ShadowSize = 2
 #-------------------------------
 [SKRELP]
+BackSprite = 0,26
+FrontSprite = 0,30
+ShadowX = 0
+ShadowSize = 2
+#-------------------------------
+[MSKRELP]
 BackSprite = 0,26
 FrontSprite = 0,30
 ShadowX = 0
