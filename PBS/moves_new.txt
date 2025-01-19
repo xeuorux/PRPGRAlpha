@@ -2217,7 +2217,7 @@ Target = NearOther
 Priority = 1
 FunctionCode = Basic
 Flags = CanProtect,CanMirrorMove
-Description = The user shoots out a quick flash of light energy. This move always goes first.
+Description = The user shoots out a quick flash of bioluminescence to damage the target. This move always goes first.
 Animation = SIGNALBEAM
 #-------------------------------
 [CARAPACECRUSH]
@@ -2464,9 +2464,10 @@ Power = 110
 Accuracy = 0
 TotalPP = 10
 Target = NearOther
-FunctionCode = CantMissLowerUserSpeedDef1
+FunctionCode = CantMissLowerUserSpeedSpDef1
 Flags = CanProtect,CanMirrorMove,Wind
-Description = The user sheds and launches a volley of scales at the target. Lands without fail and lowers the user's Defense and Speed.
+Description = The user sheds a huge volley of scales at the target. Lands without fail and lowers the user's Defense and Speed.
+Animation = SILVERWIND
 #-------------------------------
 [SEDATINGDUST]
 Name = Sedating Dust
