@@ -72,11 +72,11 @@ BattleHandlers::TargetItemOnHit.add(:LUSTROUSJACKET,
 
 # Sitreon berry
 BattleHandlers::HPHealItem.add(:SITREONBERRY,
-    proc { |item,battler,battle,forced,filchedFrom,filchingAbility|
+    proc { |item,battler,battle,forced,filchedFrom,filchingAbility,items_to_skip|
       next false if !battler.canHeal?
       next false if !forced && !battler.canConsumePinchBerry?(false)
       battle.pbCommonAnimation("Nom",battler) if !forced
-      healFromBerry(battler,1.0/2.0,item,forced,filchedFrom,filchingAbility)
+      healFromBerry(battler,1.0/2.0,item,forced,filchedFrom,filchingAbility, items_to_skip: items_to_skip)
       next true
     }
 )
@@ -123,7 +123,7 @@ BattleHandlers::StatusCureItem.add(:LUNUSBERRY,
 
 # Zalaka Berry
 BattleHandlers::HPHealItem.add(:ZALAKABERRY,
-    proc { |item,battler,battle,forced,filchedFrom,filchingAbility|
+    proc { |item,battler,battle,forced,filchedFrom,filchingAbility,items_to_skip|
       next pbBattleStatIncreasingBerry(battler,battle,item,forced,:SPEED,99,false,filchedFrom, filchingAbility)
     }
 )

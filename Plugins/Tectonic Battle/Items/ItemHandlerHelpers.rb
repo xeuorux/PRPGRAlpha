@@ -1,4 +1,4 @@
-def healFromBerry(battler, ratio, item, forced = false, filchedFrom = nil, filchingAbility = nil)
+def healFromBerry(battler, ratio, item, forced = false, filchedFrom = nil, filchingAbility = nil, items_to_skip: [])
     if filchedFrom
         battler.battle.pbShowAbilitySplash(battler, filchingAbility)
         itemName = GameData::Item.get(item).name
@@ -13,7 +13,8 @@ def healFromBerry(battler, ratio, item, forced = false, filchedFrom = nil, filch
         battler.battle.pbHideTribeSplash(battler)
     end
     itemToPass = forced ? nil : item
-    battler.applyFractionalHealing(ratio, item: itemToPass)
+    items_to_skip.push(itemToPass) if itemToPass
+    battler.applyFractionalHealing(ratio, item: itemToPass, items_to_skip: items_to_skip)
     battler.battle.pbHideAbilitySplash(battler) if filchedFrom
 end
 

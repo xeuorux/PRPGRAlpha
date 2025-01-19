@@ -343,7 +343,7 @@ class PokeBattle_Battler
         end
     end
 
-    def pbItemHPHealCheck(item_to_use = nil, fling = false)
+    def pbItemHPHealCheck(item_to_use = nil, fling = false, items_to_skip: [])
         return if afraid?
 
         # Check for berry filching
@@ -372,8 +372,9 @@ class PokeBattle_Battler
         itemsToCheck = forced ? [item_to_use] : activeItems.clone
 
         itemsToCheck.each do |item|
+            next if items_to_skip.include?(item)
             # Check for user
-            next unless BattleHandlers.triggerHPHealItem(item, self, @battle, forced, nil, nil)
+            next unless BattleHandlers.triggerHPHealItem(item, self, @battle, forced, nil, nil, items_to_skip)
             pbHeldItemTriggered(item, !forced, fling)
         end
 
