@@ -2466,7 +2466,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = CantMissLowerUserSpeedSpDef1
 Flags = CanProtect,CanMirrorMove,Wind
-Description = The user sheds a huge volley of scales at the target. Lands without fail and lowers the user's Defense and Speed.
+Description = The user sheds a huge volley of scales at the target. Lands without fail and lowers the user's Sp. Def and Speed.
 Animation = SILVERWIND
 #-------------------------------
 [SEDATINGDUST]
