@@ -1280,7 +1280,7 @@ Description = Physical moves have a 30% chance to numb targets.
 #-------------------------------
 [OCULAR]
 Name = Ocular
-Description = Boosts the accuracy of its allies and itself by 50%.
+Description = Boosts the Accuracy of its allies and itself by 50%.
 #-------------------------------
 [ODDITY]
 Name = Oddity

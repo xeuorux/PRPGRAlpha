@@ -23,7 +23,7 @@ TotalPP = 25
 Target = User
 FunctionCode = MaxUserAcc
 Flags = CanSnatch
-Description = The user steadies its eyes, mind, and body in order to maximize its accuracy.
+Description = The user steadies its eyes, mind, and body in order to maximize its Accuracy.
 Animation = MINDREADER
 #-------------------------------
 [BEDFELLOWS]
@@ -320,7 +320,7 @@ TotalPP = 12
 Target = User
 FunctionCode = RaiseUserSpAtkAcc3
 Flags = CanSnatch
-Description = The user focuses its aim to raise its Sp. Atk and accuracy by three steps each.
+Description = The user focuses its aim to raise its Sp. Atk and Accuracy by three steps each.
 Animation = LASERFOCUS
 #-------------------------------
 [LATHER]
@@ -1043,7 +1043,7 @@ TotalPP = 12
 Target = AllNearFoes
 FunctionCode = LowerTargetDefEvasion2
 Flags = CanMagicCoat,CanMirrorMove,Sound
-Description = Lowers the target's Defense and evasion by two steps each. Can't miss and skips protections.
+Description = Lowers the target's Defense and Evasion by two steps each. Can't miss and skips protections.
 Animation = SUPERSONIC
 #-------------------------------
 [HOP]
@@ -2053,7 +2053,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = RaiseUserAccIfMisses
 Flags = CanProtect,CanMirrorMove
-Description = The user throws a large rock at the target. If it misses, the user's accuracy is raised.
+Description = The user throws a large rock at the target. If it misses, the user's Accuracy is raised.
 Animation = ROCKTHROW
 #-------------------------------
 [ROCKOUT]
@@ -3709,7 +3709,7 @@ TotalPP = 15
 Target = User
 FunctionCode = RaiseUserSpAtkSpDefAcc2
 Flags = CanSnatch
-Description = The user conserves for future attacks. This raises its Sp. Atk, Sp. Def, and accuracy by two steps each.
+Description = The user conserves for future attacks. This raises its Sp. Atk, Sp. Def, and Accuracy by two steps each.
 #-------------------------------
 [TARVOLLEY]
 Name = Tar Volley
@@ -6661,7 +6661,7 @@ TotalPP = 15
 Target = NearAlly
 Priority = 5
 FunctionCode = PowerUpAndIncreaseAccOfAllyMove
-Description = The user assists an ally by boosting the power and accuracy of its next attack by 50%.
+Description = The user assists an ally by boosting the power and Accuracy of its next attack by 50%.
 #-------------------------------
 [STAREDOWN]
 Name = Stare Down

@@ -245,7 +245,7 @@ Flags = Immutable
 #-------------------------------
 [HUSTLE]
 Name = Hustle
-Description = Boosts move damage by 50%, but lowers accuracy by 20%.
+Description = Boosts move damage by 50%, but lowers Accuracy by 20%.
 #-------------------------------
 [HYDRATION]
 Name = Hydration
@@ -675,7 +675,7 @@ Description = Physical moves negate all protection effects.
 #-------------------------------
 [VICTORYSTAR]
 Name = Victory Star
-Description = Doubles the accuracy of its allies and itself.
+Description = Doubles the Accuracy of its allies and itself.
 #-------------------------------
 [VITALSPIRIT]
 Name = Vital Spirit

@@ -2078,7 +2078,7 @@ TotalPP = 15
 Target = User
 FunctionCode = RaiseUserAtkDefAcc2
 Flags = CanSnatch
-Description = The user coils up and concentrates. This raises its Attack, Defense, and accuracy by two steps each.
+Description = The user coils up and concentrates. This raises its Attack, Defense, and Accuracy by two steps each.
 #-------------------------------
 [CROSSPOISON]
 Name = Cross Poison
@@ -2389,7 +2389,7 @@ Accuracy = 0
 TotalPP = 5
 Target = BothSides
 FunctionCode = StartGravity5
-Description = Gravity is intensified for five turns, forcing Pokémon down from the air and doubling all move accuracy.
+Description = Gravity is intensified for five turns, forcing Pokémon down from the air and doubling all move Accuracy.
 #-------------------------------
 [LANDSWRATH]
 Name = Land's Wrath
@@ -6399,7 +6399,7 @@ TotalPP = 12
 Target = User
 FunctionCode = RaiseUserAtkAcc3
 Flags = CanSnatch
-Description = The user sharpens its claws to raise its Attack and accuracy by three steps each.
+Description = The user sharpens its claws to raise its Attack and Accuracy by three steps each.
 #-------------------------------
 [HOWL]
 Name = Howl

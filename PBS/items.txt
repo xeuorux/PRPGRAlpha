@@ -870,7 +870,7 @@ Name = Wide Lens
 NamePlural = Wide Lenses
 Pocket = 5
 Price = 4000
-Description = A held item. It is a magnifying lens that boosts the accuracy of moves by 35%.
+Description = A held item. It is a magnifying lens that boosts the Accuracy of moves by 35%.
 #-------------------------------
 [LAGGINGTAIL]
 Name = Lagging Tail
@@ -2023,7 +2023,7 @@ NamePlural = Micle Berries
 Pocket = 5
 Price = 0
 Flags = Berry,Pinch
-Description = If held by a Pokémon, it raises its accuracy by four steps in a pinch.
+Description = If held by a Pokémon, it raises its Accuracy by four steps in a pinch.
 #-------------------------------
 [CUSTAPBERRY]
 Name = Custap Berry
