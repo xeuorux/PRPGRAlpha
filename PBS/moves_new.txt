@@ -1041,9 +1041,9 @@ Category = Status
 Accuracy = 0
 TotalPP = 12
 Target = AllNearFoes
-FunctionCode = LowerTargetDefEvasion2
+FunctionCode = CantMissLowerTargetDefSpDefEvasion3
 Flags = CanMagicCoat,CanMirrorMove,Sound
-Description = Lowers the target's Defense and Evasion by two steps each. Can't miss and skips protections.
+Description = A high pitched screech lowers the target's Defense, Sp. Def, and Evasion by three steps each. Can't miss and skips protections.
 Animation = SUPERSONIC
 #-------------------------------
 [HOP]

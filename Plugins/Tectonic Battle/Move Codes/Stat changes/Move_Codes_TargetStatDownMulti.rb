@@ -65,12 +65,12 @@ class PokeBattle_Move_LowerTargetAllMainStats < PokeBattle_TargetMultiStatDownMo
 end
 
 #===============================================================================
-# Lowers the target's Defense and Evasion by 2. (Echolocate)
+# Lowers the target's Defense, Sp. Def, and Evasion by 3. Can't miss. (Echolocate)
 #===============================================================================
-class PokeBattle_Move_LowerTargetDefEvasion2 < PokeBattle_TargetMultiStatDownMove
+class PokeBattle_Move_CantMissLowerTargetDefSpDefEvasion3 < PokeBattle_TargetMultiStatDownMove
     def initialize(battle, move)
         super
-        @statDown = [:DEFENSE, 2, :EVASION, 2]
+        @statDown = [:DEFENSE, 3, :SPECIAL_DEFENSE, 3, :EVASION, 3]
     end
 
     def pbAccuracyCheck(_user, _target); return true; end
