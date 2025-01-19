@@ -361,7 +361,7 @@ class PokeBattle_Move_UseChoiceOf3RandomNonSignatureNonPsychicDamagingMoves < Po
             MOONBLAST
             CLEARSMOG
             HEX
-            TRICKYTOXINS
+            SHORTCIRCUIT
             CHARGEBEAM
             BLUSTER
             BLOSSOM
