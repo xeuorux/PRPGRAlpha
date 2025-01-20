@@ -399,6 +399,12 @@ target.pbThis(true)))
             end
         end
 
+        if target.hasActiveAbility?(:THIEVESDIVERSION) && target.hasAnyItem? && target.itemActive? && !@battle.moldBreaker
+            target.damageState.thievesDiversion = true
+            damage = 0
+            damageAdjusted = true
+        end 
+
         target.damageState.displayedDamage = damage if damageAdjusted
         damage = 0 if damage < 0
         target.damageState.displayedDamage = 0 if target.damageState.displayedDamage < 0
@@ -548,7 +554,10 @@ target.pbThis(true)))
             @battle.pbShowAbilitySplash(user,:ARCHVILLAIN)
             @battle.pbDisplay(_INTL("{1} lets out an arrogant laugh!", user.pbThis))
             @battle.pbHideAbilitySplash(user)
-        end
+        elsif target.damageState.thievesDiversion
+            @battle.pbDisplay(_INTL("{1} blocked the hit with its stolen item! It didn't take any damage!", target.pbThis))
+            target.consumeItem(target.items[0], belch: false)    
+        end        
     end
 
     # Used by Counter/Mirror Coat/Metal Burst/Revenge/Focus Punch/Bide/Assurance.

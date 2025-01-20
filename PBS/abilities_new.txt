@@ -648,6 +648,10 @@ Description = Flying-type attacks have a 40% chance to burn.
 Name = Flash Freeze
 Description = On the first turn, its attacks frostbite the target.
 #-------------------------------
+[FLEXIBLE]
+Name = Flexible
+Description = Attacks this Pokémon uses that don't share a type with it are boosted by 30%.
+#-------------------------------
 [FLOURISHING]
 Name = Flourishing
 Description = Grows at the end of each turn, slowing down but improving other stats.
@@ -1954,6 +1958,10 @@ Description = Flinching moves always activate their random effects.
 [TESLACOILS]
 Name = Tesla Coils
 Description = Becomes energy charged upon entry, doubling the power of its next Electric-type attack.
+#-------------------------------
+[THIEVESDIVERSION]
+Name = Thieve's Diversion
+Description = It can avoid being knocked out by sacrificing its held item.
 #-------------------------------
 [THUNDERSTRUCK]
 Name = Thunderstruck
