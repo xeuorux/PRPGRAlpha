@@ -399,8 +399,8 @@ target.pbThis(true)))
             end
         end
 
-        if target.hasActiveAbility?(:THIEVESDIVERSION) && target.hasAnyItem? && target.itemActive? && !@battle.moldBreaker
-            target.damageState.thievesDiversion = true
+        if target.hasActiveAbility?(:THIEFSDIVERSION) && target.hasAnyItem? && target.itemActive? && !@battle.moldBreaker
+            target.damageState.thiefsDiversion = true
             damage = 0
             damageAdjusted = true
         end 
@@ -554,7 +554,7 @@ target.pbThis(true)))
             @battle.pbShowAbilitySplash(user,:ARCHVILLAIN)
             @battle.pbDisplay(_INTL("{1} lets out an arrogant laugh!", user.pbThis))
             @battle.pbHideAbilitySplash(user)
-        elsif target.damageState.thievesDiversion
+        elsif target.damageState.thiefsDiversion
             @battle.pbDisplay(_INTL("{1} blocked the hit with its stolen item! It didn't take any damage!", target.pbThis))
             target.consumeItem(target.items[0], belch: false)    
         end        

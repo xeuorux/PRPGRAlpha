@@ -2926,7 +2926,7 @@ Pokemon = QWILFISH,36
     Item = FOCUSSASH
 Pokemon = LINOONE,37
     Moves = EXTREMESPEED,COVET,THROATCHOP
-    AbilityIndex = 0 # Thieve's Diversion
+    AbilityIndex = 0 # Thief's Diversion
 #-------------------------------
 [POKEFAN_F3,Margaret]
 Pokemon = GRIMMSNARL,38
@@ -7231,7 +7231,7 @@ Pokemon = GOLEM,59
 Pokemon = RUBARIOR,59
     AbilityIndex = 0 # Magic Shield
 Pokemon = LINOONE,59
-    AbilityIndex = 0 # Thieve's Diversion
+    AbilityIndex = 0 # Thief's Diversion
     Item = LIECHIBERRY
 Pokemon = MILOTIC,59
     AbilityIndex = 1 # Competitive

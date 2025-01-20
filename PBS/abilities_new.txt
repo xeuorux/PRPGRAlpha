@@ -1959,8 +1959,8 @@ Description = Flinching moves always activate their random effects.
 Name = Tesla Coils
 Description = Becomes energy charged upon entry, doubling the power of its next Electric-type attack.
 #-------------------------------
-[THIEVESDIVERSION]
-Name = Thieve's Diversion
+[THIEFSDIVERSION]
+Name = Thief's Diversion
 Description = Blocks a single hit by sacrificing its held item, only if it has been stolen.
 #-------------------------------
 [THUNDERSTRUCK]

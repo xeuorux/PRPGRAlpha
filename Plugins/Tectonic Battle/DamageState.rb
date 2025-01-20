@@ -32,7 +32,7 @@ class PokeBattle_DamageState
 	attr_accessor :feastWeakened   		# Whether a type-resisting feast was used (wont be consumed)
 	attr_accessor :fear			   		# The hit caused fear in the pokemon
 	attr_accessor :bubbleBarrier   		# How much damage was prevented by bubble barrier
-	attr_accessor :thievesDiversion # Thieve's Diversion ability activated 
+	attr_accessor :thiefsDiversion # Thief's Diversion ability activated 
 
 	def initialize; reset; end
 
@@ -74,6 +74,6 @@ class PokeBattle_DamageState
 		@direDiversion		= false
 		@endureBerry		= false
 		@bubbleBarrier		= 0
-		@thievesDiversion		= false
+		@thiefsDiversion		= false
 	end
 end
