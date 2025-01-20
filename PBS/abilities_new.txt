@@ -1961,7 +1961,7 @@ Description = Becomes energy charged upon entry, doubling the power of its next 
 #-------------------------------
 [THIEVESDIVERSION]
 Name = Thieve's Diversion
-Description = It can avoid being knocked out by sacrificing its held item.
+Description = Blocks a single hit by sacrificing its held item, only if it has been stolen.
 #-------------------------------
 [THUNDERSTRUCK]
 Name = Thunderstruck
