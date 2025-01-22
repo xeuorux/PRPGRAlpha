@@ -72,6 +72,7 @@ Description = Uses Lightning Dance if an attack lowers its HP to half or below.
 [BATTLEARMOR]
 Name = Battle Armor
 Description = The Pokémon is protected against critical hits.
+Flags = CritImmunity
 #-------------------------------
 [BEASTBOOST]
 Name = Beast Boost
@@ -761,6 +762,7 @@ Description = During eclipse, gets a 30% boost to Sp. Atk.
 [SHELLARMOR]
 Name = Shell Armor
 Description = The Pokémon is protected against critical hits.
+Flags = CritImmunity
 #-------------------------------
 [SHRIEKING]
 Name = Ear-Splitting

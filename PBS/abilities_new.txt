@@ -936,6 +936,7 @@ Description = Raises Speed by four steps when a stat is lowered by a foe.
 [IMPERVIOUS]
 Name = Impervious
 Description = Protects from critical hits and from enemies lowering Defense or Sp. Def.
+Flags = CritImmunity
 #-------------------------------
 [IMPETUOUS]
 Name = Impetuous
@@ -1048,6 +1049,7 @@ Description = Deals 30% more damage when it's slower than the target.
 [LEVIATHAN]
 Name = Leviathan
 Description = Protected from critical hits. Can't be burned or frostbitten.
+Flags = CritImmunity
 #-------------------------------
 [LIFELINE]
 Name = Lifeline
@@ -1072,6 +1074,7 @@ Description = Boosts Speed by 50%, but the Pokémon is hurt for 1/10th HP each t
 [LIVINGARMOR]
 Name = Living Armor
 Description = Heals 1/12th HP every turn. Protected against critical hits.
+Flags = CritImmunity
 #-------------------------------
 [LONGODDS]
 Name = Long Odds
@@ -1804,6 +1807,7 @@ Description = Immune to Steel-type moves and restores 25% of max HP if hit by on
 [STEELYSHELL]
 Name = Steely Shell
 Description = Steel-type attacks deal 50% more damage, and the Pokémon is protected from critical hits.
+Flags = CritImmunity
 #-------------------------------
 [STEEPFLYING]
 Name = Steep Flying
@@ -2044,6 +2048,7 @@ Description = If an attacker would activate a random added effect on the Pokémo
 [UNCONQUERABLE]
 Name = Unconquerable
 Description = Blocks random added effects of attacks taken, and prevents critical hits.
+Flags = CritImmunity
 #-------------------------------
 [UNCONVENTIONAL]
 Name = Unconventional
