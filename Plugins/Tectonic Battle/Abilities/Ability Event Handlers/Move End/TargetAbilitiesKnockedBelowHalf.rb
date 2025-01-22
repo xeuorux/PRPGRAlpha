@@ -62,9 +62,9 @@ BattleHandlers::TargetAbilityKnockedBelowHalf.add(:HARDAS,
 
 BattleHandlers::TargetAbilityKnockedBelowHalf.add(:KARMA,
     proc { |ability, target, user, move, _switched, battle|
-        next if user.effectActive?(:Jinx)
+        next if user.effectActive?(:Jinxed)
         battle.pbShowAbilitySplash(target, ability)
-        user.applyEffect(:Jinx)
+        user.applyEffect(:Jinxed)
         battle.pbHideAbilitySplash(target)
     }
 )
