@@ -745,7 +745,7 @@ Target = NearOther
 Priority = -6
 FunctionCode = SwitchOutTargetStatusMove
 Flags = CanMagicCoat,CanMirrorMove,Sound
-Description = The foe is forced to switch out to a random ally. Always goes last. Ends wild battles.
+Description = The foe is forced to switch out to a random ally. Always goes last.
 #-------------------------------
 [ROUND]
 Name = Round
@@ -2003,7 +2003,7 @@ Target = NearOther
 Priority = -6
 FunctionCode = SwitchOutTargetStatusMove
 Flags = CanMagicCoat,CanMirrorMove,Wind
-Description = The foe is forced to switch out to a random ally. Always goes last. Ends wild battles.
+Description = The foe is forced to switch out to a random ally. Always goes last.
 #-------------------------------
 [WINGCRASH]
 Name = Wing Crash
@@ -5682,7 +5682,7 @@ TotalPP = 15
 Target = User
 Priority = -6
 FunctionCode = SwitchOutUserStatusMove
-Description = The user switches out to a party Pokémon in waiting. Always goes last. Ends wild battles.
+Description = The user switches out to a party Pokémon in waiting. Always goes last.
 #-------------------------------
 [TRICK]
 Name = Trick
@@ -6105,7 +6105,7 @@ Target = NearOther
 Priority = -6
 FunctionCode = SwitchOutTargetDamagingMove
 Flags = CanProtect,CanMirrorMove
-Description = The user forces the target to switch out, to be replaced at random. Always goes last. Ends wild battles.
+Description = The user forces the target to switch out, to be replaced at random. Always goes last.
 #-------------------------------
 [DUALCHOP]
 Name = Dual Chop

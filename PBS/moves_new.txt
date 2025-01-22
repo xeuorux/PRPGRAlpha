@@ -798,7 +798,7 @@ Target = NearOther
 Priority = -6
 FunctionCode = SwitchOutTargetDamagingMove
 Flags = CanProtect,CanMirrorMove
-Description = The user forces the target to switch out, to be replaced at random. Always goes last. Ends wild battles.
+Description = The user forces the target to switch out, to be replaced at random. Always goes last.
 Animation = ROAR
 #-------------------------------
 [DROPKICK]
