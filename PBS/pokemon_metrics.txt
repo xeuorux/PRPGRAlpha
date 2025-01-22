@@ -3769,10 +3769,10 @@ ShadowX = 0
 ShadowSize = 2
 #-------------------------------
 [MDRAGALGE]
-BackSprite = 0,1
-FrontSprite = 0,5
+BackSprite = 0,9
+FrontSprite = 0,12
 ShadowX = 0
-ShadowSize = 2
+ShadowSize = 3
 #-------------------------------
 [MDUSTOX]
 BackSprite = 2,17
@@ -4183,8 +4183,8 @@ ShadowX = 0
 ShadowSize = 1
 #-------------------------------
 [MSKRELP]
-BackSprite = 0,26
-FrontSprite = 0,30
+BackSprite = 0,13
+FrontSprite = 0,16
 ShadowX = 0
 ShadowSize = 2
 #-------------------------------
