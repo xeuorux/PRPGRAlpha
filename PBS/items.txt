@@ -3044,4 +3044,4 @@ NamePlural = Ominous Eggs
 Pocket = 8
 Price = 0
 Flags = KeyItem,SkipPocketMessage
-Description = A vessel for negative emotions. If you perfectly defeat enough route or gym trainers, it will grant you rewards.
+Description = A vessel for negative emotions. Perfectly defeat enough trainers to earn its rewards.
