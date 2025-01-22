@@ -1017,7 +1017,7 @@ Name = Clear Amulet
 NamePlural = Clear Amulets
 Pocket = 5
 Price = 3000
-Description = A held item. The holder is protected from stat drops.
+Description = A held item. The holder is protected from stat drops (except when self-inflicted).
 #-------------------------------
 [ADAMANTORB]
 Name = Adamant Orb

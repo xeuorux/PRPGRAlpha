@@ -61,7 +61,8 @@ Flags = SunshineSynergy
 #-------------------------------
 [CLEARBODY]
 Name = Clear Body
-Description = Prevents other Pokémon from lowering its stat steps.
+Description = Prevents the Pokémon's stat steps from being lowered (except when self-inflicted).
+Flags = OtherStatDropImmunity
 #-------------------------------
 [COMATOSE]
 Name = Comatose
@@ -173,7 +174,7 @@ Flags = SunshineSynergy,Immutable
 #-------------------------------
 [FLOWERVEIL]
 Name = Flower Veil
-Description = Protects Grass-type allies from status conditions or stat lowering by enemies.
+Description = Protects Grass-type allies from status conditions or stat lowering (except self-inflicted).
 #-------------------------------
 [FLUFFY]
 Name = Fluffy
@@ -190,7 +191,8 @@ Description = Reduces damage done to allies by 25%.
 #-------------------------------
 [FULLMETALBODY]
 Name = Full Metal Body
-Description = Prevents other Pokémon from lowering its stat steps.
+Description = Prevents the Pokémon's stat steps from being lowered (except when self-inflicted).
+Flags = OtherStatDropImmunity
 #-------------------------------
 [FURCOAT]
 Name = Fur Coat
@@ -703,7 +705,8 @@ Description = Physical attacks against the Pokémon raise its Speed by two steps
 #-------------------------------
 [WHITESMOKE]
 Name = White Smoke
-Description = Prevents other Pokémon from lowering its stats.
+Description = Prevents the Pokémon's stat steps from being lowered (except when self-inflicted).
+Flags = OtherStatDropImmunity
 #-------------------------------
 [WIMPOUT]
 Name = Wimp Out

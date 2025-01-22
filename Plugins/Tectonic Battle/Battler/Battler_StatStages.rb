@@ -578,7 +578,9 @@ class PokeBattle_Battler
 
     def pbCanLowerAnyOfStats?(statArray, user, move: nil, showFailMsg: false)
         for i in 0...statArray.length / 2
-            return true if pbCanLowerStatStep?(statArray[i * 2], user, move, showFailMsg)
+            canLowerThisStat = pbCanLowerStatStep?(statArray[i * 2], user, move, showFailMsg)
+            return true if canLowerThisStat
+            showFailMsg = false
         end
         return false
     end
@@ -643,7 +645,7 @@ class PokeBattle_Battler
 
     # Pass in array of form
     # [statToRaise, stepsToRaise, statToRaise2, stepsToRaise2, ...]
-    def pbLowerMultipleStatSteps(statArray, user, move: nil, showFailMsg: false, showAnim: true, ability: nil, item: nil, ignoreContrary: false, ignoreMirrorArmor: false)
+    def pbLowerMultipleStatSteps(statArray, user = nil, move: nil, showFailMsg: false, showAnim: true, ability: nil, item: nil, ignoreContrary: false, ignoreMirrorArmor: false)
         return unless pbCanLowerAnyOfStats?(statArray, user, move: move, showFailMsg: showFailMsg)
         @battle.pbShowAbilitySplash(user, ability) if ability
 
@@ -660,7 +662,7 @@ class PokeBattle_Battler
                 @battle.pbDisplay(_INTL("{1}'s Mirror Armor activated!", pbThis))
                 unless user
                     battle.pbHideAbilitySplash(self)
-                    return false
+                    return false    
                 end
                 if user.pbCanLowerAnyOfStats?(statArray, nil, move: move, showFailMsg: showFailMsg)
                     user.pbLowerMultipleStatSteps(statArray, user, showFailMsg: showFailMsg, showAnim: showAnim, ignoreContrary: ignoreContrary, ignoreMirrorArmor: true)

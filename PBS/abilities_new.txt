@@ -939,8 +939,8 @@ Description = Raises Speed by four steps when a stat is lowered by a foe.
 #-------------------------------
 [IMPERVIOUS]
 Name = Impervious
-Description = Protects from critical hits and from enemies lowering Defense or Sp. Def.
-Flags = CritImmunity
+Description = Prevents the Pokémon's stat steps from being lowered (except when self-inflicted). Protects from critical hits.
+Flags = CritImmunity,OtherStatDropImmunity
 #-------------------------------
 [IMPETUOUS]
 Name = Impetuous
@@ -1303,7 +1303,8 @@ Description = Sets a Tailwind for four turns upon entering the battle, increasin
 #-------------------------------
 [OPTIMIZEDALLOY]
 Name = Optimized Alloy
-Description = Prevents other Pokémon from lowering its stat steps, and its weight is doubled.
+Description = Prevents the Pokémon's stat steps from being lowered (except when self-inflicted). The Pokémon's weight is doubled.
+Flags = OtherStatDropImmunity
 #-------------------------------
 [OUTRIDER]
 Name = Outrider
@@ -1555,7 +1556,7 @@ Description = All Pokémon deal 40% more move damage.
 #-------------------------------
 [RUNNINGFREE]
 Name = Running Free
-Description = Can't be numbed, waterlogged, leeched, trapped, or have its Speed reduced by foes.
+Description = Can't be numbed, waterlogged, trapped, or have its Speed lowered.
 #-------------------------------
 [RUSTWRACK]
 Name = Rust & Wrack
@@ -1784,8 +1785,8 @@ Description = Has a 30% chance to dizzy targets when using physical moves.
 #-------------------------------
 [STAINLESSSTEEL]
 Name = Stainless Steel
-Description = Prevents other Pokémon from lowering its stat steps. Immune to weather downsides.
-Flags = AllWeatherSynergy
+Description = Prevents the Pokémon's stat steps from being lowered (except when self-inflicted). Immune to weather downsides.
+Flags = AllWeatherSynergy,OtherStatDropImmunity
 #-------------------------------
 [STAMPEDE]
 Name = Stampede

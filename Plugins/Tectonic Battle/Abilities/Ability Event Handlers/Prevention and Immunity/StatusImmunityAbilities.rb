@@ -92,7 +92,7 @@ BattleHandlers::StatusImmunityAbility.add(:ENERGETIC,
 
 BattleHandlers::StatusImmunityAbility.add(:RUNNINGFREE,
   proc { |ability, _battler, status|
-      next true if %i[NUMB WATERLOG LEECHED].include?(status)
+      next true if %i[NUMB WATERLOG].include?(status)
   }
 )
 
