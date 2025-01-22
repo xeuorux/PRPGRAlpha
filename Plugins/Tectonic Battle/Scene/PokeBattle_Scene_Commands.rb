@@ -233,7 +233,7 @@ class PokeBattle_Scene
         commands[cmdPokedex = commands.length] = _INTL("MasterDex") if !modParty[idxParty].egg? && $Trainer.has_pokedex
         commands[commands.length]              = _INTL("Cancel")
         command = scene.pbShowCommands(_INTL("Do what with {1}?",modParty[idxParty].name),commands)
-        if cmdSwitch>=0 && command==cmdSwitch        # Switch In
+        if cmdSwitch >= 0 && command==cmdSwitch        # Switch In
           idxPartyRet = -1
           partyPos.each_with_index do |pos,i|
             next if pos!=idxParty+partyStart
@@ -241,9 +241,9 @@ class PokeBattle_Scene
             break
           end
           break if yield idxPartyRet, switchScreen
-        elsif cmdSummary>=0 && command==cmdSummary   # Summary
+        elsif cmdSummary >= 0 && command==cmdSummary   # Summary
           scene.pbSummary(idxParty,@battle)
-      elsif cmdPokedex && command==cmdPokedex
+        elsif cmdPokedex >= 0 && command==cmdPokedex
           openSingleDexScreen(modParty[idxParty])
         end
       end
