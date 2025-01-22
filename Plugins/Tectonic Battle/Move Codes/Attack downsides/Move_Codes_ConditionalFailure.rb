@@ -9,11 +9,19 @@ class PokeBattle_Move_FailsIfTargetActed < PokeBattle_Move
             return true
         end
         oppMove = @battle.choices[target.index][2]
-        if !oppMove ||
-           (oppMove.function != "UseMoveTargetIsAboutToUse" && # Me First
-           (target.movedThisRound? || oppMove.statusMove?))
+        if !oppMove
             @battle.pbDisplay(_INTL("But it failed, since #{target.pbThis(true)} already moved this turn!")) if show_message
             return true
+        end
+        if oppMove.function != "UseMoveTargetIsAboutToUse" # Me First
+            if target.movedThisRound?
+                @battle.pbDisplay(_INTL("But it failed, since #{target.pbThis(true)} already moved this turn!")) if show_message
+                return true
+            end
+            if oppMove.statusMove?
+                @battle.pbDisplay(_INTL("But it failed, since #{target.pbThis(true)} didn't choose to attack!")) if show_message
+                return true
+            end
         end
         return false
     end
