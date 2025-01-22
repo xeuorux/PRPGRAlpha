@@ -1372,7 +1372,7 @@ Environment = None
 Outdoor = false
 ShowArea = true
 Bicycle = true
-MapPosition = 0,14,3
+MapPosition = 0,14,2
 BattleBack = indoor3
 Environment = None
 #-------------------------------
@@ -2022,7 +2022,7 @@ Environment = None
 Outdoor = false
 ShowArea = true
 Bicycle = true
-MapPosition = 0,14,2
+MapPosition = 0,14,1
 BattleBack = distortion
 #-------------------------------
 [283]
