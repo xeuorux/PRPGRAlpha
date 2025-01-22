@@ -1961,7 +1961,7 @@ Description = Becomes energy charged upon entry, doubling the power of its next 
 #-------------------------------
 [THIEFSDIVERSION]
 Name = Thief's Diversion
-Description = Blocks a single hit by sacrificing its held item, only if it has been stolen.
+Description = By sacrificing a held item the Pokémon didn't start with, it can negate one attack against it.
 #-------------------------------
 [THUNDERSTRUCK]
 Name = Thunderstruck

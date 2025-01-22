@@ -12,6 +12,11 @@ class PokeBattle_Move
             return
         end
 
+        if target.damageState.thiefsDiversion
+            target.damageState.calcDamage = 0
+            return
+        end
+
         # Get the move's type
         type = @calcType # nil is treated as physical
         

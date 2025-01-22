@@ -300,6 +300,11 @@ target.pbThis(true)))
             target.damageState.disguise = true
             return
         end
+        # Thief's Diversion will take the damage
+        if target.hasActiveAbility?(:THIEFSDIVERSION) && target.hasAnyItem? && target.itemActive? && target.hasNonInitialItem? && !@battle.moldBreaker
+            target.damageState.thiefsDiversion = true
+            return
+        end 
     end
 
     def pbReduceDamage(user, target)
@@ -325,6 +330,11 @@ target.pbThis(true)))
         if target.damageState.disguise
             target.damageState.displayedDamage = 0
             return
+        end
+
+        # Thief's diversion negates all damage
+        if target.damageState.thiefsDiversion
+            target.damageState.displayedDamage = 0  
         end
 
         # Target takes the damage
@@ -399,12 +409,6 @@ target.pbThis(true)))
             end
         end
 
-        if target.hasActiveAbility?(:THIEFSDIVERSION) && target.hasAnyItem? && target.itemActive? && !@battle.moldBreaker
-            target.damageState.thiefsDiversion = true
-            damage = 0
-            damageAdjusted = true
-        end 
-
         target.damageState.displayedDamage = damage if damageAdjusted
         damage = 0 if damage < 0
         target.damageState.displayedDamage = 0 if target.damageState.displayedDamage < 0
@@ -456,6 +460,7 @@ target.pbThis(true)))
     #=============================================================================
     def pbEffectivenessMessage(_user, target, numTargets = 1)
         return if target.damageState.disguise
+        return if target.damageState.thiefsDiversion
         return if target.effectActive?(:LastGasp)
         return if defined?($PokemonSystem.effectiveness_messages) && $PokemonSystem.effectiveness_messages == 1
         if Effectiveness.hyper_effective?(target.damageState.typeMod)
@@ -496,6 +501,7 @@ target.pbThis(true)))
 
     def pbHitEffectivenessMessages(user, target, numTargets = 1)
         return if target.damageState.disguise
+        return if target.damageState.thiefsDiversion
         if target.damageState.substitute
             @battle.pbDisplay(_INTL("The substitute took damage for {1}!", target.pbThis(true)))
         end
@@ -555,8 +561,10 @@ target.pbThis(true)))
             @battle.pbDisplay(_INTL("{1} lets out an arrogant laugh!", user.pbThis))
             @battle.pbHideAbilitySplash(user)
         elsif target.damageState.thiefsDiversion
-            @battle.pbDisplay(_INTL("{1} blocked the hit with its stolen item! It didn't take any damage!", target.pbThis))
-            target.consumeItem(target.items[0], belch: false)    
+            @battle.pbShowAbilitySplash(target, :THIEFSDIVERSION)
+            @battle.pbDisplay(_INTL("{1} blocked the hit with its item!", target.pbThis))
+            target.removeNonInitialItems
+            @battle.pbHideAbilitySplash(target)
         end        
     end
 
