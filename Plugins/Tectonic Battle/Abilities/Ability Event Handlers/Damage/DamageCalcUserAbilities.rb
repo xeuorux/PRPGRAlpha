@@ -679,6 +679,15 @@ BattleHandlers::DamageCalcUserAbility.add(:AURORAPRISM,
   }
 )
 
+BattleHandlers::DamageCalcUserAbility.add(:FLEXIBLE,
+  proc { |ability, user, target, move, mults, _baseDmg, type, aiCheck|
+    unless user.pbHasType?(type)
+      mults[:base_damage_multiplier] *= 1.3
+      user.aiLearnsAbility(ability) unless aiCheck
+    end
+  }
+)
+
 BattleHandlers::DamageCalcUserAbility.add(:FIRSTSTRIKE,
   proc { |ability, user, target, move, mults, _baseDmg, type, aiCheck|
       priority = user.battle.choices[user.index][4] || move.priority || nil

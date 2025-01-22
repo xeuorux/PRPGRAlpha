@@ -306,6 +306,14 @@ class PokeBattle_Battler
         return false
     end
 
+    def hasNonInitialItem?
+        items.each do |item|
+            next if hasInitialItem?(item)
+            return true
+        end
+        return false
+    end
+
     def hasItem?(checkitem)
         items.each do |item|
             if checkitem.is_a?(Array)

@@ -6745,6 +6745,18 @@ EffectChance = 30
 Description = The user sings with reckless abandon, annoying the target. There's a 30% chance they become dizzy.
 Animation = ENCHANTINGSONG
 #-------------------------------
+[BASHANDBORROW]
+Name = Bash and Borrow
+Type = FAIRY
+Category = Physical
+Power = 120
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = StealsItem
+Flags = CanProtect,CanMirrorMove
+Description = The user smacks the target and steals its item while its stunned. Items stolen from wild Pokémon are stored.
+#-------------------------------
 [BEDTIME]
 Name = Bed Time
 Type = FAIRY

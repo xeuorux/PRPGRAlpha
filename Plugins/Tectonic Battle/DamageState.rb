@@ -30,8 +30,9 @@ class PokeBattle_DamageState
 	attr_accessor :direDiversion   		# Dire Diversion ability activated
 	attr_accessor :endureBerry	   		# Cass Berry activated
 	attr_accessor :feastWeakened   		# Whether a type-resisting feast was used (wont be consumed)
-	attr_accessor :fear			   		# The hit caused fear in the pokemon
+	attr_accessor :fear			   				# The hit caused fear in the pokemon
 	attr_accessor :bubbleBarrier   		# How much damage was prevented by bubble barrier
+	attr_accessor :thiefsDiversion 		# Thief's Diversion ability activated 
 
 	def initialize; reset; end
 
@@ -61,17 +62,18 @@ class PokeBattle_DamageState
 		@focusBand     		= false
 		@focusSash     		= nil
 		@sturdy        		= false
-		@survivalist		= false
-		@archVillain		= nil
+		@survivalist			= false
+		@archVillain			= nil
 		@disguise      		= false
 		@endured       		= false
-		@fightforever		= false
+		@fightforever			= false
 		@berryWeakened 		= nil
 		@feastWeakened		= nil
 		@iceBlock       	= false
 		@forced_critical	= false
 		@direDiversion		= false
-		@endureBerry		= false
+		@endureBerry			= false
 		@bubbleBarrier		= 0
+		@thiefsDiversion	= false
 	end
 end

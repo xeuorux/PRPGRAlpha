@@ -1326,7 +1326,7 @@ Pokemon = AEGISLASH,70
     EV = 20,20,10,0,20,0
 Pokemon = LINOONE,70
     Moves = EXTREMESPEED,THROATCHOP,LEAFBLADE,BELLYDRUM
-    AbilityIndex = 0 # Dire Diversion
+    AbilityIndex = 0 # Thief's Diversion
     Item = POWERLOCK
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 0,20,10,20,20,0
