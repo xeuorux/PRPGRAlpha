@@ -54763,8 +54763,8 @@ Find the fifth gym leader, located in Prizca West. Prizca West is north of the E
 Encuentra el quinto líder de gimnasio, ubicado en Prizca Occidental. Prizca Occidental está al norte del Cruce del Río Eleig.
 Defeat Prizca West Gym
 Vence al Gimnasio de Prizca Occidental
-Defeat Bence or Zoe (or both of them), leaders of Prizca West gym. Prizca West is north of the Eleig River Crossing. Their Gym is found in the southern of the two central blocks.
-Vence a Bence o Zoé (o ambos), líderes de gimnasio del gimnasio de Prizca Occidental. Prizca Occidental se encuentra al norte del Cruce del Río Eleig. Su gimnasio se encuentra al sur de los dos bloques centrales.
+Defeat Bence and Zoé, leaders of Prizca West gym. Prizca West is north of the Eleig River Crossing. Their Gym is found in the southern of the two central blocks.
+Vence a Bence y Zoé, líderes de gimnasio del gimnasio de Prizca Occidental. Prizca Occidental se encuentra al norte del Cruce del Río Eleig. Su gimnasio se encuentra al sur de los dos bloques centrales.
 Find Prizca East Gym
 Encuentra el Gimnasio de Prizca Oriental
 Find the sixth gym leader, located in Prizca East. Prizca East is east of the Battle Plaza, which is east of Prizca West.

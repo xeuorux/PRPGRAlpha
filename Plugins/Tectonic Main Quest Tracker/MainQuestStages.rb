@@ -153,7 +153,7 @@ def getMainQuestStages
         :DEFEAT_FIFTH_GYM               =>
             [
                 _INTL("Defeat Prizca West Gym"),
-                _INTL("Defeat Bence or Zoe (or both of them), leaders of Prizca West gym. Prizca West is north of the Eleig River Crossing. Their Gym is found in the southern of the two central blocks."),
+                _INTL("Defeat Bence and Zoé, leaders of Prizca West gym. Prizca West is north of the Eleig River Crossing. Their Gym is found in the southern of the two central blocks."),
             ],
         :FIND_SIXTH_GYM                 =>
             [
