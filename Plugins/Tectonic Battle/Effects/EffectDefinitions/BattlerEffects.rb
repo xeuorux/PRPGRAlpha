@@ -2066,7 +2066,7 @@ GameData::BattleEffect.register_effect(:Battler, {
         battle.pbDisplay(_INTL("{1} is jinxed!", battler.pbThis))
     end,
     :stay_in_rating_proc => proc do |battle, battler, value, stay_in_rating|
-        stay_in_rating -= 20
+        stay_in_rating -= 20 unless battler.hasActiveAbilityAI?(GameData::Ability.getByFlag("CritImmunity"))
         next stay_in_rating
     end
 })
