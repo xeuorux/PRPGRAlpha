@@ -100,9 +100,8 @@ def findBottom(bitmap)
     end
   
     def pbSaveMetrics
-      GameData::Species.save
-      Compiler.write_pokemon
-      Compiler.write_pokemon_forms
+      GameData::SpeciesMetrics.save
+      Compiler.write_pokemon_metrics
     end
   
     def update
