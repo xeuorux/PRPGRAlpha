@@ -5463,7 +5463,7 @@ TotalPP = 15
 Target = User
 FunctionCode = UseChoiceOf3RandomNonSignatureNonPsychicDamagingMoves
 Flags = CanSnatch
-Description = The user peruses it's kingly stores of knowledge, selecting three random non-Psychic attacks. You choose which one it uses.
+Description = The user peruses its kingly stores of knowledge, selecting three random non-Psychic attacks. You choose which one it uses.
 Animation = METRONOME
 #-------------------------------
 [STARDANCE]
