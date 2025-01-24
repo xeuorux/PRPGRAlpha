@@ -6767,7 +6767,7 @@ TotalPP = 15
 Target = NearOther
 FunctionCode = StealsItem
 Flags = CanProtect,CanMirrorMove
-Description = The user smacks the target and steals its item while its stunned. Items stolen from wild Pokémon are stored.
+Description = The user smacks the target and steals its item while it is stunned. Items stolen from wild Pokémon are stored.
 #-------------------------------
 [BEDTIME]
 Name = Bed Time
