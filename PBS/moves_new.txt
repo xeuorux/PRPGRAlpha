@@ -1046,6 +1046,18 @@ Flags = CanMagicCoat,CanMirrorMove,Sound
 Description = A high pitched screech lowers the target's Defense, Sp. Def, and Evasion by three steps each. Can't miss and skips protections.
 Animation = SUPERSONIC
 #-------------------------------
+[FURYPECKS]
+Name = Fury Pecks
+Type = FLYING
+Category = Physical
+Power = 20
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = HitTwoToFiveTimes
+Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
+Description = The target is jabbed repeatedly with a horn or beak two to five times in a row. Critical hits twice as often.
+#-------------------------------
 [HOP]
 Name = Hop
 Type = FLYING
@@ -1164,7 +1176,7 @@ Description = The user gets all the party Pokémon to attack the foe with aerial
 Name = Wind Tunnel
 Type = FLYING
 Category = Special
-Power = 20
+Power = 25
 Accuracy = 100
 TotalPP = 20
 Target = AllNearFoes
@@ -2012,7 +2024,7 @@ Power = 80
 Accuracy = 100
 TotalPP = 12
 Target = NearOther
-FunctionCode = Numb
+FunctionCode = Fracture
 Flags = CanProtect,CanMirrorMove
 EffectChance = 50
 Description = The user afflicts the target by turning their skin into stone. This has a 30% chance to fracture it.
@@ -5334,7 +5346,7 @@ TotalPP = 10
 Target = ClosestNearFoe
 FunctionCode = Rampage3HitTwoToFiveTimes
 Flags = CanProtect,CanMirrorMove
-Description = Unveiling its ears, the released psychic power causes the user to attack 2-5 times for three turns.
+Description = Unveiling its ears, the released psychic power causes the user to attack 2 to 5 times each for three turns.
 Animation = FURYSWIPES
 #-------------------------------
 [PENUMBRA]

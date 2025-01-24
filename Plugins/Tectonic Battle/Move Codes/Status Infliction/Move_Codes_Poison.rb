@@ -62,3 +62,10 @@ class PokeBattle_Move_EmpoweredPoisonGas < PokeBattle_Move
         transformType(user, :POISON)
     end
 end
+
+#===============================================================================
+# Multi-hit move that can poison.
+#===============================================================================
+class PokeBattle_Move_HitTwoToFiveTimesPoison < PokeBattle_PoisonMove
+    include RandomHitable
+end

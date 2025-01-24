@@ -1911,18 +1911,6 @@ FunctionCode = TwoTurnAttackInvulnerableInSky
 Flags = CanProtect,CanMirrorMove
 Description = The user soars, becoming invulnerable, then strikes on the second turn.
 #-------------------------------
-[FURYPECKS]
-Name = Fury Pecks
-Type = FLYING
-Category = Physical
-Power = 20
-Accuracy = 100
-TotalPP = 15
-Target = NearOther
-FunctionCode = HitTwoToFiveTimes
-Flags = CanProtect,CanMirrorMove
-Description = The target is jabbed repeatedly with a horn or beak two to five times in a row.
-#-------------------------------
 [GUST]
 Name = Gust
 Type = FLYING
@@ -4401,7 +4389,7 @@ Target = NearOther
 Priority = 1
 FunctionCode = HitTwoToFiveTimes
 Flags = CanProtect,CanMirrorMove
-Description = The user hits the target with throwing stars 2-5 times in a row. This move always goes first.
+Description = The user hits the target with throwing stars 2 to 5 times in a row. This move always goes first.
 #-------------------------------
 [WATERSPOUT]
 Name = Water Spout

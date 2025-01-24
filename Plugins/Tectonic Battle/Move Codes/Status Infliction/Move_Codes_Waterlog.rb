@@ -16,3 +16,10 @@ class PokeBattle_Move_EmpoweredWaterlog < PokeBattle_Move
         transformType(user, :WATER)
     end
 end
+
+#===============================================================================
+# Multi-hit move that can waterlog.
+#===============================================================================
+class PokeBattle_Move_HitTwoToFiveTimesWaterlog < PokeBattle_WaterlogMove
+    include RandomHitable
+end

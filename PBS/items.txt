@@ -671,7 +671,7 @@ Name = Loaded Dice
 NamePlural = Loaded Dices
 Pocket = 5
 Price = 4000
-Description = An item to be held by a Pokémon. It makes multi-hit attacks hit high more consistently.
+Description = A held item. It makes multi-hit attacks consistently hit 4 or 5 times.
 #-------------------------------
 [FRAGILELOCKET]
 Name = Fragile Locket
@@ -1003,7 +1003,7 @@ NamePlural = Covert Cloaks
 Pocket = 5
 Price = 3000
 Flags = Clothing
-Description = A held item. The holder is protected from the random added effects of enemy attacks and takes 10% less damage.
+Description = A held item. The holder is protected from the random added effects and takes 10% less move damage.
 #-------------------------------
 [COURAGEBADGE]
 Name = Courage Badge

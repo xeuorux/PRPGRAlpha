@@ -90,3 +90,10 @@ class PokeBattle_Move_EmpoweredChill < PokeBattle_Move
         transformType(user, :ICE)
     end
 end
+
+#===============================================================================
+# Multi-hit move that can frostbite.
+#===============================================================================
+class PokeBattle_Move_HitTwoToFiveTimesFrostbite < PokeBattle_FrostbiteMove
+    include RandomHitable
+end

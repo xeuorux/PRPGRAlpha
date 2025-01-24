@@ -38,3 +38,10 @@ class PokeBattle_Move_EmpoweredLeechSeed < PokeBattle_Move
         transformType(user, :GRASS)
     end
 end
+
+#===============================================================================
+# Multi-hit move that can leech.
+#===============================================================================
+class PokeBattle_Move_HitTwoToFiveTimesLeech < PokeBattle_LeechMove
+    include RandomHitable
+end
