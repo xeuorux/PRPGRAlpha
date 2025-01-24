@@ -23,7 +23,7 @@ class PokeBattle_AI_SUICUNE < PokeBattle_AI_Boss
                 next user.pbHasAnyStatus?
             },
             :warning => proc { |_move, user, _targets, _battle|
-                _INTL("{1} inspects it's status conditions.",user.pbThis)
+                _INTL("{1} inspects its status conditions.",user.pbThis)
             },
         })
     end

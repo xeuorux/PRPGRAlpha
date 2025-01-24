@@ -40621,8 +40621,8 @@ Protects the user from damage this turn. It also lowers the Sp. Def of special a
 Protects the user from damage this turn. It also lowers the Sp. Def of special attackers by four steps.
 The user perfectly predicts the target's future location, then strikes. It lands without fail.
 The user perfectly predicts the target's future location, then strikes. It lands without fail.
-The user peruses it's kingly stores of knowledge, selecting three random non-Psychic attacks. You choose which one it uses.
-The user peruses it's kingly stores of knowledge, selecting three random non-Psychic attacks. You choose which one it uses.
+The user peruses its kingly stores of knowledge, selecting three random non-Psychic attacks. You choose which one it uses.
+The user peruses its kingly stores of knowledge, selecting three random non-Psychic attacks. You choose which one it uses.
 The user dazzles the target with celestial visions that lowers its Sp. Atk stat by five steps.
 The user dazzles the target with celestial visions that lowers its Sp. Atk stat by five steps.
 The user imparts knowledge on its ally Pokémon, raising their Sp. Atk and Sp. Def stats by two steps.
@@ -59961,8 +59961,8 @@ SKIPPING BATTLE...
 \se[]{1} learned {2}!\se[Pkmn move learnt]
 {1} notices a flammable item amongst your Pokémon!
 {1} notices a flammable item amongst your Pokémon!
-{1} inspects it's status conditions.
-{1} inspects it's status conditions.
+{1} inspects its status conditions.
+{1} inspects its status conditions.
 {1} opens its mouth up wide!
 {1} opens its mouth up wide!
 {1} begins leading the attack!
