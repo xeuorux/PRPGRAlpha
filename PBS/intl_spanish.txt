@@ -41136,7 +41136,7 @@ The user shoots mystical beams from its eyes to inflict damage. The target is hi
 El usuario dispara rayos místicos desde sus ojos, golpeando dos veces seguidas.
 A reckless charge that forces the user to switch out if its misses. Always goes first.
 Una carga sin cuidado que fuerza al usuario a volver a su Poké Ball si falla. Siempre va primero.
-The user peruses it's kingly stores of knowledge, selecting three random non-Psychic attacks. You choose which one it uses.
+The user peruses its kingly stores of knowledge, selecting three random non-Psychic attacks. You choose which one it uses.
 El usuario analiza su conocimiento real, eligiendo tres movimientos no-psíquicos aleatoriamente. Tú eliges cuál usar.
 The user chooses between Fire Fang, Thunder Fang, or Ice Fang to use this turn.
 El usuario elige entre usar Colmillo Ígneo, Colmillo Rayo, o Colmillo Hielo este turno.
@@ -51249,7 +51249,7 @@ But it failed, since neither #{user.pbThis(true)} nor any of its allies can rece
 \w[]\wm\c[12]\l[3]Regresas a {1}, protegiendo a tus Pokémon exhaustos de un daño mayor…
 #{user.pbThis} notices a flammable item amongst your Pokémon!
 ¡#{user.pbThis} nota un objeto inflamable entre tus Pokémon!
-#{user.pbThis} inspects it's status conditions.
+#{user.pbThis} inspects its status conditions.
 #{user.pbThis} inspecciona sus problemas de estado.
 #{user.pbThis} opens its mouth up wide!
 ¡#{user.pbThis} abre su boca!
@@ -56521,7 +56521,7 @@ POWER
 PODER
 {1} notices a flammable item amongst your Pokémon!
 ¡{1} nota un objeto inflamable entre tus Pokémon!
-{1} inspects it's status conditions.
+{1} inspects its status conditions.
 {1} inspecciona sus problemas de estado.
 {1} opens its mouth up wide!
 ¡{1} abre por completo su boca!

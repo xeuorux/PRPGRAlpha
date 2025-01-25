@@ -41449,7 +41449,7 @@ The user slows the target's mind with a psychically infused blow. This has a 30%
 将自身的精神力注入对方的大脑中，并模 拟冰冻过程，30%概率使其冻伤。
 Doubles in power if the foe is asleep. The user's HP is restored by 50% the damage dealt. This can overheal.
 对睡眠状态中的对手威力翻倍，并恢复其 受到伤害一半的HP，可以过量治疗。
-The user peruses it's kingly stores of knowledge, selecting three random non-Psychic attacks. You choose which one it uses.
+The user peruses its kingly stores of knowledge, selecting three random non-Psychic attacks. You choose which one it uses.
 浏览自身的知识宝库，随机出现三种超能 属性攻击招式，并选择其中一种使用。
 The user picks up an iceberg and slams it into the target. Lowers the user's Attack by four steps.
 抬起一座冰山并撞向对方，但会降低自身 攻击四级。
@@ -58952,7 +58952,7 @@ SKIPPING BATTLE...
 \se[]{1} 学会了 {2}!\se[Pkmn move learnt]
 {1} notices a flammable item amongst your Pokémon!
 {1} 察觉到你的宝可梦中 有易燃道具！
-{1} inspects it's status conditions.
+{1} inspects its status conditions.
 {1} 检查它的异常状态。
 {1} opens its mouth up wide!
 {1} 张开了大嘴!
