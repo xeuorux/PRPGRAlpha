@@ -307,6 +307,14 @@ BattleHandlers::UserAbilityEndOfMove.add(:ICEQUEEN,
   }
 )
 
+BattleHandlers::UserAbilityEndOfMove.add(:SILVERSENSE,
+  proc { |ability, user, targets, move, battle, _switchedBattlers|
+      next if battle.futureSight
+      next unless move.damagingMove?
+      user.pbRecoverHPFromMultiDrain(targets, 0.50, ability: ability, onlyCriticalDamage: true)
+  }
+)
+
 BattleHandlers::UserAbilityEndOfMove.add(:TORPORSAP,
   proc { |ability, user, targets, move, battle, _switchedBattlers|
       next if battle.futureSight

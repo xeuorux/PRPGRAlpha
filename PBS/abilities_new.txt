@@ -1687,6 +1687,10 @@ Name = Silver Lining
 Description = Boosts Speed by 50% in rainstorm. Doubles random added effect chance in rainstorm.
 Flags = RainstormSynergy
 #-------------------------------
+[SILVERSENSE]
+Name = SILVERSENSE
+Description = Twice as likely for moves to be critical. Restores HP for half the damage it does with critical hits.
+#-------------------------------
 [SINKINGFEELING]
 Name = Sinking Feeling
 Description = At the end of each round, lowers other waterlogged Pokémon's Attack and Sp. Atk by two steps.
@@ -1766,6 +1770,10 @@ Description = Attacks hit twice for half damage, drain 25% of damage dealt and b
 [SPARESCALES]
 Name = Spare Scales
 Description = Raises defenses after using a Grass-, Ground-, or Steel-type move.
+#-------------------------------
+[SPECTRUMVISION]
+Name = Spectrum Vision
+Description = The Pokémon and its allies' moves are twice as likely to be critical.
 #-------------------------------
 [SPINESPLODE]
 Name = Spinesplode
@@ -2176,7 +2184,3 @@ Description = Uses Dragon Dance if an attack lowers its HP to half or below.
 [WREAKHAVOC]
 Name = Wreak Havoc
 Description = Boosts the power of rampaging moves by 30%, and makes them physical or special based on which would be more effective.
-#-------------------------------
-[SPECTRUMVISION]
-Name = Spectrum Vision
-Description = The Pokémon and its allies' moves are twice as likely to be critical.

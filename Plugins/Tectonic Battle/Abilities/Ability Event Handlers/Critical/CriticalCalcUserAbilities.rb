@@ -39,3 +39,9 @@ BattleHandlers::CriticalCalcUserAbility.add(:SPECTRUMVISION,
       next c + 1
   }
 )
+
+BattleHandlers::CriticalCalcUserAbility.add(:SILVERSENSE,
+  proc { |ability, _user, _target, _move, c|
+      next c + 1
+  }
+)
