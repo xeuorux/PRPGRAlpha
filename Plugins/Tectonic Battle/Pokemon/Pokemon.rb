@@ -1273,9 +1273,9 @@ class Pokemon
     # Checks whether this Pokemon can evolve because of using an item on it.
     # @param item_used [Symbol, GameData::Item, nil] the item being used
     # @return [Symbol, nil] the ID of the species to evolve into
-    def check_evolution_on_use_item(item_used)
+    def check_evolution_on_use_item(item_used,finalCheck = true)
         return check_evolution_internal do |pkmn, new_species, method, parameter|
-            success = GameData::Evolution.get(method).call_use_item(pkmn, parameter, item_used)
+            success = GameData::Evolution.get(method).call_use_item(pkmn, parameter, item_used, finalCheck)
             next success ? new_species : nil
         end
     end

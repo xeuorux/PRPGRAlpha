@@ -491,56 +491,68 @@ module GameData
   #===============================================================================
   # Evolution methods that trigger when using an item on the Pokémon
   #===============================================================================
-  def itemCanEvolve?(itemMatch,itemUsing)
-    return true if GameData::Item.get(itemMatch).is_evolution_stone? && itemUsing == :PRISMSTONE
+  def itemCanEvolve?(pkmn,itemMatch, itemUsing, finalCheck)
+    if itemUsing == :PRISMSTONE
+      return false unless GameData::Item.get(itemMatch).is_evolution_stone?
+      if finalCheck
+        return pbConfirmMessageSerious(_INTL("Use the {1} as a {2} on {3}?",getItemName(:PRISMSTONE),getItemName(itemMatch),pkmn.name))
+      else
+        return true
+      end
+    end
     return itemMatch == itemUsing
   end
 
   GameData::Evolution.register({
     :id            => :Item,
     :parameter     => :Item,
-    :use_item_proc => proc { |pkmn, parameter, item|
-      next itemCanEvolve?(parameter,item)
+    :use_item_proc => proc { |pkmn, parameter, item, finalCheck|
+      next itemCanEvolve?(pkmn, parameter, item, finalCheck)
     }
   })
   
   GameData::Evolution.register({
     :id            => :ItemMale,
     :parameter     => :Item,
-    :use_item_proc => proc { |pkmn, parameter, item|
-      next itemCanEvolve?(parameter,item) && pkmn.male?
+    :use_item_proc => proc { |pkmn, parameter, item, finalCheck|
+      next false unless pkmn.male?
+      next itemCanEvolve?(pkmn, parameter, item, finalCheck)
     }
   })
   
   GameData::Evolution.register({
     :id            => :ItemFemale,
     :parameter     => :Item,
-    :use_item_proc => proc { |pkmn, parameter, item|
-      next itemCanEvolve?(parameter,item) && pkmn.female?
+    :use_item_proc => proc { |pkmn, parameter, item, finalCheck|
+      next false unless pkmn.female?
+      next itemCanEvolve?(pkmn, parameter, item, finalCheck)
     }
   })
   
   GameData::Evolution.register({
     :id            => :ItemDay,
     :parameter     => :Item,
-    :use_item_proc => proc { |pkmn, parameter, item|
-      next itemCanEvolve?(parameter,item) && PBDayNight.isDay?
+    :use_item_proc => proc { |pkmn, parameter, item, finalCheck|
+      next false unless PBDayNight.isDay?
+      next itemCanEvolve?(pkmn, parameter, item, finalCheck)
     }
   })
   
   GameData::Evolution.register({
     :id            => :ItemNight,
     :parameter     => :Item,
-    :use_item_proc => proc { |pkmn, parameter, item|
-      next itemCanEvolve?(parameter,item) && PBDayNight.isNight?
+    :use_item_proc => proc { |pkmn, parameter, item, finalCheck|
+      next false unless PBDayNight.isNight?
+      next itemCanEvolve?(pkmn, parameter, item, finalCheck)
     }
   })
   
   GameData::Evolution.register({
     :id            => :ItemHappiness,
     :parameter     => :Item,
-    :use_item_proc => proc { |pkmn, parameter, item|
-      next itemCanEvolve?(parameter,item) && pkmn.happiness >= 220
+    :use_item_proc => proc { |pkmn, parameter, item, finalCheck|
+      next false unless pkmn.happiness >= 220
+      next itemCanEvolve?(pkmn, parameter, item, finalCheck)
     }
   })
   

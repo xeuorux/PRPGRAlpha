@@ -399,7 +399,7 @@ def pbUseItem(bag,item,bagscene=nil)
     if itm.is_evolution_item?
       annot = []
       for pkmn in $Trainer.party
-        elig = pkmn.check_evolution_on_use_item(item)
+        elig = pkmn.check_evolution_on_use_item(item, false)
         annot.push((elig) ? _INTL("ABLE") : _INTL("NOT ABLE"))
       end
     end
