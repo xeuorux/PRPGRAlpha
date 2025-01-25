@@ -62,7 +62,7 @@ Flags = EclipseSynergy
 #-------------------------------
 [APRICORNARMOR]
 Name = Apricorn Armor
-Description = Takes 50% less damage from attacks by Pokémon who have a status condition.
+Description = Takes 40% less damage from attacks by Pokémon who have a status condition.
 #-------------------------------
 [ARCANE]
 Name = Arcane
