@@ -33,3 +33,9 @@ BattleHandlers::CriticalCalcUserAbility.add(:SANDWORNAUGER,
       next c + 1 if user.battle.sandy?
   }
 )
+
+BattleHandlers::CriticalCalcUserAbility.add(:SPECTRUMVISION,
+  proc { |ability, user, _target, _move, c|
+      next c + 1
+  }
+)
