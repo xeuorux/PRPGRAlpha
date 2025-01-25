@@ -396,7 +396,7 @@ def pbUseItem(bag,item,bagscene=nil)
     end
     ret = false
     annot = nil
-    if itm.is_evolution_stone?
+    if itm.is_evolution_item?
       annot = []
       for pkmn in $Trainer.party
         elig = pkmn.check_evolution_on_use_item(item)
@@ -546,7 +546,7 @@ def pbChooseEvolutionStone(var = 0)
   pbFadeOutIn {
     scene = PokemonBag_Scene.new
     screen = PokemonBagScreen.new(scene,$PokemonBag)
-    ret = screen.pbChooseItemScreen(Proc.new { |item| GameData::Item.get(item).is_evolution_stone? })
+    ret = screen.pbChooseItemScreen(Proc.new { |item| GameData::Item.get(item).is_evolution_item? })
   }
   $game_variables[var] = ret || :NONE if var > 0
   return ret

@@ -22,7 +22,7 @@ NamePlural = Fire Stones
 Pocket = 1
 Price = 5000
 FieldUse = OnPokemon
-Flags = EvolutionStone
+Flags = EvolutionItem,EvolutionStone
 Description = A peculiar stone that makes certain species of Pokémon evolve. It is colored orange.
 #-------------------------------
 [THUNDERSTONE]
@@ -31,7 +31,7 @@ NamePlural = Thunder Stones
 Pocket = 1
 Price = 5000
 FieldUse = OnPokemon
-Flags = EvolutionStone
+Flags = EvolutionItem,EvolutionStone
 Description = A peculiar stone that makes certain species of Pokémon evolve. It has a thunderbolt pattern.
 #-------------------------------
 [WATERSTONE]
@@ -40,7 +40,7 @@ NamePlural = Water Stones
 Pocket = 1
 Price = 5000
 FieldUse = OnPokemon
-Flags = EvolutionStone
+Flags = EvolutionItem,EvolutionStone
 Description = A peculiar stone that makes certain species of Pokémon evolve. It is a clear, light blue.
 #-------------------------------
 [LEAFSTONE]
@@ -49,7 +49,7 @@ NamePlural = Leaf Stones
 Pocket = 1
 Price = 5000
 FieldUse = OnPokemon
-Flags = EvolutionStone
+Flags = EvolutionItem,EvolutionStone
 Description = A peculiar stone that makes certain species of Pokémon evolve. It has a leaf pattern.
 #-------------------------------
 [MOONSTONE]
@@ -58,7 +58,7 @@ NamePlural = Moon Stones
 Pocket = 1
 Price = 5000
 FieldUse = OnPokemon
-Flags = EvolutionStone
+Flags = EvolutionItem,EvolutionStone
 Description = A peculiar stone that makes certain species of Pokémon evolve. It is as black as the night sky.
 #-------------------------------
 [SUNSTONE]
@@ -67,7 +67,7 @@ NamePlural = Sun Stones
 Pocket = 1
 Price = 5000
 FieldUse = OnPokemon
-Flags = EvolutionStone
+Flags = EvolutionItem,EvolutionStone
 Description = A peculiar stone that makes certain species of Pokémon evolve. It is as red as the sun.
 #-------------------------------
 [DUSKSTONE]
@@ -76,7 +76,7 @@ NamePlural = Dusk Stones
 Pocket = 1
 Price = 5000
 FieldUse = OnPokemon
-Flags = EvolutionStone
+Flags = EvolutionItem,EvolutionStone
 Description = A peculiar stone that makes certain species of Pokémon evolve. It is as dark as dark can be.
 #-------------------------------
 [DAWNSTONE]
@@ -85,7 +85,7 @@ NamePlural = Dawn Stones
 Pocket = 1
 Price = 5000
 FieldUse = OnPokemon
-Flags = EvolutionStone
+Flags = EvolutionItem,EvolutionStone
 Description = A peculiar stone that makes certain species of Pokémon evolve. It sparkles like eyes.
 #-------------------------------
 [SHINYSTONE]
@@ -94,7 +94,7 @@ NamePlural = Shiny Stones
 Pocket = 1
 Price = 5000
 FieldUse = OnPokemon
-Flags = EvolutionStone
+Flags = EvolutionItem,EvolutionStone
 Description = A peculiar stone that makes certain species of Pokémon evolve. It shines with a dazzling light.
 #-------------------------------
 [ICESTONE]
@@ -103,7 +103,7 @@ NamePlural = Ice Stones
 Pocket = 1
 Price = 5000
 FieldUse = OnPokemon
-Flags = EvolutionStone
+Flags = EvolutionItem,EvolutionStone
 Description = A peculiar stone that makes certain species of Pokémon evolve. It has a snowflake pattern.
 #-------------------------------
 [PRISMSTONE]
@@ -112,7 +112,7 @@ NamePlural = Prism Stones
 Pocket = 1
 Price = 15000
 FieldUse = OnPokemon
-Flags = EvolutionStone
+Flags = EvolutionItem,EvolutionStone
 Description = A many-colored stone that makes a lot of Pokémon evolve. Can be used in place of any evolution stone.
 #-------------------------------
 [DIAMONDTIARA]
@@ -121,7 +121,7 @@ NamePlural = Diamond Tiaras
 Pocket = 1
 Price = 50000
 FieldUse = OnPokemon
-Flags = EvolutionStone,Clothing
+Flags = EvolutionItem,Clothing
 Description = A glimmering tiara made of diamonds. It makes a certain Pokémon evolve.
 #-------------------------------
 [KNIGHTHELMET]
@@ -130,7 +130,7 @@ NamePlural = Knight Helmets
 Pocket = 1
 Price = 3000
 FieldUse = OnPokemon
-Flags = EvolutionStone,Clothing
+Flags = EvolutionItem,Clothing
 Description = A shining helmet. It makes a certain Pokémon evolve.
 #-------------------------------
 [NINJASCARF]
@@ -139,7 +139,7 @@ NamePlural = Ninja Scarves
 Pocket = 1
 Price = 3000
 FieldUse = OnPokemon
-Flags = EvolutionStone,Clothing
+Flags = EvolutionItem,Clothing
 Description = A cool scarf. It makes a certain Pokémon evolve.
 #-------------------------------
 [ALOLANWREATH]
@@ -148,7 +148,7 @@ NamePlural = Alolan Wreathes
 Pocket = 1
 Price = 4000
 FieldUse = OnPokemon
-Flags = EvolutionStone,Clothing
+Flags = EvolutionItem,Clothing
 Description = A beautiful floral wreath from Alola that makes certain species of Pokémon evolve.
 #-------------------------------
 [GALARICAWREATH]
@@ -157,7 +157,7 @@ NamePlural = Galarica Wreaths
 Pocket = 1
 Price = 4000
 FieldUse = OnPokemon
-Flags = EvolutionStone,Clothing
+Flags = EvolutionItem,Clothing
 Description = A wreath made from woven Galarica Twigs. It makes certain species of Pokémon evolve.
 #-------------------------------
 [SWEETAPPLE]
@@ -166,7 +166,7 @@ NamePlural = Sweet Apples
 Pocket = 1
 Price = 2000
 FieldUse = OnPokemon
-Flags = EvolutionStone
+Flags = EvolutionItem
 Description = A peculiar apple that can make a certain species of Pokémon evolve. It's exceptionally sweet.
 #-------------------------------
 [TARTAPPLE]
@@ -175,7 +175,7 @@ NamePlural = Tart Apples
 Pocket = 1
 Price = 2000
 FieldUse = OnPokemon
-Flags = EvolutionStone
+Flags = EvolutionItem
 Description = A peculiar apple that can make a certain species of Pokémon evolve. It's exceptionally tart.
 #-------------------------------
 [HELIXFOSSIL]
@@ -2379,7 +2379,7 @@ NamePlural = Origin Ores
 Pocket = 1
 Price = 8000
 FieldUse = OnPokemon
-Flags = EvolutionStone
+Flags = EvolutionItem
 Description = A peculiar ore that makes certain species of Pokémon evolve. Associated with Arceus.
 #-------------------------------
 [FIRETOKEN]
@@ -2751,7 +2751,7 @@ NamePlural = Ancient Sea Water
 Pocket = 1
 Price = 50000
 FieldUse = OnPokemon
-Flags = EvolutionStone
+Flags = EvolutionItem
 Description = A vial of shimmering ocean water. It makes a certain Pokémon evolve.
 #-------------------------------
 [CUPOFCOFFEE]

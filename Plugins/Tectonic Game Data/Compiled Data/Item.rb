@@ -249,6 +249,10 @@ module GameData
         return @flags.include?("KeyItem") && !@consumable
       end
 
+      def is_evolution_item?
+        return @flags.include?("EvolutionItem")
+      end
+
       def is_evolution_stone?
         return @flags.include?("EvolutionStone")
       end
