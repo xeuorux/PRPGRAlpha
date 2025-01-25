@@ -7578,6 +7578,22 @@ Pokemon = SHEDINJA,70
 Pokemon = NIDOKING,70
     AbilityIndex = 1 # Stressful
 #-------------------------------
+[POKEMONMASTER_Vanya,Vanya,8]
+Flags = NoPerfect,RainTeam,PlayerTeam:AtteatheSilly
+Pokemon = ZOROARK,70
+    AbilityIndex = 0 # Territorial
+Pokemon = LUDICOLO,70
+    AbilityIndex = 0 # Rain Dish
+Pokemon = ROSERADE,70
+    AbilityIndex = 0 # Swordplay
+Pokemon = ORICORIO,70
+    AbilityIndex = 0 # Dancer
+	Form = 2
+Pokemon = GIGACHU,70
+    AbilityIndex = 1 # Gargantuan
+Pokemon = ABOMASNOW,70
+    AbilityIndex = 1 # Frustrate
+#-------------------------------
 [WILDPARTY_KOKO,of Conflict]
 Flags = NoPerfect
 Pokemon = INCINEROAR,70
