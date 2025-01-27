@@ -2537,10 +2537,10 @@ Power = 100
 Accuracy = 100
 TotalPP = 5
 Target = AllNearFoes
-FunctionCode = RaiseUserDef1
+FunctionCode = RaiseUserDefSpDef1
 Flags = CanProtect,CanMirrorMove
 EffectChance = 100
-Description = The user whips up a storm of diamonds to damage foes, raising its Defense.
+Description = The user whips up a storm of diamonds to damage foes, raising its Defense and Sp. Def.
 #-------------------------------
 [HEADSMASH]
 Name = Head Smash

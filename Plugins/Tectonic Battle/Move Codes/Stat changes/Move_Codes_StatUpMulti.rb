@@ -253,6 +253,18 @@ class PokeBattle_Move_RaiseUserAtkSpAtk4 < PokeBattle_MultiStatUpMove
 end
 
 #===============================================================================
+# Increases the user's Defense and Special Defense by 1 step each.
+#===============================================================================
+class PokeBattle_Move_RaiseUserDefSpDef1 < PokeBattle_MultiStatUpMove
+    def aiAutoKnows?(pokemon); return true; end
+    
+    def initialize(battle, move)
+        super
+        @statUp = DEFENDING_STATS_1
+    end
+end
+
+#===============================================================================
 # Increases the user's Defense and Special Defense by 2 steps each.
 # (Cosmic Power, Defend Order)
 #===============================================================================
