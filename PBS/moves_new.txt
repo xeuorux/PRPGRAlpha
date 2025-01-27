@@ -4035,19 +4035,6 @@ Flags = CanProtect,CanMirrorMove
 Description = The user crashes into the target like a tsunami. The user also takes 33% recoil.
 Animation = WATERFALL
 #-------------------------------
-[HYDROCUTTER]
-Name = Hydro Cutter
-Type = WATER
-Category = Special
-Power = 90
-Accuracy = 100
-TotalPP = 15
-Target = NearOther
-FunctionCode = Basic
-Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
-Description = The user creates a razor sharp wave of water to slice at the target. Critical hits twice as often.
-Animation = WATERSHURIKEN
-#-------------------------------
 [HYPERJET]
 Name = Hyper Jet
 Type = WATER

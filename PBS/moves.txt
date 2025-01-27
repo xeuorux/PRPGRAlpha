@@ -4249,9 +4249,9 @@ Power = 90
 Accuracy = 100
 TotalPP = 12
 Target = NearOther
-FunctionCode = CannotBeRedirected
+FunctionCode = Basic
 Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
-Description = Ignores all attempts at redirection, allowing this move to hit the chosen target. Critical hits twice as often.
+Description = The target is struck with a supersonic water blast. Critical hits twice as often.
 #-------------------------------
 [SPARKLINGARIA]
 Name = Sparkling Aria
@@ -4335,10 +4335,10 @@ Power = 40
 Accuracy = 100
 TotalPP = 20
 Target = NearOther
-FunctionCode = Waterlog
-Flags = CanProtect,CanMirrorMove
+FunctionCode = Basic
+Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
 EffectChance = 10
-Description = The target is blasted with a forceful shot of water. This has a 10% chance to waterlog.
+Description = The target is blasted with a forceful shot of water. Critical hits twice as often.
 #-------------------------------
 [WATERPLEDGE]
 Name = Water Pledge
