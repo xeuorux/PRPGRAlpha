@@ -3885,19 +3885,6 @@ Flags = CanProtect,CanMirrorMove
 EffectChance = 100
 Description = The user attacks by engulfing the target in an intense fire. It leaves the target with a burn.
 #-------------------------------
-[LAVAPLUME]
-Name = Lava Plume
-Type = FIRE
-Category = Special
-Power = 80
-Accuracy = 100
-TotalPP = 12
-Target = AllNearOthers
-FunctionCode = Burn
-Flags = CanProtect,CanMirrorMove
-EffectChance = 30
-Description = An inferno of scarlet flames torches everything around the user. It has a 30% chance to burn.
-#-------------------------------
 [MAGMASTORM]
 Name = Magma Storm
 Type = FIRE

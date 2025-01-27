@@ -1717,6 +1717,19 @@ FunctionCode = Invalid
 Flags = CanProtect,CanMirrorMove
 Description = The user attacks the foe with a bursting flame. It also damages Pokémon next to the target.
 #-------------------------------
+[LAVAPLUME]
+Name = Lava Plume
+Type = FIRE
+Category = Special
+Power = 80
+Accuracy = 100
+TotalPP = 12
+Target = AllNearOthers
+FunctionCode = Invalid
+Flags = CanProtect,CanMirrorMove
+EffectChance = 30
+Description = An inferno of scarlet flames torches everything around the user. It has a 30% chance to burn.
+#-------------------------------
 [RAINDANCE]
 Name = Rain Dance
 Type = FIRE

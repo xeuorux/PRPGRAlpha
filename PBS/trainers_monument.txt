@@ -618,7 +618,7 @@ Pokemon = HSAMUROTT,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 0,20,0,20,20,10
 Pokemon = HTYPHLOSION,70
-    Moves = SHIVER,STITCHUP,HEX,LAVAPLUME
+    Moves = SHIVER,STITCHUP,HEX,WHITEFLAME
     AbilityIndex = 1 # Exorcist
     Item = LEFTOVERS
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
