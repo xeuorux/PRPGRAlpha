@@ -248,7 +248,7 @@ Pokemon = SANDILE,16
 #-------------------------------
 [PSYCHIC_M,Uriel]
 Pokemon = ABRA,17
-    Moves = PSYBEAM,MAGNETWAVE,TELEPORT,DISABLE
+    Moves = PSYBEAM,IRONARROW,TELEPORT,DISABLE
     AbilityIndex = 1 # Steelworker
     Item = PSYCHICGEM
 Pokemon = IMPIDIMP,16
