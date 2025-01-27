@@ -1688,7 +1688,7 @@ Description = Boosts Speed by 50% in rainstorm. Doubles random added effect chan
 Flags = RainstormSynergy
 #-------------------------------
 [SILVERSENSE]
-Name = SILVERSENSE
+Name = Silver Sense
 Description = Twice as likely for moves to be critical. Restores HP for half the damage it does with critical hits.
 #-------------------------------
 [SINKINGFEELING]
