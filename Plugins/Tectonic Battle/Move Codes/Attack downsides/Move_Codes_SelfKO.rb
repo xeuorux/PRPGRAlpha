@@ -25,7 +25,7 @@ class PokeBattle_Move_UserFaintsExplosive < PokeBattle_Move
             if unbreakable
                 @battle.pbShowAbilitySplash(user, :UNBREAKABLE)
                 @battle.pbDisplay(_INTL("{1} resists the recoil!", user.pbThis))
-                reduction /= 2
+                reduction = (reduction / 2.0).ceil
             end
             user.pbReduceHP(reduction, false)
             @battle.pbHideAbilitySplash(user) if unbreakable
