@@ -1165,3 +1165,8 @@ Puddle,15
     20,KINGDRA,62,64
     20,MDRAGALGE,62,64
     20,PELIPPER,62,64
+#-------------------------------
+[438] # Bogdan Cement Plant
+Special
+    1,CORSOLA,10
+    1,SHUCKLE,10
