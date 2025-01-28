@@ -2079,7 +2079,7 @@ Target = NearOther
 FunctionCode = RaiseUserAttack2
 Flags = CanProtect,CanMirrorMove,Dance
 EffectChance = 100
-Description = The user dances wildly while churning rocks towards the target. This raises the user's Attack by 2 steps.
+Description = The user dances wildly while churning rocks towards the target. This raises the user's Attack by two steps.
 Animation = ROCKSLIDE
 #-------------------------------
 [ROLLINGBOULDER]
@@ -2838,7 +2838,7 @@ TotalPP = 5
 Target = NearOther
 FunctionCode = LowerUserSpAtkSpDef2
 Flags = CanProtect,CanMirrorMove
-Description = The user opens its soul to unleash massive energy. This lowers the user's Sp. Atk and Sp. Def by 2 steps.
+Description = The user opens its soul to unleash massive energy. This lowers the user's Sp. Atk and Sp. Def by two steps.
 Animation = OMINOUSWIND
 #-------------------------------
 [SEANCE]
@@ -6230,7 +6230,7 @@ TotalPP = 15
 Target = NearOther
 FunctionCode = RaiseTargetAtkSpAtk3TargetHitsSelfAdaptive
 Flags = CanProtect,CanMagicCoat,CanMirrorMove
-Description = The user insults the target using a compliment. The target's attacking stats are raised by 3 steps, but they hurt themselves in confusion.
+Description = The user insults the target using a compliment. Their attacking stats are raised by three steps, but they hurt themselves in confusion.
 Animation = FLATTER
 #-------------------------------
 [BLACKOUT]
