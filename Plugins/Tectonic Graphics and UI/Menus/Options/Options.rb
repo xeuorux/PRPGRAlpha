@@ -60,6 +60,7 @@ class Options
 
     def storeOptions
         File.open(Options.optionsFilePath, 'wb') { |file| Marshal.dump($Options, file) }
+        echoln("Wrote options data to file.")
     end
 
     def initialize
