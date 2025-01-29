@@ -1548,8 +1548,12 @@ class Pokemon
         itemID = pbGet(1)
         currentBallName = getItemName(poke_ball)
         unless itemID == :NONE
-            newBallName = getItemName(itemID)
-            if GameData::Item.get(itemID).no_ball_swap?
+            newBallData = GameData::Item.get(itemID)  
+            newBallName = newBallData.name
+            if itemID == @poke_ball
+                pbMessage(_INTL("{1} is already inside of a {2}!",name,newBallName))
+                return
+            elsif newBallData.no_ball_swap?
                 pbMessage(_INTL("A {1} is too special to swap {2} into.",newBallName,name))
             else
                 pbMessage(_INTL("You remove {1} from the {2}, and throw it away.",name,currentBallName))
