@@ -68,7 +68,7 @@ module ItemStorageHelper
     end
   
     def self.sortItems(items)
-      if $PokemonSystem.bag_sorting == 2
+      if $Options.bag_sorting == 2
         items.sort! { |a, b|
           itemDataA = GameData::Item.get(a[0])
           itemDataB = GameData::Item.get(b[0])
@@ -78,7 +78,7 @@ module ItemStorageHelper
             next itemDataA.id_number <=> itemDataB.id_number
           end
         }
-      elsif $PokemonSystem.bag_sorting == 1
+      elsif $Options.bag_sorting == 1
         items.sort! { |a, b| GameData::Item.get(a[0]).name <=> GameData::Item.get(b[0]).name }
       end
     end

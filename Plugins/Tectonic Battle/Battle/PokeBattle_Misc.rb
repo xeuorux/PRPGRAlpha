@@ -109,7 +109,7 @@ class PokeBattle_Battle
                 next if move.damagingMove?(true)
                 next unless move.empoweredMove?
                 b.bossAI.startPhaseChange(b,self)
-                showMessages = $PokemonSystem.avatar_mechanics_messages == 0
+                showMessages = $Options.avatar_mechanics_messages == 0
 
                 if PRIMEVAL_MOVES_RESET_DEBUFFS
                     pbAnimation(:REFRESH,b,b)

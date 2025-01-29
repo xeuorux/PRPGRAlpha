@@ -71,12 +71,12 @@ class PokeBattle_Move
     end
 
     def displayDamagingMoveMessages(user, move, targets = [])
-        if $PokemonSystem.move_clarifying_messages == 0
+        if $Options.move_clarifying_messages == 0
             displayBPAdjustmentMessage(user, targets) unless multiHitMove?
             displayCategoryChangeMessage(move.category_override) if move.category_override
         end
         # Display messages letting the player know that weather is debuffing a move (if it is)
-        displayWeatherDebuffMessages(user, move.calcType) if $PokemonSystem.weather_messages == 0
+        displayWeatherDebuffMessages(user, move.calcType) if $Options.weather_messages == 0
     end
 
     def displayBPAdjustmentMessage(user, targets)
@@ -464,7 +464,7 @@ target.pbThis(true)))
         return if target.damageState.disguise
         return if target.damageState.thiefsDiversion
         return if target.effectActive?(:LastGasp)
-        return if defined?($PokemonSystem.effectiveness_messages) && $PokemonSystem.effectiveness_messages == 1
+        return if defined?($Options.effectiveness_messages) && $Options.effectiveness_messages == 1
         if Effectiveness.hyper_effective?(target.damageState.typeMod)
             if numTargets > 1
                 @battle.pbDisplay(_INTL("It's hyper effective on {1}!", target.pbThis(true)))

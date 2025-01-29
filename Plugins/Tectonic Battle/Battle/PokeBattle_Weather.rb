@@ -58,7 +58,7 @@ class PokeBattle_Battle
             pbEndPrimordialWeather
         end
         
-        if $PokemonSystem.weather_messages == 0 && !noChange
+        if $Options.weather_messages == 0 && !noChange
             if @field.weatherDuration < 0
                 pbDisplay(_INTL("It'll last indefinitely!"))
             else
@@ -215,7 +215,7 @@ class PokeBattle_Battle
         threshold = SPECIAL_EFFECT_WAIT_TURNS
         threshold /= 2 if weatherSpedUp?
 
-        showWeatherMessages = $PokemonSystem.weather_messages == 0
+        showWeatherMessages = $Options.weather_messages == 0
 
         if @field.specialTimer >= threshold
             case curWeather
@@ -341,7 +341,7 @@ class PokeBattle_Battle
         pbCommonAnimation(weather_data.animation) if weather_data && @field.specialTimer < SPECIAL_EFFECT_WAIT_TURNS - 1
 
         # Effects due to weather
-        showWeatherMessages = $PokemonSystem.weather_messages == 0
+        showWeatherMessages = $Options.weather_messages == 0
         hailDamage = 0
         sandstormDamage = 0
         priority.each do |b|

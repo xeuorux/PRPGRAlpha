@@ -3,7 +3,7 @@
 Events.onStepTakenFieldMovement += proc { |_sender, e|
   event = e[0]   # Get the event affected by field movement
   if $scene.is_a?(Scene_Map)
-    if $PokemonSystem.particle_effects == 0 && !event.floats
+    if $Options.particle_effects == 0 && !event.floats
 		$globalParticleCounter = 0 if $globalParticleCounter.nil?
 		$globalParticleCounter += 1
 		if $globalParticleCounter >= 4

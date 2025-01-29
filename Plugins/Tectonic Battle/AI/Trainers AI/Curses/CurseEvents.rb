@@ -121,7 +121,7 @@ class PokeBattle_Battle
 
     def amuletMessageDuration
         dur = 70
-        dur -= 8 * $PokemonSystem.textspeed
+        dur -= 8 * $Options.textspeed
         return dur
     end
 end

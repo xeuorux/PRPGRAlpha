@@ -539,7 +539,7 @@ end
 # Text import/export for localisation
 #===============================================================================
 def pbExtractText(untranslatedOnly = false)
-    if untranslatedOnly && $PokemonSystem.language == 0
+    if untranslatedOnly && $Options.language == 0
         pbMessage(_INTL("Can only run this command when the game language isn't set to the default!"))
         return
     end

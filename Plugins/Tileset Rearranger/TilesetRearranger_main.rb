@@ -159,7 +159,7 @@ class TilesetRearranger
     @viewport.dispose
     @tilehelper.dispose if @tilehelper
     Graphics.resize_screen(Settings::SCREEN_WIDTH, Settings::SCREEN_HEIGHT)
-    pbSetResizeFactor($PokemonSystem.screensize)
+    pbSetResizeFactor($Options.screensize)
   end
 
   def main

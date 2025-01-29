@@ -231,7 +231,7 @@ class PokeBattle_Battle
                                           oldSpAtk, oldSpDef, oldSpeed)
             # Learn all moves learned at this level
             moveList = pkmn.getMoveList
-            unless $PokemonSystem.prompt_level_moves == 1
+            unless $Options.prompt_level_moves == 1
                 moveList.each { |m| pbLearnMove(idxParty, m[1]) if m[0] == curLevel }
             end
             battler.pokemon.changeHappiness("levelup") if battler && battler.pokemon

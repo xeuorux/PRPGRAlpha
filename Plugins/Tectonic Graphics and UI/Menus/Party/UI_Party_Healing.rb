@@ -68,7 +68,7 @@ class PokemonPartyHealingDisplayScreen
     end
 
     def healingAnimationDuration
-        if $PokemonSystem.textspeed >= 3
+        if $Options.textspeed >= 3
             return 10
         else
             return 16

@@ -94,7 +94,7 @@ def weatherRNGByHour(totalHours)
 end
 
 def applyOutdoorEffects(delay = -1)
-    return unless $PokemonSystem.overworld_weather == 0
+    return unless $Options.overworld_weather == 0
     return unless playerIsOutdoors?
 
     map_id = $game_map.map_id

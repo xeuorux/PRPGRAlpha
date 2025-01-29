@@ -31,7 +31,7 @@ class PokemonLoadScreen
         )
         delete_save_data
         $game_system   = Game_System.new
-        $PokemonSystem = PokemonSystem.new
+        $Options = Options.new
     end
 
     def pbStartDeleteScreen

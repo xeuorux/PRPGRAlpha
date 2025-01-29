@@ -37,7 +37,7 @@ class PokeBattle_Battle
     end
 
     def bossNarrationDuration
-        return 20 - $PokemonSystem.textspeed * 2
+        return 20 - $Options.textspeed * 2
     end
 
     def pbDisplayBossNarration(msg)

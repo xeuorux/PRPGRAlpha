@@ -188,7 +188,7 @@ def pbChangePlayer(id)
     meta = GameData::Metadata.get_player(id)
     return false if !meta
     $Trainer.character_ID = id
-    $PokemonSystem.gendered_look = id
+    $Options.gendered_look = id
     $Trainer.trainer_type = meta[0]
     $game_player.character_name = meta[1]
 end

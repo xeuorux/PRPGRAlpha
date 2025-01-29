@@ -67,7 +67,7 @@ end
 
 def achievementsPopupDuration
 	dur = 80
-	dur -= 5 * $PokemonSystem.textspeed
+	dur -= 5 * $Options.textspeed
 	return dur
 end
 

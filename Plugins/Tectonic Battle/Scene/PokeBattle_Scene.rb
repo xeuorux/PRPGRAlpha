@@ -366,5 +366,5 @@ class PokeBattle_Scene
 end
   
 def fastTransitions?
-  return $PokemonSystem.battle_transitions == 1
+  return $Options.battle_transitions == 1
 end
