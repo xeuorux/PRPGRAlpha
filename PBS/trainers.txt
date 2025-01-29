@@ -248,7 +248,7 @@ Pokemon = SANDILE,16
 #-------------------------------
 [PSYCHIC_M,Uriel]
 Pokemon = ABRA,17
-    Moves = PSYBEAM,MAGNETWAVE,TELEPORT,DISABLE
+    Moves = PSYBEAM,IRONARROW,TELEPORT,DISABLE
     AbilityIndex = 1 # Steelworker
     Item = PSYCHICGEM
 Pokemon = IMPIDIMP,16
@@ -1553,7 +1553,7 @@ Pokemon = COPPERAJAH,30
     Item = PAYAPABERRY
 Pokemon = LUNATONE,30
     Moves = SWEETSELENE,CRYSTALGLEAM,PSYBEAM
-    AbilityIndex = 0 # Levitate
+    AbilityIndex = 0 # Silver Sense
 #-------------------------------
 [CAMPER_F,Veronica]
 Pokemon = DELCATTY,35
@@ -1805,7 +1805,7 @@ Pokemon = MINIOR,35
     AbilityIndex = 0 # Shields Down
     Item = ROCKGEM
 Pokemon = SALAZZLE,35
-    Moves = LAVAPLUME,DREAMDANCE,VENOSHOCK,SNARL
+    Moves = FLAMETHROWER,DREAMDANCE,VENOSHOCK,SNARL
     AbilityIndex = 0 # Expertise
 Pokemon = FARIGIRAF,35
     Moves = TWINBEAM,CRUNCH,BULKUP,ZENHEADBUTT
@@ -2195,7 +2195,7 @@ Pokemon = SWELLOW,40
     Moves = FACADE,AIRSTRIKE,PILFER,PLUCK
     AbilityIndex = 0 # Daring
 Pokemon = MAGCARGO,40
-    Moves = REDHOTRETREAT,POWERGEM,LAVAPLUME,STRUGGLEBUG
+    Moves = REDHOTRETREAT,POWERGEM,WHITEFLAME,STRUGGLEBUG
     AbilityIndex = 0 # Sluggish
 #-------------------------------
 [LADY3,Kristiane]
@@ -3049,8 +3049,8 @@ Pokemon = GDARMANITAN,45
     Moves = ICEHAMMER,HAMMERARM,MACHPUNCH,TAUNT
     AbilityIndex = 0 # Gorilla Tactics
 Pokemon = STARMIE,45
-    Moves = SURF,PULSAR,SHOCKWAVE,RAPIDSPIN
-    AbilityIndex = 1 # Energetic
+    Moves = SNIPESHOT,EXPLOIT,SHOCKWAVE,RAPIDSPIN
+    AbilityIndex = 1 # Spectrum Vision
 Pokemon = MAMOSWINE,45
     Moves = EARTHQUAKE,ICEHAMMER,ICESHARD,CHILL
     AbilityIndex = 0 # Thick Fat
@@ -3644,7 +3644,7 @@ Pokemon = DARMANITAN,41
 #-------------------------------
 [ARTIST2,Frank]
 Pokemon = SALAZZLE,48
-    Moves = HYPOTHERMIATE,DARKPULSE,LAVAPLUME,SLUDGEBOMB
+    Moves = HYPOTHERMIATE,DARKPULSE,FLAMETHROWER,SLUDGEBOMB
     AbilityIndex = 0 # Expertise
     Item = LUCKHERB
 Pokemon = CORVIKNIGHT,47
@@ -5305,7 +5305,7 @@ Pokemon = MAMOSWINE,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,0,20,20,0
 Pokemon = DROMERUPT,70
-    Moves = EXPLOSION,EARTHPOWER,YAWN,LAVAPLUME
+    Moves = EXPLOSION,EARTHPOWER,YAWN,DRYHEAT
     AbilityIndex = 1 # Adrenaline Rush
     Item = NORMALGEM
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -5684,7 +5684,7 @@ Pokemon = MAMOSWINE,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 0,20,11,19,20,0
 Pokemon = DROMERUPT,70
-    Moves = EXPLOSION,EARTHPOWER,YAWN,LAVAPLUME
+    Moves = EXPLOSION,EARTHPOWER,YAWN,DRYHEAT
     AbilityIndex = 1 # Adrenaline Rush
     Item = NORMALGEM
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -7173,7 +7173,7 @@ Pokemon = DURANT,60
     Item = CHOICESCARF
 Pokemon = STARMIE,60
     Moves = RAPIDSPIN,BUBBLEBARRAGE,PULSAR,RAPIDHERTZ
-    AbilityIndex = 1 # Energetic
+    AbilityIndex = 1 # Spectrum Vision
     Item = LOADEDDICE
 Pokemon = HARCANINE,60
     Moves = INFERNOIMPACT,ADAMANTINEPRESS,PSYCHICFANGS,BULLETTRAIN

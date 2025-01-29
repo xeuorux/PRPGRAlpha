@@ -2700,6 +2700,19 @@ Flags = CanMagicCoat,CanMirrorMove
 Description = The target becomes unable to flee, and takes 50% more damage from all attacks.
 Animation = MEANLOOK
 #-------------------------------
+[DEEPESTFEARS]
+Name = Deepest Fears
+Type = GHOST
+Category = Special
+Power = 90
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = Basic
+Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
+Description = The target is forced to relive their worst nightmare. Critical hits twice as often.
+Animation = NIGHTSHADE
+#-------------------------------
 [DIRGE]
 Name = Dirge
 Type = GHOST
@@ -2840,6 +2853,19 @@ FunctionCode = LowerUserSpAtkSpDef2
 Flags = CanProtect,CanMirrorMove
 Description = The user opens its soul to unleash massive energy. This lowers the user's Sp. Atk and Sp. Def by two steps.
 Animation = OMINOUSWIND
+#-------------------------------
+[PHOBIA]
+Name = Phobia
+Type = GHOST
+Category = Special
+Power = 40
+Accuracy = 100
+TotalPP = 30
+Target = NearOther
+FunctionCode = Basic
+Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
+Description = The user attacks the target's mind with calculated fear. Critical hits twice as often.
+Animation = NIGHTSHADE
 #-------------------------------
 [SEANCE]
 Name = Seance
@@ -3142,6 +3168,32 @@ Target = NearOther
 FunctionCode = SpikesIfTargetFaints
 Flags = CanProtect,CanMirrorMove
 Description = A large spike is shot at the target. If this causes the target to faint, a layer of spikes is set on the ground beneath them.
+Animation = SPIKECANNON
+#-------------------------------
+[IRONARROW]
+Name = Iron Arrow
+Type = STEEL
+Category = Special
+Power = 40
+Accuracy = 100
+TotalPP = 30
+Target = NearOther
+FunctionCode = Basic
+Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
+Description = The target is pierced with a sharp iron arrow. Critical hits twice as often.
+Animation = SPIKECANNON
+#-------------------------------
+[JAVELIN]
+Name = Javelin
+Type = STEEL
+Category = Special
+Power = 90
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = Basic
+Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
+Description = The target is pierced with a pointed metal javelin. Critical hits twice as often.
 Animation = SPIKECANNON
 #-------------------------------
 [MAGNETIZE]
@@ -3774,6 +3826,18 @@ Target = NearOther
 FunctionCode = AlliesActNext
 Flags = CanProtect,CanMirrorMove
 Description = A distinguished attack that motivates nearby allies to follow, letting them act immediately after.
+#-------------------------------
+[WHITEFLAME]
+Name = White Flame
+Type = FIRE
+Category = Special
+Power = 90
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = Basic
+Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
+Description = The user launches a concentrated ball of searing white flame. Critical hits twice as often.
 #-------------------------------
 [WILDFIREMELT]
 Name = Wildfire Melt
@@ -6833,6 +6897,19 @@ Flags = CanProtect,CanMirrorMove
 EffectChance = 20
 Description = The user tickles the target excessively, damaging it. This has a 20% chance to lower Attack.
 Animation = PLAYROUGH
+#-------------------------------
+[ENCHANTEDARROW]
+Name = Enchanted Arrow
+Type = FAIRY
+Category = Special
+Power = 90
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = Basic
+Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
+Description = The user shoots a magical arrow which seeks out the target's weak points. Critical hits twice as often.
+Animation = MAGICALLEAF
 #-------------------------------
 [ENCHANTINGSONG]
 Name = Enchanting Song

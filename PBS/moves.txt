@@ -2537,10 +2537,10 @@ Power = 100
 Accuracy = 100
 TotalPP = 5
 Target = AllNearFoes
-FunctionCode = RaiseUserDef1
+FunctionCode = RaiseUserDefSpDef1
 Flags = CanProtect,CanMirrorMove
 EffectChance = 100
-Description = The user whips up a storm of diamonds to damage foes, raising its Defense.
+Description = The user whips up a storm of diamonds to damage foes, raising its Defense and Sp. Def.
 #-------------------------------
 [HEADSMASH]
 Name = Head Smash
@@ -3885,19 +3885,6 @@ Flags = CanProtect,CanMirrorMove
 EffectChance = 100
 Description = The user attacks by engulfing the target in an intense fire. It leaves the target with a burn.
 #-------------------------------
-[LAVAPLUME]
-Name = Lava Plume
-Type = FIRE
-Category = Special
-Power = 80
-Accuracy = 100
-TotalPP = 12
-Target = AllNearOthers
-FunctionCode = Burn
-Flags = CanProtect,CanMirrorMove
-EffectChance = 30
-Description = An inferno of scarlet flames torches everything around the user. It has a 30% chance to burn.
-#-------------------------------
 [MAGMASTORM]
 Name = Magma Storm
 Type = FIRE
@@ -4262,9 +4249,9 @@ Power = 90
 Accuracy = 100
 TotalPP = 12
 Target = NearOther
-FunctionCode = CannotBeRedirected
+FunctionCode = Basic
 Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
-Description = Ignores all attempts at redirection, allowing this move to hit the chosen target. Critical hits twice as often.
+Description = The target is struck with a supersonic water blast. Critical hits twice as often.
 #-------------------------------
 [SPARKLINGARIA]
 Name = Sparkling Aria
@@ -4348,10 +4335,10 @@ Power = 40
 Accuracy = 100
 TotalPP = 20
 Target = NearOther
-FunctionCode = Waterlog
-Flags = CanProtect,CanMirrorMove
+FunctionCode = Basic
+Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
 EffectChance = 10
-Description = The target is blasted with a forceful shot of water. This has a 10% chance to waterlog.
+Description = The target is blasted with a forceful shot of water. Critical hits twice as often.
 #-------------------------------
 [WATERPLEDGE]
 Name = Water Pledge

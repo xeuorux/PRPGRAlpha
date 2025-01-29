@@ -323,6 +323,7 @@ target.pbThis(true)))
             damage = target.effects[:Substitute] if damage > target.effects[:Substitute]
             target.damageState.hpLost       = damage
             target.damageState.totalHPLost += damage
+            target.damageState.totalHPLostCritical += damage if target.damageState.critical
             target.damageState.displayedDamage = damage
             return
         end
@@ -414,6 +415,7 @@ target.pbThis(true)))
         target.damageState.displayedDamage = 0 if target.damageState.displayedDamage < 0
         target.damageState.hpLost       = damage
         target.damageState.totalHPLost += damage
+        target.damageState.totalHPLostCritical += damage if target.damageState.critical
     end
 
     #=============================================================================

@@ -274,6 +274,11 @@ class PokeBattle_Move
         user.eachActiveAbility do |ability|
             c = BattleHandlers.triggerCriticalCalcUserAbility(ability, user, target, self, c)
         end
+        user.eachAlly do |ally|
+            ally.eachActiveAbility do |ability|
+                c = BattleHandlers.triggerCriticalCalcUserAllyAbility(ability, user, target, self, c)
+            end
+        end
         unless @battle.moldBreaker
             target.eachActiveAbility do |ability|
                 c = BattleHandlers.triggerCriticalCalcTargetAbility(ability, user, target, c)

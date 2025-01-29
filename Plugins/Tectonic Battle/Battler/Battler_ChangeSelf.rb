@@ -215,11 +215,11 @@ class PokeBattle_Battler
         end
     end
 
-    def pbRecoverHPFromMultiDrain(targets, ratio, ability: nil)
+    def pbRecoverHPFromMultiDrain(targets, ratio, ability: nil, onlyCriticalDamage: false)
         totalDamageDealt = 0
         targets.each do |target|
             next if target.damageState.unaffected
-            damage = target.damageState.totalHPLost
+            damage = onlyCriticalDamage ? target.damageState.totalHPLostCritical : target.damageState.totalHPLost
             if target.hasActiveAbility?(:LIQUIDOOZE)
                 @battle.pbShowAbilitySplash(target, :LIQUIDOOZE)
                 lossAmount = (damage * ratio).round
