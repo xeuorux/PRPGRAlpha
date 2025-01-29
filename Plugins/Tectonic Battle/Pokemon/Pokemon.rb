@@ -1538,6 +1538,11 @@ class Pokemon
     end
 
     def switchBall
+        currentBallData = GameData::Item.get(@poke_ball)  
+        if currentBallData.no_ball_swap?
+            pbMessage(_INTL("If you switch {1}'s ball, its current {2} will be thrown away.",name,currentBallData.name))
+            return unless pbConfirmMessageSerious(_INTL("Are you okay with throwing away the {1}?",currentBallData.name))
+        end
         pbMessage(_INTL("Choose the Poké Ball to put {1} into.",name))
         pbChoosePokeball(1)
         itemID = pbGet(1)
