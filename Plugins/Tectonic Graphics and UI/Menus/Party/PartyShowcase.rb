@@ -73,7 +73,7 @@ class PokemonPartyShowcase_Scene
         if @npcTrainer
             playerName = "<ar>#{trainer.full_name}</ar>"
             drawFormattedTextEx(@overlay, Graphics.width - 304, bottomBarY, 300, playerName, base, shadow)
-        elsif $PokemonSystem.name_on_showcases != 1
+        elsif $Options.name_on_showcases != 1
             playerName = "<ar>#{trainer.name}</ar>"
             drawFormattedTextEx(@overlay, Graphics.width - 164, bottomBarY, 160, playerName, base, shadow)
         end

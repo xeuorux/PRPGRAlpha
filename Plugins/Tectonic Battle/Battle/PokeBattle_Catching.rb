@@ -55,7 +55,7 @@ class PokeBattle_Battle
                 pbPlayer.pokedex.set_owned(pkmn.species)
                 if $Trainer.has_pokedex
                     pbPlayer.pokedex.register_last_seen(pkmn)
-                    if $PokemonSystem.dex_shown_register == 0
+                    if $Options.dex_shown_register == 0
                         pbDisplayPaused(_INTL("You register {1} as caught in the MasterDex.", pkmn.name))
                         @scene.pbShowPokedex(pkmn.species)
                     end
@@ -66,7 +66,7 @@ class PokeBattle_Battle
             incrementDexNavCounts(true)
 
             # Nickname the Pokémon
-            showPrompt = (!defined?($PokemonSystem.nicknaming_prompt) || $PokemonSystem.nicknaming_prompt == 0)
+            showPrompt = (!defined?($Options.nicknaming_prompt) || $Options.nicknaming_prompt == 0)
             if showPrompt && pbDisplayConfirm(_INTL("Would you like to give a nickname to {1}?", pkmn.name))
                 nickname = @scene.pbNameEntry(_INTL("{1}'s nickname?", pkmn.speciesName), pkmn)
                 pkmn.name = nickname

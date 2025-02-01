@@ -1220,7 +1220,7 @@ class Pokemon
 
         # echoln("Changing #{name}'s happiness by #{actualGain}") if actualGain != 0
 
-        return if $PokemonSystem.show_trait_unlocks == 1
+        return if $Options.show_trait_unlocks == 1
 
         traitUnlocked = nil
         likeUnlocked = nil

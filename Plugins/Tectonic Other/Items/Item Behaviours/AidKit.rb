@@ -62,7 +62,7 @@ def useAidKit()
 			p.heal_status
 			p.heal_PP
 		end
-		if $PokemonSystem.aid_kit_animation == 1
+		if $Options.aid_kit_animation == 1
 			pbMessage(_INTL("Healing your entire team by {1}.",healAmount))
 		else
 			showPartyHealing($Trainer.party,previousHealthValues,previousStatusIndices)

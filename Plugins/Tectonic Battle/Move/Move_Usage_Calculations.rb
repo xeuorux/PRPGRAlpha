@@ -87,7 +87,7 @@ class PokeBattle_Move
         end
 
         # Explain to the player what is happening
-        if immunityPierced && !uiOnlyCheck && $PokemonSystem.avatar_mechanics_messages == 0
+        if immunityPierced && !uiOnlyCheck && $Options.avatar_mechanics_messages == 0
             if AVATARS_REGULAR_ATTACKS_PIERCE_IMMUNITIES
                 @battle.pbDisplay(_INTL("Near the avatar, immunities are resistances!"))
             else

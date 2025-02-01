@@ -15,7 +15,7 @@ def stowFollowerIfActive()
 end
 
 def unstowFollowerIfAllowed()
-	if $PokemonSystem.followers == 0
+	if $Options.followers == 0
 		pbToggleFollowingPokemon("on",!$PokemonGlobal.bicycle)
 		pbWait(Graphics.frame_rate)
 	end

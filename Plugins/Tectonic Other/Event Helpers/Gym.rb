@@ -59,7 +59,7 @@ end
 
 def teamSnapshot(label=nil,flags=[])
 	makeBackupSave
-	return if $PokemonSystem.party_snapshots == 1
+	return if $Options.party_snapshots == 1
 	pbMessage(_INTL("\\wmTaking team snapshot."))
 	PokemonPartyShowcase_Scene.new($Trainer,snapshot: true,snapShotName: label,flags: flags)
 end

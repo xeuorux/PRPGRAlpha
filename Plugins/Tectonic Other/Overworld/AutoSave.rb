@@ -12,7 +12,7 @@ Events.onStepTaken += proc {
 }
 
 def autoSave
-	return if $PokemonSystem.autosave == 1
+	return if $Options.autosave == 1
 	return if !savingAllowed?()
 	setProperSavePath
 	if !properlySave

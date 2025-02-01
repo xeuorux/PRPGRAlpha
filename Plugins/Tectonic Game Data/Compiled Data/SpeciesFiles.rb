@@ -116,7 +116,7 @@ module GameData
           ret = new_ret
         end
 
-        if $PokemonSystem.color_shifts == 0 && !pkmn.boss? && !pkmn.egg?
+        if $Options.color_shifts == 0 && !pkmn.boss? && !pkmn.egg?
           ret = shiftPokemonBitmapHue(ret,pkmn)
           ret = shiftPokemonBitmapShade(ret,pkmn)
         end

@@ -172,7 +172,7 @@ def pbChangeLevel(pkmn, newlevel, scene = nil)
       end
       
       # Learn new moves upon level up
-      unless $PokemonSystem.prompt_level_moves == 1
+      unless $Options.prompt_level_moves == 1
           movelist = pkmn.getMoveList
           for i in movelist
               next unless i[0] > oldLevel
@@ -690,7 +690,7 @@ def pbEXPAdditionItem(pkmn, exp, item, scene = nil, oneAtATime = false)
     end
     
     # Learn new moves upon level up
-    unless $PokemonSystem.prompt_level_moves == 1
+    unless $Options.prompt_level_moves == 1
         movelist = pkmn.getMoveList
         for i in movelist
             next if i[0] <= current_lvl

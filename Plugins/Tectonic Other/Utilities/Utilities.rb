@@ -183,14 +183,29 @@ def pbGetTrainerTypeGender(trainer_type)
     return GameData::TrainerType.get(trainer_type).gender
 end
 
-def pbChangePlayer(id)
+def selectPlayerAppearance
+    commands = []
+
+    GameData::Metadata.get_players.each do |playerMetaData|
+        trainerTypeID = playerMetaData[0]
+        trainerTypeData = GameData::TrainerType.get(trainerTypeID)
+        commands.push(trainerTypeData.name)  
+    end
+    commands.push(_INTL("Cancel"))
+
+    appearanceSelection = pbMessage(_INTL("Which appearance would you like?"),commands,commands.length,nil,$Trainer.character_ID)
+    return if appearanceSelection >= commands.length
+    pbChangePlayer(appearanceSelection, true)
+end
+
+def pbChangePlayer(id,showMessage = false)
     return false if id < 0 || id >= 8
     meta = GameData::Metadata.get_player(id)
     return false if !meta
     $Trainer.character_ID = id
-    $PokemonSystem.gendered_look = id
     $Trainer.trainer_type = meta[0]
     $game_player.character_name = meta[1]
+    pbMessage(_INTL("Appearance changed to {1}!",GameData::TrainerType.get(meta[0]).name)) if showMessage
 end
 
 def pbTrainerName(name = nil, outfit = 0)

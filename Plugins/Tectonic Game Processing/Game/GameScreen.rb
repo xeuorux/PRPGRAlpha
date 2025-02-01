@@ -79,7 +79,7 @@ class Game_Screen
     #     duration : time
     #-----------------------------------------------------------------------------
     def start_shake(power, speed, duration)
-        return if $PokemonSystem.screenshake != 0
+        return if $Options.screenshake != 0
         @shake_power    = power
         @shake_speed    = speed
         @shake_duration = duration

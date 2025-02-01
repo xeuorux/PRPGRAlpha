@@ -157,7 +157,7 @@ def tutorialIntro
 end
 
 def tutorialsEnabled?
-    return $PokemonSystem.tutorial_popups != 1
+    return $Options.tutorial_popups != 1
 end
 
 def playTutorial(tutorialMessages = [])
@@ -179,6 +179,6 @@ end
 
 def tutorialMessageDuration
 	dur = 90
-	dur -= 10 * $PokemonSystem.textspeed
+	dur -= 10 * $Options.textspeed
 	return dur
 end

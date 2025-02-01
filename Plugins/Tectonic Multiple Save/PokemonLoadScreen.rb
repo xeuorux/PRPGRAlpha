@@ -31,7 +31,7 @@ class PokemonLoadScreen
         )
         delete_save_data
         $game_system   = Game_System.new
-        $PokemonSystem = PokemonSystem.new
+        $Options = Options.new
     end
 
     def pbStartDeleteScreen
@@ -92,6 +92,7 @@ class PokemonLoadScreen
         cmd_load_game       = -1
         cmd_new_game        = -1
         cmd_achievements    = -1
+        cmd_options         = -1
         cmd_debug           = -1
         cmd_website         = -1
         cmd_discord         = -1
@@ -103,6 +104,7 @@ class PokemonLoadScreen
             commands[cmd_load_game = commands.length]   = _INTL("Load Game")
         end
         commands[cmd_new_game = commands.length]        = _INTL("New Game")
+        commands[cmd_options = commands.length]         = _INTL("Options")
         commands[cmd_achievements = commands.length]    = _INTL("Achievements")
         commands[cmd_website = commands.length]         = _INTL("Website")
         commands[cmd_discord = commands.length]         = _INTL("Discord")
@@ -132,6 +134,12 @@ class PokemonLoadScreen
                 @scene.pbEndScene
                 Game.start_new
                 return
+            when cmd_options
+                pbFadeOutIn {
+                    optionScene = PokemonOption_Scene.new
+					optionScreen = PokemonOptionMenu.new(optionScene)
+					optionScreen.pbStartPokemonMenu
+                }
             when cmd_achievements
                 pbFadeOutIn do
                     achievementsListScene = AchievementsListScene.new

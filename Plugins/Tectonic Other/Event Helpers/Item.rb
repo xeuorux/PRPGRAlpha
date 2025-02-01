@@ -118,7 +118,7 @@ def showItemDescription(item)
     initializeItemHistory if $PokemonGlobal.hadItemYet.nil?
     unless $PokemonGlobal.hadItemYet[item]
         $PokemonGlobal.hadItemYet[item] = true
-        if $PokemonSystem.show_item_descriptions == 0
+        if $Options.show_item_descriptions == 0
             itemDesc = GameData::Item.get(item).description
             pbMessage(_INTL("\\cl\\l[4]\\op\\wu\\i[{1}]\\or{2}\\wt[30]", item, itemDesc))
         end
