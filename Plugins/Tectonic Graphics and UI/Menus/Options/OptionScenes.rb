@@ -457,15 +457,6 @@ class PokemonOption_Scene_Overworld < PokemonOption_Scene_Base
 				}
 			),
 			EnumOption.new(
-                _INTL("Look"),
-                _INTL("What sort of gendered expression you want for your player character."),
-                [_INTL("M"), _INTL("F"), _INTL("A")],
-				proc { $Options.gendered_look },
-				proc { |value|
-					pbChangePlayer(value)
-				}
-			),
-			EnumOption.new(
                 _INTL("Pokémon Follow"),
                 _INTL("Whether your first Pokémon follows behind you."),
                 [_INTL("On"), _INTL("Off")],

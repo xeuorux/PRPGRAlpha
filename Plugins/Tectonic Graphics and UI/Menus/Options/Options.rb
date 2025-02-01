@@ -16,7 +16,6 @@ class Options
     attr_accessor :overworld_weather
     attr_accessor :screenshake
     attr_accessor :skip_fades
-    attr_accessor :gendered_look
     attr_accessor :damage_numbers
     attr_accessor :show_item_descriptions
     attr_accessor :show_trait_unlocks
@@ -88,7 +87,6 @@ class Options
         @screenshake                    = 0 # (0=true, 1=false)
         @flashing_weather               = 0 # (0=true, 1=false)
         @skip_fades                     = 1 # (0=true, 1=false)
-        @gendered_look                  = 0 # (0 = Masc, 1 = Fem, 2 = Andro)
         @damage_numbers                 = 0 # (0=true, 1=false)
         @show_item_descriptions         = $DEBUG ? 1 : 0 # (0=true, 1=false)
         @effectiveness_messages         = 0 # (0=true, 1=false)

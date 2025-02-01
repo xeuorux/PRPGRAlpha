@@ -1241,17 +1241,17 @@ BaseMoney = 60
 IntroBGM = ELITETRAINER
 #-------------------------------
 [POKEMONTRAINER_Androgynous]
-Name = Pokémon Trainer
+Name = Androgynous
 Gender = Unknown
 BaseMoney = 60
 #-------------------------------
 [POKEMONTRAINER_Feminine]
-Name = Pokémon Trainer
+Name = Feminine
 Gender = Female
 BaseMoney = 60
 #-------------------------------
 [POKEMONTRAINER_Masculine]
-Name = Pokémon Trainer
+Name = Masculine
 Gender = Male
 BaseMoney = 60
 #-------------------------------

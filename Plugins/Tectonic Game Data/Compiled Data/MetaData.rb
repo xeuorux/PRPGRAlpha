@@ -91,6 +91,19 @@ module GameData
             return nil
         end
 
+        def self.get_players
+            players = []
+            players.push(get.player_A) if get.player_A
+            players.push(get.player_B) if get.player_B
+            players.push(get.player_C) if get.player_C
+            players.push(get.player_D) if get.player_D
+            players.push(get.player_E) if get.player_E
+            players.push(get.player_F) if get.player_F
+            players.push(get.player_G) if get.player_G
+            players.push(get.player_H) if get.player_H
+            return players
+        end
+
         def initialize(hash)
             @id = hash[:id]
             @home = hash[:home]

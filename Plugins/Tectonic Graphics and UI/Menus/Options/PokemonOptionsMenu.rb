@@ -2,14 +2,15 @@ class PokemonOptionMenu < PokemonPauseMenu
 	def pbStartPokemonMenu
 		@scene.pbStartScene
 		endscene = true
-		cmdAudioOptions  = -1
+		cmdAudioOptions = -1
 		cmdUIOptions = -1
     cmdBattleOptions = -1
     cmdOverworldOptions = -1
     cmdAdvancedGraphicsOptions = -1
+    cmdPlayerAppearance = -1
     cmdControlsMapping = -1
     cmdLanguageSelect = -1
-    cmdCancel    = -1
+    cmdCancel = -1
     optionsCommands = []
     optionsCommands[cmdUISpeedOptions = optionsCommands.length] = _INTL("Speed Options")
 		optionsCommands[cmdBattleOptions = optionsCommands.length] = _INTL("Battle Options")
@@ -17,13 +18,17 @@ class PokemonOptionMenu < PokemonPauseMenu
 		optionsCommands[cmdOverworldOptions = optionsCommands.length] = _INTL("Overworld Options")
     optionsCommands[cmdAudioOptions = optionsCommands.length] = _INTL("Audio Options")
     optionsCommands[cmdAdvancedGraphicsOptions = optionsCommands.length] = _INTL("Adv. Graphics Options")
+    optionsCommands[cmdPlayerAppearance = optionsCommands.length]  = _INTL("Player Appearance")
     optionsCommands[cmdControlsMapping = optionsCommands.length] = _INTL("Controls")
     optionsCommands[cmdLanguageSelect = optionsCommands.length] = _INTL("Language")
     optionsCommands[cmdCancel = optionsCommands.length] = _INTL("Cancel")
 		loop do
 			infoCommand = @scene.pbShowCommands(optionsCommands)
       break if infoCommand < 0 || infoCommand == cmdCancel
-      if cmdLanguageSelect > 0 && infoCommand == cmdLanguageSelect
+      if cmdPlayerAppearance > 0 && infoCommand == cmdPlayerAppearance
+        selectPlayerAppearance
+        next
+      elsif cmdLanguageSelect > 0 && infoCommand == cmdLanguageSelect
           prevLanguage = $Options.language
           $Options.language = pbChooseLanguage
           if $Options.language == prevLanguage
