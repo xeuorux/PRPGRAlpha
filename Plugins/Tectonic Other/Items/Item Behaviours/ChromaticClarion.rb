@@ -19,6 +19,7 @@ def useChromaClarion
     encounters = []
     3.times do |i|
         species, level = $PokemonEncounters.choose_wild_pokemon(encounter_type)
+        level += 5
         pkmn = pbGenerateWildPokemon(species,level,false,true)
 
         pkmn.shinyRolls *= 2

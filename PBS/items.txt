@@ -2657,7 +2657,7 @@ Pocket = 8
 Price = 0
 FieldUse = Direct
 Flags = KeyItem
-Description = An ancient horn. Sound it to call 3 Pokémon to battle you. They have a higher chance of having items and unique moves.
+Description = An ancient horn. Sound it to start a 3v3 wild battle. Foes will be higher level and likely to have rare moves.
 #-------------------------------
 [HOUSEDEED1]
 Name = House Deed
