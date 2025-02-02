@@ -37,6 +37,7 @@ class PokemonOptionMenu < PokemonPauseMenu
               loadLanguage
               languageName = Settings::LANGUAGES[$Options.language][0]
               pbMessage(_INTL("Game language changed to {1}!",languageName))
+              $Options.storeOptions
           end
           next
       elsif cmdControlsMapping > 0 && infoCommand == cmdControlsMapping
