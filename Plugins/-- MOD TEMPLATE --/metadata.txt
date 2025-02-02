@@ -1,6 +1,7 @@
 #-------------------------------
 [998]
 # Test Map
+ImportName = Test Map
 Outdoor = true
 ShowArea = false
 Bicycle = true
