@@ -18,7 +18,7 @@ class TilingCardsStorageInteractionMenu_Scene < TilingCardsMenu_Scene
 		return addLanguageSuffix(("Graphics/Pictures/Party/background_fade"))
 	end
   
-    def initialize(command,pkmn,selected,heldpoke,storageScreen,storageScene,retValWrapper=[false])
+    def initialize(command,pkmn,selected,heldpoke,storageScreen,storageScene,isMultiselect,retValWrapper=[false])
 		super()
 		@command = command
 		@pkmn = pkmn
@@ -26,6 +26,7 @@ class TilingCardsStorageInteractionMenu_Scene < TilingCardsMenu_Scene
 		@heldpoke = heldpoke
 		@storageScreen = storageScreen
 		@storageScene = storageScene
+		@isMultiselect = isMultiselect
 		@buttonRowHeight = 68
 		@retValWrapper = retValWrapper
 		@xOffset = 204
@@ -40,7 +41,15 @@ class TilingCardsStorageInteractionMenu_Scene < TilingCardsMenu_Scene
 
 		case @command
 		when 0
-			if @heldpoke
+			if @isMultiselect
+				PBDebug.log("Multiselect tiles - Organise")
+				# Move - check if enough space in future box
+				# Withdraw - if enough space in party
+				# store - same as move
+				# Item 
+				# Release
+	
+			elsif @heldpoke
 				if @storageScreen.storage[@selected[0], @selected[1]] # Is there a pokemon in the spot?
 					@cardButtons[:SHIFT] = {
 						:label => _INTL("Shift"),
@@ -77,27 +86,35 @@ class TilingCardsStorageInteractionMenu_Scene < TilingCardsMenu_Scene
 				}
 			end
 		when 1
-			@cardButtons[:WITHDRAW] = {
-					:label => _INTL("Withdraw"),
-					:active_proc => Proc.new {
-						next canEditTeam && !inDonationBox
-					},
-					:press_proc => Proc.new { |scene|
-						@storageScreen.pbWithdraw(@selected, @heldpoke)
-						next true
-					},
-				}
+			if @isMultiselect
+				PBDebug.log("Multiselect tiles")
+			else
+				@cardButtons[:WITHDRAW] = {
+						:label => _INTL("Withdraw"),
+						:active_proc => Proc.new {
+							next canEditTeam && !inDonationBox
+						},
+						:press_proc => Proc.new { |scene|
+							@storageScreen.pbWithdraw(@selected, @heldpoke)
+							next true
+						},
+					}
+			end
 		when 2
-			@cardButtons[:STORE] = {
-					:label => _INTL("Store"),
-					:active_proc => Proc.new {
-						next canEditTeam && !lastPokemonInParty
-					},
-					:press_proc => Proc.new { |scene|
-						@storageScreen.pbStore(@selected, nil)
-						next true
-					},
-				}
+			if @isMultiselect
+				PBDebug.log("Multiselect tiles")
+			else
+				@cardButtons[:STORE] = {
+						:label => _INTL("Store"),
+						:active_proc => Proc.new {
+							next canEditTeam && !lastPokemonInParty
+						},
+						:press_proc => Proc.new { |scene|
+							@storageScreen.pbStore(@selected, nil)
+							next true
+						},
+					}
+			end
 		when 5
 			@cardButtons[:SELECT] = {
 				:label => _INTL("Select"),
@@ -111,24 +128,11 @@ class TilingCardsStorageInteractionMenu_Scene < TilingCardsMenu_Scene
 			}
 		end
 
-		@cardButtons[:MASTERDEX] = {
-				:label => _INTL("MasterDex"),
-				:active_proc => Proc.new {
-					$Trainer.has_pokedex
-				},
-				:press_proc => Proc.new { |scene|
-					openSingleDexScreen(@pkmn)
-				},
-			}
+		if @isMultiselect
+			PBDebug.log("Multiselect tiles - Others")
+			PBDebug.log(@pkmn)
 
-		@cardButtons[:SUMMARY] = {
-				:label => _INTL("Summary"),
-				:press_proc => Proc.new { |scene|
-					@storageScreen.pbSummary(@selected,@heldpoke)
-				},
-			}
-
-		@cardButtons[:ITEM] = {
+			@cardButtons[:ITEM] = {
 				:label => _INTL("Item"),
 				:active_proc => Proc.new {
 					canEditTeam && !inDonationBox
@@ -138,26 +142,66 @@ class TilingCardsStorageInteractionMenu_Scene < TilingCardsMenu_Scene
 				},
 			}
 
-		@cardButtons[:MODIFY] = {
-				:label => _INTL("Modify"),
-				:active_proc => Proc.new {
-					canEditTeam && !@pkmn.egg? && !inDonationBox
-				},
-				:press_proc => Proc.new { |scene|
-					next true if modifyCommandMenu
-				},
-			}
-
-		@cardButtons[:RELEASE] = {
+			@cardButtons[:RELEASE] = {
 				:label => _INTL("Release"),
 				:active_proc => Proc.new {
-					canEditTeam && !@pkmn.egg? && !lastPokemonInParty
+					canEditTeam && !lastPokemonInParty
 				},
 				:press_proc => Proc.new { |scene|
-					@storageScreen.pbRelease(@selected, @heldpoke)
+					@storageScreen.pbRelease(@selected, @pkmn)
 					next true
 				},
 			}
+
+		else 
+			@cardButtons[:MASTERDEX] = {
+					:label => _INTL("MasterDex"),
+					:active_proc => Proc.new {
+						$Trainer.has_pokedex
+					},
+					:press_proc => Proc.new { |scene|
+						openSingleDexScreen(@pkmn)
+					},
+				}
+
+			@cardButtons[:SUMMARY] = {
+					:label => _INTL("Summary"),
+					:press_proc => Proc.new { |scene|
+						@storageScreen.pbSummary(@selected,@heldpoke)
+					},
+				}
+
+			@cardButtons[:ITEM] = {
+					:label => _INTL("Item"),
+					:active_proc => Proc.new {
+						canEditTeam && !inDonationBox
+					},
+					:press_proc => Proc.new { |scene|
+						next true if itemCommandMenu
+					},
+				}
+
+			@cardButtons[:MODIFY] = {
+					:label => _INTL("Modify"),
+					:active_proc => Proc.new {
+						canEditTeam && !inDonationBox && !@pkmn.egg?
+					},
+					:press_proc => Proc.new { |scene|
+						next true if modifyCommandMenu
+					},
+				}
+
+			@cardButtons[:RELEASE] = {
+					:label => _INTL("Release"),
+					:active_proc => Proc.new {
+						canEditTeam && !@pkmn.egg? && !lastPokemonInParty
+					},
+					:press_proc => Proc.new { |scene|
+						@storageScreen.pbRelease(@selected, @heldpoke)
+						next true
+					},
+				}
+		end
 
 		if $DEBUG
 			@yOffset -= 16

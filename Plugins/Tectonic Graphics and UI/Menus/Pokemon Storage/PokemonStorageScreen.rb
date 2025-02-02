@@ -42,6 +42,30 @@ class PokemonStorageScreen
                         @scene.pbCloseBox
                         return true
                     end
+                elsif @scene.multiselectCount > 1
+                    PBDebug.log("Handle multiselect")
+                    selectedBox = selected[0]
+                    pokemonList = selected
+                    pokemonList.delete_at(0)
+                    if command == 4
+                        selectedBox
+                        if selectedBox > -1 && @storage[selectedBox].isDonationBox?
+                            pbPlayBuzzerSE
+                            pbDisplay(_INTL("You cannot select a donated Pokémon!"))
+                            next
+                        end
+                    end
+                    if pokemonList.any?(nil)
+                        pbPlayBuzzerSE
+                        pbDisplay(_INTL("That Pokémon is not a valid choice!"))
+                        next
+                    end
+                    pokemonZip = pokemonList.map { |element| [selectedBox, element] }
+                    PBDebug.log(pokemonZip)
+
+                    interactionScene = TilingCardsStorageInteractionMenu_Scene.new(command,pokemonZip,selected,nil,self,@scene,true)
+                    interactionScreen = TilingCardsStorageInteractionMenu.new(interactionScene)
+                    interactionScreen.pbStartPokemonMenu
                 else
                     pokemon = @storage[selected[0], selected[1]]
                     if pokemon && command == 4
@@ -73,7 +97,7 @@ class PokemonStorageScreen
                         elsif pokemon
                             selectedPokemon = pokemon
                         end
-                        interactionScene = TilingCardsStorageInteractionMenu_Scene.new(command,selectedPokemon,selected,heldpoke,self,@scene)
+                        interactionScene = TilingCardsStorageInteractionMenu_Scene.new(command,selectedPokemon,selected,heldpoke,self,@scene,false)
                         interactionScreen = TilingCardsStorageInteractionMenu.new(interactionScene)
                         interactionScreen.pbStartPokemonMenu
                     end

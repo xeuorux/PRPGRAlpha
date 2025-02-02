@@ -22,6 +22,7 @@ class PokemonStorageScene
         @viewport = Viewport.new(0, 0, Graphics.width, Graphics.height)
         @viewport.z = 99_999
         @selection = 0
+        @multiselect = Array.new
         @quickswap = false
         @sprites = {}
         @choseFromParty = false
@@ -277,11 +278,11 @@ class PokemonStorageScene
                 pbSetArrow(@sprites["arrow"], selection)
                 if selection == -4
                     nextbox = (@storage.currentBox + @storage.maxBoxes - 1) % @storage.maxBoxes
-                    pbSwitchBoxToLeft(nextbox)
+                    pbSwitchBox(nextbox, 1)
                     @storage.currentBox = nextbox
                 elsif selection == -5
                     nextbox = (@storage.currentBox + 1) % @storage.maxBoxes
-                    pbSwitchBoxToRight(nextbox)
+                    pbSwitchBox(nextbox, 0)
                     @storage.currentBox = nextbox
                 end
                 selection = -1 if [-4, -5].include?(selection)
@@ -292,14 +293,14 @@ class PokemonStorageScene
             if Input.trigger?(Input::JUMPUP)
                 pbPlayCursorSE
                 nextbox = (@storage.currentBox + @storage.maxBoxes - 1) % @storage.maxBoxes
-                pbSwitchBoxToLeft(nextbox)
+                pbSwitchBox(nextbox, 1)
                 @storage.currentBox = nextbox
                 pbUpdateOverlay(selection)
                 pbSetMosaic(selection)
             elsif Input.trigger?(Input::JUMPDOWN)
                 pbPlayCursorSE
                 nextbox = (@storage.currentBox + 1) % @storage.maxBoxes
-                pbSwitchBoxToRight(nextbox)
+                pbSwitchBox(nextbox, 0)
                 @storage.currentBox = nextbox
                 pbUpdateOverlay(selection)
                 pbSetMosaic(selection)
@@ -311,22 +312,43 @@ class PokemonStorageScene
                     pbUpdateOverlay(selection)
                     pbSetMosaic(selection)
                 end
+            elsif Input.triggerex?(:W) && @command == 0 # Organize only
+                if selection != -1 && !@quickswap
+                    if @multiselect.include?(selection)
+                        @multiselect.delete(selection)
+                    else
+                        @multiselect.push(selection)
+                    end
+                    PBDebug.log(@multiselect)
+                    # Update multiselected highlighting
+                end
             elsif Input.trigger?(Input::ACTION) && @command == 0 # Organize only
-                pbPlayDecisionSE
-                pbSetQuickSwap(!@quickswap)
+                if @multiselect.empty?
+                    pbPlayDecisionSE
+                    pbSetQuickSwap(!@quickswap)
+                else
+                    PBDebug.log("Cannot use quickswap with multiselect.")
+                end
             elsif Input.trigger?(Input::BACK)
                 @selection = selection
                 return nil
             elsif Input.trigger?(Input::USE)
-                @selection = selection
-                if selection >= 0
-                    return [@storage.currentBox, selection]
-                elsif selection == -1   # Box name
-                    return [-4, -1]
-                elsif selection == -2   # Party Pokémon
-                    return [-2, -1]
-                elsif selection == -3   # Close Box
-                    return [-3, -1]
+                if multiselectCount == 1
+                    return [@storage.currentBox, @multiselect[0]]
+                end
+                if @multiselect.empty? 
+                    @selection = selection
+                    if selection >= 0
+                        return [@storage.currentBox, selection]
+                    elsif selection == -1   # Box name
+                        return [-4, -1]
+                    elsif selection == -2   # Party Pokémon
+                        return [-2, -1]
+                    elsif selection == -3   # Close Box
+                        return [-3, -1]
+                    end
+                else
+                    return @multiselect.prepend(@storage.currentBox)
                 end
             end
         end
@@ -353,6 +375,7 @@ class PokemonStorageScene
                 end
             else
                 @choseFromParty = false
+                PBDebug.log(ret)
                 return ret
             end
         end
@@ -441,6 +464,16 @@ class PokemonStorageScene
         @sprites["box"].refreshSprites = true
     end
 
+    def pbSwitchBox(newbox, side)
+        if side == 0
+            pbSwitchBoxToRight(newbox)
+        elsif side == 1
+            pbSwitchBoxToLeft(newbox)
+        end
+        clearMultiselect
+        donationBoxTutorialCheck
+    end
+
     def pbSwitchBoxToRight(newbox)
         newbox = PokemonBoxSprite.new(@storage, newbox, @boxviewport, @iconFadeProc)
         newbox.x = 520
@@ -459,8 +492,6 @@ class PokemonStorageScene
         @sprites["box"].x -= diff
         @sprites["box"].dispose
         @sprites["box"] = newbox
-
-        donationBoxTutorialCheck
     end
 
     def pbSwitchBoxToLeft(newbox)
@@ -481,8 +512,6 @@ class PokemonStorageScene
         @sprites["box"].x -= diff
         @sprites["box"].dispose
         @sprites["box"] = newbox
-
-        donationBoxTutorialCheck
     end
 
     def donationBoxTutorialCheck
@@ -494,9 +523,9 @@ class PokemonStorageScene
     def pbJumpToBox(newbox)
         if @storage.currentBox != newbox
             if newbox > @storage.currentBox
-                pbSwitchBoxToRight(newbox)
+                pbSwitchBox(newbox, 0)
             else
-                pbSwitchBoxToLeft(newbox)
+                pbSwitchBox(newbox, 1)
             end
             @storage.currentBox = newbox
         end
@@ -671,6 +700,14 @@ class PokemonStorageScene
 
     def inDonationBox?
         return @storage[@storage.currentBox].isDonationBox?
+    end
+
+    def multiselectCount
+        return @multiselect.count
+    end
+
+    def clearMultiselect
+        @multiselect.clear
     end
 
     def pbBoxName(helptext, minchars, maxchars)
