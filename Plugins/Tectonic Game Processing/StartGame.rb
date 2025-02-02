@@ -28,8 +28,6 @@ module Game
       else
         SaveData.load_bootup_values(save_data)
       end
-      # Set resize factor
-      pbSetResizeFactor(1)
       # Set language (and choose language if there is no save file)
       if Settings::LANGUAGES.length >= 2
         $Options.language = pbChooseLanguage if save_data.empty?
@@ -70,7 +68,6 @@ module Game
       $PokemonMap.updateMap
       $scene = Scene_Map.new
       $PokemonTemp.dependentEvents.refresh_sprite(false)
-      pbSetResizeFactor($Options.screensize)
       $Options.setSystemFrame
       $Options.setSpeechFrame
       removeSpeaker
