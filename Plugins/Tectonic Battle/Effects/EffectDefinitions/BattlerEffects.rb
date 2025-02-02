@@ -1019,6 +1019,7 @@ GameData::BattleEffect.register_effect(:Battler, {
     :id => :Snatch,
     :real_name => "Snatch",
     :type => :Integer,
+    :resets_eor	=> true,
     :apply_proc => proc do |battle, battler, _value|
         battle.pbDisplay(_INTL("{1} waits for a move to steal!", battler.pbThis))
     end,
