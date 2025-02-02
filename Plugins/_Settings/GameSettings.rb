@@ -371,6 +371,8 @@ module Settings
     # that much Exp (false). This also applies to Exp gained via the Exp Share
     # (held item version) being distributed to all Exp Share holders.
     SPLIT_EXP_BETWEEN_GAINERS = true
+    # Whether fainted Pokemon can still earn experience from participating in battle
+    FAINTED_POKEMON_EARN_EXP = true
     # Whether the critical capture mechanic applies. Note that its calculation is
     # based on a total of 600+ species (i.e. that many species need to be caught
     # to provide the greatest critical capture chance of 2.5x), and there may be

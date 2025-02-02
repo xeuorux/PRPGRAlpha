@@ -45,14 +45,15 @@ class PokeBattle_Battle
                 # Count the number of participants
                 numPartic = 0
                 b.participants.each do |partic|
-                    next unless p1[partic] && p1[partic].able? && pbIsOwner?(0, partic)
+                    next unless p1[partic] && pbIsOwner?(0, partic)
+                    next unless p1[partic].able? || Settings::FAINTED_POKEMON_EARN_EXP
                     numPartic += 1
                 end
                 # Find which Pokémon have an Exp Share
                 expShare = []
                 unless expAll
                     eachInTeam(0, 0) do |pkmn, i|
-                        next unless pkmn.able?
+                        next unless pkmn.able? || Settings::FAINTED_POKEMON_EARN_EXP
                         next unless pkmn.hasItem?(:EXPSHARE)
                         expShare.push(i)
                     end
@@ -61,7 +62,7 @@ class PokeBattle_Battle
                 if numPartic > 0 || expShare.length > 0 || expAll
                     # Gain Exp for participants
                     eachInTeam(0, 0) do |pkmn, i|
-                        next unless pkmn.able?
+                        next unless pkmn.able? || Settings::FAINTED_POKEMON_EARN_EXP
                         next unless b.participants.include?(i) || expShare.include?(i)
                         pbGainExpOne(i, b, numPartic, expShare, expAll, hasExpJAR)
                     end
@@ -69,7 +70,7 @@ class PokeBattle_Battle
                     if expAll
                         showMessage = true
                         eachInTeam(0, 0) do |pkmn, i|
-                            next unless pkmn.able?
+                            next unless pkmn.able? || Settings::FAINTED_POKEMON_EARN_EXP
                             next if b.participants.include?(i) || expShare.include?(i)
                             pbDisplayPaused(_INTL("Your party Pokémon in waiting also got Exp. Points!")) if showMessage
                             showMessage = false
@@ -218,7 +219,7 @@ class PokeBattle_Battle
             # Levelled up
             pbCommonAnimation("LevelUp", battler) if battler
             oldTotalHP = pkmn.totalhp
-            oldAttack  = pkmn.attack
+            oldAttack  = pcalc_statskmn.attack
             oldDefense = pkmn.defense
             oldSpAtk   = pkmn.spatk
             oldSpDef   = pkmn.spdef
