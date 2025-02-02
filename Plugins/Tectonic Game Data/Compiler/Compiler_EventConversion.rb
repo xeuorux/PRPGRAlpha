@@ -78,7 +78,7 @@ module Compiler
 
   def edit_maps
     wallReplaceConvexID = GameData::TerrainTag.get(:WallReplaceConvex).id_number
-  
+    renamed_maps = 0
     # Iterate over all maps
     mapData = Compiler::MapData.new
     tilesets_data = load_data("Data/Tilesets.rxdata")
@@ -86,6 +86,15 @@ module Compiler
         map = mapData.getMap(id)
         next if !map || !mapData.mapinfos[id]
         mapName = mapData.mapinfos[id].name
+
+        # overwrite name if specified
+        map_metadata = GameData::MapMetadata.try_get(id)
+        new_name = map_metadata.import_name if map_metadata && map_metadata.import_name
+        if new_name and new_name != mapName
+          mapData.mapinfos[id].name = new_name
+          mapName = new_name
+          renamed_maps += 1
+        end
 
         # Grab the tileset here
         tileset = tilesets_data[map.tileset_id]
@@ -151,6 +160,10 @@ module Compiler
         else
           echoln("Unable to make any changes to: #{mapName} (#{id})")
         end
+    end
+    if renamed_maps > 0
+      echoln("Saving MapInfos after renaming #{renamed_maps} maps.")
+      save_data(mapData.mapinfos,"Data/MapInfos.rxdata")
     end
   end
 
