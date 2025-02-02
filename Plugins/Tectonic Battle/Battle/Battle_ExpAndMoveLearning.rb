@@ -167,8 +167,7 @@ class PokeBattle_Battle
         expFinal = expFinal.clamp(0, growth_rate.minimum_exp_for_level(level_cap))
         expGained = expFinal - pkmn.exp
         expLeftovers -= pkmn.exp
-        $PokemonGlobal.expJAREfficient = false if $PokemonGlobal.expJAREfficient.nil?
-        expLeftovers = (expLeftovers * EXP_JAR_BASE_EFFICIENCY).floor unless $PokemonGlobal.expJAREfficient
+        expLeftovers = (expLeftovers * EXP_JAR_BASE_EFFICIENCY).floor
         @expStored += expLeftovers if expLeftovers > 0
         curLevel = pkmn.level
         newLevel = growth_rate.level_from_exp(expFinal)

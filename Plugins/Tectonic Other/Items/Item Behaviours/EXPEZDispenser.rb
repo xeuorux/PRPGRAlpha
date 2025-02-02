@@ -3,7 +3,6 @@ EXP_JAR_BASE_EFFICIENCY = 0.8
 
 class PokemonGlobalMetadata
 	attr_accessor :expJARUpgraded
-	attr_accessor :expJAREfficient
 end
 
 ItemHandlers::UseFromBag.add(:EXPEZDISPENSER,proc { |item|
