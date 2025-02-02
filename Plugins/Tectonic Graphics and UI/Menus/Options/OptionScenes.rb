@@ -324,7 +324,7 @@ class PokemonOption_Scene_UserInterface < PokemonOption_Scene_Base
 				proc { $Options.bag_sorting },
 				proc { |value|
 					$Options.bag_sorting = value
-					$PokemonBag.sortItems
+					$PokemonBag.sortItems if $scene.is_a?(Scene_Map)
 				}
 			),
             EnumOption.new(_INTL("Name on Showcase"),
@@ -463,7 +463,7 @@ class PokemonOption_Scene_Overworld < PokemonOption_Scene_Base
 				proc { $Options.followers },
 				proc { |value|
 					$Options.followers = value
-					pbToggleFollowingPokemon($Options.followers == 0 ? "on" : "off", false)
+					pbToggleFollowingPokemon($Options.followers == 0 ? "on" : "off", false) if $scene.is_a?(Scene_Map)
 				}
 			),
             EnumOption.new(
@@ -473,11 +473,13 @@ class PokemonOption_Scene_Overworld < PokemonOption_Scene_Base
 				proc { $Options.overworld_weather },
 				proc { |value|
 					$Options.overworld_weather = value
-					if value == 0
-						applyOutdoorEffects
-					else
-						$game_screen.resetWeather
-					end
+                    if $scene.is_a?(Scene_Map)
+                        if value == 0
+                            applyOutdoorEffects
+                        else
+                            $game_screen.resetWeather
+                        end
+                    end
 				}
 			),
             EnumOption.new(

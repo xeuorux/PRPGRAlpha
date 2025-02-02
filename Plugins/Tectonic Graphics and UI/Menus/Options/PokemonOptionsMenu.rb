@@ -18,7 +18,7 @@ class PokemonOptionMenu < PokemonPauseMenu
 		optionsCommands[cmdOverworldOptions = optionsCommands.length] = _INTL("Overworld Options")
     optionsCommands[cmdAudioOptions = optionsCommands.length] = _INTL("Audio Options")
     optionsCommands[cmdAdvancedGraphicsOptions = optionsCommands.length] = _INTL("Adv. Graphics Options")
-    optionsCommands[cmdPlayerAppearance = optionsCommands.length]  = _INTL("Player Appearance") if $Trainer
+    optionsCommands[cmdPlayerAppearance = optionsCommands.length]  = _INTL("Player Appearance") if $scene.is_a?(Scene_Map)
     optionsCommands[cmdControlsMapping = optionsCommands.length] = _INTL("Controls")
     optionsCommands[cmdLanguageSelect = optionsCommands.length] = _INTL("Language")
     optionsCommands[cmdCancel = optionsCommands.length] = _INTL("Cancel")
