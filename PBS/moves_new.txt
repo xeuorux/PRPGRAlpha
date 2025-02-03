@@ -3258,6 +3258,18 @@ Flags = CanMirrorMove
 Description = The user creates a high quality area in which super-effective deals 25% more, and not very effective deals 25% less.
 Animation = WONDERROOM
 #-------------------------------
+[RAILCANNON]
+Name = Rail Cannon
+Type = STEEL
+Category = Physical
+Power = 170
+Accuracy = 100
+TotalPP = 5
+Target = NearOther
+FunctionCode = TwoTurnAttack
+Flags = CanProtect,CanMirrorMove,CantForce
+Description = The user shoots a massive metal object at the target. The user must rest on the next turn to regain its energy.
+#-------------------------------
 [REFURBISH]
 Name = Refurbish
 Type = STEEL
@@ -4802,6 +4814,19 @@ FunctionCode = RevivePartyMemberTo1HP
 Description = Restores a fainted party member to 1 HP. Only one use per battle.
 Animation = ELECTRICTERRAIN
 #-------------------------------
+[DIELECTRICBREAKDOWN]
+Name = Dielectric Breakdown
+Type = ELECTRIC
+Category = Special
+Power = 130
+Accuracy = 100
+TotalPP = 10
+Target = ClosestNearFoe
+FunctionCode = Rampage
+Flags = CanProtect,CanMirrorMove
+Description = The user breaks down all insulation to send a barrage of electricity for three turns.
+Animation = VOLTTACKLE
+#-------------------------------
 [ELECTROSLASH]
 Name = Electroslash
 Type = ELECTRIC
@@ -5312,6 +5337,18 @@ Flags = CanProtect,CanMirrorMove
 Description = The user grabs the target with a conjured hand, trapping and damaging it for three turns.
 Animation = CRUSHGRIP
 #-------------------------------
+[MEMORYREMOVAL]
+Name = Memory Removal
+Type = PSYCHIC
+Category = Special
+Power = 70
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = DisableTargetLastMoveUsed
+Flags = CanProtect,CanMirrorMove
+Description = The user psychically alters the target's brain to forget. This move disables the target's last move.
+#-------------------------------
 [MINDLINK]
 Name = Mind Link
 Type = PSYCHIC
@@ -5607,6 +5644,17 @@ Flags = CanProtect,CanMirrorMove
 EffectChance = 10
 Description = The user grabs the target in a chilly embrace. It has a 10% chance to frostbite.
 Animation = ICEHAMMER
+#-------------------------------
+[CRYOSLEEP]
+Name = Cryo Sleep
+Type = ICE
+Category = Status
+Accuracy = 100
+TotalPP = 5
+Target = NearOther
+FunctionCode = TwoTurnAttack
+Flags = CanProtect,CanMirrorMove,CantForce
+Description = The target is put to sleep via a deep freeze. The user must rest on the next turn to regain its energy.
 #-------------------------------
 [DIAMONDDUST]
 Name = Diamond Dust
@@ -6897,6 +6945,18 @@ Flags = CanProtect,CanMirrorMove
 EffectChance = 20
 Description = The user tickles the target excessively, damaging it. This has a 20% chance to lower Attack.
 Animation = PLAYROUGH
+#-------------------------------
+[EMOTIONALDELUGE]
+Name = Emotional Deluge
+Type = FAIRY
+Category = Physical
+Power = 70
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = DisableTargetUsingSameMoveConsecutively
+Flags = CanProtect,CanMirrorMove
+Description = The target's mind is overloaded with emotion. Applies Torment to the target.
 #-------------------------------
 [ENCHANTEDARROW]
 Name = Enchanted Arrow

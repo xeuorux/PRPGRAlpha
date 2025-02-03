@@ -781,6 +781,18 @@ EffectChance = 100
 Description = The user is protected from random added effects of moves until their next attack.
 Animation = KARATECHOP
 #-------------------------------
+[HAMMERARM]
+Name = Hammer Arm
+Type = FIGHTING
+Category = Physical
+Power = 100
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect,CanMirrorMove,Punch
+Description = The user swings and hits with its strong and heavy fist. Lowers the user's Speed by two steps.
+#-------------------------------
 [JUMPKICK]
 Name = Jump Kick
 Type = FIGHTING
