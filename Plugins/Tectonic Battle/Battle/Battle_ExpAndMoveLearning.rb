@@ -218,7 +218,7 @@ class PokeBattle_Battle
             # Levelled up
             pbCommonAnimation("LevelUp", battler) if battler
             oldTotalHP = pkmn.totalhp
-            oldAttack  = pcalc_statskmn.attack
+            oldAttack  = pkmn.attack
             oldDefense = pkmn.defense
             oldSpAtk   = pkmn.spatk
             oldSpDef   = pkmn.spdef
