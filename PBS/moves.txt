@@ -2060,14 +2060,14 @@ Description = The user coils up and concentrates. This raises its Attack, Defens
 Name = Cross Poison
 Type = POISON
 Category = Physical
-Power = 70
+Power = 90
 Accuracy = 100
 TotalPP = 15
 Target = NearOther
 FunctionCode = Poison
 Flags = CanProtect,CanMirrorMove,HighCriticalHitRate,Blade
 EffectChance = 20
-Description = A slashing attack with a poisonous blade that has a 20% chance to poison. Critical hits twice as often.
+Description = A slashing attack with a poisonous blade. Critical hits twice as often.
 #-------------------------------
 [DIRECLAW]
 Name = Dire Claw
@@ -2154,10 +2154,10 @@ Power = 60
 Accuracy = 100
 TotalPP = 20
 Target = NearOther
-FunctionCode = Poison
+FunctionCode = Basic
 Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
 EffectChance = 10
-Description = The user hits the target with its tail. It has a 10% chance to poison. Critical hits twice as often.
+Description = The user hits the target with its tail. Critical hits twice as often.
 #-------------------------------
 [PURIFY]
 Name = Purify
