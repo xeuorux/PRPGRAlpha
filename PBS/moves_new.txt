@@ -1976,7 +1976,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = DizzyTargetStartSandstorm8
 Flags = CanProtect,CanMagicCoat,CanMirrorMove
-Description = The user dizzies the target, then summons sandstorm for four turns.
+Description = The user dizzies the target, then summons sandstorm for eight turns.
 Animation = SANDSTORM
 #-------------------------------
 [MEGALITHRITE]
@@ -3655,7 +3655,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = BurnTargetStartSunshine8
 Flags = CanProtect,CanMagicCoat,CanMirrorMove
-Description = The user burns the target, then welcomes in sunshine for four turns.
+Description = The user burns the target, then welcomes in sunshine for eight turns.
 Animation = SUNSHINE
 #-------------------------------
 [KINDLE]
@@ -4058,7 +4058,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = WaterlogTargetStartRainstorm8
 Flags = CanProtect,CanMagicCoat,CanMirrorMove
-Description = The user waterlogs the target, then welcomes in rainstorm for four turns.
+Description = The user waterlogs the target, then welcomes in rainstorm for eight turns.
 Animation = RAINSTORM
 #-------------------------------
 [MAELSTROM]
@@ -5836,7 +5836,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = FrostbiteTargetStartHail8
 Flags = CanProtect,CanMagicCoat,CanMirrorMove
-Description = The user frostbites the target, then welcomes in hail for four turns.
+Description = The user frostbites the target, then welcomes in hail for eight turns.
 Animation = HAIL
 #-------------------------------
 [LOOMINGWINTER]
@@ -7053,6 +7053,18 @@ FunctionCode = DisableTargetStatusMoves2
 Flags = CanProtect,CanMagicCoat,CanMirrorMove
 Description = The target is taunted by a deceptive look. It can't use status moves this or next turn. This move always goes first.
 Animation = PLAYNICE
+#-------------------------------
+[INVITEMOONGLOW]
+Name = Invite Moonglow
+Type = FAIRY
+Category = Status
+Accuracy = 0
+TotalPP = 10
+Target = NearOther
+FunctionCode = LeechTargetStartMoonglow8
+Flags = CanProtect,CanMagicCoat,CanMirrorMove
+Description = The user leeches the target, then welcomes in moonglow for eight turns.
+Animation = MOONGLOW
 #-------------------------------
 [MANYBLESSINGS]
 Name = Many Blessings

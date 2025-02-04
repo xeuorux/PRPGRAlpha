@@ -178,3 +178,15 @@ class PokeBattle_Move_EmpoweredMoonglow < PokeBattle_Move_StartMoonglow8
         transformType(user, :FAIRY)
     end
 end
+
+#===============================================================================
+# Leeches the target and sets Moonglow
+#===============================================================================
+class PokeBattle_Move_LeechTargetStartMoonglow8 < PokeBattle_InviteMove
+    def initialize(battle, move)
+        super
+        @weatherType = :Moonglow
+        @durationSet = 8
+        @statusToApply = :LEECHED
+    end
+end
