@@ -234,7 +234,7 @@ Description = The user dances to compel the target to mimic it, making the targe
 [EXPLOSION]
 Name = Explosion
 Type = NORMAL
-Category = Physical
+Category = Adaptive
 Power = 350
 Accuracy = 100
 TotalPP = 5
@@ -798,7 +798,7 @@ Description = The user attacks with a secret power. Its added effects vary depen
 [SELFDESTRUCT]
 Name = Self-Destruct
 Type = NORMAL
-Category = Physical
+Category = Adaptive
 Power = 250
 Accuracy = 100
 TotalPP = 5
