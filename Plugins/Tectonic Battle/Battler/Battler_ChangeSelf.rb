@@ -483,6 +483,7 @@ class PokeBattle_Battler
                 when :Rainstorm, :HeavyRain then newForm = 2
                 when :Hail             then newForm = 3
                 when :Sandstorm        then newForm = 4
+                when :Moonglow         then newForm = 5     
                 end
                 if @form != newForm
                     showMyAbilitySplash(:FORECAST, true)
