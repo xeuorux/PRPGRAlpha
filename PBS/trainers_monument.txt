@@ -52,7 +52,7 @@ Pokemon = ZOROARK,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 0,20,10,20,20,0
 Pokemon = SWAMPERT,70
-    Moves = EARTHQUAKE,HAMMERARM,LIQUIDATION,AQUAJET
+    Moves = EARTHQUAKE,CLOSECOMBAT,LIQUIDATION,AQUAJET
     AbilityIndex = 1 # Boulder Nest
     Item = ASSAULTVEST
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def

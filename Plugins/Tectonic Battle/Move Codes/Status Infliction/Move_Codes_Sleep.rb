@@ -191,3 +191,20 @@ class PokeBattle_Move_LowerTargetSpd4DrowsyIfHail < PokeBattle_Move_LowerTargetS
         target.applyEffect(:Yawn, 2)
     end
 end
+
+#===============================================================================
+# Puts the target to sleep. The user must recharge next turn. (Cryosleep)
+#===============================================================================
+class PokeBattle_Move_SleepTargetTwoTurnAttack < PokeBattle_Move_TwoTurnAttack
+    def pbFailsAgainstTarget?(user, target, show_message)
+        return !target.canSleep?(user, show_message, self)
+    end
+
+    def pbEffectAgainstTarget(_user, target)
+        target.applySleep
+    end
+
+    def getTargetAffectingEffectScore(user, target)
+        return getSleepEffectScore(user, target)
+    end
+end
