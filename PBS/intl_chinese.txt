@@ -38621,7 +38621,7 @@ The user drains the target's blood. The user's HP is restored by 50% the damage 
 吸取血液攻击对手。可以回复给予对手伤 害的一半ＨＰ。
 The user makes a lunge at the target, attacking with full force. This lowers the target's Attack by two steps.
 全力猛扑对手进行攻击。从而大幅度降低 对手攻击。
-The user slashes at the foe by crossing its scythes or claws. Critical hits twice as often.
+The user slashes at the foe by crossing its scythes or claws. Can random critical hit.
 将镰刀或爪子像剪刀般地交叉，顺势劈开 对手。容易击中要害。
 The user attacks with a beam of light. It has a 10% chance to dizzy.
 发射神奇的光线进行攻击。10%概率使对手 混乱。
@@ -38669,7 +38669,7 @@ The user releases an aura imbued with dark thoughts. It has a 40% chance to flin
 从体内发出充满恶意的恐怖气场。40%概 率使对手畏缩。
 The user attacks the target's throat. The target cannot use sound-based moves for two turns.
 受到此招式攻击的对手，会因为地狱般的 痛苦，在２回合内，变得无法使出声音类 招式。
-The user slashes the target the instant an opportunity arises. Critical hits twice as often.
+The user slashes the target the instant an opportunity arises. Can random critical hit.
 抓住瞬间的空隙切斩对手。容易击中要害 。
 This move enables the user to attack first. It fails if the target is not readying an attack, however.
 可以比对手先攻击。对手使出的招式如果 不是攻击招式则会失败。
@@ -38741,7 +38741,7 @@ The user rubs its scales and makes a huge noise. Also lowers the user's Defense 
 摩擦全身鳞片，发出响亮的声音进行攻击 。攻击后自己的防御会降低三级。
 If the target has already moved this turn, the effect of its Ability is negated.
 若后手 则消除对手特性效果
-The user tears the target along with the space around it. Critical hits twice as often.
+The user tears the target along with the space around it. Can random critical hit.
 将对手连同周围的空间一起撕裂并给予伤 害。容易击中要害。
 The user uses its body like a hammer to attack the target and inflict damage.
 将身体当作锤子，向对手发动袭击，给予 伤害。
@@ -38873,7 +38873,7 @@ The user heightens its mental focus and unleashes its power.
 提高气势，释放出全部力量。
 The user attacks the target with great power. However, it also lowers the user's Attack and Defense.
 发挥惊人的力量攻击对手。自己的攻击和 防御会降低。
-The user delivers a double chop with its forearms crossed. Critical hits twice as often.
+The user delivers a double chop with its forearms crossed. Can random critical hit.
 用两手呈十字劈打对手进行攻击。容易击 中要害。
 The user punches the target with full, concentrated power. It dizzies the target if it hits.
 使出浑身力气出拳进行攻击。必定会使对 手混乱。
@@ -38905,7 +38905,7 @@ The user lashes out with a quick, spinning kick. It has a 40% chance to make the
 一边使身体快速旋转，一边踢飞对手进行 攻击。40%几率使对手畏缩。
 The user strikes the target with a fierce blow. This attack always results in a critical hit.
 向对手使出强烈的一击。攻击必定会击中 要害。
-The target is attacked with a sharp chop. Critical hits twice as often.
+The target is attacked with a sharp chop. Can random critical hit.
 用锋利的手刀劈向对手进行攻击。容易击 中要害。
 The user throws a punch at blinding speed. It is certain to strike first.
 以迅雷不及掩耳之势出拳。必定能够先制 攻击。
@@ -38975,7 +38975,7 @@ The user attacks by exhaling hot breath on the opposing team. It has a 10% chanc
 将炎热的气息吹向对手进行攻击。10%概 率让对手陷入灼伤状态 。
 The target is scorched with an intense blast of fire. It has a 10% chance to burn.
 向对手发射烈焰进行攻击。10%概率让对 手陷入灼伤状态。
-The user launches a kick. Critical hits twice as often. It has a 10% chance to burn.
+The user launches a kick. Can random critical hit. It has a 10% chance to burn.
 攻击对手后，10%概率使其陷入灼伤状态 。也容易击中要害。
 The user strikes the target with a burning lash. This also lowers the target's Defense stat by two steps.
 用燃烧的鞭子抽打对手。受到攻击的对手 防御会降低。
@@ -39011,7 +39011,7 @@ The user tucks in its wings and charges from a low altitude. The user also takes
 收拢翅膀，通过低空飞行突击对手。自己 也会受到33%伤害。
 The user soars upward and drops at high speeds. This lowers the user's defensive stats.
 从天空中急速下降攻击对手。自己的防御 会降低。
-A vortex of air is shot at the target to inflict damage. Critical hits twice as often.
+A vortex of air is shot at the target to inflict damage. Can random critical hit.
 发射空气旋涡进行攻击。容易击中要害。
 The user heats up its beak before attacking. Physically attacking in this time results in a burn.
 先加热鸟嘴后再进行攻击。鸟嘴在加热时 对手触碰的话，就会使其灼伤。
@@ -39019,7 +39019,7 @@ The user soars, then strikes on the second turn.
 第１回合飞上天空，第２回合攻击对手。
 The user bounces up high, then drops on the foe on the second turn. It has a 30% chance to numb.
 弹跳到高高的空中，第２回合攻击对手。 30%概率让对手陷入麻痹状态。
-A corkscrewing attack with the sharp beak acting as a drill. Critical hits twice as often.
+A corkscrewing attack with the sharp beak acting as a drill. Can random critical hit.
 一边旋转，一边将尖喙刺入对手进行攻击 ，共容易击中要害。
 The user absorbs its target's HP. The user's HP is restored by 75% of the damage dealt.
 从锁定的对手身上吸取ＨＰ。回复给予对 手伤害的一半以上的ＨＰ。
@@ -39065,7 +39065,7 @@ The user hurls a shadowy blob at the target. It has a 20% chance to lower Sp. De
 投掷一团黑影进行攻击。20%概率降低对 手的特防。
 The user attacks while also stitching the target's shadow to the ground to prevent it fleeing.
 攻击的同时，缝住对手的影子，使其无法 逃走。
-The user slashes with a sharp claw made from shadows. Critical hits twice as often.
+The user slashes with a sharp claw made from shadows. Can random critical hit.
 以影子做成的锐爪，劈开对手。容易击中 要害。
 The user hexes the target with evil magic. This deals double damage if the target has a status condition.
 接二连三地进行攻击。对处于异常状态的 对手给予较大的伤害。
@@ -39103,7 +39103,7 @@ The user charges, then attacks on the second turn. Charges instantly in Sunshine
 第１回合收集满满的日光，第２回合发射 光束进行攻击。
 The user slams its rugged body into the target to attack. The user also takes 33% recoil.
 用坚硬的躯体撞击对手进行攻击。自己也 会受到33%的伤害。
-The user handles a sharp leaf like a sword and attacks by slashing. Critical hits twice as often.
+The user handles a sharp leaf like a sword and attacks by slashing. Can random critical hit.
 像用剑一般操纵叶片切斩对手进行攻击。 容易击中要害。
 The user stirs up a violent petal blizzard and attacks everything around it.
 猛烈地刮起飞雪般的落花，攻击周围所有 的宝可梦，并给予伤害。
@@ -39119,11 +39119,11 @@ The user scatters leaves that chase the target. Can't miss and skips protections
 散落可以追踪对手的神奇叶片。攻击必定 会命中，且无视保护类招式。
 The user attacks by wildly swinging its thorny arms. It has a 50% chance to make the target flinch.
 用带刺的手臂猛烈地挥舞进行攻击。50% 概率使对手畏缩。
-Sharp-edged leaves are launched to slash at the opposing team. Critical hits twice as often.
+Sharp-edged leaves are launched to slash at the opposing team. Can random critical hit.
 飞出叶片，切斩对手进行攻击。容易击中 要害。
 The target is struck with slender, whiplike vines.
 用如同鞭子般弯曲而细长的藤蔓摔打对手 。
-The user attacks by pelting the target with leaves. Critical hits twice as often.
+The user attacks by pelting the target with leaves. Can random critical hit.
 将叶片打向对手，进行攻击。容易击中要 害。
 The user forcefully shoots seeds at the target. Two to five seeds are shot in rapid succession.
 向对手猛烈地发射种子进行攻击。连续攻 击２～５次。
@@ -39175,7 +39175,7 @@ The user attacks with a wave that crawls along the ground. Those it hits can't f
 从地面掀起波浪进行攻击。被掀入波浪中 的对手，将无法从战斗中逃走。
 The user burrows, then attacks on the second turn.
 第１回合钻入，第２回合攻击对手。
-The user crashes into its target while rotating its body like a drill. Critical hits twice as often.
+The user crashes into its target while rotating its body like a drill. Can random critical hit.
 像钢钻一样，一边旋转身体一边撞击对手 。容易击中要害。
 The user attacks driven by frustration. Power increases if previous move failed.
 化悔恨为力量进行攻击。如果上一回合招 式没有打中，威力就会翻倍。
@@ -39295,7 +39295,7 @@ Gets revenge for a fainted ally. If an ally fainted in the last turn, this attac
 为倒下的同伴报仇。如果上一回合有同伴 倒下，威力就会提高。
 The user attacks with a secret power. Its added effects vary depending on the user's environment.
 根据使用场所不同，该招式的追加效果也 会有所变化。
-The target is attacked with a slash of claws or blades. Critical hits twice as often.
+The target is attacked with a slash of claws or blades. Can random critical hit.
 用爪子或镰刀等劈开对手进行攻击。容易 击中要害。
 This attack inflicts double damage on a numbed foe. It also cures the target's numbing, however.
 对于麻痹状态下的对手，威力会变成２倍 。但相反对手的麻痹也会被治愈。
@@ -39327,7 +39327,7 @@ The target is physically pounded with a long tail or a foreleg, etc.
 使用长长的尾巴或手等拍打对手进行攻击 。
 The user lunges at the target at a speed that makes it almost invisible. It is sure to strike first.
 以迅雷不及掩耳之势扑向对手。必定能够 先制攻击。
-Hard, pointed, and sharp claws rake the target to inflict damage. Critical hits twice as often.
+Hard, pointed, and sharp claws rake the target to inflict damage. Can random critical hit.
 用坚硬且无比锋利的爪子抓对手进行攻击  。容易击中要害。
 A physical attack in which the user charges and slams into the target with its whole body.
 用整个身体撞向对手进行攻击。
@@ -39337,7 +39337,7 @@ An attack that hits a target using Protect or Detect. It also lifts the effects 
 能够攻击正在使用守住或看穿等招式的对 手。解除其守护效果。
 A spin attack that can also eliminate trapping and hazard moves. Also raises the user's Speed.
 让身体高速旋转并撞击对手。清除现场的 陷阱类招式，并提高自己的速度。
-The target is raked two to five times. Critical hits twice as often.
+The target is raked two to five times. Can random critical hit.
 用爪子或镰刀等抓对手进行攻击。连续攻 击２～５次。容易击中要害。
 The user squeezes the target, trapping and damaging it for three turns.
 使用长长的身体或藤蔓等，在3回合内绑 紧对手进行攻击 。
@@ -39507,7 +39507,7 @@ Unsanitary sludge is hurled at the target. It has a 30% chance to poison.
 用污泥投掷对手进行攻击。30%概率让对 手陷入中毒状态。
 The target is stabbed with a tentacle or arm seeped with poison. It has a 10% chance to poison.
 用带毒的触手或手臂刺入对手。10%概率 让对手陷入中毒状态。
-A slashing attack with a poisonous blade that has a 20% chance to poison. Critical hits twice as often.
+A slashing attack with a poisonous blade that has a 20% chance to poison. Can random critical hit.
 用毒刃劈开对手。20%概率让对手陷入中 毒状态，也容易击中要害。
 The user drenches the foe in a special poisonous liquid. Its power doubles if the target is poisoned.
 将特殊的毒液泼向对手。对处于中毒状态 的对手，威力会变成２倍。
@@ -39515,7 +39515,7 @@ The user attacks with a cloud of white smoke. All of the target's stat step chan
 向对手投掷特殊的泥块进行攻击。使其能 力变回原点。
 The user bites the target with toxic fangs with a 50% chance to poison.
 用有毒的牙齿咬住对手进行攻击。50%概 率使对手中剧毒。
-The user hits the target with its tail. It has a 10% chance to poison. Critical hits twice as often.
+The user hits the target with its tail. It has a 10% chance to poison. Can random critical hit.
 用尾巴拍打。10%概率让对手陷入中毒状 态，也容易击中要害。
 The foe is attacked with a spray of harsh acid. It has a 20% chance to lower Sp. Def.
 将强酸泼向对手进行攻击。20%概率降低 对手的特防。
@@ -39559,7 +39559,7 @@ The user lets loose a damaging burst of light. It also lowers the target's Sp. D
 释放耀眼的光芒进行攻击。20%概率降低 对手的特防。
 A mistlike flurry of down envelops and damages the target. It also lowers the target's Sp. Atk by two steps.
 用围绕着雾状羽毛的球进行攻击。同时大 幅度降低对手的特攻。
-The user tears at the target with blades formed by psychic power. Critical hits twice as often.
+The user tears at the target with blades formed by psychic power. Can random critical hit.
 用实体化的心之利刃劈开对手。容易击中 要害。
 The target is attacked with a peculiar ray. It has a 10% chance to dizzy.
 向对手发射神奇的光线进行攻击。10%概 率使对手混乱。
@@ -39717,7 +39717,7 @@ The user attacks opposing Pokémon with countless beams of light that glow a dee
 用无数青白色且闪耀的光线攻击对手。
 The user immerses the target in superheated steam. This has a 30% chance to burn.
 将滚烫的蒸汽喷向对手。30%概率让对手 灼伤。
-The target is hammered with a large pincer. Critical hits twice as often.
+The target is hammered with a large pincer. Can random critical hit.
 用大钳子敲打对手进行攻击。容易击中要 害。
 The user bursts into song, emitting many bubbles. Any burnt Pokémon will be healed by these bubbles.
 受到这招式攻击的对手身上的灼伤状态将 会痊愈。
@@ -39755,7 +39755,7 @@ Summons rain for eight turns, boosting Water-type attacks and hindering most oth
 在8回合内召唤大雨，增强水属性攻击并 削弱大多数其他攻击。 
 The user shoots a torrent of water at the target and changes the target's type to Water.
 将大量的水泼向对手，从而使其变成水属 性。
-Ignores all attempts at redirection, allowing this move to hit the chosen target. Critical hits twice as often.
+Ignores all attempts at redirection, allowing this move to hit the chosen target. Can random critical hit.
 能无视特性或招式的影响。可以向选定的 对手进行攻击。容易击中要害。
 Rends the target with its hard gills. Deals 50% more damage unless the target has moved this turn.
 用坚硬的腮咬住对手。如果比对手先出手 攻击，招式的威力会变成１.５倍。
@@ -39793,7 +39793,7 @@ The user rampages and attacks while spewing flames for three turns.
 连续三回合喷射火焰，对对手进行疯狂的 攻击。
 The user launches its amassed chlorophyll to inflict damage on the target. The user loses half its current HP.
 发射积累的叶绿素攻击对手，但会同时失 去一半的ＨＰ。
-The user lashes out with its claws. 50% chance to poison. Critical hits twice as often.
+The user lashes out with its claws. 50% chance to poison. Can random critical hit.
 使用爪子攻击对手，更容易击中要害，并 且有50%概率使对手中毒。
 The user warms up its body and attacks the target. It has a 10% chance to burn.
 将身体加热并攻击对手。10%几率让对手 陷入灼伤状态。
@@ -39813,13 +39813,13 @@ The user hurls a metal ball at the target.
 向对手投掷金属球。
 The user rides a wave, then crashes into the target. Has a 30% chance to cause a flinch.
 乘坐波浪，然后撞向对手。30%几率使对 手畏缩。
-The user calls up spikes of diamond. Critical hits twice as often.
+The user calls up spikes of diamond. Can random critical hit.
 召唤出钻石尖刺。容易击中要害。
 The user harnesses inner battle instincts to strike at the target.
 靠内在的本能攻击对手。
 The user strikes the enemy while coated with electricity. It has a 10% chance to numb.
 带着电光撞向对手。10%几率让对手陷入 麻痹状态。
-The user harnesses a blade of lightning and slices at the target. Critical hits twice as often.
+The user harnesses a blade of lightning and slices at the target. Can random critical hit.
 使用闪电刃向对手劈去。容易击中要害。
 The user wraps their body in electricity and crashes into the target. The user also takes 20% recoil.
 将自己的身体包裹在电流中，然后撞向对 手。自己也会受到20%的伤害。
@@ -39947,7 +39947,7 @@ The target is overwhelmed by light and sound. This has a 30% chance to dizzy it.
 使对手被光芒和声音所淹没，30%几率使 对手混乱。
 The user turns the target into stone. This has a 50% chance to numb it.
 将对手变成石头。50%几率使对手麻痹。
-The user attacks with the bright glint of crystals. Critical hits twice as often.
+The user attacks with the bright glint of crystals. Can random critical hit.
 以水晶闪耀地光芒发动攻击，容易命中要 害。
 The user attacks while wailing. This has a 40% chance to make the target flinch.
 发出悲惨的嚎叫并且发起攻击，40%几率 使对手畏缩。
@@ -39983,7 +39983,7 @@ The user lets out an electric roar, raising the user's Speed by four steps.
 发出一声电吼，提高自己的速度四级。
 The user sets the target on fire, inflicting a burn.
 点燃对手，造成灼伤状态。
-The user uses a jet of water like a sword and attacks by slashing. Critical hits twice as often.
+The user uses a jet of water like a sword and attacks by slashing. Can random critical hit.
 利用水流的力量形成剑刃形状向对手发起 攻击，容易击中要害。
 Stares harshly, dealing double damage if they hurt the user this turn. Only usable on the first turn.
 怒视对手，如果本回合对手攻击了自己， 则威力翻倍。只能在出场后的首回合使用 。
@@ -39993,7 +39993,7 @@ The user improvises a dance, raising its two weakest stats by three steps each.
 即兴跳起舞蹈，提升其最弱的两项基础能 力值三级。
 The user raises their Attack and Defense by two steps, and Speed by one step.
 有节奏地颤抖，大幅度提升 自身的攻击、防御，同时提升自身的速度能力。
-The user tries to surprise-attack the target. Cannot miss in moonglow. Critical hits twice as often.
+The user tries to surprise-attack the target. Cannot miss in moonglow. Can random critical hit.
 突袭对手发起攻击。在月光下该招式时必 定命中，而且更容易击中要害。
 The user restores two thirds of its own HP. Then, this move is disabled.
 恢复其自身HP的三分之二。之后该招式将 被禁用。
@@ -40025,7 +40025,7 @@ The user pulverizes the target with both its fists. This raises the user's Attac
 用双拳猛击对手，使其遭到重创。并提升 自己的攻击。
 The user warms up by treating the target as a punching bag, damaging them and raising Attack by two steps.
 通过把对手当成沙袋来热身。大幅度提升 自己的攻击。
-The target is cut by a clean slice. Critical hits four times as often.
+The target is cut by a clean slice. Can random critical hit, and does so twice as often.
 干净利落地斩击对手，极其容易击中要害 。
 Dizzies the target by putting them under a magical spell.
 用魔法让对手陷入混乱状态。
@@ -40107,7 +40107,7 @@ The user surrounds the target with fire which also destroys any 'clothing' items
 用烈火包围对手，也会烧掉其持有的任何 "服饰 "道具。
 The user explodes itself into the target. The target is harmed, but also their Speed is raised.
 向火箭一样冲向对手然后爆炸，但会提升 对方的速度。
-The user cuts using scissor-like blades of psychic energy. Critical hits twice as often.
+The user cuts using scissor-like blades of psychic energy. Can random critical hit.
 运用精神能量凝聚成的剑刃劈向对手。容 易击中要害。
 The user lowers the target's body temperature, afflicting it with frostbite.
 降低对手的体温，使其陷入冻伤。
@@ -40179,7 +40179,7 @@ The user strikes with an acidic punch that destroys Gems and Berries.
 以带有腐蚀性的拳头发起攻击，能摧毁对 手的宝石和树果。
 The user forces itself or the target to make a substitute by turning it into a doll.
 为目标缝制一个娃娃，强迫其使用替身招 式。
-The user hacks at the target with great violence. Critical hits twice as often.
+The user hacks at the target with great violence. Can random critical hit.
 猛烈地砍击对手，容易击中要害。
 The user opens its soul to unleash massive energy. This lowers the user's Sp. Atk and Sp. Def.
 开启灵魂之门，释放强大的能量。但会降 低自己的特攻和特防。
@@ -40245,7 +40245,7 @@ This move raises all the user's stats by two steps. Can only be used while aslee
 提升自己的所有能力值，但只能在睡眠中 使用。
 The target is pranked by an electric jolt. They are taunted and unable to use status moves for three turns.
 对手受到恶作剧电击，在3回合内无法使 用变化招式。
-The user slices with claws of light that have a 50% chance to numb. Critical hits twice as often.
+The user slices with claws of light that have a 50% chance to numb. Can random critical hit.
 利用光之爪进行斩击，50%几率使对手麻 痹。容易击中要害。
 Channeling fear, the user bites the target. Deals double damage if the user is below half health.
 凝聚对手的恐惧并对其发动咬击。如果自 己的HP低于50%，则造成双倍伤害。
@@ -40293,7 +40293,7 @@ The user raises all of the target's attacking and defensive stats.
 释放出一种芳香的气味，提高目标全部能 力值。
 Raises Sp. Atk by two steps. Until switch out, the user's attacks spread to hit all nearby foes.
 大幅度提升自己的特攻，在被替换下场前 ，所有招式都会波及到对方全体。
-The user relentlessly attacks with its whip-like hands for three turns. Critical hits twice as often.
+The user relentlessly attacks with its whip-like hands for three turns. Can random critical hit.
 像鞭子一样挥舞其手，连续不断地攻击三 回合。容易击中要害。
 The user flicks its thorns, dealing damage and setting a layer of poison spikes around the target.
 挥动身上的荆棘攻击对手，同时在其周围 布置了一层毒菱。
@@ -40445,7 +40445,7 @@ For the rest of the round, the healing of all damaged Pokemon is reversed.
 在接下来的回合中，所有受伤害的宝可梦 的回复效果将反转。
 If the target has a status condition, this deals double damage and heals every battler's status condition.
 如果对手处于异常状态，那么对其的伤害 翻倍，并治愈所有宝 可梦的异常状态。
-The user shoots three arrows made of Aura with extreme precision. Critical hits twice as often.
+The user shoots three arrows made of Aura with extreme precision. Can random critical hit.
 以极高的精度射出三支气场制成的箭。容 易击中要害。
 The user raises all of their stats by two steps. Fails unless a foe fainted last turn.
 跳起唤来胜利的舞蹈，如果上回合有对手 倒下，则大幅度提升自己的全 部能力。
@@ -40499,11 +40499,11 @@ Injects supercold liquid into the target, damaging them and halving all future h
 将超低温液体注射到对手身上，对其造成 伤害并减半其之后的治疗效果。
 The user restores 1/2 of their HP and raises their Defense, Sp. Def, and critical hit chance by two steps each.
 回复自身1/2的HP，并大幅度提升其防御 、特防和会心率。
-The user hunts with its allies. The more party Pokémon, the more damage. Critical hits twice as often.
+The user hunts with its allies. The more party Pokémon, the more damage. Can random critical hit.
 与同伴们一同狩猎，队伍中携带越多的宝 可梦，则威力越高。容易击中要害。
 The user attacks with dark illusions. This also lowers the target's Defense stat by two steps.
 使用黑暗幻象攻击，同时大幅度降低对手 的防御。
-The user slashes using woven silk, lowering the user's Attack by four steps. Critical hits twice as often.
+The user slashes using woven silk, lowering the user's Attack by four steps. Can random critical hit.
 利用编织的丝绸进行挥斩，会降低自身的 攻击四级。容易击中要害。
 The user uses all their might to attack their opponent, forcing the user to use Rest on their next turn.
 用尽全力攻击对手，使对方在下一回合被 迫休息。
@@ -40639,7 +40639,7 @@ An aurora borealis flashes brightly at the target, lowering their Attack. Always
 利用极光的闪烁降低对方的攻击，必定先 一步出手。
 An electrified cloud zaps the target, lowering their Speed. This has a 50% chance to flinch.
 通过积雨云内的电荷电击目标，降低对方 的速度，50%概率使其畏缩。
-A lance of fire pierces the target from above, lowering their Sp. Atk. Critical hits four times as often.
+A lance of fire pierces the target from above, lowering their Sp. Atk. Can random critical hit, and does so twice as often.
 使用一柄火矛从上方刺穿目标，降低对方 的特攻，极其容易命中要害。
 The user pins the target down with icy spikes, applying frostbite and making it unable to flee.
 使用冰冷的尖刺钉住对方，使其冻伤且无 法逃跑。
@@ -41295,7 +41295,7 @@ A consecutive three-kick attack that becomes more powerful with each successive 
 打三下 命中后加伤害
 A consecutive three-kick attack that becomes more powerful with each successful hit.
 打三下 命中后加伤害
-The user launches razor-like wind to slash the opposing team. Critical hits twice as often.
+The user launches razor-like wind to slash the opposing team. Can random critical hit.
 CT几率翻倍.
 The user attacks the target from a blind spot. Always goes first. Deals 50% more damage in a hailstorm.
 先制 冰雹中额外50%伤害
@@ -41341,7 +41341,7 @@ As long as this move is in use, the user's Attack is raised two steps each time 
 被集中时攻击升两级
 The user looses a ground-shaking quake affecting everyone around. Its power varies greatly.
 震它
-A two-turn attack. Blades of wind hit the foe on the second turn. Critical hits twice as often.
+A two-turn attack. Blades of wind hit the foe on the second turn. Can random critical hit.
 准备一回合后攻击 CT几率翻倍.
 This attack hits the target with a shock wave of pure rage. This attack always inflicts 40 HP damage.
 始终打40HP

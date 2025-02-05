@@ -210,9 +210,17 @@ class PokeBattle_Battler
         return false
     end
 
+    def hasRandomCritAttack?
+        eachAIKnownMove do |m|
+            next unless m.canRandomCrit?
+            return true
+        end
+        return false
+    end
+
     def hasHighCritAttack?
         eachAIKnownMove do |m|
-            next unless m.highCriticalRate?
+            next unless m.doubleCritChance?
             return true
         end
         return false

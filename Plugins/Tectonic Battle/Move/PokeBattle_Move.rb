@@ -134,7 +134,8 @@ class PokeBattle_Move
     def canMagicCoat?;          return @flags.include?("CanMagicCoat"); end
     def canSnatch?;             return @flags.include?("CanSnatch"); end
     def canMirrorMove?;         return @flags.include?("CanMirrorMove"); end
-    def highCriticalRate?;      return @flags.include?("HighCriticalHitRate"); end
+    def canRandomCrit?;         return @flags.include?("CanRandomCrit"); end
+    def doubleCritChance?;      return @flags.include?("DoubleCritChance"); end
     def bitingMove?;            return @flags.include?("Biting"); end
     def punchingMove?;          return @flags.include?("Punch"); end
     def soundMove?;             return @flags.include?("Sound"); end
@@ -144,7 +145,6 @@ class PokeBattle_Move
     def windMove?;              return @flags.include?("Wind"); end
     def kickingMove?;           return @flags.include?("Kicking"); end
     def foretoldMove?;          return @flags.include?("Foretold"); end
-    def veryHighCriticalRate?;  return @flags.include?("VeryHighCriticalHitRate"); end
     def empoweredMove?;         return @flags.include?("Empowered"); end
 
     def turnsBetweenUses(); return 0; end

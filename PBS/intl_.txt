@@ -38719,8 +38719,8 @@ The user focuses intensely on the fight, quadrupling its critical hit chance.
 The user focuses intensely on the fight, quadrupling its critical hit chance.
 The user draws attention to itself, making all targets take aim only at the user.
 The user draws attention to itself, making all targets take aim only at the user.
-The target is raked two to five times. Critical hits twice as often.
-The target is raked two to five times. Critical hits twice as often.
+The target is raked two to five times. Can random critical hit.
+The target is raked two to five times. Can random critical hit.
 The user charges at the target using every bit of its power. The user must rest on the next turn.
 The user charges at the target using every bit of its power. The user must rest on the next turn.
 The user intimidates the target by staring at it to cause numbing.
@@ -38799,8 +38799,8 @@ The foe is forced to switch out to a random ally. Always goes last. Ends wild ba
 The foe is forced to switch out to a random ally. Always goes last. Ends wild battles.
 The user attacks with a song. Others can join in the Round and make the attack do greater damage.
 The user attacks with a song. Others can join in the Round and make the attack do greater damage.
-Hard, pointed, and sharp claws rake the target to inflict damage. Critical hits twice as often.
-Hard, pointed, and sharp claws rake the target to inflict damage. Critical hits twice as often.
+Hard, pointed, and sharp claws rake the target to inflict damage. Can random critical hit.
+Hard, pointed, and sharp claws rake the target to inflict damage. Can random critical hit.
 The user's earsplitting screech reduces the target's Defense stat by four steps.
 The user's earsplitting screech reduces the target's Defense stat by four steps.
 The user attacks with a secret power. Its added effects vary depending on the user's environment.
@@ -38819,8 +38819,8 @@ The user tucks in to raise its Defense by four steps in the first turn, then ram
 The user tucks in to raise its Defense by four steps in the first turn, then rams the foe on the second.
 The user slacks off, restoring its own HP by up to half of its maximum HP.
 The user slacks off, restoring its own HP by up to half of its maximum HP.
-The target is attacked with a slash of claws or blades. Critical hits twice as often.
-The target is attacked with a slash of claws or blades. Critical hits twice as often.
+The target is attacked with a slash of claws or blades. Can random critical hit.
+The target is attacked with a slash of claws or blades. Can random critical hit.
 While it is asleep, the user randomly uses one of the moves it knows.
 While it is asleep, the user randomly uses one of the moves it knows.
 This attack inflicts double damage on a numbed foe. It also cures the target's numbing, however.
@@ -38895,8 +38895,8 @@ The user coaches its ally Pokémon, raising their Attack and Defense by two step
 The user coaches its ally Pokémon, raising their Attack and Defense by two steps each.
 A retaliation move that counters any physical attack, inflicting double the damage taken.
 A retaliation move that counters any physical attack, inflicting double the damage taken.
-The user delivers a double chop with its forearms crossed. Critical hits twice as often.
-The user delivers a double chop with its forearms crossed. Critical hits twice as often.
+The user delivers a double chop with its forearms crossed. Can random critical hit.
+The user delivers a double chop with its forearms crossed. Can random critical hit.
 The target is quickly kicked twice in succession using both feet.
 The target is quickly kicked twice in succession using both feet.
 An energy-draining punch. The user's HP is restored by 33% of the damage dealt.
@@ -38917,8 +38917,8 @@ The user swings and hits with its strong and heavy fist. Lowers the user's Speed
 The user swings and hits with its strong and heavy fist. Lowers the user's Speed by two steps.
 The target is attacked with a knee kick from a jump. If it misses, the user is hurt instead.
 The target is attacked with a knee kick from a jump. If it misses, the user is hurt instead.
-The target is attacked with a sharp chop. Critical hits twice as often.
-The target is attacked with a sharp chop. Critical hits twice as often.
+The target is attacked with a sharp chop. Can random critical hit.
+The target is attacked with a sharp chop. Can random critical hit.
 A powerful low kick that makes the foe fall over. It inflicts greater damage on heavier foes.
 A powerful low kick that makes the foe fall over. It inflicts greater damage on heavier foes.
 The user attacks the target's legs swiftly, reducing the target's Speed stat by two steps.
@@ -38965,8 +38965,8 @@ The user nimbly strikes the foe. Doubles in damage if the user has no item when 
 The user nimbly strikes the foe. Doubles in damage if the user has no item when the move starts.
 The user confounds the foe with speed, then slashes. Can't miss and skips protections.
 The user confounds the foe with speed, then slashes. Can't miss and skips protections.
-A vortex of air is shot at the target to inflict damage. Critical hits twice as often.
-A vortex of air is shot at the target to inflict damage. Critical hits twice as often.
+A vortex of air is shot at the target to inflict damage. Can random critical hit.
+A vortex of air is shot at the target to inflict damage. Can random critical hit.
 The user attacks with a blade of air that slices even the sky. It has a 40% chance to flinch the target.
 The user attacks with a blade of air that slices even the sky. It has a 40% chance to flinch the target.
 The user heats up its beak before attacking. Physically attacking in this time results in a burn.
@@ -38983,8 +38983,8 @@ The user whips up a wind to blow away the target's protective screens. Also remo
 The user whips up a wind to blow away the target's protective screens. Also removes hazards on both sides.
 The user soars upward and drops at high speeds. This lowers the user's defensive stats.
 The user soars upward and drops at high speeds. This lowers the user's defensive stats.
-A corkscrewing attack with the sharp beak acting as a drill. Critical hits twice as often.
-A corkscrewing attack with the sharp beak acting as a drill. Critical hits twice as often.
+A corkscrewing attack with the sharp beak acting as a drill. Can random critical hit.
+A corkscrewing attack with the sharp beak acting as a drill. Can random critical hit.
 The user slams the target with its wings. The target is hit twice in a row.
 The user slams the target with its wings. The target is hit twice in a row.
 The user covers the target's body with a mass of down that lowers its Attack stat by five steps.
@@ -39019,10 +39019,10 @@ The user attacks with a cloud of white smoke. All of the target's stat step chan
 The user attacks with a cloud of white smoke. All of the target's stat step changes are returned to normal.
 The user coils up and concentrates. This raises its Attack, Defense, and accuracy by two steps each.
 The user coils up and concentrates. This raises its Attack, Defense, and accuracy by two steps each.
-A slashing attack with a poisonous blade that has a 20% chance to poison. Critical hits twice as often.
-A slashing attack with a poisonous blade that has a 20% chance to poison. Critical hits twice as often.
-The user lashes out with its claws. 50% chance to poison. Critical hits twice as often.
-The user lashes out with its claws. 50% chance to poison. Critical hits twice as often.
+A slashing attack with a poisonous blade that has a 20% chance to poison. Can random critical hit.
+A slashing attack with a poisonous blade that has a 20% chance to poison. Can random critical hit.
+The user lashes out with its claws. 50% chance to poison. Can random critical hit.
+The user lashes out with its claws. 50% chance to poison. Can random critical hit.
 The user shoots filthy garbage at the target to attack.
 The user shoots filthy garbage at the target to attack.
 The user bites the target with toxic fangs with a 50% chance to poison.
@@ -39033,8 +39033,8 @@ The target is stabbed with a tentacle or arm seeped with poison. It has a 10% ch
 The target is stabbed with a tentacle or arm seeped with poison. It has a 10% chance to poison.
 The user stabs the target with a poisonous stinger. This has a 30% chance to poison.
 The user stabs the target with a poisonous stinger. This has a 30% chance to poison.
-The user hits the target with its tail. It has a 10% chance to poison. Critical hits twice as often.
-The user hits the target with its tail. It has a 10% chance to poison. Critical hits twice as often.
+The user hits the target with its tail. It has a 10% chance to poison. Can random critical hit.
+The user hits the target with its tail. It has a 10% chance to poison. Can random critical hit.
 The user heals the target's status condition. If so, it also restores the user's own HP.
 The user heals the target's status condition. If so, it also restores the user's own HP.
 Inflicts physical or special damage, whichever will be more effective. This has a 25% chance to poison.
@@ -39061,8 +39061,8 @@ The user strikes everything around it by stomping on the ground. It reduces hit 
 The user strikes everything around it by stomping on the ground. It reduces hit Pokémon's Speed.
 The user burrows, becoming invulnerable, then attacks on the second turn.
 The user burrows, becoming invulnerable, then attacks on the second turn.
-The user crashes into its target while rotating its body like a drill. Critical hits twice as often.
-The user crashes into its target while rotating its body like a drill. Critical hits twice as often.
+The user crashes into its target while rotating its body like a drill. Can random critical hit.
+The user crashes into its target while rotating its body like a drill. Can random critical hit.
 The user makes the ground under the foe erupt with power. It has a 20% chance to lower Sp. Def.
 The user makes the ground under the foe erupt with power. It has a 20% chance to lower Sp. Def.
 The user sets off an earthquake that strikes every Pokémon around it and underground.
@@ -39179,8 +39179,8 @@ The user stares at flashing lights to focus its mind, raising its Sp. Atk stat b
 The user stares at flashing lights to focus its mind, raising its Sp. Atk stat by five steps.
 After making its attack, the user rushes back to switch places with a party Pokémon in waiting.
 After making its attack, the user rushes back to switch places with a party Pokémon in waiting.
-The user slashes at the foe by crossing its scythes or claws. Critical hits twice as often.
-The user slashes at the foe by crossing its scythes or claws. Critical hits twice as often.
+The user slashes at the foe by crossing its scythes or claws. Can random critical hit.
+The user slashes at the foe by crossing its scythes or claws. Can random critical hit.
 The user attacks the target while shouting in a startling fashion. It has a 40% chance to flinch.
 The user attacks the target while shouting in a startling fashion. It has a 40% chance to flinch.
 The user attacks by sending a frightful amount of small ghosts at opposing Pokémon.
@@ -39215,8 +39215,8 @@ The user hurls a shadowy blob at the target. It has a 20% chance to lower Sp. De
 The user hurls a shadowy blob at the target. It has a 20% chance to lower Sp. Def.
 The user beats the target with a bone containing a spirit. This lowers their Defense by three steps.
 The user beats the target with a bone containing a spirit. This lowers their Defense by three steps.
-The user slashes with a sharp claw made from shadows. Critical hits twice as often.
-The user slashes with a sharp claw made from shadows. Critical hits twice as often.
+The user slashes with a sharp claw made from shadows. Can random critical hit.
+The user slashes with a sharp claw made from shadows. Can random critical hit.
 The user disappears, becoming invulnerable, then strikes the foe on the second turn. It hits even if the foe protects itself.
 The user disappears, becoming invulnerable, then strikes the foe on the second turn. It hits even if the foe protects itself.
 The user throws a punch from the shadows. The punch lands without fail.
@@ -39283,8 +39283,8 @@ A frenetic dance to uplift the fighting spirit. It raises the user's Attack stat
 A frenetic dance to uplift the fighting spirit. It raises the user's Attack stat by four steps.
 The target is razed by a fiery explosion. The user must rest on the next turn, however.
 The target is razed by a fiery explosion. The user must rest on the next turn, however.
-The user launches a kick. Critical hits twice as often. It has a 10% chance to burn.
-The user launches a kick. Critical hits twice as often. It has a 10% chance to burn.
+The user launches a kick. Can random critical hit. It has a 10% chance to burn.
+The user launches a kick. Can random critical hit. It has a 10% chance to burn.
 The user attacks by engulfing the foe in a beautiful, yet intense, blue flame. It has a 30% chance to burn.
 The user attacks by engulfing the foe in a beautiful, yet intense, blue flame. It has a 30% chance to burn.
 Attacks with energy from jealousy. All opposing Pokémon with stat boosts get burned.
@@ -39355,8 +39355,8 @@ A spray of bubbles is forcefully ejected at the target. It also lowers the foe's
 A spray of bubbles is forcefully ejected at the target. It also lowers the foe's Speed stat.
 The user clamps onto the target, trapping and damaging it for three turns.
 The user clamps onto the target, trapping and damaging it for three turns.
-The target is hammered with a large pincer. Critical hits twice as often.
-The target is hammered with a large pincer. Critical hits twice as often.
+The target is hammered with a large pincer. Can random critical hit.
+The target is hammered with a large pincer. Can random critical hit.
 Diving on the first turn, becoming invulnerable, the user rises and hits from below water on the next turn.
 Diving on the first turn, becoming invulnerable, the user rises and hits from below water on the next turn.
 Rends the target with its hard gills. Deals 50% more damage unless the target has moved this turn.
@@ -39379,8 +39379,8 @@ The user shoots boiling hot water at its target. This has a 30% chance to burn.
 The user shoots boiling hot water at its target. This has a 30% chance to burn.
 The user breaks its shell, lowering its defensive stats by two steps but raising attacking and Speed stats by three steps each.
 The user breaks its shell, lowering its defensive stats by two steps but raising attacking and Speed stats by three steps each.
-Ignores all attempts at redirection, allowing this move to hit the chosen target. Critical hits twice as often.
-Ignores all attempts at redirection, allowing this move to hit the chosen target. Critical hits twice as often.
+Ignores all attempts at redirection, allowing this move to hit the chosen target. Can random critical hit.
+Ignores all attempts at redirection, allowing this move to hit the chosen target. Can random critical hit.
 The user shoots a torrent of water at the target and changes the target's type to Water.
 The user shoots a torrent of water at the target and changes the target's type to Water.
 The user bursts into song, emitting many bubbles. Any burnt Pokémon will be healed by these bubbles.
@@ -39437,10 +39437,10 @@ The user lays roots that restore 1/8th HP on every turn. Because it is rooted, i
 The user lays roots that restore 1/8th HP on every turn. Because it is rooted, it can't switch out.
 Restores HP and heals status of itself and its ally Pokémon in battle by using Jungle Powers.
 Restores HP and heals status of itself and its ally Pokémon in battle by using Jungle Powers.
-The user attacks by pelting the target with leaves. Critical hits twice as often.
-The user attacks by pelting the target with leaves. Critical hits twice as often.
-The user handles a sharp leaf like a sword and attacks by slashing. Critical hits twice as often.
-The user handles a sharp leaf like a sword and attacks by slashing. Critical hits twice as often.
+The user attacks by pelting the target with leaves. Can random critical hit.
+The user attacks by pelting the target with leaves. Can random critical hit.
+The user handles a sharp leaf like a sword and attacks by slashing. Can random critical hit.
+The user handles a sharp leaf like a sword and attacks by slashing. Can random critical hit.
 A storm of sharp leaves is whipped up. Lowers the user's Sp. Atk by four steps.
 A storm of sharp leaves is whipped up. Lowers the user's Sp. Atk by four steps.
 A seed is planted on the target, causing it to become leeched.
@@ -39453,8 +39453,8 @@ The user attacks by scattering petals for three turns.
 The user attacks by scattering petals for three turns.
 The user violently whirls to lash the target. Can't miss if the target has already attacked this turn.
 The user violently whirls to lash the target. Can't miss if the target has already attacked this turn.
-Sharp-edged leaves are launched to slash at the opposing team. Critical hits twice as often.
-Sharp-edged leaves are launched to slash at the opposing team. Critical hits twice as often.
+Sharp-edged leaves are launched to slash at the opposing team. Can random critical hit.
+Sharp-edged leaves are launched to slash at the opposing team. Can random critical hit.
 The user slams a barrage of hard-shelled seeds down on the target from above.
 The user slams a barrage of hard-shelled seeds down on the target from above.
 The user generates a shock wave from within its body. This lower's the target's Sp. Def.
@@ -39601,8 +39601,8 @@ The target is hit by a strong telekinetic force. It has a 20% chance to lower Sp
 The target is hit by a strong telekinetic force. It has a 20% chance to lower Sp. Def.
 The user bites the target using psychic capabilities. Also breaks anys Screens protecting the target's side.
 The user bites the target using psychic capabilities. Also breaks anys Screens protecting the target's side.
-The user tears at the target with blades formed by psychic power. Critical hits twice as often.
-The user tears at the target with blades formed by psychic power. Critical hits twice as often.
+The user tears at the target with blades formed by psychic power. Can random critical hit.
+The user tears at the target with blades formed by psychic power. Can random critical hit.
 Using its psychic power of suggestion, the user transfers its status problems to the target.
 Using its psychic power of suggestion, the user transfers its status problems to the target.
 The user hypnotizes itself into copying any stat change made by the target.
@@ -39697,8 +39697,8 @@ Eternatus's most powerful attack in its original form. The user can't move on th
 Eternatus's most powerful attack in its original form. The user can't move on the next turn.
 The user blasts the target with power that distorts even time. The user must rest on the next turn.
 The user blasts the target with power that distorts even time. The user must rest on the next turn.
-The user tears the target along with the space around it. Critical hits twice as often.
-The user tears the target along with the space around it. Critical hits twice as often.
+The user tears the target along with the space around it. Can random critical hit.
+The user tears the target along with the space around it. Can random critical hit.
 A small tornado hits the opposing team. It has a 30% chance to make targets flinch.
 A small tornado hits the opposing team. It has a 30% chance to make targets flinch.
 If the target has already taken some damage in the same turn, this attack's power is doubled.
@@ -39751,8 +39751,8 @@ The user pins the target with a dark, arresting look. The target becomes unable 
 The user pins the target with a dark, arresting look. The target becomes unable to flee.
 The user faints in order to lower the target's Attack and Sp. Atk by five steps each.
 The user faints in order to lower the target's Attack and Sp. Atk by five steps each.
-The user slashes the target the instant an opportunity arises. Critical hits twice as often.
-The user slashes the target the instant an opportunity arises. Critical hits twice as often.
+The user slashes the target the instant an opportunity arises. Can random critical hit.
+The user slashes the target the instant an opportunity arises. Can random critical hit.
 Protects the user from damage this turn. It also lowers the Defense of physical attackers by four steps.
 Protects the user from damage this turn. It also lowers the Defense of physical attackers by four steps.
 The user lowers the target's Attack and Sp. Atk by two steps each. Then, the user switches out.
@@ -39881,8 +39881,8 @@ The target is hit two to five times in a row.
 The target is hit two to five times in a row.
 The target is struck by a pulse of negative energy. It has a 30% chance to numb.
 The target is struck by a pulse of negative energy. It has a 30% chance to numb.
-The target is cut by a clean slice. Critical hits four times as often.
-The target is cut by a clean slice. Critical hits four times as often.
+The target is cut by a clean slice. Can random critical hit, and does so twice as often.
+The target is cut by a clean slice. Can random critical hit, and does so twice as often.
 The user shoots a pulse of uncharged particles at the target.
 The user shoots a pulse of uncharged particles at the target.
 The user pranks the target, surprising it and reducing its Sp. Atk and Sp. Def by two steps each.
@@ -39961,12 +39961,12 @@ The user attacks with a burst of inner energy. Lowers the user's Sp. Atk by four
 The user attacks with a burst of inner energy. Lowers the user's Sp. Atk by four steps.
 The user holds fast with its teammates, raising the Defense of itself and its allies by three steps.
 The user holds fast with its teammates, raising the Defense of itself and its allies by three steps.
-The user shoots three arrows made of Aura with extreme precision. Critical hits twice as often.
-The user shoots three arrows made of Aura with extreme precision. Critical hits twice as often.
+The user shoots three arrows made of Aura with extreme precision. Can random critical hit.
+The user shoots three arrows made of Aura with extreme precision. Can random critical hit.
 The user manifests a bolt of pure courage. This has a 10% chance of raising the user's Sp. Atk.
 The user manifests a bolt of pure courage. This has a 10% chance of raising the user's Sp. Atk.
-The user relentlessly attacks with its whip-like hands for three turns. Critical hits twice as often.
-The user relentlessly attacks with its whip-like hands for three turns. Critical hits twice as often.
+The user relentlessly attacks with its whip-like hands for three turns. Can random critical hit.
+The user relentlessly attacks with its whip-like hands for three turns. Can random critical hit.
 A reckless charge attack from the air. It also damages the user by 25% of the damage dealt.
 A reckless charge attack from the air. It also damages the user by 25% of the damage dealt.
 The user fires a stormy gust at the target. This also raises the user's Sp. Atk by two steps.
@@ -40109,12 +40109,12 @@ The user smashes its rock-hard head into the target. The user also takes 33% rec
 The user smashes its rock-hard head into the target. The user also takes 33% recoil.
 Protects the user from damage this turn. The user will counter with Granite Head if attacked.
 Protects the user from damage this turn. The user will counter with Granite Head if attacked.
-The user attacks with the bright glint of crystals. Critical hits twice as often.
-The user attacks with the bright glint of crystals. Critical hits twice as often.
+The user attacks with the bright glint of crystals. Can random critical hit.
+The user attacks with the bright glint of crystals. Can random critical hit.
 A diamond-tough force-field protects the user's side for 5 turns from critical hits, and reduces move damage taken.
 A diamond-tough force-field protects the user's side for 5 turns from critical hits, and reduces move damage taken.
-The user calls up spikes of diamond. Critical hits twice as often.
-The user calls up spikes of diamond. Critical hits twice as often.
+The user calls up spikes of diamond. Can random critical hit.
+The user calls up spikes of diamond. Can random critical hit.
 The user harms the target with gemlike light. Deals double damage if the user has used a gem this battle.
 The user harms the target with gemlike light. Deals double damage if the user has used a gem this battle.
 The user charges into the target with its stony body. The user also takes 33% recoil.
@@ -40191,8 +40191,8 @@ If the user is faster than the target, puts the target to sleep, then minimizes 
 If the user is faster than the target, puts the target to sleep, then minimizes the user's Speed stat.
 The target is overwhelmed by light and sound. This has a 30% chance to dizzy it.
 The target is overwhelmed by light and sound. This has a 30% chance to dizzy it.
-The user slashes using woven silk, lowering the user's Attack by four steps. Critical hits twice as often.
-The user slashes using woven silk, lowering the user's Attack by four steps. Critical hits twice as often.
+The user slashes using woven silk, lowering the user's Attack by four steps. Can random critical hit.
+The user slashes using woven silk, lowering the user's Attack by four steps. Can random critical hit.
 Avenging bugs everywhere, the user crushes the target. It has a 20% chance to lower their Defense stat.
 Avenging bugs everywhere, the user crushes the target. It has a 20% chance to lower their Defense stat.
 Halves attack damage taken this turn. Numbs any attackers. Fails if used successively.
@@ -40359,8 +40359,8 @@ The user launches up high, becoming invulnerable, then explodes down on the seco
 The user launches up high, becoming invulnerable, then explodes down on the second turn, taking 25% recoil.
 The user roars with the force of a volcano, raising the Attack of itself and allies.
 The user roars with the force of a volcano, raising the Attack of itself and allies.
-A lance of fire pierces the target from above, lowering their Sp. Atk. Critical hits four times as often.
-A lance of fire pierces the target from above, lowering their Sp. Atk. Critical hits four times as often.
+A lance of fire pierces the target from above, lowering their Sp. Atk. Can random critical hit, and does so twice as often.
+A lance of fire pierces the target from above, lowering their Sp. Atk. Can random critical hit, and does so twice as often.
 The user explodes itself into the target. The target is harmed, but also their Speed is raised.
 The user explodes itself into the target. The target is harmed, but also their Speed is raised.
 Protects the user from attacks. Also burns any attacker who specially attacks the user.
@@ -40439,8 +40439,8 @@ The user snaps like a fish at the target. This has a 40% chance to make it flinc
 The user snaps like a fish at the target. This has a 40% chance to make it flinch.
 The user rams the target like a ship. It has a 30% chance to lower Defense.
 The user rams the target like a ship. It has a 30% chance to lower Defense.
-The user uses a jet of water like a sword and attacks by slashing. Critical hits twice as often.
-The user uses a jet of water like a sword and attacks by slashing. Critical hits twice as often.
+The user uses a jet of water like a sword and attacks by slashing. Can random critical hit.
+The user uses a jet of water like a sword and attacks by slashing. Can random critical hit.
 The user attacks the target using graceful fluid movements, also forming an Aqua Ring around themselves, healing 10% HP per turn.
 The user attacks the target using graceful fluid movements, also forming an Aqua Ring around themselves, healing 10% HP per turn.
 The user's song heals the status problems of all the party Pokémon, and forms an Aqua Ring around itself, healing 10% HP per turn.
@@ -40523,8 +40523,8 @@ The user wraps their body in electricity and crashes into the target. The user a
 The user wraps their body in electricity and crashes into the target. The user also takes 20% recoil.
 Restores a fainted party member to 1 HP. Only one use per battle.
 Restores a fainted party member to 1 HP. Only one use per battle.
-The user harnesses a blade of lightning and slices at the target. Critical hits twice as often.
-The user harnesses a blade of lightning and slices at the target. Critical hits twice as often.
+The user harnesses a blade of lightning and slices at the target. Can random critical hit.
+The user harnesses a blade of lightning and slices at the target. Can random critical hit.
 The user lets out an electric roar, raising the user's Speed by four steps.
 The user lets out an electric roar, raising the user's Speed by four steps.
 The user attacks with courage. Sets spikes if Full. If Hangry, deals double damage and is Dark-type.
@@ -40547,8 +40547,8 @@ Cloaking itself in light energy, the user shocks the target, raising the user's 
 Cloaking itself in light energy, the user shocks the target, raising the user's Sp. Def by two steps.
 The user finds the highest base power move among your able party members, and uses it.
 The user finds the highest base power move among your able party members, and uses it.
-The user slices with claws of light that have a 50% chance to numb. Critical hits twice as often.
-The user slices with claws of light that have a 50% chance to numb. Critical hits twice as often.
+The user slices with claws of light that have a 50% chance to numb. Can random critical hit.
+The user slices with claws of light that have a 50% chance to numb. Can random critical hit.
 Protects the user's side from status moves this turn. It disables any moves blocked for three turns.
 Protects the user's side from status moves this turn. It disables any moves blocked for three turns.
 The target is hit with an electric current two to five times in quick succession. Has a 10% chance to numb.
@@ -40611,8 +40611,8 @@ Psychic energy assaults the foe and darkens the sky, summoning eclipse for 8 tur
 Psychic energy assaults the foe and darkens the sky, summoning eclipse for 8 turns.
 The user overloads its mind to attack for three turns.
 The user overloads its mind to attack for three turns.
-The user cuts using scissor-like blades of psychic energy. Critical hits twice as often.
-The user cuts using scissor-like blades of psychic energy. Critical hits twice as often.
+The user cuts using scissor-like blades of psychic energy. Can random critical hit.
+The user cuts using scissor-like blades of psychic energy. Can random critical hit.
 The user manifests a piercing bolt of psychic energy. It has a 50% chance to lower Sp. Def.
 The user manifests a piercing bolt of psychic energy. It has a 50% chance to lower Sp. Def.
 The user sends two to five waves of cosmic energy to overwhelm the target's senses.
@@ -40687,8 +40687,8 @@ The user overwhelmes the target with a frigid ray, frostbiting it.
 The user overwhelmes the target with a frigid ray, frostbiting it.
 Drains the heat from the target. The user's HP is restored by 50% the damage dealt.
 Drains the heat from the target. The user's HP is restored by 50% the damage dealt.
-The user hunts with its allies. The more party Pokémon, the more damage. Critical hits twice as often.
-The user hunts with its allies. The more party Pokémon, the more damage. Critical hits twice as often.
+The user hunts with its allies. The more party Pokémon, the more damage. Can random critical hit.
+The user hunts with its allies. The more party Pokémon, the more damage. Can random critical hit.
 Invokes the aspects of multiple dragons, striking with a physical move and a special move.
 Invokes the aspects of multiple dragons, striking with a physical move and a special move.
 The user attacks fueled by ire. Deals double damage if it's a critical hit.
@@ -40775,8 +40775,8 @@ The user chomps hard, cutting the target's HP by 50%, and the user's HP is resto
 The user chomps hard, cutting the target's HP by 50%, and the user's HP is restored by 50% of that.
 Damages the target's life force directly. During moonglow, the target also becomes frostbitten.
 Damages the target's life force directly. During moonglow, the target also becomes frostbitten.
-The user tries to surprise-attack the target. Cannot miss in moonglow. Critical hits twice as often.
-The user tries to surprise-attack the target. Cannot miss in moonglow. Critical hits twice as often.
+The user tries to surprise-attack the target. Cannot miss in moonglow. Can random critical hit.
+The user tries to surprise-attack the target. Cannot miss in moonglow. Can random critical hit.
 The user attacks and steals the foe's held Berry or Gem. It can't steal if the user holds an item.
 The user attacks and steals the foe's held Berry or Gem. It can't steal if the user holds an item.
 The user entangles the target's mind with dark thoughts, leeching it.
@@ -40789,8 +40789,8 @@ The user steals the target's stat boosts, and then attacks. Goes last.
 The user steals the target's stat boosts, and then attacks. Goes last.
 The user slashes all around them, creating deep scars. This lowers each target's Attack.
 The user slashes all around them, creating deep scars. This lowers each target's Attack.
-The user hacks at the target with great violence. Critical hits twice as often.
-The user hacks at the target with great violence. Critical hits twice as often.
+The user hacks at the target with great violence. Can random critical hit.
+The user hacks at the target with great violence. Can random critical hit.
 Explodes, dealing an extra 50 base power to all foes for each layer of spikes underneath them. The user faints.
 Explodes, dealing an extra 50 base power to all foes for each layer of spikes underneath them. The user faints.
 The user assists an ally by boosting the power and accuracy of its next attack by 50%.
@@ -41161,12 +41161,12 @@ The user unleashes a vital energy wave. The lower the user's HP, the less powerf
 The user unleashes a vital energy wave. The lower the user's HP, the less powerful it becomes.
 The user attacks last. In return, it's guaranteed not to miss and bypasses protections.
 The user attacks last. In return, it's guaranteed not to miss and bypasses protections.
-The user launches razor-like wind to slash the opposing team. Critical hits twice as often.
-The user launches razor-like wind to slash the opposing team. Critical hits twice as often.
+The user launches razor-like wind to slash the opposing team. Can random critical hit.
+The user launches razor-like wind to slash the opposing team. Can random critical hit.
 Can't miss in rain. It has a 30% chance to dizzy. Can hit targets flying high up.
 Can't miss in rain. It has a 30% chance to dizzy. Can hit targets flying high up.
-A two-turn attack. Blades of wind hit the foe on the second turn. Critical hits twice as often.
-A two-turn attack. Blades of wind hit the foe on the second turn. Critical hits twice as often.
+A two-turn attack. Blades of wind hit the foe on the second turn. Can random critical hit.
+A two-turn attack. Blades of wind hit the foe on the second turn. Can random critical hit.
 A second-turn attack move where critical hits land more easily. It may also make the target flinch.
 A second-turn attack move where critical hits land more easily. It may also make the target flinch.
 The user takes the foe into the sky, then drops it on the next turn. The foe cannot attack while airborne.

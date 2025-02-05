@@ -208,16 +208,15 @@ class PokeBattle_Move
 
         crit = false
         forced = false
-        rate = criticalHitRate(user, target)
 
         if guaranteedCrit?(user, target)
             crit = true
             forced = true
-        end
-
-        if !crit && isRandomCrit?(user, target, rate)
-            crit = true
-            forced = false
+        elsif canRandomCrit?
+            rate = criticalHitRate(user, target)
+            if isRandomCrit?(user, target, rate)
+                crit = true
+            end
         end
 
         # Critical prevention effects
@@ -251,8 +250,10 @@ class PokeBattle_Move
         if checkingForAI
             if forced
                 return crit ? 5 : -1
-            else
+            elsif canRandomCrit?
                 return rate
+            else
+                return -1
             end
         else
             return crit, forced
@@ -260,10 +261,8 @@ class PokeBattle_Move
     end
 
     def isRandomCrit?(user, _target, rate)
-        return false if user.boss?
-
         # Calculation
-        ratios = [16, 8, 4, 2, 1]
+        ratios = [8, 4, 2, 1]
         rate = ratios.length - 1 if rate >= ratios.length
         return @battle.pbRandom(ratios[rate]) == 0
     end
@@ -292,11 +291,7 @@ class PokeBattle_Move
             c = BattleHandlers.triggerCriticalCalcTargetItem(item, user, target, c)
         end
 
-        if veryHighCriticalRate?
-            c += 2
-        elsif highCriticalRate?
-            c += 1
-        end
+        c += 1 if doubleCritChance?
         c += user.effects[:RaisedCritChance]
 
         return c

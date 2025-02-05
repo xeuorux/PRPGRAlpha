@@ -325,8 +325,8 @@ Accuracy = 100
 TotalPP = 12
 Target = NearOther
 FunctionCode = HitTwoToFiveTimes
-Flags = CanProtect,CanMirrorMove,Blade,HighCriticalHitRate
-Description = The target is raked two to five times. Critical hits twice as often.
+Flags = CanProtect,CanMirrorMove,Blade,CanRandomCrit
+Description = The target is raked two to five times. Can random critical hit.
 #-------------------------------
 [GIGAIMPACT]
 Name = Giga Impact
@@ -768,8 +768,8 @@ Accuracy = 100
 TotalPP = 30
 Target = NearOther
 FunctionCode = Basic
-Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
-Description = Hard, pointed, and sharp claws rake the target to inflict damage. Critical hits twice as often.
+Flags = CanProtect,CanMirrorMove,CanRandomCrit
+Description = Hard, pointed, and sharp claws rake the target to inflict damage. Can random critical hit.
 #-------------------------------
 [SCREECH]
 Name = Screech
@@ -885,8 +885,8 @@ Accuracy = 100
 TotalPP = 15
 Target = NearOther
 FunctionCode = Basic
-Flags = CanProtect,CanMirrorMove,HighCriticalHitRate,Blade
-Description = The target is attacked with a slash of claws or blades. Critical hits twice as often.
+Flags = CanProtect,CanMirrorMove,CanRandomCrit,Blade
+Description = The target is attacked with a slash of claws or blades. Can random critical hit.
 #-------------------------------
 [SLEEPTALK]
 Name = Sleep Talk
@@ -1341,8 +1341,8 @@ Accuracy = 100
 TotalPP = 12
 Target = NearOther
 FunctionCode = Basic
-Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
-Description = The user delivers a double chop with its forearms crossed. Critical hits twice as often.
+Flags = CanProtect,CanMirrorMove,CanRandomCrit
+Description = The user delivers a double chop with its forearms crossed. Can random critical hit.
 #-------------------------------
 [DOUBLEKICK]
 Name = Double Kick
@@ -1464,8 +1464,8 @@ Accuracy = 100
 TotalPP = 20
 Target = NearOther
 FunctionCode = Basic
-Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
-Description = The target is attacked with a sharp chop. Critical hits twice as often.
+Flags = CanProtect,CanMirrorMove,CanRandomCrit
+Description = The target is attacked with a sharp chop. Can random critical hit.
 #-------------------------------
 [LOWKICK]
 Name = Low Kick
@@ -1748,8 +1748,8 @@ Accuracy = 100
 TotalPP = 5
 Target = NearOther
 FunctionCode = Basic
-Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
-Description = A vortex of air is shot at the target to inflict damage. Critical hits twice as often.
+Flags = CanProtect,CanMirrorMove,CanRandomCrit
+Description = A vortex of air is shot at the target to inflict damage. Can random critical hit.
 #-------------------------------
 [AIRSLASH]
 Name = Air Slash
@@ -1861,8 +1861,8 @@ Accuracy = 100
 TotalPP = 15
 Target = NearOther
 FunctionCode = Basic
-Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
-Description = A corkscrewing attack with the sharp beak acting as a drill. Critical hits twice as often.
+Flags = CanProtect,CanMirrorMove,CanRandomCrit
+Description = A corkscrewing attack with the sharp beak acting as a drill. Can random critical hit.
 #-------------------------------
 [DUALWINGBEAT]
 Name = Dual Wingbeat
@@ -1932,8 +1932,8 @@ Accuracy = 100
 TotalPP = 30
 Target = NearOther
 FunctionCode = Basic
-Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
-Description = The target is jabbed with a sharply pointed beak or horn. Critical hits twice as often.
+Flags = CanProtect,CanMirrorMove,CanRandomCrit
+Description = The target is jabbed with a sharply pointed beak or horn. Can random critical hit.
 #-------------------------------
 [PLUCK]
 Name = Pluck
@@ -2065,9 +2065,9 @@ Accuracy = 100
 TotalPP = 15
 Target = NearOther
 FunctionCode = Poison
-Flags = CanProtect,CanMirrorMove,HighCriticalHitRate,Blade
+Flags = CanProtect,CanMirrorMove,CanRandomCrit,Blade
 EffectChance = 20
-Description = A slashing attack with a poisonous blade. Critical hits twice as often.
+Description = A slashing attack with a poisonous blade. Can random critical hit.
 #-------------------------------
 [DIRECLAW]
 Name = Dire Claw
@@ -2078,9 +2078,9 @@ Accuracy = 100
 TotalPP = 15
 Target = NearOther
 FunctionCode = Poison
-Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
+Flags = CanProtect,CanMirrorMove,CanRandomCrit
 EffectChance = 50
-Description = The user lashes out with its claws. 50% chance to poison. Critical hits twice as often.
+Description = The user lashes out with its claws. 50% chance to poison. Can random critical hit.
 Animation = CROSSPOISON
 #-------------------------------
 [GUNKSHOT]
@@ -2155,9 +2155,9 @@ Accuracy = 100
 TotalPP = 20
 Target = NearOther
 FunctionCode = Basic
-Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
+Flags = CanProtect,CanMirrorMove,CanRandomCrit
 EffectChance = 10
-Description = The user hits the target with its tail. Critical hits twice as often.
+Description = The user hits the target with its tail. Can random critical hit.
 #-------------------------------
 [PURIFY]
 Name = Purify
@@ -2329,8 +2329,8 @@ Accuracy = 100
 TotalPP = 10
 Target = NearOther
 FunctionCode = Basic
-Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
-Description = The user crashes into its target while rotating its body like a drill. Critical hits twice as often.
+Flags = CanProtect,CanMirrorMove,CanRandomCrit
+Description = The user crashes into its target while rotating its body like a drill. Can random critical hit.
 #-------------------------------
 [EARTHPOWER]
 Name = Earth Power
@@ -2986,8 +2986,8 @@ Accuracy = 100
 TotalPP = 15
 Target = NearOther
 FunctionCode = Basic
-Flags = CanProtect,CanMirrorMove,HighCriticalHitRate,Blade
-Description = The user slashes at the foe by crossing its scythes or claws. Critical hits twice as often.
+Flags = CanProtect,CanMirrorMove,CanRandomCrit,Blade
+Description = The user slashes at the foe by crossing its scythes or claws. Can random critical hit.
 #-------------------------------
 #		GHOST MOVES
 #-------------------------------
@@ -3189,8 +3189,8 @@ Accuracy = 100
 TotalPP = 12
 Target = NearOther
 FunctionCode = Basic
-Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
-Description = The user slashes with a sharp claw made from shadows. Critical hits twice as often.
+Flags = CanProtect,CanMirrorMove,CanRandomCrit
+Description = The user slashes with a sharp claw made from shadows. Can random critical hit.
 #-------------------------------
 [SHADOWFORCE]
 Name = Shadow Force
@@ -3616,9 +3616,9 @@ Accuracy = 100
 TotalPP = 10
 Target = NearOther
 FunctionCode = Burn
-Flags = CanProtect,CanMirrorMove,HighCriticalHitRate,Kicking
+Flags = CanProtect,CanMirrorMove,CanRandomCrit,Kicking
 EffectChance = 10
-Description = The user launches a kick. Critical hits twice as often. It has a 10% chance to burn.
+Description = The user launches a kick. Can random critical hit. It has a 10% chance to burn.
 #-------------------------------
 [BLUEFLARE]
 Name = Blue Flare
@@ -4083,8 +4083,8 @@ Accuracy = 100
 TotalPP = 10
 Target = NearOther
 FunctionCode = Basic
-Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
-Description = The target is hammered with a large pincer. Critical hits twice as often.
+Flags = CanProtect,CanMirrorMove,CanRandomCrit
+Description = The target is hammered with a large pincer. Can random critical hit.
 #-------------------------------
 [DIVE]
 Name = Dive
@@ -4238,8 +4238,8 @@ Accuracy = 100
 TotalPP = 12
 Target = NearOther
 FunctionCode = Basic
-Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
-Description = The target is struck with a supersonic water blast. Critical hits twice as often.
+Flags = CanProtect,CanMirrorMove,CanRandomCrit
+Description = The target is struck with a supersonic water blast. Can random critical hit.
 #-------------------------------
 [SPARKLINGARIA]
 Name = Sparkling Aria
@@ -4324,9 +4324,9 @@ Accuracy = 100
 TotalPP = 20
 Target = NearOther
 FunctionCode = Basic
-Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
+Flags = CanProtect,CanMirrorMove,CanRandomCrit
 EffectChance = 10
-Description = The target is blasted with a forceful shot of water. Critical hits twice as often.
+Description = The target is blasted with a forceful shot of water. Can random critical hit.
 #-------------------------------
 [WATERPLEDGE]
 Name = Water Pledge
@@ -4589,7 +4589,7 @@ TotalPP = 30
 Target = NearOther
 FunctionCode = Basic
 Flags = CanProtect,CanMirrorMove
-Description = The user attacks by pelting the target with leaves. Critical hits twice as often.
+Description = The user attacks by pelting the target with leaves. Can random critical hit.
 #-------------------------------
 [LEAFBLADE]
 Name = Leaf Blade
@@ -4600,8 +4600,8 @@ Accuracy = 100
 TotalPP = 15
 Target = NearOther
 FunctionCode = Basic
-Flags = CanProtect,CanMirrorMove,HighCriticalHitRate,Blade
-Description = The user handles a sharp leaf like a sword and attacks by slashing. Critical hits twice as often.
+Flags = CanProtect,CanMirrorMove,CanRandomCrit,Blade
+Description = The user handles a sharp leaf like a sword and attacks by slashing. Can random critical hit.
 #-------------------------------
 [LEAFSTORM]
 Name = Leaf Storm
@@ -4683,8 +4683,8 @@ Accuracy = 100
 TotalPP = 20
 Target = AllNearFoes
 FunctionCode = Basic
-Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
-Description = Sharp-edged leaves are launched to slash at the opposing team. Critical hits twice as often.
+Flags = CanProtect,CanMirrorMove,CanRandomCrit
+Description = Sharp-edged leaves are launched to slash at the opposing team. Can random critical hit.
 #-------------------------------
 [SEEDBOMB]
 Name = Seed Bomb
@@ -5555,8 +5555,8 @@ Accuracy = 100
 TotalPP = 15
 Target = NearOther
 FunctionCode = Basic
-Flags = CanProtect,CanMirrorMove,HighCriticalHitRate,Blade
-Description = The user tears at the target with blades formed by psychic power. Critical hits twice as often.
+Flags = CanProtect,CanMirrorMove,CanRandomCrit,Blade
+Description = The user tears at the target with blades formed by psychic power. Can random critical hit.
 #-------------------------------
 [PSYCHOSHIFT]
 Name = Psycho Shift
@@ -6139,8 +6139,8 @@ Accuracy = 100
 TotalPP = 5
 Target = NearOther
 FunctionCode = Basic
-Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
-Description = The user tears the target along with the space around it. Critical hits twice as often.
+Flags = CanProtect,CanMirrorMove,CanRandomCrit
+Description = The user tears the target along with the space around it. Can random critical hit.
 #-------------------------------
 [TWISTER]
 Name = Twister
@@ -6455,8 +6455,8 @@ Accuracy = 100
 TotalPP = 12
 Target = NearOther
 FunctionCode = Basic
-Flags = CanProtect,CanMirrorMove,HighCriticalHitRate,Blade
-Description = The user slashes the target the instant an opportunity arises. Critical hits twice as often.
+Flags = CanProtect,CanMirrorMove,CanRandomCrit,Blade
+Description = The user slashes the target the instant an opportunity arises. Can random critical hit.
 Animation = NIGHTSLASH
 #-------------------------------
 [OBSTRUCT]

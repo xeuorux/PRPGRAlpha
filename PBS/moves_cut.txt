@@ -916,8 +916,8 @@ Accuracy = 100
 TotalPP = 20
 Target = AllNearFoes
 FunctionCode = Invalid
-Flags = CanProtect,CanMirrorMove,HighCriticalHitRate,Blade,Wind
-Description = The user launches razor-like wind to slash the opposing team. Critical hits twice as often.
+Flags = CanProtect,CanMirrorMove,CanRandomCrit,Blade,Wind
+Description = The user launches razor-like wind to slash the opposing team. Can random critical hit.
 #-------------------------------
 [HURRICANE]
 Name = Hurricane
@@ -978,7 +978,7 @@ TotalPP = 10
 Target = AllNearFoes
 FunctionCode = Invalid
 Flags = CanProtect,CanMirrorMove,Blade,Wind
-Description = A two-turn attack. Blades of wind hit the foe on the second turn. Critical hits twice as often.
+Description = A two-turn attack. Blades of wind hit the foe on the second turn. Can random critical hit.
 #-------------------------------
 [SKYATTACK]
 Name = Sky Attack
@@ -989,7 +989,7 @@ Accuracy = 90
 TotalPP = 5
 Target = NearOther
 FunctionCode = Invalid
-Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
+Flags = CanProtect,CanMirrorMove,CanRandomCrit
 EffectChance = 30
 Description = A second-turn attack move where critical hits land more easily. It may also make the target flinch.
 #-------------------------------
@@ -1357,7 +1357,7 @@ Accuracy = 100
 TotalPP = 12
 Target = NearOther
 FunctionCode = Invalid
-Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
+Flags = CanProtect,CanMirrorMove,CanRandomCrit
 Description = The user calls out its underlings to pummel the target. Critical hits land more easily.
 #-------------------------------
 [BLACKPOWDER]
@@ -2108,7 +2108,7 @@ Accuracy = 100
 TotalPP = 15
 Target = NearOther
 FunctionCode = Invalid
-Flags = CanProtect,CanMirrorMove,,HighCriticalHitRate,Blade
+Flags = CanProtect,CanMirrorMove,CanRandomCrit,Blade
 Description = After slashing, it returns to switch with a party Pokémon. Critical hits land more easily.
 Animation = XSCISSOR
 #-------------------------------
