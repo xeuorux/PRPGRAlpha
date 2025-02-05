@@ -1032,7 +1032,7 @@ Price = 4000
 FieldUse = TM
 Move = NATURALPROTECTION
 #-------------------------------
-[RAILCANNON]
+[TMRAILCANNON]
 Name = Unnamed
 NamePlural = Unnamed
 Pocket = 4
