@@ -250,7 +250,7 @@ class PokeBattle_Move
             end
         elsif real_attack == real_special_attack
             # Determine move's category
-            return @battle.pbRandom(2)
+            return 0
         else
             return (real_attack > real_special_attack) ? 0 : 1
         end
