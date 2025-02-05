@@ -3269,6 +3269,7 @@ Target = NearOther
 FunctionCode = TwoTurnAttack
 Flags = CanProtect,CanMirrorMove,CantForce
 Description = The user shoots a massive metal object at the target. The user must rest on the next turn to regain its energy.
+Animation = BEHEMOTHBASH
 #-------------------------------
 [REFURBISH]
 Name = Refurbish
@@ -4825,7 +4826,7 @@ Target = ClosestNearFoe
 FunctionCode = Rampage
 Flags = CanProtect,CanMirrorMove
 Description = The user breaks down all insulation to send a barrage of electricity for three turns.
-Animation = VOLTTACKLE
+Animation = ZAPCANNON
 #-------------------------------
 [ELECTROSLASH]
 Name = Electroslash
@@ -5655,6 +5656,7 @@ Target = NearOther
 FunctionCode = TwoTurnAttack
 Flags = CanProtect,CanMirrorMove,CantForce
 Description = The target is put to sleep via a deep freeze. The user must rest on the next turn to regain its energy.
+Animation = GLACIATE
 #-------------------------------
 [DIAMONDDUST]
 Name = Diamond Dust
