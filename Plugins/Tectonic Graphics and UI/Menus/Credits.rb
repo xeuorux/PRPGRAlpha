@@ -213,6 +213,9 @@ Castform Sandy
 Jumpy<s>Noel
 The FnF Showdown community
 
+Eclipse and Moonglow Castform
+Atteathesilly
+
 Spanish PokeDex Translations
 Everson
 
