@@ -3611,14 +3611,14 @@ Description = The target is razed by a fiery explosion. The user must rest on th
 Name = Blaze Kick
 Type = FIRE
 Category = Physical
-Power = 85
+Power = 90
 Accuracy = 100
 TotalPP = 10
 Target = NearOther
 FunctionCode = Burn
-Flags = CanProtect,CanMirrorMove,HighCriticalHitRate,Kicking
+Flags = CanProtect,CanMirrorMove,Kicking
 EffectChance = 10
-Description = The user launches a kick. Critical hits twice as often. It has a 10% chance to burn.
+Description = The user launches a fiery kick. It has a 10% chance to burn.
 #-------------------------------
 [BLUEFLARE]
 Name = Blue Flare
