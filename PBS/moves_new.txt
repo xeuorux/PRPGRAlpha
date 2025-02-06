@@ -771,7 +771,7 @@ TotalPP = 15
 Target = User
 FunctionCode = RaiseUserSpd2CriticalHitRate2
 Flags = CanSnatch
-Description = The user breathes deeply, raising its Speed by two steps and quadrupling its critical hit chance.
+Description = Enables random critical hits for the user, quadruples its critical hit chance, and raises its Speed by 2 steps.
 Animation = FOCUSENERGY
 #-------------------------------
 [DETACHMENT]

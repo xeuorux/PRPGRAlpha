@@ -305,7 +305,7 @@ GameData::BattleEffect.register_effect(:Battler, {
     :maximum => 4,
     :baton_passed => true,
     :critical_rate_buff => true,
-    :increment_proc => proc do |battle, battler, _value, increment|
+    :increment_proc => proc do |battle, battler, value, increment|
         case increment
         when 1
             battle.pbDisplay(_INTL("{1}'s critical hit chance was doubled!", battler.pbThis))
@@ -315,6 +315,10 @@ GameData::BattleEffect.register_effect(:Battler, {
             battle.pbDisplay(_INTL("{1}'s is now 8 times more likely to get a crticial hit!", battler.pbThis))
         when 4
             battle.pbDisplay(_INTL("{1}'s is now 16 times more likely to get a crticial hit!", battler.pbThis))
+        end
+
+        if value == increment
+            battle.pbDisplay(_INTL("Also, critical hits are now possible on all of {1}'s attacks!", battler.pbThis(true)))
         end
     end,
 })

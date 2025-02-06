@@ -303,7 +303,7 @@ TotalPP = 25
 Target = User
 FunctionCode = RaiseCriticalHitRate2
 Flags = CanSnatch
-Description = The user focuses intensely on the fight, quadrupling its critical hit chance.
+Description = Enables random critical hits for the user, and quadruples its critical hit chance.
 #-------------------------------
 [FOLLOWME]
 Name = Follow Me

@@ -206,13 +206,15 @@ class PokeBattle_Move
             end
         end
 
+        allowedToRandomCrit = canRandomCrit? || user.effectActive?(:RaisedCritChance)
+
         crit = false
         forced = false
 
         if guaranteedCrit?(user, target)
             crit = true
             forced = true
-        elsif canRandomCrit?
+        elsif allowedToRandomCrit
             rate = criticalHitRate(user, target)
             if isRandomCrit?(user, target, rate)
                 crit = true
@@ -250,7 +252,7 @@ class PokeBattle_Move
         if checkingForAI
             if forced
                 return crit ? 5 : -1
-            elsif canRandomCrit?
+            elsif allowedToRandomCrit
                 return rate
             else
                 return -1
