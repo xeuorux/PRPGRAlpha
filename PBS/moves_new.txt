@@ -1974,9 +1974,9 @@ Category = Status
 Accuracy = 0
 TotalPP = 10
 Target = NearOther
-FunctionCode = DizzyTargetStartSandstorm8
+FunctionCode = NumbTargetStartSandstorm8
 Flags = CanProtect,CanMagicCoat,CanMirrorMove
-Description = The user dizzies the target, then summons sandstorm for eight turns.
+Description = The user numbs the target, then summons sandstorm for eight turns.
 Animation = SANDSTORM
 #-------------------------------
 [MEGALITHRITE]
@@ -5271,6 +5271,18 @@ Target = User
 FunctionCode = ChangeUserMewtwoChoiceOfForm
 Description = The user psychically modifies its own genes, transforming into either Overmatter form or Overmind form.
 Animation = TRANSFORM
+#-------------------------------
+[INVITEECLIPSE]
+Name = Invite Eclipse
+Type = PSYCHIC
+Category = Status
+Accuracy = 0
+TotalPP = 10
+Target = NearOther
+FunctionCode = DizzyTargetStartEclipse8
+Flags = CanProtect,CanMagicCoat,CanMirrorMove
+Description = The user dizzies the target, then welcomes in eclipse for eight turns.
+Animation = ECLIPSE
 #-------------------------------
 [KICKSTART]
 Name = Kickstart

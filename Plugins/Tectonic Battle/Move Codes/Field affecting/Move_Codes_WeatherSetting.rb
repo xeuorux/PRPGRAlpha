@@ -87,14 +87,14 @@ class PokeBattle_Move_EmpoweredSandstorm < PokeBattle_Move_StartSandstorm8
 end
 
 #===============================================================================
-# Dizzies the target and sets Sandstorm
+# Numbs the target and sets Sandstorm
 #===============================================================================
-class PokeBattle_Move_DizzyTargetStartSandstorm8 < PokeBattle_InviteMove
+class PokeBattle_Move_NumbTargetStartSandstorm8 < PokeBattle_InviteMove
     def initialize(battle, move)
         super
         @weatherType = :Sandstorm
         @durationSet = 8
-        @statusToApply = :DIZZY
+        @statusToApply = :NUMB
     end
 end
 
@@ -151,6 +151,18 @@ class PokeBattle_Move_EmpoweredEclipse < PokeBattle_Move_StartEclipse8
         super
         user.pbRaiseMultipleStatSteps([:ATTACK, 1, :SPECIAL_ATTACK, 1], user, move: self)
         transformType(user, :PSYCHIC)
+    end
+end
+
+#===============================================================================
+# Dizzies the target and sets Eclipse
+#===============================================================================
+class PokeBattle_Move_DizzyTargetStartEclipse8 < PokeBattle_InviteMove
+    def initialize(battle, move)
+        super
+        @weatherType = :Eclipse
+        @durationSet = 8
+        @statusToApply = :DIZZY
     end
 end
 

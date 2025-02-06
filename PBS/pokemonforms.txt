@@ -162,6 +162,11 @@ FormName = Moonglow
 Type1 = FAIRY
 Pokedex = This is the form Castform takes when the moon rises. The particles in its body take on mystical fae-like properties.
 #-------------------------------
+[CASTFORM,6]
+FormName = Eclipse
+Type1 = PSYCHIC
+Pokedex = This is the form Castform takes when an eclipse covers the sky. It moves around using its hands made of pure psychic energy.
+#-------------------------------
 [DEOXYS,1]
 FormName = Attack
 BaseStats = 50,180,20,150,180,20
