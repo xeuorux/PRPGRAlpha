@@ -2700,19 +2700,6 @@ Flags = CanMagicCoat,CanMirrorMove
 Description = The target becomes unable to flee, and takes 50% more damage from all attacks.
 Animation = MEANLOOK
 #-------------------------------
-[DEEPESTFEARS]
-Name = Deepest Fears
-Type = GHOST
-Category = Special
-Power = 90
-Accuracy = 100
-TotalPP = 15
-Target = NearOther
-FunctionCode = Basic
-Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
-Description = The target is forced to relive their worst nightmare. Critical hits twice as often.
-Animation = NIGHTSHADE
-#-------------------------------
 [DIRGE]
 Name = Dirge
 Type = GHOST
@@ -2787,20 +2774,6 @@ Flags = CanProtect,CanMagicCoat,CanMirrorMove
 Description = Disables the target's last used move for five turns, and cuts 5 PP from it.
 Animation = DISABLE
 #-------------------------------
-[GHOULISHGALE]
-Name = Ghoulish Gale
-Type = GHOST
-Category = Special
-Power = 85
-Accuracy = 0
-TotalPP = 12
-Target = NearOther
-FunctionCode = AlwaysHits
-Flags = CanProtect,CanMirrorMove,Wind
-EffectChance = 20
-Description = The target is blasted with an unsettling wind. Can't miss and skips protections.
-Animation = OMINOUSWIND
-#-------------------------------
 [HONEYSLATHER]
 Name = Honey Slather
 Type = GHOST
@@ -2853,19 +2826,6 @@ FunctionCode = LowerUserSpAtkSpDef2
 Flags = CanProtect,CanMirrorMove
 Description = The user opens its soul to unleash massive energy. This lowers the user's Sp. Atk and Sp. Def by two steps.
 Animation = OMINOUSWIND
-#-------------------------------
-[PHOBIA]
-Name = Phobia
-Type = GHOST
-Category = Special
-Power = 40
-Accuracy = 100
-TotalPP = 30
-Target = NearOther
-FunctionCode = Basic
-Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
-Description = The user attacks the target's mind with calculated fear. Critical hits twice as often.
-Animation = NIGHTSHADE
 #-------------------------------
 [SEANCE]
 Name = Seance
@@ -2956,6 +2916,19 @@ Flags = CanSnatch
 Description = The user restores two thirds of its own HP. Then, this move is disabled.
 Animation = RECOVER
 #-------------------------------
+[SUFFOCATE]
+Name = Suffocate
+Type = GHOST
+Category = Special
+Power = 90
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = Basic
+Flags = CanProtect,CanMirrorMove,HighCriticalHitRate,Wind
+Description = The user suffocates the target by sucking the air from their lungs. Critical hits twice as often.
+Animation = OMINOUSWIND
+#-------------------------------
 [SUNDERFATE]
 Name = Sunder Fate
 Type = GHOST
@@ -2967,6 +2940,19 @@ Target = NearOther
 FunctionCode = CurseTarget
 Flags = CanProtect,CanMirrorMove
 Description = The user snips the target's connection to life in order to curse them, damaging their HP by 25% each turn.
+#-------------------------------
+[THINAIR]
+Name = Thin Air
+Type = GHOST
+Category = Special
+Power = 40
+Accuracy = 100
+TotalPP = 30
+Target = NearOther
+FunctionCode = Basic
+Flags = CanProtect,CanMirrorMove,HighCriticalHitRate,Wind
+Description = The user thins the air around the target, depriving them of oxygen. Critical hits twice as often.
+Animation = OMINOUSWIND
 #-------------------------------
 [TONGUETWISTER]
 Name = Tongue Twister

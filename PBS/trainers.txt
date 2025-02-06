@@ -3933,7 +3933,7 @@ Pokemon = MGIGALITH,53
     AbilityIndex = 1 # Space Interloper
     Item = ROCKGEM
 Pokemon = FROSLASS,53
-    Moves = BLIZZARD,GHOULISHGALE
+    Moves = BLIZZARD,SUFFOCATE
     AbilityIndex = 0 # Sealing Body
     Item = SKILLHERB
 #-------------------------------
@@ -4631,7 +4631,7 @@ Pokemon = MUDSDALE,62
     Moves = TRAMPLE,STABILIZE,BULKUP,WHIPKICK
     AbilityIndex = 0 # Iron Heel
 Pokemon = CHIMECHO,63
-    Moves = REVERBWARD,GHOULISHGALE,COLDFRONT,PSYCHOBOOST
+    Moves = REVERBWARD,SUFFOCATE,COLDFRONT,PSYCHOBOOST
     AbilityIndex = 0 # Brisk
     Item = LEFTOVERS
 Pokemon = CHATOT,62
@@ -5311,7 +5311,7 @@ Pokemon = DROMERUPT,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,15,15,0,15,0
 Pokemon = CHIMECHO,70
-    Moves = GHOULISHGALE,DREAMABSORB,SIGNALBEAM,CHARGEBEAM
+    Moves = SUFFOCATE,DREAMABSORB,SIGNALBEAM,CHARGEBEAM
     AbilityIndex = 0 # Brisk
     Item = STRIKEVEST
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -5695,7 +5695,7 @@ Pokemon = GOLURK,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,10,0,20,10
 Pokemon = CHIMECHO,70
-    Moves = GHOULISHGALE,DREAMABSORB,SIGNALBEAM,CHARGEBEAM
+    Moves = SUFFOCATE,DREAMABSORB,SIGNALBEAM,CHARGEBEAM
     AbilityIndex = 0 # Brisk
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 0,20,10,20,20,0
@@ -7958,7 +7958,7 @@ Pokemon = BARBARACLE,70
     AbilityIndex = 1 # Steel Absorb
     Item = STRIKEVEST
 Pokemon = EISCUE,70
-    Moves = SHIVERSQUIRM,HYPOTHERMIATE,GHOULISHGALE,BODYSLAM
+    Moves = SHIVERSQUIRM,HYPOTHERMIATE,SUFFOCATE,BODYSLAM
     AbilityIndex = 0 # Ice Block
 #-------------------------------
 [BIRDKEEPER_F,Danika]
@@ -8022,7 +8022,7 @@ Pokemon = POLIWRATH,70
     Moves = CROSSCHOP,LIQUIDATION,NERVEBLOCK,ENCORE
     AbilityIndex = 0 # Counter Flow
 Pokemon = DRIFBLIM,70
-    Moves = HEATWAVE,COLDFRONT,GHOULISHGALE,SMOLDERRAVE
+    Moves = HEATWAVE,COLDFRONT,SUFFOCATE,SMOLDERRAVE
     AbilityIndex = 0 # Unburden
     Item = SITRUSBERRY
 #-------------------------------

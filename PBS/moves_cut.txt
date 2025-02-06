@@ -1494,6 +1494,20 @@ FunctionCode = Invalid
 Flags = CanSnatch
 Description = The user becomes Ghost-type only. Always goes first.
 #-------------------------------
+[GHOULISHGALE]
+Name = Ghoulish Gale
+Type = GHOST
+Category = Special
+Power = 85
+Accuracy = 0
+TotalPP = 12
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect,CanMirrorMove,Wind
+EffectChance = 20
+Description = The target is blasted with an unsettling wind. Can't miss and skips protections.
+Animation = OMINOUSWIND
+#-------------------------------
 [GRUDGE]
 Name = Grudge
 Type = GHOST
