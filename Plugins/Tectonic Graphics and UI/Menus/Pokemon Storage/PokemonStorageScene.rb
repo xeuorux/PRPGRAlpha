@@ -313,7 +313,7 @@ class PokemonStorageScene
                     pbSetMosaic(selection)
                 end
             elsif Input.triggerex?(:W) && @command == 0 # Organize only
-                if selection != -1 && !@quickswap
+                if selection != -1 && !@quickswap && @storage[@storage.currentBox, selection] != nil
                     if @multiselect.include?(selection)
                         @multiselect.delete(selection)
                     else
@@ -375,6 +375,7 @@ class PokemonStorageScene
                 end
             else
                 @choseFromParty = false
+                PBDebug.log("pbSelectBox ret:")
                 PBDebug.log(ret)
                 return ret
             end

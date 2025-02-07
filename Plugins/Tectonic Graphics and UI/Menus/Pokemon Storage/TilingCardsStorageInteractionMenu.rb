@@ -43,11 +43,32 @@ class TilingCardsStorageInteractionMenu_Scene < TilingCardsMenu_Scene
 		when 0
 			if @isMultiselect
 				PBDebug.log("Multiselect tiles - Organise")
-				# Move - check if enough space in future box
-				# Withdraw - if enough space in party
-				# store - same as move
-				# Item 
-				# Release
+				# Check if enough space
+				# "Pick up" pokemon
+				# "Drop" pokemon
+				@cardButtons[:MOVE] = {
+					:label => _INTL("Move"),
+					:active_proc => Proc.new {
+						next canEditTeam && !inDonationBox && !lastPokemonInParty
+					},
+					:press_proc => Proc.new { |scene|
+						destbox = @storageScene.pbChooseBox(_INTL("Move to which Box?"))
+						storageBox = @storageScreen.storage[destbox]
+						if storageBox.nitems + @pkmn.length > storageBox.length
+							pbDisplay(_INTL("Not enough space!"))
+						else
+							@pkmn.each { |x| 
+								PBDebug.log(x)
+								firstfree = @storageScreen.storage.pbFirstFreePos(destbox)
+								PBDebug.log("Box: #{x[0]}, index: #{x[1]}")
+								@storageScreen.storage.pbMove(destbox,firstfree,x[0],x[1])
+							}
+							@storageScene.clearMultiselect
+							pbHardRefresh
+						end
+						next true
+					},
+				}
 	
 			elsif @heldpoke
 				if @storageScreen.storage[@selected[0], @selected[1]] # Is there a pokemon in the spot?
@@ -87,7 +108,7 @@ class TilingCardsStorageInteractionMenu_Scene < TilingCardsMenu_Scene
 			end
 		when 1
 			if @isMultiselect
-				PBDebug.log("Multiselect tiles")
+				PBDebug.log("Multiselect tiles - Withdraw")
 			else
 				@cardButtons[:WITHDRAW] = {
 						:label => _INTL("Withdraw"),
@@ -102,7 +123,7 @@ class TilingCardsStorageInteractionMenu_Scene < TilingCardsMenu_Scene
 			end
 		when 2
 			if @isMultiselect
-				PBDebug.log("Multiselect tiles")
+				PBDebug.log("Multiselect tiles - Deposit")
 			else
 				@cardButtons[:STORE] = {
 						:label => _INTL("Store"),
@@ -129,26 +150,33 @@ class TilingCardsStorageInteractionMenu_Scene < TilingCardsMenu_Scene
 		end
 
 		if @isMultiselect
-			PBDebug.log("Multiselect tiles - Others")
-			PBDebug.log(@pkmn)
-
 			@cardButtons[:ITEM] = {
-				:label => _INTL("Item"),
+				:label => _INTL("Take Item"),
 				:active_proc => Proc.new {
 					canEditTeam && !inDonationBox
 				},
 				:press_proc => Proc.new { |scene|
-					next true if itemCommandMenu
+					@pkmn.each { |x| pbTakeItemsFromPokemon(@storageScreen.storage[x[0],x[1]]) }
+					pbUpdate
+					next true
 				},
 			}
 
 			@cardButtons[:RELEASE] = {
 				:label => _INTL("Release"),
 				:active_proc => Proc.new {
-					canEditTeam && !lastPokemonInParty
+					canEditTeam && !lastPokemonInParty && !@pkmn.any? { |x| @storageScreen.storage[x[0],x[1]].egg? }
 				},
 				:press_proc => Proc.new { |scene|
-					@storageScreen.pbRelease(@selected, @pkmn)
+					command = pbShowCommands(_INTL("Are you sure you want to release this Pokémon?"), [_INTL("No"), _INTL("Yes")])
+					if command == 1
+						command = pbShowCommands(_INTL("They will be gone forever. Are you sure?"), [_INTL("No"), _INTL("Yes")])
+						if command == 1
+							@pkmn.each { |x| @storageScreen.pbExecuteRelease(x, nil, @storageScreen.storage[x[0], x[1]], x[0], x[1]) }
+						end
+					end
+
+					@storageScene.clearMultiselect
 					next true
 				},
 			}

@@ -60,8 +60,7 @@ class PokemonStorageScreen
                         pbDisplay(_INTL("That Pokémon is not a valid choice!"))
                         next
                     end
-                    pokemonZip = pokemonList.map { |element| [selectedBox, element] }
-                    PBDebug.log(pokemonZip)
+                    pokemonZip = pokemonList.map { |x| [selectedBox, x] }
 
                     interactionScene = TilingCardsStorageInteractionMenu_Scene.new(command,pokemonZip,selected,nil,self,@scene,true)
                     interactionScreen = TilingCardsStorageInteractionMenu.new(interactionScene)
@@ -131,7 +130,7 @@ class PokemonStorageScreen
                     pokemon = @storage[selected[0], selected[1]]
                     next unless pokemon
 
-                    interactionScene = TilingCardsStorageInteractionMenu_Scene.new(command,pokemon,selected,nil,self,@scene)
+                    interactionScene = TilingCardsStorageInteractionMenu_Scene.new(command,pokemon,selected,nil,self,@scene,false)
                     interactionScreen = TilingCardsStorageInteractionMenu.new(interactionScene)
                     interactionScreen.pbStartPokemonMenu
                 end
@@ -154,7 +153,7 @@ class PokemonStorageScreen
                     pokemon = @storage[-1, selected]
                     next unless pokemon
 
-                    interactionScene = TilingCardsStorageInteractionMenu_Scene.new(command,pokemon,[-1,selected],nil,self,@scene)
+                    interactionScene = TilingCardsStorageInteractionMenu_Scene.new(command,pokemon,[-1,selected],nil,self,@scene,false)
                     interactionScreen = TilingCardsStorageInteractionMenu.new(interactionScene)
                     interactionScreen.pbStartPokemonMenu
                 end
@@ -542,20 +541,24 @@ class PokemonStorageScreen
         if command == 1
             command = pbShowCommands(_INTL("They will be gone forever. Are you sure?"), [_INTL("No"), _INTL("Yes")])
             if command == 1
-                pkmnname = pokemon.name
-                @scene.pbRelease(selected, heldpoke)
-                if heldpoke
-                    @heldpkmn = nil
-                else
-                    @storage.pbDelete(box, index)
-                end
-                @scene.pbRefresh
-                pbDisplay(_INTL("{1} was released.", pkmnname))
-                pbDisplay(_INTL("Bye-bye, {1}!", pkmnname))
-                @scene.pbRefresh
+                pbExecuteRelease(selected, heldpoke, pokemon, box, index)
             end
         end
         return
+    end
+
+    def pbExecuteRelease(selected, heldpoke, pokemon, box, index)
+        pkmnname = pokemon.name
+        @scene.pbRelease(selected, heldpoke)
+        if heldpoke
+            @heldpkmn = nil
+        else
+            @storage.pbDelete(box, index)
+        end
+        @scene.pbRefresh
+        pbDisplay(_INTL("{1} was released.", pkmnname))
+        pbDisplay(_INTL("Bye-bye, {1}!", pkmnname))
+        @scene.pbRefresh
     end
 
     CANDY_EXCHANGE_EFFICIENCY = 1.0
