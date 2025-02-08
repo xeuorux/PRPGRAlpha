@@ -133,7 +133,7 @@ class PokeBattle_Move_EmpoweredRolePlay < PokeBattle_Move
     def pbEffectGeneral(user)
         super
         user.eachOpposing do |b|
-            @battle.pbDisplay(_INTL("{1} copies {2}'s ability!",user.pbThis,target.pbThis(true)))
+            @battle.pbDisplay(_INTL("{1} copies {2}'s ability!",user.pbThis,b.pbThis(true)))
             user.addAbility(b.firstAbility)
         end
     end  
