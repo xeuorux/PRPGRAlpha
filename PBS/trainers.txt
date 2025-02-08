@@ -6944,6 +6944,7 @@ Pokemon = MDUSTOX,53
 #-------------------------------
 [ARTIST3,Alicynthia]
 Pokemon = ALAKAZAM,52
+    Moves = POLARIZEDROOM,PSYCHIC,JAVELIN,NUMB
     AbilityIndex = 1 # Steelworker
     Item = REINFORCINGROD
 Pokemon = SCEPTILE,52
