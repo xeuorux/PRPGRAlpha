@@ -332,30 +332,13 @@ class PokeBattle_Move
 
     def ignoresDefensiveStepBoosts?(_user, _target); return false; end
 
-    def forcedSpecial?(user, _target, checkingForAI = false)
-        return true if user.shouldAbilityApply?(%i[TIMEINTERLOPER SPACEINTERLOPER], checkingForAI)
-        return false
-    end
-
-    def forcedPhysical?(user, _target, checkingForAI = false)
-        return true if user.shouldAbilityApply?([:BRUTEFORCE], checkingForAI)
-        return false
-    end
-
-    def specialAfterForcing?(user, target, checkingForAI = false)
-        isSpecial = specialMove?
-        isSpecial = true if forcedSpecial?(user, target, checkingForAI)
-        isSpecial = false if forcedPhysical?(user, target, checkingForAI)
-        return isSpecial
-    end
-
     def pbAttackingStat(user, target, checkingForAI = false)
-        return user, :SPECIAL_ATTACK if specialAfterForcing?(user, target, checkingForAI)
+        return user, :SPECIAL_ATTACK if specialMove?
         return user, :ATTACK
     end
 
     def pbDefendingStat(user, target, checkingForAI = false)
-        return target, :SPECIAL_DEFENSE if specialAfterForcing?(user, target, checkingForAI)
+        return target, :SPECIAL_DEFENSE if specialMove?
         return target, :DEFENSE
     end
 
