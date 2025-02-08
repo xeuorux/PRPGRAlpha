@@ -1,15 +1,8 @@
 def defeatBoss(item=nil,count=1,opacityStart=180,opacityTarget=0)
 	$PokemonGlobal.respawnPoint = nil
 
-	event = get_self
-
 	pbSEPlay("Avatar death")
-	opacityStart.downto(opacityTarget) do |i|
-		next if i % 3 != 0
-		event.opacity = i
-		pbWait(1)
-	end
-
+	fadeAway(opacityStart,opacityTarget)
 	pbWait(60)
 
 	setMySwitch('A',true)
@@ -34,6 +27,15 @@ def defeatBoss(item=nil,count=1,opacityStart=180,opacityTarget=0)
 	# If the map is playing the bad variant of the primal clay BGM
 	# Forces it to move to the good variant
 	primalClayBGMChange()
+end
+
+def fadeAway(opacityStart=180,opacityTarget=0)
+	event = get_self
+	opacityStart.downto(opacityTarget) do |i|
+		next if i % 3 != 0
+		event.opacity = i
+		pbWait(1)
+	end
 end
 
 def defeatRegigigas
