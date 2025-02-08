@@ -908,6 +908,26 @@ BattleHandlers::AbilityOnSwitchIn.add(:HAUNTED,
   }
 )
 
+BattleHandlers::AbilityOnSwitchIn.add(:BRUTEFORCE,
+  proc { |ability, battler, battle, aiCheck|
+      next 0 if aiCheck
+      battle.pbShowAbilitySplash(battler, ability)
+      battle.pbDisplay(_INTL("{1} forces its moves to be physical!", battler.pbThis))
+      battle.pbHideAbilitySplash(battler)
+  }
+)
+
+BattleHandlers::AbilityOnSwitchIn.add(:TIMEINTERLOPER,
+  proc { |ability, battler, battle, aiCheck|
+      next 0 if aiCheck
+      battle.pbShowAbilitySplash(battler, ability)
+      battle.pbDisplay(_INTL("{1} is an interloper! All its moves are special!", battler.pbThis))
+      battle.pbHideAbilitySplash(battler)
+  }
+)
+
+BattleHandlers::AbilityOnSwitchIn.copy(:TIMEINTERLOPER, :SPACEINTERLOPER)
+
 BattleHandlers::AbilityOnSwitchIn.add(:SLUMBERINGDRAKE,
   proc { |ability, battler, battle, aiCheck|
       next 0 unless battler.canSleep?(battler, !aiCheck)

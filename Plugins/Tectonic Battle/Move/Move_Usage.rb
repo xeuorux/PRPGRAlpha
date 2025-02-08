@@ -42,6 +42,8 @@ class PokeBattle_Move
         return selectBestCategory(user, targets[0]) if punchingMove? && user.hasActiveAbility?(:MYSTICFIST)
         return selectBestCategory(user, targets[0]) if rampagingMove? && user.hasActiveAbility?(:WREAKHAVOC)
         return selectBestCategory(user) if adaptiveMove?
+        return 0 if @category == 1 && user.hasActiveAbility?(:BRUTEFORCE)
+        return 1 if @category == 0 && user.hasActiveAbility?(%i[TIMEINTERLOPER SPACEINTERLOPER])
         return nil
     end
 
