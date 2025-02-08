@@ -47337,7 +47337,7 @@ Boosts Speed by 50% in rainstorm. Can't miss during rainstorm.
 Aumenta su Velocidad un 50% en tormenta de lluvia. No puede fallar dentro de esta.
 Lays an electrical hazard around the opponent when its HP is lowered below half.
 Deja una trampa eléctrica alrededor del oponente cuando pierde la mitad de sus PS o más.
-Prevents the Pokémon's stat steps from being lowered (except when self-inflicted).
+Prevents stat steps from being lowered (except when self-inflicted).
 Impide que las stats del Pokémon sean disminuidas (excepto cuando auto-inflingido).
 Protects Grass-type allies from status conditions or stat lowering (except self-inflicted).
 Protege a aliados tipo Planta de problemas de estado o disminuciones de stats (excepto cuando auto-inflingido).
@@ -47355,13 +47355,13 @@ When this Pokémon becomes statused, its Speed is raised by three steps.
 Cuando este Pokémon obtiene un problema de estado, su Velocidad es aumentada tres grados.
 Wild Pokémon are more likely to appear in pairs and to be species you've never caught before.
 Es más probable que los Pokémon salvajes aparezcan en pares y que sean de especies que nunca has atrapado.
-Prevents the Pokémon's stat steps from being lowered (except when self-inflicted). Protects from critical hits.
+Prevents stat steps from being lowered (except when self-inflicted). Protects from critical hits.
 Impide que las estadísticas del Pokémon sean disminuidas (excepto cuando auto-inflingido). Impide golpes críticos.
 The Pokémon is also Grass-type. When hit by an attack, the attacker's ability becomes Infected.
 El Pokémon también es de tipo Planta. Al ser atacado, la habilidad del atacante se vuelve Infectado.
 When hit by another Pokémon, destroys one of the their items.
 Al ser golpeado por otro Pokémon, destruye uno de sus objetos.
-Prevents the Pokémon's stat steps from being lowered (except when self-inflicted). The Pokémon's weight is doubled.
+Prevents stat steps from being lowered (except when self-inflicted). The Pokémon's weight is doubled.
 Impide que las stats del Pokémon sean disminuidas (excepto cuando auto-inflingido). El peso del Pokémon es duplicado.
 The Pokémon's hits deal half damage unless they are critical.
 Los ataques del Pokémon tienen la mitad de potencia a no ser que sean críticos.
@@ -47379,7 +47379,7 @@ Its attacks are critical against numbed targets.
 Sus ataques son críticos contra objetivos aturdidos.
 At the end of each round, lowers other waterlogged Pokémon's Attack and Sp. Atk by two steps.
 Al final de cada turno, disminuye el Ataque y Ataque Especial de otros Pokémon embebidos cada turno.
-Prevents the Pokémon's stat steps from being lowered (except when self-inflicted). Immune to weather downsides.
+Prevents stat steps from being lowered (except when self-inflicted). Immune to weather downsides.
 Impide que las stats del Pokémon sean disminuidas (excepto cuando auto-inflingido). Inmune a desventajas del clima.
 By sacrificing a held item the Pokémon didn't start with, it can negate one attack against it.
 Sacrificando un objeto equipable con el que el Pokémon no empezó, puede negar un ataque en su contra.

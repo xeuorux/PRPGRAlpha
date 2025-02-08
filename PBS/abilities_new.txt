@@ -939,7 +939,7 @@ Description = Raises Speed by four steps when a stat is lowered by a foe.
 #-------------------------------
 [IMPERVIOUS]
 Name = Impervious
-Description = Prevents the Pokémon's stat steps from being lowered (except when self-inflicted). Protects from critical hits.
+Description = Prevents stat steps from being lowered (except when self-inflicted). Protects from critical hits.
 Flags = CritImmunity,OtherStatDropImmunity
 #-------------------------------
 [IMPETUOUS]
@@ -1303,7 +1303,7 @@ Description = Sets a Tailwind for four turns upon entering the battle, increasin
 #-------------------------------
 [OPTIMIZEDALLOY]
 Name = Optimized Alloy
-Description = Prevents the Pokémon's stat steps from being lowered (except when self-inflicted). The Pokémon's weight is doubled.
+Description = Prevents stat steps from being lowered (except when self-inflicted). The Pokémon's weight is doubled.
 Flags = OtherStatDropImmunity
 #-------------------------------
 [OUTRIDER]
@@ -1793,7 +1793,7 @@ Description = Has a 30% chance to dizzy targets when using physical moves.
 #-------------------------------
 [STAINLESSSTEEL]
 Name = Stainless Steel
-Description = Prevents the Pokémon's stat steps from being lowered (except when self-inflicted). Immune to weather downsides.
+Description = Prevents stat steps from being lowered (except when self-inflicted). Immune to weather downsides.
 Flags = AllWeatherSynergy,OtherStatDropImmunity
 #-------------------------------
 [STAMPEDE]
