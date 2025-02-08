@@ -435,8 +435,6 @@ module Compiler
     MessageTypes.setMessagesAsHash(MessageTypes::ItemPlurals, item_names_plural)
     MessageTypes.setMessagesAsHash(MessageTypes::ItemDescriptions, item_descriptions)
     Graphics.update
-
-    BattleHandlers::LoadDataDependentItemHandlers.trigger
   end
 
   def compile_machine_order

@@ -49,17 +49,6 @@ BattleHandlers::StatLossImmunityAbility.add(:FLOWERVEIL,
   }
 )
 
-BattleHandlers::StatLossImmunityAbility.add(:IMPERVIOUS,
-  proc { |ability, battler, stat, battle, showMessages|
-      if showMessages
-          battle.pbShowAbilitySplash(battler, ability)
-          battle.pbDisplay(_INTL("{1}'s stats cannot be lowered!", battler.pbThis))
-          battle.pbHideAbilitySplash(battler)
-      end
-      next true
-  }
-)
-
 BattleHandlers::StatLossImmunityAbility.add(:RUNNINGFREE,
   proc { |ability, battler, stat, battle, showMessages|
       next false unless stat == :SPEED

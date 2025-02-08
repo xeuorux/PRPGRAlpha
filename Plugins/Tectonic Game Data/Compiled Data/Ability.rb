@@ -66,8 +66,6 @@ module Compiler
         MessageTypes.setMessagesAsHash(MessageTypes::Abilities, ability_names)
         MessageTypes.setMessagesAsHash(MessageTypes::AbilityDescs, ability_descriptions)
         Graphics.update
-
-        BattleHandlers::LoadDataDependentAbilityHandlers.trigger
     end
 
     #=============================================================================

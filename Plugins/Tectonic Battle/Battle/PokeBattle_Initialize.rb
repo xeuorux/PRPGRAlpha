@@ -167,6 +167,9 @@ class PokeBattle_Battle
         else
             @struggle = PokeBattle_Struggle.new(self, nil)
         end
+
+        BattleHandlers.loadDataDependentHandlers
+        
         # System for learning the player's abilities
         @knownAbilities = {}
         @party1.each do |pokemon|

@@ -11,6 +11,11 @@ module BattleHandlers
     LoadDataDependentAbilityHandlers    = Event.new
     LoadDataDependentItemHandlers    = Event.new
 
+    def self.loadDataDependentHandlers
+        BattleHandlers::LoadDataDependentAbilityHandlers.trigger
+        BattleHandlers::LoadDataDependentItemHandlers.trigger  
+    end
+
     # Battler's type calculation
     TypeCalcAbility                     = AbilityHandlerHash.new
     # Battler's speed calculation
