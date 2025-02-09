@@ -65,6 +65,9 @@ class PokemonStorageScreen
                     interactionScene = TilingCardsStorageInteractionMenu_Scene.new(command,pokemonZip,selected,nil,self,@scene,true)
                     interactionScreen = TilingCardsStorageInteractionMenu.new(interactionScene)
                     interactionScreen.pbStartPokemonMenu
+                    if selectedBox == -1
+                        @scene.pbHidePartyTab
+                    end
                 else
                     pokemon = @storage[selected[0], selected[1]]
                     if pokemon && command == 4

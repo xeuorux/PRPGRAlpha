@@ -54,8 +54,15 @@ class TilingCardsStorageInteractionMenu_Scene < TilingCardsMenu_Scene
 					:press_proc => Proc.new { |scene|
 						destbox = @storageScene.pbChooseBox(_INTL("Move to which Box?"))
 						storageBox = @storageScreen.storage[destbox]
+						if destbox == -1
+							@storageScene.clearMultiselect
+							next true
+						end
 						if storageBox.nitems + @pkmn.length > storageBox.length
 							pbDisplay(_INTL("Not enough space!"))
+							if destbox == -1
+								@storageScene.clearMultiselect
+							end
 						else
 							@pkmn.each { |x| 
 								PBDebug.log(x)

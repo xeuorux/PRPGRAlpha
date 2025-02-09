@@ -6,6 +6,12 @@ class PokemonStorageScene
 
     def initialize
         @command = 1
+        @partyPositions =[
+            [200,2],[272,18],
+            [200,66],[272,82],
+            [200,130],[272,146],
+                [236,220]
+            ]
     end
 
     def pbStartBox(screen, command, iconFadeProc = nil)
@@ -19,6 +25,9 @@ class PokemonStorageScene
         @boxsidesviewport.z = 99_999
         @arrowviewport = Viewport.new(0, 0, Graphics.width, Graphics.height)
         @arrowviewport.z = 99_999
+        @highlightviewport = Viewport.new(0, 0, Graphics.width, Graphics.height)
+        @highlightviewport.z = 99_999
+        @highlightBitmap = AnimatedBitmap.new("Graphics/Pictures/Storage/circle_highlight")
         @viewport = Viewport.new(0, 0, Graphics.width, Graphics.height)
         @viewport.z = 99_999
         @selection = 0
@@ -78,6 +87,7 @@ class PokemonStorageScene
         @boxviewport.dispose
         @boxsidesviewport.dispose
         @arrowviewport.dispose
+        @highlightviewport.dispose
     end
 
     def pbDisplay(message)
@@ -157,6 +167,39 @@ class PokemonStorageScene
         end
     end
 
+    def pbUpdateHighlights(isInParty=false)
+        if isInParty
+            for i in 0..Settings::MAX_PARTY_SIZE
+                if !@sprites.key?("highlight_#{i}")
+                    @sprites["highlight_#{i}"] = SpriteWrapper.new(@highlightviewport)
+                    @sprites["highlight_#{i}"].bitmap = @highlightBitmap.bitmap
+                end
+                if @multiselect.include?(i)
+                    @sprites["highlight_#{i}"].x = @partyPositions[i][0]
+                    @sprites["highlight_#{i}"].y = @partyPositions[i][1] + 32
+                    @sprites["highlight_#{i}"].visible = true
+                else
+                    @sprites["highlight_#{i}"].visible = false
+                end
+            end
+        else
+            # Can probably use a Mosaic here?
+            for i in 0...@storage.maxPokemon(@storage.currentBox)
+                if !@sprites.key?("highlight_#{i}")
+                    @sprites["highlight_#{i}"] = SpriteWrapper.new(@highlightviewport)
+                    @sprites["highlight_#{i}"].bitmap = @highlightBitmap.bitmap
+                end
+                if @multiselect.include?(i)
+                    @sprites["highlight_#{i}"].x = (97 + 24 * (i % PokemonBox::BOX_WIDTH)) * 2
+                    @sprites["highlight_#{i}"].y = (40 + 24 * (i / PokemonBox::BOX_WIDTH)) * 2
+                    @sprites["highlight_#{i}"].visible = true
+                else
+                    @sprites["highlight_#{i}"].visible = false
+                end
+            end
+        end
+    end
+
     def pbChangeSelection(key, selection)
         case key
         when Input::UP
@@ -217,20 +260,12 @@ class PokemonStorageScene
 
     def pbPartySetArrow(arrow, selection)
         return if selection < 0
-        xvalues = []   # [200, 272, 200, 272, 200, 272, 236]
-        yvalues = []   # [2, 18, 66, 82, 130, 146, 220]
-        for i in 0...Settings::MAX_PARTY_SIZE
-            xvalues.push(200 + 72 * (i % 2))
-            yvalues.push(2 + 16 * (i % 2) + 64 * (i / 2))
-        end
-        xvalues.push(236)
-        yvalues.push(220)
         arrow.angle = 0
         arrow.mirror = false
         arrow.ox = 0
         arrow.oy = 0
-        arrow.x = xvalues[selection]
-        arrow.y = yvalues[selection]
+        arrow.x = @partyPositions[selection][0]
+        arrow.y = @partyPositions[selection][1]
     end
 
     def pbPartyChangeSelection(key, selection)
@@ -320,14 +355,14 @@ class PokemonStorageScene
                         @multiselect.push(selection)
                     end
                     PBDebug.log(@multiselect)
-                    # Update multiselected highlighting
+                    pbUpdateHighlights
                 end
             elsif Input.trigger?(Input::ACTION) && @command == 0 # Organize only
                 if @multiselect.empty?
                     pbPlayDecisionSE
                     pbSetQuickSwap(!@quickswap)
                 else
-                    PBDebug.log("Cannot use quickswap with multiselect.")
+                    pbDisplay("Cannot use quickswap with multiselect.")
                 end
             elsif Input.trigger?(Input::BACK)
                 @selection = selection
@@ -365,7 +400,10 @@ class PokemonStorageScene
                     @selection = 0
                 end
                 ret = pbSelectPartyInternal(party, false)
-                if ret < 0
+                PBDebug.log(ret)
+                if !@multiselect.empty? && multiselectCount > 1
+                    return ret
+                elsif ret < 0
                     pbHidePartyTab
                     @selection = 0
                     @choseFromParty = false
@@ -375,8 +413,6 @@ class PokemonStorageScene
                 end
             else
                 @choseFromParty = false
-                PBDebug.log("pbSelectBox ret:")
-                PBDebug.log(ret)
                 return ret
             end
         end
@@ -412,14 +448,35 @@ class PokemonStorageScene
                 pbSetMosaic(selection)
             end
             update
-            if Input.trigger?(Input::ACTION) && @command == 0 # Organize only
-                pbPlayDecisionSE
-                pbSetQuickSwap(!@quickswap)
+            if Input.triggerex?(:W) && @command == 0 # Organize only
+                if selection >= 0 && selection < Settings::MAX_PARTY_SIZE
+                    if @multiselect.include?(selection)
+                        @multiselect.delete(selection)
+                    else
+                        @multiselect.push(selection)
+                    end
+                    PBDebug.log(@multiselect)
+                    pbUpdateHighlights(true)
+                end
+            elsif Input.trigger?(Input::ACTION) && @command == 0 # Organize only
+                if @multiselect.empty?
+                    pbPlayDecisionSE
+                    pbSetQuickSwap(!@quickswap)
+                else
+                    pbDisplay("Cannot use quickswap with multiselect.")
+                end
             elsif Input.trigger?(Input::BACK)
                 @selection = selection
+                clearMultiselect
                 return -1
             elsif Input.trigger?(Input::USE)
-                if selection >= 0 && selection < Settings::MAX_PARTY_SIZE
+                if multiselectCount == 1
+                    @selection = @multiselect[0]
+                    clearMultiselect
+                    return @selection
+                elsif !@multiselect.empty?
+                    return @multiselect.prepend(-1)
+                elsif selection >= 0 && selection < Settings::MAX_PARTY_SIZE
                     @selection = selection
                     return selection
                 elsif selection == Settings::MAX_PARTY_SIZE # Close Box
@@ -466,12 +523,14 @@ class PokemonStorageScene
     end
 
     def pbSwitchBox(newbox, side)
+        clearMultiselect
+
         if side == 0
             pbSwitchBoxToRight(newbox)
         elsif side == 1
             pbSwitchBoxToLeft(newbox)
         end
-        clearMultiselect
+
         donationBoxTutorialCheck
     end
 
@@ -709,6 +768,7 @@ class PokemonStorageScene
 
     def clearMultiselect
         @multiselect.clear
+        pbUpdateHighlights
     end
 
     def pbBoxName(helptext, minchars, maxchars)
