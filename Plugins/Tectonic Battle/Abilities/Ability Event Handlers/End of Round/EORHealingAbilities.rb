@@ -2,6 +2,8 @@ BattleHandlers::EORHealingAbility.add(:SHEDSKIN,
     proc { |ability, battler, battle|
         hasAnyRelevantStatus = false
         GameData::Status.each do |s|
+            next if s.id == :NONE
+            next if s.id == :SLEEP
             next unless battler.hasStatusNoTrigger(s.id)
             hasAnyRelevantStatus = true
             break
