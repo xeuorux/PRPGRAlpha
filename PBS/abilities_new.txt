@@ -1546,6 +1546,10 @@ Description = Immune to Rock-type moves and to Stealth Rock, and raises Speed wh
 Name = Rooted
 Description = Gets 50% more healing from all sources.
 #-------------------------------
+[RUGGED]
+Name = Rugged
+Description = Immune to Fighting-type and Rock-type moves. Prevents Stealth Rock damage.
+#-------------------------------
 [RUGGEDSCALES]
 Name = Rugged Scales
 Description = Protected from random added effects. Takes 30% less damage from moves with random added effects.
