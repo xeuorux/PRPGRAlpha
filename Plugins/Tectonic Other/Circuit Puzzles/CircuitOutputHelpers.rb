@@ -12,7 +12,14 @@ end
 
 def switchCurrent(eventIDs,toggleSelf=true)
     eventIDs = [eventIDs] unless eventIDs.is_a?(Array)  
-    mainEvent = eventIDs[0] 
+    mainEvent = eventIDs[0]
+
+    if toggleSelf
+        pbSEPlay("GUI storage put down", 140, 70)
+        toggleSwitch(get_self.id)
+        pbWait(40)
+    end
+
     slideCameraToEvent(mainEvent,5)
 
     255.downto(0) do |i|
@@ -33,9 +40,7 @@ def switchCurrent(eventIDs,toggleSelf=true)
         end
         pbWait(1)
     end
-
-    toggleSwitch(get_self.id) if toggleSelf
-    pbWait(40)
+    pbWait(20)
     slideCameraToPlayer(5)
 end
 
@@ -83,7 +88,7 @@ def circuitWaveLengthExit(mapEventIDs,oasisEventIDs)
 end
 
 def circuitWaveLengthPrison(mapEventIDs,integrationEventIDs)
-    solved = circuitPuzzle(:WL_EXIT)
+    solved = circuitPuzzle(:WL_PRISON)
 
     if solved
         setSwitchesAll(mapEventIDs,'A',true)
