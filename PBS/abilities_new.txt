@@ -1548,7 +1548,7 @@ Description = Gets 50% more healing from all sources.
 #-------------------------------
 [RUGGED]
 Name = Rugged
-Description = Immune to Fighting-type and Rock-type moves.
+Description = Immune to Fighting-type and Rock-type moves. Prevents Stealth Rock damage.
 #-------------------------------
 [RUGGEDSCALES]
 Name = Rugged Scales
