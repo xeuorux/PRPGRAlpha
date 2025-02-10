@@ -11,6 +11,7 @@ MAPS_AVAILABLE_BY_CAP = {
 			136,138,30,	# Casaba Villa, Scenic Trail, Windy Way
 			51,38,26,	# Foreclosed Tunnel, Bluepoint Beach, Bluepoint Grotto
 			35,27,49,	# Impromptu Lab, Casaba Mart, Tourist's House
+			067, # Old Ice Cream Shop
 		], 
 	20 =>
 		[
@@ -32,7 +33,7 @@ MAPS_AVAILABLE_BY_CAP = {
 		],
 	25 =>
 		[
-			335,185			# Svait Sauna Underground, Eleig Stretch
+			335,185,135			# Svait Sauna Underground, Eleig Stretch, Nebula Ruins
 		],
 	40 =>
 		[
@@ -48,7 +49,7 @@ MAPS_AVAILABLE_BY_CAP = {
 		],
 	60 =>
 		[
-			217,316,	# Sweetrock Harbor, Sandtone Estuary
+			217,316,	# Sweetrock Harbor, Sandstone Estuary
 			257,258,	# Cave of Hatching, Whitebloom Town
 			215,		# Sky Walk
 		],
