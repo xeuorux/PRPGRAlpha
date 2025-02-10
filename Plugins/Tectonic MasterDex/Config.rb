@@ -33,7 +33,7 @@ MAPS_AVAILABLE_BY_CAP = {
 		],
 	25 =>
 		[
-			335,185,135			# Svait Sauna Underground, Eleig Stretch, Nebula Ruins
+			335,185,135,			# Svait Sauna Underground, Eleig Stretch, Nebula Ruins
 		],
 	40 =>
 		[
@@ -58,8 +58,8 @@ MAPS_AVAILABLE_BY_CAP = {
 ITEMS_AVAILABLE_BY_CAP = {
 	35 => [:FIRESTONE,:WATERSTONE,:LEAFSTONE,:THUNDERSTONE,:DAWNSTONE,
 	:DUSKSTONE,:SUNSTONE,:SHINYSTONE,:ICESTONE,:MOONSTONE,:ALOLANWREATH,:GALARICAWREATH], # Stones from Chasm ID challenges
-	40 => [:NINJASCARF,:KNIGHTHELMET] # Found surfing
-	55 => [:DIAMONDTIARA] # Avatar of Diancie
+	40 => [:NINJASCARF,:KNIGHTHELMET], # Found surfing
+	55 => [:DIAMONDTIARA], # Avatar of Diancie
 }
 
 SURFING_LEVEL = 35
