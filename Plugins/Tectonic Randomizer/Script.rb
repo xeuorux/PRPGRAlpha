@@ -40,7 +40,11 @@ module Randomizer
         if @@allSpeciesArray.nil?
             echoln("Generating the species array for the randomizer!\n")
             @@allSpeciesArray = []
-            GameData::Species.each { |species| @@allSpeciesArray.push(species.id) if species.form == 0 }
+            GameData::Species.each { |species|
+                next unless species.form == 0
+                next if species.isTest?
+                @@allSpeciesArray.push(species.id) 
+            }
         end
         return @@allSpeciesArray
     end

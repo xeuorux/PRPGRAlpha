@@ -2,7 +2,6 @@ def pbBigAvatarBattle(*args)
     rule = "3v#{args.length}"
     setBattleRule(rule)
     victorious = pbAvatarBattleCore(*args)
-    unlockAchievement(:DEFEAT_ANY_LEGENDARY_AVATAR) if victorious
     return victorious
 end
 
@@ -93,10 +92,25 @@ def pbAvatarBattleCore(*args)
     #    4 - Wild Pokémon was caught
     #    5 - Draw
     pbSet(outcomeVar, decision)
-    return (decision == 1)
+
+    victorious = (decision == 1)
+
+    if victorious
+        anyLegendariesDefeated = false
+        for arg in args
+            next unless arg.is_a?(Array)
+            species = arg[0]
+            next unless GameData::Species.get(species).isLegendary?
+            anyLegendariesDefeated = true
+            break
+        end
+        unlockAchievement(:DEFEAT_ANY_LEGENDARY_AVATAR) if anyLegendariesDefeated
+    end
+
+    return victorious
 end
 
-SUMMON_MIN_HEALTH_LEVEL = 15
+SUMMON_MIN_HEALTH_LEVEL = 10
 SUMMON_MAX_HEALTH_LEVEL = 50
 
 def generateAvatarPokemon(species, level, version = 0, summon = false)
@@ -115,10 +129,10 @@ def generateAvatarPokemon(species, level, version = 0, summon = false)
         if level >= SUMMON_MAX_HEALTH_LEVEL
             healthPercent = 1.0
         elsif level <= SUMMON_MIN_HEALTH_LEVEL
-            healthPercent = 0.5
+            healthPercent = 0.4
         else
-            healthPercent = 0.5 + (level - SUMMON_MIN_HEALTH_LEVEL) / (SUMMON_MAX_HEALTH_LEVEL - SUMMON_MIN_HEALTH_LEVEL).to_f
-            healthPercent = 1.0 if healthPercent > 1.0
+            healthPercent = 0.4 + 0.6 * (level - SUMMON_MIN_HEALTH_LEVEL) / (SUMMON_MAX_HEALTH_LEVEL - SUMMON_MIN_HEALTH_LEVEL).to_f
+            echoln("Summoning #{species} avatar at health fraction #{healthPercent}")
         end
         newPokemon.hp = (newPokemon.totalhp * healthPercent).ceil
     end
@@ -134,13 +148,12 @@ def setAvatarProperties(pkmn)
 
     setDefaultAvatarMoveset(pkmn)
 
-    pkmn.removeItems
-    pkmn.giveItem(avatar_data.item)
     pkmn.ability = avatar_data.abilities[0]
     avatar_data.abilities.each_with_index do |ability, index|
         next if index == 0
         pkmn.addExtraAbility(ability)
     end
+    pkmn.setItems(avatar_data.items)
     pkmn.hpMult = avatar_data.hp_mult
     pkmn.dmgMult = avatar_data.dmg_mult
     pkmn.dmgResist = avatar_data.dmg_resist

@@ -28,19 +28,17 @@ module Game
       else
         SaveData.load_bootup_values(save_data)
       end
-      # Set resize factor
-      pbSetResizeFactor(1)
       # Set language (and choose language if there is no save file)
       if Settings::LANGUAGES.length >= 2
-        $PokemonSystem.language = pbChooseLanguage if save_data.empty?
-        pbLoadMessages('Data/' + Settings::LANGUAGES[$PokemonSystem.language][1])
+        $Options.language = pbChooseLanguage if save_data.empty?
+        pbLoadMessages('Data/' + Settings::LANGUAGES[$Options.language][1])
       end
     end
   
     # Called when starting a new game. Initializes global variables
     # and transfers the player into the map scene.
     def self.start_new
-      mainMenuLanguage = $PokemonSystem.language
+      mainMenuLanguage = $Options.language
       if $game_map && $game_map.events
         $game_map.events.each_value { |event| event.clear_starting }
       end
@@ -48,7 +46,7 @@ module Game
       $PokemonTemp.begunNewGame = true
       $scene = Scene_Map.new
       SaveData.load_new_game_values
-      $PokemonSystem.language = mainMenuLanguage
+      $Options.language = mainMenuLanguage
       $MapFactory = PokemonMapFactory.new($data_system.start_map_id)
       $game_player.moveto($data_system.start_x, $data_system.start_y)
       $game_player.refresh
@@ -70,9 +68,8 @@ module Game
       $PokemonMap.updateMap
       $scene = Scene_Map.new
       $PokemonTemp.dependentEvents.refresh_sprite(false)
-      pbSetResizeFactor($PokemonSystem.screensize)
-      $PokemonSystem.setSystemFrame
-      $PokemonSystem.setSpeechFrame
+      $Options.setSystemFrame
+      $Options.setSpeechFrame
       removeSpeaker
       loadLanguage
     end

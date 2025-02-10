@@ -1,18 +1,34 @@
 ######################################################
 # Mart vendors
 ######################################################
-BASIC_MART_STOCK = [
-	:POKEBALL,
-	:ABILITYCAPSULE,
-	:REPEL,
-]
+BASIC_MART_STOCK = %i[POKEBALL ABILITYCAPSULE REPEL]
+
+VIP_CARD_EXTRA_STOCK = %i[REPEATBALL ROYALBALL LUXURYBALL SITRUSBERRY EXPCANDYXS]
+
+def vipCardActive?
+    return false unless $PokemonBag
+    return pbHasItem?(:VIPCARD)
+end
+
+def martStock
+    stock = BASIC_MART_STOCK.clone
+    stock += VIP_CARD_EXTRA_STOCK.clone if vipCardActive?
+    return stock
+end
 
 def basicPokeMart
-    pbPokemonMart(BASIC_MART_STOCK)
+    setPrice(:SITRUSBERRY,2000)
+    pbPokemonMart(martStock)
 end
 
 def rangerMart
-    pbPokemonMart(BASIC_MART_STOCK,_INTL("Get your supplies here!"))
+    setPrice(:SITRUSBERRY,2000)
+    if vipCardActive?
+        message = _INTL("You a big shot, huh? Well, we're here to supply you.")
+    else
+        message = _INTL("Get your supplies here!")
+    end
+    pbPokemonMart(martStock,message)
 end
 
 ######################################################
@@ -215,10 +231,33 @@ def styleFurfrou
 	return false
 end
 
+def styleVivillon
+	pbChoosePokemon(1,3,
+		proc { |poke|
+			!poke.egg? && poke.species == :VIVILLON
+		}
+	)
+	return false if pbGet(1) < 0
+	pkmn = $Trainer.party[pbGet(1)]
+	possibleForms, possibleFormNames = getFormSelectionChoices(:VIVILLON,pkmn.form)
+	pbMessage(_INTL("What pattern would you like me to give it?"))
+	choice = pbShowCommands(nil,possibleFormNames,possibleFormNames.length+1)
+	if choice < possibleForms.length
+		pbMessage(_INTL("#{pkmn.name} swapped to #{possibleFormNames[choice]}!"))
+		
+		pkmn.form = possibleForms[choice].form
+		#pkmn.changeHappiness("groom")
+		refreshFollow(false)
+		return true
+	end
+	return false
+end
+
 def createHisuian
 	unless pbHasItem?(:ORIGINORE)
 		setSpeaker(HISUIAN_WITCH)
 		pbMessage(_INTL("I do not spy any Origin Ore among your possessions."))
+		return
 	end
 
 	actualSpecies = [:HGROWLITHE,:HVOLTORB,:HQWILFISH,:HSNEASEL,:HZORUA,:BASCULIN_2]
@@ -306,6 +345,7 @@ def cloneMinorLegend
 	unless pbHasItem?(:ORIGINORE)
 		setSpeaker(HISUIAN_WITCH)
 		pbMessage(_INTL("I do not spy any Origin Ore among your possessions."))
+		return	
 	end
 
 	possibleSpecies = [:PHIONE,:TYPENULL,:COSMOG,:MELTAN,:KUBFU]
@@ -405,7 +445,6 @@ def eastEndExclusives
 		GRASSTOKEN WATERTOKEN FIRETOKEN
 		DIAMONDTIARA
 		RUSTEDSHIELD RUSTEDSWORD
-		REINSOFUNITY
 	]
 
 	setPrice(:RUSTEDSWORD,20_000)
@@ -485,6 +524,7 @@ def hackedTMShop
 		TMHYDROCANNON
 		TMROCKWRECKER
 		TMMETEORASSAULT
+		TMRAILCANNON
 		TMEXPLOSION
 		TMMEMENTO
 		TMRAPIDSPIN
@@ -556,6 +596,7 @@ def heldItemShop
 		REINFORCINGROD
 		LOADEDDICE
 		PROXYFIST COVERTCLOAK
+		COURAGEBADGE CLEARAMULET
 	]	
 
 	pbPokemonMart(
@@ -619,7 +660,7 @@ def basicBallVendor
 	]
 	pbPokemonMart(
 		basicBallStock,
-		_INTL("Welcome to the PokeBall Depot! How may I serve you?"),
+		_INTL("Welcome to the Poké Ball Depot! How may I serve you?"),
 		!CAN_SELL_IN_VENDORS
 	)
 end
@@ -643,29 +684,21 @@ def weirdBallsVendor
 	)
 end
 
-def evoStoneVendor(expanded = false)
+def evoStoneVendor
 	stock = %i[
 		FIRESTONE
 		THUNDERSTONE
 		WATERSTONE
 		LEAFSTONE
+		ICESTONE
 		DAWNSTONE
 		DUSKSTONE
-		MOONSTONE
-		SUNSTONE
-		ICESTONE
-	]
-
-	expandedStock = %i[
 		SHINYSTONE
+		SUNSTONE
+		MOONSTONE
 	]
-	stock = expandedStock.concat(stock) if expanded
 
-	if expanded
-		message = _INTL("How can we help to empower your Pokemon?")
-	else
-		message = _INTL("Regrettably, you are restricted from purchasing any Shiny Stones. Otherwise, how may I serve you?")
-	end
+	message = _INTL("How can we help to empower your Pokemon?")
 
 	pbPokemonMart(
 		stock,
@@ -685,6 +718,7 @@ def berryVendor
 	setPrice(:PECHABERRY,500)
 	setPrice(:PERSIMBERRY,500)
 	setPrice(:CHERIBERRY,500)
+	setPrice(:BELUEBERRY,500)
 	setPrice(:CHESTOBERRY,500)
 	setPrice(:SPELONBERRY,500)
 
@@ -695,7 +729,7 @@ def berryVendor
 		RAWSTBERRY ASPEARBERRY
 		PECHABERRY
 		PERSIMBERRY
-		CHERIBERRY
+		CHERIBERRY BELUEBERRY
 		CHESTOBERRY
 		SPELONBERRY
 	]
@@ -812,6 +846,7 @@ def statusTMVendor()
 		TMIGNITE
 		TMCHILL
 		TMNUMB
+		TMWATERLOG
 		TMLEECHSEED
 		TMCONFUSERAY
 	]

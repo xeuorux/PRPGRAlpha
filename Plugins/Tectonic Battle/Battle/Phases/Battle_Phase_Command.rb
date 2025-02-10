@@ -476,11 +476,6 @@ class PokeBattle_Battle
             commandsEnd = false # Whether to cancel choosing all other actions this round
             loop do
                 cmd = pbCommandMenu(idxBattler, actioned.length == 1)
-                # If being Sky Dropped, can't do anything except use a move
-                if cmd > 0 && @battlers[idxBattler].effectActive?(:SkyDrop)
-                    pbDisplay(_INTL("Sky Drop won't let {1} go!", @battlers[idxBattler].pbThis(true)))
-                    next
-                end
                 case cmd
                 when 0    # Fight
                     break if pbFightMenu(idxBattler)

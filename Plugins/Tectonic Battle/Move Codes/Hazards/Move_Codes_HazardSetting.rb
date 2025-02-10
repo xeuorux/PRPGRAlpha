@@ -2,7 +2,7 @@
 # Entry hazard. Lays spikes on the opposing side. (Spikes)
 #===============================================================================
 class PokeBattle_Move_Spikes < PokeBattle_Move
-    def hazardMove?; return true,2; end
+    def hazardMove?; return true; end
     def aiAutoKnows?(pokemon); return true; end
 
     def pbMoveFailed?(user, _targets, show_message)
@@ -122,7 +122,7 @@ end
 # (Poison Spikes)
 #===============================================================================
 class PokeBattle_Move_PoisonSpikes < PokeBattle_StatusSpikeMove
-    def hazardMove?; return true,5; end
+    def hazardMove?; return true; end
     def initialize(battle, move)
         @spikeEffect = :PoisonSpikes
         super
@@ -134,7 +134,7 @@ end
 # (Flame Spikes)
 #===============================================================================
 class PokeBattle_Move_FlameSpikes < PokeBattle_StatusSpikeMove
-    def hazardMove?; return true,6; end
+    def hazardMove?; return true; end
     def initialize(battle, move)
         @spikeEffect = :FlameSpikes
         super
@@ -146,7 +146,7 @@ end
 # (Frost Spikes)
 #===============================================================================
 class PokeBattle_Move_FrostSpikes < PokeBattle_StatusSpikeMove
-    def hazardMove?; return true,7; end
+    def hazardMove?; return true; end
     def initialize(battle, move)
         @spikeEffect = :FrostSpikes
         super
@@ -157,7 +157,7 @@ end
 # Entry hazard. Lays stealth rocks on the opposing side. (Stealth Rock)
 #===============================================================================
 class PokeBattle_Move_StealthRock < PokeBattle_Move
-    def hazardMove?; return true,1; end
+    def hazardMove?; return true; end
     def aiAutoKnows?(pokemon); return true; end
 
     def pbMoveFailed?(user, _targets, show_message)
@@ -206,7 +206,7 @@ end
 # Entry hazard. Lays Feather Ward on the opposing side. (Feather Ward)
 #===============================================================================
 class PokeBattle_Move_FeatherWard < PokeBattle_Move
-    def hazardMove?; return true,3; end
+    def hazardMove?; return true; end
     def aiAutoKnows?(pokemon); return true; end
 
     def pbMoveFailed?(user, _targets, show_message)
@@ -232,7 +232,7 @@ end
 # Entry hazard. Lays a Speed reducing web on the opposing side. (Sticky Web)
 #===============================================================================
 class PokeBattle_Move_StickyWeb < PokeBattle_Move
-    def hazardMove?; return true,4; end
+    def hazardMove?; return true; end
     def aiAutoKnows?(pokemon); return true; end
 
     def pbMoveFailed?(user, _targets, show_message)
@@ -249,5 +249,45 @@ class PokeBattle_Move_StickyWeb < PokeBattle_Move
 
     def getEffectScore(user, target)
         return getHazardSettingEffectScore(user, target, 15)
+    end
+end
+
+#===============================================================================
+# Entry hazard. Lays live wire on the opposing side. (Live Wire)
+#===============================================================================
+class PokeBattle_Move_LiveWire < PokeBattle_Move
+    def hazardMove?; return true; end
+    def aiAutoKnows?(pokemon); return true; end
+
+    def pbMoveFailed?(user, _targets, show_message)
+        return false if damagingMove?
+        if user.pbOpposingSide.effectActive?(:LiveWire)
+            if show_message
+                @battle.pbDisplay(_INTL("But it failed, since a live wire already sits near the opponent!"))
+            end
+            return true
+        end
+        return false
+    end
+
+    def pbEffectGeneral(user)
+        return if damagingMove?
+        user.pbOpposingSide.applyEffect(:LiveWire)
+    end
+
+    def pbEffectAgainstTarget(_user, target)
+        return unless damagingMove?
+        return if target.pbOwnSide.effectActive?(:LiveWire)
+        target.pbOwnSide.applyEffect(:LiveWire)
+    end
+
+    def getEffectScore(user, target)
+        return 0 if damagingMove? && target.pbOwnSide.effectActive?(:LiveWire)
+        if @battle.rainy? || user.ownersPolicies.include?(:RAIN_TEAM)
+            scoringWeight = 16
+        else
+            scoringWeight = 8
+        end
+        return getHazardSettingEffectScore(user, target, scoringWeight)
     end
 end

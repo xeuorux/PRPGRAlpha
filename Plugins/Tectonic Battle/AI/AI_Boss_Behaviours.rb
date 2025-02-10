@@ -29,6 +29,7 @@ class PokeBattle_AI_Boss
     def rejectExtraSetUp
         @rejectMovesIf.push(proc { |move, user, _battle|
             next false if move.statUp.empty?
+            next false if move.damagingMove?(true)
             anyPositive = false
             for i in 0...move.statUp.length / 2
                 statSym = move.statUp[i * 2]
@@ -61,7 +62,15 @@ class PokeBattle_AI_Boss
         })
     end
 
-    # Have the avatar use the move as its 2nd move every turn if possible
+    # Have the avatar use the move as its 1st move every turn if possible
+    # And otherwise never
+    def firstMoveEveryOtherTurn(moveID)
+        @useMoveIFF.add(moveID, proc { |_move, user, _target, battle|
+            next user.firstTurnThisRound? && battle.turnCount % 2 == 1
+        })
+    end
+
+    # Have the avatar use the move as its 2nd move every other turn if possible
     # And otherwise never
     def secondMoveEveryOtherTurn(moveID)
         @useMoveIFF.add(moveID, proc { |_move, user, _target, battle|

@@ -118,3 +118,10 @@ BattleHandlers::DamageCalcTargetItem.add(:EVIOLITE,
       end
   }
 )
+
+BattleHandlers::DamageCalcTargetItem.add(:COVERTCLOAK,
+  proc { |item, user, target, _move, mults, _baseDmg, _type, aiCheck|
+    mults[:final_damage_multiplier] *= 0.9
+    user.aiLearnsItem(item) unless aiCheck
+  }
+)

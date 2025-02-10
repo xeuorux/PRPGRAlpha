@@ -72,6 +72,7 @@ Description = Uses Lightning Dance if an attack lowers its HP to half or below.
 [BATTLEARMOR]
 Name = Battle Armor
 Description = The Pokémon is protected against critical hits.
+Flags = CritImmunity
 #-------------------------------
 [BEASTBOOST]
 Name = Beast Boost
@@ -342,6 +343,10 @@ Description = Takes 50% less damage from Fire-type moves.
 Name = Honorable
 Description = Lowers priority of status moves used by any Pokémon.
 #-------------------------------
+[HOOLIGAN]
+Name = Hooligan
+Description = Powers up recoil and sound moves by 30%.
+#-------------------------------
 [HUGEPOWER]
 Name = Huge Power
 Description = Raises the Pokémon's Attack stat.
@@ -451,6 +456,10 @@ Description = Prevents Bug- or Poison-type moves during moonglow.
 Name = Lunar Loyalty
 Description = Summons moonglow for four turns when hit by an attack.
 #-------------------------------
+[LURING]
+Name = Luring
+Description = Its attacks are critical against dizzy targets.
+#-------------------------------
 [MAGMAARMOR]
 Name = Magma Armor
 Description = Prevents the Pokémon from becoming frozen.
@@ -555,6 +564,15 @@ Description = Reduces each other Pokémon's HP by 1/12th at the end of each turn
 [PASTELVEIL]
 Name = Pastel Veil
 Description = Protects it and ally Pokémon from being poisoned.
+#-------------------------------
+[PEARLSEEKER]
+Name = Pearl Seeker
+Description = Upon entry during eclipse, if it has no item, finds and equips the Pearl of Fate.
+Flags = EclipseSynergy
+#-------------------------------
+[PICKPOCKET]
+Name = Pickpocket
+Description = Steals an item when hit by another Pokémon.
 #-------------------------------
 [PICKUP]
 Name = Pickup
@@ -744,6 +762,7 @@ Description = During eclipse, gets a 30% boost to Sp. Atk.
 [SHELLARMOR]
 Name = Shell Armor
 Description = The Pokémon is protected against critical hits.
+Flags = CritImmunity
 #-------------------------------
 [SHRIEKING]
 Name = Ear-Splitting
@@ -792,6 +811,10 @@ Description = Raises Speed each time the Pokémon flinches.
 [STEAMENGINE]
 Name = Steam Engine
 Description = Maximizes Speed when hit by a Fire- or Water-type move.
+#-------------------------------
+[STENCH]
+Name = Stench
+Description = Attacks have a 50% chance to cause the target to flinch.
 #-------------------------------
 [STICKYHOLD]
 Name = Sticky Hold

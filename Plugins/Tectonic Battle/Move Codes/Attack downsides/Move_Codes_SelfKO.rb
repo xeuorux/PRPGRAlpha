@@ -5,27 +5,6 @@ class PokeBattle_Move_UserFaintsExplosive < PokeBattle_Move
     def worksWithNoTargets?; return true; end
     def pbNumHits(_user, _targets, _checkingForAI = false); return 1; end
 
-    def pbMoveFailed?(user, _targets, show_message)
-        unless @battle.moldBreaker
-            dampHolder = @battle.pbCheckGlobalAbility(:DAMP)
-            unless dampHolder.nil?
-                if show_message
-                    @battle.pbShowAbilitySplash(dampHolder, :DAMP)
-                    @battle.pbDisplay(_INTL("{1} cannot use {2}!", user.pbThis, @name))
-                    @battle.pbHideAbilitySplash(dampHolder)
-                end
-                return true
-            end
-        end
-        return false
-    end
-
-    def shouldShade?(_user, _target)
-        return false
-    end
-
-    def pbMoveFailedAI?(_user, _targets); return false; end
-
     def pbSelfKO(user)
         return if user.fainted?
 
@@ -46,7 +25,7 @@ class PokeBattle_Move_UserFaintsExplosive < PokeBattle_Move
             if unbreakable
                 @battle.pbShowAbilitySplash(user, :UNBREAKABLE)
                 @battle.pbDisplay(_INTL("{1} resists the recoil!", user.pbThis))
-                reduction /= 2
+                reduction = (reduction / 2.0).ceil
             end
             user.pbReduceHP(reduction, false)
             @battle.pbHideAbilitySplash(user) if unbreakable

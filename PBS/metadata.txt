@@ -39,7 +39,7 @@ Environment = TallGrass
 # Scientist's House
 Outdoor = false
 ShowArea = false
-Bicycle = true
+Bicycle = false
 BattleBack = indoor1
 Environment = None
 #-------------------------------
@@ -116,6 +116,7 @@ Environment = Forest
 Outdoor = false
 ShowArea = false
 Bicycle = false
+BattleBack = cave1
 WildBattleBGM = Tectonic_Epitaph_of_the_Demiurge.ogg
 #-------------------------------
 [013]
@@ -220,12 +221,6 @@ Bicycle = true
 BicycleAlways = false
 BattleBack = cave1
 Environment = Cave
-#-------------------------------
-[027]
-# Casaba Mart
-Outdoor = false
-ShowArea = false
-Bicycle = false
 #-------------------------------
 [028]
 # Professor's House
@@ -512,12 +507,6 @@ ShowArea = false
 Bicycle = true
 BattleBack = cave3
 #-------------------------------
-[065]
-# Novo Mart
-Outdoor = false
-ShowArea = false
-Bicycle = false
-#-------------------------------
 [066]
 # Apartment Attic
 Outdoor = false
@@ -525,13 +514,13 @@ ShowArea = true
 Bicycle = false
 #-------------------------------
 [067]
-# Room 101
+# Old Ice Cream Shop
 Outdoor = false
-ShowArea = false
-Bicycle = false
+ShowArea = true
+Bicycle = true
 #-------------------------------
 [068]
-# Room 105
+# Room 104
 Outdoor = false
 ShowArea = false
 Bicycle = false
@@ -543,7 +532,7 @@ ShowArea = false
 Bicycle = false
 #-------------------------------
 [070]
-# Room 102
+# Room 101
 Outdoor = false
 ShowArea = false
 Bicycle = false
@@ -555,25 +544,19 @@ ShowArea = false
 Bicycle = false
 #-------------------------------
 [072]
-# Room 104
+# Room 102
 Outdoor = false
 ShowArea = false
 Bicycle = false
 #-------------------------------
 [073]
-# Room 106
+# Room 204
 Outdoor = false
 ShowArea = false
 Bicycle = false
 #-------------------------------
 [074]
-# Room 203
-Outdoor = false
-ShowArea = false
-Bicycle = false
-#-------------------------------
-[075]
-# Room 204
+# Room 202
 Outdoor = false
 ShowArea = false
 Bicycle = false
@@ -585,7 +568,7 @@ ShowArea = false
 Bicycle = false
 #-------------------------------
 [077]
-# Room 202
+# Room 203
 Outdoor = false
 ShowArea = false
 Bicycle = false
@@ -949,7 +932,7 @@ Bicycle = false
 # Monument Lobby
 Outdoor = false
 ShowArea = false
-Bicycle = true
+Bicycle = false
 HealingSpot = 357,31,29
 #-------------------------------
 [129]
@@ -1308,10 +1291,10 @@ BattleBack = indoor2
 Environment = None
 #-------------------------------
 [180]
-# Prizca West Mart
-Outdoor = false
-ShowArea = false
-Bicycle = false
+# Blustery Bosk
+Outdoor = true
+ShowArea = true
+Bicycle = true
 #-------------------------------
 [181]
 # Casaba Island
@@ -1389,7 +1372,7 @@ Environment = None
 Outdoor = false
 ShowArea = true
 Bicycle = true
-MapPosition = 0,14,3
+MapPosition = 0,14,2
 BattleBack = indoor3
 Environment = None
 #-------------------------------
@@ -1407,10 +1390,10 @@ Bicycle = false
 HealingSpot = 187,67,30
 #-------------------------------
 [192]
-# Prizca East Mart
-Outdoor = false
-ShowArea = false
-Bicycle = false
+# Field of Spires
+Outdoor = true
+ShowArea = true
+Bicycle = true
 #-------------------------------
 [193]
 # Volcanic Shore
@@ -1469,7 +1452,7 @@ Environment = Cave
 # Emma's Empolorium
 Outdoor = false
 ShowArea = false
-Bicycle = true
+Bicycle = false
 #-------------------------------
 [201]
 # Nature's Gallery
@@ -1909,10 +1892,12 @@ Bicycle = false
 HealingSpot = 217,27,29
 #-------------------------------
 [264]
-# Sweetrock Harbor Mart
-Outdoor = false
-ShowArea = false
-Bicycle = false
+# Thunder Point
+Outdoor = true
+ShowArea = true
+Bicycle = true
+Weather = Storm,100
+BattleBack = forest_night
 #-------------------------------
 [265]
 # Lightkeeper's House
@@ -2037,7 +2022,7 @@ Environment = None
 Outdoor = false
 ShowArea = true
 Bicycle = true
-MapPosition = 0,14,2
+MapPosition = 0,14,1
 BattleBack = distortion
 #-------------------------------
 [283]
@@ -2728,6 +2713,7 @@ BattleBack = cave1
 Outdoor = false
 ShowArea = true
 Bicycle = true
+BattleBack = cave1
 #-------------------------------
 [383]
 # Mirror Tundra
@@ -2887,16 +2873,18 @@ Bicycle = false
 Weather = Sandstorm,100
 #-------------------------------
 [406]
-# Sandstone Switchbox
+# Oasis System
 Outdoor = false
 ShowArea = true
 Bicycle = true
+BattleBack = cave1
 #-------------------------------
 [407]
 # Wave Lengths
 Outdoor = false
 ShowArea = true
 Bicycle = true
+BattleBack = cave1
 #-------------------------------
 [408]
 # Tournament Grounds EQ
@@ -2910,12 +2898,14 @@ Weather = Overcast,100
 Outdoor = false
 ShowArea = true
 Bicycle = true
+BattleBack = cave1
 #-------------------------------
 [410]
 # Terminal Confusion
 Outdoor = false
 ShowArea = true
 Bicycle = true
+BattleBack = cave1
 #-------------------------------
 [411]
 # Tri Island
@@ -3025,8 +3015,8 @@ BattleBack = indoor2
 Environment = None
 #-------------------------------
 [425]
-# Sandstone Switchbox Draft
-Outdoor = false
+# Shimmer Haven
+Outdoor = true
 ShowArea = true
 Bicycle = true
 #-------------------------------

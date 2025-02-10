@@ -3,3 +3,9 @@ BattleHandlers::CertainAddedEffectUserAbility.add(:STARSALIGN,
         next battle.eclipsed?
     }
 )
+
+BattleHandlers::CertainAddedEffectUserAbility.add(:TERRORIZE,
+    proc { |ability, battle, user, target, move|
+        next move.flinchingMove?
+    }
+)

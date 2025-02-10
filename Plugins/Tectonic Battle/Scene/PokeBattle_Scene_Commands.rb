@@ -1,5 +1,3 @@
-TRIPLE_BATTLE_SHIFT_ENABLED = false
-
 class PokeBattle_Scene
     #=============================================================================
     # The player chooses a main command for a Pokémon
@@ -133,7 +131,7 @@ class PokeBattle_Scene
       if battler.getMoves[@lastMove[idxBattler]] && battler.getMoves[@lastMove[idxBattler]].id
         moveIndex = @lastMove[idxBattler]
       end
-      cw.shiftMode = (@battle.pbCanShift?(idxBattler) && TRIPLE_BATTLE_SHIFT_ENABLED) ? 1 : 0
+      cw.shiftMode = (@battle.pbCanShift?(idxBattler) && @battle.shiftEnabled) ? 1 : 0
       cw.setIndexAndMode(moveIndex,0)
       needFullRefresh = true
       needRefresh = false
@@ -186,7 +184,7 @@ class PokeBattle_Scene
           cw.toggleExtraInfo()
           needRefresh = true
         elsif Input.trigger?(Input::SPECIAL)   # Shift
-          if cw.shiftMode > 0 && TRIPLE_BATTLE_SHIFT_ENABLED
+          if cw.shiftMode > 0 && @battle.doubleShift
             pbPlayDecisionSE
             break if yield -3
             needRefresh = true
@@ -235,7 +233,7 @@ class PokeBattle_Scene
         commands[cmdPokedex = commands.length] = _INTL("MasterDex") if !modParty[idxParty].egg? && $Trainer.has_pokedex
         commands[commands.length]              = _INTL("Cancel")
         command = scene.pbShowCommands(_INTL("Do what with {1}?",modParty[idxParty].name),commands)
-        if cmdSwitch>=0 && command==cmdSwitch        # Switch In
+        if cmdSwitch >= 0 && command==cmdSwitch        # Switch In
           idxPartyRet = -1
           partyPos.each_with_index do |pos,i|
             next if pos!=idxParty+partyStart
@@ -243,9 +241,9 @@ class PokeBattle_Scene
             break
           end
           break if yield idxPartyRet, switchScreen
-        elsif cmdSummary>=0 && command==cmdSummary   # Summary
+        elsif cmdSummary >= 0 && command==cmdSummary   # Summary
           scene.pbSummary(idxParty,@battle)
-      elsif cmdPokedex && command==cmdPokedex
+        elsif cmdPokedex >= 0 && command==cmdPokedex
           openSingleDexScreen(modParty[idxParty])
         end
       end
@@ -291,17 +289,34 @@ class PokeBattle_Scene
         commands[cmdCancel = commands.length] = _INTL("Cancel")
         command = itemScene.pbShowCommands(_INTL("{1} is selected.",itemName),commands)
         if cmdChance > -1 && command == cmdChance # Show the chance of the selected Pokeball catching
-          ballTarget = @battle.battlers[0].pbDirectOpposing(true)
+          opposingBattlers = []
+          opposingNames = []
+          @battle.battlers[0].eachOpposing do |b|
+            opposingBattlers.push(b)
+            opposingNames.push(b.name)
+          end
+
+          if opposingBattlers.length == 1
+            ballTargetIndex = 0
+          else
+            ballTargetIndex = itemScene.pbShowCommands(_INTL("Check chance against which?"),opposingNames) || -1
+          end
+
+          next if ballTargetIndex == -1
+
+          ballTarget = opposingBattlers[ballTargetIndex]
+          
           trueChance = @battle.captureChanceCalc(ballTarget.pokemon,ballTarget,nil,itemSym)
           chance = (trueChance*100/5).floor * 5
           chance = 100 if chance > 100
+          chance = 0 if chance < 0
           case chance
           when 0
-            pbMessage(_INTL("This ball has a very low chance to capture the wild Pokémon.",chance))
+            pbMessage(_INTL("This ball has a very low chance to capture {1}.",ballTarget.pbThis(true)))
           when 100
-            pbMessage(_INTL("This ball is guaranteed to capture the wild Pokémon!",chance))
+            pbMessage(_INTL("This ball is guaranteed to capture {1}!",ballTarget.pbThis(true)))
           else
-            pbMessage(_INTL("This ball has a close to {1}% chance of capturing the wild Pokémon.",chance))
+            pbMessage(_INTL("This ball has a close to {1}% chance of capturing {2}.",chance,ballTarget.pbThis(true)))
           end
           next
         end
@@ -541,8 +556,8 @@ class PokeBattle_Scene
         end
       when :NearFoe, :NearOther
         indices = @battle.pbGetOpposingIndicesInOrder(idxBattler)
-        indices.each { |i| return i if @battle.nearBattlers?(i,idxBattler) && !@battle.battlers[i].fainted? }
-        indices.each { |i| return i if @battle.nearBattlers?(i,idxBattler) }
+        indices.each { |i| return i if @battle.nearEnoughForMoveTargeting?(i,idxBattler) && !@battle.battlers[i].fainted? }
+        indices.each { |i| return i if @battle.nearEnoughForMoveTargeting?(i,idxBattler) }
       when :Foe, :Other, :UserOrOther, :UserOrNearOther
         indices = @battle.pbGetOpposingIndicesInOrder(idxBattler)
         indices.each { |i| return i if !@battle.battlers[i].fainted? }

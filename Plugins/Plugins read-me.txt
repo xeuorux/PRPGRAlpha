@@ -19,3 +19,5 @@ trainertypes.txt
 metadata.txt
 
 Examples of using each can be found in the MOD TEMPLATE folder.
+
+If including new maps with your mod, include the map name in the ImportName field in metadata.txt, so that it can be included when Debug Mode imports it into MapInfos.rxdata.

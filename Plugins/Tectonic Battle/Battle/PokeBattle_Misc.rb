@@ -52,6 +52,13 @@ class PokeBattle_Battle
         return @curses.include?(curseID)
     end
 
+    def stolenItemTurnsToDust?(item = nil)
+        return true if curseActive?(:CURSE_SUPER_ITEMS)
+        return true if curseActive?(:CURSE_RECYCLING)
+        return true if item && GameData::Item.get(item).super
+        return false
+    end
+
     def pbCheckNeutralizingGas(battler = nil)
         # Battler = the battler to switch out.
         # Should be specified when called from pbAttackPhaseSwitch
@@ -102,7 +109,7 @@ class PokeBattle_Battle
                 next if move.damagingMove?(true)
                 next unless move.empoweredMove?
                 b.bossAI.startPhaseChange(b,self)
-                showMessages = $PokemonSystem.avatar_mechanics_messages == 0
+                showMessages = $Options.avatar_mechanics_messages == 0
 
                 if PRIMEVAL_MOVES_RESET_DEBUFFS
                     pbAnimation(:REFRESH,b,b)
@@ -131,7 +138,6 @@ class PokeBattle_Battle
             echoln("ERROR: Unable to change moveset.") if movesetToAssign.nil?
             b.assignMoveset(movesetToAssign)
             b.empoweredTimer = 0
-            b.indicesTargetedLastRound = []
             @scene.pbRefresh
 
             # Reset fear
@@ -147,7 +153,7 @@ class PokeBattle_Battle
 
     # moveIDOrIndex is either the index of the move on the user's move list (Integer)
     # or it's the ID of the move to be used (Symbol)
-    def forceUseMove(forcedMoveUser, moveIDOrIndex, target = -1, specialUsage = true, usageMessage = nil, moveUsageEffect = nil, ability: nil, aiCheck: false)
+    def forceUseMove(forcedMoveUser, moveIDOrIndex, target = -1, specialUsage = true, usageMessage = nil, moveUsageEffect: nil, ability: nil, aiCheck: false)
         if moveIDOrIndex.is_a?(Symbol)
             fakeMove = PokeBattle_Move.from_pokemon_move(self, Pokemon::Move.new(moveIDOrIndex))
         else
@@ -332,7 +338,7 @@ class PokeBattle_Battle
         return false unless predictedAction[0] == :UseMove
         return false unless predictedAction[2].damagingMove?(true)
         return false if againstPredictor && !actionTargets?(@battlers[idxBattler],predictedAction,predictor)
-        return false if categoryOnly != -1 && predictedAction[2].calculated_category != categoryOnly
+        return false if categoryOnly != -1 && predictedAction[2].category_override != categoryOnly
         return true
     end
 
@@ -355,6 +361,12 @@ class PokeBattle_Battle
             end
         end
         return mult
+    end
+    
+    def gravityIntensified?
+        return true if @field.effectActive?(:Gravity)
+        return true if @field.effectActive?(:WarpingCore)
+        return false
     end
 end
 

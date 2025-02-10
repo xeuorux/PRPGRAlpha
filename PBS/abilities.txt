@@ -36,7 +36,7 @@ Description = Reverses "Aura" Abilities to weaken affected moves.
 #-------------------------------
 [BADDREAMS]
 Name = Bad Dreams
-Description = Reduces a sleeping foe's HP by 1/8 at the end of a round.
+Description = Reduces a sleeping foe's HP by 1/8th at the end of a round.
 #-------------------------------
 [BATTERY]
 Name = Battery
@@ -44,7 +44,7 @@ Description = Powers up ally Pokémon's special moves by 30%.
 #-------------------------------
 [BERSERK]
 Name = Berserk
-Description = Raises Atk and Sp. Atk by two steps each when its HP is lowered below half.
+Description = Raises Attack and Sp. Atk by two steps each when its HP is lowered below half.
 #-------------------------------
 [CHEEKPOUCH]
 Name = Cheek Pouch
@@ -57,11 +57,12 @@ Description = Boosts Attack after knocking out any Pokémon.
 [CHLOROPHYLL]
 Name = Chlorophyll
 Description = Doubles the Pokémon's Speed in sunshine.
-Flags = SunSynergy
+Flags = SunshineSynergy
 #-------------------------------
 [CLEARBODY]
 Name = Clear Body
-Description = Prevents other Pokémon from lowering its stat steps.
+Description = Prevents stat steps from being lowered (except when self-inflicted).
+Flags = OtherStatDropImmunity
 #-------------------------------
 [COMATOSE]
 Name = Comatose
@@ -78,7 +79,7 @@ Description = Makes stat changes have an opposite effect.
 #-------------------------------
 [CORROSION]
 Name = Corrosion
-Description = Can poison the target even if it's a Steel or Poison type.
+Description = Can poison the target even if it's a Steel or Poison-type.
 #-------------------------------
 [COTTONDOWN]
 Name = Cotton Down
@@ -120,7 +121,7 @@ Description = Changes the weather to Strong Winds, which remove Flying-type's we
 [DESOLATELAND]
 Name = Desolate Land
 Description = Changes the weather to Harsh Sunlight, which nullifies Water-type moves. Lingers for 3 turns after leaving.
-Flags = SunSynergy
+Flags = SunshineSynergy
 #-------------------------------
 [DISGUISE]
 Name = Disguise
@@ -143,11 +144,11 @@ Flags = RainstormSynergy
 [DROUGHT]
 Name = Drought
 Description = Turns the weather to sunshine for 4 turns when it enters battle.
-Flags = SunSynergy
+Flags = SunshineSynergy
 #-------------------------------
 [DRYSKIN]
 Name = Dry Skin
-Description = Restores 1/8 HP in rainstorm, 1/4 when hit by Water-type moves. Loses 1/8 in sunshine, takes 25% more from Fire-type moves.
+Description = Heals 1/8 HP in rainstorm, 1/4 when hit by Water-type moves. Loses 1/8 in sunshine, takes 25% more from Fire-type moves.
 Flags = RainstormSynergy
 #-------------------------------
 [EMERGENCYEXIT]
@@ -169,11 +170,11 @@ Description = Physical moves against the Pokémon have a 30% chance to burn the 
 [FLOWERGIFT]
 Name = Flower Gift
 Description = In sunshine boosts its and allies' Attack and Sp. Def by 50%.
-Flags = SunSynergy,Immutable
+Flags = SunshineSynergy,Immutable
 #-------------------------------
 [FLOWERVEIL]
 Name = Flower Veil
-Description = Protects Grass-type allies from status conditions or stat lowering by enemies.
+Description = Protects Grass-type allies from status conditions or stat lowering (except self-inflicted).
 #-------------------------------
 [FLUFFY]
 Name = Fluffy
@@ -190,7 +191,8 @@ Description = Reduces damage done to allies by 25%.
 #-------------------------------
 [FULLMETALBODY]
 Name = Full Metal Body
-Description = Prevents other Pokémon from lowering its stat steps.
+Description = Prevents stat steps from being lowered (except when self-inflicted).
+Flags = OtherStatDropImmunity
 #-------------------------------
 [FURCOAT]
 Name = Fur Coat
@@ -206,7 +208,7 @@ Description = Normal-type moves become Electric-type and power up by 30%.
 #-------------------------------
 [GLUTTONY]
 Name = Gluttony
-Description = Eats pinch berries earlier than normal.
+Description = Will eat berries normally eaten at 25% HP (in a pinch) at 50% instead.
 #-------------------------------
 [GOOEY]
 Name = Gooey
@@ -245,7 +247,7 @@ Flags = Immutable
 #-------------------------------
 [HUSTLE]
 Name = Hustle
-Description = Boosts move damage by 50%, but lowers accuracy by 20%.
+Description = Boosts move damage by 50%, but lowers Accuracy by 20%.
 #-------------------------------
 [HYDRATION]
 Name = Hydration
@@ -254,7 +256,7 @@ Flags = RainstormSynergy
 #-------------------------------
 [ICEBODY]
 Name = Ice Body
-Description = Heals 1/8th of its max HP each turn in a hailstorm.
+Description = Heals 1/8th of its max HP each turn in a hail.
 Flags = HailSynergy
 #-------------------------------
 [ICESCALES]
@@ -303,11 +305,11 @@ Description = Boosts the power of punching moves by 30%.
 [LEAFGUARD]
 Name = Leaf Guard
 Description = Immune to status conditions while in sunshine.
-Flags = SunSynergy
+Flags = SunshineSynergy
 #-------------------------------
 [LEVITATE]
 Name = Levitate
-Description = Gives full immunity to all Ground-type moves.
+Description = Immune to Ground-type moves. Immune to grounded hazards.
 Flags = Levitation
 #-------------------------------
 [MAGICBOUNCE]
@@ -357,7 +359,7 @@ Flags = Immutable
 #-------------------------------
 [MUMMY]
 Name = Mummy
-Description = Physical moves against the Pokémon spread this Ability.
+Description = When the Pokémon is hit by an attack, the attacker's ability becomes Mummy.
 #-------------------------------
 [NATURALCURE]
 Name = Natural Cure
@@ -374,7 +376,7 @@ Flags = Immutable
 #-------------------------------
 [NOGUARD]
 Name = No Guard
-Description = Ensures attacks by or against the Pokémon land.
+Description = Attacks by or against the Pokémon can't miss.
 #-------------------------------
 [NORMALIZE]
 Name = Normalize
@@ -388,10 +390,6 @@ Description = Child attacks after the parent, for 25% of the previous damage.
 Name = Perish Body
 Description = When it takes a hit, both Pokémon faint after 3 turns.
 Flags = SetupCounterAI
-#-------------------------------
-[PICKPOCKET]
-Name = Pickpocket
-Description = Steals an item when hit by another Pokémon.
 #-------------------------------
 [POISONPOINT]
 Name = Poison Point
@@ -472,27 +470,27 @@ Description = Physical moves against it inflict 1/8th max HP damage to the foe.
 #-------------------------------
 [ROYALMAJESTY]
 Name = Royal Majesty
-Description = Makes foes unable to use priority attacks.
+Description = Makes foes unable to use priority moves.
 #-------------------------------
 [SANDPOWER]
 Name = Sand Power
 Description = Boosts Sp. Atk by 30% in sandstorm.
-Flags = SandSynergy
+Flags = SandstormSynergy
 #-------------------------------
 [SANDRUSH]
 Name = Sand Rush
 Description = Doubles the Pokémon's Speed in a sandstorm.
-Flags = SandSynergy
+Flags = SandstormSynergy
 #-------------------------------
 [SANDSHROUD]
 Name = Sand Shroud
 Description = Takes 25% less damage in a sandstorm.
-Flags = SandSynergy
+Flags = SandstormSynergy
 #-------------------------------
 [SANDSTREAM]
 Name = Sand Stream
 Description = Summons a sandstorm for 4 turns when it enters battle.
-Flags = SandSynergy
+Flags = SandstormSynergy
 #-------------------------------
 [SAPSIPPER]
 Name = Sap Sipper
@@ -525,7 +523,7 @@ Description = Boosts the power of blade moves by 50%.
 #-------------------------------
 [SHEDSKIN]
 Name = Shed Skin
-Description = Heals from burn, frostbite, poison, numb, or leech at end of turn.
+Description = At the end of each turn, heals from every non-volatile status (except Sleep).
 #-------------------------------
 [SHEERFORCE]
 Name = Sheer Force
@@ -537,12 +535,12 @@ Description = Blocks all random added effects of attacks taken.
 #-------------------------------
 [SHIELDSDOWN]
 Name = Shields Down
-Description = It can't be statused while it has its shell. Below half HP its shell breaks and it becomes aggressive.
+Description = Cannot be statused while it has its shell. Below half HP, its shell breaks and it turns aggressive.
 Flags = Immutable
 #-------------------------------
 [SIMPLE]
 Name = Simple
-Description = Stat changes in the Pokemon are doubled.
+Description = Stat changes in the Pokémon are doubled.
 #-------------------------------
 [SKILLLINK]
 Name = Skill Link
@@ -554,7 +552,7 @@ Description = Halves Attack and Speed for 3 turns.
 #-------------------------------
 [SLUSHRUSH]
 Name = Slush Rush
-Description = Doubles the Pokémon's Speed stat in a hailstorm.
+Description = Doubles the Pokémon's Speed stat in a hail.
 Flags = HailSynergy
 #-------------------------------
 [SNIPER]
@@ -563,13 +561,13 @@ Description = Doubles critical hit chance. Powers up critical hits by another 50
 #-------------------------------
 [SNOWWARNING]
 Name = Snow Warning
-Description = Summons a hailstorm for 4 turns when it enters battle.
+Description = Summons a hail for 4 turns when it enters battle.
 Flags = HailSynergy
 #-------------------------------
 [SOLARPOWER]
 Name = Solar Power
 Description = In sunshine, Sp. Atk is boosted by 50%, but the Pokémon is hurt for 1/10th HP each turn.
-Flags = SunSynergy
+Flags = SunshineSynergy
 #-------------------------------
 [SOLIDROCK]
 Name = Solid Rock
@@ -607,10 +605,6 @@ Description = Powers up Steel-type moves by 50%.
 [STEELYSPIRIT]
 Name = Steely Spirit
 Description = Powers up Steel-type moves of itself and its allies by 50%.
-#-------------------------------
-[STENCH]
-Name = Stench
-Description = Attacks have a 50% chance to cause the target to flinch.
 #-------------------------------
 [STRONGJAW]
 Name = Strong Jaw
@@ -683,7 +677,7 @@ Description = Physical moves negate all protection effects.
 #-------------------------------
 [VICTORYSTAR]
 Name = Victory Star
-Description = Doubles the accuracy of its allies and itself.
+Description = Doubles the Accuracy of its allies and itself.
 #-------------------------------
 [VITALSPIRIT]
 Name = Vital Spirit
@@ -691,15 +685,15 @@ Description = Prevents the Pokémon from falling asleep.
 #-------------------------------
 [VOLTABSORB]
 Name = Volt Absorb
-Description = Immune to Electric-type moves and restores HP when hit by one.
+Description = Immune to Electric-type moves and restores 25% of max HP when hit by one.
 #-------------------------------
 [WANDERINGSPIRIT]
 Name = Wandering Spirit
-Description = Taking a physical hit exchanges Abilities.
+Description = When the Pokémon is hit by an attack, the Pokémon and the attacker switch abilities.
 #-------------------------------
 [WATERABSORB]
 Name = Water Absorb
-Description = Immune to Water-type moves and restores HP when hit by one.
+Description = Immune to Water-type moves and restores 25% of max HP when hit by one.
 #-------------------------------
 [WATERBUBBLE]
 Name = Water Bubble
@@ -711,7 +705,8 @@ Description = Physical attacks against the Pokémon raise its Speed by two steps
 #-------------------------------
 [WHITESMOKE]
 Name = White Smoke
-Description = Prevents other Pokémon from lowering its stats.
+Description = Prevents stat steps from being lowered (except when self-inflicted).
+Flags = OtherStatDropImmunity
 #-------------------------------
 [WIMPOUT]
 Name = Wimp Out

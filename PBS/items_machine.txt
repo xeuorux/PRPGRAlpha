@@ -56,6 +56,14 @@ Price = 4000
 FieldUse = TM
 Move = NUMB
 #-------------------------------
+[TMWATERLOG]
+Name = Unnamed
+NamePlural = Unnamed
+Pocket = 4
+Price = 4000
+FieldUse = TM
+Move = WATERLOG
+#-------------------------------
 [TMCONFUSERAY]
 Name = Unnamed
 NamePlural = Unnamed
@@ -344,14 +352,6 @@ Price = 4000
 FieldUse = TM
 Move = LIGHTSCREEN
 #-------------------------------
-[TMSAFEGUARD]
-Name = Unnamed
-NamePlural = Unnamed
-Pocket = 4
-Price = 4000
-FieldUse = TM
-Move = SAFEGUARD
-#-------------------------------
 [TMGREYMIST]
 Name = Unnamed
 NamePlural = Unnamed
@@ -512,13 +512,13 @@ Price = 4000
 FieldUse = TM
 Move = COVET
 #-------------------------------
-[TMRANSACK]
+[TMRISINGPOWER]
 Name = Unnamed
 NamePlural = Unnamed
 Pocket = 4
 Price = 4000
 FieldUse = TM
-Move = RANSACK
+Move = RISINGPOWER
 #-------------------------------
 [TMTRIATTACK]
 Name = Unnamed
@@ -552,6 +552,14 @@ Price = 4000
 FieldUse = TM
 Move = RAPIDSPIN
 #-------------------------------
+[TMNULLPULSE]
+Name = Unnamed
+NamePlural = Unnamed
+Pocket = 4
+Price = 4000
+FieldUse = TM
+Move = NULLPULSE
+#-------------------------------
 [TMBODYSLAM]
 Name = Unnamed
 NamePlural = Unnamed
@@ -560,13 +568,13 @@ Price = 4000
 FieldUse = TM
 Move = BODYSLAM
 #-------------------------------
-[TMNULLPULSE]
+[TMLAUNDER]
 Name = Unnamed
 NamePlural = Unnamed
 Pocket = 4
 Price = 4000
 FieldUse = TM
-Move = NULLPULSE
+Move = LAUNDER
 #-------------------------------
 [TMMEGAPUNCH]
 Name = Unnamed
@@ -912,13 +920,13 @@ Price = 4000
 FieldUse = TM
 Move = FOULPLAY
 #-------------------------------
-[TMTRICKYTOXINS]
+[TMSHORTCIRCUIT]
 Name = Unnamed
 NamePlural = Unnamed
 Pocket = 4
 Price = 4000
 FieldUse = TM
-Move = TRICKYTOXINS
+Move = SHORTCIRCUIT
 #-------------------------------
 [TMVOLTSWITCH]
 Name = Unnamed
@@ -1015,3 +1023,19 @@ Pocket = 4
 Price = 4000
 FieldUse = TM
 Move = DISSIPATION
+#-------------------------------
+[TMNATURALPROTECTION]
+Name = Unnamed
+NamePlural = Unnamed
+Pocket = 4
+Price = 4000
+FieldUse = TM
+Move = NATURALPROTECTION
+#-------------------------------
+[TMRAILCANNON]
+Name = Unnamed
+NamePlural = Unnamed
+Pocket = 4
+Price = 4000
+FieldUse = TM
+Move = RAILCANNON

@@ -5,16 +5,12 @@ class PokeBattle_Move_RemovesTargetItem < PokeBattle_Move
     def pbEffectAgainstTarget(user, target)
         return if damagingMove?
         return unless canKnockOffItems?(user, target)
-        knockOffItems(user, target) do |_item, itemName|
-            @battle.pbDisplay(_INTL("{1}'s {2} became unusuable, so it dropped it!", target.pbThis, itemName))
-        end
+        knockOffItems(user, target)
     end
 
     def pbEffectWhenDealingDamage(user, target)
         return unless canKnockOffItems?(user, target)
-        knockOffItems(user, target) do |_item, itemName|
-            @battle.pbDisplay(_INTL("{1}'s {2} became unusuable, so it dropped it!", target.pbThis, itemName))
-        end
+        knockOffItems(user, target)
     end
 
     def getTargetAffectingEffectScore(user, target)
@@ -94,8 +90,12 @@ class PokeBattle_Move_ConsumesTargetBerries < PokeBattle_Move
             next unless canRemoveItem?(user, target, item)
             next unless GameData::Item.get(item).is_berry?
             target.removeItem(item)
-            @battle.pbDisplay(_INTL("{1} stole and ate its target's {2}!", user.pbThis, itemName))
-            user.pbHeldItemTriggerCheck(item, false)
+            if @battle.stolenItemTurnsToDust?(item)
+                @battle.pbDisplay(_INTL("{1}'s {2} turned to dust.", target.pbThis, itemName))
+            else
+                @battle.pbDisplay(_INTL("{1} stole and ate its target's {2}!", user.pbThis, itemName))
+                user.pbHeldItemTriggerCheck(item, false)
+            end
         end
     end
 
@@ -246,7 +246,6 @@ end
 #===============================================================================
 class PokeBattle_Move_StealsBerryGem < PokeBattle_Move
     def pbEffectAfterAllHits(user, target)
-        return unless target.hasAnyBerry? || target.hasAnyItem?
         target.eachItem do |item|
             next unless GameData::Item.get(item).is_berry? || GameData::Item.get(item).is_gem?
             stealItem(user, target, item)

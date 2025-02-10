@@ -373,6 +373,8 @@ class PokeBattle_Move_TypeAndEffectDependsOnUserRotomForm < PokeBattle_Move
     def pbBaseType(user)
         ret = :GHOST
         case user.form
+        when 0
+            ret = :ELECTRIC if GameData::Type.exists?(:ELECTRIC)
         when 1
             ret = :FIRE if GameData::Type.exists?(:FIRE)
         when 2
@@ -390,10 +392,12 @@ class PokeBattle_Move_TypeAndEffectDependsOnUserRotomForm < PokeBattle_Move
     def pbAdditionalEffect(user, target)
         return if target.damageState.substitute
         case user.form
+        when 0
+            target.applyNumb(user) if target.canNumb?(user, true, self)
         when 1
             target.applyBurn(user) if target.canBurn?(user, true, self)
         when 2
-            target.applyNumb(user) if target.canNumb?(user, true, self)
+            target.applyWaterlog(user) if target.canWaterlog?(user, true, self)
         when 3
             target.applyFrostbite(user) if target.canFrostbite?(user, true, self)
         when 4
@@ -405,10 +409,12 @@ class PokeBattle_Move_TypeAndEffectDependsOnUserRotomForm < PokeBattle_Move
 
     def getTargetAffectingEffectScore(user, target)
         case user.form
+        when 0
+            return getNumbEffectScore(user, target)
         when 1
             return getBurnEffectScore(user, target)
         when 2
-            return getNumbEffectScore(user, target)
+            return getWaterlogEffectScore(user, target)
         when 3
             return getFrostbiteEffectScore(user, target)
         when 4
@@ -422,7 +428,7 @@ class PokeBattle_Move_TypeAndEffectDependsOnUserRotomForm < PokeBattle_Move
     def getDetailsForMoveDex(detailsList = [])
         detailsList << _INTL("Form effects:")
         detailsList << _INTL("<u>Heat</u>: Burn")
-        detailsList << _INTL("<u>Wash</u>: Numb")
+        detailsList << _INTL("<u>Wash</u>: Waterlog")
         detailsList << _INTL("<u>Frost</u>: Frostbite")
         detailsList << _INTL("<u>Fan</u>: Dizzy")
         detailsList << _INTL("<u>Mow</u>: Leech")

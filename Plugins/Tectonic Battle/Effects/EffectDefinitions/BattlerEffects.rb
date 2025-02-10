@@ -17,18 +17,10 @@ GameData::BattleEffect.register_effect(:Battler, {
         healMessage = _INTL("The ring of water restored {1}'s HP!", battler.pbThis(true))
         battler.applyFractionalHealing(fraction, customMessage: healMessage)
     end,
-})
-
-GameData::BattleEffect.register_effect(:Battler, {
-    :id => :Attract,
-    :real_name => "Attract",
-    :type => :Position,
-    :others_lose_track => true,
-    :is_mental => true,
-    :swaps_with_battlers => true,
-    :apply_proc => proc do |battle, battler, _value|
-        battle.pbDisplay(_INTL("{1} fell in love!", battler.pbThis))
-    end,
+    :stay_in_rating_proc => proc do |battle, battler, value, stay_in_rating|
+        stay_in_rating += 15
+        next stay_in_rating
+    end
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
@@ -102,7 +94,7 @@ GameData::BattleEffect.register_effect(:Battler, {
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
-    :id => :Charge,
+    :id => :EnergyCharge,
     :real_name => "Charged",
     :apply_proc => proc do |battle, battler, _value|
         battle.pbDisplay(_INTL("{1} began charging power!", battler.pbThis))
@@ -110,7 +102,7 @@ GameData::BattleEffect.register_effect(:Battler, {
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
-    :id => :ChargeExpended,
+    :id => :EnergyChargeExpended,
     :real_name => "Charge Expended",
     :resets_battlers_eot => true,
 })
@@ -120,22 +112,6 @@ GameData::BattleEffect.register_effect(:Battler, {
     :real_name => "Choice Locked",
     :type => :Move,
     :info_displayed => false,
-})
-
-GameData::BattleEffect.register_effect(:Battler, {
-    :id => :Confusion,
-    :real_name => "Confusion Turns",
-    :type => :Integer,
-    :baton_passed => true,
-    :is_mental => true,
-    :apply_proc => proc do |battle, battler, _value|
-        battle.pbCommonAnimation("Confusion", battler)
-        battle.pbDisplay(_INTL("{1} became confused! It will hit itself with its own Attack!", battler.pbThis))
-    end,
-    :disable_proc => proc do |battle, battler|
-        battle.pbDisplay(_INTL("{1} snapped out of its confusion.", battler.pbThis))
-    end,
-    :sub_effects => [:ConfusionChance],
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
@@ -180,6 +156,10 @@ GameData::BattleEffect.register_effect(:Battler, {
             battler.applyFractionalDamage(CURSE_DAMAGE_FRACTION, false)
         end
     end,
+    :stay_in_rating_proc => proc do |battle, battler, value, stay_in_rating|
+        stay_in_rating -= 25
+        next stay_in_rating
+    end
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
@@ -319,7 +299,7 @@ GameData::BattleEffect.register_effect(:Battler, {
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
-    :id => :FocusEnergy,
+    :id => :RaisedCritChance,
     :real_name => "Crit Chance Up",
     :type => :Integer,
     :maximum => 4,
@@ -360,7 +340,7 @@ GameData::BattleEffect.register_effect(:Battler, {
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
-    :id => :GastroAcid,
+    :id => :AbilitySupressed,
     :real_name => "Ability Surpressed",
     :baton_passed => true,
     :pass_value_proc => proc do |battler, value|
@@ -814,15 +794,18 @@ GameData::BattleEffect.register_effect(:Battler, {
     :type => :Integer,
     :baton_passed => true,
     :apply_proc => proc do |battle, battler, value|
-        if value > 5
-            battle.pbDisplay(_INTL("{1} heard the Perish Song, but weakly!", battler.pbThis, value))
-            battle.pbDisplay(_INTL("It will faint in {2} turns!", battler.pbThis, value))
+        if battler.boss?
+            battle.pbDisplay(_INTL("{1} heard the Perish Song! It will take massive damage in {2} turns!", battler.pbThis, value))
         else
             battle.pbDisplay(_INTL("{1} heard the Perish Song! It will faint in {2} turns!", battler.pbThis, value))
         end
     end,
     :expire_proc => proc do |battle, battler|
-        battler.pbReduceHP(battler.hp)
+        if battler.boss? # bosses only lose half a health bar
+            battler.pbReduceHP(battler.avatarHealthPerPhase / 2.0)
+        else
+            battler.pbReduceHP(battler.hp)
+        end
         battler.pbFaint if battler.fainted?
         if battler.hasActiveAbility?(:REAPWHATYOUSOW, true) &&
                 battler.countsAs?(:MAROMATISSE) &&
@@ -1036,6 +1019,7 @@ GameData::BattleEffect.register_effect(:Battler, {
     :id => :Snatch,
     :real_name => "Snatch",
     :type => :Integer,
+    :resets_eor	=> true,
     :apply_proc => proc do |battle, battler, _value|
         battle.pbDisplay(_INTL("{1} waits for a move to steal!", battler.pbThis))
     end,
@@ -1065,11 +1049,11 @@ GameData::BattleEffect.register_effect(:Battler, {
         statArray = []
         if battler.effectActive?(:StockpileDef)
             statArray.push(:DEFENSE)
-            statArray.push(battler.countEffect(:StockpileDef))
+            statArray.push(battler.countEffect(:StockpileDef) * 2)
         end
         if battler.effectActive?(:StockpileSpDef)
             statArray.push(:SPECIAL_DEFENSE)
-            statArray.push(battler.countEffect(:StockpileSpDef))
+            statArray.push(battler.countEffect(:StockpileSpDef) * 2)
         end
 
         battler.pbLowerMultipleStatSteps(statArray, battler)
@@ -1160,6 +1144,16 @@ GameData::BattleEffect.register_effect(:Battler, {
     :ticks_down => true,
     :apply_proc => proc do |battle, battler, value|
         battle.pbDisplay(_INTL("{1} can't use sound-based moves for the next #{value - 1} turns!", battler.pbThis))
+    end,
+})
+
+GameData::BattleEffect.register_effect(:Battler, {
+    :id => :DisarmingShot,
+    :real_name => "Blade Disarming Turns",
+    :type => :Integer,
+    :ticks_down => true,
+    :apply_proc => proc do |battle, battler, value|
+        battle.pbDisplay(_INTL("{1} can't use blade-based moves for the next #{value - 1} turns!", battler.pbThis))
     end,
 })
 
@@ -1316,14 +1310,6 @@ GameData::BattleEffect.register_effect(:Battler, {
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
-    :id => :WarpingCore,
-    :real_name => "Weight Doubled",
-    :apply_proc => proc do |battle, battler, _value|
-        battle.pbDisplay(_INTL("{1} weighs twice as much!", battler.pbThis))
-    end,
-})
-
-GameData::BattleEffect.register_effect(:Battler, {
     :id => :Refurbished,
     :real_name => "Weight Halved",
     :type => :Integer,
@@ -1347,12 +1333,23 @@ GameData::BattleEffect.register_effect(:Battler, {
     :apply_proc => proc do |battle, battler, _value|
         battle.pbDisplay(_INTL("{1} became drowsy!", battler.pbThis))
     end,
+    :stay_in_rating_proc => proc do |battle, battler, value, stay_in_rating|
+        stay_in_rating -= 25
+        next stay_in_rating
+    end
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
     :id => :GorillaTactics,
     :real_name => "Choice Locking",
     :type => :Move,
+    :info_displayed => false,
+})
+
+GameData::BattleEffect.register_effect(:Battler, {
+    :id => :StatsRaised,
+    :real_name => "Stats Raised",
+    :resets_eor	=> true,
     :info_displayed => false,
 })
 
@@ -1509,15 +1506,6 @@ GameData::BattleEffect.register_effect(:Battler, {
     :avatars_purge => true,
     :apply_proc => proc do |battle, battler, _value|
         battle.pbDisplay(_INTL("{1} is now afraid of Bug-type moves!", battler.pbThis))
-    end,
-})
-
-GameData::BattleEffect.register_effect(:Battler, {
-    :id => :LuckyStar,
-    :real_name => "Added Crit Chance",
-    :critical_rate_buff => true,
-    :apply_proc => proc do |battle, battler, _value|
-        battle.pbDisplay(_INTL("{1} is blessed by the lucky star!", battler.pbThis))
     end,
 })
 
@@ -1791,15 +1779,6 @@ GameData::BattleEffect.register_effect(:Battler, {
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
-    :id => :VolatileToxin,
-    :real_name => "Volatile Toxin",
-    :apply_proc => proc do |battle, battler, _value|
-        battle.pbDisplay(_INTL("The next Ground-type attack against {1} will deal double damage!",
-battler.pbThis(true)))
-    end,
-})
-
-GameData::BattleEffect.register_effect(:Battler, {
     :id => :Indestructible,
     :real_name => "Indestructible",
     :type => :Type,
@@ -1962,7 +1941,6 @@ GameData::BattleEffect.register_effect(:Battler, {
     },
 })
 
-
 GameData::BattleEffect.register_effect(:Battler, {
     :id => :CranialGuard,
     :real_name => "Cranial Guard",
@@ -1978,12 +1956,10 @@ GameData::BattleEffect.register_effect(:Battler, {
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
-    :id => :VolatileToxin,
-    :real_name => "Volatile Toxin",
-    :apply_proc => proc do |battle, battler, _value|
-        battle.pbDisplay(_INTL("The next Ground-type attack against {1} will deal double damage!",
-battler.pbThis(true)))
-    end,
+    :id => :Heliopause,
+    :real_name => "Heliopause",
+    :resets_eor	=> true,
+    :protection_effect => true,
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
@@ -2080,4 +2056,38 @@ GameData::BattleEffect.register_effect(:Battler, {
     :disable_proc => proc do |battle, battler|
         raise _INTL("Last Gasp was disabled somehow.")
     end,
+})
+
+GameData::BattleEffect.register_effect(:Battler, {
+    :id => :Jinxed,
+    :real_name => "Jinxed",
+    :baton_passed => true,
+    :avatars_purge => true,
+    :apply_proc => proc do |battle, battler, _value|
+        battle.pbDisplay(_INTL("{1} is jinxed!", battler.pbThis))
+    end,
+    :stay_in_rating_proc => proc do |battle, battler, value, stay_in_rating|
+        stay_in_rating -= 20 unless battler.hasActiveAbilityAI?(GameData::Ability.getByFlag("CritImmunity"))
+        next stay_in_rating
+    end
+})
+
+GameData::BattleEffect.register_effect(:Battler, {
+    :id => :Fracture,
+    :real_name => "Fractured",
+    :baton_passed => true,
+    :avatars_purge => true,
+    :apply_proc => proc do |battle, battler, _value|
+        battle.pbDisplay(_INTL("{1} is fractured!", battler.pbThis))
+    end,
+    :stay_in_rating_proc => proc do |battle, battler, value, stay_in_rating|
+        stay_in_rating -= 20
+        next stay_in_rating
+    end
+})
+
+GameData::BattleEffect.register_effect(:Battler, {
+    :id => :RefugeDamageReduction,
+    :real_name => "Refuge",
+    :resets_battlers_eot => true,
 })

@@ -135,15 +135,9 @@ user.pbThis(true)))
         end
         # Consume gems, etc.
         consumeMoveTriggeredItems(user)
-        # Consume Volatile Toxin
-        if move.damagingMove?
-            targets.each do |b|
-                b.disableEffect(:VolatileToxin)
-            end
-        end
-        # Consume Charge
-        if user.effectActive?(:ChargeExpended)
-            user.disableEffect(:Charge)
+        # Consume Energy Charge
+        if user.effectActive?(:EnergyChargeExpended)
+            user.disableEffect(:EnergyCharge)
         end
         # Pokémon switching caused by Roar, Whirlwind, Discourage, Dragon Tail
         move.pbSwitchOutTargetsEffect(user, targets, numHits, switchedBattlers)

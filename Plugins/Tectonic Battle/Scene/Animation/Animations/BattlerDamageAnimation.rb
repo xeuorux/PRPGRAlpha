@@ -28,7 +28,7 @@ class BattlerDamageAnimation < PokeBattle_Animation
 		shaSprite = @sprites["shadow_#{@idxBattler}"]
 		
 		# Damage hit numbers
-		if @damageDealt != 0 && $PokemonSystem.damage_numbers == 0
+		if @damageDealt != 0 && $Options.damage_numbers == 0
 			@damageDisplayBitmap.clear
 			
 			framesForMovement = 20
@@ -104,7 +104,7 @@ class BattlerDamageAnimation < PokeBattle_Animation
 			battler.setSE(delay, "Battle damage hyper")
 		end
 
-		flashesCount = $PokemonSystem.battlescene == 1 ? flashesCount = 2 : 4
+		flashesCount = $Options.battlescene == 1 ? flashesCount = 2 : 4
 		flashesCount /= 2 if @fastHitAnimation
 		flashesCount.times do   # 4 flashes, each lasting 0.2 (4/20) seconds
 		  battler.setVisible(delay,false)

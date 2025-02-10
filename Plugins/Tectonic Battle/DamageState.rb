@@ -8,8 +8,9 @@ class PokeBattle_DamageState
 	attr_accessor :magicCoat
 	attr_accessor :magicBounce
 	attr_accessor :totalHPLost     		# Like hpLost, but cumulative over all hits
+	attr_accessor :totalHPLostCritical	# Like totalHPLost, but only counts critical hits
 	attr_accessor :displayedDamage 		# The damage to display above the hit battler
-	attr_accessor :totalCalcedDamage  	# The total damage calculated over all hits (overkill counted)
+	attr_accessor :totalCalcedDamage  # The total damage calculated over all hits (overkill counted)
 	attr_accessor :fainted         		# Whether battler was knocked out by the move
 	attr_accessor :missed          		# Whether the move failed the accuracy check
 	attr_accessor :calcDamage      		# Calculated damage
@@ -30,8 +31,9 @@ class PokeBattle_DamageState
 	attr_accessor :direDiversion   		# Dire Diversion ability activated
 	attr_accessor :endureBerry	   		# Cass Berry activated
 	attr_accessor :feastWeakened   		# Whether a type-resisting feast was used (wont be consumed)
-	attr_accessor :fear			   		# The hit caused fear in the pokemon
+	attr_accessor :fear			   				# The hit caused fear in the pokemon
 	attr_accessor :bubbleBarrier   		# How much damage was prevented by bubble barrier
+	attr_accessor :thiefsDiversion 		# Thief's Diversion ability activated 
 
 	def initialize; reset; end
 
@@ -43,6 +45,7 @@ class PokeBattle_DamageState
 		@magicCoat          = false
 		@magicBounce        = false
 		@totalHPLost        = 0
+		@totalHPLostCritical = 0
 		@totalCalcedDamage	= 0
 		@fainted            = false
 		@messagesPerHit		= true
@@ -61,17 +64,18 @@ class PokeBattle_DamageState
 		@focusBand     		= false
 		@focusSash     		= nil
 		@sturdy        		= false
-		@survivalist		= false
-		@archVillain		= nil
+		@survivalist			= false
+		@archVillain			= nil
 		@disguise      		= false
 		@endured       		= false
-		@fightforever		= false
+		@fightforever			= false
 		@berryWeakened 		= nil
 		@feastWeakened		= nil
 		@iceBlock       	= false
 		@forced_critical	= false
 		@direDiversion		= false
-		@endureBerry		= false
+		@endureBerry			= false
 		@bubbleBarrier		= 0
+		@thiefsDiversion	= false
 	end
 end

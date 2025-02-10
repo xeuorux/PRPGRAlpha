@@ -46,6 +46,7 @@ ItemHandlers::UseInField.add(:ABRAPORTER,proc { |item|
     next 0
   end
   pbUseItemMessage(item)
+  pbSEPlay("Anim/PRSFX- Teleport")
   pbFadeOutIn {
     $game_temp.player_new_map_id    = healing[0]
     $game_temp.player_new_x         = healing[1]

@@ -283,7 +283,7 @@ class PokemonBag_Scene
               elsif Input.trigger?(Input::ACTION)   # Start switching the selected item
                 if !@choosing
                   if thispocket.length>1 && itemwindow.index < thispocket.length &&
-                      $PokemonSystem.bag_sorting == 0
+                      $Options.bag_sorting == 0
                     itemwindow.sorting = true
                     swapinitialpos = itemwindow.index
                     pbPlayDecisionSE
@@ -303,4 +303,6 @@ class PokemonBag_Scene
           end
         }
       end
+
+      def supportsFusion?; return true; end
   end

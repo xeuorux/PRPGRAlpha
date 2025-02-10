@@ -585,7 +585,7 @@ class MapSprite
       mapscreen.pbMapScreenLoop
       mapscreen.close
       Graphics.resize_screen(Settings::SCREEN_WIDTH, Settings::SCREEN_HEIGHT)
-      pbSetResizeFactor($PokemonSystem.screensize)
+      pbSetResizeFactor($Options.screensize)
     }
   end
   

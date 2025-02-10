@@ -11,6 +11,7 @@ class PokeBattle_Battle
             @initialItems[0][pbPlayer.party.length - 1] = pkmn.items.clone if @initialItems
             return
         end
+        promptToTakeItems(pkmn)
         # Messages saying the Pokémon was stored in a PC box
         curBoxName = @peer.pbBoxName(currentBox)
         boxName    = @peer.pbBoxName(storedBox)
@@ -54,8 +55,8 @@ class PokeBattle_Battle
                 pbPlayer.pokedex.set_owned(pkmn.species)
                 if $Trainer.has_pokedex
                     pbPlayer.pokedex.register_last_seen(pkmn)
-                    if $PokemonSystem.dex_shown_register == 0
-                        pbDisplayPaused(_INTL("You register {1} as caught in the Pokédex.", pkmn.name))
+                    if $Options.dex_shown_register == 0
+                        pbDisplayPaused(_INTL("You register {1} as caught in the MasterDex.", pkmn.name))
                         @scene.pbShowPokedex(pkmn.species)
                     end
                 end
@@ -65,7 +66,7 @@ class PokeBattle_Battle
             incrementDexNavCounts(true)
 
             # Nickname the Pokémon
-            showPrompt = (!defined?($PokemonSystem.nicknaming_prompt) || $PokemonSystem.nicknaming_prompt == 0)
+            showPrompt = (!defined?($Options.nicknaming_prompt) || $Options.nicknaming_prompt == 0)
             if showPrompt && pbDisplayConfirm(_INTL("Would you like to give a nickname to {1}?", pkmn.name))
                 nickname = @scene.pbNameEntry(_INTL("{1}'s nickname?", pkmn.speciesName), pkmn)
                 pkmn.name = nickname
@@ -204,6 +205,7 @@ class PokeBattle_Battle
                 pbGainExp
                 battler.captured = false
             end
+            battler.removeNonInitialItems
             battler.pbReset
             if pbAllFainted?(battler.index)
                 @decision = trainerBattle? ? 1 : 4 # Battle ended by win/capture
@@ -285,11 +287,11 @@ class PokeBattle_Battle
         ultraBeast = %i[NIHILEGO BUZZWOLE PHEROMOSA XURKITREE CELESTEELA
                         KARTANA GUZZLORD POIPOLE NAGANADEL STAKATAKA
                         BLACEPHALON].include?(pkmn.species)
-        if !ultraBeast || ball == :BEASTBALL
-            catch_rate = BallHandlers.modifyCatchRate(ball, catch_rate, self, battler, ultraBeast)
-        else
-            # All balls but the beast ball have a 1/10 chance to catch Ultra Beasts
+        # All balls but the beast ball have a 1/10 chance to catch Ultra Beasts
+        if ultraBeast && ball != :BEASTBALL 
             catch_rate /= 10
+        else
+            catch_rate = BallHandlers.modifyCatchRate(ball, catch_rate, self, battler, ultraBeast)
         end
         catch_rate = (catch_rate * 1.5).floor if ballMimicActive?
         return PokeBattle_Battle.captureThresholdCalcInternals(battler.status, battler.hp, battler.totalhp, catch_rate)

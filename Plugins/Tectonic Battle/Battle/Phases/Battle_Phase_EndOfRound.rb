@@ -22,6 +22,7 @@ class PokeBattle_Battle
         if @field.effectActive?(:EmotionRoom)
             priority.each { |b|
                 next if b.fainted?
+                next if b.immutableAbility?
                 possibleAbilitySwitches = []
                 b.legalAbilities.each do |abil|
                     next if b.hasAbility?(abil)
@@ -139,11 +140,13 @@ class PokeBattle_Battle
         if pbCheckGlobalAbility(:INEXORABLE)
             battlersInOrder = []
             pbParty(0).each do |partyMember, partyIndex|
+                next unless partyMember
                 dummyBattler = PokeBattle_Battler.new(self, 0)
                 dummyBattler.pbInitDummyPokemon(partyMember, partyIndex)
                 battlersInOrder.push(dummyBattler)
             end
             pbParty(1).each do |partyMember, partyIndex|
+                next unless partyMember
                 dummyBattler = PokeBattle_Battler.new(self, 1)
                 dummyBattler.pbInitDummyPokemon(partyMember, partyIndex)
                 battlersInOrder.push(dummyBattler)
@@ -159,7 +162,7 @@ class PokeBattle_Battle
             damageDealt = damageFromDOTStatus(b, :POISON)
 
             # Venom Gorger
-            if b.getStatusCount(:POISON) % POISON_DOUBLING_TURNS == 0
+            if b.getStatusCount(:POISON) % POISON_DOUBLING_TURNS == 0 && !b.fainted?
                 b.eachOpposing do |opposingB|
                     next unless opposingB.hasActiveAbility?(:VENOMGORGER)
                     healingMessage = _INTL("{1} slurped up venom leaking from #{b.pbThis(true)}.", opposingB.pbThis)

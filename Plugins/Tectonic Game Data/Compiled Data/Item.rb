@@ -135,7 +135,7 @@ module GameData
           return _INTL("TR {1}",GameData::Move.get(@move).name)
         elsif is_HM?
           return _INTL("HM {1}",GameData::Move.get(@move).name)
-        elsif @id == :AIDKIT && $PokemonGlobal&.teamHealerUpgrades > 0
+        elsif @id == :AIDKIT && $PokemonGlobal && $PokemonGlobal.teamHealerUpgrades && $PokemonGlobal.teamHealerUpgrades > 0
           upgradeCount = $PokemonGlobal.teamHealerUpgrades || 0
           return _INTL("{1} +{2}",pbGetMessageFromHash(MessageTypes::Items, @real_name),upgradeCount)
         else
@@ -179,6 +179,10 @@ module GameData
 
       def is_snag_ball?
         return @flags.include?("SnagBall")
+      end
+
+      def no_ball_swap?
+        return @flags.include?("NoBallSwap")
       end
 
       def is_mail?
@@ -245,6 +249,10 @@ module GameData
         return @flags.include?("KeyItem") && !@consumable
       end
 
+      def is_evolution_item?
+        return @flags.include?("EvolutionItem")
+      end
+
       def is_evolution_stone?
         return @flags.include?("EvolutionStone")
       end
@@ -283,6 +291,10 @@ module GameData
 
       def consumed_after_use?
         return !is_important? && @consumable
+      end
+
+      def show_pocket_message?
+        return !@flags.include?("SkipPocketMessage")
       end
   
       def unlosable?(species, ability)
@@ -423,8 +435,6 @@ module Compiler
     MessageTypes.setMessagesAsHash(MessageTypes::ItemPlurals, item_names_plural)
     MessageTypes.setMessagesAsHash(MessageTypes::ItemDescriptions, item_descriptions)
     Graphics.update
-
-    BattleHandlers::LoadDataDependentItemHandlers.trigger
   end
 
   def compile_machine_order

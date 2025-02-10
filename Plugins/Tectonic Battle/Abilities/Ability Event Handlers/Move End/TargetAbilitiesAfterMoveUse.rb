@@ -31,14 +31,13 @@ BattleHandlers::TargetAbilityAfterMoveUse.add(:INDESTRUCTIBLE,
 # Thieving abilities
 #############################################################
 
-BattleHandlers::TargetAbilityAfterMoveUse.add(:PICKPOCKET,
+BattleHandlers::TargetAbilityAfterMoveUse.add(:MONKEYMISCHIEF,
   proc { |ability, target, user, move, switched, battle|
       next if switched.include?(user.index)
       next unless move.damagingMove?
       next unless user.activatesTargetAbilities?
-      next unless move.physicalMove?
       next if battle.futureSight
-      move.stealItem(target, user, target.firstItem, ability: ability)
+      move.knockOffItems(target, user, ability: ability, firstItemOnly: true)
   }
 )
 
@@ -49,7 +48,7 @@ BattleHandlers::TargetAbilityAfterMoveUse.add(:MOONLIGHTER,
       next unless user.activatesTargetAbilities?
       next if battle.futureSight
       next unless battle.moonGlowing?
-      item = target.firstItem
+      item = user.firstItem
       if move.canStealItem?(user,target, item)
         move.stealItem(target, user, item, ability: ability)
       else

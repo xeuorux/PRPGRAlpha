@@ -146,7 +146,7 @@ BattleHandlers::SpeedCalcAbility.add(:FROSTFANGED,
 
 BattleHandlers::SpeedCalcAbility.add(:LIGHTNINGRIDE,
   proc { |ability, battler, mult|
-      next mult * 2.0 if battler.effectActive?(:Charge)
+      next mult * 2.0 if battler.effectActive?(:EnergyCharge)
   }
 )
 
@@ -163,6 +163,18 @@ BattleHandlers::SpeedCalcAbility.add(:SLUGGISH,
 )
 
 BattleHandlers::SpeedCalcAbility.add(:LIVEFAST,
+  proc { |ability, battler, mult|
+      next mult * 1.5
+  }
+)
+
+BattleHandlers::SpeedCalcAbility.add(:WATERFALLCONDITIONING,
+  proc { |ability, battler, mult|
+      next mult * 1.5
+  }
+)
+
+BattleHandlers::SpeedCalcAbility.add(:SILVERLINING,
   proc { |ability, battler, mult|
       next mult * 1.5
   }

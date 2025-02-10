@@ -1,7 +1,7 @@
 module Settings
     # The version of your game. It has to adhere to the MAJOR.MINOR.PATCH format.
-    GAME_VERSION = "3.2.1"
-    DEV_VERSION  = false
+    GAME_VERSION = "3.3.0"
+    DEV_VERSION  = true
   
     #=============================================================================
   
@@ -20,6 +20,8 @@ module Settings
     EGG_LEVEL            = 1
     # The odds of a newly generated Pokémon being shiny (out of 65536).
     SHINY_POKEMON_CHANCE = 16
+    # The chance that a wild battle will be a double battle (out of 100)
+    DOUBLE_WILD_BATTLE_CHANCE = 20
   
     #=============================================================================
   
@@ -296,7 +298,8 @@ module Settings
     # from.
     LANGUAGES = [
       ["English", "english.dat"],
-      ["Español", "spanish.dat"]
+      ["Español", "spanish.dat"],
+      ["中文（简体)", "chinese.dat"],
     ]
   
     #=============================================================================
@@ -368,6 +371,8 @@ module Settings
     # that much Exp (false). This also applies to Exp gained via the Exp Share
     # (held item version) being distributed to all Exp Share holders.
     SPLIT_EXP_BETWEEN_GAINERS = true
+    # Whether fainted Pokemon can still earn experience from participating in battle
+    FAINTED_POKEMON_EARN_EXP = true
     # Whether the critical capture mechanic applies. Note that its calculation is
     # based on a total of 600+ species (i.e. that many species need to be caught
     # to provide the greatest critical capture chance of 2.5x), and there may be

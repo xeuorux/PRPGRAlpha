@@ -621,5 +621,5 @@ class PokeBattle_Scene
 end
 
 def getBattleAnimationSpeedMult
-    return [1,2,1][$PokemonSystem.battlescene || 0]
+    return [1,2,1][$Options.battlescene || 0]
 end

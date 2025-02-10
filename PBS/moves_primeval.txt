@@ -52,6 +52,18 @@ Flags = CanProtect,CanMirrorMove,Empowered
 Description = The user growls fiercly, lowering each foe's Attack by two steps and raising its own Attack by two steps.
 Animation = GROWL
 #-------------------------------
+[PRIMEVALROLEPLAY]
+Name = Primeval Role Play
+Type = NORMAL
+Category = Status
+Accuracy = 0
+TotalPP = 1
+Target = AllNearFoes
+FunctionCode = EmpoweredRolePlay
+Flags = CanProtect,CanMirrorMove,Empowered
+Description = The user copies and gains the first ability of each foe.
+Animation = ROLEPLAY
+#-------------------------------
 [PRIMEVALYAWN]
 Name = Primeval Yawn
 Type = NORMAL
@@ -258,6 +270,7 @@ Accuracy = 0
 TotalPP = 5
 Target = BothSides
 FunctionCode = EmpoweredGravity
+Flags = Empowered
 Description = The user intensifies gravity for five turns, damages all enemies for 1/4th of their max HP, and becomes Ground-type.
 #-------------------------------
 [PRIMEVALSHOREUP]
@@ -291,9 +304,9 @@ Category = Status
 Accuracy = 0
 TotalPP = 1
 Target = BothSides
-FunctionCode = GroudonStartGravity10DoubleFoeWeight
+FunctionCode = GroudonStartGravityDoubleAllWeight
 Flags = AvatarSignature
-Description = A move that only the avatar of Groudon can use. Gravity is intensified for five turns and enemy Pokemon have their weight doubled.
+Description = A move that only the avatar of Groudon can use. For the rest of the battle, gravity is intensified and Pokemon have their weight doubled.
 #-------------------------------
 #		ROCK MOVES
 #-------------------------------
@@ -442,6 +455,20 @@ FunctionCode = EmpoweredBulletPunch
 Flags = CanProtect,CanMirrorMove,Punch,Empowered
 Description = The user strikes the target with 3 punches like bullets. This move always goes first.
 #-------------------------------
+[EMPOWEREDBULLETTRAIN]
+Name = Empowered Bullet Train
+Type = STEEL
+Category = Physical
+Power = 200
+Accuracy = 100
+TotalPP = 1
+Target = NearOther
+FunctionCode = EmpoweredBulletTrain
+Flags = CanProtect,CanMirrorMove,Empowered
+EffectChance = 100
+Description = The user becomes a pain train. This raises the user's Speed by 2 steps.
+Animation = BULLETTRAIN
+#-------------------------------
 [EMPOWEREDMETALCLAW]
 Name = Empowered Metal Claw
 Type = STEEL
@@ -572,6 +599,19 @@ Animation = SUNSHINE
 #-------------------------------
 #		WATER MOVES
 #-------------------------------
+[EMPOWEREDBUBBLEBEAM]
+Name = Empowered Bubble Beam
+Type = WATER
+Category = Special
+Power = 180
+Accuracy = 100
+TotalPP = 15
+Target = AllNearFoes
+FunctionCode = EmpoweredBubbleBeam
+Flags = CanProtect,CanMirrorMove,Empowered
+EffectChance = 100
+Description = A spray of bubbles is forcefully ejected at all nearby foes, lowering their Speed by 3 steps.
+#-------------------------------
 [EMPOWEREDSURF]
 Name = Empowered Surf
 Type = WATER
@@ -609,6 +649,18 @@ FunctionCode = EmpoweredRainstorm
 Flags = Empowered
 Description = The user summons rainstorm for 5 turns, surrounds itself with healing water, and becomes Water-type.
 Animation = RAINSTORM
+#-------------------------------
+[PRIMEVALWATERLOG]
+Name = Primeval Waterlog
+Type = WATER
+Category = Status
+Accuracy = 100
+TotalPP = 1
+Target = AllNearFoes
+FunctionCode = EmpoweredWaterlog
+Flags = CanProtect,CanMirrorMove,Empowered
+Description = The user inflicts waterlog on all nearby foes. User becomes a Water-type.
+Animation = WATERLOG
 #-------------------------------
 [SEVENSEASEDICT]
 Name = Seven Seas Edict
@@ -903,18 +955,6 @@ Description = The user harshly lowers each near foes best stat, and becomes Drag
 Animation = LOOMOVER
 #-------------------------------
 #		DARK MOVES
-#-------------------------------
-[PRIMEVALEMBARGO]
-Name = Primeval Embargo
-Type = DARK
-Category = Status
-Accuracy = 100
-TotalPP = 1
-Target = FoeSide
-FunctionCode = EmpoweredEmbargo
-Flags = CanProtect,CanMirrorMove,Empowered
-Description = The enemy side is prevented from using items for the rest of the battle, and the user becomes Dark-type.
-Animation = EMBARGO
 #-------------------------------
 [PRIMEVALHOWL]
 Name = Primeval Howl

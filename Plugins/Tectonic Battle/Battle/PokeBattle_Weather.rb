@@ -21,7 +21,7 @@ class PokeBattle_Battle
     end
 
     # Used for causing weather by a move or by an ability.
-    def pbStartWeather(user, newWeather, duration = -1, showAnim = true, ignoreFainted = false)
+    def pbStartWeather(user, newWeather, duration = -1, showAnim = true, ignoreFainted = false, ability = nil)
         oldWeather = @field.weather
 
         resetExisting = @field.weather == newWeather
@@ -44,6 +44,7 @@ class PokeBattle_Battle
 
         # Show animation, if desired
         unless noChange
+            pbShowAbilitySplash(user, ability) if user && ability
             weather_data = GameData::BattleWeather.try_get(@field.weather)
             pbCommonAnimation(weather_data.animation) if showAnim && weather_data
         end
@@ -57,7 +58,7 @@ class PokeBattle_Battle
             pbEndPrimordialWeather
         end
         
-        if $PokemonSystem.weather_messages == 0 && !noChange
+        if $Options.weather_messages == 0 && !noChange
             if @field.weatherDuration < 0
                 pbDisplay(_INTL("It'll last indefinitely!"))
             else
@@ -66,7 +67,7 @@ class PokeBattle_Battle
                 pbDisplay(_INTL("It'll last for {1} more turns!", moreTurns))
             end
         end
-        pbHideAbilitySplash(user) if user
+        pbHideAbilitySplash(user) if user && ability
 
         triggerWeatherChangeDialogue(oldWeather, @field.weather) unless resetExisting
     end
@@ -163,8 +164,12 @@ class PokeBattle_Battle
 
     def extendWeather(numTurns = 1)
         return if pbWeather == :None
-        @field.weatherDuration += numTurns
         weatherName = GameData::BattleWeather.get(pbWeather).name
+        if @field.weatherDuration < 0
+            pbDisplay(_INTL("The {1} would be extended, but it's already indefinite!",weatherName))
+            return
+        end
+        @field.weatherDuration += numTurns
         if numTurns == 1
             pbDisplay(_INTL("The {1} extends by a turn!",weatherName))
         else
@@ -210,7 +215,7 @@ class PokeBattle_Battle
         threshold = SPECIAL_EFFECT_WAIT_TURNS
         threshold /= 2 if weatherSpedUp?
 
-        showWeatherMessages = $PokemonSystem.weather_messages == 0
+        showWeatherMessages = $Options.weather_messages == 0
 
         if @field.specialTimer >= threshold
             case curWeather
@@ -234,7 +239,7 @@ class PokeBattle_Battle
                     else
                         pbDisplay(_INTL("{1} is panicked!", b.pbThis))
                     end
-                    b.pbLowerMultipleStatSteps(debuff, b)
+                    b.pbLowerMultipleStatSteps(debuff, showFailMsg: true)
                     anyAffected = true
                 end
                 pbDisplay(_INTL("But no one was panicked.")) if showWeatherMessages && !anyAffected
@@ -336,7 +341,7 @@ class PokeBattle_Battle
         pbCommonAnimation(weather_data.animation) if weather_data && @field.specialTimer < SPECIAL_EFFECT_WAIT_TURNS - 1
 
         # Effects due to weather
-        showWeatherMessages = $PokemonSystem.weather_messages == 0
+        showWeatherMessages = $Options.weather_messages == 0
         hailDamage = 0
         sandstormDamage = 0
         priority.each do |b|

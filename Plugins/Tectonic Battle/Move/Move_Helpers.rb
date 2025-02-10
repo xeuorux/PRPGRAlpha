@@ -16,6 +16,7 @@ class PokeBattle_Move
     end
 
     def shouldShade?(user, target)
+        return true if @pp == 0
         return true if pbMoveFailed?(user, [target], false)
         return true if pbFailsAgainstTargetAI?(user, target)
         return false
@@ -88,7 +89,7 @@ class PokeBattle_Move
             next unless validItemProc.nil? || validItemProc.call(item)
             victim.removeItem(item)
             if block_given?
-                yield item
+                yield item, itemName
             else
                 removeMessage = _INTL("{1} forced {2} to drop their {3}!", remover.pbThis,
                     victim.pbThis(true), itemName)
@@ -113,15 +114,15 @@ class PokeBattle_Move
         end
         oldVictimItemName = getItemName(item)
         victim.removeItem(item)
-        if @battle.curseActive?(:CURSE_SUPER_ITEMS) || GameData::Item.get(item).super
+        if @battle.stolenItemTurnsToDust?(item)
             @battle.pbDisplay(_INTL("{1}'s {2} turned to dust.", victim.pbThis, oldVictimItemName))
             @battle.pbHideAbilitySplash(stealer) if ability
         else
             @battle.pbDisplay(_INTL("{1} stole {2}'s {3}!", stealer.pbThis,
               victim.pbThis(true), oldVictimItemName))
             # Permanently steal items from wild pokemon
-            if @battle.wildBattle? && victim.opposes? && !@battle.bossBattle?
-                victim.setInitialItem(nil)
+            if victim.shouldStoreStolenItem?(item)
+                victim.setInitialItems(nil)
                 pbReceiveItem(item)
                 @battle.pbHideAbilitySplash(stealer) if ability
             else
@@ -249,13 +250,14 @@ class PokeBattle_Move
             end
         elsif real_attack == real_special_attack
             # Determine move's category
-            return @battle.pbRandom(2)
+            return 0
         else
             return (real_attack > real_special_attack) ? 0 : 1
         end
     end
 
     def switchOutUser(user,switchedBattlers=[],disableMoldBreaker=true,randomReplacement=false,batonPass=false)
+        return unless @battle.pbCanSwitch?(user.index)
         return unless @battle.pbCanChooseNonActive?(user.index)
         @battle.pbDisplay(_INTL("{1} went back to {2}!", user.pbThis, @battle.pbGetOwnerName(user.index)))
         @battle.pbPursuit(user.index)

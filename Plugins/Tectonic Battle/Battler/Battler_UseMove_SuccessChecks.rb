@@ -28,7 +28,7 @@ class PokeBattle_Battler
             return false
         end
         # Gravity
-        if @battle.field.effectActive?(:Gravity) && move.unusableInGravity?
+        if @battle.gravityIntensified? && move.unusableInGravity?
             msg = _INTL("{1} can't use {2} because of gravity!", pbThis, move.name)
             if showMessages
                 commandPhase ? @battle.pbDisplayPaused(msg) : @battle.pbDisplay(msg)
@@ -40,6 +40,15 @@ class PokeBattle_Battler
         if effectActive?(:ThroatChop) && move.soundMove?
             if showMessages
                 msg = _INTL("{1} can't use {2} because of Throat Chop!", pbThis, move.name)
+                commandPhase ? @battle.pbDisplayPaused(msg) : @battle.pbDisplay(msg)
+            end
+            echoln(msg)
+            return false
+        end
+        # Disarming Shot
+        if effectActive?(:DisarmingShot) && move.bladeMove?
+            if showMessages
+                msg = _INTL("{1} can't use {2} because of Disarming Shot!", pbThis, move.name)
                 commandPhase ? @battle.pbDisplayPaused(msg) : @battle.pbDisplay(msg)
             end
             echoln(msg)
@@ -263,6 +272,8 @@ GameData::Move.get(@effects[:GorillaTactics]).name)
                     @battle.pbDisplay(_INTL("{1} refuses to flinch!", pbThis))
                     @battle.pbHideTribeSplash(self)
                     pbOwnSide.applyEffect(:TyrannicalImmunity)
+                elsif hasActiveItem?(:COURAGEBADGE)
+                    @battle.pbDisplay("#{pbThis} would have flinched, but it holds a Courage Badge!")    
                 else
                     @battle.pbDisplay(_INTL("{1} flinched and couldn't move!", pbThis))
                     eachActiveAbility do |ability|
@@ -278,7 +289,12 @@ GameData::Move.get(@effects[:GorillaTactics]).name)
     end
 
     def doesProtectionEffectNegateThisMove?(effectDisplayName, move, user, target, protectionIgnoredByAbility, animationName = nil, showMessages = true)
-        if move.canProtectAgainst? && !protectionIgnoredByAbility
+        if target.effectActive?(:Jinxed)
+            if showMessages
+                @battle.pbDisplay(_INTL("{1} is jinxed! {2} failed to protect it!", target.pbThis(true), effectDisplayName))
+            end
+            return false
+        elsif move.canProtectAgainst? && !protectionIgnoredByAbility
             @battle.pbCommonAnimation(animationName, target) unless animationName.nil?
             @battle.pbDisplay(_INTL("{1} protected {2}!", effectDisplayName, target.pbThis(true))) if showMessages
             if user.boss? && (move.empoweredMove? || AVATARS_REGULAR_ATTACKS_PIERCE_PROTECT)
@@ -302,8 +318,8 @@ GameData::Move.get(@effects[:GorillaTactics]).name)
                 @battle.pbDisplay(_INTL("{1} was ignored, and failed to protect {2}!", effectDisplayName,
 target.pbThis(true)))
             end
+            return false
         end
-        return false
     end
 
     #=============================================================================

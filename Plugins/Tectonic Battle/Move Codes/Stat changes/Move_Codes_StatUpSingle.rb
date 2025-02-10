@@ -153,6 +153,10 @@ class PokeBattle_Move_RaiseUserSpd2 < PokeBattle_StatUpMove
     end
 end
 
+class PokeBattle_Move_EmpoweredBulletTrain < PokeBattle_Move_RaiseUserSpd2  
+    include EmpoweredMove  
+end
+
 #===============================================================================
 # Increases the user's Speed by 3 steps.
 #===============================================================================
@@ -178,6 +182,8 @@ class PokeBattle_Move_RaiseUserSpd4 < PokeBattle_StatUpMove
         return score
     end
 end
+
+# Empowered Bullet Train
 
 # Empowered Rock Polish
 class PokeBattle_Move_EmpoweredRockPolish < PokeBattle_Move_RaiseUserSpd4
@@ -348,15 +354,11 @@ end
 #===============================================================================
 class PokeBattle_Move_RaiseCriticalHitRate1 < PokeBattle_Move
     def pbEffectGeneral(user)
-        user.applyEffect(:LuckyStar)
+        user.applyEffect(:RaisedCritChance,1)
     end
 
     def getEffectScore(user, _target)
-        if user.effectActive?(:LuckyStar)
-            return 0
-        else
-            return getCriticalRateBuffEffectScore(user)
-        end
+        return getCriticalRateBuffEffectScore(user)
     end
 end
 
@@ -365,7 +367,7 @@ end
 #===============================================================================
 class PokeBattle_Move_RaiseCriticalHitRate2 < PokeBattle_Move
     def pbMoveFailed?(user, _targets, show_message)
-        if user.effectAtMax?(:FocusEnergy)
+        if user.effectAtMax?(:RaisedCritChance)
             @battle.pbDisplay(_INTL("But it failed, since it cannot get any more pumped!")) if show_message
             return true
         end
@@ -373,7 +375,7 @@ class PokeBattle_Move_RaiseCriticalHitRate2 < PokeBattle_Move
     end
 
     def pbEffectGeneral(user)
-        user.incrementEffect(:FocusEnergy, 2)
+        user.incrementEffect(:RaisedCritChance, 2)
     end
 
     def getEffectScore(user, _target)
@@ -424,15 +426,15 @@ end
 class PokeBattle_Move_CategoryDependsOnHigherDamageRaisesUserOtherAttackingStat < PokeBattle_Move
     def initialize(battle, move)
         super
-        @calculated_category = 1
+        @category_override = 1
     end
 
-    def calculateCategory(user, targets)
+    def calculateCategoryOverride(user, targets)
         return selectBestCategory(user, targets[0])
     end
 
     def pbAdditionalEffect(user, _target)
-        if @calculated_category == 0
+        if @category_override == 0
             return user.tryRaiseStat(:SPECIAL_ATTACK, user, increment: 1, move: self)
         else
             return user.tryRaiseStat(:ATTACK, user, increment: 1, move: self)

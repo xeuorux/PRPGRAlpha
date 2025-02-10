@@ -262,6 +262,8 @@ class PokeBattle_Battle
     # Start a battle
     #=============================================================================
     def pbStartBattle
+        $battle = self
+
         # Spit out lots of debug information
         PBDebug.log("")
         PBDebug.log("******************************************")
@@ -330,6 +332,7 @@ class PokeBattle_Battle
             # Update each of the player's pokemon's battling streak
             if (trainerBattle? || bossBattle?) && HOT_STREAKS_ACTIVE
                 pbParty(0).each_with_index do |pkmn, i|
+                    next unless pkmn
                     wasOnStreak = pkmn.onHotStreak?
                     if pkmn.fainted? || [2, 3].include?(@decision)
                         pkmn.battlingStreak = 0
@@ -345,6 +348,7 @@ class PokeBattle_Battle
         # Return the speaker box to being visible if it was hidden by the battle
         showSpeaker if reshowSpeakerWindow
 
+        $battle = nil
         return @decision
     end
 
@@ -362,6 +366,16 @@ class PokeBattle_Battle
         @scene.pbStartBattle(self)
         # Show trainers on both sides sending out Pokémon
         pbStartBattleSendOut(sendOuts) unless @autoTesting
+        # Coloration differences tutorial
+        if $Options.color_shifts == 0 && !$PokemonGlobal.colorationDifferencesTutorialized
+            eachOtherSideBattler do |b|
+                totalColorationDiff = b.pokemon.hueShift.abs + (b.pokemon.shadeShift.abs) / 4
+                echoln("Total coloration diff: #{totalColorationDiff}")
+                next unless totalColorationDiff >= 16
+                playColorationDifferencesTutorial
+                break
+            end
+        end
         # Curses apply if at all
         if @opponent && $PokemonGlobal.tarot_amulet_active
             @statItemsAreMetagameRevealed = false
@@ -548,6 +562,7 @@ class PokeBattle_Battle
             autoPilots = []
             [0,1].each do |sideIndex|
                 pbParty(sideIndex).each_with_index do |partyMember,partyIndex|
+                    next unless partyMember
                     next if partyMember.fainted?
                     next unless partyMember.hasAbility?(:AUTOPILOT)
                     next if partyMember.status == :DIZZY

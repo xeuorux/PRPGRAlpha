@@ -1,6 +1,7 @@
 COMBINE_ATTACKING_STATS = true
 STYLE_VALUE_TOTAL = 50
 DEFAULT_STYLE_VALUE = 10
+STYLE_VALUE_MAX = 20
 
 def pbStyleValueScreen(pkmn)
     unless teamEditingAllowed?
@@ -415,17 +416,25 @@ class StyleValueScreen
             elsif Input.repeat?(Input::RIGHT) && @index < 6
                 stat = stats[@index]
                 stat = :ATTACK if COMBINE_ATTACKING_STATS && stat == :SPECIAL_ATTACK
-                if pkmn.ev[stat] < 20 && @pool > 0
+                if pkmn.ev[stat] < STYLE_VALUE_MAX && @pool > 0
                     pkmn.ev[stat] = (pkmn.ev[stat] + 1)
                     @pool -= 1
                     pkmn.ev[:SPECIAL_ATTACK] = pkmn.ev[:ATTACK] if COMBINE_ATTACKING_STATS
                     @scene.pool = @pool
                     pbPlayDecisionSE
                     updateStats(pkmn)
-                elsif pkmn.ev[stat] == 20 && Input.trigger?(Input::RIGHT)
+                elsif pkmn.ev[stat] == STYLE_VALUE_MAX && Input.trigger?(Input::RIGHT)
                     pkmn.ev[stat] = 0
                     pkmn.ev[:SPECIAL_ATTACK] = pkmn.ev[:ATTACK] if COMBINE_ATTACKING_STATS
-                    @pool += 20
+                    @pool += STYLE_VALUE_MAX
+                    @scene.pool = @pool
+                    pbPlayDecisionSE
+                    updateStats(pkmn)
+                elsif @pool == 0 && Input.trigger?(Input::RIGHT)
+                    toAddToPool = pkmn.ev[stat]
+                    pkmn.ev[stat] = 0
+                    pkmn.ev[:SPECIAL_ATTACK] = pkmn.ev[:ATTACK] if COMBINE_ATTACKING_STATS
+                    @pool += toAddToPool
                     @scene.pool = @pool
                     pbPlayDecisionSE
                     updateStats(pkmn)
@@ -443,7 +452,7 @@ class StyleValueScreen
                     pbPlayDecisionSE
                     updateStats(pkmn)
                 elsif @pool > 0 && Input.trigger?(Input::LEFT)
-                    pkmn.ev[stat] = [@pool, 20].min
+                    pkmn.ev[stat] = [@pool, STYLE_VALUE_MAX].min
                     pkmn.ev[:SPECIAL_ATTACK] = pkmn.ev[:ATTACK] if COMBINE_ATTACKING_STATS
                     @pool -= pkmn.ev[stat]
                     @scene.pool = @pool
@@ -454,8 +463,10 @@ class StyleValueScreen
                 end
             elsif Input.trigger?(Input::ACTION)
                 if COMBINE_ATTACKING_STATS
+                    # HP, Attack, Defense, Sp. Atk, Sp. Def, Speed
                     choices = {
                         _INTL("Fast Attacker") => [10,20,0,20,0,20],
+                        _INTL("Bulky Attacker") => [20,20,0,20,0,10],
                         _INTL("Physical Tank") => [10,20,20,20,0,0],
                         _INTL("Special Tank") => [10,20,0,20,20,0],
                         _INTL("Physical Wall") => [20,0,20,0,10,0],
@@ -465,6 +476,8 @@ class StyleValueScreen
                     choices = {
                         _INTL("Physical Attacker") => [10,20,0,0,0,20],
                         _INTL("Special Attacker") => [10,0,0,20,0,20],
+                        _INTL("Bulky Physical") => [20,20,0,0,0,10],
+                        _INTL("Bulky Attacker") => [20,0,0,20,0,10],
                         _INTL("Physical Tank") => [10,20,20,0,0,0],
                         _INTL("Special Tank") => [10,0,0,20,20,0],
                         _INTL("Physical Wall") => [20,0,20,0,10,0],
@@ -545,31 +558,31 @@ class PokemonPartyScreen
     end
 end
 
-def styleValuesTrainer(skipExplanation = false)
+def styleValuesTrainer
     unless teamEditingAllowed?
         showNoTeamEditingMessage
         return
     end
 
-    skipExplanation = true if $PokemonSystem.brief_team_building_npcs == 0
+    choices = []
+    choices[cmdAdjustStylePoints = choices.length] = _INTL("Adjust Style Points")
+    choices[cmdExplainStylePoints = choices.length] = _INTL("What are Style Points?")
+    choices.push(_INTL("Cancel"))
+    choice = pbMessage(_INTL("I'm the Style Points adjuster. How can I help?"),choices,choices.length)
 
-    if isTempSwitchOff?("A") && !skipExplanation
-        pbMessage(_INTL("I'm the Style Points adjuster. I can adjust your Pokémon's Style Points any time."))
-        pbMessage(_INTL("To add Style Points to a stat, you'll have to remove them from another."))
-        setTempSwitchOn("A")
-    end
-    if skipExplanation || pbConfirmMessage(_INTL("Would you like to adjust the Style Points of any of your Pokémon?"))
-        pbMessage(_INTL("Choose the party member to adjust.")) if skipExplanation
+    if choice == cmdAdjustStylePoints
         while true
             choosePokemonToStyle
-            if $game_variables[1] < 0
-                pbMessage(_INTL("If your Pokémon need to have their Style Points adjusted, come to me.")) unless skipExplanation
-                break
-            else
-                pbStyleValueScreen(pbGetPokemon(1))
-            end
+            break if $game_variables[1] < 0
+            pbStyleValueScreen(pbGetPokemon(1))
         end
-    else
-        pbMessage(_INTL("If your Pokémon need to have their Style Points adjusted, come to me."))
-    end
+    elsif choice == cmdExplainStylePoints
+        pbMessage(_INTL("Style Points are numbers which have an effect on your Pokemon's stats."))
+        pbMessage(_INTL("Pokemon start with 10 Style Points in each of their stats."))
+        pbMessage(_INTL("To add Style Points to a stat, you have to remove them from another."))
+        pbMessage(_INTL("Investing into Attack and Sp. Atk is extra efficient: they go up at the same time!"))
+        pbMessage(_INTL("Each stat's Style Points value can go as low as 0, and can go as high as 20."))
+        pbMessage(_INTL("A Pokemon's Style Point total never changes, but Style Points give bigger stat bonuses at higher levels."))
+        pbMessage(_INTL("If you need to move quickly, try using the Quick Set option!"))
+    end        
 end

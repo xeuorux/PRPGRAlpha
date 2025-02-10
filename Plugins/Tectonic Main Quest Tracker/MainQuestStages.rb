@@ -140,11 +140,6 @@ def getMainQuestStages
                 _INTL("Defeat Yezera in Helena's House"),
                 _INTL("Professor Tamarind invited you to Helena's House in the County Park, but you found only Yezera there. Fight Yezera to kill some time before Professor Tamarind arrives."),
             ],
-        :CROSS_ELEIG                    =>
-            [
-                _INTL("Cross the Eleig River"),
-                _INTL("Now that you have the Surfboard, you can cross the Eleig River into Prizca. Prizca is the capitol of Makya, and holds the fifth and sixth gyms."),
-            ],
         :FIND_FIFTH_GYM                 =>
             [
                 _INTL("Find Prizca West Gym"),
@@ -153,7 +148,7 @@ def getMainQuestStages
         :DEFEAT_FIFTH_GYM               =>
             [
                 _INTL("Defeat Prizca West Gym"),
-                _INTL("Defeat Bence or Zoe (or both of them), leaders of Prizca West gym. Prizca West is north of the Eleig River Crossing. Their Gym is found in the southern of the two central blocks."),
+                _INTL("Defeat Bence and Zoé, leaders of Prizca West gym. Prizca West is north of the Eleig River Crossing. Their Gym is found in the southern of the two central blocks."),
             ],
         :FIND_SIXTH_GYM                 =>
             [

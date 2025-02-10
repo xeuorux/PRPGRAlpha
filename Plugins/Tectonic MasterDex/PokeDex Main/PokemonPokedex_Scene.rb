@@ -1052,7 +1052,7 @@ class PokemonPokedex_Scene
 
                 speciesToEdit = []
                 @dexlist.each do |dexlist_entry|
-                    species = dexlist_entry[0]
+                    species = dexlist_entry[:species]
                     speciesData = GameData::Species.get(species)
 
                     # Grab the prevos and evos

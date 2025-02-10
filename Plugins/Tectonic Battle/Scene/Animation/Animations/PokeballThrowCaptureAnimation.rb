@@ -13,9 +13,9 @@ class PokeballThrowCaptureAnimation < PokeBattle_Animation
       @shadowVisible  = sprites["shadow_#{battler.index}"].visible
       @trainer        = battler.battle.pbPlayer
       @velocityMult = velocityMult
-      baseBallThrowDuration = $PokemonSystem.battlescene == 1 ? 10 : 16
+      baseBallThrowDuration = $Options.battlescene == 1 ? 10 : 16
       @ballThrowDuration = (baseBallThrowDuration / @velocityMult.to_f).ceil
-      @spedUp = $PokemonSystem.battlescene == 1
+      @spedUp = $Options.battlescene == 1
       super(sprites,viewport)
     end
 
@@ -35,7 +35,7 @@ class PokeballThrowCaptureAnimation < PokeBattle_Animation
       ballEndY   = 112
       ballEndY += 30 if @spedUp
       ballGroundY = ballPos[1]-4
-      battleAnimationsDisabled = $PokemonSystem.battlescene == 2
+      battleAnimationsDisabled = $Options.battlescene == 2
       # Set up Poké Ball sprite
       if battleAnimationsDisabled
         ball = addBallSprite(ballEndX,ballGroundY,@poke_ball)

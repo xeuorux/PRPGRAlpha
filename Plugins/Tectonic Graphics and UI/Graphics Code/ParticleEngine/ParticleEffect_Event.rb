@@ -78,7 +78,7 @@ class ParticleEffect_Event
     def z; return ScreenPosHelper.pbScreenZ(@event); end
 
     def particlesEnabled?
-        return false if $PokemonSystem.particle_effects == 1
+        return false if $Options.particle_effects == 1
         return true
     end
 
@@ -168,11 +168,11 @@ class ParticleEffect_Event
     end
 
     def xExtent
-        return 0
+        return 32
     end
 
     def yExtent
-        return 0
+        return 32
     end
 
     def updateParticle(i,particleZ)

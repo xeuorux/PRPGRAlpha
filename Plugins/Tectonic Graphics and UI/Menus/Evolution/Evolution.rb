@@ -189,7 +189,7 @@ class PokemonEvolutionScene
 
     # Opens the evolution screen
     def pbEvolution(cancancel = true)
-        if $PokemonSystem.quick_evolution == 0
+        if $Options.quick_evolution == 0
           pbBGMStop
           @pokemon.play_cry
           pbMessageDisplay(@sprites["msgwindow"],
@@ -273,7 +273,7 @@ class PokemonEvolutionScene
         $Trainer.pokedex.set_owned(@newspecies)
 
         # Learn moves upon evolution for evolved species
-        unless $PokemonSystem.prompt_level_moves == 1
+        unless $Options.prompt_level_moves == 1
             movelist = @pokemon.getMoveList
             for i in movelist
                 next if i[0] != 0 && i[0] != @pokemon.level # 0 is "learn upon evolution"

@@ -1,15 +1,8 @@
 def defeatBoss(item=nil,count=1,opacityStart=180,opacityTarget=0)
 	$PokemonGlobal.respawnPoint = nil
 
-	event = get_self
-
 	pbSEPlay("Avatar death")
-	opacityStart.downto(opacityTarget) do |i|
-		next if i % 3 != 0
-		event.opacity = i
-		pbWait(1)
-	end
-
+	fadeAway(opacityStart,opacityTarget)
 	pbWait(60)
 
 	setMySwitch('A',true)
@@ -34,6 +27,15 @@ def defeatBoss(item=nil,count=1,opacityStart=180,opacityTarget=0)
 	# If the map is playing the bad variant of the primal clay BGM
 	# Forces it to move to the good variant
 	primalClayBGMChange()
+end
+
+def fadeAway(opacityStart=180,opacityTarget=0)
+	event = get_self
+	opacityStart.downto(opacityTarget) do |i|
+		next if i % 3 != 0
+		event.opacity = i
+		pbWait(1)
+	end
 end
 
 def defeatRegigigas
@@ -94,11 +96,24 @@ end
 
 def avatarSpawnsIn(event_id)
 	pbSEPlay("Avatar summoning")
-	avatarEvent = get_event(event_id)
-	for i in 20..180 do
-		avatarEvent.opacity = i
-		pbWait(1)
-	end
+    if event_id.is_a?(Array)
+        avatarEvents = []
+        event_id.each do |id|
+            avatarEvents.push(get_event(id))
+        end
+        for i in 20..180 do
+            avatarEvents.each do |event|
+                event.opacity = i
+            end
+            pbWait(1)
+        end
+	else
+        avatarEvent = get_event(event_id)
+        for i in 20..180 do
+            avatarEvent.opacity = i
+            pbWait(1)
+        end
+    end
 end
 
 def thunderClap

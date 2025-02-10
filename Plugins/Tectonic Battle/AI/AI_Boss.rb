@@ -8,6 +8,8 @@ class PokeBattle_AI_Boss
     DEFAULT_BOSS_AGGRESSION = 2
     MAX_BOSS_AGGRESSION = 8
 
+    def useUniversalBehaviours?; return true; end
+
     def initialize(_user, _battle)
         # Always or never use a move (if possible)
         # Arrays of moves
@@ -68,13 +70,17 @@ class PokeBattle_AI_Boss
         # All of the procs are called before the Avatar performs a phase change
         @beforePhaseChange = []
 
+        # An array of procs
+        # All of the procs are called when the Avatar is destroyed
+        @onDestroyed = []
+
         # A hash, where the key is a move ID and the value is a proc which provides a score for the given move
         @scoreMove = {}
 
         # Arrays of condition procs, that can evaluate multiple moves
         @scoreMoves = {}
 
-        setUniversalBehaviours
+        setUniversalBehaviours if useUniversalBehaviours?
     end
 
     def self.from_boss_battler(battler)
@@ -107,6 +113,26 @@ class PokeBattle_AI_Boss
         @beforePhaseChange.each do |beforePhaseChangeProc|
             beforePhaseChangeProc.call(user, battle)
         end
+    end
+
+    def onDestroyed(user, battle)
+        @onDestroyed.each do |onDestroyedProc|
+            onDestroyedProc.call(user, battle)
+        end
+    end
+
+    def scoreMove(move, user, target, battle)
+        if @scoreMove.key?(move.id)
+            moveScoreProc = @scoreMove[move.id]
+            return moveScoreProc.call(move, user, target, battle)
+        else
+            @scoreMoves.each do |moveScoreProc|
+                score = moveScoreProc.call(move, user, target, battle)
+                next if score.nil?
+                return score
+            end
+        end
+        return 0
     end
 
     def rejectMoveForTiming?(move, user, _battle)

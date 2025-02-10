@@ -37,7 +37,7 @@ def pbPokemonFollow(x)
   return false if !$Trainer.first_able_pokemon
   $PokemonTemp.dependentEvents.removeEventByName("FollowerPkmn") if pbGetFollowerDependentEvent
   pbAddDependency2(x,"FollowerPkmn",FollowerSettings::FOLLOWER_COMMON_EVENT)
-  $PokemonGlobal.follower_toggled = $PokemonSystem.followers == 0
+  $PokemonGlobal.follower_toggled = $Options.followers == 0
   event = pbGetFollowerDependentEvent
   $PokemonTemp.dependentEvents.pbFollowEventAcrossMaps($game_player,event,true,false)
   $PokemonTemp.dependentEvents.refresh_sprite(true)
@@ -274,6 +274,6 @@ Events.onStepTaken += proc { |_sender,_e|
 }
 
 def refreshFollow(animate=true)
-	return if $PokemonSystem.followers == 1
+	return if $Options.followers == 1
 	pbToggleFollowingPokemon("on",animate)
 end

@@ -1,3 +1,5 @@
+PC_STORAGE_HEALS = false
+
 #===============================================================================
 # Pokémon storage mechanics
 #===============================================================================
@@ -154,7 +156,7 @@ class PokemonStorageScreen
     end
 
     def pbRefreshSingle(i) # For debug
-        @scene.pbUpdateOverlay(i[1], (i[0] == -1) ? @storage.party : nil)
+        @scene.pbUpdateOverlay(i[1], (i[0] == -1) ? @storage.party : nil, true)
         @scene.pbHardRefresh
     end
 
@@ -231,7 +233,7 @@ class PokemonStorageScreen
                     if heldpoke || selected[0] == -1
                         p = heldpoke || @storage[-1, index]
                         p.time_form_set = nil
-                        p.heal
+                        p.heal if PC_STORAGE_HEALS
                         promptToTakeItems(p)
                     end
                     @scene.pbStore(selected, heldpoke, destbox, firstfree)
@@ -278,7 +280,7 @@ class PokemonStorageScreen
         end
         if box >= 0
             @heldpkmn.time_form_set = nil
-            @heldpkmn.heal
+            @heldpkmn.heal if PC_STORAGE_HEALS
             promptToTakeItems(@heldpkmn)
         end
         @scene.pbPlace(selected, @heldpkmn)
@@ -344,7 +346,7 @@ class PokemonStorageScreen
         validBoxes.each do |box|
             for indexInBox in 0...PokemonBox::BOX_SIZE
                 pokemonToStore = allPokemonInValidBoxes.shift
-                break unless pokemonToStore
+                next unless pokemonToStore
                 box[indexInBox] = pokemonToStore
             end
             break if allPokemonInValidBoxes.length == 0
@@ -363,34 +365,21 @@ class PokemonStorageScreen
         return false if box.empty?
         nitems = box.nitems - 1
         listOfPokemon = []
-        dicttosort = {}
         for i in 0..PokemonBox::BOX_SIZE
             listOfPokemon.push(box[i]) if box[i]
         end
 
         sortPokemonList(listOfPokemon,sortingType)
 
-        for i in 0..nitems
-            dicttosort[listOfPokemon[i]] = i
-        end
+        # Store all pokemon back into storage
+        box.clear
 
 		anyMoved = false
         for i in 0..PokemonBox::BOX_SIZE
-            while dicttosort[@storage[boxNumber, i]] != i
-                break unless @storage[boxNumber, i]
-                toswap = box[i]
-                destination = dicttosort[toswap]
-
-				next if destination == i # No swap to happen
-
-				# Actually perform the swap
-                temp = box[destination]
-                box[destination] = toswap
-                box[i] = temp
-
-				anyMoved = true
-            end
+            anyMoved = true if box[i] != listOfPokemon[i]
+            box[i] = listOfPokemon[i]
         end
+        
         @scene.pbHardRefresh
         return anyMoved
     end
@@ -453,8 +442,8 @@ class PokemonStorageScreen
                 if a.level != b.level
                     b.level <=> a.level # Order inverted so higher level is earlier
                 elsif a.species != b.species
-                    idNumberA = GameData::Species.get(a.species).id_number
-                    idNumberB = GameData::Species.get(b.species).id_number
+                    idNumberA = a.species_data.id_number
+                    idNumberB = b.species_data.id_number
                     idNumberA <=> idNumberB
                 elsif a.form != b.form
                     a.form <=> b.form
@@ -462,6 +451,30 @@ class PokemonStorageScreen
                     a.personalID <=> b.personalID
                 end
             }
+        elsif sortingType == 6 # Living Dex
+            sortedList = listToSort.sort { |a, b|
+                if a.species != b.species
+                    idNumberA = a.species_data.id_number
+                    idNumberB = b.species_data.id_number
+                    idNumberA <=> idNumberB
+                elsif a.form != b.form
+                    a.form <=> b.form
+                else
+                    a.personalID <=> b.personalID
+                end
+            }
+
+            listToSort.clear
+
+            GameData::Species.each do |species_data|
+                anyForThisID = false
+                while sortedList[0] && sortedList[0].species_data.id == species_data.id
+                    listToSort.push(sortedList.shift) # Pluck the first element off and move it to the other array
+                    anyForThisID = true
+                end
+                break if sortedList.empty?
+                listToSort.push(nil) unless anyForThisID
+            end
         end
     end
 
@@ -476,7 +489,7 @@ class PokemonStorageScreen
         end
         if box >= 0
             @heldpkmn.time_form_set = nil
-            @heldpkmn.heal
+            @heldpkmn.heal if PC_STORAGE_HEALS
             promptToTakeItems(@heldpkmn)
         end
         @scene.pbSwap(selected, @heldpkmn)
@@ -501,7 +514,7 @@ class PokemonStorageScreen
             pbDisplay(_INTL("That's your last Pokémon!"))
             return
         end
-        command = pbShowCommands(_INTL("Are you sure you want to release this pokemon?"), [_INTL("No"), _INTL("Yes")])
+        command = pbShowCommands(_INTL("Are you sure you want to release this Pokémon?"), [_INTL("No"), _INTL("Yes")])
         if command == 1
             command = pbShowCommands(_INTL("They will be gone forever. Are you sure?"), [_INTL("No"), _INTL("Yes")])
             if command == 1
@@ -668,7 +681,7 @@ class PokemonStorageScreen
                     @scene.pbDisplay(_INTL("The box is empty."))
                     next
                 end
-                sortMethod = @scene.pbChooseSort(_INTL("How will you sort?"))
+                sortMethod = @scene.pbChooseBoxSort(_INTL("How will you sort?"))
                 next unless sortMethod > 0
                 unless pbSortBox(sortMethod, @storage.currentBox)
 					@scene.pbDisplay(_INTL("Each Pokémon is already in the right place!"))
@@ -678,7 +691,7 @@ class PokemonStorageScreen
                     @scene.pbDisplay(_INTL("Can't sort while you have a Pokémon in your hand!"))
                     next
                 end
-                sortMethod = @scene.pbChooseSort(_INTL("How will you sort?"))
+                sortMethod = @scene.pbChooseAllSort(_INTL("How will you sort?"))
                 next unless sortMethod > 0
                 boxesSorted = pbSortAll(sortMethod)
                 if boxesSorted == 0

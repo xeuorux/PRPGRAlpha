@@ -157,7 +157,7 @@ class PokeBattle_Battle
     # For choosing a replacement Pokémon when prompted in the middle of other
     # things happening (U-turn, Baton Pass, in def pbSwitch).
     def pbSwitchInBetween(idxBattler, checkLaxOnly: false, canCancel: false, safeSwitch: nil)
-        if pbOwnedByPlayer?(idxBattler) && !@autoTesting
+        if pbOwnedByPlayer?(idxBattler) && !@autoTesting && !@controlPlayer
             return pbPartyScreen(idxBattler, checkLaxOnly, canCancel) 
         else
             return @battleAI.pbDefaultChooseNewEnemy(idxBattler, safeSwitch)
@@ -205,7 +205,7 @@ class PokeBattle_Battle
                 next if !b || !b.fainted?
                 idxBattler = b.index
                 next unless pbCanChooseNonActive?(idxBattler)
-                if !pbOwnedByPlayer?(idxBattler) # Opponent/ally is switching in
+                if !pbOwnedByPlayer?(idxBattler) || @controlPlayer # Opponent/ally is switching in
                     next if wildBattle? && opposes?(idxBattler) # Wild Pokémon can't switch
                     idxPartyNew = pbSwitchInBetween(idxBattler, safeSwitch: true)
                     pbRecallAndReplace(idxBattler, idxPartyNew)
@@ -375,10 +375,10 @@ class PokeBattle_Battle
         end
     end
 
-    def getTypedHazardHPRatio(hazardType, type1, type2 = nil, type3 = nil)
+    def getTypedHazardHPRatio(hazardType, type1, type2 = nil, type3 = nil, ratio: 0.125)
         typeMod = Effectiveness.calculate(hazardType, type1, type2, type3)
         effectivenessMult = typeEffectivenessMult(typeMod)
-        return effectivenessMult / 8.0
+        return effectivenessMult * ratio
     end
 
     # Called when a Pokémon switches in (entry effects, entry hazards).
@@ -530,6 +530,26 @@ class PokeBattle_Battle
                     else
                         pbDisplay(_INTL("{1} was caught in a sticky web!", battler.pbThis))
                         battler.pbItemStatRestoreCheck if battler.tryLowerStat(:SPEED, nil, increment: 2)
+                    end
+                end
+
+                # Live Wire
+                if battler.pbOwnSide.effectActive?(:LiveWire) && battler.takesIndirectDamage?(false,aiCheck)
+                    bTypes = battler.pbTypes(true)
+                    liveWireRation = 1.0/12.0
+                    liveWireRation *= 2 if rainy?
+                    getTypedHazardHPRatio = getTypedHazardHPRatio(:ELECTRIC, bTypes[0], bTypes[1], bTypes[2], ratio: liveWireRation)
+                    if getTypedHazardHPRatio > 0
+                        if aiCheck
+                            liveWireDamage = battler.applyFractionalDamage(getTypedHazardHPRatio, aiCheck: true)
+                            hazardDamagePredicted += liveWireDamage
+                            echoln("\t[HAZARD SCORING] #{battler.pbThis} will take #{liveWireDamage} damage from Live Wire")
+                        else
+                            pbDisplay(_INTL("{1} was zapped by the exposed wiring!", battler.pbThis))
+                            if battler.applyFractionalDamage(getTypedHazardHPRatio, true, false, true)
+                                return pbOnActiveOne(battler) # For replacement battler
+                            end
+                        end
                     end
                 end
             end

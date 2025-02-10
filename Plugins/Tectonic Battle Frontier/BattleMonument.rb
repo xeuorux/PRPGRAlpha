@@ -93,6 +93,7 @@ def battleMonumentRecievePlayerInLobby
         checkBattleMonumentVictoryAchievements
         pbMessage(_INTL("Congratulations on your victory!"))
         earnBattlePoints(50)
+        battleMonumentTeamSnapshot
     elsif wins
         pbMessage(_INTL("Thanks for playing."))
         
@@ -114,4 +115,8 @@ def battleMonumentRecievePlayerInLobby
     end
     pbBattleChallenge.pbEnd
     pbMessage(_INTL("Come back another time."))
+end
+
+def battleMonumentTeamSnapshot
+    teamSnapshot(_INTL("Battle Monument Team {1}",Time.now.strftime("[%Y-%m-%d] %H_%M_%S.%L")))  
 end

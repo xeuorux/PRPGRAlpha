@@ -21,15 +21,24 @@ BattleHandlers::TargetAbilityKnockedBelowHalf.add(:STICKYMOLD,
     }
 )
 
+BattleHandlers::TargetAbilityKnockedBelowHalf.add(:MOISTSKIN,
+    proc { |ability, target, user, move, _switched, battle|
+        next if user.waterlogged?
+        battle.pbShowAbilitySplash(target, ability)
+        user.applyWaterlog(target) if user.canWaterlog?(target, true)
+        battle.pbHideAbilitySplash(target)
+    }
+)
+
 BattleHandlers::TargetAbilityKnockedBelowHalf.add(:WRATHINSTINCT,
     proc { |ability, target, user, move, _switched, battle|
-        battle.forceUseMove(target, :DRAGONDANCE, user.index, ability: ability)
+        battle.forceUseMove(target, :DRAGONDANCE, ability: ability)
     }
 )
 
 BattleHandlers::TargetAbilityKnockedBelowHalf.add(:EMERGENCYPOWER,
     proc { |ability, target, user, move, _switched, battle|
-        battle.forceUseMove(target, :LIGHTNINGDANCE, user.index, ability: ability)
+        battle.forceUseMove(target, :LIGHTNINGDANCE, ability: ability)
     }
 )
 
@@ -38,6 +47,24 @@ BattleHandlers::TargetAbilityKnockedBelowHalf.add(:MALICE,
         next if user.effectActive?(:Curse)
         battle.pbShowAbilitySplash(target, ability)
         user.applyEffect(:Curse)
+        battle.pbHideAbilitySplash(target)
+    }
+)
+
+BattleHandlers::TargetAbilityKnockedBelowHalf.add(:HARDAS,
+    proc { |ability, target, user, move, _switched, battle|
+        next if user.effectActive?(:Fracture)
+        battle.pbShowAbilitySplash(target, ability)
+        user.applyEffect(:Fracture)
+        battle.pbHideAbilitySplash(target)
+    }
+)
+
+BattleHandlers::TargetAbilityKnockedBelowHalf.add(:KARMA,
+    proc { |ability, target, user, move, _switched, battle|
+        next if user.effectActive?(:Jinxed)
+        battle.pbShowAbilitySplash(target, ability)
+        user.applyEffect(:Jinxed)
         battle.pbHideAbilitySplash(target)
     }
 )
@@ -54,6 +81,6 @@ BattleHandlers::TargetAbilityKnockedBelowHalf.add(:DREAMYHAZE,
 
 BattleHandlers::TargetAbilityKnockedBelowHalf.add(:AROMATIC,
     proc { |ability, target, user, move, _switched, battle|
-        battle.forceUseMove(target, :AROMATHERAPY, user.index, ability: ability)
+        battle.forceUseMove(target, :AROMATHERAPY, ability: ability)
     }
 )

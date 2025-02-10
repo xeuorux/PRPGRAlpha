@@ -9,6 +9,7 @@ module FollowerSettings
   Animation_Come_In   = 29
   Emo_Happy           = 10
   Emo_Normal          = 13
+  Emo_Sad             = 14
   Emo_Hate            = 15
   Emo_Poison          = 17
   Emo_Sing            = 12
@@ -24,6 +25,7 @@ module FollowerSettings
   SLEEPTONE        = [0,0,0,120]
   DIZZYTONE        = [140,70,120,120]
   LEECHEDTONE      = [80,100,50,120]
+  WATERLOGTONE  = [60,60,100,120]
 
   def self.getToneFromStatus(status)
     case status
@@ -41,6 +43,8 @@ module FollowerSettings
       return DIZZYTONE
     when :LEECHED
       return LEECHEDTONE
+    when :WATERLOG
+      return WATERLOGTONE
     end
     return nil
   end

@@ -26,7 +26,7 @@ module MessageConfig
     @@narrowFont      = nil
 
     def self.pbDefaultTextMainColor(opposite: false)
-        if opposite ^ ($PokemonSystem&.dark_mode == 0)
+        if opposite ^ ($Options&.dark_mode == 0)
             return LIGHT_TEXT_MAIN_COLOR
         else
             return DARK_TEXT_MAIN_COLOR
@@ -34,7 +34,7 @@ module MessageConfig
     end
 
     def self.pbDefaultTextShadowColor(opposite: false)
-        if opposite ^ ($PokemonSystem&.dark_mode == 0)
+        if opposite ^ ($Options&.dark_mode == 0)
             return LIGHT_TEXT_SHADOW_COLOR
         else
             return DARK_TEXT_SHADOW_COLOR
@@ -42,7 +42,7 @@ module MessageConfig
     end
 
     def self.pbDefaultFadedTextColor(opposite: false)
-        if opposite ^ ($PokemonSystem&.dark_mode == 0)
+        if opposite ^ ($Options&.dark_mode == 0)
             return LIGHT_FADED_TEXT_COLOR
         else
             return DARK_FADED_TEXT_COLOR
@@ -50,19 +50,19 @@ module MessageConfig
     end
 
     def self.systemFrameName
-        frameName = "Graphics/Windowskins/" + Settings::MENU_WINDOWSKINS[$PokemonSystem.frame]
+        frameName = "Graphics/Windowskins/" + Settings::MENU_WINDOWSKINS[$Options.frame]
         frameName += "_dark" if darkMode?
         return frameName
     end
 
     def self.speechFrameName
-        frameName = "Graphics/Windowskins/" + Settings::SPEECH_WINDOWSKINS[$PokemonSystem.textskin]
+        frameName = "Graphics/Windowskins/" + Settings::SPEECH_WINDOWSKINS[$Options.textskin]
         frameName += "_dark" if darkMode?
         return frameName
     end
 
     def self.pbDefaultSystemFrame
-        if $PokemonSystem
+        if $Options
             return pbResolveBitmap(systemFrameName) || ""
         else
             return pbResolveBitmap("Graphics/Windowskins/" + Settings::MENU_WINDOWSKINS[0]) || ""
@@ -70,7 +70,7 @@ module MessageConfig
     end
 
     def self.pbDefaultSpeechFrame
-        if $PokemonSystem
+        if $Options
             return pbResolveBitmap(speechFrameName) || ""
         else
             return pbResolveBitmap("Graphics/Windowskins/" + Settings::SPEECH_WINDOWSKINS[0]) || ""
@@ -114,7 +114,7 @@ module MessageConfig
     #-----------------------------------------------------------------------------
 
     def self.pbDefaultTextSpeed
-        return $PokemonSystem ? pbSettingToTextSpeed($PokemonSystem.textspeed) : pbSettingToTextSpeed(nil)
+        return $Options ? pbSettingToTextSpeed($Options.textspeed) : pbSettingToTextSpeed(nil)
     end
 
     def self.pbGetTextSpeed
@@ -382,6 +382,8 @@ def getSkinColor(windowskin, color, isDarkSkin, asTag = true)
             colorToRgb32(MessageConfig::DARK_TEXT_SHADOW_COLOR), # 11 Dark default
             colorToRgb32(MessageConfig::LIGHT_TEXT_MAIN_COLOR),
             colorToRgb32(MessageConfig::LIGHT_TEXT_SHADOW_COLOR), # 12 Light default
+            "3976BF", "96B4CA",    # 13 Faded blue
+            "B84940", "E6BAC3",   # 14 Faded red
         ]
         # No special colour, use default
         if color == 0 || color > textcolors.length / 2
@@ -686,7 +688,7 @@ end
 def pbFadeOutAndHide(sprites)
     visiblesprites = {}
     numFrames = (Graphics.frame_rate * 0.4).floor
-    numFrames = 1 if $PokemonSystem.skip_fades == 0
+    numFrames = 1 if $Options.skip_fades == 0
     alphaDiff = (255.0 / numFrames).ceil
     pbDeactivateWindows(sprites) do
         for j in 0..numFrames
@@ -710,7 +712,7 @@ def pbFadeInAndShow(sprites, visiblesprites = nil, duration: 0.4)
         end
     end
     numFrames = (Graphics.frame_rate * duration).floor
-    numFrames = 1 if $PokemonSystem.skip_fades == 0
+    numFrames = 1 if $Options.skip_fades == 0
     alphaDiff = (255.0 / numFrames).ceil
     pbDeactivateWindows(sprites) do
         for j in 0..numFrames

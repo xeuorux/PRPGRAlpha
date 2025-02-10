@@ -742,8 +742,7 @@ class Pokemon
         return nil
     end
 
-    def canHaveMultipleItems?(inBattle = false)
-        return true if @ability == :STICKYFINGERS && inBattle
+    def canHaveMultipleItems?
         return GameData::Ability.get(@ability).is_multiple_item_ability?
     end
 
@@ -1102,14 +1101,6 @@ class Pokemon
         return species_data.weight
     end
 
-    # @return [Hash<Integer>] the EV yield of this Pokémon (a hash with six key/value pairs)
-    def evYield
-        this_evs = species_data.evs
-        ret = {}
-        GameData::Stat.each_main { |s| ret[s.id] = this_evs[s.id] }
-        return ret
-    end
-
     #=============================================================================
     # Happiness, traits, and likes/dislikes
     #=============================================================================
@@ -1229,7 +1220,7 @@ class Pokemon
 
         # echoln("Changing #{name}'s happiness by #{actualGain}") if actualGain != 0
 
-        return if $PokemonSystem.show_trait_unlocks == 1
+        return if $Options.show_trait_unlocks == 1
 
         traitUnlocked = nil
         likeUnlocked = nil
@@ -1282,9 +1273,9 @@ class Pokemon
     # Checks whether this Pokemon can evolve because of using an item on it.
     # @param item_used [Symbol, GameData::Item, nil] the item being used
     # @return [Symbol, nil] the ID of the species to evolve into
-    def check_evolution_on_use_item(item_used)
+    def check_evolution_on_use_item(item_used,finalCheck = true)
         return check_evolution_internal do |pkmn, new_species, method, parameter|
-            success = GameData::Evolution.get(method).call_use_item(pkmn, parameter, item_used)
+            success = GameData::Evolution.get(method).call_use_item(pkmn, parameter, item_used, finalCheck)
             next success ? new_species : nil
         end
     end
@@ -1543,6 +1534,40 @@ class Pokemon
             return :POKEBALL
         else
             return @poke_ball
+        end
+    end
+
+    def switchBall
+        currentBallData = GameData::Item.get(@poke_ball)  
+        if currentBallData.no_ball_swap?
+            pbMessage(_INTL("If you switch {1}'s ball, its current {2} will be thrown away.",name,currentBallData.name))
+            return unless pbConfirmMessageSerious(_INTL("Are you okay with throwing away the {1}?",currentBallData.name))
+        end
+        pbMessage(_INTL("Choose the Poké Ball to put {1} into.",name))
+        pbChoosePokeball(1)
+        itemID = pbGet(1)
+        currentBallName = getItemName(poke_ball)
+        unless itemID == :NONE
+            newBallData = GameData::Item.get(itemID)  
+            newBallName = newBallData.name
+            if itemID == @poke_ball
+                pbMessage(_INTL("{1} is already inside of a {2}!",name,newBallName))
+                return
+            elsif newBallData.no_ball_swap?
+                pbMessage(_INTL("A {1} is too special to swap {2} into.",newBallName,name))
+            else
+                pbMessage(_INTL("You remove {1} from the {2}, and throw it away.",name,currentBallName))
+                if itemID == :BALLLAUNCHER
+                    pbMessage(_INTL("You bring out the {1}, and launch a ball at {2}!",newBallName,name))
+                else
+                    pbMessage(_INTL("You bring out a {1}, and put {2} into it!",newBallName,name))
+                    pbDeleteItem(itemID)
+                end
+                pbSEPlay("Battle catch click")
+                @poke_ball = itemID
+            end
+        else
+            pbMessage(_INTL("You decide to keep {1} in its {2}.",name,currentBallName))
         end
     end
 end

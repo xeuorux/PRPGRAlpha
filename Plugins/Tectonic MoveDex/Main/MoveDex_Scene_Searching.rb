@@ -3,7 +3,7 @@ class MoveDex_Scene
     # FILTERS
     ##################################################
     def searchByMoveName
-        nameInput = pbEnterText(_INTL("Search name..."), 0, 12)
+        nameInput = pbEnterText(_INTL("Search name..."), 0, 20)
         if nameInput && nameInput != ""
             reversed = nameInput[0] == "-"
             nameInput = nameInput[1..-1] if reversed
@@ -53,17 +53,23 @@ class MoveDex_Scene
     end
 
     def searchByMoveCategory
-        selections = [_INTL("Physical"),_INTL("Special"),_INTL("Status"),_INTL("Adaptive"),_INTL("Cancel")]
+        selections = [_INTL("Physical"),_INTL("Special"),_INTL("Adaptive"),_INTL("Status"),_INTL("Not Status"),_INTL("Cancel")]
         moveCategorySelection = pbMessage(_INTL("Which category?"), selections, selections.length)
         return if moveCategorySelection == selections.length - 1
+
+        moveCategorySelection = [0,1,3,2,-1][moveCategorySelection] # Reorder values
 
         dexlist = searchStartingList
         dexlist = dexlist.find_all do |dex_item|
             next false if autoDisqualifyFromSearch(dex_item[:move])
             moveCategory = dex_item[:data].category
-            categoryMatches = moveCategory == moveCategorySelection
-            # Show adaptive moves in searches for physical or special
-            categoryMatches = true if moveCategory == 3 && [0,1].include?(moveCategorySelection)
+            if moveCategorySelection < 0
+                categoryMatches = moveCategory != 2 # Not status
+            else
+                categoryMatches = moveCategory == moveCategorySelection
+                # Show adaptive moves in searches for physical or special
+                categoryMatches = true if moveCategory == 3 && [0,1].include?(moveCategorySelection)
+            end
             next categoryMatches
         end
         return dexlist
@@ -100,6 +106,7 @@ class MoveDex_Scene
         cmdTargeting    = -1
         cmdSignature    = -1
         cmdNotes        = -1
+        cmdLearnableOwned = -1
         cmdInvertList   = -1
         cmdEffectChance = -1
         miscSearches[cmdTag = miscSearches.length]          = _INTL("Tag")
@@ -108,9 +115,10 @@ class MoveDex_Scene
         miscSearches[cmdEffectChance = miscSearches.length] = _INTL("Effect Chance")
         miscSearches[cmdPriority = miscSearches.length]     = _INTL("Priority")
         miscSearches[cmdPP = miscSearches.length]           = _INTL("Power Points")
-        #miscSearches[cmdTargeting = miscSearches.length]    = _INTL("Targeting")
+        miscSearches[cmdTargeting = miscSearches.length]    = _INTL("Targeting")
         miscSearches[cmdSignature = miscSearches.length]    = _INTL("Signature")
         miscSearches[cmdNotes = miscSearches.length]        = _INTL("Has Notes")
+        miscSearches[cmdLearnableOwned = miscSearches.length]        = _INTL("Learnable By")
         miscSearches[cmdInvertList = miscSearches.length]   = _INTL("Invert Current")
         miscSearches.push(_INTL("Cancel"))
         searchSelection = pbMessage(_INTL("Which search?"), miscSearches, miscSearches.length + 1)
@@ -130,6 +138,8 @@ class MoveDex_Scene
             return searchByMoveTargeting
         elsif cmdSignature > -1 && searchSelection == cmdSignature
             return searchByMoveSignature
+        elsif cmdLearnableOwned > -1 && searchSelection == cmdLearnableOwned
+            return searchByMoveLearnableOwned
         elsif cmdNotes > -1 && searchSelection == cmdNotes
             return searchByMoveHasNotes
         elsif cmdInvertList > -1 && searchSelection == cmdInvertList
@@ -230,6 +240,23 @@ class MoveDex_Scene
     end
 
     def searchByMoveTargeting
+        selection = pbMessage(_INTL("Which targeting?"), [_INTL("Single Target"), _INTL("Multi Target"), _INTL("No Target"), _INTL("Cancel")], 4)
+        if selection != 3
+            dexlist = searchStartingList
+
+            dexlist = dexlist.find_all do |dex_item|
+                target_data = GameData::Target.get(dex_item[:data].target)
+                case selection
+                when 0
+                    next target_data.single_target?
+                when 1
+                    next target_data.spread?
+                when 2
+                    next target_data.no_targets?
+                end
+            end
+            return dexlist
+        end
     end
 
     def searchByMoveAvailabilityByLevel
@@ -253,6 +280,52 @@ class MoveDex_Scene
             return dexlist
         end
         return nil
+    end
+
+    def searchByMoveLearnableOwned
+       selection = pbMessage(_INTL("Move learnable by?"), [_INTL("Party Pokemon"), _INTL("Caught Pokemon"), _INTL("Cancel")], 3)
+       partyLearnable = {}
+       caughtLearnable = {}
+       #precalc learnables to avoid lag
+       if selection == 0
+            $Trainer.party.each do |partyMember|
+                partyMember.learnable_moves(false).each do |move|
+                    partyLearnable[move] = true
+                end
+            end
+       end
+
+       if selection == 1
+            eachPokemonInPartyOrStorage do |ownedPokemon| 
+                ownedPokemon.learnable_moves(false).each do |move|
+                     caughtLearnable[move] = true
+                end
+            end
+        end
+
+       if selection != 2
+            dexlist = searchStartingList
+            dexlist = dexlist.find_all do |dex_item|
+                if selection == 0 
+                     next partyLearnable.include?dex_item[:move]
+                end
+                if selection == 1
+                     next caughtLearnable.include?dex_item[:move]
+                end
+            end
+            puts "dexList " + dexlist.length.to_s
+            return dexlist
+        end
+        return nil
+    end
+
+    def debugFilterToNonSignature
+        dexlist = searchStartingList
+
+        dexlist = dexlist.find_all do |dex_item|
+            next !dex_item[:data].is_signature?
+        end
+        return dexlist
     end
 
     def searchByMoveHasNotes

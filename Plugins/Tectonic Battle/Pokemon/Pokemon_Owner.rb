@@ -3,6 +3,7 @@
 #===============================================================================
 class Pokemon
     def ownedByPlayer?
+      return false unless $Trainer
       return @owner.id == $Trainer.id
     end
 

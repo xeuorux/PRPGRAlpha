@@ -35,7 +35,6 @@ def pbTrainerBattleCore(*args)
     foeParty       = []
     foePartyStarts = []
     for arg in args
-        raise _INTL("Expected an array of trainer data, got {1}.", arg) unless arg.is_a?(Array)
         if arg.is_a?(NPCTrainer)
             foeTrainers.push(arg)
             foePartyStarts.push(foeParty.length)
@@ -44,6 +43,7 @@ def pbTrainerBattleCore(*args)
             foeEndSpeeches.push(arg.lose_text)
             foeItems.push(arg.items)
         else
+            raise _INTL("Expected an array of trainer data, got {1}.", arg) unless arg.is_a?(Array)
             # [trainer type, trainer name, ID, speech (optional)]
             trainer = pbLoadTrainer(arg[0], arg[1], arg[2])
             pbMissingTrainer(arg[0], arg[1], arg[2]) unless trainer
@@ -222,6 +222,12 @@ end
 
 def pbTrainerBattleRandom(trainerID, trainerName, partyID = 0)
     pbTrainerBattle(trainerID, trainerName, nil, false, partyID, false, 1, true)
+end
+
+def pbLaneTrainerBattle(trainerID, trainerName, trainerPartyID = 0, canLose = false, outcomeVar = 1)
+    setBattleRule("lanetargeting")
+    setBattleRule("doubleshift")
+    return pbTrainerBattle(trainerID, trainerName, nil, true, trainerPartyID, canLose, outcomeVar)
 end
 
 PERFECTED_SWITCH = 38

@@ -322,7 +322,7 @@ BattleHandlers::DamageCalcUserItem.add(:LUMBERAXE,
 
 BattleHandlers::DamageCalcUserItem.add(:LIFEORB,
   proc { |item, user, _target, move, mults, _baseDmg, _type, aiCheck|
-    unless move.is_a?(PokeBattle_Confusion) || move.is_a?(PokeBattle_Charm)
+    unless move.is_a?(PokeBattle_SelfHit)
       mults[:final_damage_multiplier] *= 1.3
       user.aiLearnsItem(item) unless aiCheck
     end

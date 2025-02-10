@@ -140,13 +140,13 @@ class Game_Player < Game_Character
       return true
     end
   
-    def pbTerrainTag(countBridge = false)
+    def pbTerrainTag(countBridge = false, checkEvents = false)
       return $MapFactory.getTerrainTag(self.map.map_id, @x, @y, countBridge) if $MapFactory
-      return $game_map.terrain_tag(@x, @y, countBridge)
+      return $game_map.terrain_tag(@x, @y, countBridge, checkEvents, self)
     end
 
     def pushingTag
-      return $game_map.pushing_tag(@x, @y)
+      return $game_map.pushing_tag(@x, @y, false, self)
     end
   
     def pbFacingEvent(ignoreInterpreter=false)
@@ -333,6 +333,9 @@ class Game_Player < Game_Character
           next unless event.name[/pushboulder/]
           event.pbPullTowardsPlayer
           result = true
+
+          # For crumbling canyon
+          trackObjectModifiedInPast(event) if event.name[/timelinked/]
         end
       end
       return result

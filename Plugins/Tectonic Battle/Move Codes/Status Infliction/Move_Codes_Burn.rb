@@ -120,3 +120,10 @@ class PokeBattle_Move_EmpoweredIgnite < PokeBattle_Move
         transformType(user, :FIRE)
     end
 end
+
+#===============================================================================
+# Multi-hit move that can burn.
+#===============================================================================
+class PokeBattle_Move_HitTwoToFiveTimesBurn < PokeBattle_BurnMove
+    include RandomHitable
+end

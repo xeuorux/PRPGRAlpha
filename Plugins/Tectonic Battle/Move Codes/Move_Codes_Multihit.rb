@@ -223,3 +223,9 @@ class PokeBattle_Move_EmpoweredBulletSeed < PokeBattle_Move_HitTwoTimesTargetThe
 
     def turnsBetweenUses(); return 3; end
 end
+
+class PokeBattle_Move_HitTwoToFiveTimesAlwaysHits < PokeBattle_Move
+    include RandomHitable
+
+    def pbAccuracyCheck(_user, _target); return true; end
+end

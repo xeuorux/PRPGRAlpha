@@ -68,18 +68,6 @@ FunctionCode = MultiTurnAttackBideThenReturnDoubleDamage
 Flags = CanProtect,CantForce
 Description = The user endures attacks for two turns, then strikes back to cause double the damage taken.
 #-------------------------------
-[BIND]
-Name = Bind
-Type = NORMAL
-Category = Physical
-Power = 40
-Accuracy = 100
-TotalPP = 15
-Target = NearOther
-FunctionCode = BindTarget3
-Flags = CanProtect,CanMirrorMove
-Description = The user squeezes the target, trapping and damaging it for three turns.
-#-------------------------------
 [BLOCK]
 Name = Block
 Type = NORMAL
@@ -116,18 +104,6 @@ FunctionCode = Basic
 Flags = CanProtect,CanMirrorMove,Sound
 Description = The user attacks everything around it with the destructive power of a terrible, explosive sound.
 #-------------------------------
-[CHIPAWAY]
-Name = Chip Away
-Type = NORMAL
-Category = Physical
-Power = 70
-Accuracy = 100
-TotalPP = 15
-Target = NearOther
-FunctionCode = IgnoreTargetDefSpDefEvaStatStages
-Flags = CanProtect,CanMirrorMove
-Description = Seeking an opening, the user strikes continually. Ignores the target's stat step changes.
-#-------------------------------
 [CONVERSION]
 Name = Conversion
 Type = NORMAL
@@ -149,16 +125,6 @@ Target = NearOther
 FunctionCode = SetUserTypesToResistLastAttack
 Description = The user changes its type to make itself resistant to the type of the attack the opponent used last.
 #-------------------------------
-[COPYCAT]
-Name = Copycat
-Type = NORMAL
-Category = Status
-Accuracy = 0
-TotalPP = 15
-Target = User
-FunctionCode = UseLastMoveUsed
-Description = The user mimics the move used immediately before it. The move fails if no other move has been used yet.
-#-------------------------------
 [COVET]
 Name = Covet
 Type = NORMAL
@@ -171,31 +137,18 @@ FunctionCode = StealsItem
 Flags = CanProtect,CanMirrorMove
 Description = The user approaches the target, then steals their item. Items stolen from wild Pokémon are stored.
 #-------------------------------
-[CRUSHCLAW]
-Name = Crush Claw
-Type = NORMAL
-Category = Physical
-Power = 75
-Accuracy = 100
-TotalPP = 10
-Target = NearOther
-FunctionCode = LowerTargetDef3
-Flags = CanProtect,CanMirrorMove
-EffectChance = 100
-Description = The user slashes the target with hard and sharp claws, lowering their Defense by three steps.
-#-------------------------------
 [DIZZYPUNCH]
 Name = Dizzy Punch
 Type = NORMAL
 Category = Physical
-Power = 85
+Power = 80
 Accuracy = 100
 TotalPP = 10
 Target = NearOther
 FunctionCode = Dizzy
 Flags = CanProtect,CanMirrorMove,Punch
-EffectChance = 20
-Description = The target is hit with rhythmically launched punches that have a 20% chance to dizzy.
+EffectChance = 30
+Description = The target is hit with rhythmically launched punches that have a 30% chance to dizzy.
 #-------------------------------
 [DOUBLEEDGE]
 Name = Double-Edge
@@ -281,7 +234,7 @@ Description = The user dances to compel the target to mimic it, making the targe
 [EXPLOSION]
 Name = Explosion
 Type = NORMAL
-Category = Physical
+Category = Adaptive
 Power = 350
 Accuracy = 100
 TotalPP = 5
@@ -329,19 +282,6 @@ Flags = CanProtect,CanMirrorMove
 EffectChance = 100
 Description = An attack that hits first and makes the target flinch. It only works the first turn the user is in battle.
 #-------------------------------
-[FEINT]
-Name = Feint
-Type = NORMAL
-Category = Physical
-Power = 30
-Accuracy = 100
-TotalPP = 10
-Target = NearOther
-Priority = 2
-FunctionCode = RemoveProtections
-Flags = CanMirrorMove
-Description = An attack that hits a target using Protect or Detect. It also lifts the effects of those moves.
-#-------------------------------
 [FLAIL]
 Name = Flail
 Type = NORMAL
@@ -374,7 +314,7 @@ TotalPP = 15
 Target = User
 Priority = 2
 FunctionCode = RedirectAllMovesToUser
-Description = The user draws attention to itself, making all targets take aim only at the user.
+Description = The user draws attention to itself, making all targets take aim only at the user this turn.
 #-------------------------------
 [FURYSWIPES]
 Name = Fury Swipes
@@ -439,12 +379,12 @@ Type = NORMAL
 Category = Physical
 Power = 60
 Accuracy = 100
-TotalPP = 12
+TotalPP = 20
 Target = NearOther
 FunctionCode = Numb
 Flags = CanProtect,CanMirrorMove
-EffectChance = 20
-Description = The user sticks out its head and attacks by charging into the foe. It has a 20% chance to numb.
+EffectChance = 50
+Description = The user sticks out its head and attacks by charging into the foe. It has a 50% chance to numb.
 #-------------------------------
 [HEALBELL]
 Name = Heal Bell
@@ -480,18 +420,6 @@ FunctionCode = CannotMakeTargetFaint
 Flags = CanProtect,CanMirrorMove
 Description = The user holds back when it attacks, and the target is left with at least 1 HP.
 #-------------------------------
-[HORNATTACK]
-Name = Horn Attack
-Type = NORMAL
-Category = Physical
-Power = 65
-Accuracy = 100
-TotalPP = 20
-Target = NearOther
-FunctionCode = Basic
-Flags = CanProtect,CanMirrorMove
-Description = The target is jabbed with a sharply pointed horn to inflict damage.
-#-------------------------------
 [HYPERBEAM]
 Name = Hyper Beam
 Type = NORMAL
@@ -508,7 +436,7 @@ Description = The foe is attacked with a powerful beam. The user must rest on th
 Name = Hyper Fang
 Type = NORMAL
 Category = Physical
-Power = 80
+Power = 90
 Accuracy = 100
 TotalPP = 12
 Target = NearOther
@@ -618,17 +546,6 @@ Target = User
 FunctionCode = HealUserHalfOfTotalHP
 Flags = CanSnatch
 Description = The user restores its own HP by up to half of its maximum HP.
-#-------------------------------
-[MIMIC]
-Name = Mimic
-Type = NORMAL
-Category = Status
-Accuracy = 0
-TotalPP = 10
-Target = NearOther
-FunctionCode = ReplaceMoveThisBattleWithTargetLastMoveUsed
-Flags = CanProtect,CantForce
-Description = The user copies the move last used by the foe. The move can be used until the user is switched out.
 #-------------------------------
 [MULTIATTACK]
 Name = Multi-Attack
@@ -828,7 +745,7 @@ Target = NearOther
 Priority = -6
 FunctionCode = SwitchOutTargetStatusMove
 Flags = CanMagicCoat,CanMirrorMove,Sound
-Description = The foe is forced to switch out to a random ally. Always goes last. Ends wild battles.
+Description = The foe is forced to switch out to a random ally. Always goes last.
 #-------------------------------
 [ROUND]
 Name = Round
@@ -881,7 +798,7 @@ Description = The user attacks with a secret power. Its added effects vary depen
 [SELFDESTRUCT]
 Name = Self-Destruct
 Type = NORMAL
-Category = Physical
+Category = Adaptive
 Power = 250
 Accuracy = 100
 TotalPP = 5
@@ -997,15 +914,15 @@ Description = This attack inflicts double damage on a numbed foe. It also cures 
 [SNORE]
 Name = Snore
 Type = NORMAL
-Category = Special
-Power = 75
+Category = Adaptive
+Power = 90
 Accuracy = 100
 TotalPP = 12
 Target = NearOther
-FunctionCode = FlinchTargetFailsIfUserNotAsleep
+FunctionCode = FailsIfUserNotAsleep
 Flags = CanProtect,CanMirrorMove,Sound
 EffectChance = 50
-Description = An attack that can be used only if the user is asleep. It has a 50% chance to make the target flinch.
+Description = An attack that can be used only if the user is asleep.
 #-------------------------------
 [SOFTBOILED]
 Name = Soft-Boiled
@@ -1021,7 +938,7 @@ Description = The user restores its own HP by up to half of its maximum HP.
 [SPITUP]
 Name = Spit Up
 Type = NORMAL
-Category = Special
+Category = Adaptive
 Power = 1
 Accuracy = 100
 TotalPP = 10
@@ -1042,6 +959,19 @@ FunctionCode = RedirectAllMovesToTarget
 Flags = CanProtect,CanMagicCoat
 Description = The user shines a spotlight on the target so that only it will be attacked during the turn.
 #-------------------------------
+[STELLARATE]
+Name = Stellarate
+Type = NORMAL
+Category = Special
+Power = 25
+Accuracy = 0
+TotalPP = 15
+Target = AllNearFoes
+FunctionCode = HitTwoToFiveTimesAlwaysHits
+Flags = CanProtect,CanMirrorMove
+Description = A barrage of two to five star-shaped rays are shot at the opposing team. Can't miss and skips protections.
+Animation = SWIFT
+#-------------------------------
 [STOCKPILE]
 Name = Stockpile
 Type = NORMAL
@@ -1053,19 +983,6 @@ FunctionCode = UserAddStockpileRaiseDefSpDef2
 Flags = CanSnatch
 Description = The user charges up power and raises its Defense and Sp. Def by two steps. The move can be stacked twice.
 #-------------------------------
-[STOMP]
-Name = Stomp
-Type = NORMAL
-Category = Physical
-Power = 65
-Accuracy = 100
-TotalPP = 15
-Target = NearOther
-FunctionCode = Flinch
-Flags = CanProtect,CanMirrorMove,Kicking
-EffectChance = 30
-Description = The target is stomped with a big foot. It has a 30% chance to make the target flinch.
-#-------------------------------
 [STRUGGLE]
 Name = Struggle
 Type = NORMAL
@@ -1076,7 +993,7 @@ TotalPP = 1
 Target = ClosestNearFoe
 FunctionCode = Struggle
 Flags = CanProtect,CantForce
-Description = Used only if the user has no PP. Uses the higher of the user's Attack or Sp. Atk stat. It also hurts the user.
+Description = Used only if the user has no PP. It also hurts the user.
 #-------------------------------
 [STUFFCHEEKS]
 Name = Stuff Cheeks
@@ -1132,13 +1049,13 @@ TotalPP = 10
 Target = User
 FunctionCode = HealUserDependingOnUserStockpile
 Flags = CanSnatch
-Description = The power stored using the move Stockpile is absorbed by the user to heal its HP. 50% max HP heal per Stockpile charge.
+Description = The user consumes its Stockpile to heal for 50% max HP per charge. This can overheal.
 #-------------------------------
 [SWIFT]
 Name = Swift
 Type = NORMAL
 Category = Special
-Power = 60
+Power = 65
 Accuracy = 0
 TotalPP = 15
 Target = AllNearFoes
@@ -1218,7 +1135,7 @@ Description = The user performs a wobbly dance that dizzies the Pokémon around 
 Name = Thrash
 Type = NORMAL
 Category = Physical
-Power = 120
+Power = 130
 Accuracy = 100
 TotalPP = 10
 Target = ClosestNearFoe
@@ -1277,7 +1194,7 @@ Description = The user unleashes its ultimate move. Can't miss and skips protect
 Name = Uproar
 Type = NORMAL
 Category = Special
-Power = 110
+Power = 130
 Accuracy = 100
 TotalPP = 10
 Target = ClosestNearFoe
@@ -1449,7 +1366,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = HealUserByThirdOfDamageDone
 Flags = CanProtect,CanMirrorMove,Punch
-Description = An energy-draining punch. The user's HP is restored by one third the damage taken by the target.
+Description = An energy-draining punch. The user's HP is restored by 33% of the damage dealt.
 #-------------------------------
 [DYNAMICPUNCH]
 Name = Dynamic Punch
@@ -1526,18 +1443,6 @@ Flags = CanProtect,CanMirrorMove
 EffectChance = 30
 Description = The target is attacked with a shock wave. It has a 30% chance to numb.
 #-------------------------------
-[HAMMERARM]
-Name = Hammer Arm
-Type = FIGHTING
-Category = Physical
-Power = 100
-Accuracy = 100
-TotalPP = 10
-Target = NearOther
-FunctionCode = LowerUserSpd2
-Flags = CanProtect,CanMirrorMove,Punch
-Description = The user swings and hits with its strong and heavy fist. Lowers the user's Speed by two steps.
-#-------------------------------
 [HIGHJUMPKICK]
 Name = High Jump Kick
 Type = FIGHTING
@@ -1607,6 +1512,7 @@ Category = Status
 Accuracy = 0
 TotalPP = 3
 Target = UserSide
+Priority = 4
 FunctionCode = ProtectUserSideFromDamagingMovesIfUserFirstTurn
 Flags = CanSnatch
 Description = The user protects itself and allies from damaging moves. It only works the first turn the user is in battle.
@@ -1621,7 +1527,7 @@ TotalPP = 5
 Target = NearOther
 FunctionCode = TwoTurnAttack
 Flags = CanProtect,CanMirrorMove,CantForce
-Description = Attacks wildly with swords or fists. The user can't move on the next turn.
+Description = Attacks wildly with swords or fists. The user must rest on the next turn, however.
 #-------------------------------
 [NORETREAT]
 Name = No Retreat
@@ -1695,19 +1601,6 @@ Target = NearOther
 FunctionCode = ScalesWithLostHP
 Flags = CanProtect,CanMirrorMove
 Description = An all-out attack that becomes more powerful the less HP the user has.
-#-------------------------------
-[ROLLINGKICK]
-Name = Rolling Kick
-Type = FIGHTING
-Category = Physical
-Power = 60
-Accuracy = 100
-TotalPP = 12
-Target = NearOther
-FunctionCode = Flinch
-Flags = CanProtect,CanMirrorMove,Kicking
-EffectChance = 40
-Description = The user lashes out with a quick, spinning kick. It has a 40% chance to make the target flinch.
 #-------------------------------
 [SACREDSWORD]
 Name = Sacred Sword
@@ -1893,7 +1786,7 @@ Accuracy = 80
 TotalPP = 10
 Target = AllNearFoes
 FunctionCode = Frostbite
-Flags = CanProtect,CanMirrorMove
+Flags = CanProtect,CanMirrorMove,Wind
 EffectChance = 30
 Description = The user attacks foes with savagely cold winds. It has a 30% chance to frostbite.
 Animation = HURRICANE
@@ -2006,18 +1899,6 @@ FunctionCode = TwoTurnAttackInvulnerableInSky
 Flags = CanProtect,CanMirrorMove
 Description = The user soars, becoming invulnerable, then strikes on the second turn.
 #-------------------------------
-[FURYPECKS]
-Name = Fury Pecks
-Type = FLYING
-Category = Physical
-Power = 20
-Accuracy = 100
-TotalPP = 15
-Target = NearOther
-FunctionCode = HitTwoToFiveTimes
-Flags = CanProtect,CanMirrorMove
-Description = The target is jabbed repeatedly with a horn or beak two to five times in a row.
-#-------------------------------
 [GUST]
 Name = Gust
 Type = FLYING
@@ -2029,16 +1910,6 @@ Target = NearOther
 FunctionCode = Basic
 Flags = CanProtect,CanMirrorMove,Wind
 Description = The user whips up a gust of wind to attack the target.
-#-------------------------------
-[MIRRORMOVE]
-Name = Mirror Move
-Type = FLYING
-Category = Status
-Accuracy = 0
-TotalPP = 15
-Target = NearOther
-FunctionCode = UseLastMoveUsedByTarget
-Description = The user counters the target by mimicking the target's last move.
 #-------------------------------
 [OBLIVIONWING]
 Name = Oblivion Wing
@@ -2056,13 +1927,13 @@ Description = The user absorbs its target's HP. The user's HP is restored by 75%
 Name = Peck
 Type = FLYING
 Category = Physical
-Power = 45
+Power = 40
 Accuracy = 100
 TotalPP = 30
 Target = NearOther
 FunctionCode = Basic
-Flags = CanProtect,CanMirrorMove
-Description = The target is jabbed with a sharply pointed beak or horn.
+Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
+Description = The target is jabbed with a sharply pointed beak or horn. Critical hits twice as often.
 #-------------------------------
 [PLUCK]
 Name = Pluck
@@ -2108,7 +1979,7 @@ Target = NearOther
 Priority = -6
 FunctionCode = SwitchOutTargetStatusMove
 Flags = CanMagicCoat,CanMirrorMove,Wind
-Description = The foe is forced to switch out to a random ally. Always goes last. Ends wild battles.
+Description = The foe is forced to switch out to a random ally. Always goes last.
 #-------------------------------
 [WINGCRASH]
 Name = Wing Crash
@@ -2183,20 +2054,20 @@ TotalPP = 15
 Target = User
 FunctionCode = RaiseUserAtkDefAcc2
 Flags = CanSnatch
-Description = The user coils up and concentrates. This raises its Attack, Defense, and accuracy by two steps each.
+Description = The user coils up and concentrates. This raises its Attack, Defense, and Accuracy by two steps each.
 #-------------------------------
 [CROSSPOISON]
 Name = Cross Poison
 Type = POISON
 Category = Physical
-Power = 70
+Power = 90
 Accuracy = 100
 TotalPP = 15
 Target = NearOther
 FunctionCode = Poison
 Flags = CanProtect,CanMirrorMove,HighCriticalHitRate,Blade
 EffectChance = 20
-Description = A slashing attack with a poisonous blade that has a 20% chance to poison. Critical hits twice as often.
+Description = A slashing attack with a poisonous blade. Critical hits twice as often.
 #-------------------------------
 [DIRECLAW]
 Name = Dire Claw
@@ -2283,10 +2154,10 @@ Power = 60
 Accuracy = 100
 TotalPP = 20
 Target = NearOther
-FunctionCode = Poison
+FunctionCode = Basic
 Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
 EffectChance = 10
-Description = The user hits the target with its tail. It has a 10% chance to poison. Critical hits twice as often.
+Description = The user hits the target with its tail. Critical hits twice as often.
 #-------------------------------
 [PURIFY]
 Name = Purify
@@ -2400,19 +2271,6 @@ Description = The user drenches the foe in a special poisonous liquid. Its power
 #-------------------------------
 #		GROUND MOVES
 #-------------------------------
-[BONECLUB]
-Name = Bone Club
-Type = GROUND
-Category = Physical
-Power = 65
-Accuracy = 100
-TotalPP = 15
-Target = NearOther
-FunctionCode = Flinch
-Flags = CanProtect,CanMirrorMove
-EffectChance = 50
-Description = The user clubs the target with a bone. It has a 50% chance to make the target flinch.
-#-------------------------------
 [BONEMERANG]
 Name = Bonemerang
 Type = GROUND
@@ -2507,19 +2365,7 @@ Accuracy = 0
 TotalPP = 5
 Target = BothSides
 FunctionCode = StartGravity5
-Description = Gravity is intensified for five turns, forcing Pokemon down from the air and doubling all move accuracy.
-#-------------------------------
-[HIGHHORSEPOWER]
-Name = High Horsepower
-Type = GROUND
-Category = Physical
-Power = 95
-Accuracy = 100
-TotalPP = 10
-Target = NearOther
-FunctionCode = Basic
-Flags = CanProtect,CanMirrorMove
-Description = The user fiercely attacks the target using its entire body.
+Description = Gravity is intensified for five turns, forcing Pokémon down from the air and doubling all move Accuracy.
 #-------------------------------
 [LANDSWRATH]
 Name = Land's Wrath
@@ -2567,22 +2413,10 @@ Accuracy = 80
 TotalPP = 10
 Target = AllNearFoes
 FunctionCode = Burn
-Flags = CanProtect,CanMirrorMove
+Flags = CanProtect,CanMirrorMove,Wind
 EffectChance = 30
 Description = The user wraps foes in fierce winds and searingly hot sand. It has a 30% chance to burn.
 Animation = SCORCHINGSANDS
-#-------------------------------
-[SANDTOMB]
-Name = Sand Tomb
-Type = GROUND
-Category = Physical
-Power = 50
-Accuracy = 100
-TotalPP = 15
-Target = NearOther
-FunctionCode = BindTarget3
-Flags = CanProtect,CanMirrorMove
-Description = The user spins a sandstorm around the target, trapping and damaging it for three turns.
 #-------------------------------
 [SCORCHINGSANDS]
 Name = Scorching Sands
@@ -2691,10 +2525,10 @@ Power = 100
 Accuracy = 100
 TotalPP = 5
 Target = AllNearFoes
-FunctionCode = RaiseUserDef1
+FunctionCode = RaiseUserDefSpDef1
 Flags = CanProtect,CanMirrorMove
 EffectChance = 100
-Description = The user whips up a storm of diamonds to damage foes, raising its Defense.
+Description = The user whips up a storm of diamonds to damage foes, raising its Defense and Sp. Def.
 #-------------------------------
 [HEADSMASH]
 Name = Head Smash
@@ -2768,19 +2602,6 @@ Flags = CanProtect,CanMirrorMove
 Description = The user rolls into the target. Its power doubles if it hits in succession.
 Animation = ROLLOUT
 #-------------------------------
-[ROCKSLIDE]
-Name = Rock Slide
-Type = ROCK
-Category = Physical
-Power = 75
-Accuracy = 100
-TotalPP = 10
-Target = AllNearFoes
-FunctionCode = Flinch
-Flags = CanProtect,CanMirrorMove
-EffectChance = 30
-Description = Large boulders are hurled at the foes to inflict damage. It has a 30% chance to cause flinching.
-#-------------------------------
 [ROCKTHROW]
 Name = Rock Throw
 Type = ROCK
@@ -2826,19 +2647,7 @@ Accuracy = 0
 TotalPP = 10
 Target = BothSides
 FunctionCode = StartSandstorm8
-Description = Summons sandstorm for eight turns. Damages non-Rock, non-Ground Pokemon every turn.
-#-------------------------------
-[SMACKDOWN]
-Name = Smack Down
-Type = ROCK
-Category = Physical
-Power = 50
-Accuracy = 100
-TotalPP = 12
-Target = NearOther
-FunctionCode = HitsTargetInSkyGroundsTarget
-Flags = CanProtect,CanMirrorMove
-Description = The user throws a stone or projectile to attack. A flying Pokémon will fall to the ground when hit.
+Description = Summons sandstorm for eight turns. Damages non-Rock, non-Ground Pokémon every turn.
 #-------------------------------
 [STEALTHROCK]
 Name = Stealth Rock
@@ -2922,10 +2731,10 @@ Power = 90
 Accuracy = 100
 TotalPP = 15
 Target = NearOther
-FunctionCode = LowerTargetSpAtk1
+FunctionCode = LowerTargetSpDef1
 Flags = CanProtect,CanMirrorMove,Sound
 EffectChance = 20
-Description = The user vibrates its wings to make a damaging sound wave. It has a 20% chance to lower Sp. Atk.
+Description = The user vibrates its wings to make a damaging sound wave. It has a 20% chance to lower Sp. Def.
 #-------------------------------
 [DEFENDORDER]
 Name = Defend Order
@@ -2985,7 +2794,7 @@ TotalPP = 10
 Target = User
 FunctionCode = HealUserThreeFifthsOfTotalHP
 Flags = CanSnatch
-Description = The user calls out its underlings to heal it. The user regains 3/5ths of its max HP.
+Description = The user calls out its underlings to heal it. The user regains 60% of its max HP.
 #-------------------------------
 [INFESTATION]
 Name = Infestation
@@ -3009,20 +2818,20 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = HealUserByHalfOfDamageDone
 Flags = CanProtect,CanMirrorMove
-Description = The user drains the target's blood. The user's HP is restored by half the damage taken by the target.
+Description = The user drains the target's blood. The user's HP is restored by 50% of the damage dealt.
 #-------------------------------
 [LUNGE]
 Name = Lunge
 Type = BUG
 Category = Physical
-Power = 70
+Power = 80
 Accuracy = 100
 TotalPP = 12
 Target = NearOther
-FunctionCode = LowerTargetAtk2
+FunctionCode = LowerTargetAtk1
 Flags = CanProtect,CanMirrorMove
 EffectChance = 100
-Description = The user makes a lunge at the target, attacking with full force. This lowers the target's Attack by two steps.
+Description = The user makes a lunge at the target, attacking with full force. This lowers the target's Attack by one step.
 #-------------------------------
 [MEGAHORN]
 Name = Megahorn
@@ -3075,14 +2884,14 @@ Description = The user raises their Sp. Atk and Sp. Def by two steps, and Speed 
 Name = Signal Beam
 Type = BUG
 Category = Special
-Power = 75
+Power = 65
 Accuracy = 100
 TotalPP = 12
 Target = NearOther
 FunctionCode = Dizzy
 Flags = CanProtect,CanMirrorMove
-EffectChance = 10
-Description = The user attacks with a beam of light. It has a 10% chance to dizzy.
+EffectChance = 30
+Description = The user attacks with a beam of light. It has a 30% chance to dizzy.
 #-------------------------------
 [SILVERWIND]
 Name = Silver Wind
@@ -3097,19 +2906,6 @@ Flags = CanProtect,CanMirrorMove,Wind
 EffectChance = 20
 Description = The foe is attacked with powdery scales blown by wind. It has a 20% chance to raise all stats.
 #-------------------------------
-[SKITTERSMACK]
-Name = Skitter Smack
-Type = BUG
-Category = Physical
-Power = 70
-Accuracy = 100
-TotalPP = 10
-Target = NearOther
-FunctionCode = LowerTargetSpAtk2
-Flags = CanProtect,CanMirrorMove
-EffectChance = 100
-Description = The user skitters behind the target to attack. This also lowers the target's Sp. Atk stat by two steps.
-#-------------------------------
 [STEAMROLLER]
 Name = Steamroller
 Type = BUG
@@ -3118,10 +2914,10 @@ Power = 65
 Accuracy = 100
 TotalPP = 15
 Target = NearOther
-FunctionCode = Flinch
+FunctionCode = LowerTargetDef1
 Flags = CanProtect,CanMirrorMove
 EffectChance = 30
-Description = The user rolls over its foes, crushing them. It has a 30% chance to make the target flinch.
+Description = The user rolls over its foes, crushing them. It has a 30% chance to reduce the target's Defense.
 #-------------------------------
 [STICKYWEB]
 Name = Sticky Web
@@ -3346,18 +3142,6 @@ Target = NearOther
 FunctionCode = TwoTurnAttackInvulnerableRemoveProtections
 Flags = CanMirrorMove
 Description = The user vanishes somewhere, becoming invulnerable, then strikes on the next turn. Skips and destroys protections.
-#-------------------------------
-[POLTERGEIST]
-Name = Poltergeist
-Type = GHOST
-Category = Physical
-Power = 110
-Accuracy = 100
-TotalPP = 5
-Target = NearOther
-FunctionCode = FailsTargetNoItem
-Flags = CanProtect,CanMirrorMove
-Description = Attacks the target by controlling its item. Fails if the target doesn't have an item.
 #-------------------------------
 [SCARYFACE]
 Name = Scary Face
@@ -3671,9 +3455,9 @@ Category = Status
 Accuracy = 0
 TotalPP = 25
 Target = User
-FunctionCode = EnsureNextCriticalHit
+FunctionCode = EnsureCriticalHits3
 Flags = CanSnatch
-Description = The user focuses intensely. The attack on the next turn always results in a critical hit.
+Description = The user focuses intensely. For the next three turns, its attacks will be guarenteed critical hits.
 #-------------------------------
 [METALBURST]
 Name = Metal Burst
@@ -3827,14 +3611,14 @@ Description = The target is razed by a fiery explosion. The user must rest on th
 Name = Blaze Kick
 Type = FIRE
 Category = Physical
-Power = 85
+Power = 90
 Accuracy = 100
 TotalPP = 10
 Target = NearOther
 FunctionCode = Burn
-Flags = CanProtect,CanMirrorMove,HighCriticalHitRate,Kicking
+Flags = CanProtect,CanMirrorMove,Kicking
 EffectChance = 10
-Description = The user launches a kick. Critical hits twice as often. It has a 10% chance to burn.
+Description = The user launches a fiery kick. It has a 10% chance to burn.
 #-------------------------------
 [BLUEFLARE]
 Name = Blue Flare
@@ -4089,19 +3873,6 @@ Flags = CanProtect,CanMirrorMove
 EffectChance = 100
 Description = The user attacks by engulfing the target in an intense fire. It leaves the target with a burn.
 #-------------------------------
-[LAVAPLUME]
-Name = Lava Plume
-Type = FIRE
-Category = Special
-Power = 80
-Accuracy = 100
-TotalPP = 12
-Target = AllNearOthers
-FunctionCode = Burn
-Flags = CanProtect,CanMirrorMove
-EffectChance = 30
-Description = An inferno of scarlet flames torches everything around the user. It has a 30% chance to burn.
-#-------------------------------
 [MAGMASTORM]
 Name = Magma Storm
 Type = FIRE
@@ -4122,7 +3893,7 @@ Power = 150
 Accuracy = 100
 TotalPP = 5
 Target = AllNearOthers
-FunctionCode = UserLosesHalfOfTotalHPExplosive
+FunctionCode = UserLosesHalfOfTotalHP
 Flags = CanProtect,CanMirrorMove
 Description = The user attacks everything by causing its own head to explode. This also damages the user.
 #-------------------------------
@@ -4168,7 +3939,7 @@ Description = Attacks by igniting a small stone and launching it as a fiery ball
 Name = Raging Fury
 Type = FIRE
 Category = Physical
-Power = 135
+Power = 120
 Accuracy = 100
 TotalPP = 10
 Target = ClosestNearFoe
@@ -4466,20 +4237,9 @@ Power = 90
 Accuracy = 100
 TotalPP = 12
 Target = NearOther
-FunctionCode = CannotBeRedirected
+FunctionCode = Basic
 Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
-Description = Ignores all attempts at redirection, allowing this move to hit the chosen target. Critical hits twice as often.
-#-------------------------------
-[SOAK]
-Name = Soak
-Type = WATER
-Category = Status
-Accuracy = 100
-TotalPP = 15
-Target = NearOther
-FunctionCode = SetTargetTypesToWater
-Flags = CanProtect,CanMagicCoat,CanMirrorMove
-Description = The user shoots a torrent of water at the target and changes the target's type to Water.
+Description = The target is struck with a supersonic water blast. Critical hits twice as often.
 #-------------------------------
 [SPARKLINGARIA]
 Name = Sparkling Aria
@@ -4525,9 +4285,10 @@ Power = 90
 Accuracy = 100
 TotalPP = 12
 Target = AllNearOthers
-FunctionCode = HitsDivers
+FunctionCode = Waterlog
 Flags = CanProtect,CanMirrorMove
-Description = It swamps the area with a giant wave, hitting every battler nearby and underwater.
+EffectChance = 10
+Description = It swamps the area with a giant wave, hitting every battler nearby. Has a 10% chance to waterlog.
 #-------------------------------
 [SURGINGSTRIKES]
 Name = Surging Strikes
@@ -4558,13 +4319,14 @@ Description = The user charges at the target and has a 40% chance to make it fli
 Name = Water Gun
 Type = WATER
 Category = Special
-Power = 45
+Power = 40
 Accuracy = 100
 TotalPP = 20
 Target = NearOther
 FunctionCode = Basic
-Flags = CanProtect,CanMirrorMove
-Description = The target is blasted with a forceful shot of water.
+Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
+EffectChance = 10
+Description = The target is blasted with a forceful shot of water. Critical hits twice as often.
 #-------------------------------
 [WATERPLEDGE]
 Name = Water Pledge
@@ -4582,14 +4344,14 @@ Description = A column of water strikes the target. When combined with its fire 
 Name = Water Pulse
 Type = WATER
 Category = Special
-Power = 60
+Power = 65
 Accuracy = 100
 TotalPP = 15
 Target = NearOther
 FunctionCode = Dizzy
 Flags = CanProtect,CanMirrorMove,Pulse
-EffectChance = 20
-Description = The user attacks the target with a pulsing blast of water. It has a 20% chance to dizzy.
+EffectChance = 30
+Description = The user attacks the target with a pulsing blast of water. It has a 30% chance to dizzy.
 #-------------------------------
 [WATERSHURIKEN]
 Name = Water Shuriken
@@ -4602,7 +4364,7 @@ Target = NearOther
 Priority = 1
 FunctionCode = HitTwoToFiveTimes
 Flags = CanProtect,CanMirrorMove
-Description = The user hits the target with throwing stars 2-5 times in a row. This move always goes first.
+Description = The user hits the target with throwing stars 2 to 5 times in a row. This move always goes first.
 #-------------------------------
 [WATERSPOUT]
 Name = Water Spout
@@ -4640,7 +4402,7 @@ TotalPP = 20
 Target = NearOther
 FunctionCode = HealUserByHalfOfDamageDone
 Flags = CanProtect,CanMirrorMove
-Description = A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.
+Description = A nutrient-draining attack. The user's HP is restored by 50% of the damage dealt.
 #-------------------------------
 [AROMATHERAPY]
 Name = Aromatherapy
@@ -4759,7 +4521,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = HealUserByHalfOfDamageDone
 Flags = CanProtect,CanMirrorMove
-Description = A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.
+Description = A nutrient-draining attack. The user's HP is restored by 50% of the damage dealt.
 #-------------------------------
 [GRASSKNOT]
 Name = Grass Knot
@@ -4794,7 +4556,7 @@ TotalPP = 15
 Target = User
 FunctionCode = RaiseUserAtkSpAtk2Or4InSun
 Flags = CanSnatch
-Description = The user's body grows all at once, raising Atk and Sp. Atk by two steps each, or 4 in Sunshine.
+Description = The user's body grows all at once, raising Atk and Sp. Atk by two steps each, or 4 in sunshine.
 #-------------------------------
 [INGRAIN]
 Name = Ingrain
@@ -4886,20 +4648,7 @@ TotalPP = 12
 Target = NearOther
 FunctionCode = HealUserByHalfOfDamageDone
 Flags = CanProtect,CanMirrorMove
-Description = A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.
-#-------------------------------
-[NEEDLEARM]
-Name = Needle Arm
-Type = GRASS
-Category = Physical
-Power = 60
-Accuracy = 100
-TotalPP = 12
-Target = NearOther
-FunctionCode = Flinch
-Flags = CanProtect,CanMirrorMove
-EffectChance = 50
-Description = The user attacks by wildly swinging its thorny arms. It has a 50% chance to make the target flinch.
+Description = A nutrient-draining attack. The user's HP is restored by 50% of the damage dealt.
 #-------------------------------
 [PETALDANCE]
 Name = Petal Dance
@@ -4984,7 +4733,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = TwoTurnAttackOneTurnInSun
 Flags = CanProtect,CanMirrorMove
-Description = The user charges, then attacks on the second turn. Charges instantly in Sunshine.
+Description = The user charges, then attacks on the second turn. Charges instantly in sunshine.
 #-------------------------------
 [SOLARGLIDE]
 Name = Solar Glide
@@ -4996,7 +4745,7 @@ TotalPP = 15
 Target = NearOther
 FunctionCode = IncreasedPriorityInSunshine
 Flags = CanProtect,CanMirrorMove
-Description = Attacks by gliding on the ground. This move always goes first in sun.
+Description = Attacks by gliding on the ground. This move always goes first in sunshine.
 #-------------------------------
 [SPIKYSHIELD]
 Name = Spiky Shield
@@ -5040,7 +4789,7 @@ TotalPP = 5
 Target = User
 FunctionCode = HealUserDependingOnSunshine
 Flags = CanSnatch
-Description = The user restores 1/2 of its HP, or 2/3rds in Sunshine.
+Description = The user restores 1/2 of its HP, or 2/3rds in sunshine.
 #-------------------------------
 [TROPKICK]
 Name = Trop Kick
@@ -5126,7 +4875,7 @@ TotalPP = 15
 Target = User
 FunctionCode = RaiseUserDefSpDef2EmpowersNextElectricAttack
 Flags = CanSnatch
-Description = The user becomes charged, doubling its next Electric-type attack. Also raises the user's defensive stats by two steps each.
+Description = The user becomes energy charged, doubling its next Electric-type attack. Also raises the user's defensive stats by two steps each.
 #-------------------------------
 [CHARGEBEAM]
 Name = Charge Beam
@@ -5213,17 +4962,6 @@ FunctionCode = StartUserAirborne5
 Flags = CanSnatch
 Description = The user levitates using electrically generated magnetism for five turns.
 #-------------------------------
-[NUMB]
-Name = Numb
-Type = ELECTRIC
-Category = Status
-Accuracy = 100
-TotalPP = 12
-Target = NearOther
-FunctionCode = Numb
-Flags = CanProtect,CanMagicCoat,CanMirrorMove
-Description = A weak electric charge is launched to numb the target.
-#-------------------------------
 [NUZZLE]
 Name = Nuzzle
 Type = ELECTRIC
@@ -5247,7 +4985,7 @@ TotalPP = 15
 Target = AllNearOthers
 FunctionCode = HealUserByHalfOfDamageDone
 Flags = CanProtect,CanMirrorMove
-Description = The user attacks everything around it. The user's HP is restored by half the damage dealt.
+Description = The user attacks everything around it. The user's HP is restored by 50% of the damage dealt.
 #-------------------------------
 [PLASMAFISTS]
 Name = Plasma Fists
@@ -5397,7 +5135,7 @@ Accuracy = 80
 TotalPP = 10
 Target = AllNearFoes
 FunctionCode = Numb
-Flags = CanProtect,CanMirrorMove
+Flags = CanProtect,CanMirrorMove,Wind
 EffectChance = 30
 Description = The user savagely attacks foes with lightning and wind. It has a 30% chance to numb.
 Animation = THUNDER
@@ -5507,7 +5245,7 @@ TotalPP = 12
 Target = NearOther
 FunctionCode = HealUserByHalfOfDamageDoneDoubleDamageIfTargetAsleep
 Flags = CanProtect,CanMirrorMove
-Description = Heals the user for 50% of the damage caused. Power doubles if the foe is asleep.
+Description = The user's HP is restored by 50% of the damage dealt. Power doubles if the foe is asleep.
 #-------------------------------
 [EERIESPELL]
 Name = Eerie Spell
@@ -5534,19 +5272,6 @@ Flags = CanProtect,CanMirrorMove
 EffectChance = 100
 Description = The user slashes the target with aura-enriched wings. This boosts the user's Speed by two steps.
 Animation = SKYATTACK
-#-------------------------------
-[EXTRASENSORY]
-Name = Extrasensory
-Type = PSYCHIC
-Category = Special
-Power = 80
-Accuracy = 100
-TotalPP = 15
-Target = NearOther
-FunctionCode = Flinch
-Flags = CanProtect,CanMirrorMove
-EffectChance = 40
-Description = The user attacks with an odd, unseeable power. It has a 40% chance to make the target flinch.
 #-------------------------------
 [FREEZINGGLARE]
 Name = Freezing Glare
@@ -5583,17 +5308,6 @@ Target = NearOther
 FunctionCode = AverageUserTargetDefenses
 Flags = CanProtect
 Description = The user employs psychic power to average its base Defense and base Sp. Def stats with those of its target.
-#-------------------------------
-[HEALBLOCK]
-Name = Heal Block
-Type = PSYCHIC
-Category = Status
-Accuracy = 100
-TotalPP = 12
-Target = AllNearFoes
-FunctionCode = DisableTargetHealingMoves5
-Flags = CanProtect,CanMagicCoat,CanMirrorMove
-Description = For five turns, the foe is prevented from using any moves, Abilities, or held items that recover HP.
 #-------------------------------
 [HEALINGWISH]
 Name = Healing Wish
@@ -5651,7 +5365,7 @@ TotalPP = 5
 Target = NearOther
 FunctionCode = RemoveProtectionsBypassSubstituteAlwaysHits
 Flags = CanMirrorMove
-Description = Using a hyperspace hole, the user appears right next to the target and strikes. Skips and destroys protections and substitutes. Always hits.
+Description = Using a hyperspace hole, the user appears next to the target and strikes. Skips and destroys protections and substitutes. Always hits.
 #-------------------------------
 [INSTRUCT]
 Name = Instruct
@@ -5709,20 +5423,6 @@ Target = User
 Priority = 4
 FunctionCode = BounceBackProblemCausingStatusMoves
 Description = Until end of turn, reflects status moves that target the user or create hazards around it.
-#-------------------------------
-[MINDWAVES]
-Name = Mind Waves
-Type = PSYCHIC
-Category = Special
-Power = 40
-Accuracy = 100
-TotalPP = 30
-Target = NearOther
-FunctionCode = Dizzy
-Flags = CanProtect,CanMirrorMove
-EffectChance = 10
-Description = The target is hit by a weak telekinetic force. It has a 10% chance to dizzy.
-Animation = CONFUSION
 #-------------------------------
 [MIRRORCOAT]
 Name = Mirror Coat
@@ -5806,8 +5506,8 @@ TotalPP = 15
 Target = NearOther
 FunctionCode = Dizzy
 Flags = CanProtect,CanMirrorMove
-EffectChance = 10
-Description = The target is attacked with a peculiar ray. It has a 10% chance to dizzy.
+EffectChance = 30
+Description = The target is attacked with a peculiar ray. It has a 30% chance to dizzy.
 #-------------------------------
 [PSYCHIC]
 Name = Psychic
@@ -5893,18 +5593,6 @@ EffectChance = 100
 Description = Cloaking itself in psychic energy, the user slams into the target, raising the user's Defense by two steps.
 Animation = ZENHEADBUTT
 #-------------------------------
-[PSYWAVE]
-Name = Psywave
-Type = PSYCHIC
-Category = Special
-Power = 1
-Accuracy = 100
-TotalPP = 12
-Target = NearOther
-FunctionCode = SetTargetTypesToBug
-Flags = CanProtect,CanMirrorMove
-Description = The target is attacked with an odd psychic wave. The attack varies in intensity.
-#-------------------------------
 [REFLECT]
 Name = Reflect
 Type = PSYCHIC
@@ -5957,7 +5645,7 @@ TotalPP = 15
 Target = User
 Priority = -6
 FunctionCode = SwitchOutUserStatusMove
-Description = The user switches out to a party Pokémon in waiting. Always goes last. Ends wild battles.
+Description = The user switches out to a party Pokémon in waiting. Always goes last.
 #-------------------------------
 [TRICK]
 Name = Trick
@@ -6020,7 +5708,7 @@ TotalPP = 15
 Target = UserSide
 FunctionCode = StartWeakenDamageAgainstUserSideIfInHail5
 Flags = CanSnatch
-Description = This move reduces damage from attacks for five turns. This can be used only in a hailstorm.
+Description = This move reduces damage from attacks for five turns. This can be used only in hail.
 #-------------------------------
 [AVALANCHE]
 Name = Avalanche
@@ -6077,10 +5765,10 @@ Description = The user blows a cold breath on the target. This attack always res
 Name = Glacial Lance
 Type = ICE
 Category = Physical
-Power = 130
+Power = 120
 Accuracy = 100
 TotalPP = 5
-Target = NearOther
+Target = AllNearFoes
 FunctionCode = Basic
 Flags = CanProtect,CanMirrorMove
 Description = The user attacks by hurling a blizzard-cloaked icicle lance at opposing Pokémon.
@@ -6185,19 +5873,6 @@ FunctionCode = Basic
 Flags = CanProtect,CanMirrorMove
 Description = The user flash freezes chunks of ice and hurls them at the target. This move always goes first.
 #-------------------------------
-[ICICLECRASH]
-Name = Icicle Crash
-Type = ICE
-Category = Physical
-Power = 85
-Accuracy = 100
-TotalPP = 10
-Target = NearOther
-FunctionCode = Flinch
-Flags = CanProtect,CanMirrorMove
-EffectChance = 30
-Description = The user attacks by harshly dropping an icicle onto the foe. It has a 30% chance to make the target flinch.
-#-------------------------------
 [ICICLESPEAR]
 Name = Icicle Spear
 Type = ICE
@@ -6262,18 +5937,6 @@ FunctionCode = LowerTargetAtk2
 Flags = CanProtect,CanMirrorMove
 EffectChance = 100
 Description = The user swings its tail wildly and attacks opposing Pokémon, lowering their Attack stats by two steps.
-#-------------------------------
-[CLANGINGSCALES]
-Name = Clanging Scales
-Type = DRAGON
-Category = Special
-Power = 115
-Accuracy = 100
-TotalPP = 5
-Target = AllNearFoes
-FunctionCode = LowerUserDef3
-Flags = CanProtect,CanMirrorMove,Sound
-Description = The user rubs its scales and makes a huge noise. Also lowers the user's Defense stat by three steps.
 #-------------------------------
 [CLANGOROUSSOUL]
 Name = Clangorous Soul
@@ -6374,7 +6037,7 @@ Description = Attacks all enemy Pokémon with pure vitality. Weakens in damage a
 Name = Dragon Hammer
 Type = DRAGON
 Category = Physical
-Power = 90
+Power = 100
 Accuracy = 100
 TotalPP = 12
 Target = NearOther
@@ -6405,7 +6068,7 @@ Target = NearOther
 Priority = -6
 FunctionCode = SwitchOutTargetDamagingMove
 Flags = CanProtect,CanMirrorMove
-Description = The user forces the target to switch out, to be replaced at random. Always goes last. Ends wild battles.
+Description = The user forces the target to switch out, to be replaced at random. Always goes last.
 #-------------------------------
 [DUALCHOP]
 Name = Dual Chop
@@ -6486,18 +6149,18 @@ Category = Special
 Power = 40
 Accuracy = 100
 TotalPP = 15
-Target = AllNearFoes
+Target = NearOther
 FunctionCode = Flinch
 Flags = CanProtect,CanMirrorMove,Wind
 EffectChance = 30
-Description = A small tornado hits the opposing team. It has a 30% chance to make targets flinch.
+Description = A small tornado hits the target. It has a 30% chance to make targets flinch.
 #-------------------------------
 #		DARK MOVES
 #-------------------------------
 [ASSURANCE]
 Name = Assurance
 Type = DARK
-Category = Physical
+Category = Adaptive
 Power = 60
 Accuracy = 100
 TotalPP = 10
@@ -6526,10 +6189,10 @@ Power = 40
 Accuracy = 100
 TotalPP = 20
 Target = NearOther
-FunctionCode = Flinch
+FunctionCode = LowerTargetDef1
 Flags = CanProtect,CanMirrorMove,Biting
-EffectChance = 30
-Description = The target is bitten with viciously sharp fangs. It has a 30% chance to make the target flinch.
+EffectChance = 20
+Description = The target is bitten with viciously sharp fangs. It has a 20% chance to lower Defense.
 #-------------------------------
 [BRUTALSWING]
 Name = Brutal Swing
@@ -6618,17 +6281,6 @@ FunctionCode = SleepTargetIfUserDarkrai
 Flags = CanProtect,CanMagicCoat,CanMirrorMove
 Description = Targets are dragged into a world of total darkness that makes them sleep. This move always goes last.
 #-------------------------------
-[EMBARGO]
-Name = Embargo
-Type = DARK
-Category = Status
-Accuracy = 100
-TotalPP = 12
-Target = NearOther
-FunctionCode = Embargo
-Flags = CanProtect,CanMagicCoat,CanMirrorMove
-Description = The user prevents the target from using its held item.
-#-------------------------------
 [FAKETEARS]
 Name = Fake Tears
 Type = DARK
@@ -6710,14 +6362,14 @@ TotalPP = 12
 Target = User
 FunctionCode = RaiseUserAtkAcc3
 Flags = CanSnatch
-Description = The user sharpens its claws to raise its Attack and accuracy by three steps each.
+Description = The user sharpens its claws to raise its Attack and Accuracy by three steps each.
 #-------------------------------
 [HOWL]
 Name = Howl
 Type = DARK
 Category = Status
 Accuracy = 0
-TotalPP = 30
+TotalPP = 5
 Target = User
 FunctionCode = RaiseUserAndAlliesAtk2
 Flags = CanSnatch,Sound
@@ -6751,13 +6403,13 @@ Description = Prevents the user and target from switching out until either of th
 Name = Knock Off
 Type = DARK
 Category = Physical
-Power = 65
+Power = 75
 Accuracy = 100
 TotalPP = 15
 Target = NearOther
-FunctionCode = RemovesTargetItemDamageBoost50Percent
+FunctionCode = RemovesTargetItem
 Flags = CanProtect,CanMirrorMove
-Description = The user slaps the target to knock off their item. If they have an item, this deals 50% more damage.
+Description = The user slaps the target to knock off their item.
 #-------------------------------
 [LASHOUT]
 Name = Lash Out
@@ -6856,7 +6508,7 @@ Description = This attack's power increases by 10 for every one of the target's 
 [PURSUIT]
 Name = Pursuit
 Type = DARK
-Category = Physical
+Category = Adaptive
 Power = 40
 Accuracy = 100
 TotalPP = 15
@@ -7103,14 +6755,13 @@ Description = By locking down the battlefield, the user keeps all Pokémon from 
 Name = Fairy Wind
 Type = FAIRY
 Category = Special
-Power = 40
+Power = 45
 Accuracy = 100
 TotalPP = 25
 Target = NearOther
-FunctionCode = Dizzy
+FunctionCode = Basic
 Flags = CanProtect,CanMirrorMove,Wind
-EffectChance = 10
-Description = The user stirs up a fairy wind and strikes the target with it. There's a 10% chance it becomes dizzy.
+Description = The user stirs up a fairy wind and strikes the target with it.
 #-------------------------------
 [FLEURCANNON]
 Name = Fleur Cannon
@@ -7206,7 +6857,7 @@ Accuracy = 80
 TotalPP = 10
 Target = AllNearFoes
 FunctionCode = LowerTargetAtkSpAtk1
-Flags = CanProtect,CanMirrorMove
+Flags = CanProtect,CanMirrorMove,Wind
 EffectChance = 30
 Description = The user attacks foes with love and hate. It has a 30% chance to lower both attacking stats.
 Animation = HURRICANE
@@ -7221,5 +6872,17 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = Dizzy
 Flags = CanProtect,CanMirrorMove
-EffectChance = 20
-Description = The user attacks the target by emitting steam. It has a 20% chance to dizzy.
+EffectChance = 30
+Description = The user attacks the target by emitting steam. It has a 30% chance to dizzy.
+#-------------------------------
+[SWEETKISS]
+Name = Sweet Kiss
+Type = FAIRY
+Category = Status
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = Dizzy
+Flags = CanProtect,CanMagicCoat,CanMirrorMove
+Description = The user kisses the target with a sweet, angelic cuteness that dizzies the target.
+Animation = SWEETKISS

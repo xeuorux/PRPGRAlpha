@@ -34,7 +34,7 @@ Events.onStepTakenFieldMovement += proc { |_sender,e|
   event = e[0]   # Get the event affected by field movement
   if $scene.is_a?(Scene_Map)
     if event == $game_player
-	  currentTag = $game_player.pbTerrainTag
+	  currentTag = $game_player.pbTerrainTag(false, true)
       if currentTag.can_surf && !$PokemonGlobal.surfing && $PokemonGlobal.bridge == 0
 		pbDismountBike
 		pbStartSurfing(false)
@@ -55,5 +55,4 @@ def pbStartSurfing(jump = true)
 		$PokemonTemp.surfJump = nil
 	end
 	$game_player.check_event_trigger_here([1,2])
-	progressMQStage(:CROSS_ELEIG,:FIND_FIFTH_GYM)
 end

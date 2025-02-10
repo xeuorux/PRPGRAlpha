@@ -37,10 +37,21 @@ def pbItemBall(item, quantity = 1)
     return false
 end
 
-def candyRock(level)
+def candyRock(level,multiplier = 2)
+    if pbHasItem?(:SACCHARITEPICK)
+        pbMessage(_INTL("\\i[SACCHARITEPICK]Using your pick-axe, you extract the saccharite."))
+    else
+        pbMessage(_INTL("A deposit of saccharite. You might be able to extract it with the proper tool."))
+        command_end # Exit event processing
+        return
+    end
+    receiveCandyBatch(level,multiplier)
+end
+
+def receiveCandyBatch(level,multiplier = 1)
     itemsGiven = candiesForLevel(level)
     for i in 0...itemsGiven.length/2
-		pbReceiveItem(itemsGiven[i*2],itemsGiven[i*2 + 1])
+		pbReceiveItem(itemsGiven[i*2],itemsGiven[i*2 + 1] * multiplier)
 	end
 end
 
@@ -107,7 +118,7 @@ def showItemDescription(item)
     initializeItemHistory if $PokemonGlobal.hadItemYet.nil?
     unless $PokemonGlobal.hadItemYet[item]
         $PokemonGlobal.hadItemYet[item] = true
-        if $PokemonSystem.show_item_descriptions == 0
+        if $Options.show_item_descriptions == 0
             itemDesc = GameData::Item.get(item).description
             pbMessage(_INTL("\\cl\\l[4]\\op\\wu\\i[{1}]\\or{2}\\wt[30]", item, itemDesc))
         end

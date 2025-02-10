@@ -14,18 +14,18 @@ def pbGenerateWildPokemon(species,level,ignoreCap = false,skipAlterations = fals
   end
   genwildpoke = Pokemon.new(species,level)
   # Give the wild Pokémon a held item
-  item = generateWildHeldItem(genwildpoke,herdingActive?)
+  item = generateWildHeldItem(genwildpoke)
   genwildpoke.giveItem(item) if item
   # Trigger events that may alter the generated Pokémon further
   Events.onWildPokemonCreate.trigger(nil,genwildpoke) unless skipAlterations
   return genwildpoke
 end
 
-WILD_ITEM_CHANCE_COMMON = 35
+WILD_ITEM_CHANCE_COMMON = 25
 WILD_ITEM_CHANCE_UNCOMMON = 10
 WILD_ITEM_CHANCE_RARE = 2
 
-def generateWildHeldItem(pokemon,increasedChance=false)
+def generateWildHeldItem(pokemon)
   if pokemon.is_a?(Symbol)
     itemsWithRarities = GameData::Species.get(pokemon).wildHeldItemsWithRarities
   else
@@ -35,7 +35,7 @@ def generateWildHeldItem(pokemon,increasedChance=false)
   return nil if itemsWithRarities.empty?
 
   itemRoll = rand(100)
-  itemRoll -= 20 if increasedChance
+  # itemRoll -= 10 if increasedChance
   itemRoll = 0 if itemRoll < 0
 
   totalRarity = 0
@@ -53,7 +53,7 @@ def runItemGenerationTest(pokemon,increasedChance=false,testCount = 10000)
 
   itemCounts = {}
   testCount.times do
-    itemGenerated = generateWildHeldItem(pokemon,increasedChance)
+    itemGenerated = generateWildHeldItem(pokemon)
     next unless itemGenerated
     if itemCounts.key?(itemGenerated)
       itemCounts[itemGenerated] += 1
@@ -100,20 +100,20 @@ Events.onWildPokemonCreate += proc { |_sender, e|
 # Used by fishing rods and Headbutt/Rock Smash/Sweet Scent to generate a wild
 # Pokémon (or two) for a triggered wild encounter.
 def pbEncounter(enc_type)
-  $PokemonTemp.encounterType = enc_type
-  encounter1 = $PokemonEncounters.choose_wild_pokemon(enc_type)
-  encounter1 = EncounterModifier.trigger(encounter1)
-  return false if !encounter1
-  if $PokemonEncounters.have_double_wild_battle?
-    encounter2 = $PokemonEncounters.choose_wild_pokemon(enc_type)
-    encounter2 = EncounterModifier.trigger(encounter2)
-    return false if !encounter2
-    pbDoubleWildBattle(encounter1[0], encounter1[1], encounter2[0], encounter2[1])
-  else
-    pbWildBattle(encounter1[0], encounter1[1])
-  end
-	$PokemonTemp.encounterType = nil
-  $PokemonTemp.forceSingleBattle = false
-  EncounterModifier.triggerEncounterEnd
-  return true
+    $PokemonTemp.encounterType = enc_type
+    encounter1 = $PokemonEncounters.choose_wild_pokemon(enc_type)
+    encounter1 = EncounterModifier.trigger(encounter1)
+    return false if !encounter1
+    if $PokemonEncounters.have_double_wild_battle?
+        encounter2 = $PokemonEncounters.choose_wild_pokemon(enc_type)
+        encounter2 = EncounterModifier.trigger(encounter2)
+        return false if !encounter2
+        pbDoubleWildBattle(encounter1[0], encounter1[1], encounter2[0], encounter2[1])
+    else
+        pbWildBattle(encounter1[0], encounter1[1])
+    end
+        $PokemonTemp.encounterType = nil
+    $PokemonTemp.forceSingleBattle = false
+    EncounterModifier.triggerEncounterEnd
+    return true
 end

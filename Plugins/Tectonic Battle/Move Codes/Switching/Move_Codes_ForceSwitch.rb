@@ -1,7 +1,5 @@
 #===============================================================================
-# In wild battles, makes target flee. Fails if target is a higher level than the
-# user.
-# In trainer battles, target switches out.
+# Target switches out, to be replaced at random.
 # For status moves. (Roar, Whirlwind)
 #===============================================================================
 class PokeBattle_Move_SwitchOutTargetStatusMove < PokeBattle_Move
@@ -33,10 +31,6 @@ class PokeBattle_Move_SwitchOutTargetStatusMove < PokeBattle_Move
         return false
     end
 
-    def pbEffectGeneral(_user)
-        @battle.decision = 3 if @battle.wildBattle? && !@battle.bossBattle? # Escaped from battle
-    end
-
     def pbSwitchOutTargetsEffect(user, targets, numHits, switchedBattlers)
         return if numHits == 0
         forceOutTargets(user, targets, switchedBattlers, substituteBlocks: false)
@@ -57,20 +51,11 @@ class PokeBattle_Move_EmpoweredWhirlwind < PokeBattle_Move_SwitchOutTargetStatus
 end
 
 #===============================================================================
-# In wild battles, makes target flee. Fails if target is a higher level than the
-# user.
-# In trainer battles, target switches out, to be replaced at random.
+# Target switches out, to be replaced at random.
 # For damaging moves. (Circle Throw, Dragon Tail)
 #===============================================================================
 class PokeBattle_Move_SwitchOutTargetDamagingMove < PokeBattle_Move
     def forceSwitchMove?; return true; end
-
-    def pbEffectAgainstTarget(user, target)
-        if @battle.wildBattle? && target.level <= user.level && @battle.canRun &&
-           (target.substituted? || ignoresSubstitute?(user)) && !target.boss
-            @battle.decision = 3
-        end
-    end
 
     def pbSwitchOutTargetsEffect(user, targets, numHits, switchedBattlers)
         return if numHits == 0
@@ -99,19 +84,10 @@ class PokeBattle_Move_SwitchOutTargetIfMisses < PokeBattle_Move
 end
 
 #===============================================================================
-# In wild battles, makes target flee. Fails if target is a higher level than the
-# user.
-# In trainer battles, target switches out, to be replaced manually. (Thornrattle)
+# Target switches out, to be replaced manually. (Thornrattle)
 #===============================================================================
 class PokeBattle_Move_SwitchOutTargetDamagingMoveNonRandom < PokeBattle_Move
     def forceSwitchMove?; return true; end
-
-    def pbEffectAgainstTarget(user, target)
-        if @battle.wildBattle? && target.level <= user.level && @battle.canRun &&
-           (target.substituted? || ignoresSubstitute?(user)) && !target.boss
-            @battle.decision = 3
-        end
-    end
 
     def pbSwitchOutTargetsEffect(user, targets, numHits, switchedBattlers)
         return if numHits == 0

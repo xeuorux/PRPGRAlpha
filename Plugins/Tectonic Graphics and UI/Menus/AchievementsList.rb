@@ -59,6 +59,7 @@ class AchievementsListScene
     def calculateDisplayText
         @displayText = []
         @checkboxesHeights = []
+        @randomizerIconHeights = []
 
         index = 0
         GameData::Achievement.each do |achievementData|
@@ -87,6 +88,10 @@ class AchievementsListScene
                 break_string(achievementData.description, 38).each {|line|
                     @displayText << line
                 }
+            end
+
+            if achievementData.disabled_in_randomizer?
+                @randomizerIconHeights.push(checkboxY)
             end
         
             index += 1
@@ -133,11 +138,21 @@ class AchievementsListScene
 
         @sprites["scroll_bar"].y = 48 + (Graphics.width - 192) * (@offset / @displayText.length.to_f)
 
+        # Checkboxes
         offsetCheckboxImagePositions = []
         @checkboxesHeights.each do |checkBoxInfo|
             checkboxY = checkBoxInfo[1] - (@offset * 32)
             next unless checkboxY > 40 && checkboxY < 320
             offsetCheckboxImagePositions.push([checkBoxInfo[0],Graphics.width - 72,checkboxY])
+        end
+        pbDrawImagePositions(overlay,offsetCheckboxImagePositions)
+        
+        # Disabled in randomizer icons
+        offsetRandomizerDisabledIconPositions = []
+        @randomizerIconHeights.each do |height|
+            icon_y = height - (@offset * 32)
+            next unless icon_y > 40 && icon_y < 320
+            offsetCheckboxImagePositions.push(["Graphics/Pictures/icon_disabled_in_randomizer",Graphics.width - 116,icon_y])
         end
         pbDrawImagePositions(overlay,offsetCheckboxImagePositions)
     end    

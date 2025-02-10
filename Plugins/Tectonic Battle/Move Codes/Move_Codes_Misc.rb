@@ -53,11 +53,7 @@ class PokeBattle_Move_StartPerishCountsForAllBattlers < PokeBattle_Move
     end
 
     def pbEffectAgainstTarget(user, target)
-        if target.boss? && user != target
-            target.applyEffect(:PerishSong, 12)
-        else
-            target.applyEffect(:PerishSong, 3)
-        end
+        target.applyEffect(:PerishSong, 3)
     end
 
     def getEffectScore(user, _target)
@@ -433,7 +429,7 @@ class PokeBattle_Move_ChangeUserDeoxusChoiceOfForm < PokeBattle_Move
         if @battle.autoTesting
             @chosenForm = rand(3) + 1
         elsif !user.pbOwnedByPlayer? # Trainer AI
-            @chosenForm = 2 # Always chooses mega mind form
+            @chosenForm = 2 # Always chooses defense form
         else
             form1Name = GameData::Species.get_species_form(:DEOXYS,1).form_name
             form2Name = GameData::Species.get_species_form(:DEOXYS,2).form_name
@@ -553,41 +549,19 @@ def selfHitBasePower(level)
 end
 
 #===============================================================================
-# Increases the target's Attack by 3 steps, then the target hits itself with its own attack. (Swagger)
+# Increases the target's attacking stats by 3 steps each, then the (Backhand)
+# target hits itself with its own Attack or Sp. Atk, whichever is higher.
 #===============================================================================
-class PokeBattle_Move_RaiseTargetAtk3TargetHitsSelfPhysical < PokeBattle_Move
+class PokeBattle_Move_RaiseTargetAtkSpAtk3TargetHitsSelfAdaptive < PokeBattle_Move
     def pbEffectAgainstTarget(user, target)
-        target.tryRaiseStat(:ATTACK, user, increment: 3, move: self)
-        target.pbConfusionDamage(_INTL("It hurt itself in a rage!"), false, false, selfHitBasePower(target.level))
+        target.pbRaiseMultipleStatSteps(ATTACKING_STATS_3, user, move: self)
+        target.pbConfusionDamage(_INTL("It hurt itself in a rage!"), false, selfHitBasePower(target.level))
     end
 
     def getTargetAffectingEffectScore(user, target)
-        score = -25 # TODO: rework this
-        score -= getMultiStatUpEffectScore([:ATTACK, 3], user, target, evaluateThreat: false)
+        score -= getMultiStatUpEffectScore(ATTACKING_STATS_3, user, target, evaluateThreat: false)
         score -= 70 if target.hasActiveAbilityAI?(:UNAWARE)
-        return score
-    end
-    
-    def calculateDamageForHitAI(user,target,type,baseDmg,numTargets)
-        damage = calculateDamageForHit(user,target,type,baseDmg,numTargets,true)
-        damage *= 1.75 unless target.hasActiveAbilityAI?(:UNAWARE)
-        return damage
-    end
-end
-
-#===============================================================================
-# Increases the target's Sp. Atk. by 3 steps, then the target hits itself with its own Sp. Atk. (Flatter)
-#===============================================================================
-class PokeBattle_Move_RaiseTargetSpAtk3TargetHitsSelfSpecial < PokeBattle_Move
-    def pbEffectAgainstTarget(user, target)
-        target.tryRaiseStat(:SPECIAL_ATTACK, user, increment: 3, move: self)
-        target.pbConfusionDamage(_INTL("It hurt itself in mental turmoil!"), true, false, selfHitBasePower(target.level))
-    end
-
-    def getTargetAffectingEffectScore(user, target)
-        score = -25 # TODO: rework this
-        score -= getMultiStatUpEffectScore([:SPECIAL_ATTACK, 3], user, target, evaluateThreat: false)
-        score -= 70 if target.hasActiveAbilityAI?(:UNAWARE)
+        score += getMultiStatUpEffectScore(ATTACKING_STATS_3, user, user, evaluateThreat: false) if user.hasActiveAbilityAI?(:PETTY)
         return score
     end
 
@@ -595,6 +569,10 @@ class PokeBattle_Move_RaiseTargetSpAtk3TargetHitsSelfSpecial < PokeBattle_Move
         damage = calculateDamageForHit(user,target,type,baseDmg,numTargets,true)
         damage *= 1.75 unless target.hasActiveAbilityAI?(:UNAWARE)
         return damage
+    end
+
+    def getDetailsForMoveDex(detailsList = [])
+        detailsList << _INTL("Base power is 20 plus the target's level, capped at 70 BP.")
     end
 end
 
@@ -688,7 +666,7 @@ end
 #===============================================================================
 class PokeBattle_Move_KyogreSummonAvatarLuvdiscRemoraid < PokeBattle_Move
     def pbMoveFailed?(user, _targets, show_message)
-        if !user.countsAs?(:KYOGRE)# || !user.boss?
+        if !user.countsAs?(:KYOGRE) || !user.boss?
             @battle.pbDisplay(_INTL("But {1} can't use the move!", user.pbThis(true))) if show_message
             return true
         end
@@ -704,31 +682,30 @@ class PokeBattle_Move_KyogreSummonAvatarLuvdiscRemoraid < PokeBattle_Move
         @battle.summonAvatarBattler(:LUVDISC, user.level, 0, user.index % 2)
         @battle.summonAvatarBattler(:REMORAID, user.level, 0, user.index % 2)
         @battle.pbSwapBattlers(user.index, user.index + 2)
+
+        @battle.remakeDataBoxes
     end
 end
 
 #===============================================================================
-# Summons Gravity for 10 turn and doubles the weight of Pokemon on the opposing side.
+# Summons permanent Gravity, which also doubles the weight of Pokemon on the opposing side.
 # Only usable by the avatar of Groudon (Warping Core)
 #===============================================================================
-class PokeBattle_Move_GroudonStartGravity10DoubleFoeWeight < PokeBattle_Move
+class PokeBattle_Move_GroudonStartGravityDoubleAllWeight < PokeBattle_Move
     def pbMoveFailed?(user, _targets, show_message)
         if !user.countsAs?(:GROUDON) || !user.boss?
             @battle.pbDisplay(_INTL("But {1} can't use the move!", user.pbThis(true))) if show_message
             return true
         end
-        if @battle.field.effectActive?(:Gravity)
+        if @battle.field.effectActive?(:WarpingCore)
             @battle.pbDisplay(_INTL("But gravity is already warped!", user.pbThis(true))) if show_message
             return true
         end
         return false
     end
 
-    def pbEffectGeneral(user)
-        @battle.field.applyEffect(:Gravity, 5)
-        @battle.eachOtherSideBattler(user) do |b|
-            b.applyEffect(:WarpingCore)
-        end
+    def pbEffectGeneral(_user)
+        @battle.field.applyEffect(:WarpingCore)
     end
 end
 
@@ -807,5 +784,25 @@ class PokeBattle_Move_UseChoiceOf3ElementalFangs < PokeBattle_Move
 
     def pbShowAnimation(id, user, targets, hitNum = 0, showAnimation = true)
         return # No animation
+    end
+end
+
+#===============================================================================
+# Fails if the user is not asleep. (Snore)
+#===============================================================================
+class PokeBattle_Move_FailsIfUserNotAsleep < PokeBattle_Move
+    def usableWhenAsleep?; return true; end
+
+    def pbMoveFailed?(user, _targets, show_message)
+        unless user.asleep?
+            @battle.pbDisplay(_INTL("But it failed, since #{user.pbThis(true)} isn't asleep!")) if show_message
+            return true
+        end
+        return false
+    end
+
+    def pbMoveFailedAI?(user, targets)
+        return true unless user.willStayAsleepAI?
+        return pbMoveFailed?(user, targets, false)
     end
 end

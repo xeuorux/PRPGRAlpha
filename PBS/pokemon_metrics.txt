@@ -3768,6 +3768,12 @@ FrontSprite = -1,38
 ShadowX = 0
 ShadowSize = 2
 #-------------------------------
+[MDRAGALGE]
+BackSprite = 0,9
+FrontSprite = 0,12
+ShadowX = 0
+ShadowSize = 3
+#-------------------------------
 [MDUSTOX]
 BackSprite = 2,17
 FrontSprite = 0,16
@@ -4175,6 +4181,12 @@ BackSprite = 0,15
 FrontSprite = -7,23
 ShadowX = 0
 ShadowSize = 1
+#-------------------------------
+[MSKRELP]
+BackSprite = 0,13
+FrontSprite = 0,16
+ShadowX = 0
+ShadowSize = 2
 #-------------------------------
 [MTANGELA]
 BackSprite = 0,27

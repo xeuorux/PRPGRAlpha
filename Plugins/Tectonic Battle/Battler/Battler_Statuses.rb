@@ -5,6 +5,7 @@ def getFrostbiteExplanation; return _INTL("Its special damage is reduced by a th
 def getNumbExplanation; return _INTL("Its Speed is halved, and it'll deal less damage"); end
 def getDizzyExplanation; return _INTL("Its ability is suppressed, and it'll take more damage"); end
 def getLeechExplanation; return _INTL("Its HP will be siphoned by the opposing side"); end
+def getWaterlogExplanation; return _INTL("Its Speed is halved, and it'll take more damage"); end
 
 POISON_DOUBLING_TURNS = 2
 
@@ -132,6 +133,7 @@ class PokeBattle_Battler
                 when :FROSTBITE	    then msg = _INTL("{1} is already frostbitten!", pbThis)
                 when :DIZZY	        then msg = _INTL("{1} is already dizzy!", pbThis)
                 when :LEECHED	    then msg = _INTL("{1} is already being leeched!", pbThis)
+                when :WATERLOG	    then msg = _INTL("{1} is already waterlogged!", pbThis)
                 end
                 @battle.pbDisplay(msg)
             end
@@ -225,6 +227,7 @@ immuneTypeRealName))
                 when :FROSTBITE	    then msg = _INTL("{1} cannot be frostbitten!", pbThis)
                 when :DIZZY	        then msg = _INTL("{1} cannot be dizzied!", pbThis)
                 when :LEECHED	    then msg = _INTL("{1} cannot become leeched!", pbThis)
+                when :WATERLOG      then msg = _INTL("{1} cannot be waterlogged!", pbThis)
                 end
                 @battle.pbDisplay(msg)
                 @battle.pbHideAbilitySplash(immAlly || self)
@@ -286,6 +289,8 @@ immuneTypeRealName))
             immuneType = :ICE if pbHasType?(:ICE)
         when :LEECHED
             immuneType = :GRASS if pbHasType?(:GRASS)
+        when :WATERLOG
+            immuneType = :ELECTRIC if pbHasType?(:WATER)
         end
         return immuneType
     end
@@ -334,7 +339,7 @@ immuneTypeRealName))
             if msg && !msg.empty?
                 @battle.pbDisplay(msg)
             else
-                if $PokemonSystem.status_effect_messages.zero?
+                if $Options.status_effect_messages.zero?
                     case newStatus
                     when :SLEEP
                         @battle.pbDisplay(_INTL("{1} fell asleep! {2}!", pbThis, getSleepExplanation))
@@ -350,6 +355,8 @@ immuneTypeRealName))
                         @battle.pbDisplay(_INTL("{1} is dizzy! {2}!", pbThis, getDizzyExplanation))
                     when :LEECHED
                         @battle.pbDisplay(_INTL("{1} became leeched! {2}!", pbThis, getLeechExplanation))
+                    when :WATERLOG
+                        @battle.pbDisplay(_INTL("{1} is waterlogged! {2}!", pbThis, getWaterlogExplanation))
                     end
                 else # Skip full status explanation if setting was turned off
                     case newStatus
@@ -367,6 +374,8 @@ immuneTypeRealName))
                         @battle.pbDisplay(_INTL("{1} is dizzy!", pbThis))
                     when :LEECHED
                         @battle.pbDisplay(_INTL("{1} became leeched!", pbThis))
+                    when :WATERLOG
+                        @battle.pbDisplay(_INTL("{1} is waterlogged!", pbThis))
                     end
                 end
             end
@@ -577,6 +586,21 @@ immuneTypeRealName))
     end
 
     #=============================================================================
+    # Waterlog
+    #=============================================================================
+    def waterlogged?
+        return pbHasStatus?(:WATERLOG)
+    end
+
+    def canWaterlog?(user, showMessages, move = nil)
+        return pbCanInflictStatus?(:WATERLOG, user, showMessages, move)
+    end
+
+    def applyWaterlog(user = nil, msg = nil)
+        pbInflictStatus(:WATERLOG, 0, msg, user)
+    end
+
+    #=============================================================================
     # Flinching
     #=============================================================================
     def flinchImmuneByAbility?(checkingForAI = false)
@@ -607,7 +631,7 @@ immuneTypeRealName))
             poisonCount = getStatusCount(:POISON)
             yield if block_given?
 
-            showMessages = $PokemonSystem.status_effect_messages.zero?
+            showMessages = $Options.status_effect_messages.zero?
             
             case oneStatus
             when :SLEEP
@@ -695,6 +719,7 @@ immuneTypeRealName))
         when :NUMB 			then battle.pbDisplay(_INTL("{1} is no longer numbed.", curedName))
         when :DIZZY			then battle.pbDisplay(_INTL("{1} is no longer dizzy!", curedName))
         when :LEECHED	    then battle.pbDisplay(_INTL("{1} is no longer being leeched!", curedName))
+        when :WATERLOG      then battle.pbDisplay(_INTL("{1} is no longer waterlogged.", curedName))
         end
     end
 end

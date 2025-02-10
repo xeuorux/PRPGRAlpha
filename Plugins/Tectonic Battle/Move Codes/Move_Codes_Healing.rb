@@ -731,7 +731,7 @@ end
 #===============================================================================
 class PokeBattle_Move_HealUserHalfOfTotalHPRaiseDefSpDefCriticalHitRate1 < PokeBattle_HalfHealingMove
     def pbMoveFailed?(user, _targets, show_message)
-        if user.effectAtMax?(:FocusEnergy) && !user.pbCanRaiseStatStep?(:DEFENSE, user, self) && 
+        if user.effectAtMax?(:RaisedCritChance) && !user.pbCanRaiseStatStep?(:DEFENSE, user, self) && 
                 !user.pbCanRaiseStatStep?(:SPECIAL_DEFENSE, user, self)
             return super
         end
@@ -741,7 +741,7 @@ class PokeBattle_Move_HealUserHalfOfTotalHPRaiseDefSpDefCriticalHitRate1 < PokeB
     def pbEffectGeneral(user)
         super
         user.pbRaiseMultipleStatSteps(DEFENDING_STATS_2, user, move: self)
-        user.incrementEffect(:FocusEnergy, 2) unless user.effectAtMax?(:FocusEnergy)
+        user.incrementEffect(:RaisedCritChance, 2) unless user.effectAtMax?(:RaisedCritChance)
     end
 
     def getEffectScore(user, target)

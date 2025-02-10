@@ -31,7 +31,7 @@ class PokemonLoadScreen
         )
         delete_save_data
         $game_system   = Game_System.new
-        $PokemonSystem = PokemonSystem.new
+        $Options = Options.new
     end
 
     def pbStartDeleteScreen
@@ -92,9 +92,11 @@ class PokemonLoadScreen
         cmd_load_game       = -1
         cmd_new_game        = -1
         cmd_achievements    = -1
+        cmd_options         = -1
         cmd_debug           = -1
         cmd_website         = -1
-        cmd_survey          = -1
+        cmd_discord         = -1
+        cmd_wiki            = -1
         cmd_quit            = -1
         lastModifiedSaveName = FileSave.lastModifiedSaveName
         if FileSave.count > 0
@@ -102,9 +104,11 @@ class PokemonLoadScreen
             commands[cmd_load_game = commands.length]   = _INTL("Load Game")
         end
         commands[cmd_new_game = commands.length]        = _INTL("New Game")
+        commands[cmd_options = commands.length]         = _INTL("Options")
         commands[cmd_achievements = commands.length]    = _INTL("Achievements")
         commands[cmd_website = commands.length]         = _INTL("Website")
-        commands[cmd_survey = commands.length]          = _INTL("Playtest Survey")
+        commands[cmd_discord = commands.length]         = _INTL("Discord")
+        commands[cmd_wiki = commands.length]            = _INTL("Wiki")
         commands[cmd_quit = commands.length]            = _INTL("Quit Game")
         @scene.pbStartScene(commands, false, nil, 0, 0)
         @scene.pbStartScene2
@@ -130,16 +134,24 @@ class PokemonLoadScreen
                 @scene.pbEndScene
                 Game.start_new
                 return
+            when cmd_options
+                pbFadeOutIn {
+                    optionScene = PokemonOption_Scene.new
+					optionScreen = PokemonOptionMenu.new(optionScene)
+					optionScreen.pbStartPokemonMenu
+                }
             when cmd_achievements
                 pbFadeOutIn do
                     achievementsListScene = AchievementsListScene.new
                     screen = AchievementsListScreen.new(achievementsListScene)
                     screen.pbStartScreen
                 end
-            when cmd_survey
-                System.launch("https://forms.gle/49kb3i38AxMnD8RC7")
             when cmd_website
                 System.launch("https://www.tectonic-game.com/")
+            when cmd_discord
+                System.launch("https://discord.gg/J3r7zRaMvP")
+            when cmd_wiki
+                System.launch("https://pokemontectonic.wiki.gg/")
             when cmd_quit
                 pbPlayCloseMenuSE
                 @scene.pbEndScene

@@ -225,13 +225,15 @@ module GameData
                         break
                     end
                 end
+
+                next if hasRemoveMatch
                 
-                trainer.party.push(parentPartyMember.clone) unless hasRemoveMatch
+                clonedMember = parentPartyMember.clone
+                trainer.party.push(clonedMember)
             end
         end
 
         # Create each Pokémon owned by the trainer
-        index = 0
         @pokemon.each do |pkmn_data|
             species = GameData::Species.get(pkmn_data[:species]).species
             level = pkmn_data[:level]
@@ -257,13 +259,30 @@ module GameData
             # No base pkmn to inherit from found
             if pkmn.nil?
                 pkmn = Pokemon.new(species, level, trainer, false)
-                trainer.party.push(pkmn)
+
+                if pkmn_data[:assigned_position]
+                    trainer.party.insert(pkmn_data[:assigned_position],pkmn)
+                else
+                    firstEmptySpot = false
+                    trainer.party.each_with_index do |partySlot,index|
+                        next unless partySlot.nil?
+                        firstEmptySpot = index
+                    end
+                    if firstEmptySpot
+                        trainer.party[firstEmptySpot] = pkmn
+                    else
+                        trainer.party.push(pkmn)
+                    end
+                end
+            end
+
+            # Set level from policy
+            if trainer.policies.include?(:MATCH_LEVEL_CAP)
+              pkmn.level = getLevelCap
             end
 
             # Set Pokémon's properties if defined
             pkmn.name = nickname if !nickname.nil?
-
-            pkmn.assignedPosition = pkmn_data[:assigned_position] || index
 
             if !pkmn_data[:form].nil?
                 pkmn.forced_form = pkmn_data[:form] if MultipleForms.hasFunction?(species, "getForm")
@@ -341,21 +360,13 @@ module GameData
             pkmn.poke_ball = pkmn_data[:poke_ball] if !pkmn_data[:poke_ball].nil?
 
             pkmn.calc_stats
-
-            index += 1
         end
 
         if parentTrainer && trainer.party.length > Settings::MAX_PARTY_SIZE
-            echoln _INTL("Error when trying to contruct trainer #{@id.to_s} as an extension of trainer #{parentTrainer.id.to_s}. The resultant party is larger than the maximum party size!")
-            # Trim it down to size
-            while trainer.party.length > Settings::MAX_PARTY_SIZE
-              trainer.party.pop
-            end
+            echoln _INTL("WARNING: When trying to contruct trainer #{@id.to_s} as an extension of trainer #{parentTrainer.id.to_s}, the resultant party is larger than the maximum party size!")
         end
 
-        trainer.party.sort_by! { |member|
-            member.assignedPosition
-        }
+        trainer.party.compact!
 
         return trainer
       end

@@ -542,7 +542,7 @@ def pbMessageDisplay(msgwindow, message, letterbyletter = true, commandProc = ni
     signWaitCount = 0
     badgeDisplayCount = 0
     begin
-        textSpeedSetting = $PokemonSystem.textspeed
+        textSpeedSetting = $Options.textspeed
     rescue StandardError
         textSpeedSetting = 4
     end
@@ -730,7 +730,7 @@ def pbMessageDisplay(msgwindow, message, letterbyletter = true, commandProc = ni
             when "ts"     # Change text speed
                 msgwindow.textspeed = (param == "") ? -999 : param.to_i
             when "ss"     # Slowed down display speed
-                msgwindow.textspeed = MessageConfig.pbSettingToTextSpeed($PokemonSystem.textspeed, true)
+                msgwindow.textspeed = MessageConfig.pbSettingToTextSpeed($Options.textspeed, true)
             when "."      # Wait 0.25 seconds
                 msgwindow.waitcount += Graphics.frame_rate / 4
             when "|"      # Wait 1 second

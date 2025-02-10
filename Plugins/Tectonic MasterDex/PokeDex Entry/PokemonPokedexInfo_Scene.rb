@@ -315,7 +315,9 @@ sp.form) && !Settings::DEX_SHOWS_ALL_FORMS
                 end
                 drawFormattedTextEx(overlay, abilityTextX, ability1Y, 450, abilityNameText, abilityNameColor,
               abilityNameShadow)
-                drawTextEx(overlay, abilityTextX, ability1Y + 32, 450, 3, ability1.description, base, shadow)
+
+                ability1Description = addBattleKeywordHighlighting(ability1.description)
+                drawFormattedTextEx(overlay, abilityTextX, ability1Y + 32, 450, ability1Description, base, shadow)
             else
                 drawTextEx(overlay, abilityTextX, 128, 450, 1, _INTL("None"), base, shadow)
             end
@@ -334,7 +336,9 @@ sp.form) && !Settings::DEX_SHOWS_ALL_FORMS
                 end
                 drawFormattedTextEx(overlay, abilityTextX, ability2Y, 450, abilityNameText, abilityNameColor,
               abilityNameShadow)
-                drawTextEx(overlay, abilityTextX, ability2Y + 32, 450, 3, ability2.description, base, shadow)
+
+                ability2Description = addBattleKeywordHighlighting(ability2.description)
+                drawFormattedTextEx(overlay, abilityTextX, ability2Y + 32, 450, ability2Description, base, shadow)
             else
                 drawTextEx(overlay, abilityTextX, ability2Y, 450, 1, _INTL("None"), base, shadow)
             end
@@ -858,7 +862,7 @@ sp.form) && !Settings::DEX_SHOWS_ALL_FORMS
 
             # Show pre-volutions
             unless prevolutions.empty?
-                prevoTitle = _INTL("<u>Pre-Evolutions of {1}</u>", @title)
+                prevoTitle = _INTL("<u>Pre-Evolutions</u>")
                 drawFormattedTextEx(overlay, xLeft, coordinateY, 450, prevoTitle, base, shadow)
                 coordinateY += 34
 
@@ -872,10 +876,10 @@ sp.form) && !Settings::DEX_SHOWS_ALL_FORMS
                     methodDescription = describeEvolutionMethod(method, parameter)
                     # Draw preevolution description
                     color = index == @evolutionIndex ? Color.new(255, 100, 80) : base
-                    evolutionLineText = _INTL("Evolves from {1} {2}",evolutionName,methodDescription)
-                    drawTextEx(overlay, xLeft, coordinateY, 450, 2, evolutionLineText, color, shadow)
+                    evolutionLineText = _INTL("<b>{1}</b> {2}",evolutionName,methodDescription)
+                    drawFormattedTextEx(overlay, xLeft, coordinateY, 450, evolutionLineText, color, shadow)
                     coordinateY += 30
-                    coordinateY += 30 if method != :Level
+                    coordinateY += 30 if overlay.text_size(evolutionLineText).width > 450
                     index += 1
                 end
 
@@ -883,41 +887,33 @@ sp.form) && !Settings::DEX_SHOWS_ALL_FORMS
             end
 
             # Show evolutions
-            if @species == :EEVEE || !allEvolutions.empty?
-                evoTitle = _INTL("<u>Evolutions of {1}</u>", @title)
+            unless allEvolutions.empty?
+                evoTitle = _INTL("<u>Evolutions</u>")
                 drawFormattedTextEx(overlay, xLeft, coordinateY, 450, evoTitle, base, shadow)
                 coordinateY += 34
 
-                if @species == :EEVEE
-                    drawTextEx(overlay, xLeft, coordinateY, 450, 7, _INTL("Evolves into Vaporeon with a Water Stone, " +
-                        _INTL("Jolteon with a Thunder Stone, Flareon with a Fire Stone, Espeon with a Dawn Stone, ") +
-                            _INTL("Umbreon with a Dusk Stone, Leafeon with a Leaf Stone, Glaceon with an Ice Stone, ") +
-                                _INTL("Sylveon with a Moon Stone, and Giganteon at level 40.")
-                                                                        ), base, shadow)
-                elsif !allEvolutions.empty?
-                    allEvolutions.each do |fromSpecies, evolutions|
-                        evolutions.each do |evolution|
-                            species = evolution[0]
-                            method = evolution[1]
-                            parameter = evolution[2]
-                            next if method.nil? || species.nil?
-                            speciesData = GameData::Species.get_species_form(species, i[2])
-                            next if speciesData.nil?
-                            @evolutionsArray.push(evolution)
-                            evolutionName = speciesData.name
-                            methodDescription = describeEvolutionMethod(method, parameter)
-                            # Draw evolution description
-                            color = index == @evolutionIndex ? Color.new(255, 100, 80) : base
-                            fromSpeciesName = GameData::Species.get(fromSpecies).name
-                            evolutionTextLine = _INTL("Evolves into {1} {2}",evolutionName,methodDescription)
-                            if fromSpecies != fSpecies.species
-                                evolutionTextLine = evolutionTextLine + " " +  _INTL("(through {1})",fromSpeciesName)
-                            end
-                            drawTextEx(overlay, xLeft, coordinateY, 450, 3, evolutionTextLine, color, shadow)
-                            coordinateY += 30
-                            coordinateY += 30 if method != :Level || fromSpecies != fSpecies.species
-                            index += 1
+                allEvolutions.each do |fromSpecies, evolutions|
+                    evolutions.each do |evolution|
+                        species = evolution[0]
+                        method = evolution[1]
+                        parameter = evolution[2]
+                        next if method.nil? || species.nil?
+                        speciesData = GameData::Species.get_species_form(species, i[2])
+                        next if speciesData.nil?
+                        @evolutionsArray.push(evolution)
+                        evolutionName = speciesData.name
+                        methodDescription = describeEvolutionMethod(method, parameter)
+                        # Draw evolution description
+                        color = index == @evolutionIndex ? Color.new(255, 100, 80) : base
+                        fromSpeciesName = GameData::Species.get(fromSpecies).name
+                        evolutionTextLine = _INTL("<b>{1}</b> {2}",evolutionName,methodDescription)
+                        if fromSpecies != fSpecies.species
+                            evolutionTextLine = evolutionTextLine + " " +  _INTL("(through {1})",fromSpeciesName)
                         end
+                        drawFormattedTextEx(overlay, xLeft, coordinateY, 450, evolutionTextLine, color, shadow)
+                        coordinateY += 30
+                        coordinateY += 30 if overlay.text_size(evolutionTextLine).width > 450
+                        index += 1
                     end
                 end
             end
@@ -930,47 +926,11 @@ sp.form) && !Settings::DEX_SHOWS_ALL_FORMS
         end
     end
 
-    def getNameForEncounterType(encounterType)
-        case encounterType
-        when :Land
-            return _INTL("Grass")
-        when :LandSparse
-            return _INTL("Sparse Grass")
-        when :LandTall
-            return _INTL("Tall Grass")
-        when :Special
-            return _INTL("Other")
-        when :FloweryGrass
-            return _INTL("Yellow Flowers")
-        when :FloweryGrass2
-            return _INTL("Blue Flowers")
-        when :SewerWater
-            return _INTL("Sewage")
-        when :SewerFloor
-            return _INTL("Dirty Floor")
-        when :DarkCave
-            return _INTL("Dark Ground")
-        when :Mud
-            return _INTL("Mud")
-        when :Puddle
-            return _INTL("Puddle")
-        when :LandTinted
-            return _INTL("Secret Grass")
-        when :Cloud
-            return _INTL("Dark Clouds")
-        when :ActiveWater
-            return _INTL("Deep Water")
-        when :FishingContest
-            return _INTL("Surfing")
-        end
-        return _INTL("Unknown")
-    end
-
     def getEncounterableAreas(species)
         areas = []
         GameData::Encounter.each_of_version($PokemonGlobal.encounter_version) do |enc_data|
-            if HIDDEN_MAPS.key?(enc_data.map)
-                switchID = HIDDEN_MAPS[enc_data.map]
+            if hidden_map_encounter_switch_hash.key?(enc_data.map)
+                switchID = hidden_map_encounter_switch_hash[enc_data.map]
                 next unless $game_switches[switchID]
             end
 

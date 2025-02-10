@@ -5,13 +5,12 @@ class PokeBattle_Move_EffectDependsOnEnvironment < PokeBattle_Move
     def flinchingMove?; return [6, 10, 12].include?(@secretPower); end
 
     def pbOnStartUse(_user, _targets)
-        # NOTE: This is Gen 7's list plus some of Gen 6 plus a bit of my own.
         @secretPower = 0 # Body Slam, numb
         case @battle.environment
         when :Grass, :TallGrass, :Forest, :ForestGrass
             @secretPower = 2    # (Same as Grassy Terrain)
         when :MovingWater, :StillWater, :Underwater
-            @secretPower = 5    # Water Pulse, lower Attack by 1
+            @secretPower = 5    # Water Pulse, waterlog
         when :Puddle
             @secretPower = 6    # Mud Shot, lower Speed by 1
         when :Cave
@@ -19,17 +18,15 @@ class PokeBattle_Move_EffectDependsOnEnvironment < PokeBattle_Move
         when :Rock, :Sand
             @secretPower = 8    # Dust Devil, burn
         when :Snow, :Ice
-            @secretPower = 9    # Ice Shard, freeze
+            @secretPower = 9    # Ice Shard, frostbite
         when :Volcano
             @secretPower = 10   # Incinerate, burn
         when :Graveyard
             @secretPower = 11   # Shadow Sneak, flinch
         when :Sky
             @secretPower = 12   # Gust, lower Speed by 1
-        when :Space
+        when :Space, :UltraSpace
             @secretPower = 13   # Swift, flinch
-        when :UltraSpace
-            @secretPower = 14   # Psywave, lower Defense by 1
         end
     end
 
@@ -51,13 +48,9 @@ class PokeBattle_Move_EffectDependsOnEnvironment < PokeBattle_Move
         when 0, 1
             target.applyNumb(user) if target.canNumb?(user, false, self)
         when 9
-            target.applyFrostbite if target.canFrostbite?(user, false, self)
+            target.applyFrostbite(user) if target.canFrostbite?(user, false, self)
         when 5
-            target.tryLowerStat(:ATTACK, user, move: self)
-        when 14
-            target.tryLowerStat(:DEFENSE, user, move: self, increment: 2)
-        when 3
-            target.tryLowerStat(:SPECIAL_ATTACK, user, move: self, increment: 2)
+            target.applyWaterlog(user) if target.canFrostbite?(user, false, self)
         when 4, 6, 12
             target.tryLowerStat(:SPEED, user, move: self, increment: 2)
         when 7, 11, 13
@@ -105,19 +98,13 @@ class PokeBattle_Move_UseMoveDependingOnEnvironment < PokeBattle_Move
         case @battle.environment
         when :Grass, :TallGrass, :Forest, :ForestGrass
             npMove = :ENERGYBALL if GameData::Move.exists?(:ENERGYBALL)
-        when :MovingWater, :StillWater, :Underwater
-            npMove = :HYDROPUMP if GameData::Move.exists?(:HYDROPUMP)
-        when :Puddle
-            npMove = :MUDBOMB if GameData::Move.exists?(:MUDBOMB)
+        when :MovingWater, :StillWater, :Underwater, :Puddle
+            npMove = :BUBBLEBLASTER if GameData::Move.exists?(:BUBBLEBLASTER)
         when :Cave
             npMove = :POWERGEM if GameData::Move.exists?(:POWERGEM)
-        when :Rock
+        when :Rock, :Sand
             npMove = :EARTHPOWER if GameData::Move.exists?(:EARTHPOWER)
-        when :Sand
-            npMove = :EARTHPOWER if GameData::Move.exists?(:EARTHPOWER)
-        when :Snow
-            npMove = :FROSTBREATH if GameData::Move.exists?(:FROSTBREATH)
-        when :Ice
+        when :Snow, :Ice
             npMove = :ICEBEAM if GameData::Move.exists?(:ICEBEAM)
         when :Volcano
             npMove = :LAVAPLUME if GameData::Move.exists?(:LAVAPLUME)
@@ -128,7 +115,7 @@ class PokeBattle_Move_UseMoveDependingOnEnvironment < PokeBattle_Move
         when :Space
             npMove = :DRACOMETEOR if GameData::Move.exists?(:DRACOMETEOR)
         when :UltraSpace
-            npMove = :PSYSHOCK if GameData::Move.exists?(:PSYSHOCK)
+            npMove = :PSYCHOBOOST if GameData::Move.exists?(:PSYCHOBOOST)
         end
         return npMove
     end

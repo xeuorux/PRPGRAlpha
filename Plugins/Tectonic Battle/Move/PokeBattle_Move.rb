@@ -20,7 +20,7 @@ class PokeBattle_Move
     attr_accessor :calcType
     attr_accessor :powerBoost
     attr_accessor :snatched
-    attr_accessor :calculated_category
+    attr_accessor :category_override
   
     def to_int; return @id; end
   
@@ -37,7 +37,7 @@ class PokeBattle_Move
       @baseDamage = move.base_damage
       @type       = move.type
       @category   = move.category
-      @calculated_category = -1 # By default, won't overwrite @category
+      @category_override = nil # By default, won't overwrite @category
       @accuracy   = move.accuracy
       @pp         = move.pp   # Can be changed with Mimic/Transform
       @effectChance = move.effect_chance
@@ -101,8 +101,7 @@ class PokeBattle_Move
     end
 
     def calculatedCategory
-      return @calculated_category if @calculated_category != -1
-      return @category
+      return @category_override || @category
     end
   
     def damagingMove?(aiCheck = false); return @category != 2; end
@@ -160,6 +159,7 @@ class PokeBattle_Move
     def statStepStealingMove?; return false; end
     def redirectionMove?; return false; end
     def hazardRemovalMove?; return false; end
+    def rampagingMove?; return false; end
   
     def ignoresSubstitute?(user)   # user is the Pokémon using this move
       return true if soundMove?
@@ -178,6 +178,10 @@ class PokeBattle_Move
     def guaranteedEffect?
       return false if @flags.include?("FakeRandomEffect")
       return @effectChance >= 100
+    end
+
+    def spreadMove?
+        return GameData::Target.get(@target).spread?
     end
 
     def getDetailsForMoveDex(detailsList = []); end;

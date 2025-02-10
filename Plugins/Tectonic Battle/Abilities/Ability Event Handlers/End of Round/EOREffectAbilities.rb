@@ -124,6 +124,15 @@ BattleHandlers::EOREffectAbility.add(:TENDERIZE,
   }
 )
 
+BattleHandlers::EOREffectAbility.add(:SINKINGFEELING,
+  proc { |ability, battler, _battle|
+      battler.eachOther do |b|
+          next unless b.waterlogged?
+          b.pbLowerMultipleStatSteps(ATTACKING_STATS_2, battler, ability: ability)
+      end
+  }
+)
+
 BattleHandlers::EOREffectAbility.add(:VITALRHYTHM,
   proc { |ability, battler, battle|
       canHealAny = false
@@ -197,6 +206,7 @@ BattleHandlers::EOREffectAbility.add(:LIFELINE,
     if healingAmount > 0
         potentialHeals = []
         battle.pbParty(battler.index).each_with_index do |pkmn,partyIndex|
+            next unless pkmn
             next if pkmn.fainted?
             next if pkmn.hp == pkmn.totalhp
             next if battle.pbFindBattler(partyIndex, battler.index)

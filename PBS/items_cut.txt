@@ -2238,14 +2238,6 @@ Price = 0
 Flags = Berry
 Description = In the Sinnoh region, they like to make sweets known as Poffins with this Berry.
 #-------------------------------
-[BELUEBERRY]
-Name = Belue Berry
-NamePlural = Belue Berries
-Pocket = 5
-Price = 0
-Flags = Berry
-Description = In the Sinnoh region, they like to make sweets known as Poffins with this Berry.
-#-------------------------------
 [ITEMFINDER]
 Name = Itemfinder
 NamePlural = Itemfinders
@@ -4468,3 +4460,35 @@ Pocket = 2
 Price = 400
 FieldUse = OnPokemon
 Description = A spray-type medicine. It heals all the status problems of a single Pokémon.
+#-------------------------------
+[TMSAFEGUARD]
+Name = Unnamed
+NamePlural = Unnamed
+Pocket = 4
+Price = 4000
+FieldUse = TM
+Move = SAFEGUARD
+#-------------------------------
+[AURORATICKET]
+Name = Aurora Ticket
+NamePlural = Aurora Tickets
+Pocket = 7
+Price = 0
+Flags = KeyItem
+Description = A ticket required to board the ship to Doxy Island. It glows beautifully.
+#-------------------------------
+[OLDSEAMAP]
+Name = Old Sea Map
+NamePlural = Old Sea Maps
+Pocket = 7
+Price = 0
+Flags = KeyItem
+Description = A faded sea chart that shows the way to a certain island.
+#-------------------------------
+[TMTRICKYTOXINS]
+Name = Unnamed
+NamePlural = Unnamed
+Pocket = 4
+Price = 4000
+FieldUse = TM
+Move = TRICKYTOXINS

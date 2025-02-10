@@ -43,8 +43,7 @@ def pbBattleWeatherAbility(ability, weather, battler, battle, ignorePrimal = fal
         end
         return getWeatherSettingEffectScore(weather, battler, battle, duration, false)
     else
-        battle.pbShowAbilitySplash(battler, ability) # NOTE: The ability splash is hidden again in def pbStartWeather.
-        battle.pbStartWeather(battler, weather, baseDuration, true, ignoreFainted)
+        battle.pbStartWeather(battler, weather, baseDuration, true, ignoreFainted, ability)
     end
 end
 

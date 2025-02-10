@@ -3,8 +3,10 @@ ALL_STATS_2 = [:ATTACK, 2, :SPECIAL_ATTACK, 2, :DEFENSE, 2, :SPECIAL_DEFENSE, 2,
 ALL_STATS_3 = [:ATTACK, 3, :SPECIAL_ATTACK, 3, :DEFENSE, 3, :SPECIAL_DEFENSE, 3, :SPEED, 3].freeze
 ATTACKING_STATS_1 = [:ATTACK, 1, :SPECIAL_ATTACK, 1].freeze
 ATTACKING_STATS_2 = [:ATTACK, 2, :SPECIAL_ATTACK, 2].freeze
+ATTACKING_STATS_3 = [:ATTACK, 3, :SPECIAL_ATTACK, 3].freeze
 DEFENDING_STATS_1 = [:DEFENSE, 1, :SPECIAL_DEFENSE, 1].freeze
 DEFENDING_STATS_2 = [:DEFENSE, 2, :SPECIAL_DEFENSE, 2].freeze
+DEFENDING_STATS_3 = [:DEFENSE, 3, :SPECIAL_DEFENSE, 3].freeze
 
 class PokeBattle_Battler
     def validateStat(stat)
@@ -66,19 +68,6 @@ class PokeBattle_Battler
         return @steps[stat] >= STAT_STEP_BOUND
     end
 
-    def pbRaiseStatStepBasic(stat, increment)
-        increment *= 2 if hasActiveAbility?(:SIMPLE) && !@battle.moldBreaker
-        # Change the stat step
-        increment = [increment, STAT_STEP_BOUND - @steps[stat]].min
-        if increment.positive?
-            stat_name = GameData::Stat.get(stat).name
-            new = @steps[stat] + increment
-            PBDebug.log("[Stat change] #{pbThis}'s #{stat_name}: #{@steps[stat]} -> #{new} (+#{increment})")
-            @steps[stat] += increment
-        end
-        return increment
-    end
-
     def pbCanRaiseStatStep?(stat, user = nil, move = nil, showFailMsg = false, ignoreContrary = false, ignoreAbilities: false)
         validateStat(stat)
         return false if fainted?
@@ -94,6 +83,39 @@ class PokeBattle_Battler
             return false
         end
         return true
+    end
+
+    # Fails silently
+    def tryRaiseStat(stat, user, move: nil, increment: 1, showFailMsg: false, showAnim: true, ability: nil, cause: nil, item: nil, ignoreContrary: false)
+        return false if increment <= 0
+        lowered = false
+        if pbCanRaiseStatStep?(stat, user, move, showFailMsg, ignoreContrary)
+            @battle.pbShowAbilitySplash(user, ability) if ability
+            if item
+                cause = GameData::Item.get(item).name
+                @battle.pbCommonAnimation("UseItem", user)
+                lowered = true if pbRaiseStatStepByCause(stat, increment, user, cause, showAnim: showAnim, ignoreContrary: ignoreContrary)
+            elsif cause
+                lowered = true if pbRaiseStatStepByCause(stat, increment, user, cause, showAnim: showAnim, ignoreContrary: ignoreContrary)
+            elsif pbRaiseStatStep(stat, increment, user, showAnim, ignoreContrary)
+                lowered = true
+            end
+        end
+        @battle.pbHideAbilitySplash(user) if ability
+        return lowered
+    end
+
+    def pbRaiseStatStepBasic(stat, increment)
+        increment *= 2 if hasActiveAbility?(:SIMPLE) && !@battle.moldBreaker
+        # Change the stat step
+        increment = [increment, STAT_STEP_BOUND - @steps[stat]].min
+        if increment.positive?
+            stat_name = GameData::Stat.get(stat).name
+            new = @steps[stat] + increment
+            PBDebug.log("[Stat change] #{pbThis}'s #{stat_name}: #{@steps[stat]} -> #{new} (+#{increment})")
+            @steps[stat] += increment
+        end
+        return increment
     end
 
     def pbRaiseStatStep(stat, increment, user = nil, showAnim = true, ignoreContrary = false)
@@ -122,18 +144,7 @@ class PokeBattle_Battler
 
         showStatChangeMessage(stat, increment, lowering: false) if showMessages
 
-        # Trigger abilities upon stat gain
-        eachActiveAbility do |ability|
-            BattleHandlers.triggerAbilityOnStatGain(ability, self, stat, user)
-        end
-        eachOpposing do |b|
-            b.eachActiveAbility do |ability|
-                BattleHandlers.triggerAbilityOnEnemyStatGain(ability, b, stat, increment, user, @battle, self)
-            end
-            b.eachActiveItem do |item|
-                BattleHandlers.triggerItemOnEnemyStatGain(item, b, stat, increment, user, @battle, self)
-            end
-        end
+        triggersOnStatGain(stat, increment, user: user)
 
         return increment
     end
@@ -170,6 +181,47 @@ class PokeBattle_Battler
             end
         end
         @battle.pbDisplay(raiseMessage)
+        triggersOnStatGain(stat, increment, user: user)
+        return true
+    end
+
+    def pbRaiseStatStepByAbility(stat, increment, user, ability: nil)
+        return false if fainted?
+        return false if statStepAtMax?(stat)
+        ret = false
+        @battle.pbShowAbilitySplash(user, ability) if ability
+        ret = pbRaiseStatStep(stat, increment, user) if pbCanRaiseStatStep?(stat, user, nil, true)
+        @battle.pbHideAbilitySplash(user) if ability
+        return ret
+    end
+
+    def pbMaximizeStatStep(stat, user = nil, move = nil, ignoreContrary = false, ability: nil)
+        if hasActiveAbility?(:CONTRARY) && !ignoreContrary
+            aiLearnsAbility(:CONTRARY)
+            pbMinimizeStatStep(stat, user, move, true, ability: ability)
+        elsif hasActiveAbility?(:ECCENTRIC) && !ignoreContrary
+            aiLearnsAbility(:ECCENTRIC)
+            increment = ((STAT_STEP_BOUND + @steps[stat]) / 2.0).ceil
+            tryLowerStat(stat, user, move: move, increment: increment, ability: ability)
+        elsif pbCanRaiseStatStep?(stat, user, move, true, ignoreContrary)
+            @battle.pbShowAbilitySplash(user, ability) if ability
+            increment = STAT_STEP_BOUND - @steps[stat]
+            @steps[stat] = STAT_STEP_BOUND
+            @battle.pbCommonAnimation("StatUp", self)
+            statName = GameData::Stat.get(stat).name
+            @battle.pbDisplay(_INTL("{1} maximizes its {2}!", pbThis, statName))
+
+            triggersOnStatGain(stat, increment, user: user)
+
+            @battle.pbHideAbilitySplash(user) if ability
+        end
+    end
+
+    def triggersOnStatGain(stat, increment, user: nil)
+        playStatStepsTutorial unless $PokemonGlobal.statStepsTutorialized
+
+        applyEffect(:StatsRaised)
+
         # Trigger abilities upon stat gain
         eachActiveAbility do |ability|
             BattleHandlers.triggerAbilityOnStatGain(ability, self, stat, user)
@@ -182,17 +234,6 @@ class PokeBattle_Battler
                 BattleHandlers.triggerItemOnEnemyStatGain(item, b, stat, increment, user, @battle, self)
             end
         end
-        return true
-    end
-
-    def pbRaiseStatStepByAbility(stat, increment, user, ability: nil)
-        return false if fainted?
-        return false if statStepAtMax?(stat)
-        ret = false
-        @battle.pbShowAbilitySplash(user, ability) if ability
-        ret = pbRaiseStatStep(stat, increment, user) if pbCanRaiseStatStep?(stat, user, nil, true)
-        @battle.pbHideAbilitySplash(user) if ability
-        return ret
     end
 
     #=============================================================================
@@ -250,9 +291,19 @@ class PokeBattle_Battler
                 end
                 return false
             end
+            if hasActiveItem?(:CLEARAMULET)
+                if showFailMsg
+                    @battle.pbDisplay(_INTL("{1} is protected by its Clear Amulet!", pbThis))
+                end
+                return false
+            end
         elsif effectActive?(:EmpoweredFlowState)
             @battle.pbDisplay(_INTL("{1} is in a state of total focus!", pbThis)) if showFailMsg
             return false
+        else # Block self-inflicted drops
+            eachActiveAbility do |ability|
+                return false if BattleHandlers.triggerStatLossImmunitySelfAbility(ability, self, stat, @battle, showFailMsg)
+            end
         end
         # Check the stat step
         if statStepAtMin?(stat)
@@ -262,6 +313,26 @@ class PokeBattle_Battler
             return false
         end
         return true
+    end
+
+    # Fails silently
+    def tryLowerStat(stat, user, move: nil, increment: 1, showFailMsg: false, showAnim: true, ability: nil, cause: nil, item: nil, ignoreContrary: false, ignoreStubborn: false)
+        return false if increment <= 0
+        lowered = false
+        if pbCanLowerStatStep?(stat, user, move, showFailMsg, ignoreContrary)
+            @battle.pbShowAbilitySplash(user, ability) if ability
+            if item
+                cause = GameData::Item.get(item).name
+                @battle.pbCommonAnimation("UseItem", user)
+                lowered = true if pbLowerStatStepByCause(stat, increment, user, cause, showAnim: showAnim, ignoreContrary: ignoreContrary, ignoreStubborn: ignoreStubborn)
+            elsif cause
+                lowered = true if pbLowerStatStepByCause(stat, increment, user, cause, showAnim: showAnim, ignoreContrary: ignoreContrary, ignoreStubborn: ignoreStubborn)
+            elsif pbLowerStatStep(stat, increment, user, showAnim, ignoreContrary, false, ignoreStubborn)
+                lowered = true
+            end
+        end
+        @battle.pbHideAbilitySplash(user) if ability
+        return lowered
     end
 
     def pbLowerStatStepBasic(stat, increment)
@@ -352,71 +423,9 @@ class PokeBattle_Battler
             @battle.pbHideAbilitySplash(user) if showMessages
         end
 
-        # Trigger abilities upon stat loss
-        eachActiveAbility do |ability|
-            BattleHandlers.triggerAbilityOnStatLoss(ability, self, stat, user)
-        end
-        applyEffect(:StatsDropped)
-
-        playStatStepsTutorial unless $PokemonGlobal.statStepsTutorialized
+        triggersOnStatLoss(stat, increment, user: user)
 
         return increment
-    end
-
-    def showStatChangeMessage(stat, increment, lowering: false)
-        stat = stat[0] if stat.is_a?(Array) && stat.length == 1
-        if stat.is_a?(Array)
-            messageFormat = "{1}'s "
-            statNameArgs = []
-            stat.each_with_index do |individualStatID, index|
-                messageFormatNumber = index + 2
-                messageFormatNumber += 1 if increment > 1
-                if index == stat.length - 1
-                    if stat.length > 2
-                        messageFormat += ", and {#{messageFormatNumber}}"
-                    else
-                        messageFormat += " and {#{messageFormatNumber}}"
-                    end
-                elsif index == 0
-                    messageFormat += "{#{messageFormatNumber}}"
-                else
-                    messageFormat += ", {#{messageFormatNumber}}"
-                end
-                statNameArgs.push(GameData::Stat.get(individualStatID).name)
-            end
-            if lowering
-                if increment == 1
-                    messageFormat += " fell!"
-                    lowerMessage = _INTL(messageFormat, pbThis, *statNameArgs)
-                else
-                    messageFormat += " fell by {2} steps!"
-                    lowerMessage = _INTL(messageFormat, pbThis, increment, *statNameArgs)
-                end
-            else
-                if increment == 1
-                    messageFormat += " rose!"
-                    lowerMessage = _INTL(messageFormat, pbThis, *statNameArgs)
-                else
-                    messageFormat += " rose by {2} steps!"
-                    lowerMessage = _INTL(messageFormat, pbThis, increment, *statNameArgs)
-                end
-            end
-        else
-            if lowering
-                if increment == 1
-                    lowerMessage = _INTL("{1}'s {2} fell!", pbThis, GameData::Stat.get(stat).name)
-                else
-                    lowerMessage = _INTL("{1}'s {2} fell by {3} steps!", pbThis, GameData::Stat.get(stat).name, increment)
-                end
-            else
-                if increment == 1
-                    lowerMessage = _INTL("{1}'s {2} rose!", pbThis, GameData::Stat.get(stat).name)
-                else
-                    lowerMessage = _INTL("{1}'s {2} rose by {3} steps!", pbThis, GameData::Stat.get(stat).name, increment)
-                end
-            end
-        end
-        @battle.pbDisplay(lowerMessage)
     end
 
     def pbLowerStatStepByCause(stat, increment, user, cause, showAnim: true, showMessages: true, ignoreContrary: false, ignoreMirrorArmor: false, ignoreStubborn: false)
@@ -475,11 +484,9 @@ class PokeBattle_Battler
             end
         end
         @battle.pbDisplay(lowerMessage)
-        # Trigger abilities upon stat loss
-        eachActiveAbility do |ability|
-            BattleHandlers.triggerAbilityOnStatLoss(ability, self, stat, user)
-        end
-        applyEffect(:StatsDropped)
+
+        triggersOnStatLoss(stat, increment, user: user)
+
         return true
     end
 
@@ -490,7 +497,6 @@ class PokeBattle_Battler
         @battle.pbShowAbilitySplash(user, ability) if ability
         ret = pbLowerStatStep(stat, increment, user) if pbCanLowerStatStep?(stat, user, nil, true)
         @battle.pbHideAbilitySplash(user) if ability
-        handleStatLossItem(nil, user) if ret
         return ret
     end
 
@@ -532,86 +538,31 @@ class PokeBattle_Battler
             tryRaiseStat(stat, user, move: move, increment: increment, ability: ability)
         elsif pbCanLowerStatStep?(stat, user, move, true, ignoreContrary)
             @battle.pbShowAbilitySplash(user, ability) if ability
+            increment = @steps[stat] + STAT_STEP_BOUND
             @steps[stat] = -STAT_STEP_BOUND
             @battle.pbCommonAnimation("StatDown", self)
             statName = GameData::Stat.get(stat).name
             @battle.pbDisplay(_INTL("{1} minimized its {2}!", pbThis, statName))
             @battle.pbHideAbilitySplash(user) if ability
 
-            # Trigger abilities upon stat loss
-            eachActiveAbility do |ability|
-                BattleHandlers.triggerAbilityOnStatLoss(ability, self, stat, user)
-            end
-            handleStatLossItem(move, user)
+            triggersOnStatLoss(stat, increment, user: user, move: move)
         end
     end
 
-    def handleStatLossItem(move, user)
-        if move
-            applyEffect(:StatsDropped)
-        elsif itemActive?
-            eachActiveItem do |item|
-                BattleHandlers.triggerItemOnStatLoss(item, self, user, move, [], @battle)
-            end
-        end
-    end
+    def triggersOnStatLoss(stat, increment, user: nil, move: nil)
+        playStatStepsTutorial unless $PokemonGlobal.statStepsTutorialized
 
-    def pbMaximizeStatStep(stat, user = nil, move = nil, ignoreContrary = false, ability: nil)
-        if hasActiveAbility?(:CONTRARY) && !ignoreContrary
-            aiLearnsAbility(:CONTRARY)
-            pbMinimizeStatStep(stat, user, move, true, ability: ability)
-        elsif hasActiveAbility?(:ECCENTRIC) && !ignoreContrary
-            aiLearnsAbility(:ECCENTRIC)
-            increment = ((STAT_STEP_BOUND + @steps[stat]) / 2.0).ceil
-            tryLowerStat(stat, user, move: move, increment: increment, ability: ability)
-        elsif pbCanRaiseStatStep?(stat, user, move, true, ignoreContrary)
-            @battle.pbShowAbilitySplash(user, ability) if ability
-            @steps[stat] = STAT_STEP_BOUND
-            @battle.pbCommonAnimation("StatUp", self)
-            statName = GameData::Stat.get(stat).name
-            @battle.pbDisplay(_INTL("{1} maximizes its {2}!", pbThis, statName))
-            @battle.pbHideAbilitySplash(user) if ability
-        end
-    end
+        applyEffect(:StatsDropped)
 
-    # Fails silently
-    def tryRaiseStat(stat, user, move: nil, increment: 1, showFailMsg: false, showAnim: true, ability: nil, cause: nil, item: nil, ignoreContrary: false)
-        return false if increment <= 0
-        lowered = false
-        if pbCanRaiseStatStep?(stat, user, move, showFailMsg, ignoreContrary)
-            @battle.pbShowAbilitySplash(user, ability) if ability
-            if item
-                cause = GameData::Item.get(item).name
-                @battle.pbCommonAnimation("UseItem", user)
-                lowered = true if pbRaiseStatStepByCause(stat, increment, user, cause, showAnim: showAnim, ignoreContrary: ignoreContrary)
-            elsif cause
-                lowered = true if pbRaiseStatStepByCause(stat, increment, user, cause, showAnim: showAnim, ignoreContrary: ignoreContrary)
-            elsif pbRaiseStatStep(stat, increment, user, showAnim, ignoreContrary)
-                lowered = true
-            end
+        # Trigger abilities upon stat loss
+        eachActiveAbility do |ability|
+            BattleHandlers.triggerAbilityOnStatLoss(ability, self, stat, user)
         end
-        @battle.pbHideAbilitySplash(user) if ability
-        return lowered
-    end
 
-    # Fails silently
-    def tryLowerStat(stat, user, move: nil, increment: 1, showFailMsg: false, showAnim: true, ability: nil, cause: nil, item: nil, ignoreContrary: false, ignoreStubborn: false)
-        return false if increment <= 0
-        lowered = false
-        if pbCanLowerStatStep?(stat, user, move, showFailMsg, ignoreContrary)
-            @battle.pbShowAbilitySplash(user, ability) if ability
-            if item
-                cause = GameData::Item.get(item).name
-                @battle.pbCommonAnimation("UseItem", user)
-                lowered = true if pbLowerStatStepByCause(stat, increment, user, cause, showAnim: showAnim, ignoreContrary: ignoreContrary, ignoreStubborn: ignoreStubborn)
-            elsif cause
-                lowered = true if pbLowerStatStepByCause(stat, increment, user, cause, showAnim: showAnim, ignoreContrary: ignoreContrary, ignoreStubborn: ignoreStubborn)
-            elsif pbLowerStatStep(stat, increment, user, showAnim, ignoreContrary, false, ignoreStubborn)
-                lowered = true
-            end
+        # Trigger items upon stat loss
+        eachActiveItem do |item|
+            BattleHandlers.triggerItemOnStatLoss(item, self, user, move, [], @battle)
         end
-        @battle.pbHideAbilitySplash(user) if ability
-        return lowered
     end
 
     #=============================================================================
@@ -627,7 +578,9 @@ class PokeBattle_Battler
 
     def pbCanLowerAnyOfStats?(statArray, user, move: nil, showFailMsg: false)
         for i in 0...statArray.length / 2
-            return true if pbCanLowerStatStep?(statArray[i * 2], user, move, showFailMsg)
+            canLowerThisStat = pbCanLowerStatStep?(statArray[i * 2], user, move, showFailMsg)
+            return true if canLowerThisStat
+            showFailMsg = false
         end
         return false
     end
@@ -672,7 +625,7 @@ class PokeBattle_Battler
             increment = statArray[i * 2 + 1]
             next unless pbCanRaiseStatStep?(stat, user, move, false, false)
             increment = raiseStatStepEX(stat, increment, user: user, showMessages: false, showAnim: false)
-            next if increment <= 0
+            next if increment == false
             if endResult.key?(increment)
                 endResult[increment].push(stat)
             else
@@ -692,7 +645,7 @@ class PokeBattle_Battler
 
     # Pass in array of form
     # [statToRaise, stepsToRaise, statToRaise2, stepsToRaise2, ...]
-    def pbLowerMultipleStatSteps(statArray, user, move: nil, showFailMsg: false, showAnim: true, ability: nil, item: nil, ignoreContrary: false, ignoreMirrorArmor: false)
+    def pbLowerMultipleStatSteps(statArray, user = nil, move: nil, showFailMsg: false, showAnim: true, ability: nil, item: nil, ignoreContrary: false, ignoreMirrorArmor: false)
         return unless pbCanLowerAnyOfStats?(statArray, user, move: move, showFailMsg: showFailMsg)
         @battle.pbShowAbilitySplash(user, ability) if ability
 
@@ -709,7 +662,7 @@ class PokeBattle_Battler
                 @battle.pbDisplay(_INTL("{1}'s Mirror Armor activated!", pbThis))
                 unless user
                     battle.pbHideAbilitySplash(self)
-                    return false
+                    return false    
                 end
                 if user.pbCanLowerAnyOfStats?(statArray, nil, move: move, showFailMsg: showFailMsg)
                     user.pbLowerMultipleStatSteps(statArray, user, showFailMsg: showFailMsg, showAnim: showAnim, ignoreContrary: ignoreContrary, ignoreMirrorArmor: true)
@@ -784,6 +737,65 @@ class PokeBattle_Battler
 
         @battle.pbHideAbilitySplash(user) if ability
         return loweredAnySteps
+    end
+
+    #=============================================================================
+    # Helper methods
+    #=============================================================================
+    def showStatChangeMessage(stat, increment, lowering: false)
+        stat = stat[0] if stat.is_a?(Array) && stat.length == 1
+        if stat.is_a?(Array)
+            messageFormat = "{1}'s "
+            statNameArgs = []
+            stat.each_with_index do |individualStatID, index|
+                messageFormatNumber = index + 2
+                messageFormatNumber += 1 if increment > 1
+                if index == stat.length - 1
+                    if stat.length > 2
+                        messageFormat += ", and {#{messageFormatNumber}}"
+                    else
+                        messageFormat += " and {#{messageFormatNumber}}"
+                    end
+                elsif index == 0
+                    messageFormat += "{#{messageFormatNumber}}"
+                else
+                    messageFormat += ", {#{messageFormatNumber}}"
+                end
+                statNameArgs.push(GameData::Stat.get(individualStatID).name)
+            end
+            if lowering
+                if increment == 1
+                    messageFormat += " fell!"
+                    lowerMessage = _INTL(messageFormat, pbThis, *statNameArgs)
+                else
+                    messageFormat += " fell by {2} steps!"
+                    lowerMessage = _INTL(messageFormat, pbThis, increment, *statNameArgs)
+                end
+            else
+                if increment == 1
+                    messageFormat += " rose!"
+                    lowerMessage = _INTL(messageFormat, pbThis, *statNameArgs)
+                else
+                    messageFormat += " rose by {2} steps!"
+                    lowerMessage = _INTL(messageFormat, pbThis, increment, *statNameArgs)
+                end
+            end
+        else
+            if lowering
+                if increment == 1
+                    lowerMessage = _INTL("{1}'s {2} fell!", pbThis, GameData::Stat.get(stat).name)
+                else
+                    lowerMessage = _INTL("{1}'s {2} fell by {3} steps!", pbThis, GameData::Stat.get(stat).name, increment)
+                end
+            else
+                if increment == 1
+                    lowerMessage = _INTL("{1}'s {2} rose!", pbThis, GameData::Stat.get(stat).name)
+                else
+                    lowerMessage = _INTL("{1}'s {2} rose by {3} steps!", pbThis, GameData::Stat.get(stat).name, increment)
+                end
+            end
+        end
+        @battle.pbDisplay(lowerMessage)
     end
 
     #=============================================================================

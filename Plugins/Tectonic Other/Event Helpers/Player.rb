@@ -9,14 +9,14 @@ end
 
 def stowFollowerIfActive()
 	if $PokemonGlobal.follower_toggled
-		pbToggleFollowingPokemon("off",true)
+		pbToggleFollowingPokemon("off",!$PokemonGlobal.bicycle)
 		pbWait(Graphics.frame_rate)
 	end
 end
 
 def unstowFollowerIfAllowed()
-	if $PokemonSystem.followers == 0
-		pbToggleFollowingPokemon("on",true)
+	if $Options.followers == 0
+		pbToggleFollowingPokemon("on",!$PokemonGlobal.bicycle)
 		pbWait(Graphics.frame_rate)
 	end
 end
@@ -87,6 +87,7 @@ def healPartyWithDelay(skipAidKit = false)
 	pbMEPlay('Pkmn healing')
 	pbWait(68)
 	refillAidKit unless skipAidKit
+    refreshFollow(false)
 end
 
 def pumpedUp?
@@ -104,6 +105,7 @@ def nonLegendarySpeciesCount(owned = false)
     GameData::Species.each do |speciesData|
         next unless speciesData.form == 0
         next if speciesData.isLegendary?
+        next if speciesData.isTest?
         next if owned && !$Trainer.pokedex.owned?(speciesData.species)
         count += 1
     end

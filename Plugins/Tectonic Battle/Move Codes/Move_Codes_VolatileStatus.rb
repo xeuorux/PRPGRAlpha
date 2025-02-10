@@ -111,8 +111,8 @@ class PokeBattle_Move_DisableTargetLastMoveUsedLowerTargetRelevantStat4 < PokeBa
     end
 
     def getDebuffingStat(battler)
-        return :SPEED unless battler.lastRegularMoveUsed
-        case GameData::Move.get(battler.lastRegularMoveUsed).category
+        return :SPEED unless battler.lastMoveUsedCategory
+        case battler.lastMoveUsedCategory
         when 0
             return :ATTACK
         when 1
@@ -611,11 +611,17 @@ class PokeBattle_Move_DisableTargetSoundMoves3 < PokeBattle_Move
 end
 
 #===============================================================================
-# The next ground type move to hit the target deals double damage. (Volatile Toxin)
+# Target cannot use blade-based moves for 2 more rounds. (Disarming Shot)
 #===============================================================================
-class PokeBattle_Move_TargetTakesDoubleDamageFromNextGroundAttack < PokeBattle_Move
-    def pbEffectAgainstTarget(_user, target)
-        target.applyEffect(:VolatileToxin)
+class PokeBattle_Move_DisableTargetBladeMoves3 < PokeBattle_Move
+    def pbAdditionalEffect(_user, target)
+        return if target.fainted? || target.damageState.substitute
+        target.applyEffect(:DisarmingShot, 3)
+    end
+
+    def getTargetAffectingEffectScore(_user, target)
+        return 30 if !target.effectActive?(:DisarmingShot) && target.hasBladeMove? && !target.substituted?
+        return 0
     end
 end
 
@@ -705,16 +711,16 @@ end
 #===============================================================================
 class PokeBattle_Move_NegateTargetAbilityIfTargetActed < PokeBattle_Move
     def pbEffectAgainstTarget(_user, target)
-        return if target.damageState.substitute || target.effectActive?(:GastroAcid)
+        return if target.damageState.substitute || target.effectActive?(:AbilitySupressed)
         return if target.immutableAbility?
         return if @battle.choices[target.index][0] != :UseItem &&
                   !((@battle.choices[target.index][0] == :UseMove ||
                   @battle.choices[target.index][0] == :Shift) && target.movedThisRound?)
-        target.applyEffect(:GastroAcid)
+        target.applyEffect(:AbilitySupressed)
     end
 
     def getEffectScore(user, target)
-        score = getWantsToBeSlowerScore(user, target, 3, move: self) if !target.substituted? && !target.effectActive?(:GastroAcid)
+        score = getWantsToBeSlowerScore(user, target, 3, move: self) if !target.substituted? && !target.effectActive?(:AbilitySupressed)
         return score
     end
 end
@@ -759,5 +765,67 @@ class PokeBattle_Move_TargetHasHalvedHealing < PokeBattle_Move
             end
         end
         return 0
+    end
+end
+
+#===============================================================================
+# User fractures the target.
+#===============================================================================
+class PokeBattle_Move_FractureTarget < PokeBattle_Move
+    def ignoresSubstitute?(_user); return true; end
+
+    def pbFailsAgainstTarget?(user, target, show_message)
+        return false if damagingMove?
+        if target.effectActive?(:Fracture)
+            @battle.pbDisplay(_INTL("But it failed, since #{target.pbThis(true)} is already fractured!")) if show_message
+            return true
+        end
+        return false
+    end
+
+    def pbEffectAgainstTarget(user, target)
+        return if damagingMove?
+        target.applyEffect(:Fracture)
+    end
+
+    def pbAdditionalEffect(user, target)
+        return if target.damageState.substitute
+        return if target.effectActive?(:Fracture)
+        target.applyEffect(:Fracture)
+    end
+
+    def getEffectScore(user, target)
+        return getFractureEffectScore(user, target)
+    end
+end
+
+#===============================================================================
+# User jinxes the target.
+#===============================================================================
+class PokeBattle_Move_JinxTarget < PokeBattle_Move
+    def ignoresSubstitute?(_user); return true; end
+
+    def pbFailsAgainstTarget?(user, target, show_message)
+        return false if damagingMove?
+        if target.effectActive?(:Jinxed)
+            @battle.pbDisplay(_INTL("But it failed, since #{target.pbThis(true)} is already jinxed!")) if show_message
+            return true
+        end
+        return false
+    end
+
+    def pbEffectAgainstTarget(user, target)
+        return if damagingMove?
+        target.applyEffect(:Jinxed)
+    end
+
+    def pbAdditionalEffect(user, target)
+        return if target.damageState.substitute
+        return if target.effectActive?(:Jinxed)
+        target.applyEffect(:Jinxed)
+    end
+
+    def getEffectScore(user, target)
+        return getJinxEffectScore(user, target)
     end
 end

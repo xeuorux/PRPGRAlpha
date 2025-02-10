@@ -172,7 +172,7 @@ def pbChangeLevel(pkmn, newlevel, scene = nil)
       end
       
       # Learn new moves upon level up
-      unless $PokemonSystem.prompt_level_moves == 1
+      unless $Options.prompt_level_moves == 1
           movelist = pkmn.getMoveList
           for i in movelist
               next unless i[0] > oldLevel
@@ -396,10 +396,10 @@ def pbUseItem(bag,item,bagscene=nil)
     end
     ret = false
     annot = nil
-    if itm.is_evolution_stone?
+    if itm.is_evolution_item?
       annot = []
       for pkmn in $Trainer.party
-        elig = pkmn.check_evolution_on_use_item(item)
+        elig = pkmn.check_evolution_on_use_item(item, false)
         annot.push((elig) ? _INTL("ABLE") : _INTL("NOT ABLE"))
       end
     end
@@ -546,7 +546,18 @@ def pbChooseEvolutionStone(var = 0)
   pbFadeOutIn {
     scene = PokemonBag_Scene.new
     screen = PokemonBagScreen.new(scene,$PokemonBag)
-    ret = screen.pbChooseItemScreen(Proc.new { |item| GameData::Item.get(item).is_evolution_stone? })
+    ret = screen.pbChooseItemScreen(Proc.new { |item| GameData::Item.get(item).is_evolution_item? })
+  }
+  $game_variables[var] = ret || :NONE if var > 0
+  return ret
+end
+
+def pbChoosePokeball(var = 0)
+  ret = nil
+  pbFadeOutIn {
+    scene = PokemonBag_Scene.new
+    screen = PokemonBagScreen.new(scene,$PokemonBag)
+    ret = screen.pbChooseItemScreen(Proc.new { |item| GameData::Item.get(item).is_poke_ball? })
   }
   $game_variables[var] = ret || :NONE if var > 0
   return ret
@@ -679,7 +690,7 @@ def pbEXPAdditionItem(pkmn, exp, item, scene = nil, oneAtATime = false)
     end
     
     # Learn new moves upon level up
-    unless $PokemonSystem.prompt_level_moves == 1
+    unless $Options.prompt_level_moves == 1
         movelist = pkmn.getMoveList
         for i in movelist
             next if i[0] <= current_lvl

@@ -91,6 +91,19 @@ module GameData
             return nil
         end
 
+        def self.get_players
+            players = []
+            players.push(get.player_A) if get.player_A
+            players.push(get.player_B) if get.player_B
+            players.push(get.player_C) if get.player_C
+            players.push(get.player_D) if get.player_D
+            players.push(get.player_E) if get.player_E
+            players.push(get.player_F) if get.player_F
+            players.push(get.player_G) if get.player_G
+            players.push(get.player_H) if get.player_H
+            return players
+        end
+
         def initialize(hash)
             @id = hash[:id]
             @home = hash[:home]
@@ -167,6 +180,7 @@ module GameData
         attr_reader :teleport_blocked
         attr_reader :saving_blocked
         attr_reader :no_team_editing
+        attr_reader :import_name
 
         DATA = {}
         DATA_FILENAME = "map_metadata.dat"
@@ -197,6 +211,7 @@ module GameData
           "TeleportBlocked"  => [23, "b"],
           "SavingBlocked"    => [24, "b"],
           "NoTeamEditing"    => [25, "b"],
+          "ImportName"       => [26, "s"],
        }
 
         extend ClassMethodsIDNumbers
@@ -256,6 +271,8 @@ module GameData
                  _INTL("Whether the player is prevented from saving the game on this map."),],
                 ["NoTeamEditing",    BooleanProperty,
                  _INTL("Whether the player is prevented from editing their team on this map."),],
+                ["ImportName",       StringProperty,
+                _INTL("The name to give the map if it's missing in MapInfos.rxdata.")]
             ]
         end
 
@@ -287,6 +304,7 @@ module GameData
             @saving_blocked		    = hash[:saving_blocked]
             @no_team_editing 		= hash[:no_team_editing]
             @defined_in_extension   = hash[:defined_in_extension] || false
+            @import_name            = hash[:import_name]
         end
 
         def property_from_string(str)
@@ -316,6 +334,7 @@ module GameData
             when "TeleportBlocked"  then return @teleport_blocked
             when "SavingBlocked"    then return @saving_blocked
             when "NoTeamEditing"    then return @no_team_editing
+            when "ImportName"       then return @import_name
             end
             return nil
         end
@@ -384,6 +403,7 @@ module Compiler
                             :player_F           => contents["PlayerF"],
                             :player_G           => contents["PlayerG"],
                             :player_H           => contents["PlayerH"],
+                            :import_name        => contents["ImportName"]
                         }
                         # Add metadata's data to records
                         GameData::Metadata.register(metadata_hash)
@@ -417,6 +437,7 @@ module Compiler
                             :saving_blocked	      	=> contents["SavingBlocked"],
                             :no_team_editing	    => contents["NoTeamEditing"],
                             :defined_in_extension => !baseFile,
+                            :import_name            => contents["ImportName"]
                         }
                         # Add metadata's data to records
                         GameData::MapMetadata.register(metadata_hash)

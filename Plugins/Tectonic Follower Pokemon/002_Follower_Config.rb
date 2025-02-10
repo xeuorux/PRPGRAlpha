@@ -76,17 +76,36 @@ Events.OnTalkToFollower += proc {|pkmn,event,random_val|
   when :LEECHED
     $scene.spriteset.addUserAnimation(FollowerSettings::Emo_Normal, event.x, event.y)
     pbWait(72)
-    pbMessage(_INTL("{1} energy is slowly being leeched away.",pkmn.name))
+    pbMessage(_INTL("{1}'s energy is slowly being leeched away.",pkmn.name))
+  when :WATERLOG
+    $scene.spriteset.addUserAnimation(FollowerSettings::Emo_Normal, event.x, event.y)
+    pbWait(72)
+    pbMessage(_INTL("{1} is soaked through.",pkmn.name))
   end
   next true if pkmn.status != :NONE
 }
 
 Events.OnTalkToFollower += proc {|pkmn,event,random_val|
   if $PokemonGlobal.follower_hold_item
-    items = [:FULLRESTORE,:FULLRESTORE,:ESCAPEROPE,:ESCAPEROPE,
-         :RARECANDY,:RARECANDY,:REPEL,:REPEL,:MAXREPEL,
-         :TINYMUSHROOM,:TINYMUSHROOM,:PEARL,:NUGGET,:BIGMUSHROOM,
-         :POKEBALL,:POKEBALL,:POKEBALL,:GREATBALL,:GREATBALL,:ULTRABALL
+    items = %i[
+      FULLRESTORE
+      FULLRESTORE
+      RARECANDY
+      RARECANDY
+      REPEL
+      REPEL
+      MAXREPEL
+      TINYMUSHROOM
+      TINYMUSHROOM
+      PEARL
+      NUGGET
+      BIGMUSHROOM
+      POKEBALL
+      POKEBALL
+      POKEBALL
+      GREATBALL
+      GREATBALL
+      ULTRABALL
     ]
     # If no message or quantity is specified the default message is used and the quantity of item is 1
     next true if pbPokemonFound(items[rand(items.length)])
@@ -95,7 +114,7 @@ Events.OnTalkToFollower += proc {|pkmn,event,random_val|
 
 # Specific message if the map name is Pokemon Lab
 Events.OnTalkToFollower += proc {|pkmn,event,random_val|
-  if $game_map.name.downcase.include?("lab")
+  if $game_map.name.downcase.include?(_INTL("lab"))
     $scene.spriteset.addUserAnimation(FollowerSettings::Emo_Normal,event.x,event.y)
     pbWait(72)
     messages = [
@@ -110,7 +129,7 @@ Events.OnTalkToFollower += proc {|pkmn,event,random_val|
 
 # Specific message if the map name has the players name in it ie the Player's Hpuse
 Events.OnTalkToFollower += proc {|pkmn,event,random_val|
-  if $game_map.name.downcase.include?($Trainer.name.downcase)
+  if $game_map.name.downcase.include?($Trainer.name.downcase + _INTL("'s"))
     $scene.spriteset.addUserAnimation(FollowerSettings::Emo_Happy,event.x,event.y)
     pbWait(72)
     messages = [
@@ -125,7 +144,7 @@ Events.OnTalkToFollower += proc {|pkmn,event,random_val|
 
 # Specific message if the map name has Pokecenter or Pokemon Center
 Events.OnTalkToFollower += proc {|pkmn,event,random_val|
-  if $game_map.name.downcase.include?("center")
+  if $game_map.name.downcase.include?(_INTL("center"))
     $scene.spriteset.addUserAnimation(FollowerSettings::Emo_Happy,event.x,event.y)
     pbWait(72)
     messages = [
@@ -146,7 +165,7 @@ Events.OnTalkToFollower += proc {|pkmn,event,random_val|
 
 # Specific message if the map name has Forest
 Events.OnTalkToFollower += proc {|pkmn,event,random_val|
-  if $game_map.name.downcase.include?("forest")
+  if $game_map.name.downcase.include?(_INTL("forest"))
     $scene.spriteset.addUserAnimation(FollowerSettings::Emo_Sing,event.x,event.y)
     pbWait(72)
     messages = [
@@ -174,7 +193,7 @@ Events.OnTalkToFollower += proc {|pkmn,event,random_val|
 
 # Specific message if the map name has Gym in it
 Events.OnTalkToFollower += proc {|pkmn,event,random_val|
-  if $game_map.name.downcase.include?("gym")
+  if $game_map.name.downcase.include?(_INTL("gym"))
     $scene.spriteset.addUserAnimation(FollowerSettings::Emo_Hate,event.x,event.y)
     pbWait(72)
     messages = [
@@ -196,7 +215,7 @@ Events.OnTalkToFollower += proc {|pkmn,event,random_val|
 
 # Specific message if the map name has Beach in it
 Events.OnTalkToFollower += proc {|pkmn,event,random_val|
-  if $game_map.name.downcase.include?("beach")
+  if $game_map.name.downcase.include?(_INTL("beach"))
     $scene.spriteset.addUserAnimation(FollowerSettings::Emo_Happy,event.x,event.y)
     pbWait(72)
     messages = [
@@ -635,7 +654,7 @@ Events.OnTalkToFollower += proc {|pkmn,event,random_val|
       _INTL("{1} has an intense look on its' face."),
       _INTL("{1} is staring off into the distance."),
       _INTL("{1} seems to be carefully examining {2}'s face."),
-      _INTL("{1} seems to be trying to communicate with its' eyes."),
+      _INTL("{1} seems to be trying to communicate with its' eye(s)."),
       _INTL("...{1} seems to have sneezed!"),
       _INTL("...{1} noticed that {2}'s shoes are a bit dirty."),
       _INTL("Seems {1} ate something strange, it's making an odd face... "),

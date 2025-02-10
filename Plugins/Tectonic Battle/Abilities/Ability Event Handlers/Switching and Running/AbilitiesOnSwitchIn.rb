@@ -580,19 +580,32 @@ BattleHandlers::AbilityOnSwitchIn.add(:DRIFTINGMIST,
   }
 )
 
+BattleHandlers::AbilityOnSwitchIn.add(:FITTOSURVIVE,
+  proc { |ability, battler, battle, aiCheck|
+      if aiCheck
+          next getGravityEffectScore(battler, 4)
+      else
+          battle.pbShowAbilitySplash(battler, ability)
+          battle.pbAnimation(:NATURALPROTECTION, battler, nil, 0)
+          battler.pbOwnSide.applyEffect(:NaturalProtection, 4)
+          battle.pbHideAbilitySplash(battler)
+      end
+  }
+)
+
 ##########################################
 # Free move use
 ##########################################
 
 BattleHandlers::AbilityOnSwitchIn.add(:KLEPTOMANIAC,
   proc { |ability, battler, battle, aiCheck|
-      next battle.forceUseMove(battler, :SNATCH, -1, ability: ability, aiCheck: aiCheck)
+      next battle.forceUseMove(battler, :SNATCH, ability: ability, aiCheck: aiCheck)
   }
 )
 
 BattleHandlers::AbilityOnSwitchIn.add(:ASSISTANT,
   proc { |ability, battler, battle, aiCheck|
-      next battle.forceUseMove(battler, :ASSIST, -1, ability: ability, aiCheck: aiCheck)
+      next battle.forceUseMove(battler, :ASSIST, ability: ability, aiCheck: aiCheck)
   }
 )
 
@@ -600,7 +613,7 @@ BattleHandlers::AbilityOnSwitchIn.add(:ASSISTANT,
 BattleHandlers::AbilityOnSwitchIn.add(:SUDDENTURN,
   proc { |ability, battler, battle, aiCheck|
     if aiCheck
-      next battle.forceUseMove(battler, :RAPIDSPIN, -1, ability: ability, aiCheck: true)
+      next battle.forceUseMove(battler, :RAPIDSPIN, ability: ability, aiCheck: true)
     else
       next 0
     end
@@ -609,7 +622,7 @@ BattleHandlers::AbilityOnSwitchIn.add(:SUDDENTURN,
 
 BattleHandlers::AbilityOnSwitchIn.add(:WIBBLEWOBBLE,
   proc { |ability, battler, battle, aiCheck|
-      next battle.forceUseMove(battler, :POWERSPLIT, -1, ability: ability, aiCheck: aiCheck)
+      next battle.forceUseMove(battler, :POWERSPLIT, ability: ability, aiCheck: aiCheck)
   }
 )
 
@@ -732,12 +745,13 @@ BattleHandlers::AbilityOnSwitchIn.add(:PRIMEVALIMPOSTER,
 
       # Give each cloned pokemon a stat boost to each stat
       trainerClone.party.each do |partyMember|
-          next if partyMember.fainted?
-          party.push(partyMember)
-          partyMember.ev = partyMember.ev.each_with_object({}) do |(statID, evValue), evArray|
-              evArray[statID] = evValue + 10
-          end
-          partyMember.calc_stats
+        next unless partyMember
+        next if partyMember.fainted?
+        party.push(partyMember)
+        partyMember.ev = partyMember.ev.each_with_object({}) do |(statID, evValue), evArray|
+            evArray[statID] = evValue + 10
+        end
+        partyMember.calc_stats
       end
 
       partyOrder = battle.pbPartyOrder(battler.index)
@@ -843,7 +857,8 @@ BattleHandlers::AbilityOnSwitchIn.add(:TESLACOILS,
           end
       end
       battle.pbShowAbilitySplash(battler, ability)
-      battler.applyEffect(:Charge)
+      battle.pbAnimation(:CHARGE, battler, nil)
+      battler.applyEffect(:EnergyCharge)
       battle.pbHideAbilitySplash(battler)
   }
 )
@@ -892,6 +907,26 @@ BattleHandlers::AbilityOnSwitchIn.add(:HAUNTED,
       battle.pbHideAbilitySplash(battler)
   }
 )
+
+BattleHandlers::AbilityOnSwitchIn.add(:BRUTEFORCE,
+  proc { |ability, battler, battle, aiCheck|
+      next 0 if aiCheck
+      battle.pbShowAbilitySplash(battler, ability)
+      battle.pbDisplay(_INTL("{1} forces its moves to be physical!", battler.pbThis))
+      battle.pbHideAbilitySplash(battler)
+  }
+)
+
+BattleHandlers::AbilityOnSwitchIn.add(:TIMEINTERLOPER,
+  proc { |ability, battler, battle, aiCheck|
+      next 0 if aiCheck
+      battle.pbShowAbilitySplash(battler, ability)
+      battle.pbDisplay(_INTL("{1} is an interloper! All its moves are special!", battler.pbThis))
+      battle.pbHideAbilitySplash(battler)
+  }
+)
+
+BattleHandlers::AbilityOnSwitchIn.copy(:TIMEINTERLOPER, :SPACEINTERLOPER)
 
 BattleHandlers::AbilityOnSwitchIn.add(:SLUMBERINGDRAKE,
   proc { |ability, battler, battle, aiCheck|
@@ -1068,11 +1103,7 @@ BattleHandlers::AbilityOnSwitchIn.add(:LASTGASP,
     next 0 if aiCheck
     battler.showMyAbilitySplash(ability)
     battler.applyEffect(:LastGasp)
-    if battler.boss?
-      battler.applyEffect(:PerishSong, 12)
-    else
-      battler.applyEffect(:PerishSong, 3)
-    end
+    battler.applyEffect(:PerishSong, 3)
     battler.hideMyAbilitySplash
   }
 )

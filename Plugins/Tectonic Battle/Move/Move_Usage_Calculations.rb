@@ -87,7 +87,7 @@ class PokeBattle_Move
         end
 
         # Explain to the player what is happening
-        if immunityPierced && !uiOnlyCheck && $PokemonSystem.avatar_mechanics_messages == 0
+        if immunityPierced && !uiOnlyCheck && $Options.avatar_mechanics_messages == 0
             if AVATARS_REGULAR_ATTACKS_PIERCE_IMMUNITIES
                 @battle.pbDisplay(_INTL("Near the avatar, immunities are resistances!"))
             else
@@ -175,7 +175,7 @@ class PokeBattle_Move
         end
         # Other effects, inc. ones that set accuracy_multiplier or evasion_step to
         # specific values
-        modifiers[:accuracy_multiplier] *= 2.0 if @battle.field.effectActive?(:Gravity)
+        modifiers[:accuracy_multiplier] *= 2.0 if @battle.gravityIntensified?
         modifiers[:accuracy_multiplier] *= 1.5 if user.effectActive?(:Spotting)
 
         if aiCheck
@@ -274,6 +274,11 @@ class PokeBattle_Move
         user.eachActiveAbility do |ability|
             c = BattleHandlers.triggerCriticalCalcUserAbility(ability, user, target, self, c)
         end
+        user.eachAlly do |ally|
+            ally.eachActiveAbility do |ability|
+                c = BattleHandlers.triggerCriticalCalcUserAllyAbility(ability, user, target, self, c)
+            end
+        end
         unless @battle.moldBreaker
             target.eachActiveAbility do |ability|
                 c = BattleHandlers.triggerCriticalCalcTargetAbility(ability, user, target, c)
@@ -292,9 +297,7 @@ class PokeBattle_Move
         elsif highCriticalRate?
             c += 1
         end
-        c += user.effects[:FocusEnergy]
-        c += 1 if user.effectActive?(:LuckyStar)
-        c += 1 if user.inHyperMode? && @calcType == :SHADOW
+        c += user.effects[:RaisedCritChance]
 
         return c
     end
@@ -308,6 +311,7 @@ class PokeBattle_Move
     end
 
     def guaranteedCrit?(user, target)
+        return true if target.effectActive?(:Jinxed)
         return true if user.effectActive?(:LaserFocus) || user.effectActive?(:EmpoweredLaserFocus)
         return true if user.effectActive?(:LuckyCheer)
         return true if pbCriticalOverride(user, target) > 0
@@ -328,30 +332,13 @@ class PokeBattle_Move
 
     def ignoresDefensiveStepBoosts?(_user, _target); return false; end
 
-    def forcedSpecial?(user, _target, checkingForAI = false)
-        return true if user.shouldAbilityApply?(%i[TIMEINTERLOPER SPACEINTERLOPER], checkingForAI)
-        return false
-    end
-
-    def forcedPhysical?(user, _target, checkingForAI = false)
-        return true if user.shouldAbilityApply?([:BRUTEFORCE], checkingForAI)
-        return false
-    end
-
-    def specialAfterForcing?(user, target, checkingForAI = false)
-        isSpecial = specialMove?
-        isSpecial = true if forcedSpecial?(user, target, checkingForAI)
-        isSpecial = false if forcedPhysical?(user, target, checkingForAI)
-        return isSpecial
-    end
-
     def pbAttackingStat(user, target, checkingForAI = false)
-        return user, :SPECIAL_ATTACK if specialAfterForcing?(user, target, checkingForAI)
+        return user, :SPECIAL_ATTACK if specialMove?
         return user, :ATTACK
     end
 
     def pbDefendingStat(user, target, checkingForAI = false)
-        return target, :SPECIAL_DEFENSE if specialAfterForcing?(user, target, checkingForAI)
+        return target, :SPECIAL_DEFENSE if specialMove?
         return target, :DEFENSE
     end
 

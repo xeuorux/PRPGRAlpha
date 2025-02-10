@@ -1,4 +1,4 @@
-ItemHandlers::UseOnPokemon.addIf(proc { |item| GameData::Item.get(item).is_evolution_stone? },
+ItemHandlers::UseOnPokemon.addIf(proc { |item| GameData::Item.get(item).is_evolution_item? },
   proc { |item,pkmn,scene|
     newspecies = pkmn.check_evolution_on_use_item(item)
     if newspecies

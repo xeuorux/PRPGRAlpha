@@ -539,6 +539,10 @@ end
 # Text import/export for localisation
 #===============================================================================
 def pbExtractText(untranslatedOnly = false)
+    if untranslatedOnly && $Options.language == 0
+        pbMessage(_INTL("Can only run this command when the game language isn't set to the default!"))
+        return
+    end
     msgwindow = pbCreateMessageWindow
     if safeExists?("intl.txt") &&
        !pbConfirmMessageSerious(_INTL("intl.txt already exists. Overwrite it?"))

@@ -89,19 +89,26 @@ class PokeBattle_Battler
         end
         unless struggle
             damageAmount *= 0.66 if hasTribeBonus?(:ANIMATED)
-            damageAmount *= 0.66 if pbOwnSide.effectActive?(:NaturalProtection)
+            damageAmount *= 0.5 if pbOwnSide.effectActive?(:NaturalProtection)
         end
         damageAmount = damageAmount.ceil
         return damageAmount
     end
 
+    def recoilDamageMult(checkingForAI = false)
+        multiplier = 1.0
+        multiplier *= 0.66 if hasTribeBonus?(:ANIMATED)
+        multiplier *= 0.5 if pbOwnSide.effectActive?(:NaturalProtection)
+        multiplier /= 2 if shouldAbilityApply?(:UNBREAKABLE, checkingForAI)
+        multiplier /= 2 if shouldAbilityApply?(:STONEMANE, checkingForAI)
+        multiplier *= 2 if shouldAbilityApply?(:LINEBACKER, checkingForAI)
+        return multiplier
+    end
+
     def applyRecoilDamage(damage, showDamageAnimation = true, showMessage = true, recoilMessage = nil, cushionRecoil = false)
-        return unless takesIndirectDamage?
-        return if hasActiveAbility?(:ROCKHEAD)
+        return unless takesRecoilDamage?
         # return if @battle.pbAllFainted?(@idxOpposingSide)
-        damage *= 0.66 if hasTribeBonus?(:ANIMATED)
-        damage *= 0.66 if pbOwnSide.effectActive?(:NaturalProtection)
-        damage = damage.round
+        damage = (damage * recoilDamageMult).round
         damage = 1 if damage < 1
         if !cushionRecoil && hasActiveAbility?(:KICKBACK)
             showMyAbilitySplash(:KICKBACK)
@@ -132,7 +139,7 @@ class PokeBattle_Battler
         end
     end
 
-    def pbRecoverHP(amt, anim = true, anyAnim = true, showMessage = true, customMessage = nil, canOverheal: false, aiCheck: false)
+    def pbRecoverHP(amt, anim = true, anyAnim = true, showMessage = true, customMessage = nil, canOverheal: false, items_to_skip: [], aiCheck: false)
         if @battle.autoTesting
             anim = false
             anyAnim = false
@@ -176,7 +183,7 @@ class PokeBattle_Battler
             end
 
             if amt.negative?
-                pbItemHPHealCheck
+                pbItemHPHealCheck(items_to_skip: items_to_skip)
                 pbAbilitiesOnDamageTaken(oldHP)
                 pbFaint if fainted?
             end
@@ -208,11 +215,11 @@ class PokeBattle_Battler
         end
     end
 
-    def pbRecoverHPFromMultiDrain(targets, ratio, ability: nil)
+    def pbRecoverHPFromMultiDrain(targets, ratio, ability: nil, onlyCriticalDamage: false)
         totalDamageDealt = 0
         targets.each do |target|
             next if target.damageState.unaffected
-            damage = target.damageState.totalHPLost
+            damage = onlyCriticalDamage ? target.damageState.totalHPLostCritical : target.damageState.totalHPLost
             if target.hasActiveAbility?(:LIQUIDOOZE)
                 @battle.pbShowAbilitySplash(target, :LIQUIDOOZE)
                 lossAmount = (damage * ratio).round
@@ -236,7 +243,7 @@ class PokeBattle_Battler
         hideMyAbilitySplash if ability
     end
 
-    def applyFractionalHealing(fraction, ability: nil, anim: true, anyAnim: true, showMessage: true, customMessage: nil, item: nil, canOverheal: false, aiCheck: false)
+    def applyFractionalHealing(fraction, ability: nil, anim: true, anyAnim: true, showMessage: true, customMessage: nil, item: nil, canOverheal: false, items_to_skip: [], aiCheck: false)
         return 0 unless canHeal?(canOverheal)
         if item && !aiCheck
             @battle.pbCommonAnimation("UseItem", self) unless @battle.autoTesting
@@ -250,7 +257,7 @@ class PokeBattle_Battler
         end
         battle.pbShowAbilitySplash(self, ability) if ability && !aiCheck
         healAmount = getFractionalHealingAmount(fraction, canOverheal)
-        actuallyHealed = pbRecoverHP(healAmount, anim, anyAnim, showMessage, customMessage, canOverheal: canOverheal, aiCheck: aiCheck)
+        actuallyHealed = pbRecoverHP(healAmount, anim, anyAnim, showMessage, customMessage, canOverheal: canOverheal, items_to_skip: items_to_skip, aiCheck: aiCheck)
         battle.pbHideAbilitySplash(self) if ability && !aiCheck
         if aiCheck
             return getHealingEffectScore(actuallyHealed)
@@ -316,6 +323,7 @@ class PokeBattle_Battler
             if hasActiveItem?(:HOOHSASHES)
                 faintedPartyMembers = []
                 ownerParty.each do |partyPokemon|
+                    next unless partyPokemon
                     next if @battle.pbFindBattler(partyIndex, @index)
                     next unless partyPokemon.fainted?
                     faintedPartyMembers.push(partyPokemon)
@@ -357,6 +365,9 @@ class PokeBattle_Battler
 
             # Check for end of primordial weather
             @battle.pbEndPrimordialWeather
+
+            # Trigger avatar AI
+            @bossAI.onDestroyed(self, battle) if boss?
         end
     end
 
@@ -486,7 +497,7 @@ class PokeBattle_Battler
         if isSpecies?(:CHERRIM)
             if hasActiveAbility?(:FLOWERGIFT)
                 newForm = 0
-                newForm = 1 if %i[Sun HarshSun].include?(@battle.pbWeather)
+                newForm = 1 if @battle.sunny?
                 if @form != newForm
                     showMyAbilitySplash(:FLOWERGIFT, true)
                     hideMyAbilitySplash

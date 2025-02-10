@@ -78,7 +78,7 @@ class PokeBattle_Battler
     def abilityActive?(ignore_fainted = false, ignore_gas = false)
         return false if fainted? && !ignore_fainted
         return false if !ignore_gas && @battle.abilitiesNeutralized?
-        return false if effectActive?(:GastroAcid)
+        return false if effectActive?(:AbilitySupressed)
         return false if dizzy?
         return true
     end
@@ -306,6 +306,14 @@ class PokeBattle_Battler
         return false
     end
 
+    def hasNonInitialItem?
+        items.each do |item|
+            next if hasInitialItem?(item)
+            return true
+        end
+        return false
+    end
+
     def hasItem?(checkitem)
         items.each do |item|
             if checkitem.is_a?(Array)
@@ -407,7 +415,7 @@ class PokeBattle_Battler
         return false if shouldItemApply?(:IRONBALL,checkingForAI)
         return false if effectActive?(:Ingrain)
         return false if effectActive?(:SmackDown)
-        return false if @battle.field.effectActive?(:Gravity)
+        return false if @battle.gravityIntensified?
         return true if shouldTypeApply?(:FLYING, checkingForAI)
         return true if hasLevitate?(checkingForAI) && !@battle.moldBreaker
         return true if shouldItemApply?(GameData::Item.getByFlag("Levitation"),checkingForAI)
@@ -432,6 +440,12 @@ class PokeBattle_Battler
             aiLearnsAbility(indirectDamageBlockingAbility) unless aiCheck
             return false
         end
+        return true
+    end
+
+    def takesRecoilDamage?(aiCheck = false)
+        return false if shouldAbilityApply?(%i[ROCKHEAD AFROTECTION], aiCheck)
+        return false unless takesIndirectDamage?(false, aiCheck)
         return true
     end
 
@@ -508,12 +522,35 @@ class PokeBattle_Battler
         return ret
     end
 
-    def initialItem
+    def initialItems
         return @battle.initialItems[@index & 1][@pokemonIndex]
     end
 
-    def setInitialItem(newItem)
-        @battle.initialItems[@index & 1][@pokemonIndex] = newItem
+    def setInitialItems(newItem)
+        if newItem.nil?
+            @battle.initialItems[@index & 1][@pokemonIndex] = []
+        elsif newItem.is_a?(Array)
+            @battle.initialItems[@index & 1][@pokemonIndex] = newItem
+        else
+            @battle.initialItems[@index & 1][@pokemonIndex] = [newItem]
+        end
+    end
+
+    def hasInitialItem?(item)
+        return initialItems.include?(item)
+    end
+
+    def removeNonInitialItems
+        prunedItems = items.delete_if { |item|
+            next false if hasInitialItem?(item)
+            echoln("Removing non-initial item #{item} from #{pbThis(true)}.")
+            next true
+        }
+        setItems(prunedItems)
+    end
+
+    def shouldStoreStolenItem?(item)
+        return @battle.wildBattle? && opposes? && !@battle.bossBattle? && hasInitialItem?(item)
     end
 
     def recyclableItem
@@ -629,19 +666,17 @@ class PokeBattle_Battler
         return shouldAbilityApply?(:BUNKERDOWN, checkingForAI) && @hp == @totalhp
     end
 
-    def getRoomDuration(aiCheck = false)
-        if shouldItemApply?(:REINFORCINGROD,aiCheck)
-            return 8
-        else
-            return 5
-        end
+    def getRoomDuration(baseDuration = 5, aiCheck: false)
+        ret = baseDuration
+        ret *= 2 if shouldItemApply?(:REINFORCINGROD,aiCheck)
+        return ret
     end
 
     def getScreenDuration(baseDuration = 5,aiCheck: false)
         ret = baseDuration
         ret += 3 if shouldItemApply?(:LIGHTCLAY,aiCheck)
         ret += 6 if shouldItemApply?(:BRIGHTCLAY,aiCheck)
-        ret *= 2 if shouldAbilityApply?(:PLANARVEIL,aiCheck) && @battle.eclipsed?
+        ret += 2 if shouldAbilityApply?(:PLANARVEIL,aiCheck)
         return ret
     end
 
@@ -666,6 +701,11 @@ class PokeBattle_Battler
         raise _INTL("#{@name} isn't an avatar, but something is requesting its Phase Lower Health Bound!") unless boss?
         hpFraction = 1 - (@avatarPhase / avatarData.num_phases.to_f)
         return (@totalhp * hpFraction).floor
+    end
+
+    def avatarHealthPerPhase
+        raise _INTL("#{@name} isn't an avatar, but something is requesting its Health Per Phase!") unless boss?
+        return (@totalhp / avatarData.num_phases.to_f).ceil
     end
 
     #=============================================================================
@@ -766,6 +806,7 @@ class PokeBattle_Battler
         return @battle.pbGetOwnerFromBattlerIndex(@index)
     end
 
+    # Checks for trainer ID match, so won't return yes if e.g. the pokemon was traded for
     def ownedByPlayer?
         return false unless @pokemon
         return @pokemon.ownedByPlayer?
@@ -776,11 +817,12 @@ class PokeBattle_Battler
     end
 
     def ownerLevelCap
-        if ownedByPlayer?
+        if pbOwnedByPlayer?
             return getLevelCap
         else
             highestLevel = 0
             ownerParty.each do |pkmn|
+                next unless pkmn
                 next unless pkmn.level > highestLevel
                 highestLevel = pkmn.level
             end

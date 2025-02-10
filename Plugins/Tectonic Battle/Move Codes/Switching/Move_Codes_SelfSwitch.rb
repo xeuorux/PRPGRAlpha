@@ -1,34 +1,22 @@
 #===============================================================================
-# User flees from battle. Switches out, in trainer battles. (Teleport)
+# Switches out. (Teleport)
 #===============================================================================
 class PokeBattle_Move_SwitchOutUserStatusMove < PokeBattle_Move
     def switchOutMove?; return true; end
 
     def pbMoveFailed?(user, _targets, show_message)
-        if @battle.wildBattle? && !@battle.bossBattle?
-            unless @battle.pbCanRun?(user.index)
-                @battle.pbDisplay(_INTL("But it failed, since you can't run from this battle!")) if show_message
-                return true
+        unless @battle.pbCanChooseNonActive?(user.index)
+            if show_message
+                @battle.pbDisplay(_INTL("But it failed, since #{user.pbThis(true)} has no party members to replace it!"))
             end
-        else
-            unless @battle.pbCanChooseNonActive?(user.index)
-                if show_message
-                    @battle.pbDisplay(_INTL("But it failed, since #{user.pbThis(true)} has no party members to replace it!"))
-                end
-                return true
-            end
+            return true
         end
         return false
     end
 
     def pbEffectGeneral(user)
-        if @battle.wildBattle? && !@battle.bossBattle?
-            @battle.pbDisplay(_INTL("{1} fled from battle!", user.pbThis))
-            @battle.decision = 3 # Escaped
-        else
-            return if user.fainted?
-            switchOutUser(user)
-        end
+        return if user.fainted?
+        switchOutUser(user)
     end
 
     def getEffectScore(user, target)

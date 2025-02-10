@@ -124,16 +124,19 @@ class PokeBattle_Battler
         @battle.eachBattler { |b| b.pbContinualAbilityChecks } # Trace, end primordial weathers
     end
 
-    def pbConfusionDamage(msg, charm = false, superEff = false, basePower = 50)
+    def pbConfusionDamage(msg, superEff = false, basePower = 50, category: 3)
         @damageState.reset
         @damageState.initialHP = @hp
-        confusionMove = if charm
-                            PokeBattle_Charm.new(@battle, nil,
-                          basePower)
-                        else
-                            PokeBattle_Confusion.new(@battle, nil, basePower)
-                        end
+        confusionMove = case category
+        when 0
+            PokeBattle_SelfHitPhysical.new(@battle, nil, basePower)
+        when 1
+            PokeBattle_SelfHitSpecial.new(@battle, nil, basePower)
+        when 3
+            PokeBattle_SelfHit.new(@battle, nil, basePower)
+        end
         confusionMove.calcType = confusionMove.pbCalcType(self) # nil
+        confusionMove.calculateUsageOverrides(self, [self])
         @damageState.typeMod = confusionMove.pbCalcTypeMod(confusionMove.calcType, self, self) # 8
         @damageState.typeMod *= 2.0 if superEff
         confusionMove.pbCheckDamageAbsorption(self, self)
@@ -173,8 +176,6 @@ class PokeBattle_Battler
             choice[2].pp = -1
             if @battle.futureSight && target >= 0 && @battle.positions[target].effectActive?(:FutureSightType)
                 choice[2].type = @battle.positions[target].effects[:FutureSightType]
-            else
-                echoln("#{@futureSight},#{target},#{@battle.positions[target].effects[:FutureSightType]}")
             end
         end
         choice[3] = target     # Target (-1 means no target yet)
@@ -190,10 +191,12 @@ class PokeBattle_Battler
         # NOTE: This is intentionally determined before a multi-turn attack can
         #       set specialUsage to true.
         skipAccuracyCheck = (specialUsage && choice[2] != @battle.struggle)
+
         # Start using the move
         pbBeginTurn(choice)
-        unless @battle.futureSight || (choice[2]&.empoweredMove? && boss?)
-            # Force the use of certain moves if they're already being used
+
+        # Force the use of certain moves if they're already being used
+        unless specialUsage || @battle.futureSight || (choice[2]&.empoweredMove? && boss?)
             if usingMultiTurnAttack? && !@currentMove.nil?
                 choice[2] = PokeBattle_Move.from_pokemon_move(@battle, Pokemon::Move.new(@currentMove))
                 specialUsage = true
@@ -206,42 +209,39 @@ class PokeBattle_Battler
                 end
             end
         end
+
         # Labels the move being used as "move"
         move = choice[2]
-        return unless move # if move was not chosen somehow
+
+        # if move was not chosen somehow
+        return unless move
+
         # Try to use the move (inc. disobedience)
         @lastMoveFailed = false
         unless pbTryUseMove(move, specialUsage, skipAccuracyCheck)
-            @lastMoveUsed = nil
-            @lastMoveUsedType = nil
-            @lastMoveUsedCategory = -1
-            unless specialUsage
-                @lastRegularMoveUsed = nil
-                @lastRegularMoveTarget = -1
-            end
+            trackMoveUsage
             @battle.pbGainExp # In case self is KO'd due to confusion
             pbCancelMoves
             pbEndTurn(choice)
             return
         end
         move = choice[2] # In case disobedience changed the move to be used
+
         return unless move # if move was not chosen somehow
+
         # Make extra move choices
         move.resolutionChoice(self)
+
         # Subtract PP
         if !specialUsage && !pbReducePP(move)
             @battle.pbDisplay(_INTL("{1} used {2}!", pbThis, move.name))
             @battle.pbDisplay(_INTL("But there was no PP left for the move!"))
-            @lastMoveUsed          = nil
-            @lastMoveUsedType      = nil
-            @lastMoveUsedCategory = -1
-            @lastRegularMoveUsed   = nil
-            @lastRegularMoveTarget = -1
-            @lastMoveFailed        = true
+            trackMoveUsage
             pbCancelMoves
             pbEndTurn(choice)
             return
         end
+
         # Stance Change
         if isSpecies?(:AEGISLASH) && hasAbility?(:STANCECHANGE)
             if move.damagingMove?
@@ -250,10 +250,15 @@ class PokeBattle_Battler
                 pbChangeForm(0, _INTL("{1} changed to Shield Forme!", pbThis))
             end
         end
-        # Calculate the move's type during this usage
-        move.calcType = move.pbCalcType(self)
+
+        # Calculate usage overrides
+        presumedUser = pbFindUser(choice, move)
+        presumedTargets = pbFindTargets(choice[3], move, presumedUser)
+        move.calculateUsageOverrides(presumedUser,presumedTargets)
+
         # Start effect of Mold Breaker
         @battle.moldBreaker = hasMoldBreaker?
+
         # Remember that user chose a two-turn move
         if move.pbIsChargingTurn?(self)
             # Beginning the use of a two-turn attack
@@ -263,6 +268,7 @@ class PokeBattle_Battler
             # Cancel use of two-turn attack
             disableEffect(:TwoTurnAttack)
         end
+
         # Add to counters for moves which increase them when used in succession
         move.pbChangeUsageCounters(self, specialUsage)
         # Charge up Metronome item
@@ -273,21 +279,14 @@ class PokeBattle_Battler
                 disableEffect(:Metronome)
             end
         end
+
         # Record move as having been used
         aiSeesMove(move) if pbOwnedByPlayer? && !boss? # Enemy trainers now know of this move's existence
         aiLearnsAbility(:ILLUSION) if hasActiveAbility?(:ILLUSION) && effectActive?(:Illusion)
         increaseMoveUsageCount(move.id)
-        @lastMoveUsed     = move.id
-        @lastMoveUsedType = move.calcType # For Conversion 2
-        @lastMoveUsedCategory = move.calculatedCategory
-        @usedDamagingMove = true if move.damagingMove?
-        unless specialUsage
-            @lastRegularMoveUsed = move.id # For Disable, Encore, Instruct, Mimic, Mirror Move, Sketch, Spite
-            @lastRegularMoveTarget = choice[3] # For Instruct (remembering original target is fine)
-            @movesUsed.push(move.id) unless @movesUsed.include?(move.id) # For Last Resort
-        end
-        @battle.lastMoveUsed = move.id # For Copycat
-        @battle.lastMoveUser = @index # For "self KO" battle clause to avoid draws
+
+        trackMoveUsage(move: move,specialUsage: specialUsage, target: choice[3])
+
         # For Cross Examine and such
         if opposes?
             @battle.allMovesUsedSide1.push(move.id)
@@ -296,11 +295,14 @@ class PokeBattle_Battler
         end
         @battle.successStates[@index].useState = 1 # Battle Arena - assume failure
         @empoweredTimer = 0 if move.empoweredMove?
+
         # Find the default user (self or Snatcher) and target(s)
         user = pbFindUser(choice, move)
         user = pbChangeUser(choice, move, user)
         targets = pbFindTargets(choice[3], move, user)
         targets = pbChangeTargets(move, user, targets)
+
+        # Global move disruption effects
         unless move.empoweredMove? && boss?
             # Pressure
             unless specialUsage
@@ -331,6 +333,7 @@ class PokeBattle_Battler
                 end
             end
         end
+        
         # "X used Y!" message
         # Can be different for Bide, Fling, Focus Punch and Future Sight
         # NOTE: This intentionally passes self rather than user. The user is always
@@ -360,13 +363,13 @@ class PokeBattle_Battler
             pbEndTurn(choice)
             return
         end
+
         # Perform set-up actions
         move.pbOnStartUse(user, targets)
-        # Calculate move category (calculateCategory may return)
-        newCategory = move.calculateCategory(user, targets)
-        move.calculated_category = newCategory
+
         # Display messages about BP adjustment and weather debuffing
-        move.displayDamagingMoveMessages(self, move.calcType, newCategory, targets) if move.damagingMove?
+        move.displayDamagingMoveMessages(self, move, targets) if move.damagingMove?
+        
         # Primordial Sea, Desolate Land
         if move.damagingMove?
             case @battle.pbWeather
@@ -388,11 +391,13 @@ class PokeBattle_Battler
                 end
             end
         end
+        
         # Abilities that trigger before a move starts
         # E.g. Protean
         user.eachActiveAbility do |ability|
             BattleHandlers.triggerUserAbilityStartOfMove(ability, user, targets, move, @battle)
         end
+
         #---------------------------------------------------------------------------
         magicCoater  = -1
         magicBouncer = -1
@@ -416,6 +421,7 @@ class PokeBattle_Battler
                 showFailMessages = move.pbShowFailMessages?(targets)
                 unless pbSuccessCheckAgainstTarget(move, user, b, typeMod, showFailMessages)
                     b.damageState.unaffected = true
+                    user.onMoveFailed(move)
                 end
             end
             # Magic Coat/Magic Bounce/Magic Shield checks (for moves which don't target Pokémon)
@@ -528,7 +534,7 @@ class PokeBattle_Battler
             if move.damagingMove?
                 targets.each do |b|
                     next unless b.damageState.fear
-                    @battle.pbDisplay(_INTL("#{user.pbThis} showed mercy on #{b.pbThis(true)}!", realNumHits)) if $PokemonSystem.avatar_mechanics_messages == 0
+                    @battle.pbDisplay(_INTL("#{user.pbThis} showed mercy on #{b.pbThis(true)}!", realNumHits)) if $Options.avatar_mechanics_messages == 0
                     b.pokemon.becomeAfraid
                 end
             end
@@ -612,6 +618,7 @@ class PokeBattle_Battler
             # External/general effects after all hits. Eject Button, Shell Bell, etc.
             pbEffectsAfterMove(user, targets, move, realNumHits)
         end
+
         # End effect of Mold Breaker
         @battle.moldBreaker = false
         # Gain Exp
@@ -623,8 +630,42 @@ class PokeBattle_Battler
         # End of move usage
         pbEndTurn(choice)
 
-        # Abilities that trigger from being in the presence of a successful move
         moveSucceeded = !user.lastMoveFailed && realNumHits > 0 && !move.snatched && magicCoater < 0
+        postMoveUseTriggers(user, move, targets, choice, moveSucceeded)
+    end
+
+    # If move is nil, move usage was failed
+    def trackMoveUsage(move: nil, specialUsage: false, target: nil)
+        if move.nil?
+            @lastMoveUsed = nil
+            @lastMoveUsedType = nil
+            @lastMoveUsedCategory = -1
+
+            unless specialUsage
+                @lastRegularMoveUsed   = nil
+                @lastRegularMoveTarget = -1
+                @lastMoveFailed        = true
+            end
+        else
+            @lastMoveUsed     = move.id
+            @lastMoveUsedType = move.calcType # For Conversion 2
+            @lastMoveUsedCategory = move.calculatedCategory
+            
+            @usedDamagingMove = true if move.damagingMove?
+            unless specialUsage
+                @lastRegularMoveUsed = move.id # For Disable, Encore, Instruct, Mimic, Mirror Move, Sketch, Spite
+                @lastRegularMoveTarget = target # For Instruct (remembering original target is fine)
+                @movesUsed.push(move.id) unless @movesUsed.include?(move.id) # For Last Resort
+            end
+            @battle.lastMoveUsed = move.id # For Copycat
+            @battle.lastMoveUser = @index # For "self KO" battle clause to avoid draws
+        end
+
+        @moveUsageHistory.unshift(move.nil? ? nil : move.id) # Push to front of array
+    end
+
+    def postMoveUseTriggers(user, move, targets, choice, moveSucceeded)
+        # Abilities that trigger from being in the presence of a successful move
         @battle.pbPriority(true).each do |b|
             b.eachActiveAbility do |ability|
                 BattleHandlers.triggerAnyoneAbilityEndOfMove(ability, b, user, targets, move, @battle)
@@ -643,32 +684,34 @@ class PokeBattle_Battler
             moveID = b.lastMoveUsed
             usageMessage = _INTL("{1} used the move instructed by {2}!", b.pbThis, user.pbThis(true))
             preTarget = b.lastRegularMoveTarget
-            @battle.forceUseMove(b, moveID, preTarget, false, usageMessage, :Instructed)
-        end  
-        # Dancer
-        if !effectActive?(:Dancer) && moveSucceeded && @battle.pbCheckGlobalAbility(:DANCER) && move.danceMove?
-            dancers = []
-            @battle.pbPriority(true).each do |b|
-                dancers.push(b) if b.index != user.index && b.hasActiveAbility?(:DANCER)
-            end
-            while dancers.length > 0
-                nextUser = dancers.pop
-                preTarget = choice[3]
-                preTarget = user.index if nextUser.opposes?(user) || !nextUser.opposes?(preTarget)
-                @battle.forceUseMove(nextUser, move.id, preTarget, true, nil, :Dancer, ability: :DANCER)
-            end
+            @battle.forceUseMove(b, moveID, preTarget, false, usageMessage, moveUsageEffect: :Instructed)
         end
-        # Echo
-        if !effectActive?(:Echo) && moveSucceeded && @battle.pbCheckGlobalAbility(:ECHO) && move.soundMove?
-            echoers = []
-            @battle.pbPriority(true).each do |b|
-                echoers.push(b) if b.index != user.index && b.hasActiveAbility?(:ECHO)
+        if moveSucceeded
+            # Dancer
+            if !effectActive?(:Dancer) && move.danceMove?
+                dancers = []
+                @battle.pbPriority(true).each do |b|
+                    dancers.push(b) if b.index != user.index && b.hasActiveAbility?(:DANCER)
+                end
+                while dancers.length > 0
+                    nextUser = dancers.pop
+                    preTarget = choice[3]
+                    preTarget = user.index if nextUser.opposes?(user) || !nextUser.opposes?(preTarget)
+                    @battle.forceUseMove(nextUser, move.id, preTarget, moveUsageEffect: :Dancer, ability: :DANCER)
+                end
             end
-            while echoers.length > 0
-                nextUser = echoers.pop
-                preTarget = choice[3]
-                preTarget = user.index if nextUser.opposes?(user) || !nextUser.opposes?(preTarget)
-                @battle.forceUseMove(nextUser, move.id, preTarget, true, nil, :Echo, ability: :ECHO)
+            # Echo
+            if !effectActive?(:Echo) && move.soundMove?
+                echoers = []
+                @battle.pbPriority(true).each do |b|
+                    echoers.push(b) if b.index != user.index && b.hasActiveAbility?(:ECHO)
+                end
+                while echoers.length > 0
+                    nextUser = echoers.pop
+                    preTarget = choice[3]
+                    preTarget = user.index if nextUser.opposes?(user) || !nextUser.opposes?(preTarget)
+                    @battle.forceUseMove(nextUser, move.id, preTarget, moveUsageEffect: :Echo, ability: :ECHO)
+                end
             end
         end
     end
@@ -777,17 +820,8 @@ class PokeBattle_Battler
             @battle.pbDisplay(_INTL("{1}'s patience pays off!", user.pbThis))
             @battle.pbHideTribeSplash(user)
         end
-        # Volatile Toxin proc message
-        if move.damagingMove?
-            targets.each do |b|
-                next unless b.effectActive?(:VolatileToxin)
-                @battle.pbCommonAnimation("Toxic", b)
-                effectName = GameData::BattleEffect.get(:VolatileToxin).name
-                @battle.pbDisplay(_INTL("The {1} burst, causing {2} to deal double damage!", effectName, move.name))
-            end
-        end
-        # Volatile Toxin proc message
-        if user.effectActive?(:ChargeExpended) && hitNum == 0
+        # Energy Charge expended message
+        if user.effectActive?(:EnergyChargeExpended) && hitNum == 0
             @battle.pbDisplay(_INTL("{1} expended its charge to empower {2}!", user.pbThis, move.name))
         end
         # Bubble Barrier proc message
@@ -821,7 +855,7 @@ class PokeBattle_Battler
             # Animate the hit flashing and HP bar changes
             move.pbAnimateHitAndHPLost(user, targets, fastHitAnimation)
 
-            if ownedByPlayer?
+            if pbOwnedByPlayer?
                 unlockAchievement(:DEAL_LARGE_DAMAGE_1) if maxDamageOnTargets >= 1000
                 unlockAchievement(:DEAL_LARGE_DAMAGE_2) if maxDamageOnTargets >= 10_000
             end

@@ -173,3 +173,38 @@ end
 class PokeBattle_Move_EmpoweredYawn < PokeBattle_Move_SleepTargetNextTurn
     include EmpoweredMove
 end
+
+#===============================================================================
+# Lowers the targets Speed by 4 steps. If in hail, makes the target drowsy. (Drift Off)
+#===============================================================================
+class PokeBattle_Move_LowerTargetSpd4DrowsyIfHail < PokeBattle_Move_LowerTargetSpd4
+    def pbFailsAgainstTarget?(user, target, show_message)
+        return false if !target.effectActive?(:Yawn) && target.canSleep?(user, false, self)
+        return super
+    end
+
+    def pbEffectAgainstTarget(_user, target)
+        super
+        return unless @battle.icy?
+        return if target.effectActive?(:Yawn)
+        return unless target.canSleep?(user, false, self)
+        target.applyEffect(:Yawn, 2)
+    end
+end
+
+#===============================================================================
+# Puts the target to sleep. The user must recharge next turn. (Cryosleep)
+#===============================================================================
+class PokeBattle_Move_SleepTargetTwoTurnAttack < PokeBattle_Move_TwoTurnAttack
+    def pbFailsAgainstTarget?(user, target, show_message)
+        return !target.canSleep?(user, show_message, self)
+    end
+
+    def pbEffectAgainstTarget(_user, target)
+        target.applySleep
+    end
+
+    def getTargetAffectingEffectScore(user, target)
+        return getSleepEffectScore(user, target)
+    end
+end
