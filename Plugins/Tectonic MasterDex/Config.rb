@@ -3,12 +3,15 @@ EHP_LEVEL = 50
 
 SEARCHES_STACK = true
 
+LEVEL_CAPS = [15,20,25,30,35,40,45,50,55,60,65,70]
+
 MAPS_AVAILABLE_BY_CAP = {
 	15 =>
 		[
 			136,138,30,	# Casaba Villa, Scenic Trail, Windy Way
 			51,38,26,	# Foreclosed Tunnel, Bluepoint Beach, Bluepoint Grotto
 			35,27,49,	# Impromptu Lab, Casaba Mart, Tourist's House
+			067, # Old Ice Cream Shop
 		], 
 	20 =>
 		[
@@ -30,7 +33,7 @@ MAPS_AVAILABLE_BY_CAP = {
 		],
 	25 =>
 		[
-			335,185			# Svait Sauna Underground, Eleig Stretch
+			335,185,135			# Svait Sauna Underground, Eleig Stretch, Nebula Ruins
 		],
 	40 =>
 		[
@@ -46,23 +49,17 @@ MAPS_AVAILABLE_BY_CAP = {
 		],
 	60 =>
 		[
-			217,316,	# Sweetrock Harbor, Sandtone Estuary
+			217,316,	# Sweetrock Harbor, Sandstone Estuary
 			257,258,	# Cave of Hatching, Whitebloom Town
 			215,		# Sky Walk
 		],
   }
   
 ITEMS_AVAILABLE_BY_CAP = {
-	15 => [],
-	20 => [],
-	25 => [],
-	30 => [],
-	35 => [],
-	40 => [:FIRESTONE,:WATERSTONE,:LEAFSTONE,:THUNDERSTONE,:DAWNSTONE,
-			:DUSKSTONE,:SUNSTONE,:SHINYSTONE,:ICESTONE,:MOONSTONE,
-			:NINJASCARF,:KNIGHTHELMET,:DIAMONDTIARA,:ALOLANWREATH,:GALARICAWREATH
-			
-			]
+	35 => [:FIRESTONE,:WATERSTONE,:LEAFSTONE,:THUNDERSTONE,:DAWNSTONE,
+	:DUSKSTONE,:SUNSTONE,:SHINYSTONE,:ICESTONE,:MOONSTONE,:ALOLANWREATH,:GALARICAWREATH], # Stones from Chasm ID challenges
+	40 => [:NINJASCARF,:KNIGHTHELMET] # Found surfing
+	55 => [:DIAMONDTIARA] # Avatar of Diancie
 }
 
 SURFING_LEVEL = 35

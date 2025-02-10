@@ -333,7 +333,7 @@ class PokemonPokedex_Scene
             levelIntAttempt = levelTextInput.to_i
             return nil if levelIntAttempt == 0
 
-            levelCheck = roundUpToRelevantCap(levelIntAttempt)
+            levelCheck = roundUpToNextCap(levelIntAttempt)
 
             dexlist = searchStartingList
             dexlist = dexlist.find_all do |dex_item|

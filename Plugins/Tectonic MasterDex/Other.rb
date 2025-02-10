@@ -139,22 +139,15 @@ def theoreticalCaptureChance(status,current_hp,total_hp,catch_rate)
     return overallChance
 end
 
-def roundUpToRelevantCap(level)
-	minNearestMapCap = 100
-	MAPS_AVAILABLE_BY_CAP.each do |capLevel, maps|
+def roundUpToNextCap(level)
+	minCap = 70
+	LEVEL_CAPS.each do |capLevel|
 		if capLevel >= level
-			minNearestMapCap = capLevel
+			minCap = capLevel
 			break
 		end
 	end
-	minNearestItemCap = 100
-	ITEMS_AVAILABLE_BY_CAP.each do |capLevel, items|
-		if capLevel >= level
-			minNearestItemCap = capLevel
-			break
-		end
-	end
-	return [minNearestMapCap,minNearestItemCap].min
+	return minCap
 end
 
 def speciesInfoViewable?(speciesID)
