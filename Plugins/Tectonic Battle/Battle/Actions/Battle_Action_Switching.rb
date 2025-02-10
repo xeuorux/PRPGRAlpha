@@ -464,6 +464,9 @@ class PokeBattle_Battle
                             pbDisplay(_INTL("{1} jumps onto the pointed stones!", battler.pbThis))
                             battler.tryRaiseStat(:SPEED, battler, ability: :ROCKCLIMBER)
                         end
+                    # Rugged
+                    elsif battler.shouldAbilityApply?(:RUGGED,aiCheck)
+                            pbDisplay(_INTL("{1} resists the pointed stones!", battler.pbThis))  
                     else # Takes damage
                         if aiCheck
                             stealthRocksDamage = battler.applyFractionalDamage(getTypedHazardHPRatio, aiCheck: true)
