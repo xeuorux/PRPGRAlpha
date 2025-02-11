@@ -15,26 +15,25 @@ def receiveOminousEgg
 end
 
 def checkForOminousEggRewards
-    stage = $PokemonGlobal.ominous_egg_stage
     value = getGlobalVariable(TRAINERS_PERFECTED_GLOBAL_VAR)
     rewards = []
 
-    if value >= 25 && stage == 0
+    if value >= 25 && $PokemonGlobal.ominous_egg_stage == 0
         rewards.push(:LIFEORB)
         $PokemonGlobal.ominous_egg_stage += 1
     end
 
-    if value >= 50 && stage == 1
+    if value >= 50 && $PokemonGlobal.ominous_egg_stage == 1
         rewards.push(:MASTERBALL)
         $PokemonGlobal.ominous_egg_stage += 1
     end
 
-    if value >= 75 && stage == 2
+    if value >= 75 && $PokemonGlobal.ominous_egg_stage == 2
         rewards.push(:RELICSTATUE)
         $PokemonGlobal.ominous_egg_stage += 1
     end
 
-    if value >= 100 && stage == 3
+    if value >= 100 && $PokemonGlobal.ominous_egg_stage == 3
         rewards.push(:SHINYCHARM)
         $PokemonGlobal.ominous_egg_stage += 1
     end
