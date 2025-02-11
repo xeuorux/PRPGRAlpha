@@ -199,6 +199,7 @@ class PokeBattle_AI
                 end
                 targets.each do |target|
                     score = pbGetMoveScoreBoss(move, user, target, targets.length, bossAI, targetWeak)
+                    next if score <= 0
                     totalScore += score
                 end
                 if targets.empty?
