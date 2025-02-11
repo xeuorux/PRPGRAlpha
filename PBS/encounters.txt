@@ -1082,8 +1082,8 @@ LandTall,20
 [406] # Oasis System
 DarkCave,20
     20,EELEKTROSS,53,55
-    20,GYARADOS,53,55
     20,KROOKODILE,53,55
+    20,MASQUERAIN,53,55
     20,PORYGONZ,53,55
     20,ROTOM,53,55
 #-------------------------------
