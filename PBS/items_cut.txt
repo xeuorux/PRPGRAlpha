@@ -4485,6 +4485,14 @@ Price = 0
 Flags = KeyItem
 Description = A faded sea chart that shows the way to a certain island.
 #-------------------------------
+[TMRANSACK]
+Name = Unnamed
+NamePlural = Unnamed
+Pocket = 4
+Price = 4000
+FieldUse = TM
+Move = RANSACK
+#-------------------------------
 [TMTRICKYTOXINS]
 Name = Unnamed
 NamePlural = Unnamed
